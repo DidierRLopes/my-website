@@ -170,14 +170,16 @@ export default function Projects() {
               />
             </div>
           )}
-          <div>
-            <div className="title md:text-lg font-bold">
-              {project.title}
+          <div className='flex flex-col justify-between flex-grow'>
+            <div>
+              <div className="title md:text-lg font-bold">
+                {project.title}
+              </div>
+              <div className="subtitle text-sm flex mt-2 leading-tight max-w-[500px]">
+                {project.desc}
+              </div>
             </div>
-            <div className="subtitle text-sm flex mt-2 leading-tight max-w-[400px]">
-              {project.desc}
-            </div>
-            <div className="flex">
+            <div className="flex mt-4 mb-2">
               <a
                 target="_blank"
                 rel="noreferrer"
@@ -185,7 +187,7 @@ export default function Projects() {
                 className="mr-4"
               >
                 <button
-                  className="flex rounded-xl mt-4 p-2 whitespace-nowrap text-sm text-white bg-[#2e8555] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#2e8555] hover:no-underline"
+                  className="flex rounded-xl p-2 whitespace-nowrap text-sm text-white bg-[#2e8555] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#2e8555] hover:no-underline"
                   type="button"
                 >
                   Source code
@@ -198,7 +200,7 @@ export default function Projects() {
                   href={project.article}
                 >
                   <button
-                    className="flex rounded-xl mt-4 p-2 whitespace-nowrap text-sm"
+                    className="flex rounded-xl p-2 whitespace-nowrap text-sm"
                     type="button"
                   >
                     Read more

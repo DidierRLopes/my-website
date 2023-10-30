@@ -1,6 +1,13 @@
 ---
-title: To read
+title: Books To Read
 sidebar_position: 1
 ---
 
-# Books to read
+import BooksToRead from '@site/src/components/BooksToRead.tsx'
+import HeadTitle from '@site/src/components/HeadTitle.tsx'
+
+<HeadTitle title="Books To Read" />
+
+If there is a particular book that you think I should read, feel free to recommend it.
+
+<BooksToRead />

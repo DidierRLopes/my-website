@@ -4,7 +4,7 @@ sidebar_position: 2
 ---
 
 import BooksAlreadyRead from '@site/src/components/BooksAlreadyRead.tsx'
-import HeadTitle from '@site/src/components/HeadTitle.tsx'
+import HeadTitle from '@site/src/components/General/HeadTitle.tsx'
 
 <HeadTitle title="Books Already Read" />
 

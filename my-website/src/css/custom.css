@@ -49,3 +49,8 @@ h1 {
   justify-content: left;
   align-items: center;
 }
+
+a[href^="http"] {
+  font-style: italic;
+  text-decoration: underline;
+}

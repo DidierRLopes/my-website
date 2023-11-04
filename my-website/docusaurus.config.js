@@ -90,7 +90,7 @@ const config = {
           {
             position: 'left',
             label: 'Media',
-            to: '/media/on-stage',
+            to: '/media/videos/on-stage',
           },
           {
             position: 'left',

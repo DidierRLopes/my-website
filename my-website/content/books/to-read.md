@@ -4,7 +4,7 @@ sidebar_position: 1
 ---
 
 import BooksToRead from '@site/src/components/BooksToRead.tsx'
-import HeadTitle from '@site/src/components/HeadTitle.tsx'
+import HeadTitle from '@site/src/components/General/HeadTitle.tsx'
 
 <HeadTitle title="Books To Read" />
 

@@ -12,8 +12,7 @@ interface VideosListProps {
   videos: Video[];
 }
 
-export default function BooksList({ videos }: VideosListProps) {
-
+export default function VideosList({ videos }: VideosListProps) {
   return (
     <div className="mx-auto mt-8">
       {videos.map((video) => (

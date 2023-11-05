@@ -22,12 +22,12 @@ export default function PodcastsList({ podcasts }: PodcastsListProps) {
             <div className='justify-left items-start text-xs'>
               {podcast.date}
             </div>
-            <h3 className="justify-center items-center text-base text-white mb-2">
+            <h3 className="justify-center items-center text-base mb-2">
               {podcast.title}
             </h3>
           </div>
-          <div className="flex-none overflow-y-scroll rounded-sm mx-auto text-sm p-2 pr-8 mt-2 text-gray-400">
-            <span className="text-white font-semibold">
+          <div className="flex-none overflow-y-scroll rounded-sm mx-auto text-sm p-2 pr-8 mt-2">
+            <span className="font-semibold">
               {podcast.host}
             </span>
             <p>

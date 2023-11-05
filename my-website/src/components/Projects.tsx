@@ -187,7 +187,7 @@ export default function Projects() {
                 className="mr-4"
               >
                 <button
-                  className="flex rounded-xl p-2 whitespace-nowrap text-sm text-white bg-[#2e8555] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#2e8555] hover:no-underline"
+                  className="flex rounded-xl p-2 whitespace-nowrap text-sm bg-[#2e8555] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#2e8555] hover:no-underline"
                   type="button"
                 >
                   Source code

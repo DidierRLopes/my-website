@@ -21,7 +21,7 @@ export default function VideosList({ videos }: VideosListProps) {
             <div className='justify-left items-start text-xs'>
               {video.date}
             </div>
-            <h3 className="justify-center items-center text-base text-white mb-2">
+            <h3 className="justify-center items-center text-base mb-2">
               {video.title}
             </h3>
           </div>
@@ -33,7 +33,7 @@ export default function VideosList({ videos }: VideosListProps) {
               title={video.title}
             />
           </div>
-          <div className="flex-none overflow-y-scroll rounded-sm mx-auto text-sm text-gray-400 p-2 pr-8 mt-2">
+          <div className="flex-none overflow-y-scroll rounded-sm mx-auto text-sm p-2 pr-8 mt-2">
             <p>{video.time} - {video.description}</p>
           </div>
         </div>

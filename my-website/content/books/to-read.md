@@ -1,5 +1,5 @@
 ---
-title: Books To Read
+title: To Read
 sidebar_position: 1
 ---
 

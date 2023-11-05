@@ -5,7 +5,7 @@ interface Experience {
   company: string;
   link: string;
   daterange: string;
-  summary: string;
+  summary: string[];
 }
 
 interface ExperienceListProps {

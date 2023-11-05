@@ -3,4 +3,9 @@ title: Experience
 sidebar_position: 1
 ---
 
-# Experience
+import ResumeExperience from '@site/src/components/ResumeExperience.tsx'
+import HeadTitle from '@site/src/components/General/HeadTitle.tsx'
+
+<HeadTitle title="Experience" />
+
+<ResumeExperience />

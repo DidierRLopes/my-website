@@ -67,13 +67,13 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/goku.png',
       navbar: {
         title: 'Didier Rodrigues Lopes',
         logo: {
           alt: 'Goku NFT',
-          src: 'img/logo.svg',
-          href: '/about',
+          src: 'img/goku.png',
+          href: '/',
           target: '_self',
         },
         items: [

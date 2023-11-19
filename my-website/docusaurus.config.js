@@ -49,6 +49,7 @@ const config = {
         blog: {
           blogTitle: 'Docusaurus blog!',
           blogDescription: 'A Docusaurus powered blog!',
+          blogSidebarCount: 'ALL', // Show all blog posts
           postsPerPage: 'ALL',
           showReadingTime: true,
           // Please change this to your repo.

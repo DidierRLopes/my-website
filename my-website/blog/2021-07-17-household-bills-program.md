@@ -4,10 +4,10 @@ title: Household bills Program
 authors: didier
 date: 2021-07-17
 image: https://github.com/Meg1211/my-website/assets/88618738/529b3c6f-e8d2-446f-8c22-2db738ce4769
-tags: []
+tags: ['Java', 'Programming', 'GUI', 'Software Development', 'Side Project']
 ---
 
-description
+In this blogpost, I share my journey of creating a program to split household bills. This was my first side project where I used Java to create a GUI application.
 
 <!-- truncate -->
 

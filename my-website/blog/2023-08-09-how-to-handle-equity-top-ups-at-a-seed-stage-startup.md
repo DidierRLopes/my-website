@@ -4,10 +4,10 @@ title: How to handle equity top-ups at a seed stage startup
 authors: didier
 date: 2023-08-09
 image: https://github.com/Meg1211/my-website/assets/88618738/db55c35d-e5f3-4cfc-b200-5fe2f2690285
-tags: []
+tags: ['equity', 'startups', 'seed stage', 'equity top-ups', 'employee compensation']
 ---
 
-description
+In this post, we discuss how to handle equity top-ups at a seed stage startup, providing a step-by-step guide on the implementation process and including links to relevant spreadsheets.
 
 <!-- truncate -->
 

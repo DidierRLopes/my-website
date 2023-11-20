@@ -4,10 +4,10 @@ title: K-means algorithm to visit a new city
 authors: didier
 date: 2021-08-01
 image: https://github.com/Meg1211/my-website/assets/88618738/1085caea-fe72-439a-ba05-b0f6d5883719
-tags: []
+tags: ['K-means', 'Algorithm', 'Travel', 'Efficiency', 'London', 'GPS', 'Clustering']
 ---
 
-description
+In this blogpost, I share how I used the K-means algorithm to plan a visit to London. The algorithm helps to decide which attractions to visit based on the number of days of the visit and the GPS coordinates of the attractions.
 
 <!-- truncate -->
 

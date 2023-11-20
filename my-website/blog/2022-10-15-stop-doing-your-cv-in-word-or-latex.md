@@ -4,10 +4,10 @@ title: Stop doing your CV in Word or LaTeX
 authors: didier
 date: 2022-10-15
 image: https://github.com/Meg1211/my-website/assets/88618738/cfdd5535-25eb-4573-ba5a-aa7cbafb1255
-tags: []
+tags: ['GitHub', 'CV', 'Career', 'Open Source', 'Developer']
 ---
 
-description
+The future of CVs for engineers and developers lies within GitHub. This post discusses why GitHub profiles are becoming the new CVs and how they can provide a more comprehensive view of a candidate's skills and contributions.
 
 <!-- truncate -->
 

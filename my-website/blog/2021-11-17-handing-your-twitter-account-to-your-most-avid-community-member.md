@@ -4,10 +4,10 @@ title: Handing your twitter account to your most avid community member
 authors: didier
 date: 2021-11-17
 image: https://github.com/Meg1211/my-website/assets/88618738/edb5650f-8c33-4f81-8df5-eb4ee4d48166
-tags: []
+tags: ['Community Building', 'Twitter', 'Open Source', 'Gamestonk Terminal']
 ---
 
-description
+Handing over the Twitter account of Gamestonk Terminal to an active community member and the impact it had on the project's growth and engagement.
 
 <!-- truncate -->
 

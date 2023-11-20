@@ -4,10 +4,10 @@ title: STREAMLINE YOUR OPENBB TERMINAL EXPERIENCE WITH OPENBB HUB
 authors: didier
 date: 2023-05-25
 image: https://github.com/Meg1211/my-website/assets/88618738/abca5151-99f4-4c07-860f-6de8be85125c
-tags: []
+tags: ['OpenBB', 'OpenBB Hub', 'Terminal', 'API Key Management', 'Data Customization', 'Personalization', 'Script Management']
 ---
 
-description
+Streamline your OpenBB Terminal experience with OpenBB Hub. Learn about its key features, including API key management, data customization, personalization, and script management.
 
 <!-- truncate -->
 

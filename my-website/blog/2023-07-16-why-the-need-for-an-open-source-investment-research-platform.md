@@ -4,10 +4,10 @@ title: Why the need for an open source investment research platform?
 authors: didier
 date: 2023-07-16
 image: https://github.com/Meg1211/my-website/assets/88618738/76a539bb-bb5a-46a8-b4ab-d2875a697921
-tags: []
+tags: ['Open Source', 'Investment Research', 'Data Licensing', 'Transparency', 'Community']
 ---
 
-description
+OpenBB Terminal, an open-source investment research platform, is transforming the financial industry by addressing issues like data licensing, full-price bundle, lack of transparency and customization, and the need for a diverse community. This post explores why open source is crucial for us and the main problems in the space.
 
 <!-- truncate -->
 

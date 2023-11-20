@@ -4,10 +4,10 @@ title: Target Market Analysis with the help of LLMs
 authors: didier
 date: 2023-09-10
 image: https://github.com/Meg1211/my-website/assets/88618738/72bc62fd-6a65-40fe-a6e4-401ca5658b33
-tags: []
+tags: ['Target Market Analysis', 'LLMs', 'OpenBB', 'BCG Matrix', 'GE McKinsey Matrix', 'Market Attractiveness', 'Competitive Advantage']
 ---
 
-description
+This blog post provides a comprehensive guide on how to perform target market analysis for your company using LLMs. It includes a detailed explanation of the BCG Matrix and the GE McKinsey Matrix, and how these frameworks can be used to determine market attractiveness and competitive advantage.
 
 <!-- truncate -->
 

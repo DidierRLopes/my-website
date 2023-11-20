@@ -4,10 +4,10 @@ title: Remote + Flexible work >> Salary
 authors: didier
 date: 2022-05-03
 image: https://github.com/Meg1211/my-website/assets/88618738/ad97cd9d-c836-443c-b333-78a193b3ac99
-tags: []
+tags: ['Remote Work', 'Flexible Hours', 'Work Life Balance', 'Productivity']
 ---
 
-description
+This blog post discusses the importance of remote and flexible work hours, and how it can significantly improve work-life balance and productivity.
 
 <!-- truncate -->
 

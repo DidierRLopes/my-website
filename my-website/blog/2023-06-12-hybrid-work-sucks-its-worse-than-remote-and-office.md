@@ -4,11 +4,10 @@ title: Hybrid work sucks. It’s worse than remote and office.
 authors: didier
 date: 2023-06-12
 image: https://github.com/Meg1211/my-website/assets/88618738/f8b39c06-b71f-465b-b16f-b5d0e7cde1ca
-tags: []
+tags: ['remote work', 'office work', 'hybrid work', 'productivity', 'work culture']
 ---
 
-description
-
+Hybrid work, a combination of remote and office work, is not as beneficial as it seems. This blog post discusses the pros and cons of remote and office work, and why hybrid work might not be the best solution.
 <!-- truncate -->
 
 This is my hot take for 2023, but bear with me.

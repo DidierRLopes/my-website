@@ -4,10 +4,10 @@ title: How to grow your open source community from scratch
 authors: didier
 date: 2022-11-10
 image: https://github.com/Meg1211/my-website/assets/88618738/ce69575c-01b5-4757-bd0d-6de67a9f5c57
-tags: []
+tags: ['Open Source', 'Community Building', 'Project Management', 'OpenBB Terminal']
 ---
 
-description
+Growing an open source community from scratch is a challenging task. This blogpost shares insights and strategies on how to effectively build and manage an open source community, using the example of the OpenBB Terminal project.
 
 <!-- truncate -->
 

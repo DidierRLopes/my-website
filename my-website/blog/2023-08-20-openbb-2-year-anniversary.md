@@ -4,10 +4,10 @@ title: OpenBB 2 year anniversary 🎉
 authors: didier
 date: 2023-08-20
 image: https://github.com/Meg1211/my-website/assets/88618738/2482411c-1588-41d4-ba7f-72506065f4b5
-tags: []
+tags: ['OpenBB', 'Anniversary', 'Achievements', 'Growth', 'Finance']
 ---
 
-description
+Two years of OpenBB: A look back at our achievements and growth in the world of open-source finance.
 
 <!-- truncate -->
 

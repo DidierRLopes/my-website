@@ -4,10 +4,10 @@ title: How to handle equity at a seed-stage startup from Silicon Valley
 authors: didier
 date: 2023-08-03
 image: https://github.com/Meg1211/my-website/assets/88618738/c4d5f9ed-d2b4-4faf-802d-1de3e3e83d71
-tags: []
+tags: ['startup', 'equity', 'Silicon Valley', 'seed-stage', 'OpenBB']
 ---
 
-description
+A step-by-step guide on how to handle equity at a seed-stage startup, using a fictional example from OpenBB.
 
 <!-- truncate -->
 

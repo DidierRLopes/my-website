@@ -4,10 +4,10 @@ title: Bloomberg Terminal is no more. OpenBB Terminal 2.0 has just been released
 authors: didier
 date: 2022-11-29
 image: https://github.com/Meg1211/my-website/assets/88618738/b13ac1ec-2ffd-4f25-846a-ce0fff4465d3
-tags: []
+tags: ['OpenBB Terminal 2.0', 'Investment Research', 'Financial Data', 'AI', 'ML', 'SDK']
 ---
 
-description
+OpenBB Terminal 2.0 has been released. This blog post discusses the new features and improvements, including the release of OpenBB SDK, a state-of-the-art AI/ML toolkit for the financial industry, and the vision for a community-driven investment research platform.
 
 <!-- truncate -->
 

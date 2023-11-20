@@ -4,10 +4,10 @@ title: NeistPoint Project
 authors: didier
 date: 2021-05-23
 image: https://github.com/Meg1211/my-website/assets/88618738/c2282aa1-115e-451f-b0c0-af1351936c37
-tags: []
+tags: ['NeistPoint', 'Clothing Brand', 'Sustainability', 'Project Management', 'C++', 'Stock Management']
 ---
 
-description
+In this blogpost, I share my journey of starting a sustainable clothing brand, managing the project, and developing a stock management tool in C++.
 
 <!-- truncate -->
 

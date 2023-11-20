@@ -4,10 +4,10 @@ title: A $500k bet to build the best platform to do AI using financial data
 authors: didier
 date: 2023-10-14
 image: https://github.com/Meg1211/my-website/assets/88618738/f07a672a-3129-42ae-96c9-fecb7a88a325
-tags: []
+tags: ['AI', 'Financial Data', 'OpenBB', 'Data Access', 'Agents']
 ---
 
-description
+This blog post discusses our $500k investment in building the best platform for AI using financial data. We focus on the rebranding of OpenBB SDK to OpenBB Platform, its features, and the potential payoff of this bet in 2024.
 
 <!-- truncate -->
 

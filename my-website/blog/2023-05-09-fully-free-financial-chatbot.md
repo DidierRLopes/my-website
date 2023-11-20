@@ -4,10 +4,10 @@ title: Fully free financial chatbot
 authors: didier
 date: 2023-05-09
 image: https://github.com/Meg1211/my-website/assets/88618738/7c937b83-3087-4bf9-8c06-27f7e042ad04
-tags: []
+tags: ['OpenBB Bot', 'Financial Chatbot', 'Investment', 'Free', 'Discord', 'Telegram', 'Equity', 'Crypto', 'Options', 'Darkpool', 'Economy']
 ---
 
-description
+The OpenBB Bot is a financial chatbot that allows you to access financial data from Discord or Telegram along with other users. From equity data to crypto, options, darkpool, economy and much more! Now available for free to registered users.
 
 <!-- truncate -->
 

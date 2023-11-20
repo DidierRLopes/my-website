@@ -4,10 +4,10 @@ title: Gamestonk Terminal UX/UI Features
 authors: didier
 date: 2022-01-06
 image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280497759-9d698e1e-6ee1-4856-a6af-48cee6b2eb34.png
-tags: []
+tags: ['Gamestonk Terminal', 'UX/UI', 'Software Development', 'Teamwork']
 ---
 
-description
+Gamestonk Terminal's UX/UI features and the teamwork behind their implementation.
 
 <!-- truncate -->
 

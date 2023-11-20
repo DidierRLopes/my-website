@@ -4,10 +4,10 @@ title: The future of finance with open source and AI
 authors: didier
 date: 2022-12-04
 image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280552376-81f97180-abdd-41fa-a422-becefc8fd5cd.png
-tags: []
+tags: ['Open Source', 'AI', 'Finance', 'Future']
 ---
 
-description
+The future of finance is being reshaped by open source and AI. This post discusses the potential of these technologies in disrupting the financial industry, the advantages of open source, and the role of AI in user interface.
 
 <!-- truncate -->
 

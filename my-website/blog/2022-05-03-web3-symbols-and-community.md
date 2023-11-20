@@ -4,10 +4,10 @@ title: Web3, symbols and community
 authors: didier
 date: 2022-05-03
 image: https://github.com/Meg1211/my-website/assets/88618738/10b469e9-60ba-4458-b5b9-853cbffa5680
-tags: []
+tags: ['Web3', 'Community', 'Decentralization', 'Blockchain', 'Smart Contracts']
 ---
 
-description
+This blog post discusses the importance of strong communities in the Web 3.0 space, the role of decentralization, and how voting frameworks based on smart contracts can empower users.
 
 <!-- truncate -->
 

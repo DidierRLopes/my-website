@@ -4,10 +4,10 @@ title: How I created the best discord meme bot
 authors: didier
 date: 2022-04-09
 image: https://github.com/Meg1211/my-website/assets/88618738/f324321b-d438-4838-b0a0-e3155611538a
-tags: []
+tags: ['Discord', 'Meme Bot', 'Open Source', 'Community Building']
 ---
 
-description
+In this blog post, I share my journey of creating a Discord meme bot, the role it played in building a vibrant community around our open source project, and how you can add your own memes to the bot.
 
 <!-- truncate -->
 

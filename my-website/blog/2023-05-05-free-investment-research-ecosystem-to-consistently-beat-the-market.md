@@ -4,10 +4,10 @@ title: Free investment research ecosystem to consistently beat the market
 authors: didier
 date: 2023-05-05
 image: https://github.com/Meg1211/my-website/assets/88618738/bb80a9fd-e616-4c9f-b3e3-e123a3034e24
-tags: []
+tags: ['OpenBB', 'Investment Research', 'OpenBB Terminal', 'OpenBB Bot', 'OpenBB SDK', 'OpenBB Hub']
 ---
 
-description
+The OpenBB Hub is a comprehensive platform for managing all products, data, subscriptions, and content for users, aiming to empower investors globally with tools previously exclusive to institutions.
 
 <!-- truncate -->
 

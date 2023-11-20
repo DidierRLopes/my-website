@@ -4,10 +4,10 @@ title: My journey of memorising a deck of 52 shuffled cards
 authors: didier
 date: 2021-06-26
 image: https://github.com/Meg1211/my-website/assets/88618738/e58ecbfe-5718-4960-9911-fb7ff146efc4
-tags: []
+tags: ['Memory Training', 'PAO System', 'Memory Palace', 'Card Memorisation']
 ---
 
-description
+In this blogpost, I share my journey of memorising a deck of 52 shuffled cards using the PAO system and Memory Palace technique.
 
 <!-- truncate -->
 

@@ -4,10 +4,10 @@ title: Building the world’s investment research infrastructure
 authors: didier
 date: 2023-10-19
 image: https://github.com/Meg1211/my-website/assets/88618738/f9ddc301-9ff4-4a5e-b5b6-45d3726101a3
-tags: []
+tags: ['investment', 'research', 'infrastructure', 'OpenBB']
 ---
 
-description
+This blog post discusses the process and challenges of building the world's investment research infrastructure. It provides an insight into the products developed by the OpenBB team and their efficient operation.
 
 <!-- truncate -->
 

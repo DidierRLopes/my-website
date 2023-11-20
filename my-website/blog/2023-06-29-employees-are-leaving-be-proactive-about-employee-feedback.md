@@ -4,10 +4,10 @@ title: Employees are leaving? Be proactive about employee feedback
 authors: didier
 date: 2023-06-29
 image: https://github.com/Meg1211/my-website/assets/88618738/969ecadc-43f8-49ea-ad81-90dad5c3011a
-tags: []
+tags: ['employee engagement', 'feedback', 'work culture', 'remote work', 'team happiness']
 ---
 
-description
+Employees are leaving? Be proactive about employee feedback. This blogpost discusses the importance of employee feedback and how we at OpenBB are ensuring high employee engagement through a periodic feedback survey.
 
 <!-- truncate -->
 

@@ -4,11 +4,10 @@ title: How to learn 10x faster than average
 authors: didier
 date: 2022-10-27
 image: https://github.com/Meg1211/my-website/assets/88618738/e310841f-bc8b-433b-aa79-1debc6e40ef9
-tags: []
+tags: ['learning', 'self-improvement', 'skills', 'education']
 ---
 
-description
-
+Learn how to accelerate your learning process and become 10x faster than average. This blog post provides practical steps to enhance your self-learning abilities and master new skills effectively.
 <!-- truncate -->
 
 Everyone is a self learner. But people’s rhythm of self learning can be vastly different.

@@ -4,10 +4,10 @@ title: Become an OpenBB Champion
 authors: didier
 date: 2023-06-10
 image: https://github.com/Meg1211/my-website/assets/88618738/2846370c-0bf8-4694-98e8-90a5c291fa64
-tags: []
+tags: ['OpenBB', 'OpenBB Champion', 'Investment Research', 'Open Source', 'Community']
 ---
 
-description
+Become an OpenBB Champion and join our passionate community. Share your experiences with our innovative products and help us democratize investment research through an open source approach.
 
 <!-- truncate -->
 

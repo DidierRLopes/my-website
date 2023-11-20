@@ -4,10 +4,10 @@ title: Looking for a new tattoo? OpenBB has you covered… literally.
 authors: didier
 date: 2022-04-21
 image: https://github.com/Meg1211/my-website/assets/88618738/fa6ca582-187b-4ddf-9ecf-1e259939f26f
-tags: []
+tags: ['OpenBB', 'Marketing', 'Tattoo', 'Brand Awareness']
 ---
 
-description
+Exploring unconventional ways to increase brand visibility, OpenBB's co-founder gets a tattoo of the company logo. This blog post discusses the thought process behind this unique marketing strategy.
 
 <!-- truncate -->
 

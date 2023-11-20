@@ -4,10 +4,10 @@ title: An unusual journey learning about NNs for a PhD thesis
 authors: didier
 date: 2021-10-22
 image: https://github.com/Meg1211/my-website/assets/88618738/46ba8ff7-2f83-4fc4-8fed-350fc18246da
-tags: []
+tags: ['PhD Thesis', 'Neural Networks', 'Python', 'Time Series Forecasting']
 ---
 
-description
+An unusual journey of learning about Neural Networks for a PhD thesis. This blog post details the author's experience of assisting in the programming aspect of a PhD thesis, focusing on the study of various models and their forecasting performance.
 
 <!-- truncate -->
 

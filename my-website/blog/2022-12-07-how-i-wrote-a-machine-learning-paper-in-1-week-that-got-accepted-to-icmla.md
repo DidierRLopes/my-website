@@ -4,10 +4,10 @@ title: How I wrote a machine learning paper in 1 week that got accepted to Inter
 authors: didier
 date: 2022-12-07
 image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280552697-4de8034a-3530-43f3-8b3f-1c703c6dd001.png
-tags: []
+tags: ['Machine Learning', 'Data Science', 'Academia', 'ICMLA', 'NURVV Run', 'Open Source']
 ---
 
-description
+How I wrote a machine learning paper in 1 week that got accepted to ICMLA while working full time and raised $8.8 million for OpenBB Terminal.
 
 <!-- truncate -->
 

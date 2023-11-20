@@ -1,7 +1,6 @@
 ---
 slug: web3-symbols-and-community
 title: Web3, symbols and community
-authors: didier
 date: 2022-05-03
 image: https://github.com/Meg1211/my-website/assets/88618738/10b469e9-60ba-4458-b5b9-853cbffa5680
 tags: ['Web3', 'Community', 'Decentralization', 'Blockchain', 'Smart Contracts']

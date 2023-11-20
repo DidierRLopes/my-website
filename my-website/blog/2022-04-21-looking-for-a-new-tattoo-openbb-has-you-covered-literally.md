@@ -1,7 +1,6 @@
 ---
 slug: looking-for-a-new-tattoo-openbb-has-you-covered-literally
 title: Looking for a new tattoo? OpenBB has you covered… literally.
-authors: didier
 date: 2022-04-21
 image: https://github.com/Meg1211/my-website/assets/88618738/fa6ca582-187b-4ddf-9ecf-1e259939f26f
 tags: ['OpenBB', 'Marketing', 'Tattoo', 'Brand Awareness']

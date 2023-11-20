@@ -1,7 +1,6 @@
 ---
 slug: how-i-created-the-best-discord-meme-bot
 title: How I created the best discord meme bot
-authors: didier
 date: 2022-04-09
 image: https://github.com/Meg1211/my-website/assets/88618738/f324321b-d438-4838-b0a0-e3155611538a
 tags: ['Discord', 'Meme Bot', 'Open Source', 'Community Building']

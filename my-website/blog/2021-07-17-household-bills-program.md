@@ -1,7 +1,6 @@
 ---
 slug: household-bills-program
 title: Household bills Program
-authors: didier
 date: 2021-07-17
 image: https://github.com/Meg1211/my-website/assets/88618738/529b3c6f-e8d2-446f-8c22-2db738ce4769
 tags: ['Java', 'Programming', 'GUI', 'Software Development', 'Side Project']

@@ -2,7 +2,6 @@
 slug: customizable-meme-filter
 title: Customizable Meme Filter
 date: 2010-06-12
-authors: didier
 image: https://github.com/Meg1211/my-website/assets/88618738/b123cf98-3411-4edc-9597-7b8c6d0c7e73
 tags: ['Python', 'Meme Filter', 'Image Processing', 'Face Recognition']
 ---

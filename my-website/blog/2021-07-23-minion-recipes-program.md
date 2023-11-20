@@ -1,7 +1,6 @@
 ---
 slug: minion-recipes-program
 title: Minion Recipes Program
-authors: didier
 date: 2021-07-23
 image: https://github.com/Meg1211/my-website/assets/88618738/5fb7c215-ec70-40dd-99dc-8ebc5b8b3eba
 tags: ['Python', 'Programming', 'Recipes', 'Software Development']

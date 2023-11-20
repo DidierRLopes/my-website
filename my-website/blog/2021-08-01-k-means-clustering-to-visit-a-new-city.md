@@ -1,7 +1,6 @@
 ---
 slug: k-means-clustering-to-visit-a-new-city
 title: K-means algorithm to visit a new city
-authors: didier
 date: 2021-08-01
 image: https://github.com/Meg1211/my-website/assets/88618738/1085caea-fe72-439a-ba05-b0f6d5883719
 tags: ['K-means', 'Algorithm', 'Travel', 'Efficiency', 'London', 'GPS', 'Clustering']

@@ -1,7 +1,6 @@
 ---
 slug: the-start-of-my-machine-learning-journey
 title: The Start of my Machine Learning journey
-authors: didier
 date: 2021-11-07
 image: https://github.com/Meg1211/my-website/assets/88618738/2322ff06-a803-458c-9402-6c8ed5cdde27
 tags: ['Machine Learning', 'Python', 'Data Science', 'Education', 'Self-Learning']

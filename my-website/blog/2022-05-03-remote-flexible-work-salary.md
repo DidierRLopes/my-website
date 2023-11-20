@@ -1,7 +1,6 @@
 ---
 slug: remote-flexible-work-salary
 title: Remote + Flexible work >> Salary
-authors: didier
 date: 2022-05-03
 image: https://github.com/Meg1211/my-website/assets/88618738/ad97cd9d-c836-443c-b333-78a193b3ac99
 tags: ['Remote Work', 'Flexible Hours', 'Work Life Balance', 'Productivity']

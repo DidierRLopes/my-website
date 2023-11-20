@@ -1,7 +1,6 @@
 ---
 slug: how-i-created-a-bot-in-python-to-participate-in-nft-giveaways
 title: How I created a bot in python to participate in NFT giveaways
-authors: didier
 date: 2021-09-30
 image: https://github.com/Meg1211/my-website/assets/88618738/d965410f-6a4d-40b1-92d1-2e3fb4e24462
 tags: ['Python', 'Bot', 'NFT', 'Giveaways', 'Reddit', 'Automation']

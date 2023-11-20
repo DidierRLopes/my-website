@@ -1,7 +1,6 @@
 ---
 slug: time-series-crossvalidation-for-nn
 title: Time-Series CrossValidation for NN
-authors: didier
 date: 2021-09-04
 image: https://github.com/Meg1211/my-website/assets/88618738/19a411e1-bb34-44bf-a9b8-b2a3ba4dd5f6
 tags: ['Python', 'Data Science', 'Deep Learning', 'Time Series', 'Cross Validation', 'Neural Networks']

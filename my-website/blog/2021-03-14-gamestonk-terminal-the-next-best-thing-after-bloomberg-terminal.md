@@ -1,7 +1,6 @@
 ---
 slug: gamestonk-terminal-the-next-best-thing-after-bloomberg-terminal.md
 title: Gamestonk Terminal - The next best thing after Bloomberg Terminal
-authors: didier
 date: 2021-03-14
 image: https://github.com/DidierRLopes/my-website/assets/88618738/f9508a33-fcee-4056-a611-a4422890bf8b
 tags: ['Gamestonk Terminal', 'Finance', 'Stock Market', 'Programming', 'Open Source']

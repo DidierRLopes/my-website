@@ -1,7 +1,6 @@
 ---
 slug: stop-doing-your-cv-in-word-or-latex
 title: Stop doing your CV in Word or LaTeX
-authors: didier
 date: 2022-10-15
 image: https://github.com/Meg1211/my-website/assets/88618738/cfdd5535-25eb-4573-ba5a-aa7cbafb1255
 tags: ['GitHub', 'CV', 'Career', 'Open Source', 'Developer']

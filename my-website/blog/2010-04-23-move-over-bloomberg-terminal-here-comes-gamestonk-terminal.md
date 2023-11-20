@@ -1,7 +1,6 @@
 ---
 slug: move-over-bloomberg-terminal-here-comes-gamestonk-terminal
 title: Move over Bloomberg Terminal, here comes Gamestonk Terminal
-authors: didier
 date: 2010-04-23
 image: https://github.com/Meg1211/my-website/assets/88618738/a0760645-db19-4d5e-bf8a-089865eb12b3
 tags: ['Gamestonk Terminal', 'Finance', 'Stock Market', 'Programming', 'Open Source']

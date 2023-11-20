@@ -1,7 +1,6 @@
 ---
 slug: why-you-should-drop-yfinance-api-and-adopt-openbb-sdk
 title: Why you should drop yfinance API and adopt OpenBB SDK
-authors: didier
 date: 2022-06-28
 image: https://github.com/Meg1211/my-website/assets/88618738/0a3d1183-aeff-441b-96ad-88c8b8c49280
 tags: ['OpenBB SDK', 'yfinance API', 'Financial Data', 'APIs', 'Open Source']

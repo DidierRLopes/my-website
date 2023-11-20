@@ -1,7 +1,6 @@
 ---
 slug: sector-and-industry-analysis-gamestonk-terminal
 title: Sector and Industry Analysis — Gamestonk Terminal
-authors: didier
 date: 2021-12-02
 image: https://github.com/Meg1211/my-website/assets/88618738/a8730909-278e-4186-9139-0b08f7ed88c0
 tags: ['Gamestonk Terminal', 'Sector Analysis', 'Industry Analysis', 'FinanceDatabase', 'Open Source']

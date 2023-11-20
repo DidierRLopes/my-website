@@ -1,7 +1,6 @@
 ---
 slug: meet-the-most-advanced-investment-research-platform
 title: Meet the most advanced investment research platform
-authors: didier
 date: 2022-03-21
 image: https://github.com/Meg1211/my-website/assets/88618738/0cd2335e-3099-43a5-996e-27bb34903348
 tags: ['Investment Research', 'Gamestonk Terminal', 'Automation', 'Routines']

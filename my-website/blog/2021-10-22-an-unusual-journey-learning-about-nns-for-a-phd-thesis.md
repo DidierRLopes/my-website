@@ -1,7 +1,6 @@
 ---
 slug: an-unusual-journey-learning-about-nns-for-a-phd-thesis
 title: An unusual journey learning about NNs for a PhD thesis
-authors: didier
 date: 2021-10-22
 image: https://github.com/Meg1211/my-website/assets/88618738/46ba8ff7-2f83-4fc4-8fed-350fc18246da
 tags: ['PhD Thesis', 'Neural Networks', 'Python', 'Time Series Forecasting']

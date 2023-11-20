@@ -15,11 +15,13 @@ description: This blog post provides a comprehensive guide on how to perform tar
 
 This blog post provides a comprehensive guide on how to perform target market analysis for your company using LLMs. It includes a detailed explanation of the BCG Matrix and the GE McKinsey Matrix, and how these frameworks can be used to determine market attractiveness and competitive advantage.
 
+The open source code is available [here](https://github.com/DidierRLopes/target-market-analysis/tree/main).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
-After working on OpenBB for over 2 years, we learned which markets to go after and which markets to ignore. You may think that this is intuition, but it’s actually the data that you gathered from talking with 100+ users and learning from others in the industry.
+After working on [OpenBB](https://openbb.co) for over 2 years, we learned which markets to go after and which markets to ignore. You may think that this is intuition, but it’s actually the data that you gathered from talking with 100+ users and learning from others in the industry.
 
 However, people who don’t know your business as well as you do (new joiners, advisors, or investors), don’t understand why your target market is X and not Y. Hence, it’s important to backtrace your “experience” with data.
 
@@ -29,7 +31,7 @@ This blog post will focus on how you can perform target market analysis for your
 
 This framework is utilized for portfolio analysis in corporate strategy to analyze business units or product lines.
 
-## BCG Matrix
+### BCG Matrix
 
 Initially, BCG implemented its own framework, which you can read more about here. In a nutshell:
 
@@ -37,7 +39,7 @@ _It uses two variables: relative market share and the market growth rate. By com
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/f956ae41-8397-4ac0-98a2-122824421888)
 
-## GE McKinsey Matrix
+### GE McKinsey Matrix
 
 Then, the GE McKinsey Matrix was invented, which you can read more about here. To put it briefly:
 
@@ -57,13 +59,13 @@ For competitive strength, factors to consider can be: Profitability; Market shar
 
 All the data will be hypothetical. The goal is to share the process and framework. Each company and market will have its own.
 
-**1. Define your factors**
+### 1. Define your factors
 
 When we talk about market attractiveness, from your company’s perspective, what makes a market attractive? Consider all those factors and list them. Try to list all the factors that have a weight in that equation, but try to keep them under 10; otherwise, it’s too many to have to assess, and at some point, their weight into the attractiveness is negligible.
 
 Now do the same for the factors that give your company a competitive advantage.
 
-**2. Weigh each factor**
+### 2. Weigh each factor
   
 Not all factors are created equal. Some factors will influence whether a market is attractive or not. Similarly, for your competitive advantage, what factors give your company a bigger edge?
 
@@ -71,7 +73,7 @@ The goal is to select a weight for each factor so that the sum of the weights fo
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/bbd38ef0-ee6e-4b9d-9f5c-d4871da5b0a9)
 
-**3. Categorize each factor**
+### 3. Categorize each factor
 
 Now you need to decide how granular you want your assessment to be. Initially, at OpenBB, we started with a scale of 1–3 where 1 is low, 2 is medium, and 3 is high. However, soon we found this to not be good enough since there was not enough granularity. Thus, we increased the range from 1 to 5.
 
@@ -83,13 +85,13 @@ This Google / Excel spreadsheet should look like:
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/7beda8dc-c943-45d5-90f3-ffd19b7982e4)
 
-**4. Select a list of target markets you want to evaluate**
+### 4. Select a list of target markets you want to evaluate
 
 Create a new Google spreadsheet / Excel page for each of them. This will allow you to contain all details for each target market on the same page.
 
 For the purposes of this demonstration, we will use “TargetMarket1,” “TargetMarket2,” and “TargetMarket3.”
 
-**5. Assess a target market based on selected factors**
+### 5. Assess a target market based on selected factors
 
 Now that we have decided on all the factors associated with the target market attractiveness, as well as the competitive advantage, you need to assess each of these based on the target markets that you have selected.
 
@@ -103,13 +105,13 @@ Here you just need to set the rating from 1 to 5 (or according to the range you 
 
 Note that the last column allows you to add comments based on any additional information/criteria that you used to make a rating choice.
 
-**6. Discover Total Addressable Market**
+### 6. Discover Total Addressable Market
 
 On the spreadsheet above, you may have seen the total addressable market value. I will address how to find this value in a subsequent post.
 
 This is extremely important because even if the market is really attractive, its size can dictate whether to pursue it or not. Most of the time, you don’t want to be chasing a small market opportunity.
 
-**7. Final matrix / chart**
+### 7. Final matrix / chart
 
 Once you have all this data, you can build the following for each of the target markets:
 

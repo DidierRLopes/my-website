@@ -15,6 +15,8 @@ description: In this blog post, I share how I used the OpenAI API to improve our
 
 In this blog post, I share how I used the OpenAI API to improve our product documentation. I used ChatGPT to generate more detailed descriptions for our OpenBB Bot Discord commands, making them more understandable for new users.
 
+The open source code is available [here](https://github.com/DidierRLopes/improve-documentation-using-openai).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

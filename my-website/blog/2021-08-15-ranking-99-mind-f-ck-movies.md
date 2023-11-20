@@ -15,6 +15,8 @@ description: Ranking and sorting a list of 99 mind-bending thriller movies using
 
 Ranking and sorting a list of 99 mind-bending thriller movies using IMDbPy API in Python.
 
+The open source code is available [here](https://github.com/DidierRLopes/SortMoviesPerRating).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

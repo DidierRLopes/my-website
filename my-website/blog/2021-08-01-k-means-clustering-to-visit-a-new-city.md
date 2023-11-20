@@ -15,6 +15,8 @@ description: In this blogpost, I share how I used the K-means algorithm to plan 
 
 In this blogpost, I share how I used the K-means algorithm to plan a visit to London. The algorithm helps to decide which attractions to visit based on the number of days of the visit and the GPS coordinates of the attractions.
 
+The open source code is available [here](https://github.com/DidierRLopes/LondonVisit).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

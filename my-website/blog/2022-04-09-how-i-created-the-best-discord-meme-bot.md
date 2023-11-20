@@ -15,6 +15,8 @@ description: In this blog post, I share my journey of creating a Discord meme bo
 
 In this blog post, I share my journey of creating a Discord meme bot, the role it played in building a vibrant community around our open source project, and how you can add your own memes to the bot.
 
+The open source code is available [here](https://github.com/DidierRLopes/discord-memes).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

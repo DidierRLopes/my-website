@@ -14,6 +14,8 @@ tags: ['Python', 'LinkedIn', 'Twitter', 'Carousel', 'Content Creation']
 
 In this blog post, I share how I built a Python tool that converts a Twitter thread into a LinkedIn carousel in seconds. This tool is open source and contributions for improvements are welcome.
 
+The open source code is available [here](https://github.com/DidierRLopes/thread-to-carousel/tree/master).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

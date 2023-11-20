@@ -22,8 +22,6 @@ This blog post challenges the concept of work-life balance, arguing that success
 
 For successful individuals, achieving a work-life balance is a luxury often associated with those born into wealth.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/935e058c-7338-48b9-bd1c-bd0e39d85094)
-
 Let me explain.
 
 There must be a clear inverse correlation between success (let’s say measured by wealth) and the size of your circle of friends.

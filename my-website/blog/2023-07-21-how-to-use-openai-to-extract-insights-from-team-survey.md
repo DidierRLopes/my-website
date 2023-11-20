@@ -15,6 +15,8 @@ description: This blog post discusses how to use OpenAI to extract insights from
 
 This blog post discusses how to use OpenAI to extract insights from team survey data. It covers the motivation behind the project, the requirements, and the implementation process, including the use of the Slack API and Airtable API for automation.
 
+The open source code is available [here](https://github.com/DidierRLopes/insights-from-team-survey).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

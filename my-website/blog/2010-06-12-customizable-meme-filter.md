@@ -15,6 +15,8 @@ description: In this blogpost, I share my journey of creating a customizable mem
 
 In this blogpost, I share my journey of creating a customizable meme filter using Python. This filter selects a random meme based on the number of people on the screen and assigns each person to a character in the meme.
 
+The open source code is available [here](https://github.com/DidierRLopes/meme-filter).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

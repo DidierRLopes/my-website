@@ -15,6 +15,8 @@ description: In this blogpost, we share how we organized a World Cup 2022 sweeps
 
 In this blogpost, we share how we organized a World Cup 2022 sweepstake for our startup team as a team building activity, and how we built a slack bot to facilitate discussions around the event.
 
+The open source code is available [here](https://github.com/DidierRLopes/worldcup2022-sweepstake-slackbot).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

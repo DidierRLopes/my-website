@@ -14,11 +14,11 @@ tags: ['PhD Thesis', 'Neural Networks', 'Python', 'Time Series Forecasting']
 
 An unusual journey of learning about Neural Networks for a PhD thesis. This blog post details the author's experience of assisting in the programming aspect of a PhD thesis, focusing on the study of various models and their forecasting performance.
 
+The open source code is available [here](https://github.com/DidierRLopes/UnivariateTimeSeriesForecast).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
-
-https://github.com/DidierRLopes/UnivariateTimeSeriesForecast
 
 On 14th February of 2019, my previous Maths and Statistics teacher — Filipe -sent me a messaged because of a Linkedin post I shared about work I was doing in python.
 

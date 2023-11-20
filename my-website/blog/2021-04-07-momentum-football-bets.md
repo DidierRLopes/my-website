@@ -15,6 +15,8 @@ description: In this blogpost, I share how I developed an automated task to esti
 
 In this blogpost, I share how I developed an automated task to estimate the momentum of football teams for betting purposes using Beautiful Soup and Python.
 
+The open source code is available [here](https://github.com/DidierRLopes/momentum-football-bets).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

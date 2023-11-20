@@ -15,6 +15,8 @@ description: In this blogpost, I share my journey of starting a sustainable clot
 
 In this blogpost, I share my journey of starting a sustainable clothing brand, managing the project, and developing a stock management tool in C++.
 
+The open source code is available [here](https://github.com/DidierRLopes/NeistpointCLI).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

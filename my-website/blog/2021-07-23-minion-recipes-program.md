@@ -15,6 +15,8 @@ description: In this blogpost, I share how I developed a program to help my mum 
 
 In this blogpost, I share how I developed a program to help my mum manage her recipes. The program allows for adding, editing, and removing recipes, and even includes fun minion icons.
 
+The open source code is available [here](https://github.com/DidierRLopes/RecipesProgram).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

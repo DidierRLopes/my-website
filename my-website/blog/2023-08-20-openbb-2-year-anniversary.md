@@ -21,8 +21,6 @@ Two years of OpenBB: A look back at our achievements and growth in the world of 
 
 Today is OpenBB 2 years anniversary of our incorporation. So it’s important to look back and understand the magnitude of what we achieved in 24 months.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/2482411c-1588-41d4-ba7f-72506065f4b5)
-
 In that time we’ve had:
 
 - 100k+ downloads of our installer since we started tracking it
@@ -60,7 +58,11 @@ If we only focus on where Gamestonk Terminal was 2 years ago we had:
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/2c6890ec-f561-4303-8835-addb31590da5)
 
-Bill Gates said the famous saying, “People overestimate what they can do in one year and underestimate what they can do in 10 years”.
+Bill Gates said the famous saying:
+
+> People overestimate what they can do in one year and underestimate what they can do in 10 years.
+
+<br />
 
 In fast-paced startups, I think a better sentence would be, “People overestimate what they can do in one week and underestimate what they can do in 1 year”.
 

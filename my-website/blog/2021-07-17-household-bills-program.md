@@ -15,6 +15,8 @@ description: In this blogpost, I share my journey of creating a program to split
 
 In this blogpost, I share my journey of creating a program to split household bills. This was my first side project where I used Java to create a GUI application.
 
+The open source code is available [here](https://github.com/DidierRLopes/HouseholdBills).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

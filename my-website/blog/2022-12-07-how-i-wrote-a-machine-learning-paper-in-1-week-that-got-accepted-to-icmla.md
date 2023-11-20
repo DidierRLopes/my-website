@@ -15,6 +15,8 @@ description: How I wrote a machine learning paper in 1 week that got accepted to
 
 How I wrote a machine learning paper in 1 week that got accepted to ICMLA while working full time and raised $8.8 million for OpenBB Terminal.
 
+The open source code is available [here](https://github.com/DidierRLopes/step-detection-ML).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

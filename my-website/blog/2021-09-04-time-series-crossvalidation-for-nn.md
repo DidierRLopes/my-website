@@ -15,6 +15,8 @@ description: This blog post discusses the creation of a Python module for splitt
 
 This blog post discusses the creation of a Python module for splitting univariate time-series data using cross-validation techniques. The module is designed to prepare data for training, validation, and testing in a Deep Neural Network (DNN).
 
+The open source code is available [here](https://github.com/DidierRLopes/timeseries-cv).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

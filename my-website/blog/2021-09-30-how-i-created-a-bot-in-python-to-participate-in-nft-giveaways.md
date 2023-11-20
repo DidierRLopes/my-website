@@ -15,6 +15,8 @@ description: In this blogpost, I share how I created a bot in Python to automate
 
 In this blogpost, I share how I created a bot in Python to automate participation in NFT giveaways on Reddit. The bot simplifies tasks such as upvoting posts, commenting, and opening Opensea links to favourite artwork.
 
+The open source code is available [here](https://github.com/DidierRLopes/GiveawayNFTbot).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

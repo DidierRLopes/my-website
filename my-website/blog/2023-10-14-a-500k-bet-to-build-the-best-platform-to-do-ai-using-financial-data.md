@@ -15,6 +15,8 @@ description: This blog post discusses our $500k investment in building the best 
 
 This blog post discusses our $500k investment in building the best platform for AI using financial data. We focus on the rebranding of OpenBB SDK to OpenBB Platform, its features, and the potential payoff of this bet in 2024.
 
+The open source code is available [here](https://github.com/DidierRLopes/openbb-agents/tree/main).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

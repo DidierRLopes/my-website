@@ -15,11 +15,11 @@ description: Keep track of your startup metrics using a custom iOS widget. This 
 
 Keep track of your startup metrics using a custom iOS widget. This blog post will guide you on how to build a custom iOS widget that displays your startup metrics at all times. The entire code is open source and requires minimal coding skills.
 
+The open source code is available [here](https://github.com/DidierRLopes/opensource-scriptable-widget/tree/main).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
-
-![image](https://github.com/Meg1211/my-website/assets/88618738/d5b174c3-2a30-4494-b5ae-a0639fe5374e)
 
 If you have a high level role in your organization, you are likely obsessed over a few metrics that act as the north star for your company. Whether that is MRR, number of customers, GitHub stars, AUM, .. depends on the type and stage of company, and what you are optimizing for.
 

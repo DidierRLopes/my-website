@@ -2,13 +2,22 @@
 slug: the-start-of-my-machine-learning-journey
 title: The Start of my Machine Learning journey
 date: 2021-11-07
-image: https://github.com/Meg1211/my-website/assets/88618738/2322ff06-a803-458c-9402-6c8ed5cdde27
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280497284-2322ff06-a803-458c-9402-6c8ed5cdde27.png
 tags: ['Machine Learning', 'Python', 'Data Science', 'Education', 'Self-Learning']
+description: The start of my journey into the world of Machine Learning, from learning Python to understanding the underlying mathematics of ML algorithms.
 ---
+
+<p align="center">
+    <img width="600" src=https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280497284-2322ff06-a803-458c-9402-6c8ed5cdde27.png"/>
+</p>
+
+<br />
 
 The start of my journey into the world of Machine Learning, from learning Python to understanding the underlying mathematics of ML algorithms.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 During my studies at Imperial College London - 3ish years ago - I was introduced to the topic of Machine Learning, an area that I had always been interested about. At that time, not only I didn't know python, as “from sklearn.decomposition import PCA" wasn’t allowed. Therefore, we had to write the PCA (and other) algorithms in Matlab from scratch, which was great because it exposed us to the maths behind each algorithm.
 

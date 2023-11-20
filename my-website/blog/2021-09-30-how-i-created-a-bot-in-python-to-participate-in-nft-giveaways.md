@@ -2,13 +2,22 @@
 slug: how-i-created-a-bot-in-python-to-participate-in-nft-giveaways
 title: How I created a bot in python to participate in NFT giveaways
 date: 2021-09-30
-image: https://github.com/Meg1211/my-website/assets/88618738/d965410f-6a4d-40b1-92d1-2e3fb4e24462
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280496989-d965410f-6a4d-40b1-92d1-2e3fb4e24462.png
 tags: ['Python', 'Bot', 'NFT', 'Giveaways', 'Reddit', 'Automation']
+description: In this blogpost, I share how I created a bot in Python to automate participation in NFT giveaways on Reddit. The bot simplifies tasks such as upvoting posts, commenting, and opening Opensea links to favourite artwork.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280496989-d965410f-6a4d-40b1-92d1-2e3fb4e24462.png"/>
+</p>
+
+<br />
 
 In this blogpost, I share how I created a bot in Python to automate participation in NFT giveaways on Reddit. The bot simplifies tasks such as upvoting posts, commenting, and opening Opensea links to favourite artwork.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 # How I created a bot in python to participate in NFT giveaways
 

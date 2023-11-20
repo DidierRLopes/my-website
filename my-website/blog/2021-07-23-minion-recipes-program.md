@@ -2,12 +2,22 @@
 slug: minion-recipes-program
 title: Minion Recipes Program
 date: 2021-07-23
-image: https://github.com/Meg1211/my-website/assets/88618738/5fb7c215-ec70-40dd-99dc-8ebc5b8b3eba
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280496377-5fb7c215-ec70-40dd-99dc-8ebc5b8b3eba.png
 tags: ['Python', 'Programming', 'Recipes', 'Software Development']
+description: In this blogpost, I share how I developed a program to help my mum manage her recipes. The program allows for adding, editing, and removing recipes, and even includes fun minion icons.
 ---
 
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280496377-5fb7c215-ec70-40dd-99dc-8ebc5b8b3eba.png"/>
+</p>
+
+<br />
+
 In this blogpost, I share how I developed a program to help my mum manage her recipes. The program allows for adding, editing, and removing recipes, and even includes fun minion icons.
+
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 https://github.com/DidierRLopes/RecipesProgram
 

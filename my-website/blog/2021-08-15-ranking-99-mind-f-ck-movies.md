@@ -2,13 +2,22 @@
 slug: ranking-99-mind-f-ck-movies
 title: Ranking 99 Mind f*ck movies
 date: 2021-08-15
-image: https://github.com/Meg1211/my-website/assets/88618738/cccaf22e-5d70-4a6d-bb80-d6b728b2d500
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280496558-cccaf22e-5d70-4a6d-bb80-d6b728b2d500.png
 tags: ['Movies', 'Thrillers', 'IMDbPy', 'Python', 'Sorting Algorithm']
+description: Ranking and sorting a list of 99 mind-bending thriller movies using IMDbPy API in Python.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280496558-cccaf22e-5d70-4a6d-bb80-d6b728b2d500.png"/>
+</p>
+
+<br />
 
 Ranking and sorting a list of 99 mind-bending thriller movies using IMDbPy API in Python.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/cccaf22e-5d70-4a6d-bb80-d6b728b2d500)
 

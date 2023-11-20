@@ -2,13 +2,21 @@
 slug: an-unusual-journey-learning-about-nns-for-a-phd-thesis
 title: An unusual journey learning about NNs for a PhD thesis
 date: 2021-10-22
-image: https://github.com/Meg1211/my-website/assets/88618738/46ba8ff7-2f83-4fc4-8fed-350fc18246da
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280497057-46ba8ff7-2f83-4fc4-8fed-350fc18246da.png
 tags: ['PhD Thesis', 'Neural Networks', 'Python', 'Time Series Forecasting']
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280497057-46ba8ff7-2f83-4fc4-8fed-350fc18246da.png"/>
+</p>
+
+<br />
 
 An unusual journey of learning about Neural Networks for a PhD thesis. This blog post details the author's experience of assisting in the programming aspect of a PhD thesis, focusing on the study of various models and their forecasting performance.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 https://github.com/DidierRLopes/UnivariateTimeSeriesForecast
 

@@ -2,13 +2,22 @@
 slug: customizable-meme-filter
 title: Customizable Meme Filter
 date: 2010-06-12
-image: https://github.com/Meg1211/my-website/assets/88618738/b123cf98-3411-4edc-9597-7b8c6d0c7e73
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280495694-b123cf98-3411-4edc-9597-7b8c6d0c7e73.png
 tags: ['Python', 'Meme Filter', 'Image Processing', 'Face Recognition']
+description: In this blogpost, I share my journey of creating a customizable meme filter using Python. This filter selects a random meme based on the number of people on the screen and assigns each person to a character in the meme.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280495694-b123cf98-3411-4edc-9597-7b8c6d0c7e73.png"/>
+</p>
+
+<br />
 
 In this blogpost, I share my journey of creating a customizable meme filter using Python. This filter selects a random meme based on the number of people on the screen and assigns each person to a character in the meme.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/b123cf98-3411-4edc-9597-7b8c6d0c7e73)
 

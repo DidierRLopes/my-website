@@ -2,13 +2,22 @@
 slug: sweepstake-world-cup-2022-for-your-startup-team
 title: Sweepstake World Cup 2022 for your startup team
 date: 2010-11-26
-image: https://github.com/Meg1211/my-website/assets/88618738/ba486af7-2579-4c00-a575-278cb74faeb6
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280552072-ba486af7-2579-4c00-a575-278cb74faeb6.png
 tags: ['World Cup 2022', 'Startup Team', 'Sweepstake', 'Team Building', 'Slack Bot']
+description: In this blogpost, we share how we organized a World Cup 2022 sweepstake for our startup team as a team building activity, and how we built a slack bot to facilitate discussions around the event.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280552072-ba486af7-2579-4c00-a575-278cb74faeb6.png"/>
+</p>
+
+<br />
 
 In this blogpost, we share how we organized a World Cup 2022 sweepstake for our startup team as a team building activity, and how we built a slack bot to facilitate discussions around the event.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/ba486af7-2579-4c00-a575-278cb74faeb6)
 

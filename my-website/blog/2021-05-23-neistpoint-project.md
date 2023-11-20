@@ -2,13 +2,22 @@
 slug: neistpoint-project
 title: NeistPoint Project
 date: 2021-05-23
-image: https://github.com/Meg1211/my-website/assets/88618738/c2282aa1-115e-451f-b0c0-af1351936c37
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280495631-c2282aa1-115e-451f-b0c0-af1351936c37.png
 tags: ['NeistPoint', 'Clothing Brand', 'Sustainability', 'Project Management', 'C++', 'Stock Management']
+description: In this blogpost, I share my journey of starting a sustainable clothing brand, managing the project, and developing a stock management tool in C++.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280495631-c2282aa1-115e-451f-b0c0-af1351936c37.png"/>
+</p>
+
+<br />
 
 In this blogpost, I share my journey of starting a sustainable clothing brand, managing the project, and developing a stock management tool in C++.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 More than 2 years ago, me and some friends started a clothing brand - NeistPoint. The logo and name is inspired by the Neist Point Lighthouse in the Isle of Skye. The motto was “For a greener future and a bluer ocean”, and the goal was to raise awareness to contribute for a sustainable environment.
 

@@ -2,12 +2,22 @@
 slug: time-series-crossvalidation-for-nn
 title: Time-Series CrossValidation for NN
 date: 2021-09-04
-image: https://github.com/Meg1211/my-website/assets/88618738/19a411e1-bb34-44bf-a9b8-b2a3ba4dd5f6
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280496785-19a411e1-bb34-44bf-a9b8-b2a3ba4dd5f6.png
 tags: ['Python', 'Data Science', 'Deep Learning', 'Time Series', 'Cross Validation', 'Neural Networks']
+description: This blog post discusses the creation of a Python module for splitting univariate time-series data using cross-validation techniques. The module is designed to prepare data for training, validation, and testing in a Deep Neural Network (DNN).
 ---
 
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280496785-19a411e1-bb34-44bf-a9b8-b2a3ba4dd5f6.png"/>
+</p>
+
+<br />
+
 This blog post discusses the creation of a Python module for splitting univariate time-series data using cross-validation techniques. The module is designed to prepare data for training, validation, and testing in a Deep Neural Network (DNN).
+
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 https://github.com/DidierRLopes/timeseries-cv
 

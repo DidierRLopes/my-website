@@ -2,13 +2,22 @@
 slug: move-over-bloomberg-terminal-here-comes-gamestonk-terminal
 title: Move over Bloomberg Terminal, here comes Gamestonk Terminal
 date: 2010-04-23
-image: https://github.com/Meg1211/my-website/assets/88618738/a0760645-db19-4d5e-bf8a-089865eb12b3
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280495527-a0760645-db19-4d5e-bf8a-089865eb12b3.png
 tags: ['Gamestonk Terminal', 'Finance', 'Stock Market', 'Programming', 'Open Source']
+description: In this blogpost, we introduce Gamestonk Terminal, an open-source project that aims to be a comprehensive tool for financial analysis and stock market research. It includes functionalities for discovering stocks, market sentiment analysis, fundamental and technical analysis, due diligence, prediction techniques, and more.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280495527-a0760645-db19-4d5e-bf8a-089865eb12b3.png"/>
+</p>
+
+<br />
 
 In this blogpost, we introduce Gamestonk Terminal, an open-source project that aims to be a comprehensive tool for financial analysis and stock market research. It includes functionalities for discovering stocks, market sentiment analysis, fundamental and technical analysis, due diligence, prediction techniques, and more.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 https://github.com/DidierRLopes/GamestonkTerminal
 

@@ -8,7 +8,7 @@ description: The start of my journey into the world of Machine Learning, from le
 ---
 
 <p align="center">
-    <img width="600" src=https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280497284-2322ff06-a803-458c-9402-6c8ed5cdde27.png"/>
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280497284-2322ff06-a803-458c-9402-6c8ed5cdde27.png"/>
 </p>
 
 <br />

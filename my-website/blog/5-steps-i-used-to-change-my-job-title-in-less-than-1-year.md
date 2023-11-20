@@ -2,9 +2,14 @@
 slug: 5-steps-i-used-to-change-my-job-title-in-less-than-1-year
 title: 5 steps I used to change my job title in less than 1 year.
 authors: didier
+date: 2022-11-14
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280500184-fd343f2a-7508-488a-a705-a716af395bb2.png
 tags: []
-date: 2010-04-07
 ---
+
+description
+
+<!-- truncate -->
 
 # 5 steps I used to change my job title in less than 1 year.
 

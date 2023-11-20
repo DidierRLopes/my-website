@@ -1,15 +1,23 @@
 ---
 slug: how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla
 title: How I wrote a machine learning paper in 1 week that got accepted to International Conference in Machine Learning Applications
-authors: didier
 date: 2022-12-07
 image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280552697-4de8034a-3530-43f3-8b3f-1c703c6dd001.png
 tags: ['Machine Learning', 'Data Science', 'Academia', 'ICMLA', 'NURVV Run', 'Open Source']
+description: How I wrote a machine learning paper in 1 week that got accepted to ICMLA while working full time and raised $8.8 million for OpenBB Terminal.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280552697-4de8034a-3530-43f3-8b3f-1c703c6dd001.png"/>
+</p>
+
+<br />
 
 How I wrote a machine learning paper in 1 week that got accepted to ICMLA while working full time and raised $8.8 million for OpenBB Terminal.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 One year ago, I raised $ 8.8 millions to build OpenBB Terminal full time. But since I was working at a startup in the UK, I had a 3 month notice period.
 

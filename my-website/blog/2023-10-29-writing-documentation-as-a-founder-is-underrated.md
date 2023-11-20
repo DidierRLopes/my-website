@@ -19,9 +19,7 @@ This blog post emphasizes the importance of writing documentation as a founder. 
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
-A founder spending time writing documentation is f*king underrated
-
-![image](https://github.com/Meg1211/my-website/assets/88618738/219994c7-2b9d-4aae-a661-7131583203e3)
+A founder spending time writing documentation is f*king underrated.
 
 Working on your product documentation may not be the most rewarding task, but I strongly believe that it gives you an edge when pitching your product.
 

@@ -54,3 +54,37 @@ a[href^="http"] {
   font-style: italic;
   text-decoration: underline;
 }
+
+h1[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-module"] {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+[data-theme="light"] h1[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-module"]  {
+  color: #2e8555;
+}
+[data-theme="dark"] h1[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-module"] {
+  color: #21af90;
+}
+
+h2[class^="anchor"] {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+[data-theme="light"] h2[class^="anchor"] {
+  color: #2e8555;
+}
+[data-theme="dark"] h2[class^="anchor"] {
+  color: #21af90;
+}
+
+h3[class^="anchor"] {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+h4[class^="anchor"] {
+  font-size: 1em;
+  font-weight: 500;
+}

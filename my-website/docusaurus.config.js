@@ -47,9 +47,9 @@ const config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
-          blogTitle: 'Docusaurus blog!',
-          blogDescription: 'A Docusaurus powered blog!',
-          blogSidebarCount: 'ALL', // Show all blog posts
+          blogTitle: 'Didier blog',
+          blogDescription: 'This is where I drop my thoughts in the form of blogposts!',
+          blogSidebarCount: 'ALL',
           postsPerPage: 'ALL',
           showReadingTime: true,
           // Please change this to your repo.
@@ -58,7 +58,7 @@ const config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: ['./src/css/custom.css'],
         },
       }),
     ],
@@ -124,6 +124,10 @@ const config = {
       };
     },
   ],
+
+  stylesheets: [
+    "src/css/custom.css"
+  ]
 };
 
 module.exports = config;

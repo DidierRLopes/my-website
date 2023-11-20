@@ -1,15 +1,23 @@
 ---
 slug: how-chatgpt-allowed-me-to-leverage-twitter-api-10x-faster
 title: How ChatGPT allowed me to leverage Twitter API 10x faster
-authors: didier
 date: 2022-12-11
 image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280552939-af9954fe-c1ff-4fc7-802a-a81c82adb86d.png
 tags: ['ChatGPT', 'Twitter API', 'Tweepy', 'Python', 'Programming']
+description: Leveraging the power of ChatGPT to interact with Twitter API for real-time financial news updates.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280552939-af9954fe-c1ff-4fc7-802a-a81c82adb86d.png"/>
+</p>
+
+<br />
 
 Leveraging the power of ChatGPT to interact with Twitter API for real-time financial news updates.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 # How ChatGPT allowed me to leverage Twitter API 10x faster
 

@@ -1,15 +1,23 @@
 ---
 slug: firing-sucks-how-to-avoid-doing-so-by-hiring-a-players
 title: Firing sucks. How to avoid doing so by hiring A players.
-authors: didier
 date: 2023-01-02
-image: https://github.com/Meg1211/my-website/assets/88618738/c13a3c1f-b347-4703-b23b-1247c8fcf01e
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280553099-c13a3c1f-b347-4703-b23b-1247c8fcf01e.png
 tags: ['Hiring', 'Management', 'A Players', 'OpenBB', 'Career Advice']
+description: Firing is tough. This blogpost discusses how to avoid it by hiring A players, improving the hiring process, and understanding the importance of a scorecard in recruitment.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280553099-c13a3c1f-b347-4703-b23b-1247c8fcf01e.png"/>
+</p>
+
+<br />
 
 Firing is tough. This blogpost discusses how to avoid it by hiring A players, improving the hiring process, and understanding the importance of a scorecard in recruitment.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/c13a3c1f-b347-4703-b23b-1247c8fcf01e)
 

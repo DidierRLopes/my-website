@@ -4,7 +4,7 @@ title: OpenBB 2 year anniversary
 date: 2023-08-20
 image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280557086-2482411c-1588-41d4-ba7f-72506065f4b5.png
 tags: ['OpenBB', 'Anniversary', 'Achievements', 'Growth', 'Finance']
-description: Two years of OpenBB: A look back at our achievements and growth in the world of open-source finance.
+description: Two years of OpenBB. A look back at our achievements and growth in the world of open-source finance.
 ---
 
 <p align="center">

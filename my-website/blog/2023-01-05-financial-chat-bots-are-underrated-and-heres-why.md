@@ -1,15 +1,23 @@
 ---
 slug: financial-chat-bots-are-underrated-and-heres-why
 title: Financial chat bots are underrated, and here’s why.
-authors: didier
 date: 2023-01-05
-image: https://github.com/Meg1211/my-website/assets/88618738/a1352f75-9bfd-4a70-8129-d72bc4e720b5
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280554064-a1352f75-9bfd-4a70-8129-d72bc4e720b5.png
 tags: ['chatbots', 'finance', 'AI', 'Discord', 'OpenBB', 'OptionsFamBot']
+description: In this blog post, we discuss the underrated potential of financial chat bots, our collaboration with OptionsFamBot, and why chat bots are becoming increasingly popular.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280554064-a1352f75-9bfd-4a70-8129-d72bc4e720b5.png"/>
+</p>
+
+<br />
 
 In this blog post, we discuss the underrated potential of financial chat bots, our collaboration with OptionsFamBot, and why chat bots are becoming increasingly popular.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 At OpenBB, earlier this year we joined forces with OptionsFamBot. This was a bot that had a reach of over 1 Million users on Discord.
 

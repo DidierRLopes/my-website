@@ -1,15 +1,23 @@
 ---
 slug: how-i-used-openai-api-to-improve-our-product-documentation
 title: How I Used OpenAI API to improve our product documentation
-authors: didier
 date: 2023-04-01
-image: https://github.com/Meg1211/my-website/assets/88618738/32a1e101-4357-4a0a-852c-d184ad6a7104
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280554411-32a1e101-4357-4a0a-852c-d184ad6a7104.png
 tags: ['OpenAI', 'API', 'Product Documentation', 'ChatGPT', 'Discord', 'OpenBB Bot']
+description: In this blog post, I share how I used the OpenAI API to improve our product documentation. I used ChatGPT to generate more detailed descriptions for our OpenBB Bot Discord commands, making them more understandable for new users.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280554411-32a1e101-4357-4a0a-852c-d184ad6a7104.png"/>
+</p>
+
+<br />
 
 In this blog post, I share how I used the OpenAI API to improve our product documentation. I used ChatGPT to generate more detailed descriptions for our OpenBB Bot Discord commands, making them more understandable for new users.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 The documentation of our free OpenBB Bot was pretty simplistic for most of the commands.
 

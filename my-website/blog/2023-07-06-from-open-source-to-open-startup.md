@@ -4,7 +4,7 @@ title: From Open Source to Open Startup
 date: 2023-07-06
 image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280555755-5ae0c633-fe95-481c-85bb-eef15891481f.png
 tags: ['open-source', 'open-startup', 'transparency', 'financial world', 'OpenBB']
-description: From Open Source to Open Startup: A journey of OpenBB towards transparency in the financial world.
+description: From Open Source to Open Startup. A journey of OpenBB towards transparency in the financial world.
 ---
 
 <p align="center">

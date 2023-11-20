@@ -2,13 +2,22 @@
 slug: how-i-would-do-due-diligence-on-amt-using-openbb-terminal
 title: How I would do due diligence on $AMT using OpenBB Terminal
 date: 2022-10-20
-image: https://github.com/Meg1211/my-website/assets/88618738/4572fe2a-b0b0-487f-9dee-6c08b0e4c965
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499804-4572fe2a-b0b0-487f-9dee-6c08b0e4c965.png
 tags: ['OpenBB Terminal', 'Investment Research', 'Stocks', 'Due Diligence']
+description: This blog post provides a detailed walkthrough on how to conduct due diligence on $AMT using the OpenBB Terminal, a free and open source platform for financial data analysis.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499804-4572fe2a-b0b0-487f-9dee-6c08b0e4c965.png"/>
+</p>
+
+<br />
 
 This blog post provides a detailed walkthrough on how to conduct due diligence on $AMT using the OpenBB Terminal, a free and open source platform for financial data analysis.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 Last month someone on Twitter asked me to do a thread on how I would do due diligence on $AMT using the free and open source OpenBB Terminal.
 

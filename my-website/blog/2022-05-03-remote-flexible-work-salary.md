@@ -2,13 +2,22 @@
 slug: remote-flexible-work-salary
 title: Remote + Flexible work >> Salary
 date: 2022-05-03
-image: https://github.com/Meg1211/my-website/assets/88618738/ad97cd9d-c836-443c-b333-78a193b3ac99
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499305-ad97cd9d-c836-443c-b333-78a193b3ac99.png
 tags: ['Remote Work', 'Flexible Hours', 'Work Life Balance', 'Productivity']
+description: This blog post discusses the importance of remote and flexible work hours, and how it can significantly improve work-life balance and productivity.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499305-ad97cd9d-c836-443c-b333-78a193b3ac99.png"/>
+</p>
+
+<br />
 
 This blog post discusses the importance of remote and flexible work hours, and how it can significantly improve work-life balance and productivity.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 I was thinking about remote + flexible hours, and I don’t think I would ever work for a company without these. At least by choice 🙃
 

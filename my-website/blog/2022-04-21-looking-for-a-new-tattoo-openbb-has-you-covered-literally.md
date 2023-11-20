@@ -2,13 +2,22 @@
 slug: looking-for-a-new-tattoo-openbb-has-you-covered-literally
 title: Looking for a new tattoo? OpenBB has you covered… literally.
 date: 2022-04-21
-image: https://github.com/Meg1211/my-website/assets/88618738/fa6ca582-187b-4ddf-9ecf-1e259939f26f
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499252-fa6ca582-187b-4ddf-9ecf-1e259939f26f.png
 tags: ['OpenBB', 'Marketing', 'Tattoo', 'Brand Awareness']
+description: Exploring unconventional ways to increase brand visibility, OpenBB's co-founder gets a tattoo of the company logo. This blog post discusses the thought process behind this unique marketing strategy.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499252-fa6ca582-187b-4ddf-9ecf-1e259939f26f.png"/>
+</p>
+
+<br />
 
 Exploring unconventional ways to increase brand visibility, OpenBB's co-founder gets a tattoo of the company logo. This blog post discusses the thought process behind this unique marketing strategy.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 When OpenBB Terminal started last year, I went from having your typical career as a Software Engineer to becoming a co-founder & CEO of a C-Corporation overnight. One thing that I’ve really learnt from this change, is I can no longer code for 12–16 hours a day straight as my role now involves so much more than this… and most interestingly, one of those things is marketing.
 

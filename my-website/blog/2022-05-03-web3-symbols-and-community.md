@@ -2,13 +2,22 @@
 slug: web3-symbols-and-community
 title: Web3, symbols and community
 date: 2022-05-03
-image: https://github.com/Meg1211/my-website/assets/88618738/10b469e9-60ba-4458-b5b9-853cbffa5680
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499534-10b469e9-60ba-4458-b5b9-853cbffa5680.png
 tags: ['Web3', 'Community', 'Decentralization', 'Blockchain', 'Smart Contracts']
+description: This blog post discusses the importance of strong communities in the Web 3.0 space, the role of decentralization, and how voting frameworks based on smart contracts can empower users.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499534-10b469e9-60ba-4458-b5b9-853cbffa5680.png"/>
+</p>
+
+<br />
 
 This blog post discusses the importance of strong communities in the Web 3.0 space, the role of decentralization, and how voting frameworks based on smart contracts can empower users.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 If you have been paying attention to the Web 3.0 space, you should have realized that most of the projects in the space rely on strong communities.
 

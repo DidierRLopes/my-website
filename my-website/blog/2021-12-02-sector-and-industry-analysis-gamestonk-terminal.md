@@ -2,13 +2,22 @@
 slug: sector-and-industry-analysis-gamestonk-terminal
 title: Sector and Industry Analysis — Gamestonk Terminal
 date: 2021-12-02
-image: https://github.com/Meg1211/my-website/assets/88618738/a8730909-278e-4186-9139-0b08f7ed88c0
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280497500-a8730909-278e-4186-9139-0b08f7ed88c0.png
 tags: ['Gamestonk Terminal', 'Sector Analysis', 'Industry Analysis', 'FinanceDatabase', 'Open Source']
+description: The development journey of a new Sector and Industry Analysis feature for Gamestonk Terminal, integrating the FinanceDatabase package.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280497500-a8730909-278e-4186-9139-0b08f7ed88c0.png"/>
+</p>
+
+<br />
 
 The development journey of a new Sector and Industry Analysis feature for Gamestonk Terminal, integrating the FinanceDatabase package.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 The end-to-end story of developing a new **Sector and Industry Analysis** for Gamestonk Terminal from scratch.
 

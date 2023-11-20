@@ -2,13 +2,22 @@
 slug: handing-your-twitter-account-to-your-most-avid-community-member
 title: Handing your twitter account to your most avid community member
 date: 2021-11-17
-image: https://github.com/Meg1211/my-website/assets/88618738/edb5650f-8c33-4f81-8df5-eb4ee4d48166
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280497451-edb5650f-8c33-4f81-8df5-eb4ee4d48166.png
 tags: ['Community Building', 'Twitter', 'Open Source', 'Gamestonk Terminal']
+description: Handing over the Twitter account of Gamestonk Terminal to an active community member and the impact it had on the project's growth and engagement.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280497451-edb5650f-8c33-4f81-8df5-eb4ee4d48166.png"/>
+</p>
+
+<br />
 
 Handing over the Twitter account of Gamestonk Terminal to an active community member and the impact it had on the project's growth and engagement.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 When I started Gamestonk Terminal I had no idea of the reach and impact it would have. **From getting over 3.5k stars on GitHub on the first single day alone**, to trending on Reddit and receiving overwhelming feedback, to receiving a message from an ex-colleague based in Switzerland about my name being top 1 on Hackernews… As if this wasn’t enough, a couple of days later the project got featured by VICE Magazine and Daily Fintech.
 

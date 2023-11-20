@@ -2,13 +2,22 @@
 slug: stop-doing-your-cv-in-word-or-latex
 title: Stop doing your CV in Word or LaTeX
 date: 2022-10-15
-image: https://github.com/Meg1211/my-website/assets/88618738/cfdd5535-25eb-4573-ba5a-aa7cbafb1255
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499727-cfdd5535-25eb-4573-ba5a-aa7cbafb1255.png
 tags: ['GitHub', 'CV', 'Career', 'Open Source', 'Developer']
+description: The future of CVs for engineers and developers lies within GitHub. This post discusses why GitHub profiles are becoming the new CVs and how they can provide a more comprehensive view of a candidate's skills and contributions.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499727-cfdd5535-25eb-4573-ba5a-aa7cbafb1255.png"/>
+</p>
+
+<br />
 
 The future of CVs for engineers and developers lies within GitHub. This post discusses why GitHub profiles are becoming the new CVs and how they can provide a more comprehensive view of a candidate's skills and contributions.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 The purpose of a CV is to summarize someone’s career, qualifications and education. **As an engineer or developer, I strongly believe that the future of CVs lies within GitHub.**
 

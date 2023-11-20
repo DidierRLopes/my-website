@@ -183,6 +183,7 @@ For example, let’s say we want to assess the competitive advantage for the tar
 
 Then, using the following block of code, we can get OpenAI’s GPT-4 to provide its input:
 
+```python
     response = openai.ChatCompletion.create(
       model="gpt-4",
       messages=[
@@ -203,9 +204,11 @@ Then, using the following block of code, we can get OpenAI’s GPT-4 to provide 
         ]
     )
     print(response.choices[0].message.content)
+```
 
 This is what the output looks like:
 
+```console
     {
         "Data Aggregation": 3,
         "Customization": 4,
@@ -213,6 +216,7 @@ This is what the output looks like:
         "Factor4": 2,
         "Factor5": 3
     }
+```
 
 **And that’s it for today.**
 

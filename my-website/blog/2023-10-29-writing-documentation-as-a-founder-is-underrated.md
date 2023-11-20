@@ -1,9 +1,9 @@
 ---
 slug: writing-documentation-as-a-founder-is-underrated
-title: Writing documentation, as a founder, is underrated.
+title: Writing documentation, as a founder, is underrated
+img: ./test.png
 authors: didier
 date: 2023-10-29
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280558061-219994c7-2b9d-4aae-a661-7131583203e3.png
 tags: ['documentation', 'founder', 'startup', 'writing', 'product']
 ---
 

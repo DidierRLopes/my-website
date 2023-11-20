@@ -39,7 +39,7 @@ This is the template prompt that I used:
 
 _Context: You are a developer writing a detailed documentation for a function that allows the user to retrieve {desc} utilizing the command {example} how would you explain what this command does in a single paragraph”_
 
-Where {**desc**} and {**example**} corresponds to the current description and example that each of our commands have, respectively.
+Where **desc** and **example** corresponds to the current description and example that each of our commands have, respectively.
 
 The results can be seen below,
 

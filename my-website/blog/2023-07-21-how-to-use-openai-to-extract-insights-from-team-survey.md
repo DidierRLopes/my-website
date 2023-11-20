@@ -59,6 +59,7 @@ The webhook URL will be necessary, so I copied it and added it to the following 
 
 Here is a sample that you can use to test whether you can successfully send yourself a direct message using the Slack API.
 
+```python
     SLACK_WEBHOOK_URL=<Webhook URL mentioned above>
     
     insight="Hello World"
@@ -77,6 +78,7 @@ Here is a sample that you can use to test whether you can successfully send your
         print(f"Request failed: {e.code} {e.reason}\n")
     except URLError as e:
         print(f"Server connection failed: {e.reason}\n")
+```
 
 **Airtable API**
 
@@ -94,6 +96,7 @@ The name of the table, “OpenBB_monthly”, corresponds to the “TABLE NAME”
 
 Next, run the following script to ensure that you have access to this data.
 
+```python
     AIRTABLE_API_KEY=<Located in Airtable Developer Hub>
     AIRTABLE_BASE_ID=<Located in URL when accessing data>
     AIRTABLE_TABLE_NAME="OpenBB_monthly"
@@ -110,6 +113,7 @@ Next, run the following script to ensure that you have access to this data.
         print(f"Error: {response.status_code}")
     
     print(data)
+```
 
 ## OpenAI API
 
@@ -168,16 +172,20 @@ Here is OpenBB’s team survey data from June of 2023:
 
 If I run the script here, as shown below (yes, you guessed it right — I open-sourced this project as usual. I hope you and your team find it useful):
 
+```console
     $ python extract_insights_from_last_team_survey.py
+```
 
 This is the expected output if the script runs successfully.
 
+```console
     Loading environment variables...
     Loading team survey data from Airtable...
     Processing data from Airtable...
     Extracting insights from team survey data...
     Sending insights to Slack through a message...
     SUCCESS: Message with insights sent to slack
+```
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/17871455-02b0-4b30-867a-2b9efdd97b15)
 
@@ -189,12 +197,14 @@ To begin, create a file called “main.yml” in the “.github/workflows” dir
 
 **“When”** — Specifies when this GitHub action should run.
 
+```console
     on:
       push:
         branches:
           - main
       schedule:
         - cron: '0 0 3 * *'
+```
 
 The first section, “on: push: branches: [main],” means that whenever there is a code push to the “main” branch, this workflow will be triggered. This feature allows us to quickly test whether the action is functioning as expected.
 
@@ -202,12 +212,14 @@ The “schedule-cron” makes it so that the yaml gets run at a specific dates a
 
 **Pre-requirements** — What do we need in advance for this to work?
 
+```console
     env:
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
       AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
       AIRTABLE_TABLE_NAME: ${{ secrets.AIRTABLE_TABLE_NAME }}
+```
 
 All of these variables need to be set as action secrets. You can do this by selecting the “Settings” tab above, then going into “Scripts and variables,” and selecting “New repository secret.” Fill in the information accordingly, as shown below:
 
@@ -215,6 +227,7 @@ All of these variables need to be set as action secrets. You can do this by sele
 
 What: What commands are we running with this GitHub action? In our case, these are the ones we are interested in.
 
+```console
     jobs:
       build:
         runs-on: ubuntu-latest
@@ -238,6 +251,7 @@ What: What commands are we running with this GitHub action? In our case, these a
           - name: extract insights from team feedback
             run: |
               python extract_insights_from_last_team_survey.py
+```
 
 And that’s it! You now have a complete automation pipeline from employee feedback to insights within seconds.
 

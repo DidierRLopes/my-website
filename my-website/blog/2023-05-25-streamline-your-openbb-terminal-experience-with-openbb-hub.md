@@ -1,15 +1,24 @@
 ---
 slug: streamline-your-openbb-terminal-experience-with-openbb-hub
-title: STREAMLINE YOUR OPENBB TERMINAL EXPERIENCE WITH OPENBB HUB
-authors: didier
+title: Streamline your OpenBB Terminal experience with OpenBB Hub
 date: 2023-05-25
-image: https://github.com/Meg1211/my-website/assets/88618738/abca5151-99f4-4c07-860f-6de8be85125c
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280555078-abca5151-99f4-4c07-860f-6de8be85125c.png
 tags: ['OpenBB', 'OpenBB Hub', 'Terminal', 'API Key Management', 'Data Customization', 'Personalization', 'Script Management']
+description: Streamline your OpenBB Terminal experience with OpenBB Hub. Learn about its key features, including API key management, data customization, personalization, and script management.
+
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280555078-abca5151-99f4-4c07-860f-6de8be85125c.png"/>
+</p>
+
+<br />
 
 Streamline your OpenBB Terminal experience with OpenBB Hub. Learn about its key features, including API key management, data customization, personalization, and script management.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 If you’re using the OpenBB Terminal, there’s an essential component you shouldn’t miss out on: the OpenBB Hub. In this blog post, we’ll explore the significance of OpenBB Hub and why it truly matters for OpenBB users.
 

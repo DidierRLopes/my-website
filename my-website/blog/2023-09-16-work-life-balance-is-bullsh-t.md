@@ -1,15 +1,24 @@
 ---
 slug: work-life-balance-is-bullsh-t
 title: Work-life balance is bullsh*t
-authors: didier
 date: 2023-09-16
-image: https://github.com/Meg1211/my-website/assets/88618738/935e058c-7338-48b9-bd1c-bd0e39d85094
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280557860-935e058c-7338-48b9-bd1c-bd0e39d85094.png
 tags: ['work-life balance', 'success', 'career', 'hard work']
+description: This blog post challenges the concept of work-life balance, arguing that success often requires sacrifices in personal time and relationships. It suggests that true balance comes from finding joy in your work and surrounding yourself with like-minded individuals.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280557860-935e058c-7338-48b9-bd1c-bd0e39d85094.png"/>
+</p>
+
+<br />
 
 This blog post challenges the concept of work-life balance, arguing that success often requires sacrifices in personal time and relationships. It suggests that true balance comes from finding joy in your work and surrounding yourself with like-minded individuals.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+
 
 For successful individuals, achieving a work-life balance is a luxury often associated with those born into wealth.
 

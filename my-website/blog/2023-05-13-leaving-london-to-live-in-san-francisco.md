@@ -1,14 +1,23 @@
 ---
 slug: leaving-london-to-live-in-san-francisco
 title: Leaving London to live in San Francisco
-authors: didier
 date: 2023-05-13
-image: https://github.com/Meg1211/my-website/assets/88618738/1efd7b64-e1cc-474d-b117-f1575a090b13
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280554923-1efd7b64-e1cc-474d-b117-f1575a090b13.png
 tags: ['San Francisco', 'London', 'Relocation', 'Visa Process', 'Startup', 'OpenBB']
+description: Leaving London to live in San Francisco: A personal journey of relocating and starting a tech company in the heart of Silicon Valley.
 ---
 
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280554923-1efd7b64-e1cc-474d-b117-f1575a090b13.png"/>
+</p>
+
+<br />
+
 Leaving London to live in San Francisco: A personal journey of relocating and starting a tech company in the heart of Silicon Valley.
+
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 ## Background
 

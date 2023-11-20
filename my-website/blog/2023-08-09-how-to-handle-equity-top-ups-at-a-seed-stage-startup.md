@@ -1,15 +1,23 @@
 ---
 slug: how-to-handle-equity-top-ups-at-a-seed-stage-startup
 title: How to handle equity top-ups at a seed stage startup
-authors: didier
 date: 2023-08-09
-image: https://github.com/Meg1211/my-website/assets/88618738/db55c35d-e5f3-4cfc-b200-5fe2f2690285
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280556975-db55c35d-e5f3-4cfc-b200-5fe2f2690285.png
 tags: ['equity', 'startups', 'seed stage', 'equity top-ups', 'employee compensation']
+description: In this post, we discuss how to handle equity top-ups at a seed stage startup, providing a step-by-step guide on the implementation process and including links to relevant spreadsheets.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280556975-db55c35d-e5f3-4cfc-b200-5fe2f2690285.png"/>
+</p>
+
+<br />
 
 In this post, we discuss how to handle equity top-ups at a seed stage startup, providing a step-by-step guide on the implementation process and including links to relevant spreadsheets.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 Previously, I shared how we handle equity at OpenBB in this post.
 

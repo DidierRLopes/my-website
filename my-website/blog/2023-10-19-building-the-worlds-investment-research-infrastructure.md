@@ -1,15 +1,23 @@
 ---
 slug: building-the-worlds-investment-research-infrastructure
 title: Building the world’s investment research infrastructure
-authors: didier
 date: 2023-10-19
-image: https://github.com/Meg1211/my-website/assets/88618738/f9ddc301-9ff4-4a5e-b5b6-45d3726101a3
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280558008-f9ddc301-9ff4-4a5e-b5b6-45d3726101a3.png
 tags: ['investment', 'research', 'infrastructure', 'OpenBB']
+description: This blog post discusses the process and challenges of building the world's investment research infrastructure. It provides an insight into the products developed by the OpenBB team and their efficient operation.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280558008-f9ddc301-9ff4-4a5e-b5b6-45d3726101a3.png"/>
+</p>
+
+<br />
 
 This blog post discusses the process and challenges of building the world's investment research infrastructure. It provides an insight into the products developed by the OpenBB team and their efficient operation.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/f9ddc301-9ff4-4a5e-b5b6-45d3726101a3)
 

@@ -1,15 +1,23 @@
 ---
 slug: openbb-2-year-anniversary
-title: OpenBB 2 year anniversary 🎉
-authors: didier
+title: OpenBB 2 year anniversary
 date: 2023-08-20
-image: https://github.com/Meg1211/my-website/assets/88618738/2482411c-1588-41d4-ba7f-72506065f4b5
+image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280557086-2482411c-1588-41d4-ba7f-72506065f4b5.png
 tags: ['OpenBB', 'Anniversary', 'Achievements', 'Growth', 'Finance']
+description: Two years of OpenBB: A look back at our achievements and growth in the world of open-source finance.
 ---
+
+<p align="center">
+    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280557086-2482411c-1588-41d4-ba7f-72506065f4b5.png"/>
+</p>
+
+<br />
 
 Two years of OpenBB: A look back at our achievements and growth in the world of open-source finance.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 Today is OpenBB 2 years anniversary of our incorporation. So it’s important to look back and understand the magnitude of what we achieved in 24 months.
 

@@ -1,7 +1,7 @@
 
 module.exports = {
   darkMode: ["class", '[data-theme="dark"]'],
-  content: ["./src/**/*.{js,jsx,ts,tsx}", "./content/**/*.{mdx,md}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./content/**/*.{mdx,md}", "./blog/**/*.{mdx,md}"],
   theme: {
     extend: {
       colors: {

@@ -119,6 +119,7 @@ Finally, go to OpenAI Developer platform and grab your OpenAI API key.
 
 Once you have that, you are pretty much ready to test whether this works or not. In this case, we assume you have access to the data from Airtable, so you can test if the OpenAI code is set up correctly with the following:
 
+```python
     data_previous_month=<dataframe with raw survey data from previous month>
     data_current_month=<dataframe with raw survey data from current month>
     current_month=<current month date>
@@ -155,6 +156,7 @@ Once you have that, you are pretty much ready to test whether this works or not.
     )
     
     print(response.choices[0].message.content)
+```
 
 ## Glue it together!
 

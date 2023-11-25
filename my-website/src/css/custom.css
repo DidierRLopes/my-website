@@ -85,8 +85,8 @@ h1[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-H
 }
 
 h2[class^="anchor"] {
-  font-size: 1.5em;
-  font-weight: 500;
+  font-size: 1.75em;
+  font-weight: 650;
 }
 
 [data-theme="light"] h2[class^="anchor"] {
@@ -97,13 +97,13 @@ h2[class^="anchor"] {
 }
 
 h3[class^="anchor"] {
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-weight: 600;
 }
 
 h4[class^="anchor"] {
-  font-size: 1em;
-  font-weight: 500;
+  font-size: 1.25em;
+  font-weight: 550;
 }
 
 ul {

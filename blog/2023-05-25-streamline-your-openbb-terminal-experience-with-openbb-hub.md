@@ -16,6 +16,8 @@ description: Streamline your OpenBB Terminal experience with OpenBB Hub. Learn a
 
 Streamline your OpenBB Terminal experience with OpenBB Hub. Learn about its key features, including API key management, data customization, personalization, and script management.
 
+The open source code is available [here](https://github.com/openbb-finance/OpenBBTerminal).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

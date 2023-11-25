@@ -15,6 +15,8 @@ description: This blog post discusses the process and challenges of building the
 
 This blog post discusses the process and challenges of building the world's investment research infrastructure. It provides an insight into the products developed by the OpenBB team and their efficient operation.
 
+The open source code is available [here](https://github.com/openbb-finance/OpenBBTerminal).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

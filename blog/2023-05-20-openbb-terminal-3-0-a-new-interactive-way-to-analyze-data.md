@@ -15,6 +15,8 @@ description: A game-changing update to OpenBB Terminal, introducing interactive 
 
 A game-changing update to OpenBB Terminal, introducing interactive charts and tables, empowering users with a new way to analyze data.
 
+The open source code is available [here](https://github.com/openbb-finance/OpenBBTerminal).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

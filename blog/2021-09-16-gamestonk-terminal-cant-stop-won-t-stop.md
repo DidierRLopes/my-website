@@ -15,6 +15,8 @@ description: Gamestonk Terminal's latest updates including Docker integration, J
 
 Gamestonk Terminal's latest updates including Docker integration, Jupyter Lab integration, a new Hugo website, and new features. A summary of the recent developments and future plans for the open-source financial tool.
 
+The open source code is available [here](https://github.com/DidierRLopes/GamestonkTerminal).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

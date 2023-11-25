@@ -15,6 +15,8 @@ description: In this blogpost, I introduce Gamestonk Terminal, an open-source pr
 
 In this blogpost, I introduce Gamestonk Terminal, an open-source project that aims to be a comprehensive tool for financial analysis and stock market research. It includes functionalities for discovering stocks, market sentiment analysis, fundamental and technical analysis, due diligence, prediction techniques, and more.
 
+The open source code is available [here](https://github.com/DidierRLopes/GamestonkTerminal).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

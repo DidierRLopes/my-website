@@ -15,6 +15,8 @@ description: OpenBB Terminal 2.0 has been released. This blog post discusses the
 
 OpenBB Terminal 2.0 has been released. This blog post discusses the new features and improvements, including the release of OpenBB SDK, a state-of-the-art AI/ML toolkit for the financial industry, and the vision for a community-driven investment research platform.
 
+The open source code is available [here](https://github.com/DidierRLopes/GamestonkTerminal).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

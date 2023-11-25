@@ -15,6 +15,8 @@ description: Gamestonk Terminal's UX/UI features and the teamwork behind their i
 
 Gamestonk Terminal's UX/UI features and the teamwork behind their implementation.
 
+The open source code is available [here](https://github.com/DidierRLopes/GamestonkTerminal).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

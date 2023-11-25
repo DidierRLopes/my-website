@@ -15,6 +15,8 @@ description: Why you should consider switching from yfinance API to OpenBB SDK f
 
 Why you should consider switching from yfinance API to OpenBB SDK for financial data retrieval. OpenBB SDK offers access to multiple data sources, potential for unlimited data, and incentives for data source partners.
 
+The open source code is available [here](https://github.com/DidierRLopes/GamestonkTerminal).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

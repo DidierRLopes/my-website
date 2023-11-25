@@ -15,6 +15,8 @@ description: Meet the most advanced investment research platform. This blog post
 
 Meet the most advanced investment research platform. This blog post introduces Gamestonk Terminal, an advanced investment research platform, and discusses its features and automation capabilities.
 
+The open source code is available [here](https://github.com/DidierRLopes/GamestonkTerminal).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

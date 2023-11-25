@@ -15,6 +15,8 @@ description: The development journey of a new Sector and Industry Analysis featu
 
 The development journey of a new Sector and Industry Analysis feature for Gamestonk Terminal, integrating the FinanceDatabase package.
 
+The open source code is available [here](https://github.com/DidierRLopes/GamestonkTerminal).
+
 <!-- truncate -->
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />

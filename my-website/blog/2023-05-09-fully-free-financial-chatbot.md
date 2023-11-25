@@ -19,15 +19,9 @@ The OpenBB Bot is a financial chatbot that allows you to access financial data f
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
-The OpenBB Bot is a financial chatbot that allows you to access financial data from Discord or Telegram along with other users. From equity data to crypto, options, darkpool, economy and much more!
+We know the market conditions haven’t been great for anyone, particularly for investors. Instead of raising prices like trends, we have decided to offer our [OpenBB Bot](https://my.openbb.co/app/bot) individuals tier for free if you are a registered user.
 
-We know the market conditions haven’t been great for anyone, particularly for investors. Instead of raising prices like trends, we have decided to offer our OpenBB Bot individuals tier for free if you are a registered user.
-
-While others zig, we zag. Here’s the updated pricing:
-
-![image](https://github.com/Meg1211/my-website/assets/88618738/7c937b83-3087-4bf9-8c06-27f7e042ad04)
-
-## WHAT DOES THIS MEAN FOR YOU?
+## What does this mean
 
 Registered users for OpenBB Bot will see the following changes:
 
@@ -39,14 +33,26 @@ Registered users for OpenBB Bot will see the following changes:
 
 Below is a video of what the OpenBB Bot is capable of:
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/d25cabf3-1f67-4339-8913-a773f4a95f87)
+![1_d1vD4AkwpYk42tdbHuMupQ](https://github.com/DidierRLopes/my-website/assets/25267873/b72852e8-ec33-4ec0-aa0e-6ea6290e3e20)
 
-The interactive charts will open up within the OpenBB Hub and in it you will be able to fully customize the technical analysis indicators that you see on the chart and even the candle chart color theme and type. A demo is shown below,
+The interactive charts will open up within the [OpenBB Hub](https://my.openbb.co/) and in it you will be able to fully customize the technical analysis indicators that you see on the chart and even the candle chart color theme and type. A demo is shown below,
 
-**ADD YOUTUBE VIDEO**
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/y2aYr0tXji4?si=VOV-G0Oc8INtm59Y"
+        width="800"
+        height="400"
+    />
+</div>
 
-Like dozens of thousands of investors, join the OpenBB Hub so you can fully leverage the OpenBB Bot.
+<br />
 
-You can actually see how many users we have utilizing the bot on a daily basis on our /open page.
+Like dozens of thousands of investors, join the OpenBB Hub so you can fully leverage the [OpenBB Bot](https://my.openbb.co/app/bot).
+
+You can actually see how many users we have utilizing the bot on a daily basis on our [/open page](https://openbb.co/company/open/bot).
+
+While others zig, we zag. Here’s the updated pricing:
+
+![image](https://github.com/Meg1211/my-website/assets/88618738/7c937b83-3087-4bf9-8c06-27f7e042ad04)
 
 Looking forward to feedback!

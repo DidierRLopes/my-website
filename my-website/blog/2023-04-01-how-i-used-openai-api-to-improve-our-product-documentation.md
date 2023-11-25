@@ -21,15 +21,15 @@ The open source code is available [here](https://github.com/DidierRLopes/improve
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
-The documentation of our free OpenBB Bot was pretty simplistic for most of the commands.
+The [documentation](https://docs.openbb.co/bot/reference/discord) of our free OpenBB Bot was pretty simplistic for most of the commands.
 
-For instance, the description for the command /dp alldp was: "Last 15 Darkpool Trades", as seen below:
+For instance, the description for the command `/dp alldp` was: "Last 15 Darkpool Trades", as seen below:
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/faf4a1e1-a5b5-4aeb-aec4-cd69c29842a7)
 
 For more experienced traders, this may be enough. But for new users, these 4 words may not mean much.
 
-For context, this is the output that a user would get if running /dp alldp on our Discord server.
+For context, this is the output that a user would get if running `/dp alldp` on our [Discord server](https://openbb.co/discord).
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/5752d06d-0515-46df-aeda-1425c79e7d2c)
 
@@ -43,21 +43,19 @@ After a bit of prompt tweaking, I got a much better description than the one we 
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/212114a0-033e-4f7d-98dc-ef22ee318227)
 
-The next step was rather straightforward. I created a script that iterated through all our OpenBB Bot Discord documentation files and updated the old description with a more detailed one.
+The next step was rather straightforward. I created a script that iterated [through all our OpenBB Bot Discord documentation](https://github.com/OpenBB-finance/OpenBBTerminal) files and updated the old description with a more detailed one.
 
 This is the template prompt that I used:
 
-_Context: You are a developer writing a detailed documentation for a function that allows the user to retrieve {desc} utilizing the command {example} how would you explain what this command does in a single paragraph”_
+> _Context: You are a developer writing a detailed documentation for a function that allows the user to retrieve {desc} utilizing the command {example} how would you explain what this command does in a single paragraph”_
 
 Where **desc** and **example** corresponds to the current description and example that each of our commands have, respectively.
 
-The results can be seen below,
+The results can be seen below (done on [this PR](https://github.com/OpenBB-finance/OpenBBTerminal/pull/4657)),
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/32a1e101-4357-4a0a-852c-d184ad6a7104)
 
-As usual, I open source the script here:
-
-https://github.com/DidierRLopes/improve-documentation-using-openai?source=post_page-----c79b0e06f9bc--------------------------------
+As usual, I open source the script [here](https://github.com/DidierRLopes/improve-documentation-using-openai).
 
 The funny thing is that I used an LLM output to improve our documentation. And we may use this data to train our own LLM.
 

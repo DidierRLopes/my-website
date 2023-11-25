@@ -10,6 +10,14 @@ const projects = [
     article: 'https://openbb.co/blog/gme-didnt-take-me-to-the-moon-but-gamestonk-terminal-did',
   },
   {
+    title: 'My Website',
+    link: 'https://github.com/DidierRLopes/my-website',
+    image: '/projects/my_website.webp',
+    desc: 'This very same personal website.',
+    language: 'JavaScript',
+    article: '',
+  },
+  {
     title: 'Personal Website',
     link: 'https://github.com/DidierRLopes/personal-website',
     image: '/projects/personal_website.webp',

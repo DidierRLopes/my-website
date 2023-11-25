@@ -19,23 +19,23 @@ The development journey of a new Sector and Industry Analysis feature for Gamest
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
-The end-to-end story of developing a new **Sector and Industry Analysis** for Gamestonk Terminal from scratch.
+The end-to-end story of developing a new **Sector and Industry Analysis** for [Gamestonk Terminal](https://github.com/GamestonkTerminal/GamestonkTerminal) from scratch.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/a8730909-278e-4186-9139-0b08f7ed88c0)
-
-On the 13th of October, Jeroen Bouma (a ALM advisor and python enthusiast) reached out in order to integrate his FinanceDatabase package into Gamestonk Terminal.
+On the 13th of October, [Jeroen Bouma](https://github.com/JerBouma) (a ALM advisor and python enthusiast) reached out in order to integrate his [FinanceDatabase package](https://github.com/JerBouma/FinanceDatabase) into [Gamestonk Terminal](https://github.com/GamestonkTerminal/GamestonkTerminal).
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/e98a2b76-8113-461e-a69f-48a706971adb)
 
-After having a call with Jeroen to bounce ideas, it was clear that our terminal needed such capability to be even more powerful (as if over 500 features already and counting didn’t already do the trick eheh). However, at the time I was too busy to work on the concept so I asked Jeroen if he could sketch something up on a jupyter notebook.
+After having a call with Jeroen to bounce ideas, it was clear that our terminal needed such capability to be even more powerful (as if **over 500 features** already and counting didn’t already do the trick eheh). However, at the time I was too busy to work on the concept so I asked Jeroen if he could sketch something up on a jupyter notebook.
 
 Within the following week, Jeroen sent a Jupyter notebook explaining the FinanceDatabase module and what we could have in a Sector and Industry analysis.
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/f8402594-0d19-4017-bb7b-cd61a593fd2d)
 
-In addition, he also mentioned his PassiveInvestor package, and ended up implementing it on his own in Gamestonk Terminal! This was a great addition, as it strengthened our ETF context and provided a slick Excel report for the Excel fans out there! See his LinkedIn post on the experience.
+In addition, he also mentioned his [PassiveInvestor package](https://github.com/JerBouma/ThePassiveInvestor), and ended up [implementing it on his own in Gamestonk Terminal](https://github.com/GamestonkTerminal/GamestonkTerminal/pull/857)! This was a great addition, as it strengthened our **ETF context** and provided a slick Excel report for the Excel fans out there! See his [LinkedIn post](https://www.linkedin.com/feed/update/urn:li:activity:6859887432532291584/) on the experience.
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/9ce2dfd0-c891-44f0-b0ae-1a774203bdb7)
+
+...
 
 Forward to last weekend (1.5 months later), I had a free Sunday afternoon so started working on the development of this menu. I started by thinking about what would make this menu more flexible and powerful.
 
@@ -49,7 +49,7 @@ These were my thoughts about what it needs:
 - Since one of the previous financials isn’t enough to understand which company would be best to invest in, I wanted the filtered companies to have the capability to jump onto the comparison analysis menu so you could get all the capabilities of comparing historical price data, volume data, income/balance/cash flow, sentiment, or even technical indicators.
 - If in the stocks context I had Tesla loaded, I wanted to go into this sia menu and get all the filtering parameters to be ready to filter for companies similar to Tesla in terms of (Sector, Industry, Country and Market Cap).
 
-By Sunday night, I created the pull request for this. Due to the due diligent reviews performed by the main contributors of the project, the menu got a lot of improvements. Some of them were:
+By Sunday night, I created the [pull request for this](https://github.com/GamestonkTerminal/GamestonkTerminal/pull/995). Due to the due diligent reviews performed by the main contributors of the project, the menu got a lot of improvements. Some of them were:
 - Do not display companies that account for under a certain threshold (1%) and therefore sum them in an “Others” slice.
 - Allow to export all the data as a table.
 - After filtering and getting financials, save the data for faster data retrieval if the same filters are used.
@@ -70,7 +70,7 @@ This would not only make the FinanceDatabase a more powerful Package, which woul
 
 This is an example of how the Sector and Industry Analysis menu looks (as a bonus I show how you can go into the Comparison Analysis menu):
 
-**ADD GIF**
+![image](https://github.com/DidierRLopes/my-website/assets/25267873/f3fac679-0f9f-45fe-9f77-c97b7351e05e)
 
 Next time you know, it all starts with an e-mail. At Gamestonk Terminal we are on a role to have the best investment research terminal, and hope this story reflects it.
 

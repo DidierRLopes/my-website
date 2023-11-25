@@ -19,15 +19,19 @@ Meet the most advanced investment research platform. This blog post introduces G
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
-# Meet the most advanced investment research platform
-
-![image](https://github.com/Meg1211/my-website/assets/88618738/0cd2335e-3099-43a5-996e-27bb34903348)
-
-Several people have asked me why Gamestonk Terminal doesn’t have release versions, and the main reason is because at the pace the team codes and the rate that new features / bug fixes appear it doesn’t yet makes sense to do so.
+Several people have asked me why [Gamestonk Terminal](https://github.com/GamestonkTerminal/GamestonkTerminal) doesn’t have release versions, and the main reason is because at the pace the team codes and the rate that new features / bug fixes appear it doesn’t yet makes sense to do so.
 
 To give you an example, recently I shared the first **DEMO of what the terminal can do**, and I mention about our “routines” automation concept.
 
-**ADD YOUTUBE VIDEO**
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/fqGPK8OVHLk?si=Xu7rtb-0iHmTDdjj"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
 
 One week later, using the latest version of the terminal, on top of that simplistic routine type you are able to:
 
@@ -38,9 +42,19 @@ One week later, using the latest version of the terminal, on top of that simplis
 5. Exporting a file with a pre-defined name is now possible
 6. Allow for the first line of the routines to be selecting a folder to export ALL the data
 
+<br />
+
 See below a 1 minute video of what these routine automated scripts look like!
 
-**ADD YOUTUBE VIDEO**
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/pH0srojpv8Q?si=778fQVB-YqNdxDL3"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
 
 Reach out if you have any question to the team, there’s very little we can’t do!
 

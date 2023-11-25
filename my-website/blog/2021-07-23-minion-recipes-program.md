@@ -21,9 +21,7 @@ The open source code is available [here](https://github.com/DidierRLopes/Recipes
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
-https://github.com/DidierRLopes/RecipesProgram
-
-Once I developed the Housebills program, I really enjoyed the feeling of being able to create usable software from scratch. Therefore, that year during Christmas, I wanted to challenge myself to see if I could find any interesting project to do in only 1 week.
+Once I developed the [Housebills program](/blog/household-bills-program), I really enjoyed the feeling of being able to create usable software from scratch. Therefore, that year during Christmas, I wanted to challenge myself to see if I could find any interesting project to do in only 1 week.
 
 I started by nagging my dad and brother for them to tell me something that would be useful to them in their daily lives. Sadly, none of them had any idea. Then, I went to the kitchen to ask my mum the same. She was busy searching recipes for xmas on her messy notebook, so she also said no.
 
@@ -66,6 +64,6 @@ Finally, in order to remove a recipe, the following window would be displayed. W
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/b5b01518-00d2-4f5f-a4e1-6fa1381b5d47)
 
-The recipe database is handled in the most robust way: with plain text files, obviously.
+The recipe database is handled in the most robust way: **with plain text files**, obviously.
 
 As always, hope you had a nice read.

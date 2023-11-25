@@ -20,13 +20,11 @@ The open source code is available [here](https://github.com/DidierRLopes/thread-
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
-# Twitter thread to LinkedIn carousel in python
-
 As content creators, it would be good if the same content could be utilised across every platform easily. Sometimes you need some tweaks based on audience, but often the same content is used across all platforms.
 
-I noticed recently that LinkedIn carousels have been picking a lot of traction, and given I have some nice Twitter threads (example) I thought that it would be great if I could convert them into a LinkedIn carousel.
+I noticed recently that LinkedIn carousels have been picking a lot of traction, and given I have some nice Twitter threads ([example](https://twitter.com/didier_lopes/status/1570731358204600323?s=20&t=SAO9fD7FR7jeTE-6kem6Mg)) I thought that it would be great if I could convert them into a LinkedIn carousel.
 
-So, I looked for free tools and didn’t find anything good enough. I ended up using canvas to re-create the thread — which you can find here. It worked well, but it was time consuming and for most cases, I don’t want to be messing around with the design side of things.
+So, I looked for free tools and didn’t find anything good enough. I ended up using [canvas](https://canvas.apps.chrome/) to re-create the thread — which you can find [here](https://www.linkedin.com/posts/didier-lopes_due-diligence-on-amt-using-openbb-terminal-activity-6977569279395176448-TFMn?utm_source=share&utm_medium=member_desktop). It worked well, but it was time consuming and for most cases, I don’t want to be messing around with the design side of things.
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/3f34f9d5-d1b2-426f-8b8d-e6d26a5367da)
 
@@ -40,9 +38,11 @@ The goal for me wasn’t to build a perfect tool, but something easy enough that
 
 Today I run it using:
 
+```console
 python convert2carousel.py https://twitter.com/didier_lopes/status/1581247044228100096
+```
 
-And the result can be found here.
+And the result can be found [here](https://www.linkedin.com/posts/didier-lopes_football-momentum-indicator-carousel-activity-6989972573782482944-nM9s?utm_source=share&utm_medium=member_desktop).
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/67efec99-d219-47c5-8d83-f19e97a44d76)
 

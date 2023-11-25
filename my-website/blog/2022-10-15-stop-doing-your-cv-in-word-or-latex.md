@@ -21,15 +21,15 @@ The future of CVs for engineers and developers lies within GitHub. This post dis
 
 The purpose of a CV is to summarize someone’s career, qualifications and education. **As an engineer or developer, I strongly believe that the future of CVs lies within GitHub.**
 
-In fact, GitHub has realized this and they now allow you to create your own “profile page” by creating a repository with the same name as your GitHub username. E.g. https://github.com/DidierRLopes
+In fact, GitHub has realized this and they now allow you to create your own “_profile page_” by creating a repository with the same name as your GitHub username. E.g. https://github.com/DidierRLopes
 
-In my humble opinion, this isn’t being talked enough. Previously, you needed a CV document to talk about your background, education, previous jobs and could rely on your GitHub profile to show your projects. With this update, CVs have become obsolete. When hiring for OpenBB, I put a lot of weight into the public GitHub of each engineer.
+In my humble opinion, this isn’t being talked enough. Previously, you needed a CV document to talk about your background, education, previous jobs and could rely on your GitHub profile to show your projects. With this update, CVs have become obsolete. When hiring for [OpenBB](https://openbb.co/), I put a lot of weight into the public GitHub of each engineer.
 
-This is my current GitHub profile page.
+This is my current [GitHub profile page](https://github.com/DidierRLopes).
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/97106218-c1d7-4f54-ae7d-e566bb126b71)
 
-My profile page is now much simpler since I’ve worked on my own personal website, but you can see here what my GitHub profile page looked like before. Creating your own personalized website for me is the next step after GitHub, as you can be as creative as you want while showing off your coding skills.
+My profile page is now much simpler since I’ve worked on my [own personal website](https://didierrlopes.github.io/personal-website/), but you can see [here](https://github.com/DidierRLopes/DidierRLopes/tree/98c27cfb087fc8ce6986f4ea8136e76ca14f145b) what my GitHub profile page looked like before. Creating your own personalized website for me is the next step after GitHub, as you can be as creative as you want while showing off your coding skills.
 
 My repository is my way of showing the world what I can do on my own. From a blank sheet to a finalized project. **Sometimes useful, sometimes for fun, but always with the intention to learn more and challenge myself.**
 
@@ -53,10 +53,6 @@ Imagine a world where everyone develops in the wild. You can see everything and 
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/d98a8384-4230-42d8-8ea3-0d43e0199735)
 
-EDIT: The reader should be aware that nowadays a properly formatted resume is still critical when added to a job board. This is because automated resume readers expect a certain format in order to recommend candidates to companies and vice-versa.
+**EDIT:** The reader should be aware that nowadays a properly formatted resume is still critical when added to a job board. This is because automated resume readers expect a certain format in order to recommend candidates to companies and vice-versa.
 
-Thanks for bringing this up William Allcock!
-
-Hope you enjoyed this post.
-
-As always, any feedback welcome! 🙏
+Hope you enjoyed this post. As always, any feedback welcome! 🙏

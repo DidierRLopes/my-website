@@ -1,6 +1,6 @@
 ---
 slug: 5-steps-i-used-to-change-my-job-title-in-less-than-1-year
-title: 5 steps I used to change my job title in less than 1 year.
+title: 5 steps I used to change my job title in less than 1 year
 date: 2022-11-14
 image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280500184-fd343f2a-7508-488a-a705-a716af395bb2.png
 tags: ['career', 'job change', 'sensor fusion engineer', 'roadmap', 'hard work']
@@ -8,7 +8,7 @@ description: This blog post outlines the five steps I took to change my job titl
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280500184-fd343f2a-7508-488a-a705-a716af395bb2.png"/>
+    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/60750cea-ffc4-441a-bd20-7eae3f50e213"/>
 </p>
 
 <br />
@@ -19,8 +19,6 @@ This blog post outlines the five steps I took to change my job title from an Emb
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
-# 5 steps I used to change my job title in less than 1 year.
-
 In March 2020, I joined a startup as an Embedded Firmware Engineer. The startup’s product focuses on smart running insoles with lightweight trackers that fit any running shoes.
 
 The company was small, and the firmware team was myself and 2 Senior Embedded Firmware Engineers.
@@ -29,15 +27,15 @@ What I liked the most about this team was that our interests complemented each o
 
 So what did I do to become a Sensor Fusion Engineer?
 
-## 1. Declare your intent
+## Declare your intent
 
 Since day 1 in the company, my team lead knew that my goal was to become a Sensor Fusion Engineer.
 
 This is very important, as your manager can keep this in the back of their mind when assigning tasks to you. For instance, my team lead was giving me a lot of material around the way our product processed external samples as this was critical to the INS.
 
-## 2. Define a roadmap
+## Define a roadmap
 
-I asked my manager: “What do I need to do to be recognized as a Sensor Fusion Engineer”.
+I asked my manager: “_What do I need to do to be recognized as a Sensor Fusion Engineer_”.
 
 Knowing about the matter is not enough, you want to have the credentials so that you can jump faster in your career.
 
@@ -45,7 +43,9 @@ My team lead was not aware of the capabilities I would need to have to become a 
 
 After some time, we discussed what I would need to do at the company to be recognized as Sensor Fusion Engineer and built a roadmap in order to get there.
 
-## 3. Work extremely hard towards that roadmap
+## Work hard
+
+Work extremely hard towards that roadmap.
 
 I was not only working towards that roadmap, but I was also working towards it at 2.5x the average speed. I was working 80h — 100h / weeks during that time.
 
@@ -53,13 +53,15 @@ I was being pulled into all meetings that discussed sensor fusion, I was reading
 
 More importantly, I was experimenting with the product. Theory will only help you so much, you need to get your hands dirty or you will never be able to fully master a skill.
 
-## 4. Frequently revise your roadmap
+## Frequently revise your roadmap
 
 Throughout all my 1:1 with my manager, we always revisited the roadmap — even if briefly. This made sure that he knew how serious I was about this topic, and allowed me to demonstrate my progress.
 
 This also allowed myself to look back and realize my own progress. I would spend time educating him on what I had learned and how we could apply that in our product, including some simulations I had done in Python.
 
-## 5. Don’t miss an opportunity to prove yourself
+## Prove yourself
+
+Don’t miss an opportunity to prove yourself.
 
 This is the most critical point, you need to prove that you are capable of delivering by actually demonstrating a real example.
 
@@ -83,11 +85,7 @@ Monday arrived and I presented results, and they looked so much better. The prop
 
 After that, the company accepted to offer me the title of Sensor Fusion engineer. Without a pay rise, but that was fine as for me it was about speeding up my career.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/fd343f2a-7508-488a-a705-a716af395bb2)
-
 ## Conclusion
-
-TL;DR:
 
 - Declare intent
 - Define roadmap
@@ -95,12 +93,8 @@ TL;DR:
 - Frequently revise roadmap
 - Don’t miss an opportunity to prove yourself
 
-Note: If the company doesn’t give you a chance to prove yourself, you should interview for that position with other companies. And if another company offers you that job, you will have the leverage that another company perceives you as that.
+**Note:** If the company doesn’t give you a chance to prove yourself, you should interview for that position with other companies. And if another company offers you that job, you will have the leverage that another company perceives you as that.
 
-I like this video about understanding your market value.
-
-https://www.youtube.com/shorts/x71Rm0MWVHY?source=post_page-----91fd796fdfd9--------------------------------
-
-And I think it can be extended in terms of your skillset if you want to change your role.
+I like [this video](https://youtube.com/shorts/x71Rm0MWVHY?si=BvtmjrE31d6U1bpV) about understanding your market value. And I think it can be extended in terms of your skillset if you want to change your role.
 
 Feedback as always is welcome :)

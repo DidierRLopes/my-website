@@ -23,8 +23,6 @@ I was thinking about remote + flexible hours, and I don’t think I would ever w
 
 I mean, who would tell Morty and Sum Sum that I wouldn’t be at home to play?
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/ad97cd9d-c836-443c-b333-78a193b3ac99)
-
 **I’m a strong believer that work should wrap around your lifestyle and not vice-versa.**
 
 On average, a person works 40 hours a week and sleeps 8 hours a day. This means that out of 168h per week you have 72h for personal time. In terms of percentage we have: 24% for work, 33% for sleep, and 43% for personal time.
@@ -59,6 +57,8 @@ The downsides of this fully flexible work are:
 - Interaction with coworkers and communication. But with us going global due to remote work, it doesn’t really matter, since the 9–5 hours of different countries would already lead to this problem
 - Tracking employee timesheet. I think that a company shouldn’t track an employee timesheet because results are far more important than working hours, and can be just as measurable.
 
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+
 All of this to say that at OpenBB we have:
 
 - **REMOTE WORK:** As long as you are in a location with internet access, we are not worried. This allows us to build a strong diverse team with different backgrounds and ideas.
@@ -72,5 +72,3 @@ AND this is how I sleep at night having no idea at what time John logged in and 
 Ohhh, and we’re hiring!
 
 If you provide a referral to someone that ends up joining OpenBB, I will transfer you $100 as a token of appreciation 🦋
-
-Didier Lopes

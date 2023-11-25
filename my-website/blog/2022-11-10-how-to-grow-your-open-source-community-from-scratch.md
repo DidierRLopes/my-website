@@ -19,19 +19,19 @@ Growing an open source community from scratch is a challenging task. This blogpo
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
-## PROJECT NAMING
+### Project naming
 
 The name should be short, memorable, unique and related with the project.
 
 When I started what we call OpenBB Terminal today, the name of the project was “Stock Market Bot” or something silly like that. I knew that wouldn’t be the last name, but I didn’t have any inspiration and in the meantime I was focused on building the platform.
 
-I am an Elon Musk fan, and was a GameStop investor. This meant that once I saw this tweet — I didn’t blink twice and knew this was the name I was waiting for.
+I am an Elon Musk fan, and was a GameStop investor. This meant that once I saw [this tweet](https://twitter.com/elonmusk/status/1354174279894642703) — I didn’t blink twice and knew this was the name I was waiting for.
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/ce69575c-01b5-4757-bd0d-6de67a9f5c57)
 
 That’s when Gamestonk Terminal (now OpenBB Terminal) was born.
 
-## KEEP THE PROJECT PRIVATE UNTIL MVP
+### Keep the project private until MVP
 
 - There will be less pressure than building in public, and you will be able to iterate much faster.
 - No users asking for features or reporting bugs when MVP is still under development.
@@ -39,7 +39,7 @@ That’s when Gamestonk Terminal (now OpenBB Terminal) was born.
 
 I worked on Gamestonk Terminal for 2 months on my own. The code architecture changed several times as I was in this experimental phase. And if you look into the source code I even committed API keys accidentally. But I had no pressure, so I was able to ship extremely fast.
 
-## PREPARE TO ONBOARD THE COMMUNITY
+### Prepare to onboard the community
 
 - Make the documentation standout (not only “getting started” but also “contributing”).
 - Create “quick win” tickets that the community can address quickly.
@@ -48,11 +48,13 @@ I worked on Gamestonk Terminal for 2 months on my own. The code architecture cha
 
 Some people from our current team told me recently that they fell in love with the README of the project the first time they saw it. In particular with this quote:
 
-_“Gamestonk Terminal is an awesome stock and crypto market terminal that has been developed for fun, while I saw my GME shares tanking. But hey, I like the stock.”_
+> _“Gamestonk Terminal is an awesome stock and crypto market terminal that has been developed for fun, while I saw my GME shares tanking. But hey, I like the stock.”_
+
+<br />
 
 This allowed me to gain not only contributors, but maintainers. And nowadays, team members.
 
-## CHANGE THE PROJECT VISIBILITY TO PUBLIC
+### Change the project visibility to public
 
 - This allows everyone to have a first look into the project, it’s the “Hello World” moment.
 - When sharing the project, describe the problem you are trying to solve and make sure your audience relates with that problem.
@@ -64,16 +66,17 @@ The difference? I shared Gamestonk Terminal on:
 
 - Reddit r/SuperStonk — where the retail traders with the same issue as me were gathered
 - Reddit r/python — where the community shares projects built in python
-- HackerNews — where I leveraged the name of a known brand in the same industry and insinuated that my tool was similar but affordable. The title was: “Can’t afford Bloomberg Terminal? No prob, I built the next best thing”.
+- HackerNews — where I leveraged the name of a known brand in the same industry and insinuated that my tool was similar but affordable. The title was: “[Can’t afford Bloomberg Terminal? No prob, I built the next best thing](https://news.ycombinator.com/item?id=26258773)”.
 
-## KEEP DEVELOPING IN PUBLIC
+### Keep developing in public
 
-- Keep the community updated on the roadmap and progress. You can do this by doing demos of what you have accomplished as you add new features (e.g. on YouTube or on Twitter) which allows the community to understand what sort of tasks you are working on, and what they would learn if they were to contribute. It basically gives the community a hindsight into what a contributor will be able to work on / achieve.
+- Keep the community updated on the roadmap and progress. You can do this by doing demos of what you have accomplished as you add new features (e.g. [on YouTube](https://www.youtube.com/watch?v=fqGPK8OVHLk) or [on Twitter](https://twitter.com/didier_lopes/status/1567117888590340098)) which allows the community to understand what sort of tasks you are working on, and what they would learn if they were to contribute. It basically gives the community a hindsight into what a contributor will be able to work on / achieve.
 - Get early feedback and prioritise accordingly.
 - Occasionally go back to the same channels (e.g. Reddit, Hackernews) to report progress. This guarantees that they know the project is not dead and helps your project staying relevant and on their minds.
-- Develop in public through livestreams (e.g. live Coding) or by sharing what you are working on through social media (e.g. adding a futures menu).
+- Develop in public through livestreams (e.g. [live Coding](https://www.youtube.com/watch?v=9BMI9cleTTg)) or by sharing what you are working on through social media (e.g. [adding a futures menu](https://twitter.com/didier_lopes/status/1579414220256387072)).
 
-## CONCLUSION
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+
 TL;DR: On how to grow your open source project:
 
 - Project naming

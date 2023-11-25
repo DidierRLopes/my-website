@@ -1,7 +1,7 @@
 ---
 slug: why-you-should-drop-yfinance-api-and-adopt-openbb-sdk
 title: Why you should drop yfinance API and adopt OpenBB SDK
-date: 2022-06-28
+date: 2022-10-01
 image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499631-0a3d1183-aeff-441b-96ad-88c8b8c49280.png
 tags: ['OpenBB SDK', 'yfinance API', 'Financial Data', 'APIs', 'Open Source']
 description: Why you should consider switching from yfinance API to OpenBB SDK for financial data retrieval. OpenBB SDK offers access to multiple data sources, potential for unlimited data, and incentives for data source partners.
@@ -21,9 +21,7 @@ Why you should consider switching from yfinance API to OpenBB SDK for financial 
 
 OpenBB SDK will be released later this month 👀.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/0a3d1183-aeff-441b-96ad-88c8b8c49280)
-
-yfinance API is an unofficial (not affiliated) API around Yahoo Finance website.
+[yfinance API](https://github.com/ranaroussi/yfinance) is an unofficial (not affiliated) API around [Yahoo Finance website](https://finance.yahoo.com/).
 
 Although it is used in over 12,600 projects on GitHub and is downloaded on average 90,000 per week. This is still an unofficial wrapper. As you can see from Yahoo Finance website, it uses an ad revenue business model. This means that Yahoo Finance doesn’t has any incentive from having users utilizing it through Yfinance API.
 
@@ -31,6 +29,8 @@ If one day Yahoo Finance website adds a paywall through an API key, then Yahoo F
 
 1. Either become obsolete
 2. Or adopt the same architecture of OpenBB where an API key from a data source is necessary
+
+<br />
 
 Regardless, Yfinance API retrieves data that exists on a third-party website: Yahoo Finance website. This means that this API is limited by the data Yahoo Finance is currently paying for redistribution. And thus, users get only what data is supported through the website.
 
@@ -40,6 +40,8 @@ Since OpenBB SDK requires API keys from most of the data sources, these have inc
 
 1. Marketing opportunity due to significant larger pool of users
 2. New revenue stream
+
+<br />
 
 In essence, Yfinance API:
 

@@ -23,17 +23,21 @@ The open source code is available [here](https://github.com/DidierRLopes/Househo
 
 **My first side project.**
 
-Before University, I spent most of my spare time playing counter-strike (my steam account had **more than 1000 hours played**, that’s more than 41 entire days playing in a row). I was a decent player I’d say, you can see a compilation of “almosts” I’ve done here.
+Before University, I spent most of my spare time playing counter-strike (my steam account had **more than 1000 hours played**, that’s more than 41 entire days playing in a row). I was a decent player I’d say, you can see a compilation of “almosts” I’ve done [here](https://www.youtube.com/watch?v=ocsJzNJJB50).
 
 However, I knew this wasn’t the way. I realised that if I used the amount of time I was spending on online games for learning, I would have a much bigger satisfaction return. And, in the long term, my life would be better.
 
-**So I started studying hard.** I started valuing my time more, and declined most of the parties I was invited to because I was busy working late hours. Don’t get me wrong, I’m an easy person. I like to think I make friends easily. However, I just had different priorities, and partying just wasn’t one of them. As my parents say: “Everything has its own time”.
+**So I started studying hard.** I started valuing my time more, and declined most of the parties I was invited to because I was busy working late hours. Don’t get me wrong, I’m an easy person. I like to think I make friends easily. However, I just had different priorities, and partying just wasn’t one of them. As my parents say: _“Everything has its own time”_.
 
-In my 2nd year of University, I was getting really good grades, which means that I started having discussions with the other best students in the course. **That’s how I met one of the smartest people I know to this day**. This guy was a proper hands-on person, he didn’t study half the time I did, but he was always busy with something. He had a band, developed his own personalised guitar pedals and amplifiers, and developed some apps for fun. He did this all while having excellent results at University, which is insane. That’s when I realised that he was not only giving more priority to these hobbies in relation to partying or meeting people, BUT also in relation to doing courseworks or studying for exams. He’d never fail a coursework/exam, but that further study could have bumped a grade from 17 to a 19 out of 20.
+In my 2nd year of University, I was getting really good grades, which means that I started having discussions with the other best students in the course. **That’s how I met one of the smartest people I know to this day**. This guy was a proper hands-on person, he didn’t study half the time I did, but he was always busy with something.
+
+He had a band, developed his own personalised guitar pedals and amplifiers, and developed some apps for fun. He did this all while having excellent results at University, which is insane. That’s when I realised that he was not only giving more priority to these hobbies in relation to partying or meeting people, **BUT also in relation to doing courseworks or studying for exams**. He’d never fail a coursework/exam, but that further study could have bumped a grade from 17 to a 19 out of 20.
 
 One day, we were meant to meet at his place to work on a coursework together, and he shown me an app that he had developed for him and his girlfriend. The app was a simple command line interface that was able to split their usual household bills (rent, water bill, food shop, cat food, etc). **I found that fascinating.**
 
 I told him I would create one for myself. Since I had read about how to use Java to make a pretty GUI, I thought why not give this a go (although I had no idea about OOP). In addition, I didn’t want my program to look the same as his, so I thought my version could be as if it was an upgrade.
+
+...
 
 After that, I was on a mission. Little did I know that after this, I never really stopped having an interest in working on new side projects.
 
@@ -55,11 +59,21 @@ The development process was to **“divide to conquer”**. I split the tasks in
 
 See images below of the program:
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/ff24caed-7828-474e-bc47-8e38ca8ddd7b) ![image](https://github.com/Meg1211/my-website/assets/88618738/efdb69f2-b97d-42b7-8dea-4bf96703a70d)
+<div className="flex justify-center gap-2">
+  <img src="https://github.com/Meg1211/my-website/assets/88618738/ff24caed-7828-474e-bc47-8e38ca8ddd7b" width="50%" />
+  <img src="https://github.com/Meg1211/my-website/assets/88618738/efdb69f2-b97d-42b7-8dea-4bf96703a70d" width="50%" /> 
+</div>
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/529b3c6f-e8d2-446f-8c22-2db738ce4769) ![image](https://github.com/Meg1211/my-website/assets/88618738/14878302-0ba0-407b-974b-d06424a6af69)
+<br />
 
-You can find more information about this on my github, here.
+<div className="flex justify-center gap-2">
+  <img src="https://github.com/Meg1211/my-website/assets/88618738/529b3c6f-e8d2-446f-8c22-2db738ce4769" width="50%" />
+  <img src="https://github.com/Meg1211/my-website/assets/88618738/14878302-0ba0-407b-974b-d06424a6af69" width="50%" /> 
+</div>
+
+<br />
+
+You can find more information about this on my GitHub, [here](https://github.com/DidierRLopes/HouseholdBills).
 
 **The program ended up being used for more than 3 years.** Since I lived with other people other than my brother, I had to update the name/image on the program to represent that. Since I was new to coding, I didn’t think about the future. Therefore, when that time came, I had to manually replace the names one by one in the code. I also had friends requesting to use the program, which lead to me adapting this to their names/figures.
 

@@ -21,18 +21,17 @@ OpenBB Terminal 2.0 has been released. This blog post discusses the new features
 
 Almost 2 years ago, I started building my own investment research platform. 2 months later I named it Gamestonk Terminal, made it open source and shared it on Reddit. The rest is history.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/b13ac1ec-2ffd-4f25-846a-ce0fff4465d3)
-
-Since then, we surpassed 17,800 stars on Github. Raised $ 8.8 million in our seed round. Build a very competitive team and our OpenBB brand is now recognized by most in the financial space. You can read more about our story here.
+Since then, we surpassed [17,800 stars on Github](https://github.com/OpenBB-finance/OpenBBTerminal). Raised $ 8.8 million in our seed round. Build a very competitive team and our OpenBB brand is now recognized by most in the financial space. You can read more about our story [here](https://openbb.co/blog/gme-didnt-take-me-to-the-moon-but-gamestonk-terminal-did).
 
 **Our mission to democratize investment research has not changed.** Over the past few months we have been heads down and building and today I’m excited to share with you the announcement of OpenBB Terminal 2.0.
 
 The headline is:
 
-_OpenBB Terminal 2.0 is more than an application, it’s a platform._
+> _OpenBB Terminal 2.0 is more than an application, it’s a platform._
+
+<br />
 
 A summary:
-
 - We are releasing OpenBB SDK which allows developers to use a single API to access the world’s raw financial data in order to build their own products / dashboards.
 
 The SDK will allow users to create report templates in a matter of minutes and run them for custom tickers at any time in a matter of seconds; Instead of spending hours and starting a report from scratch every single time. We envision a world where the community can share these and help each other at becoming better investors.
@@ -45,6 +44,4 @@ The SDK will allow users to create report templates in a matter of minutes and r
 
 For more information, you can read our announcement here: https://openbb.co/blog/openbb-terminal-2-acai
 
-Or even better, watch the announcement here!
-
-For anything else, feel free to reach out to me directly on Twitter, or join the OpenBB journey here.
+Or even better, watch the announcement [here](https://openbb.co/blog/openbb-terminal-2-event)!

@@ -21,8 +21,6 @@ The open source code is available [here](https://github.com/DidierRLopes/LondonV
 
 <div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
-https://github.com/DidierRLopes/LondonVisit
-
 Usually when I book a weekend getaway, I spend quite some time doing 2 things:
 
 - Writing down the main attractions I want to see
@@ -40,20 +38,25 @@ Of course, this is rather unrealistic because of several reasons, such as:
 - Assumes that we are in a no man’s land since it completely bypasses the existence of other buildings, roads, …;
 - Does not consider altitude, even though London is rather plane;
 - Does not consider the number of attractions that one can possibly do per day;
-- Plus, if there was to be an attraction really far from the centre, **it may happen that the algorithm considers an entire day for it (this would depend upon kernel initialisation)**
+- Plus, if there was to be an attraction really far from the centre, it may happen that the algorithm considers an entire day for it (this would depend upon kernel initialisation)
 
-Nonetheless, I think this is a funny exercise, and if I were to select the areas to visit by myself, it would most likely be a similar choice to the one taken by K-means.
+Nonetheless, I think this is a funny exercise, and if I were to select the areas to visit by myself, **it would most likely be a similar choice to the one taken by K-means**.
 
-Disclaimer: I did not know how to use Google API (neither wanted to pay for a key to be fair) hence I just took a screenshot of google maps and wrote down the coordinate of the lower left corner, so that I could use it as my origin. I also took the right top corner coordinate so that I could give the map with an “accurate” scaling.
+**Disclaimer**: I did not know how to use Google API (neither wanted to pay for a key to be fair) hence I just took a screenshot of google maps and wrote down the coordinate of the lower left corner, so that I could use it as my origin. I also took the right top corner coordinate so that I could give the map with an “accurate” scaling.
 
-Note: GPS coordinates (latitude, longitude) have degrees has units, thus, explaining why the conversion to UTM coordinates, which uses meters.
+**Note**: GPS coordinates (latitude, longitude) have degrees has units, thus, explaining why the conversion to UTM coordinates, which uses meters.
 
 Immediately below you can see the result of a visit to London for 2, 3 and 4 days.
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/1085caea-fe72-439a-ba05-b0f6d5883719)
 
+<div className="flex justify-center gap-2">
+  <img src="https://github.com/DidierRLopes/my-website/assets/25267873/56ebe8cc-d551-44eb-b950-be19a5b6006e" width="50%" />
+  <img src="https://github.com/DidierRLopes/my-website/assets/25267873/d034a1c8-539b-4cd4-a896-b2384bb70038" width="50%" /> 
+</div>
+
+<br />
+
 This project was done for fun. However, I believe that by creating a tuple per location with coordinates and estimate of time taken on each attraction, something nice could come out of this.
 
-Hope you find this interesting.
-
-Let me know your thoughts.
+Hope you find this interesting. Let me know your thoughts.

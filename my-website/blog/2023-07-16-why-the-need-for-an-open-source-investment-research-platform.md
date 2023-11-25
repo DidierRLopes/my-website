@@ -21,17 +21,22 @@ OpenBB Terminal, an open-source investment research platform, is transforming th
 
 Having a closed source OpenBB Terminal was never on the table.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/76a539bb-bb5a-46a8-b4ab-d2875a697921)
+The [OpenBB Terminal](https://github.com/OpenBB-finance/OpenBBTerminal) is the platform it is today due to its open source nature. Launched almost 2.5 years ago, the interest on this platform was clear — aggregating an impressive 4000 stars on GitHub in under 24 hours from launch.
 
-## OPEN SOURCE INFRASTRUCTURE
-
-The OpenBB Terminal is the platform it is today due to its open source nature. Launched almost 2.5 years ago, the interest on this platform was clear — aggregating an impressive 4000 stars on GitHub in under 24 hours from launch. This number kept on growing along with the community (most of which gathers on our Discord server) and allowed us to create the company OpenBB, see the story here.
+This number kept on growing along with the community (most of which gathers on [our Discord server](http://openbb.co/discord)) and allowed us to create the company OpenBB, see the story [here](http://openbb.co/blog/gme-didnt-take-me-to-the-moon-but-gamestonk-terminal-did).
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/d7b91689-b820-40bb-88cd-e41e15a227f6)
 
 But why is open source so important for us? To understand this, it’s important for us go over the main problems in the space.
 
-## 1. DATA LICENSING
+<ol>
+    <li>Data licensing</li>
+    <li>Full-price bundle</li>
+    <li>Transparency and customization</li>
+    <li>Community</li>
+</ol>
+
+## Data licensing
 
 Current monopolies spend an enormous amount of capital on financial data licensing. There are dozens of different asset classes (equities, options, crypto, NFTs, forex, bonds, ETFs, mutual funds, …) and these often vary based on geography. In addition, alternative datasets have grown a lot in popularity as they can provide a hedge in the market (e.g. a hurricane can impact orange juice futures).
 
@@ -41,7 +46,7 @@ This is why OpenBB doesn’t own the data (similar to Uber not owning cars, Airb
 
 This is the typical two-sided market, where on the one hand users benefit from having access to multiple datasets in one place, and on the other hand data sources benefit from having users on our platform as they can monetize their data. This allows us to focus on the product while our number of data integrations and users grows.
 
-## 2. FULL-PRICE BUNDLE
+## Full-price bundle
 
 Current incumbents pricing is usually a complete bundled offering. This means that regardless of what you are utilizing in terms of both breadth and depth, you pay the full price tag. A good analogy is like a restaurant ONLY having a buffet when all you want is a bottle of water, or some chips.
 
@@ -51,7 +56,7 @@ Being the infrastructure between users and data sources allows you to create val
 
 In addition some data providers (e.g. a team of machine learning engineers) will not need to create a dashboard for their users to visualize their data and hire a team to start a sales/marketing motion, as they will be able to rely on OpenBB’s infrastructure.
 
-## 3. TRANSPARENCY & CUSTOMIZATION
+## Transparency and customization
 
 Current incumbents have built several in-house financial models. Although these are often customizable, their customization is typically limited. That is because what is usually customizable are the values/weights, but not necessarily the formulas — that is kept hidden in their source code. This is an issue because that code cannot be validated and users cannot modify it.
 
@@ -59,13 +64,13 @@ With open source, the story is completely different. Users can see every single 
 
 By having the code open source, users can rely on the fact that these formulas have been validated/tested by thousands or millions of users and therefore, there’s a very low chance that these are wrong. In addition, users are more secure because they can investigate the code and check/fix any vulnerabilities.
 
-## 4. COMMUNITY
+## Community
 
 One of the best parts of open source is the integrated community that it creates. This attracts people from every background, gender or ethnicity. Such a pool of diversity allows for better ideas and pushes a project further. With people from the community being able to contribute, this also drives innovation.
 
 OpenBB has been driven a lot by the community so far. What started as a terminal mostly focused on equities, soon evolved into including a broad range of datasets and considering several geographies. For instance: A contributor from Sweeden integrated Avanza API to the mutual funds menu that would only appear if users were looking into mutual funds from Sweden — this shows the power of community.
 
-## CONCLUSION
+<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/9c1b32d4-1efb-4dd4-b1fe-3b8be17f3fc4)
 

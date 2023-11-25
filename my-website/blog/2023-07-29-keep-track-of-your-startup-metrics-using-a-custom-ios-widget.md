@@ -23,9 +23,9 @@ The open source code is available [here](https://github.com/DidierRLopes/opensou
 
 If you have a high level role in your organization, you are likely obsessed over a few metrics that act as the north star for your company. Whether that is MRR, number of customers, GitHub stars, AUM, .. depends on the type and stage of company, and what you are optimizing for.
 
-At OpenBB we are currently optimizing for OpenBB Hub users, since this is the place where you have access to our entire suite of products. From OpenBB Terminal, OpenBB SDK, OpenBB Bot and soon — the highly awaited OpenBB Terminal Pro.
+At [OpenBB](https://openbb.co) we are currently optimizing for [OpenBB Hub](https://my.openbb.co) users, since this is the place where you have access to our entire suite of products. From [OpenBB Terminal](https://my.openbb.co/app/terminal), [OpenBB SDK](https://my.openbb.co/app/sdk), [OpenBB Bot](https://my.openbb.co/app/bot) and soon — the highly awaited [OpenBB Terminal Pro](https://my.openbb.co/app/pro).
 
-So everyday I spent some time checking our startup /open page. However, whenever I had to check these on mobile I had to open up the browser, type the link and then look for the metric of interest.
+So everyday I spent some time checking our startup [/open page](https://openbb.co/open). However, whenever I had to check these on mobile I had to open up the browser, type the link and then look for the metric of interest.
 
 Hence, to save time, I built a custom iOS widget that displays these metrics of interest at all times. All I need to do is unlock my phone and *BAM*, they are right there.
 
@@ -51,14 +51,16 @@ These are the steps necessary to have it working on your iOS device:
 
 6/ Change the 4 initial parameters from the file:
 
+```python
     const WIDGET_TITLE = "openbb.co/open"
     const GITHUB_REPO = "OpenBB-finance/OpenBBTerminal"
     const PIP_PACKAGE_NAME = "openbb"
     const CACHED_DATA_HOURS = 1
+```
 
-- If you only want to track GitHub stats, do     PIP_PACKAGE_NAME="".
-- If you only want to track PiPy stats, do     GITHUB_REPO="".
-- The     CACHED_DATA_HOURS corresponds to the amount of hours where the data is not updated.
+- If you only want to track GitHub stats, do `PIP_PACKAGE_NAME=""`.
+- If you only want to track PiPy stats, do `GITHUB_REPO=""`.
+- The `CACHED_DATA_HOURS` corresponds to the amount of hours where the data is not updated.
 
 7/ Run script to make sure that it works using the “play button” on the bottom right corner
 

@@ -55,6 +55,11 @@ a[href^="http"] {
   text-decoration: underline;
 }
 
+a[href^="/"]:not([class^="menu__link"]):not([class^="sidebarItemLink_node_modules"]):not([class^="navbar__item"]):not([itemprop^="url"]):not([class^="navbar__title"]) {
+  font-style: italic;
+  text-decoration: underline;
+}
+
 h2[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-module"] {
   font-size: 2em;
   font-weight: 600;
@@ -103,5 +108,10 @@ h4[class^="anchor"] {
 
 ul {
   list-style-type: disc;
+  padding-left: 2em;
+}
+
+ol {
+  list-style-type: decimal;
   padding-left: 2em;
 }

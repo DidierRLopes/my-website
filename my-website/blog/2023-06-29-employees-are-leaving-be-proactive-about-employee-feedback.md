@@ -21,8 +21,6 @@ Employees are leaving? Be proactive about employee feedback. This blogpost discu
 
 This blogpost shows the measures we are taking to ensure we have high employee engagement at OpenBB through a periodic feedback survey.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/969ecadc-43f8-49ea-ad81-90dad5c3011a)
-
 When we started OpenBB, I was absolutely obsessed about our product. All my focus and time was dedicated to building our suite of products (OpenBB Terminal, OpenBB SDK or OpenBB Bot), or talking about these with our users. I care deeply about the OpenBB team, but I expected everyone to be as motivated as me, 24/7.
 
 But things just don’t work that way. Although we always have a fun quarterly event online, that isn’t enough. Everyone knows that I’m a big fan of remote work, but one clear down side of it is the lack of contact and face to face conversations which makes employee engagement more volatile. I say this, because I believe that when your team is together in the same space, it’s easier to thrive off each others excitement and motivation.
@@ -32,8 +30,11 @@ Soon enough, I realized that _“alone you can go faster, but with a team you ca
 Some things that we have now put into place include:
 
 - We updated the company values as a team, based on what we currently had that they were proud of and where they would like us to be in the future. In a startup, where the pace is incredibly fast and the team is constantly changing, I strongly believe that the values change over time too.
-- We had an OpenBB rap made by a freestyler for our OpenBB Christmas event
-- We started pushing for more transparency. We were already very transparent internally, but now we started to push this value externally too. Everyone in the company has skin in the game, this allows the team to feel as accountable for the metrics as I do. I wrote more about this in this blogpost: From open source to open startup, and I am currently working on the OpenBB Handbook too.
+
+- We had an [OpenBB rap](https://www.youtube.com/watch?time_continue=48&v=ThtSC8s0h6I&embeds_referring_euri=https%3A%2F%2Fopenbb.co%2Fblog&source_ve_path=MzY4NDIsMjg2NjMsMjg2NjY&ab_channel=OpenBB) made by a freestyler for our OpenBB Christmas event.
+
+- We started pushing for more transparency. We were already very transparent internally, but now we started to push this value externally too. Everyone in the company has skin in the game, this allows the team to feel as accountable for the metrics as I do. I wrote more about this in this blogpost: [From open source to open startup](/blog/from-open-source-to-open-startup), and I am currently working on the OpenBB Handbook too.
+
 - I started having office hours, where I can spend the time with the team chatting about anything (product, strategy, engineering, storytelling, even fundraising). The team knows that I’m usually available, but having that 1 hour blocked gives them the confidence to know that that time booked in the day.
 
 However, there was something critical missing. I will explain what it is by using what I learned at university (that way I can say that my MSc in Control Systems was indeed useful for OpenBB 🙃).

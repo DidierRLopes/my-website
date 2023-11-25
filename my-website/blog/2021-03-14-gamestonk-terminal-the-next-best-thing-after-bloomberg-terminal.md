@@ -49,8 +49,6 @@ It contains the following functionalities:
 
 - **On the ROADMAP**: Cryptocurrencies, Portfolio Analysis, Credit Analysis. Feel free to add the features you’d like and we would happily work on it.
 
-![image](https://github.com/DidierRLopes/my-website/assets/88618738/f9508a33-fcee-4056-a611-a4422890bf8b)
-
 This project will always remain open-source, and the idea is that it can grow substantially over-time so that more and more people start taking advantage of it.
 
 Feel free to contribute towards the project.

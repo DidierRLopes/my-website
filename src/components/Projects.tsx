@@ -21,7 +21,7 @@ const projects = [
     title: 'Personal Website',
     link: 'https://github.com/DidierRLopes/personal-website',
     image: '/projects/personal_website.webp',
-    desc: 'This very same personal website.',
+    desc: 'Another personal website that I started in javascript.',
     language: 'JavaScript',
     article: '',
   },
@@ -31,7 +31,7 @@ const projects = [
     image: '/projects/memes_filter.webp',
     desc: 'Multiplayer customizable snapchat kind of filter',
     language: 'Python',
-    article: 'https://dro-lopes.medium.com/customizable-meme-filter-397e6042e0e6',
+    article: '/blog/customizable-meme-filter',
   },
   {
     title: 'Reddit Giveaway NFT Bot',
@@ -39,7 +39,7 @@ const projects = [
     image: '/projects/giveaway_nft.webp',
     desc: 'Bot that automatically signs up to NFT giveaways on Reddit',
     language: 'Python',
-    article: 'https://dro-lopes.medium.com/how-you-can-win-dozens-of-nft-every-week-for-free-9b164292bde7',
+    article: '/blog/how-i-created-a-bot-in-python-to-participate-in-nft-giveaways',
   },
   {
     title: 'Discord Memes',
@@ -47,7 +47,7 @@ const projects = [
     image: '/projects/discord_memes.webp',
     desc: 'Discord bot that allows to send memes with text populated',
     language: 'Python',
-    article: 'https://medium.com/@dro-lopes/how-i-created-the-best-discord-meme-bot-f552e6f80a4d',
+    article: '/blog/how-i-created-the-best-discord-meme-bot',
   },
   {
     title: 'Step Detection using Machine Learning',
@@ -55,7 +55,7 @@ const projects = [
     image: '/projects/stepdetection_ml.webp',
     desc: 'Step Detection using SVM on NURVV trackers',
     language: 'Python',
-    article: 'https://dro-lopes.medium.com/how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla-6ce82b6cecce',
+    article: '/blog/how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla',
   },
   {
     title: 'Univariate Time-Series Forecast',
@@ -63,7 +63,7 @@ const projects = [
     image: '/projects/univariate_timeseries_forecast.webp',
     desc: 'PhD Thesis: "Data Science in the Modeling and Forecasting of Financial Timeseries: from Classic methodologies to Deep Learning"',
     language: 'Python',
-    article: 'https://dro-lopes.medium.com/an-unusual-journey-learning-about-nns-for-a-phd-thesis-dc3a1bc99128',
+    article: '/blog/an-unusual-journey-learning-about-nns-for-a-phd-thesis',
   },
   {
     title: 'Momentum Football Bets',
@@ -71,7 +71,7 @@ const projects = [
     image: '/projects/football_momentum.webp',
     desc: 'Football bets prediction based on momentum from Honer family',
     language: 'Python',
-    article: 'https://medium.com/@dro-lopes/momentum-football-bets-daa1d829ae21',
+    article: '/blog/momentum-football-bets',
   },
   {
     title: 'World Cup 2022 Sweepstake Slack bot',
@@ -79,7 +79,7 @@ const projects = [
     image: '/projects/worldcupsweepstakeslack.webp',
     desc: 'Slack channel daily update about World Cup 2022 sweepstake results',
     language: 'Python',
-    article: 'https://medium.com/@dro-lopes/sweepstake-world-cup-2022-for-your-startup-team-d8d8641b8b40',
+    article: '/blog/sweepstake-world-cup-2022-for-your-startup-team',
   },
   {
     title: 'Time-Series Cross-Validation',
@@ -87,7 +87,7 @@ const projects = [
     image: '/projects/timeseries_cv.webp',
     desc: 'Time-Series Cross-Validation Module',
     language: 'Python',
-    article: 'https://medium.com/@dro-lopes/time-series-crossvalidation-for-nn-6279cd5ae25e',
+    article: '/blog/time-series-crossvalidation-for-nn',
   },
   {
     title: 'Twitter Thread to LinkedIn Carousel',
@@ -95,7 +95,7 @@ const projects = [
     image: '/projects/twittercarousel.webp',
     desc: 'Convert Twitter thread into LinkedIn carousel',
     language: 'Python',
-    article: 'https://medium.com/@dro-lopes/how-to-convert-a-twitter-thread-into-a-linkedin-carousel-in-seconds-f12ccdce8959',
+    article: '/blog/how-to-convert-a-twitter-thread-into-a-linkedin-carousel-in-seconds',
   },
   {
     title: 'Unofficial CNN Fear and Greed Index',
@@ -112,7 +112,7 @@ const projects = [
     image: '/projects/neistpoint_cli.webp',
     desc: 'Allow the clothing brand NeistPoint to manage their cloths stocks',
     language: 'Python',
-    article: 'https://medium.com/@dro-lopes/neistpoint-project-587922a398d0',
+    article: '/blog/neistpoint-project',
   },
   {
     title: 'Household Bills',
@@ -120,7 +120,7 @@ const projects = [
     image: '/projects/household_bills.webp',
     desc: 'Tracks bills between me and my brother when we lived together',
     language: 'Java',
-    article: 'https://medium.com/@dro-lopes/household-bills-program-18cc5566d2d1',
+    article: '/blog/household-bills-program',
   },
   {
     title: 'Job Analysis',
@@ -136,7 +136,7 @@ const projects = [
     image: '/projects/recipes_program.webp',
     desc: 'Tracks favourite recipes of my mom',
     language: 'Java',
-    article: 'https://medium.com/@dro-lopes/minion-recipes-program-1a926add4a2',
+    article: '/blog/minion-recipes-program',
   },
   {
     title: 'London Visits',
@@ -144,7 +144,7 @@ const projects = [
     image: '/projects/london_visit.webp',
     desc: 'K-means algorithm to decide what to visit in London based on days',
     language: 'Python',
-    article: 'https://medium.com/@dro-lopes/k-means-clustering-to-visit-a-new-city-3a207a96cd97',
+    article: '/blog/k-means-clustering-to-visit-a-new-city',
   },
   {
     title: 'Sort Movies',
@@ -152,7 +152,7 @@ const projects = [
     image: '/projects/rank_movies.webp',
     desc: 'Sort movies according to their IMDB rating',
     language: 'Python',
-    article: 'https://medium.com/@dro-lopes/ranking-99-mind-f-ck-movies-d059c56146e7',
+    article: '/blog/@dro-lopes/ranking-99-mind-f-ck-movies',
   },
   {
     title: 'Similar Stocks',

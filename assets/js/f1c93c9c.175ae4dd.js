@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[61077],{21777:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/investment-research","page":1,"postsPerPage":6,"totalPages":1,"totalCount":6,"blogDescription":"This is where I drop my thoughts in the form of blogposts!","blogTitle":"Didier blog"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[8427],{63227:a=>{a.exports=JSON.parse('{"label":"Target Market Analysis","permalink":"/blog/tags/target-market-analysis","allTagsPath":"/blog/tags","count":1}')}}]);

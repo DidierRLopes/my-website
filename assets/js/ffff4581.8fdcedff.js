@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[96235],{94674:e=>{e.exports=JSON.parse('{"label":"work-life balance","permalink":"/blog/tags/work-life-balance","allTagsPath":"/blog/tags","count":2}')}}]);

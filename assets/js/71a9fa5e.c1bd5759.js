@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[15695],{87861:e=>{e.exports=JSON.parse('{"label":"Gamestonk Terminal","permalink":"/blog/tags/gamestonk-terminal","allTagsPath":"/blog/tags","count":7}')}}]);

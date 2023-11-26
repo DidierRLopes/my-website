@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[32810],{53238:e=>{e.exports=JSON.parse('{"label":"Momentum","permalink":"/blog/tags/momentum","allTagsPath":"/blog/tags","count":1}')}}]);

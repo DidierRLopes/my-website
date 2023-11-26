@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[98657],{56784:e=>{e.exports=JSON.parse('{"label":"Memory Training","permalink":"/blog/tags/memory-training","allTagsPath":"/blog/tags","count":1}')}}]);

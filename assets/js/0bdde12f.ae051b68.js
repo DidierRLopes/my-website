@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[13670],{28987:e=>{e.exports=JSON.parse('{"label":"yfinance API","permalink":"/blog/tags/yfinance-api","allTagsPath":"/blog/tags","count":1}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[59188],{87103:e=>{e.exports=JSON.parse('{"label":"work culture","permalink":"/blog/tags/work-culture","allTagsPath":"/blog/tags","count":2}')}}]);

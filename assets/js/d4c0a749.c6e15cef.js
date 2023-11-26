@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[97843],{72137:e=>{e.exports=JSON.parse('{"label":"Card Memorisation","permalink":"/blog/tags/card-memorisation","allTagsPath":"/blog/tags","count":1}')}}]);

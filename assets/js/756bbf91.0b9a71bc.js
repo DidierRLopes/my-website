@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[113],{70589:s=>{s.exports=JSON.parse('{"label":"Sector Analysis","permalink":"/blog/tags/sector-analysis","allTagsPath":"/blog/tags","count":1}')}}]);

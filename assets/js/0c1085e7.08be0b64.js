@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[24406],{3028:e=>{e.exports=JSON.parse('{"label":"Flexible Hours","permalink":"/blog/tags/flexible-hours","allTagsPath":"/blog/tags","count":1}')}}]);

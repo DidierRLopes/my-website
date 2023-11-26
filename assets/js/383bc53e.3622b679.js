@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[87998],{63108:e=>{e.exports=JSON.parse('{"label":"Market Attractiveness","permalink":"/blog/tags/market-attractiveness","allTagsPath":"/blog/tags","count":1}')}}]);

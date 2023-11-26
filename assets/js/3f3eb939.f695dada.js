@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[32507],{81930:e=>{e.exports=JSON.parse('{"label":"employee compensation","permalink":"/blog/tags/employee-compensation","allTagsPath":"/blog/tags","count":1}')}}]);

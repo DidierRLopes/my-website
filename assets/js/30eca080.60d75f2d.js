@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[5552],{55257:e=>{e.exports=JSON.parse('{"label":"office work","permalink":"/blog/tags/office-work","allTagsPath":"/blog/tags","count":1}')}}]);

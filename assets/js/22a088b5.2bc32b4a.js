@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[73817],{15983:e=>{e.exports=JSON.parse('{"label":"ICMLA","permalink":"/blog/tags/icmla","allTagsPath":"/blog/tags","count":1}')}}]);

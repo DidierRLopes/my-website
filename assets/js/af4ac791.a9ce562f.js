@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[52462],{64586:e=>{e.exports=JSON.parse('{"label":"Stock Management","permalink":"/blog/tags/stock-management","allTagsPath":"/blog/tags","count":1}')}}]);

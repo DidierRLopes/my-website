@@ -7,7 +7,6 @@ TODO:
 - Improve tags
 - Improve coloring
 - deploy it in didierlopes.com
-- add to blogposts 9-5 analysis blogpost
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 

@@ -118,6 +118,94 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: false,
       },
+      footer: {
+        links: [
+          {
+            title: 'Links',
+            items: [
+              {
+                label: 'Twitter',
+                to: 'https://twitter.com/didier_lopes',
+              },
+              {
+                label: 'LinkedIn',
+                to: 'https://www.linkedin.com/in/didier-lopes/',
+              },
+              {
+                label: 'GitHub',
+                to: 'https://github.com/DidierRLopes',
+              },
+              {
+                label: 'Cal.com',
+                to: 'https://cal.com/didierlopes/15min',
+              },
+            ],
+          },
+          {
+            title: 'Others',
+            items: [
+              {
+                label: 'Blog',
+                to: 'blog',
+              },
+              {
+                label: 'Projects',
+                to: 'projects',
+              },
+              {
+                label: 'Books to read',
+                href: 'books/to-read',
+              },
+              {
+                label: 'Books already read',
+                href: 'books/already-read',
+              },
+            ],
+          },
+          {
+            title: 'Media',
+            items: [
+              {
+                label: 'Videos on stage',
+                href: 'videos/on-stage',
+              },
+              {
+                label: 'Videos interviews',
+                href: 'videos/interviews',
+              },
+              {
+                label: 'Videos on webinars/presentations',
+                href: 'videos/webinars-presentations',
+              },
+              {
+                label: 'Videos on product videos',
+                href: 'videos/product-videos',
+              },
+            ],
+          },
+          {
+            title: 'Resume',
+            items: [
+              {
+                label: 'Resume experience',
+                href: 'resume/experience',
+              },
+              {
+                label: 'Resume articles',
+                href: 'resume/articles',
+              },
+              {
+                label: 'Resume education',
+                href: 'resume/education',
+              },
+              {
+                label: 'Resume courses',
+                href: 'resume/courses',
+              },
+            ],
+          },
+        ],
+      },
     }),
 
   plugins: [

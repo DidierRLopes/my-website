@@ -46,6 +46,7 @@ export default function Home() {
                   href="https://twitter.com/didier_lopes"
                   target="_blank"
                   rel="noreferrer noopener"
+                  className='!no-underline'
                 >
                   <div className="flex rounded-xl p-2 w-32 bg-[#2e8555] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#2e8555] hover:no-underline mx-auto">
                     <svg
@@ -60,7 +61,7 @@ export default function Home() {
                     >
                       <path d="M11 4c-3.854 0-7 3.146-7 7v28c0 3.854 3.146 7 7 7h28c3.854 0 7-3.146 7-7V11c0-3.854-3.146-7-7-7H11zm0 2h28c2.774 0 5 2.226 5 5v28c0 2.774-2.226 5-5 5H11c-2.774 0-5-2.226-5-5V11c0-2.774 2.226-5 5-5zm2.086 7 9.223 13.104L13 37h2.5l7.938-9.293L29.977 37h7.937L27.79 22.613 36 13h-2.5l-6.84 8.01L21.023 13h-7.937zm3.828 2h3.065l14.107 20H31.02L16.914 15z" />
                     </svg>
-                    <span className='ml-2 !no-underline mx-auto'>
+                    <span className='ml-2 mx-auto'>
                       Twitter
                     </span>
                   </div>
@@ -73,6 +74,7 @@ export default function Home() {
                   href="https://www.linkedin.com/in/didier-lopes/"
                   target="_blank"
                   rel="noreferrer noopener"
+                  className='!no-underline'
                 >
                   <div className="flex rounded-xl p-2 w-32 bg-[#2e8555] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#2e8555] hover:no-underline mx-auto">
                     <svg
@@ -117,25 +119,6 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="mx-auto mt-16 flex flex-col px-3 text-center md:max-w-[880px]">
-          <h1 className="_h1 !mb-2">
-            Travelling
-          </h1>
-          <div className="flex-none overflow-y-scroll rounded-sm text-center mx-auto text-lg p-2 pr-8 mb-4">
-            <span>
-              I love to experience new cultures. Nowadays I put work first. 
-              But one day I hope to accomplish my goal of visiting over 100 countries.
-            </span>
-            <iframe
-              // Note that the &zoom=9 is important to set the zoom level
-              src="https://www.google.com/maps/d/u/0/embed?mid=174MaDCD2ho7QwEt4uk16eJnPxnZNxzU&ehbc=2E312F&zoom=9"
-              width="100%"
-              height="480"
-              title="My travels"
-              className="mt-2"
-            />
-          </div>
-        </div>
         <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center mb-16">
           <h1 className="_h1 !mb-2">
             Let's catch up
@@ -155,13 +138,15 @@ export default function Home() {
               href="https://cal.com/didierlopes/15min"
               target="_blank"
               rel="noreferrer noopener"
+              className='flex justify-center items-center mx-auto'
             >
-              <div className="flex rounded-xl p-2 w-32 bg-[#2e8555] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#2e8555] hover:no-underline mx-auto">
+              <div className="flex rounded-xl p-2 w-32 bg-[#2e8555] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#2e8555] hover:no-underline mx-auto items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={101}
                   height={22}
                   fill="currentColor"
+                  className="mx-auto"
                 >
                   <path
                     fill="#292929"
@@ -170,6 +155,25 @@ export default function Home() {
                 </svg>
               </div>
             </a>
+          </div>
+        </div>
+        <div className="mx-auto mt-16 flex flex-col px-3 text-center md:max-w-[880px]">
+          <h1 className="_h1 !mb-2">
+            I love to experience new cultures
+          </h1>
+          <div className="flex-none overflow-y-scroll rounded-sm text-center mx-auto text-lg p-2 pr-8 mb-4">
+            <span>
+              Nowadays I put work first. 
+              But one day I hope to visit over 100 countries.
+            </span>
+            <iframe
+              // Note that the &zoom=9 is important to set the zoom level
+              src="https://www.google.com/maps/d/u/0/embed?mid=174MaDCD2ho7QwEt4uk16eJnPxnZNxzU&ehbc=2E312F&zoom=9"
+              width="100%"
+              height="480"
+              title="My travels"
+              className="mt-2"
+            />
           </div>
         </div>
       </main>

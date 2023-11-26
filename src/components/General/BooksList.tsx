@@ -29,7 +29,7 @@ export default function BooksList({ books }: BooksListProps) {
               />
             </div>
             <div className="ml-4 flex flex-col justify-center">
-              <div className="font-bold md:text-lg" style={{ maxWidth: '200px', wordWrap: 'break-word', lineHeight: '1' }}>
+              <div className="font-bold md:text-base" style={{ maxWidth: '200px', wordWrap: 'break-word', lineHeight: '1' }}>
                 {book.title}
               </div>
               <div className="text-xs mt-2">

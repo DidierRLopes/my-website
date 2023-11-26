@@ -22,7 +22,7 @@ export default function PodcastsList({ podcasts }: PodcastsListProps) {
             <div className='justify-left items-start text-xs'>
               {podcast.date}
             </div>
-            <h3 className="justify-center items-center text-base mb-2">
+            <h3 className="justify-center items-center font-bold text-base mb-2">
               {podcast.title}
             </h3>
           </div>

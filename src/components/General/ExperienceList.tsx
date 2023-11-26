@@ -22,7 +22,7 @@ export default function ExperienceList({ experience }: ExperienceListProps) {
               {job.daterange}
             </div>
             <h3 className="justify-center items-center text-base mb-2">
-              {job.title} @ <a href={job.link} rel="noopener noreferrer" target="_blank">{job.company}</a>
+              <strong>{job.title}</strong> @ <a href={job.link} rel="noopener noreferrer" target="_blank">{job.company}</a>
             </h3>
           </div>
           <div className="flex-none overflow-y-scroll rounded-sm mx-auto text-sm p-2 pr-8 mt-2">

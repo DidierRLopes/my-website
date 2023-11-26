@@ -18,12 +18,20 @@ const projects = [
     article: '',
   },
   {
-    title: 'Personal Website',
-    link: 'https://github.com/DidierRLopes/personal-website',
-    image: '/projects/personal_website.webp',
-    desc: 'Another personal website that I started in javascript.',
-    language: 'JavaScript',
-    article: '',
+    title: 'Step Detection using Machine Learning',
+    link: 'https://github.com/DidierRLopes/step-detection-ML',
+    image: '/projects/stepdetection_ml.webp',
+    desc: 'Step Detection using SVM on NURVV trackers',
+    language: 'Python',
+    article: '/blog/how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla',
+  },
+  {
+    title: 'Univariate Time-Series Forecast',
+    link: 'https://github.com/DidierRLopes/UnivariateTimeSeriesForecast',
+    image: '/projects/univariate_timeseries_forecast.webp',
+    desc: 'PhD Thesis: "Data Science in the Modeling and Forecasting of Financial Timeseries: from Classic methodologies to Deep Learning"',
+    language: 'Python',
+    article: '/blog/an-unusual-journey-learning-about-nns-for-a-phd-thesis',
   },
   {
     title: 'Meme Filter',
@@ -50,22 +58,6 @@ const projects = [
     article: '/blog/how-i-created-the-best-discord-meme-bot',
   },
   {
-    title: 'Step Detection using Machine Learning',
-    link: 'https://github.com/DidierRLopes/step-detection-ML',
-    image: '/projects/stepdetection_ml.webp',
-    desc: 'Step Detection using SVM on NURVV trackers',
-    language: 'Python',
-    article: '/blog/how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla',
-  },
-  {
-    title: 'Univariate Time-Series Forecast',
-    link: 'https://github.com/DidierRLopes/UnivariateTimeSeriesForecast',
-    image: '/projects/univariate_timeseries_forecast.webp',
-    desc: 'PhD Thesis: "Data Science in the Modeling and Forecasting of Financial Timeseries: from Classic methodologies to Deep Learning"',
-    language: 'Python',
-    article: '/blog/an-unusual-journey-learning-about-nns-for-a-phd-thesis',
-  },
-  {
     title: 'Momentum Football Bets',
     link: 'https://github.com/DidierRLopes/momentum-football-bets',
     image: '/projects/football_momentum.webp',
@@ -90,6 +82,14 @@ const projects = [
     article: '/blog/time-series-crossvalidation-for-nn',
   },
   {
+    title: 'Personal Website',
+    link: 'https://github.com/DidierRLopes/personal-website',
+    image: '/projects/personal_website.webp',
+    desc: 'Another personal website that I started in javascript',
+    language: 'JavaScript',
+    article: '',
+  },
+  {
     title: 'Twitter Thread to LinkedIn Carousel',
     link: 'https://github.com/DidierRLopes/thread-to-carousel',
     image: '/projects/twittercarousel.webp',
@@ -105,7 +105,6 @@ const projects = [
     language: 'Python',
     article: '',
   },
-
   {
     title: 'Neistpoint Stock Management Database',
     link: 'https://github.com/DidierRLopes/NeistpointCLI',
@@ -176,21 +175,21 @@ export default function Projects() {
               className="w-[200px] object-cover"
             />
           </div>
-          <div className='flex flex-col justify-between flex-grow'>
+          <div className='flex flex-col justify-between flex-grow items-start'>
             <div>
               <div className="title md:text-lg font-bold">
                 {project.title}
               </div>
-              <div className="subtitle text-sm flex mt-2 leading-tight max-w-[500px]">
+              <div className="subtitle text-sm flex mt-2 leading-tight max-w-[400px]">
                 {project.desc}
               </div>
             </div>
-            <div className="flex mt-4 mb-2">
+            <div className="flex mt-4 mb-2 items-start">
               <a
                 target="_blank"
                 rel="noreferrer"
                 href={project.link}
-                className="mr-4"
+                className="mr-4 !no-underline"
               >
                 <button
                   className="flex rounded-xl p-2 whitespace-nowrap text-sm bg-[#2e8555] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#2e8555] hover:no-underline"

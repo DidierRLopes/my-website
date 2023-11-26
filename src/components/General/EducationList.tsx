@@ -24,7 +24,7 @@ export default function EducationList({ education }: EducationListProps) {
             <div className='justify-left items-start text-s mt-2'>
               {program.school}
             </div>
-            <h3 className="justify-center items-center text-base mb-2 font-bold">
+            <h3 className="justify-center items-center text-base mt-2 mb-2 font-bold">
               {program.degree}
             </h3>
           </div>

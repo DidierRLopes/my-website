@@ -6,20 +6,20 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Didier',
-  tagline: 'Dinosaurs are cool',
+  title: 'Didier Lopes',
+  tagline: 'Building an open source legacy one commit at a time.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://didierlopes.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'DidierRLopes', // Usually your GitHub org/user name.
+  projectName: 'my-website', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -44,10 +44,10 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/DidierRLopes/my-website/tree/main/content',
         },
         blog: {
-          blogTitle: 'Didier blog',
+          blogTitle: 'Blog',
           blogDescription: 'This is where I drop my thoughts in the form of blogposts!',
           blogSidebarCount: 'ALL',
           postsPerPage: 'ALL',
@@ -55,7 +55,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/DidierRLopes/my-website/tree/main/blog',
         },
         theme: {
           customCss: ['./src/css/custom.css'],

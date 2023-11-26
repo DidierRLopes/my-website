@@ -4,7 +4,7 @@ import Layout from '@theme/Layout';
 export default function Home() {
   return (
     <Layout
-      title="Didier Rodrigues Lopes's Website"
+      title="Homepage"
       description="Description will go into a meta tag in <head />"
     >
       <main>

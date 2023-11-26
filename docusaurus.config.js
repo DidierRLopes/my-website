@@ -61,6 +61,11 @@ const config = {
           customCss: ['./src/css/custom.css'],
         },
       }),
+      {
+        googleTagManager: {
+          containerId: 'GTM-PL77JR5L',
+        },
+      },
     ],
   ],
 
@@ -108,6 +113,11 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
       },
     }),
 

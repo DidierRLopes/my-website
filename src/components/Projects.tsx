@@ -169,15 +169,13 @@ export default function Projects() {
     <div className="mx-auto mt-8">
       {projects.map((project) => (
         <div className='flex my-4 mx-2 border-[1px] p-2 rounded border-[#2e8555]'>
-          {window.innerWidth > 768 && (
-            <div className='w-[300px] flex justify-center items-center'>
-              <img
-                src={project.image}
-                alt={project.title}
-                style={{ width: '200px', objectFit: 'cover' }}
-              />
-            </div>
-          )}
+          <div className='w-[300px] flex justify-center items-center'>
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-[200px] object-cover"
+            />
+          </div>
           <div className='flex flex-col justify-between flex-grow'>
             <div>
               <div className="title md:text-lg font-bold">

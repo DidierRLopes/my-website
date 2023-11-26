@@ -20,7 +20,7 @@ export default function CoursesList({ courses }: CourseListProps) {
             <div className='justify-left items-start text-xs'>
               {course.date}, {course.issuer}
             </div>
-            <h3 className="justify-center items-center text-base mb-2">
+            <h3 className="justify-center items-center text-base mt-1 mb-2 font-semibold">
               {course.title}
             </h3>
             <a

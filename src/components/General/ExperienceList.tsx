@@ -21,7 +21,7 @@ export default function ExperienceList({ experience }: ExperienceListProps) {
             <div className='justify-left items-start text-xs'>
               {job.daterange}
             </div>
-            <h3 className="justify-center items-center text-base mb-2">
+            <h3 className="justify-center items-center text-base mt-1 mb-2">
               <strong>{job.title}</strong> @ <a href={job.link} rel="noopener noreferrer" target="_blank">{job.company}</a>
             </h3>
           </div>

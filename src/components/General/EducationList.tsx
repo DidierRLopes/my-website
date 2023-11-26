@@ -21,10 +21,10 @@ export default function EducationList({ education }: EducationListProps) {
             <div className='justify-left items-start text-xs'>
               {program.date}
             </div>
-            <div className='justify-left items-start text-s mt-2'>
+            <div className='justify-left items-start text-s'>
               {program.school}
             </div>
-            <h3 className="justify-center items-center text-base mt-2 mb-2 font-bold">
+            <h3 className="justify-center items-center text-base mt-2 mb-2 font-semibold">
               {program.degree}
             </h3>
           </div>

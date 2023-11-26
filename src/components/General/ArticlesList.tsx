@@ -19,7 +19,7 @@ export default function ArticlesList({ articles }: ArticleListProps) {
             <div className='justify-left items-start text-xs'>
               {article.conference}
             </div>
-            <h3 className="justify-center items-center text-base mb-2">
+            <h3 className="justify-center items-center font-semibold text-base mt-1 mb-3">
               {article.title}
             </h3>
             <a

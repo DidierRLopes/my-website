@@ -21,7 +21,7 @@ export default function NewsMentionsList({ news }: NewsMentionsListProps) {
             <div className='justify-left items-start text-xs'>
               {single_news.date} - <strong>{single_news.magazine}</strong>
             </div>
-            <h3 className="justify-center items-center text-base mb-2">
+            <h3 className="justify-center items-center text-base mt-1 mb-3">
               {single_news.title}
             </h3>
           </div>

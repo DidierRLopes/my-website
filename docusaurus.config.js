@@ -131,3 +131,11 @@ const config = {
 };
 
 module.exports = config;
+
+export default {
+  url: 'didierlopes.com',
+  baseUrl: '/',
+  projectName: 'didierlopes',
+  organizationName: 'didierlopes',
+  trailingSlash: false,
+};

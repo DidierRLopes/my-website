@@ -146,19 +146,19 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: 'blog',
+                to: '/blog',
               },
               {
                 label: 'Projects',
-                to: 'projects',
+                to: '/projects',
               },
               {
                 label: 'Books to read',
-                href: 'books/to-read',
+                to: '/books/to-read',
               },
               {
                 label: 'Books already read',
-                href: 'books/already-read',
+                to: '/books/already-read',
               },
             ],
           },
@@ -167,19 +167,19 @@ const config = {
             items: [
               {
                 label: 'Videos on stage',
-                href: 'videos/on-stage',
+                to: '/videos/on-stage',
               },
               {
                 label: 'Videos interviews',
-                href: 'videos/interviews',
+                to: '/videos/interviews',
               },
               {
-                label: 'Videos on webinars/presentations',
-                href: 'videos/webinars-presentations',
+                label: 'Videos on webinars',
+                to: '/videos/webinars-presentations',
               },
               {
                 label: 'Videos on product videos',
-                href: 'videos/product-videos',
+                to: '/videos/product-videos',
               },
             ],
           },
@@ -188,19 +188,19 @@ const config = {
             items: [
               {
                 label: 'Resume experience',
-                href: 'resume/experience',
+                to: '/resume/experience',
               },
               {
                 label: 'Resume articles',
-                href: 'resume/articles',
+                to: '/resume/articles',
               },
               {
                 label: 'Resume education',
-                href: 'resume/education',
+                to: '/resume/education',
               },
               {
                 label: 'Resume courses',
-                href: 'resume/courses',
+                to: '/resume/courses',
               },
             ],
           },

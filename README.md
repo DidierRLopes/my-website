@@ -6,7 +6,6 @@ TODO:
 - Tracking analytics
 - Improve tags
 - Improve coloring
-- deploy it in didierlopes.com
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 

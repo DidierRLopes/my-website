@@ -167,19 +167,19 @@ const config = {
             items: [
               {
                 label: 'Videos on stage',
-                to: '/videos/on-stage',
+                to: '/media/videos/on-stage',
               },
               {
                 label: 'Videos interviews',
-                to: '/videos/interviews',
+                to: '/media/videos/interviews',
               },
               {
                 label: 'Videos on webinars',
-                to: '/videos/webinars-presentations',
+                to: '/media/videos/webinars-presentations',
               },
               {
                 label: 'Videos on product videos',
-                to: '/videos/product-videos',
+                to: '/media/videos/product-videos',
               },
             ],
           },

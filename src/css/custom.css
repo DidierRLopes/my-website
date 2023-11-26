@@ -55,7 +55,7 @@ a[href^="http"] {
   text-decoration: underline;
 }
 
-a[href^="/"]:not([class^="menu__link"]):not([class^="sidebarItemLink_node_modules"]):not([class^="navbar__item"]):not([itemprop^="url"]):not([class^="navbar__title"]):not([class^="tag_node_modules"]) {
+a[href^="/"]:not([class^="menu__link"]):not([class^="sidebarItemLink"]):not([class^="navbar__item"]):not([itemprop^="url"]):not([class^="navbar__title"]):not([class^="tag_node_modules"]) {
   font-style: italic;
   text-decoration: underline;
 }

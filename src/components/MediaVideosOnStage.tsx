@@ -4,7 +4,7 @@ import VideosList from './General/VideosList';
 const mediaVideosOnStage = [
   {
     title: 'The new FinAI Tech Stack - OpenBB Terminal Pro',
-    embed: 'https://www.youtube.com/live/UvpQCj_Y4bg?si=Znw8tyhSbw9HyKD_&t=5582',
+    embed: 'https://www.youtube.com/embed/UvpQCj_Y4bg?si=z3BheBn_Uo0sVXxk',
     description: "",
     date: '2023-12-05',
     time: '20 minutes',

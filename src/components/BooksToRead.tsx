@@ -342,6 +342,16 @@ const booksToRead = [
     author: 'Nadia Eghbal',
     image: 'https://m.media-amazon.com/images/I/61eKpnU9c+L._SL1480_.jpg',
   },
+  {
+    title: 'The Challenger Sale: Taking Control of the Customer Conversation',
+    author: 'Matthew Dixon, Brent Adamson',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/81uVH3YVlgL._SL1500_.jpg',
+  },
+  {
+    title: 'People Powered: How Communities Can Supercharge Your Business, Brand, and Teams',
+    author: 'Jono Bacon',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/712C542YIEL._SL1500_.jpg',
+  },
 ];
 
 export default function BooksToRead() {

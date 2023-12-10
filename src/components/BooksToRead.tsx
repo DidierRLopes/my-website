@@ -352,6 +352,11 @@ const booksToRead = [
     author: 'Jono Bacon',
     image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/712C542YIEL._SL1500_.jpg',
   },
+  {
+    title: 'From Project to Profit: How to Build a Business Around Your Open Source Project',
+    author: 'Heather Meeker',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61fphUGywxL._SL1499_.jpg',
+  },
 ];
 
 export default function BooksToRead() {

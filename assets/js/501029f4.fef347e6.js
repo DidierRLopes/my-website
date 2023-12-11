@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[11789],{24129:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/finance","page":1,"postsPerPage":7,"totalPages":1,"totalCount":7,"blogDescription":"This is where I drop my thoughts in the form of blogposts!","blogTitle":"Blog"}')}}]);

@@ -19,7 +19,7 @@ The open source code is available [here](https://github.com/DidierRLopes/target-
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 After working on [OpenBB](https://openbb.co) for over 2 years, we learned which markets to go after and which markets to ignore. You may think that this is intuition, but it’s actually the data that you gathered from talking with 100+ users and learning from others in the industry.
 

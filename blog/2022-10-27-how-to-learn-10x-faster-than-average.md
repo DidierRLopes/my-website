@@ -17,7 +17,7 @@ Learn how to accelerate your learning process and become 10x faster than average
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 Everyone is a self learner. But people’s rhythm of self learning can be vastly different.
 
@@ -73,7 +73,7 @@ Keep iterating between using this new skill to solve a real problem and learning
 
 There isn’t a “you made it” badge. But you know you did, once you’re able to look for a specific piece of information on a video/book to fill in the gap for something you needed for your real problem.
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 TL;DR on how to learn 10x faster than average
 

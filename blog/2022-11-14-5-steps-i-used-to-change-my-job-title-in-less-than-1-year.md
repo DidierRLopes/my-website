@@ -17,7 +17,7 @@ This blog post outlines the five steps I took to change my job title from an Emb
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 In March 2020, I joined a startup as an Embedded Firmware Engineer. The startup’s product focuses on smart running insoles with lightweight trackers that fit any running shoes.
 

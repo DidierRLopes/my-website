@@ -17,7 +17,7 @@ Leaving London to live in San Francisco: A personal journey of relocating and st
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 ## Background
 

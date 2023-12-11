@@ -17,7 +17,7 @@ This post talks about my story of becoming the CEO of OpenBB, the company behind
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 Both my parents are Portuguese and emigrated to Switzerland for better conditions. This is where my brother and I were born. We moved back to our small hometown in Portugal when I was 8 years old.
 

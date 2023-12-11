@@ -19,7 +19,7 @@ The open source code is available [here](https://github.com/DidierRLopes/momentu
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 This Easter, I spoke with my girlfriend’s father and there were several football matches happening that weekend, he started talking about betting on some of those matches.
 

@@ -19,7 +19,7 @@ The open source code is available [here](https://github.com/DidierRLopes/Recipes
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 Once I developed the [Housebills program](/blog/household-bills-program), I really enjoyed the feeling of being able to create usable software from scratch. Therefore, that year during Christmas, I wanted to challenge myself to see if I could find any interesting project to do in only 1 week.
 

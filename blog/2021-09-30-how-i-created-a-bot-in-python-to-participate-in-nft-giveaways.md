@@ -19,7 +19,7 @@ The open source code is available [here](https://github.com/DidierRLopes/Giveawa
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 Lately I’ve been looking into NFTs. I’ve observed that more and more people are trying to innovate and create their own pieces of art. Some of them are impressive, some of them aren’t. But,
 

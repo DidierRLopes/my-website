@@ -19,7 +19,7 @@ The open source code is available [here](https://github.com/DidierRLopes/SortMov
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 During the Christmas holidays, me and my girlfriend, after watching The Office [US] twice in a row, and knowing most of Dwight’s pranks off by heart, decided that it was time to find something worth watching.
 

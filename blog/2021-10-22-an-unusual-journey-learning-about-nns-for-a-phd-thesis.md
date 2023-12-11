@@ -18,7 +18,7 @@ The open source code is available [here](https://github.com/DidierRLopes/Univari
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 On 14th February of 2019, my previous Maths and Statistics teacher — [Filipe](https://www.linkedin.com/in/filipe-r-ramos-a66242143/) - sent me a messaged because of a Linkedin post I shared about work I was doing in python.
 

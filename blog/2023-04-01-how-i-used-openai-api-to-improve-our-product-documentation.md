@@ -19,7 +19,7 @@ The open source code is available [here](https://github.com/DidierRLopes/improve
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 The [documentation](https://docs.openbb.co/bot/reference/discord) of our free OpenBB Bot was pretty simplistic for most of the commands.
 

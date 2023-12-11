@@ -17,7 +17,7 @@ OpenBB Terminal, an open-source investment research platform, is transforming th
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 Having a closed source OpenBB Terminal was never on the table.
 
@@ -70,7 +70,7 @@ One of the best parts of open source is the integrated community that it creates
 
 OpenBB has been driven a lot by the community so far. What started as a terminal mostly focused on equities, soon evolved into including a broad range of datasets and considering several geographies. For instance: A contributor from Sweeden integrated Avanza API to the mutual funds menu that would only appear if users were looking into mutual funds from Sweden — this shows the power of community.
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 ![image](https://github.com/Meg1211/my-website/assets/88618738/9c1b32d4-1efb-4dd4-b1fe-3b8be17f3fc4)
 

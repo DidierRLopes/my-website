@@ -16,7 +16,7 @@ The OpenBB Hub is a comprehensive platform for managing all products, data, subs
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 The OpenBB Hub is the new one-stop-shop for managing all products, data, subscriptions, and content for users!
 

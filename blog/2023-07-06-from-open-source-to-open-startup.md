@@ -17,7 +17,7 @@ From Open Source to Open Startup: A journey of OpenBB towards transparency in th
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 Being open source isn’t enough, at OpenBB we want to accelerate the transparency in the financial world.
 
@@ -93,7 +93,7 @@ OpenBB Hub users, OpenBB Bot, OpenBB SDK and OpenBB Terminal. Allows to hold us 
 
 Stars, forks, merged pull-requests, closed issues, contributors. Keep up-to-date with our development speed and how engaged the open source community is.
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 For all the metrics that are open source, there will be an ⓘ in the top right to share information on why this chart was made open source and why it’s important to us.
 

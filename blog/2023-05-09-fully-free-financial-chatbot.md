@@ -17,7 +17,7 @@ The OpenBB Bot is a financial chatbot that allows you to access financial data f
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 We know the market conditions haven’t been great for anyone, particularly for investors. Instead of raising prices like trends, we have decided to offer our [OpenBB Bot](https://my.openbb.co/app/bot) individuals tier for free if you are a registered user.
 

@@ -17,7 +17,7 @@ This blog post discusses the importance of strong communities in the Web 3.0 spa
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 If you have been paying attention to the Web 3.0 space, you should have realized that most of the projects in the space rely on strong communities.
 

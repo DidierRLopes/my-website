@@ -17,7 +17,7 @@ Leveraging the power of ChatGPT to interact with Twitter API for real-time finan
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 For a while now, users have been asking for adding real-time financial news on [OpenBB Terminal](https://github.com/OpenBB-finance/OpenBBTerminal).
 

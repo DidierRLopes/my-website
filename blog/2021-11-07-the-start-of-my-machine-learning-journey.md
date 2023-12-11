@@ -17,7 +17,7 @@ The start of my journey into the world of Machine Learning, from learning Python
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 During my studies at [Imperial College London](https://www.imperial.ac.uk/) - 3ish years ago - I was introduced to the topic of Machine Learning, an area that I had always been interested about.
 

@@ -19,7 +19,7 @@ The open source code is available [here](https://github.com/DidierRLopes/Gamesto
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 Several people have asked me why [Gamestonk Terminal](https://github.com/GamestonkTerminal/GamestonkTerminal) doesn’t have release versions, and the main reason is because at the pace the team codes and the rate that new features / bug fixes appear it doesn’t yet makes sense to do so.
 

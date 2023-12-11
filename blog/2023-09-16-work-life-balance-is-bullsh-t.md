@@ -17,7 +17,7 @@ This blog post challenges the concept of work-life balance, arguing that success
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 
 For successful individuals, achieving a work-life balance is a luxury often associated with those born into wealth.

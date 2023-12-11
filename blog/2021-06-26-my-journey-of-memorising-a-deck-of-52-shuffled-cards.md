@@ -17,7 +17,7 @@ In this blogpost, I share my journey of memorising a deck of 52 shuffled cards u
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 A few years back, I wanted to read a book about memory and found the best-selling book **“Moonwalking with Einstein: The Art and Science of Remembering Everything”** an ideal choice. I won’t go into too much detail about the book which is a great read, if you don’t trust me, trust Bill Gates, who called the book “_absolutely phenomenal_”. But let me give you a brief sequence of events from the author and journalist of the book, Joshua Foer:
 

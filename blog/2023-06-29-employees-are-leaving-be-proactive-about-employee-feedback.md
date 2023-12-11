@@ -17,7 +17,7 @@ Employees are leaving? Be proactive about employee feedback. This blogpost discu
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 This blogpost shows the measures we are taking to ensure we have high employee engagement at OpenBB through a periodic feedback survey.
 

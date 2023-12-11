@@ -19,7 +19,7 @@ The open source code is available [here](https://github.com/OpenBB-finance/OpenB
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 In the ever-evolving landscape of financial data integration and standardization, OpenBB has been revolutionizing the way individuals and organizations handle data from multiple data providers by utilizing our open-source products.
 

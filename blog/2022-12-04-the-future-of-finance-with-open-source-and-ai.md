@@ -17,7 +17,7 @@ The future of finance is being reshaped by open source and AI. This post discuss
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 This post will talk about my (very) u̶n̶biased opinion about the future of finance built on top of open source and AI.
 

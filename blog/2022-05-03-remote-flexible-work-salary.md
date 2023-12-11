@@ -17,7 +17,7 @@ This blog post discusses the importance of remote and flexible work hours, and h
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 I was thinking about remote + flexible hours, and I don’t think I would ever work for a company without these. At least by choice 🙃
 
@@ -57,7 +57,7 @@ The downsides of this fully flexible work are:
 - Interaction with coworkers and communication. But with us going global due to remote work, it doesn’t really matter, since the 9–5 hours of different countries would already lead to this problem
 - Tracking employee timesheet. I think that a company shouldn’t track an employee timesheet because results are far more important than working hours, and can be just as measurable.
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 All of this to say that at OpenBB we have:
 

@@ -19,7 +19,7 @@ The open source code is available [here](https://github.com/DidierRLopes/Gamesto
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 Almost 2 years ago, I started building my own investment research platform. 2 months later I named it Gamestonk Terminal, made it open source and shared it on Reddit. The rest is history.
 

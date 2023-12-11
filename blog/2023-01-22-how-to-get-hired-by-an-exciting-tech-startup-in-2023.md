@@ -17,7 +17,7 @@ The future is a strange place. We’re not entirely sure what it will look like,
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 Everyone is doing the same hacker tests. Being good at interviews will no longer suffice to get a job in top tech company. Conventional CVs are too boring. Recruiters may like what they read, but this doesn’t make them think any further about a person and think “wow, we really need someone like them”.
 

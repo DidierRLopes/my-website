@@ -19,7 +19,7 @@ The open source code is available [here](https://github.com/DidierRLopes/meme-fi
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 For the people who know me, they know how much I enjoy memes. I’ve got to admit, whenever I go to museums I have a lot of fun captioning artwork as memes. **As I like to say, I go for the art, and I stay for the memes.**
 

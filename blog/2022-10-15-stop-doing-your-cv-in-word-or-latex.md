@@ -17,7 +17,7 @@ The future of CVs for engineers and developers lies within GitHub. This post dis
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 The purpose of a CV is to summarize someone’s career, qualifications and education. **As an engineer or developer, I strongly believe that the future of CVs lies within GitHub.**
 

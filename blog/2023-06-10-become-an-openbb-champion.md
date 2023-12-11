@@ -17,7 +17,7 @@ Become an OpenBB Champion and join our passionate community. Share your experien
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 Do you find yourself unable to live without one of OpenBB’s innovative products? Have you pushed the boundaries of our tools and unlocked their full potential? If you answered yes, then this blog post is tailor-made for you!
 
@@ -61,7 +61,7 @@ As part of the OpenBB Champion community, you will have exclusive access to netw
 
 To show our appreciation for your support, the OpenBB team will send you exclusive OpenBB merchandise. Wear it proudly and let others know that you are part of our journey.
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 If you meet the requirements and are enthusiastic about becoming an [OpenBB Champion](https://openbb.co/blog?type=champions), we invite you to reach out to us at hello@openbb.finance. Our team will coordinate a podcast session with you.
 

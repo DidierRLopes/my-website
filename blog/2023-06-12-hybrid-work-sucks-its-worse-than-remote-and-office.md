@@ -17,7 +17,7 @@ Hybrid work, a combination of remote and office work, is not as beneficial as it
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 This is my hot take for 2023, but bear with me.
 

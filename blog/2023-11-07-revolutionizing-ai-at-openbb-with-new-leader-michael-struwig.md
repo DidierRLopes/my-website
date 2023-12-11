@@ -17,7 +17,7 @@ With the launch of the OpenBB Terminal Pro approaching, we're excited to announc
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 AI will be one of the technologies that will be looked back in hundreds of years as revolutionary, changing how humans live.
 
@@ -70,7 +70,7 @@ Some examples below:
 <li>And more.</li>
 <br />
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 Most of these generative AI features have been started as side projects by our team members, and once we validated the use case with financial professionals we incorporated it into the roadmap. However, we want to double down on this effort and therefore we're excited to welcome [Michael](https://twitter.com/MichaelNStruwig) to OpenBB.
 

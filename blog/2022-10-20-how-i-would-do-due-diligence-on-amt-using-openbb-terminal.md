@@ -17,7 +17,7 @@ This blog post provides a detailed walkthrough on how to conduct due diligence o
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 Last month someone on Twitter asked me to do a thread on how I would do due diligence on $AMT using the free and open source [OpenBB Terminal](https://github.com/OpenBB-finance/OpenBBTerminal).
 

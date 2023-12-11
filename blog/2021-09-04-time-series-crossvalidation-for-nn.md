@@ -19,7 +19,7 @@ The open source code is available [here](https://github.com/DidierRLopes/timeser
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 2 years ago, [Filipe Ramos](https://www.linkedin.com/in/ACoAACK9n24BrpxWf0HMa9bL7MSHleu2YVXpI5E) my previous maths and probability teacher, knowing that I had a special interest in Data Science, challenged me to help him in his PhD thesis “_Data Science na Modelação e Previsão de Séries Económico-financeiras: das Metodologias Clássicas ao Deep Learning_”.
 

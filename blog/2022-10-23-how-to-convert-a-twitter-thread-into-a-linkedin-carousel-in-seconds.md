@@ -18,7 +18,7 @@ The open source code is available [here](https://github.com/DidierRLopes/thread-
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 As content creators, it would be good if the same content could be utilised across every platform easily. Sometimes you need some tweaks based on audience, but often the same content is used across all platforms.
 

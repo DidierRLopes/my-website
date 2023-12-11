@@ -17,7 +17,7 @@ Exploring unconventional ways to increase brand visibility, OpenBB's co-founder 
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 When [OpenBB Terminal](https://github.com/OpenBB-finance/OpenBBTerminal) started last year, I went from having your typical career as a Software Engineer to becoming a co-founder & CEO of a C-Corporation overnight. One thing that I’ve really learnt from this change, is I can no longer code for 12–16 hours a day straight as my role now involves so much more than this… and most interestingly, one of those things is marketing.
 

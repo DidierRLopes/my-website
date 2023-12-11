@@ -17,7 +17,7 @@ Two years of OpenBB: A look back at our achievements and growth in the world of 
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 Today is OpenBB 2 years anniversary of our incorporation. So it’s important to look back and understand the magnitude of what we achieved in 24 months.
 

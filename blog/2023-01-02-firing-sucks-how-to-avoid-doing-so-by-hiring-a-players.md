@@ -17,7 +17,7 @@ Firing is tough. This blogpost discusses how to avoid it by hiring A players, im
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 In 2022, [OpenBB](http://openbb.co/) grew to 20 people. But amongst all of our hiring, we also had to let some people go.
 

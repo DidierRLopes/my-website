@@ -19,7 +19,7 @@ The open source code is available [here](https://github.com/DidierRLopes/worldcu
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 At [OpenBB](https://openbb.co/), the team puts in so much hard work for [our product](https://github.com/OpenBB-finance/OpenBBTerminal) that doing a team event is like a breath of fresh air. With the World Cup 2022 now taking place and more than half of the team being from Europe (where football is the main sport), we thought that it would be nice to run an OpenBB sweepstake.
 

@@ -17,7 +17,7 @@ In this blog post, we discuss the underrated potential of financial chat bots, o
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 At OpenBB, earlier this year we [joined forces with OptionsFamBot](https://openbb.co/products/bot). This was a bot that had a reach of over 1 Million users on Discord.
 

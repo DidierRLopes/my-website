@@ -19,7 +19,7 @@ The open source code is available [here](https://github.com/DidierRLopes/step-de
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 One year ago, I raised $ 8.8 millions to build [OpenBB Terminal](https://github.com/OpenBB-finance/OpenBBTerminal) full time. But since I was working at a startup in the UK, I had a 3 month notice period.
 

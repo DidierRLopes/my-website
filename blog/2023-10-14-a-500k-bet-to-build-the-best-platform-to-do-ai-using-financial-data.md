@@ -19,7 +19,7 @@ The open source code is available [here](https://github.com/DidierRLopes/openbb-
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 Earlier this year we made a $500k bet.
 

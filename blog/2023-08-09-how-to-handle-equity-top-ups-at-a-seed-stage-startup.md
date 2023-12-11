@@ -17,7 +17,7 @@ In this post, we discuss how to handle equity top-ups at a seed stage startup, p
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 Previously, I shared how we handle equity at OpenBB in [this post](http://didierlopes.com/blog/how-to-handle-equity-at-a-seed-stage-startup-from-silicon-valley).
 

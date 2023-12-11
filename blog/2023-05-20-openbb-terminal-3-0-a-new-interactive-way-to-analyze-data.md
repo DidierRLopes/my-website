@@ -19,7 +19,7 @@ The open source code is available [here](https://github.com/openbb-finance/OpenB
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 Nothing has changed, yet everything is different. A game-changing update empowering users with interactive charts and tables
 

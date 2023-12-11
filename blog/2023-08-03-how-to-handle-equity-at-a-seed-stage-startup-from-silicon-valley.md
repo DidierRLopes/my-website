@@ -17,7 +17,7 @@ A step-by-step guide on how to handle equity at a seed-stage startup, using a fi
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 As a startup founder and CEO, you need to wear multiple hats, from engineering and product to design, marketing, and even finance.
 

@@ -20,7 +20,7 @@ The open source code is available [here](https://github.com/openbb-finance/OpenB
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 If you’re using the OpenBB Terminal, there’s an essential component you shouldn’t miss out on: the [OpenBB Hub](https://my.openbb.co/). In this blog post, we’ll explore the significance of OpenBB Hub and why it truly matters for OpenBB users.
 

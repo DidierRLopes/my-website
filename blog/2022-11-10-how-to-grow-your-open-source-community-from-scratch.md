@@ -17,7 +17,7 @@ Growing an open source community from scratch is a challenging task. This blogpo
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 ### Project naming
 
@@ -75,7 +75,7 @@ The difference? I shared Gamestonk Terminal on:
 - Occasionally go back to the same channels (e.g. Reddit, Hackernews) to report progress. This guarantees that they know the project is not dead and helps your project staying relevant and on their minds.
 - Develop in public through livestreams (e.g. [live Coding](https://www.youtube.com/watch?v=9BMI9cleTTg)) or by sharing what you are working on through social media (e.g. [adding a futures menu](https://twitter.com/didier_lopes/status/1579414220256387072)).
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 TL;DR: On how to grow your open source project:
 

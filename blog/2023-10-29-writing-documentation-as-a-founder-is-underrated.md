@@ -17,7 +17,7 @@ This blog post emphasizes the importance of writing documentation as a founder. 
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 A founder spending time writing documentation is f*king underrated.
 

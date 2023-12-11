@@ -17,7 +17,7 @@ Handing over the Twitter account of Gamestonk Terminal to an active community me
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 When I started [Gamestonk Terminal](https://github.com/GamestonkTerminal/GamestonkTerminal) I had no idea of the reach and impact it would have. From getting **over 3.5k stars on GitHub on the first single day alone**, to trending [on Reddit](https://www.reddit.com/r/algotrading/comments/lrndzi/cant_afford_the_bloomberg_terminal_no_worries_i/) and receiving overwhelming feedback, to receiving a message from an ex-colleague based in Switzerland about my name being [top 1 on Hackernews](https://news.ycombinator.com/item?id=26258773). As if this wasn’t enough, a couple of days later the project got featured by [VICE Magazine](https://www.vice.com/en/article/qjp9vp/gamestonk-terminal-is-a-diy-meme-stock-version-of-bloomberg-terminal) and [Daily Fintech](https://dailyfintech.com/2021/02/25/never-underestimate-bloomberg-but-here-are-5-reasons-why-the-gamestonk-terminal-is-a-contender/).
 

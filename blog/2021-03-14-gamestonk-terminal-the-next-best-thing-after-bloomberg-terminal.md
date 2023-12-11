@@ -19,7 +19,7 @@ The open source code is available [here](https://github.com/DidierRLopes/Gamesto
 
 <!-- truncate -->
 
-<div style={{borderTop: '1px solid #21af90', margin: '1.5em 0'}} />
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 If you like stocks and are careful with the way you spend your money, (me saying it seems counter-intuitive given that I bought GME at the peak, I know) you know how much time goes into buying shares of a stock.
 

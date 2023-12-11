@@ -48,7 +48,7 @@ export default function Home() {
                   rel="noreferrer noopener"
                   className='!no-underline'
                 >
-                  <div className="flex rounded-xl p-2 w-32 bg-[#2e8555] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#2e8555] hover:no-underline mx-auto">
+                  <div className="flex rounded-xl p-2 w-32 bg-[#0088CC] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#0088CC] hover:no-underline mx-auto">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={32}
@@ -76,7 +76,7 @@ export default function Home() {
                   rel="noreferrer noopener"
                   className='!no-underline'
                 >
-                  <div className="flex rounded-xl p-2 w-32 bg-[#2e8555] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#2e8555] hover:no-underline mx-auto">
+                  <div className="flex rounded-xl p-2 w-32 bg-[#0088CC] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#0088CC] hover:no-underline mx-auto">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={32}
@@ -140,7 +140,7 @@ export default function Home() {
               rel="noreferrer noopener"
               className='flex justify-center items-center mx-auto'
             >
-              <div className="flex rounded-xl p-2 w-32 bg-[#2e8555] text-white hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#2e8555] hover:no-underline mx-auto items-center justify-center">
+              <div className="flex rounded-xl p-2 w-32 bg-[#0088CC] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#0088CC] hover:no-underline mx-auto">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={101}

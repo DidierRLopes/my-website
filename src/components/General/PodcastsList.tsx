@@ -17,7 +17,7 @@ export default function PodcastsList({ podcasts }: PodcastsListProps) {
   return (
     <div className="mx-auto mt-8">
       {podcasts.map((podcast) => (
-        <div className="container relative justify-center items-center mb-8 my-4 mx-2 border-[1px] p-2 rounded border-[#2e8555]">
+        <div className="container relative justify-center items-center mb-8 my-4 mx-2 border-[1px] p-2 rounded border-[#0088CC]">
           <div>
             <div className='justify-left items-start text-xs'>
               {podcast.date}

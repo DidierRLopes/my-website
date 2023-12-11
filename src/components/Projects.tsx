@@ -167,7 +167,7 @@ export default function Projects() {
   return (
     <div className="mx-auto mt-8">
       {projects.map((project) => (
-        <div className='flex my-4 mx-2 border-[1px] p-2 rounded border-[#2e8555]'>
+        <div className='flex my-4 mx-2 border-[1px] p-2 rounded border-[#0088CC]'>
           <div className='w-[300px] flex justify-center items-center'>
             <img
               src={project.image}
@@ -192,7 +192,7 @@ export default function Projects() {
                 className="mr-4 !no-underline"
               >
                 <button
-                  className="flex rounded-xl p-2 whitespace-nowrap text-sm bg-[#2e8555] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#2e8555] hover:no-underline"
+                  className="flex rounded-xl p-2 whitespace-nowrap text-sm font-semibold bg-[#0088CC] hover:bg-grey-300 hover:dark:bg-grey-200 hover:text-[#0088CC] hover:no-underline"
                   type="button"
                 >
                   Source code

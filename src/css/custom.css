@@ -10,13 +10,13 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #0088CC;
+  --ifm-color-primary-dark: #0088CC;
+  --ifm-color-primary-darker: #0088CC;
+  --ifm-color-primary-darkest: #0088CC;
+  --ifm-color-primary-light: #0088CC;
+  --ifm-color-primary-lighter: #0088CC;
+  --ifm-color-primary-lightest: #0088CC;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-font-size-base: 18px
@@ -24,13 +24,13 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #33BBFF;
+  --ifm-color-primary-dark: #33BBFF;
+  --ifm-color-primary-darker: #33BBFF;
+  --ifm-color-primary-darkest: #33BBFF;
+  --ifm-color-primary-light: #33BBFF;
+  --ifm-color-primary-lighter: #33BBFF;
+  --ifm-color-primary-lightest: #33BBFF;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -66,10 +66,10 @@ h2[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-H
 }
 
 [data-theme="light"] h2[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-modul"]  {
-  color: #2e8555;
+  color: --ifm-color-primary;
 }
 [data-theme="dark"] h2[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-modul"] {
-  color: #21af90;
+  color: --ifm-color-primary;
 }
 
 h1[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-module"] {
@@ -78,10 +78,10 @@ h1[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-H
 }
 
 [data-theme="light"] h1[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-module"]  {
-  color: #2e8555;
+  color: --ifm-color-primary;
 }
 [data-theme="dark"] h1[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-module"] {
-  color: #21af90;
+  color: --ifm-color-primary;
 }
 
 h2[class^="anchor"] {
@@ -90,10 +90,10 @@ h2[class^="anchor"] {
 }
 
 [data-theme="light"] h2[class^="anchor"] {
-  color: #2e8555;
+  color: --ifm-color-primary;
 }
 [data-theme="dark"] h2[class^="anchor"] {
-  color: #21af90;
+  color: --ifm-color-primary;
 }
 
 h3[class^="anchor"] {

@@ -20,7 +20,7 @@ export default function BooksList({ books }: BooksListProps) {
     <div>
       <div className="mx-auto mt-8 md:grid md:grid-cols-2">
         {booksShuffled.map((book) => (
-          <div className='flex my-4 mx-2 border-[1px] p-2 rounded border-[#2e8555]'>
+          <div className='flex my-4 mx-2 border-[1px] p-2 rounded border-[#0088CC]'>
             <div className='w-[100px] flex justify-center items-center'>
               <img
                 src={book.image}

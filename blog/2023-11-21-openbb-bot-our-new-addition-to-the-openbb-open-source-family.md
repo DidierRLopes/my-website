@@ -3,7 +3,7 @@ slug: openbb-bot-our-new-addition-to-the-openbb-open-source-family
 title: OpenBB Bot - our new addition to the OpenBB open source family
 date: 2023-11-21
 image: https://github.com/DidierRLopes/my-website/assets/25267873/6cde7947-b57e-4863-879b-9032b280fbb9
-tags: ['ai', 'openbb', 'startup', 'finance', 'hiring']
+tags: ['openbb', 'bot', 'open source', 'discord', 'monetization']
 description: The OpenBB Bot architecture is now open source. Check out our Discord Bot architecture now on GitHub.
 ---
 

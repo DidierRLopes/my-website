@@ -3,18 +3,18 @@ import VideosList from './General/VideosList';
 
 const mediaVideosOnStage = [
   {
-    title: 'The new FinAI Tech Stack - OpenBB Terminal Pro',
-    embed: 'https://www.youtube.com/embed/UvpQCj_Y4bg?si=z3BheBn_Uo0sVXxk',
-    description: "",
-    date: '2023-12-05',
-    time: '20 minutes',
-  },
-  {
     title: 'Creating an AI-Powered Financial Analyst with OpenBB',
-    embed: '',
+    embed: 'https://www.youtube.com/embed/A-43EKK2PhE?si=fOuAbg42uEoieBNv',
     description: "In this session, we will go over how analysts and quants can build their own AI-powered financial analysts using AI and open source. This will rely on building an agent, in Python, that can access 500+ data endpoints through the OpenBB platform.",
     date: '2023-12-07',
-    time: '20 minutes',
+    time: '24 minutes',
+  },
+  {
+    title: 'The new FinAI Tech Stack - OpenBB Terminal Pro',
+    embed: 'https://www.youtube.com/embed/V1rYmWWVbIY?si=ahxTpjkwQibGqwLq',
+    description: 'Didier Lopes, CEO of OpenBB, presented the OpenBB Platform and the OpenBB Terminal Pro at the event "The new FinAI Tech Stack" hosted by MindsDB in SF, California.',
+    date: '2023-12-05',
+    time: '22 minutes',
   },
   {
     title: 'TimeGPT Launch | Didier Lopes, OpenBB: Democratizing Quantitative Finance',

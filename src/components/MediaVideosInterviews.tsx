@@ -3,6 +3,13 @@ import VideosList from './General/VideosList';
 
 const mediaVideosInterviews = [
   {
+    title: 'Fintech CEO Fireside Chat: Open Source Fintech Ft. OpenBB',
+    embed: 'https://www.youtube.com/embed/dDrQgbe-HF4?si=UXbPb-cGtx_PfppK',
+    description: 'In our latest Fintech CEO Fireside Chat, our CEO dives in with Didier Lopes, the Founder & CEO of OpenBB. Topics Covered: Open-source and "freemium" business models Competing with Bloomberg, Reinventing the "terminal", Startup fundraising, How to scale a startup, Retail and institutional investment trends, and more!!',
+    date: '2023-12-12',
+    time: '1h 7min',
+  },
+  {
     title: 'Open source interviews #20 - Didier Lopes, founder of OpenB',
     embed: 'https://www.youtube.com/embed/BV-zdBpVKjk?si=SJ2rwOxnq9WzcXr7',
     description: 'Open source investment research platform | Terminal | SDK | Bot.',

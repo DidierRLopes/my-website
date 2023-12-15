@@ -3,6 +3,13 @@ import VideosList from './General/VideosList';
 
 const mediaVideosProductVideos = [
   {
+    title: 'OpenBB Terminal Pro Tutorial - full length version',
+    embed: 'https://www.youtube.com/embed/pxKqd1r2Ut4?si=9-UZw9vEciBI4PuG',
+    description: 'Discover the superior investment research capabilities of the OpenBB Terminal Pro. Built on top of the open-source OpenBB Terminal, our platform provides a sleek graphical interface that is intuitive and fully customizable, making it easier for you to access and analyze financial information with ease.',
+    date: '2023-12-14',
+    time: '55 minutes',
+  },
+  {
     title: 'How to use the OpenBB Terminal - full length version',
     embed: 'https://www.youtube.com/embed/76IkkbUlQcA?si=E1RFFRa_C2Z4YtYo',
     description: 'Get started with the OpenBB Terminal today and learn everything you need to perform your investment research and analysis.',

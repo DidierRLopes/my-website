@@ -50,12 +50,7 @@ const booksToRead = [
   {
     title: 'High Output Management',
     author: 'Andrew S. Grove',
-    image: 'https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/91j9DLZhD6L.jpg',
-  },
-  {
-    title: "Don't Make Me Think: A Common Sense Approach to Web Usability",
-    author: 'Steve Krug',
-    image: 'https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/51WS36aA2BL.jpg',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/91j9DLZhD6L._SL1500_.jpg',
   },
   {
     title: 'The Hero with a Thousand Faces',
@@ -356,6 +351,11 @@ const booksToRead = [
     title: 'From Project to Profit: How to Build a Business Around Your Open Source Project',
     author: 'Heather Meeker',
     image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61fphUGywxL._SL1499_.jpg',
+  },
+  {
+    title: 'Do Less Better: The Power of Strategic Sacrifice in a Complex World',
+    author: 'J. Bell',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71ofWMyUX6L._SL1500_.jpg',
   },
 ];
 

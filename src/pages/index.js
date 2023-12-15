@@ -48,7 +48,7 @@ export default function Home() {
                   rel="noreferrer noopener"
                   className='!no-underline'
                 >
-                  <div className="flex rounded-xl p-2 w-32 bg-[#0088CC] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#0088CC] hover:no-underline mx-auto">
+                  <div className="flex rounded-xl p-2 w-32 bg-[#0088CC] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#0088CC] hover:no-underline mx-auto text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={32}
@@ -61,9 +61,6 @@ export default function Home() {
                     >
                       <path d="M11 4c-3.854 0-7 3.146-7 7v28c0 3.854 3.146 7 7 7h28c3.854 0 7-3.146 7-7V11c0-3.854-3.146-7-7-7H11zm0 2h28c2.774 0 5 2.226 5 5v28c0 2.774-2.226 5-5 5H11c-2.774 0-5-2.226-5-5V11c0-2.774 2.226-5 5-5zm2.086 7 9.223 13.104L13 37h2.5l7.938-9.293L29.977 37h7.937L27.79 22.613 36 13h-2.5l-6.84 8.01L21.023 13h-7.937zm3.828 2h3.065l14.107 20H31.02L16.914 15z" />
                     </svg>
-                    <span className='ml-2 mx-auto'>
-                      Twitter
-                    </span>
                   </div>
                 </a>
               </div>
@@ -76,7 +73,7 @@ export default function Home() {
                   rel="noreferrer noopener"
                   className='!no-underline'
                 >
-                  <div className="flex rounded-xl p-2 w-32 bg-[#0088CC] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#0088CC] hover:no-underline mx-auto">
+                  <div className="flex rounded-xl p-2 w-32 bg-[#0088CC] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#0088CC] hover:no-underline mx-auto justify-center items-center text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={32}
@@ -84,12 +81,10 @@ export default function Home() {
                       fill="currentColor"
                       strokeWidth={1.5}
                       viewBox="0 0 30 30"
+                      className="mx-auto"
                     >
                       <path d="M24 4H6a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM10.954 22h-2.95v-9.492h2.95V22zM9.449 11.151a1.72 1.72 0 1 1 0-3.44 1.72 1.72 0 0 1 0 3.44zM22.004 22h-2.948v-4.616c0-1.101-.02-2.517-1.533-2.517-1.535 0-1.771 1.199-1.771 2.437V22h-2.948v-9.492h2.83v1.297h.04c.394-.746 1.356-1.533 2.791-1.533 2.987 0 3.539 1.966 3.539 4.522V22z" />
                     </svg>
-                    <span className='ml-2 !no-underline mx-auto'>
-                      LinkedIn
-                    </span>
                   </div>
                 </a>
               </div>
@@ -140,7 +135,7 @@ export default function Home() {
               rel="noreferrer noopener"
               className='flex justify-center items-center mx-auto'
             >
-              <div className="flex rounded-xl p-2 w-32 bg-[#0088CC] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#0088CC] hover:no-underline mx-auto">
+              <div className="flex rounded-xl p-2 w-32 bg-[#0088CC] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#0088CC] hover:no-underline mx-auto text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={101}
@@ -160,7 +155,7 @@ export default function Home() {
           <h1 className="_h1 !mb-2">
             I love to experience new cultures
           </h1>
-          <div className="flex-none overflow-y-scroll rounded-sm text-center mx-auto text-lg p-2 pr-8 mb-4">
+          <div className="flex-none overflow-y-scroll rounded-sm text-center mx-auto text-lg p-2 mb-4">
             <span>
               Nowadays I put work first. 
               But one day I hope to visit over 100 countries.

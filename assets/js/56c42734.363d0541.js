@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[42358],{8882:e=>{e.exports=JSON.parse('{"label":"llamaindex","permalink":"/blog/tags/llamaindex","allTagsPath":"/blog/tags","count":1}')}}]);

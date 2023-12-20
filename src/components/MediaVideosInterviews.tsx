@@ -3,6 +3,13 @@ import VideosList from './General/VideosList';
 
 const mediaVideosInterviews = [
   {
+    title: 'OpenBB + Supabase',
+    embed: 'https://www.youtube.com/embed/lHmCshk4pJc?si=oZH2Vv_jUvSFbY_t',
+    description: 'Copple chats to Didier Lopes, the cofounder of OpenBB, about their origin story, their Supabase integration, and whether he prefers to fight ducks or horses.',
+    date: '2023-12-19',
+    time: '22min',
+  },
+  {
     title: 'Fintech CEO Fireside Chat: Open Source Fintech Ft. OpenBB',
     embed: 'https://www.youtube.com/embed/dDrQgbe-HF4?si=UXbPb-cGtx_PfppK',
     description: 'In our latest Fintech CEO Fireside Chat, our CEO dives in with Didier Lopes, the Founder & CEO of OpenBB. Topics Covered: Open-source and "freemium" business models Competing with Bloomberg, Reinventing the "terminal", Startup fundraising, How to scale a startup, Retail and institutional investment trends, and more!!',

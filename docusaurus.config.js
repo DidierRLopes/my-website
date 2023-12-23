@@ -60,6 +60,10 @@ const config = {
         theme: {
           customCss: ['./src/css/custom.css'],
         },
+        gtag: {
+          trackingID: 'G-KSRK9JWEFQ',
+          anonymizeIP: true,
+        },
         // {
         // googleTagManager: {
         //   containerId: 'GTM-PL77JR5L',

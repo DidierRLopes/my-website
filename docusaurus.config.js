@@ -64,6 +64,9 @@ const config = {
           trackingID: 'G-KSRK9JWEFQ',
           anonymizeIP: true,
         },
+        googleTagManager: {
+          containerId: 'GTM-PL77JR5L',
+        },
         // {
         // googleTagManager: {
         //   containerId: 'GTM-PL77JR5L',

@@ -1,6 +1,6 @@
 ---
 title: Podcasts
-sidebar_position: 2
+sidebar_position: 5
 ---
 
 import MediaPodcasts from '@site/src/components/MediaPodcasts.tsx'

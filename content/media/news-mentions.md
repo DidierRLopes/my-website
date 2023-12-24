@@ -1,6 +1,6 @@
 ---
 title: News Mentions
-sidebar_position: 3
+sidebar_position: 6
 ---
 
 import MediaNewsMentions from '@site/src/components/MediaNewsMentions.tsx'

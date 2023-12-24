@@ -182,7 +182,7 @@ const config = {
               },
               {
                 label: 'Videos on webinars',
-                to: '/media/webinars-presentations',
+                to: '/media/webinars',
               },
               {
                 label: 'Videos on product videos',

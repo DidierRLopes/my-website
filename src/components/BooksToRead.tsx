@@ -313,11 +313,6 @@ const booksToRead = [
     image: 'https://m.media-amazon.com/images/I/71tdb1udZnL._SL1500_.jpg',
   },
   {
-    title: 'Thinking, Fast and Slow',
-    author: 'Daniel Kahneman',
-    image: 'https://m.media-amazon.com/images/I/71wvKXWfcML._SL1500_.jpg',
-  },
-  {
     title: 'The Rational Optimist: How Prosperity Evolves',
     author: 'Matt Ridley',
     image: 'https://m.media-amazon.com/images/I/61BwDm28ViL._SL1500_.jpg',

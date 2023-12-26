@@ -197,6 +197,11 @@ const booksAlreadyRead = [
     author: 'Adam Grant',
     image: 'https://m.media-amazon.com/images/I/71K+FclxRdL._SL1500_.jpg',
   },
+  {
+    title: 'Thinking, Fast and Slow',
+    author: 'Daniel Kahneman',
+    image: 'https://m.media-amazon.com/images/I/71wvKXWfcML._SL1500_.jpg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

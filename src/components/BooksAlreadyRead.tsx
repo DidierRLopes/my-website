@@ -192,6 +192,11 @@ const booksAlreadyRead = [
     author: 'Walter Isaacson',
     image: 'https://m.media-amazon.com/images/I/814mI0-rkxL._SL1500_.jpg',
   },
+  {
+    title: "Think Again: The Power of Knowing What You Don't Know",
+    author: 'Adam Grant',
+    image: 'https://m.media-amazon.com/images/I/71K+FclxRdL._SL1500_.jpg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

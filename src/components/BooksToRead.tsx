@@ -308,11 +308,6 @@ const booksToRead = [
     image: 'https://m.media-amazon.com/images/I/719pWKuKMwL._SL1500_.jpg',
   },
   {
-    title: "Think Again: The Power of Knowing What You Don't Know",
-    author: 'Adam Grant',
-    image: 'https://m.media-amazon.com/images/I/71K+FclxRdL._SL1500_.jpg',
-  },
-  {
     title: "Man's Search for Meaning",
     author: 'Viktor E. Frankl',
     image: 'https://m.media-amazon.com/images/I/71tdb1udZnL._SL1500_.jpg',

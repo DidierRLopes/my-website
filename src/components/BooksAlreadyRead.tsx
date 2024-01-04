@@ -202,6 +202,11 @@ const booksAlreadyRead = [
     author: 'Daniel Kahneman',
     image: 'https://m.media-amazon.com/images/I/71wvKXWfcML._SL1500_.jpg',
   },
+  {
+    title: 'Blue Ocean Strategy, Expanded Edition: How to Create Uncontested Market Space and Make the Competition Irrelevant',
+    author: 'W. Chan Kim, Renée Mauborgne',
+    image: 'https://m.media-amazon.com/images/I/813Pyktx7UL.jpg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

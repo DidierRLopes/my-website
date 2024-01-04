@@ -68,11 +68,6 @@ const booksToRead = [
     image: 'https://m.media-amazon.com/images/I/61v5CqYL2WL.jpg',
   },
   {
-    title: 'Blue Ocean Strategy, Expanded Edition: How to Create Uncontested Market Space and Make the Competition Irrelevant',
-    author: 'W. Chan Kim, Renée Mauborgne',
-    image: 'https://m.media-amazon.com/images/I/813Pyktx7UL.jpg',
-  },
-  {
     title: 'Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days',
     author: 'Jake Knapp, John Zeratsky, Braden Kowitz, Dan Bittner',
     image: 'https://m.media-amazon.com/images/I/71Z1HWsH4fL.jpg',

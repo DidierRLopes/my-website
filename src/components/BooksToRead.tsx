@@ -337,6 +337,11 @@ const booksToRead = [
     author: 'J. Bell',
     image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71ofWMyUX6L._SL1500_.jpg',
   },
+  {
+    title: 'Traction: How Any Startup Can Achieve Explosive Customer Growth',
+    author: 'Gabriel Weinberg',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/817Y5woFNGL._SL1500_.jpg',
+  },
 ];
 
 export default function BooksToRead() {

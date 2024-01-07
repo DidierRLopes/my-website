@@ -74,7 +74,7 @@ const booksToRead = [
   },
   {
     title: 'User Story Mapping: Discover the Whole Story, Build the Right Product',
-    author: 'Jeff Patton (Author)',
+    author: 'Jeff Patton',
     image: 'https://m.media-amazon.com/images/I/51xjwiaguCL.jpg',
   },
   {

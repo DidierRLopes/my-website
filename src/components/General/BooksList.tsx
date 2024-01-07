@@ -11,15 +11,11 @@ interface BooksListProps {
 }
 
 export default function BooksList({ books }: BooksListProps) {
-  const booksShuffled = books
-    .map((value) => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value);
 
   return (
     <div>
       <div className="mx-auto mt-8 md:grid md:grid-cols-2">
-        {booksShuffled.map((book) => (
+        {books.map((book) => (
           <div className='flex my-4 mx-2 border-[1px] p-2 gap-6 rounded border-[#0088CC]'>
             <div className='w-[100px] flex justify-center items-center'>
               <img

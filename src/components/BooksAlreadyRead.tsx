@@ -207,6 +207,11 @@ const booksAlreadyRead = [
     author: 'W. Chan Kim, Renée Mauborgne',
     image: 'https://m.media-amazon.com/images/I/813Pyktx7UL.jpg',
   },
+  {
+    title: 'The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers',
+    author: 'Ben Horowitz',
+    image: 'https://m.media-amazon.com/images/I/810u9MkT3SL.jpg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

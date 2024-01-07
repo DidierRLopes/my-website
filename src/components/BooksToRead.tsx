@@ -33,11 +33,6 @@ const booksToRead = [
     image: 'https://m.media-amazon.com/images/I/51nrLEimQcL.jpg',
   },
   {
-    title: 'The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers',
-    author: 'Ben Horowitz',
-    image: 'https://m.media-amazon.com/images/I/810u9MkT3SL.jpg',
-  },
-  {
     title: 'The Power Presenter: Technique, Style, and Strategy from Americas Top Speaking Coach',
     author: 'Jerry Weissman',
     image: 'https://m.media-amazon.com/images/I/514ck6YIOqL.jpg',

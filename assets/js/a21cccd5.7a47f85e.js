@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[65243],{30965:s=>{s.exports=JSON.parse('{"label":"slackgpt","permalink":"/blog/tags/slackgpt","allTagsPath":"/blog/tags","count":1}')}}]);

@@ -2,11 +2,38 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://didierlopes.com/blog</id>
     <title>Didier Lopes Blog</title>
-    <updated>2023-12-15T00:00:00.000Z</updated>
+    <updated>2024-01-08T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://didierlopes.com/blog"/>
     <subtitle>Didier Lopes Blog</subtitle>
     <icon>https://didierlopes.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Building my personal website in Docusaurus]]></title>
+        <id>https://didierlopes.com/blog/building-my-personal-website-in-docusaurus</id>
+        <link href="https://didierlopes.com/blog/building-my-personal-website-in-docusaurus"/>
+        <updated>2024-01-08T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How I'm using Docusaurus to build my own personal website.]]></summary>
+        <content type="html"><![CDATA[<p align="center"><img loading="lazy" width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/0ae365f8-af88-4d1d-a8f2-bcbe70904749" class="img_ev3q"></p><br><p>How I'm using Docusaurus to build my own personal website.</p><div style="border-top:1px solid #0088CC;margin:1.5em 0"></div><p>One of my goals for 2023 was to learn web development. Given that I knew 0 to nothing last year, I am extremely happy with my progress.</p><p>I never had the time to fully dedicate to it in terms of doing a program/course — but as with anything in life, the best way to learn is by doing.</p><p>And this year I worked on web development for:</p><ul><li>OpenBB Hub — <a href="https://my.openbb.co" target="_blank" rel="noopener noreferrer">https://my.openbb.co</a></li><li>OpenBB marketing website — <a href="https://openbb.co" target="_blank" rel="noopener noreferrer">https://openbb.co</a></li><li>OpenBB docs — <a href="https://docs.openbb.co" target="_blank" rel="noopener noreferrer">https://docs.openbb.co</a></li><li>OpenBB Terminal Pro — <a href="https://pro.openbb.co" target="_blank" rel="noopener noreferrer">https://pro.openbb.co</a></li></ul><p>Thank you José Donato for always helping me with anything!</p><p>In addition, I’ve always wanted to have my own personal website. So I felt that this would be the perfect opportunity to do so as I could spend some time with it over weekends.</p><p>And so I did, and open source here: <a href="https://github.com/DidierRLopes/personal-website" target="_blank" rel="noopener noreferrer">https://github.com/DidierRLopes/personal-website</a></p><p>However, this website was taking too much of my spare time, which I could use for more important work. And at the time I became very familiar with Docusaurus, which is what we use for OpenBB docs.</p><p>So I thought — why not just use Docusaurus to make my personal website? It’s easy to edit, I’m already very familiar with the architecture, and it’s very easy to update when there’s new information.</p><p>So that’s what I did, and also made the entire code open source here: <a href="https://github.com/DidierRLopes/my-website" target="_blank" rel="noopener noreferrer">https://github.com/DidierRLopes/my-website</a></p><p>You can access the full website here — <a href="https://didierlopes.com/" target="_blank" rel="noopener noreferrer">https://didierlopes.com/</a>, and there you can find: my personal projects, books I’ve read or want to read, interviews/webinars/podcasts, resume or even my blog.</p><p>Any feedback is welcome.</p>]]></content>
+        <category label="docusaurus" term="docusaurus"/>
+        <category label="website" term="website"/>
+        <category label="blog" term="blog"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Prediction for 2024]]></title>
+        <id>https://didierlopes.com/blog/prediction-for-2024</id>
+        <link href="https://didierlopes.com/blog/prediction-for-2024"/>
+        <updated>2024-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Companies will own multiple fine-tuned LLMs/SLMs for specific tasks.]]></summary>
+        <content type="html"><![CDATA[<p align="center"><img loading="lazy" width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/f5116915-e15e-40c7-9633-727a56468d94" class="img_ev3q"></p><br><p>Companies will own multiple fine-tuned LLMs/SLMs for specific tasks.</p><div style="border-top:1px solid #0088CC;margin:1.5em 0"></div><p>LLMs like ChatGPT are great for showing what these models are capable of doing in terms of breadth, but at the end of the day, you’re going to look for depth. Instead of relying on one-size-fits-all solutions, companies will look towards the integration of multiple, fine-tuned language models tailored for specific actions.</p><p>Enterprises are recognizing the importance of accuracy in their AI applications. General-purpose language models have been revolutionary, but the demand for specialized models is on the rise. From customer support interactions to complex data analysis, having dedicated language models for specific tasks enhances accuracy and efficiency. This is easy to understand since the weights that are being used for the LLM to have a big breadth of knowledge are repurposed for depth.</p><p>Personalization is no longer a luxury but a necessity. Specialized language models enable enterprises to deliver personalized experiences to their customers. We have to assume that everyone is utilizing the same models today, so offering ChatGPT in your product isn’t good enough. You need to add alpha to it. And that is done through fine-tuning utilizing your private data.</p><p>In an era of increasing cyber threats and stringent regulations, the deployment of fine-tuned language models allows enterprises to enhance their security measures and ensure compliance with industry standards.</p><p>As for the financial industry, this is 100% going to happen. Firms will fine-tune language models locally utilizing their proprietary datasets and providing access to their Snowflake/Elastic/ClickHouse/.. instances. This collection of models will effectively enhance the productivity of the firm by 2/3x, even displacing jobs.</p><p>We are preparing for this shift at OpenBB and I spent the last few days working on a proof-of-concept with José Donato that will allow users to bring their own copilots to the Terminal Pro. And even have these interact with each other.</p><p align="center"><img loading="lazy" width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/5ce7fefe-b5d2-4f91-81dd-a591bb4e86f3" class="img_ev3q"></p><p>For a video on how this works you can check: <a href="https://x.com/josedonato__/status/1741151037031845986?s=20" target="_blank" rel="noopener noreferrer">https://x.com/josedonato__/status/1741151037031845986?s=20</a></p>]]></content>
+        <category label="openbb" term="openbb"/>
+        <category label="finance" term="finance"/>
+        <category label="ai" term="ai"/>
+        <category label="agents" term="agents"/>
+        <category label="copilot" term="copilot"/>
+        <category label="llm" term="llm"/>
+        <category label="pro" term="pro"/>
+        <category label="fine-tune" term="fine-tune"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[The new FinAI Tech Stack]]></title>
         <id>https://didierlopes.com/blog/the-new-finai-tech-stack</id>

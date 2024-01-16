@@ -337,6 +337,11 @@ const booksToRead = [
     author: 'Gabriel Weinberg',
     image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/817Y5woFNGL._SL1500_.jpg',
   },
+  {
+    title: 'Same as Ever: A Guide to What Never Changes',
+    author: 'Gabriel Weinberg',
+    image: 'https://m.media-amazon.com/images/I/71znMAUESWL._SL1500_.jpg',
+  },
 ];
 
 export default function BooksToRead() {

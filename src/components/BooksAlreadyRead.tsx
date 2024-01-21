@@ -207,6 +207,11 @@ const booksAlreadyRead = [
     author: 'Ben Horowitz',
     image: 'https://m.media-amazon.com/images/I/810u9MkT3SL.jpg',
   },
+  {
+    title: 'The Challenger Sale: Taking Control of the Customer Conversation',
+    author: 'Matthew Dixon, Brent Adamson',
+    image: 'https://m.media-amazon.com/images/I/81uVH3YVlgL.jpg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

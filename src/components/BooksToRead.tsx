@@ -108,11 +108,6 @@ const booksToRead = [
     image: 'https://m.media-amazon.com/images/I/61yAYYNvIVL.jpg',
   },
   {
-    title: 'The Challenger Sale: Taking Control of the Customer Conversation',
-    author: 'Matthew Dixon, Brent Adamson',
-    image: 'https://m.media-amazon.com/images/I/81uVH3YVlgL.jpg',
-  },
-  {
     title: 'Sell the Way You Buy: A Modern Approach To Sales That Actually Works (Even On You!)',
     author: 'David Priemer',
     image: 'https://m.media-amazon.com/images/I/711Q5WTMTJL.jpg',

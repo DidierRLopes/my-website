@@ -212,6 +212,11 @@ const booksAlreadyRead = [
     author: 'Matthew Dixon, Brent Adamson',
     image: 'https://m.media-amazon.com/images/I/81uVH3YVlgL.jpg',
   },
+  {
+    title: 'Obviously Awesome: How to Nail Product Positioning so Customers Get It, Buy It, Love It',
+    author: 'April Dunford',
+    image: 'https://m.media-amazon.com/images/I/61ncg5hBY6L.jpg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

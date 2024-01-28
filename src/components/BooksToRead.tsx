@@ -183,11 +183,6 @@ const booksToRead = [
     image: 'https://m.media-amazon.com/images/I/51WS36aA2BL.jpg',
   },
   {
-    title: 'Obviously Awesome: How to Nail Product Positioning so Customers Get It, Buy It, Love It',
-    author: 'April Dunford',
-    image: 'https://m.media-amazon.com/images/I/61ncg5hBY6L.jpg',
-  },
-  {
     title: 'Indistractable: How to Control Your Attention and Choose Your Life',
     author: 'Nir Eyal',
     image: 'https://m.media-amazon.com/images/I/71yV71FUIAS.jpg',

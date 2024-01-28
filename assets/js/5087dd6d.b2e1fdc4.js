@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[6016],{28819:e=>{e.exports=JSON.parse('{"label":"function calling","permalink":"/blog/tags/function-calling","allTagsPath":"/blog/tags","count":1}')}}]);

@@ -2,7 +2,7 @@
 slug: 2023-12-27-creating-an-ai-powered-financial-analyst
 title: Creating an AI-powered financial analyst
 date: 2023-12-27
-image: https://github.com/DidierRLopes/my-website/assets/25267873/d87dc0c7-96b6-42b8-8c7a-8bcd6240510a
+image: https://github.com/DidierRLopes/my-website/assets/25267873/2a16e839-7298-4dcc-917e-b54cdd0f6fc7
 tags: ['ai', 'llm', 'agents', 'tools', 'function calling', 'openbb']
 description: Our Platform aims to empower the OpenBB Copilot, an AI-powered financial analyst, to perform tasks ranging from knowledge retrieval to fully autonomous analysis. The architecture involves task decomposition, tool retrieval, and subtask agents, showcasing impressive results in both deterministic and non-deterministic workflows. Read on to explore its capabilities and don't forget to watch the demos.
 ---

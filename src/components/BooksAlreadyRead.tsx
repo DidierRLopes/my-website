@@ -208,6 +208,11 @@ const booksAlreadyRead = [
     image: 'https://m.media-amazon.com/images/I/810u9MkT3SL.jpg',
   },
   {
+    title: 'From Project to Profit: How to Build a Business Around Your Open Source Project',
+    author: 'Heather Meeker',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61fphUGywxL._SL1499_.jpg',
+  },
+  {
     title: 'The Challenger Sale: Taking Control of the Customer Conversation',
     author: 'Matthew Dixon, Brent Adamson',
     image: 'https://m.media-amazon.com/images/I/81uVH3YVlgL.jpg',

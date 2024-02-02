@@ -38,11 +38,6 @@ const booksToRead = [
     image: 'https://m.media-amazon.com/images/I/514ck6YIOqL.jpg',
   },
   {
-    title: 'The intelligent investor: The Definitive Book on Value Investing',
-    author: 'Benjamin Graham',
-    image: 'https://m.media-amazon.com/images/I/919mmNCTaaL.jpg',
-  },
-  {
     title: 'High Output Management',
     author: 'Andrew S. Grove',
     image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/91j9DLZhD6L._SL1500_.jpg',

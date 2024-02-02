@@ -183,6 +183,11 @@ const booksAlreadyRead = [
     image: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1544555766l/43190966._SX318_.jpg',
   },
   {
+    title: 'The intelligent investor: The Definitive Book on Value Investing',
+    author: 'Benjamin Graham',
+    image: 'https://m.media-amazon.com/images/I/919mmNCTaaL.jpg',
+  },
+  {
     title: 'Elon Musk',
     author: 'Walter Isaacson',
     image: 'https://m.media-amazon.com/images/I/814mI0-rkxL._SL1500_.jpg',

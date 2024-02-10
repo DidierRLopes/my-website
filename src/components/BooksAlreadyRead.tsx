@@ -227,6 +227,11 @@ const booksAlreadyRead = [
     author: 'April Dunford',
     image: 'https://m.media-amazon.com/images/I/61ncg5hBY6L.jpg',
   },
+  {
+    title: 'High Output Management',
+    author: 'Andrew S. Grove',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/91j9DLZhD6L._SL1500_.jpg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

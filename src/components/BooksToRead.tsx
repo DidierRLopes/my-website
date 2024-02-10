@@ -38,11 +38,6 @@ const booksToRead = [
     image: 'https://m.media-amazon.com/images/I/514ck6YIOqL.jpg',
   },
   {
-    title: 'High Output Management',
-    author: 'Andrew S. Grove',
-    image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/91j9DLZhD6L._SL1500_.jpg',
-  },
-  {
     title: 'The Hero with a Thousand Faces',
     author: 'Joseph Campbell',
     image: 'https://m.media-amazon.com/images/I/51VeJN9ikML.jpg',

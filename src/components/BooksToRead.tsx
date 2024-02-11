@@ -317,6 +317,16 @@ const booksToRead = [
     author: 'Gabriel Weinberg',
     image: 'https://m.media-amazon.com/images/I/71znMAUESWL._SL1500_.jpg',
   },
+  {
+    title: 'The Art of War',
+    author: 'Sun Tzu',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/715-VdNvB+L._SL1360_.jpg',
+  },
+  {
+    title: 'What It Takes: Lessons in the Pursuit of Excellence',
+    author: 'Stephen A. Schwarzman',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/71xeKpYSNEL._SL1500_.jpg',
+  },
 ];
 
 export default function BooksToRead() {

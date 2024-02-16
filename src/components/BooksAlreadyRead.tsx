@@ -232,6 +232,11 @@ const booksAlreadyRead = [
     author: 'Andrew S. Grove',
     image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/91j9DLZhD6L._SL1500_.jpg',
   },
+  {
+    title: 'Buy Back Your Time: Get Unstuck, Reclaim Your Freedom, and Build Your Empire',
+    author: 'Dan Martell',
+    image: 'https://m.media-amazon.com/images/I/719pWKuKMwL._SL1500_.jpg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

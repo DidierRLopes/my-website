@@ -273,11 +273,6 @@ const booksToRead = [
     image: 'https://m.media-amazon.com/images/I/51sQ7g5XwAL.jpg',
   },
   {
-    title: 'Buy Back Your Time: Get Unstuck, Reclaim Your Freedom, and Build Your Empire',
-    author: 'Dan Martell',
-    image: 'https://m.media-amazon.com/images/I/719pWKuKMwL._SL1500_.jpg',
-  },
-  {
     title: "Man's Search for Meaning",
     author: 'Viktor E. Frankl',
     image: 'https://m.media-amazon.com/images/I/71tdb1udZnL._SL1500_.jpg',
@@ -327,6 +322,11 @@ const booksToRead = [
     author: 'Stephen A. Schwarzman',
     image: 'https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/71xeKpYSNEL._SL1500_.jpg',
   },
+  {
+    title: 'Skin in the Game: Hidden Asymmetries in Daily Life',
+    author: 'Nassim Nicholas Taleb',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/614VKfxGzPL._SL1500_.jpg',
+  },  
 ];
 
 export default function BooksToRead() {

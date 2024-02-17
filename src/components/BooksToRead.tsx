@@ -118,7 +118,7 @@ const booksToRead = [
     image: 'https://m.media-amazon.com/images/I/611QkQ+CXES.jpg',
   },
   {
-    title: 'Empowered: Ordinary People, Extraordinary Products (Silicon Valley Product Group)',
+    title: 'Empowered: Ordinary People, Extraordinary Products',
     author: 'Marty Cagan',
     image: 'https://m.media-amazon.com/images/I/71O0cfXUnLL.jpg',
   },
@@ -321,7 +321,12 @@ const booksToRead = [
     title: 'Skin in the Game: Hidden Asymmetries in Daily Life',
     author: 'Nassim Nicholas Taleb',
     image: 'https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/614VKfxGzPL._SL1500_.jpg',
-  },  
+  },
+  {
+    title: 'Inspired: How to Create Tech Products Customers Love',
+    author: 'Marty Cagan',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/61Ga-ZFeDXL._SL1500_.jpg',
+  },
 ];
 
 export default function BooksToRead() {

@@ -237,6 +237,11 @@ const booksAlreadyRead = [
     author: 'Dan Martell',
     image: 'https://m.media-amazon.com/images/I/719pWKuKMwL._SL1500_.jpg',
   },
+  {
+    title: '$100M Offers: How to Make Offers So Good People Feel Stupid Saying No',
+    author: 'Alex Hormozi',
+    image: 'https://m.media-amazon.com/images/I/618zYUWUKfL.jpg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

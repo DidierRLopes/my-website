@@ -228,11 +228,6 @@ const booksToRead = [
     image: 'https://m.media-amazon.com/images/I/81Yd6Q6geBL.jpg',
   },
   {
-    title: '$100M Offers: How to Make Offers So Good People Feel Stupid Saying No',
-    author: 'Alex Hormozi',
-    image: 'https://m.media-amazon.com/images/I/618zYUWUKfL.jpg',
-  },
-  {
     title: 'Traction: Get a Grip on Your Business',
     author: 'Gino Wickman',
     image: 'https://m.media-amazon.com/images/I/81d7NYQfKXL.jpg',

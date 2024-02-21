@@ -5,7 +5,7 @@ const mediaPodcasts = [
   {
     title: 'From 4,000 GitHub Stars to a Successful - Open Source Business with Didier Lopes of OpenBB',
     link: 'https://www.emilyomier.com/podcast/didier-lopes',
-    host: 'Open Source Business -Emily Omier',
+    host: 'Open Source Business - Emily Omier',
     date: '2024-01-03',
     summary: "Didier Lopes, Co-founder and CEO of OpenBB, joins me to share the story of how OpenBB went from receiving 4000 GitHub stars in the first 24 hours of the project to a fully funded company launching new monetization initiatives. Didier and I chat about his background, what led him to start OpenBB in his spare time, and his vision for the company's future. He shares the story of teaming up with his co-founder, why he loves working in the open source ecosystem, and how his team continues contributing to OpenBB's success.",
   },

@@ -327,6 +327,11 @@ const booksToRead = [
     author: 'Marty Cagan',
     image: 'https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/61Ga-ZFeDXL._SL1500_.jpg',
   },
+  {
+    title: 'Make Time: How to Focus on What Matters Every Day',
+    author: 'Jake Knapp, John Zeratsky',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/716hMrmP-KL._SL1500_.jpg',
+  },
 ];
 
 export default function BooksToRead() {

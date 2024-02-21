@@ -3,6 +3,13 @@ import VideosList from './General/VideosList';
 
 const mediaVideosInterviews = [
   {
+    title: 'ClueCon',
+    embed: 'https://www.youtube.com/embed/OEboNpQlwgk?si=BK5NpvyHXi7z7H7X',
+    description: "Joining us this week is Didier Lopes from the open source project, Open BB. Open BB is focused on building the most advanced investment research tools accessible to everyone. As a Software Developer and an AI/ML enthusiast, Didier decided to leverage modern data science tools to help make sense out of investing. As a young investor, he looked for research tools about investing and couldn't find anything helpful.",
+    date: '2024-02-20',
+    time: '30min',
+  },
+  {
     title: 'OpenBB + Supabase',
     embed: 'https://www.youtube.com/embed/lHmCshk4pJc?si=oZH2Vv_jUvSFbY_t',
     description: 'Copple chats to Didier Lopes, the cofounder of OpenBB, about their origin story, their Supabase integration, and whether he prefers to fight ducks or horses.',

@@ -98,11 +98,6 @@ const booksToRead = [
     image: 'https://m.media-amazon.com/images/I/61yAYYNvIVL.jpg',
   },
   {
-    title: 'Sell the Way You Buy: A Modern Approach To Sales That Actually Works (Even On You!)',
-    author: 'David Priemer',
-    image: 'https://m.media-amazon.com/images/I/711Q5WTMTJL.jpg',
-  },
-  {
     title: "The Amazon Way: Amazon's 14 Leadership Principles",
     author: 'John Rossman',
     image: 'https://m.media-amazon.com/images/I/61dx0hEkWnS.jpg',

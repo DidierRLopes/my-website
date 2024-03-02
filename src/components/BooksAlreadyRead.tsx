@@ -242,6 +242,11 @@ const booksAlreadyRead = [
     author: 'Alex Hormozi',
     image: 'https://m.media-amazon.com/images/I/618zYUWUKfL.jpg',
   },
+  {
+    title: 'Sell the Way You Buy: A Modern Approach To Sales That Actually Works (Even On You!)',
+    author: 'David Priemer',
+    image: 'https://m.media-amazon.com/images/I/711Q5WTMTJL.jpg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

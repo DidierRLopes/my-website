@@ -1,12 +1,5 @@
 # Website
 
-TODO:
-
-- Algolia for search
-- Tracking analytics
-- Improve tags
-- Improve coloring
-
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
 ### Installation

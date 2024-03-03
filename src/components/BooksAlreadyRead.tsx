@@ -183,6 +183,11 @@ const booksAlreadyRead = [
     image: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1544555766l/43190966._SX318_.jpg',
   },
   {
+    title: 'The intelligent investor: The Definitive Book on Value Investing',
+    author: 'Benjamin Graham',
+    image: 'https://m.media-amazon.com/images/I/919mmNCTaaL.jpg',
+  },
+  {
     title: 'Elon Musk',
     author: 'Walter Isaacson',
     image: 'https://m.media-amazon.com/images/I/814mI0-rkxL._SL1500_.jpg',
@@ -208,6 +213,11 @@ const booksAlreadyRead = [
     image: 'https://m.media-amazon.com/images/I/810u9MkT3SL.jpg',
   },
   {
+    title: 'From Project to Profit: How to Build a Business Around Your Open Source Project',
+    author: 'Heather Meeker',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61fphUGywxL._SL1499_.jpg',
+  },
+  {
     title: 'The Challenger Sale: Taking Control of the Customer Conversation',
     author: 'Matthew Dixon, Brent Adamson',
     image: 'https://m.media-amazon.com/images/I/81uVH3YVlgL.jpg',
@@ -216,6 +226,26 @@ const booksAlreadyRead = [
     title: 'Obviously Awesome: How to Nail Product Positioning so Customers Get It, Buy It, Love It',
     author: 'April Dunford',
     image: 'https://m.media-amazon.com/images/I/61ncg5hBY6L.jpg',
+  },
+  {
+    title: 'High Output Management',
+    author: 'Andrew S. Grove',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/91j9DLZhD6L._SL1500_.jpg',
+  },
+  {
+    title: 'Buy Back Your Time: Get Unstuck, Reclaim Your Freedom, and Build Your Empire',
+    author: 'Dan Martell',
+    image: 'https://m.media-amazon.com/images/I/719pWKuKMwL._SL1500_.jpg',
+  },
+  {
+    title: '$100M Offers: How to Make Offers So Good People Feel Stupid Saying No',
+    author: 'Alex Hormozi',
+    image: 'https://m.media-amazon.com/images/I/618zYUWUKfL.jpg',
+  },
+  {
+    title: 'Sell the Way You Buy: A Modern Approach To Sales That Actually Works (Even On You!)',
+    author: 'David Priemer',
+    image: 'https://m.media-amazon.com/images/I/711Q5WTMTJL.jpg',
   },
 ];
 

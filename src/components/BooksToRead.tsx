@@ -38,16 +38,6 @@ const booksToRead = [
     image: 'https://m.media-amazon.com/images/I/514ck6YIOqL.jpg',
   },
   {
-    title: 'The intelligent investor: The Definitive Book on Value Investing',
-    author: 'Benjamin Graham',
-    image: 'https://m.media-amazon.com/images/I/919mmNCTaaL.jpg',
-  },
-  {
-    title: 'High Output Management',
-    author: 'Andrew S. Grove',
-    image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/91j9DLZhD6L._SL1500_.jpg',
-  },
-  {
     title: 'The Hero with a Thousand Faces',
     author: 'Joseph Campbell',
     image: 'https://m.media-amazon.com/images/I/51VeJN9ikML.jpg',
@@ -108,11 +98,6 @@ const booksToRead = [
     image: 'https://m.media-amazon.com/images/I/61yAYYNvIVL.jpg',
   },
   {
-    title: 'Sell the Way You Buy: A Modern Approach To Sales That Actually Works (Even On You!)',
-    author: 'David Priemer',
-    image: 'https://m.media-amazon.com/images/I/711Q5WTMTJL.jpg',
-  },
-  {
     title: "The Amazon Way: Amazon's 14 Leadership Principles",
     author: 'John Rossman',
     image: 'https://m.media-amazon.com/images/I/61dx0hEkWnS.jpg',
@@ -128,7 +113,7 @@ const booksToRead = [
     image: 'https://m.media-amazon.com/images/I/611QkQ+CXES.jpg',
   },
   {
-    title: 'Empowered: Ordinary People, Extraordinary Products (Silicon Valley Product Group)',
+    title: 'Empowered: Ordinary People, Extraordinary Products',
     author: 'Marty Cagan',
     image: 'https://m.media-amazon.com/images/I/71O0cfXUnLL.jpg',
   },
@@ -238,11 +223,6 @@ const booksToRead = [
     image: 'https://m.media-amazon.com/images/I/81Yd6Q6geBL.jpg',
   },
   {
-    title: '$100M Offers: How to Make Offers So Good People Feel Stupid Saying No',
-    author: 'Alex Hormozi',
-    image: 'https://m.media-amazon.com/images/I/618zYUWUKfL.jpg',
-  },
-  {
     title: 'Traction: Get a Grip on Your Business',
     author: 'Gino Wickman',
     image: 'https://m.media-amazon.com/images/I/81d7NYQfKXL.jpg',
@@ -283,11 +263,6 @@ const booksToRead = [
     image: 'https://m.media-amazon.com/images/I/51sQ7g5XwAL.jpg',
   },
   {
-    title: 'Buy Back Your Time: Get Unstuck, Reclaim Your Freedom, and Build Your Empire',
-    author: 'Dan Martell',
-    image: 'https://m.media-amazon.com/images/I/719pWKuKMwL._SL1500_.jpg',
-  },
-  {
     title: "Man's Search for Meaning",
     author: 'Viktor E. Frankl',
     image: 'https://m.media-amazon.com/images/I/71tdb1udZnL._SL1500_.jpg',
@@ -313,11 +288,6 @@ const booksToRead = [
     image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/712C542YIEL._SL1500_.jpg',
   },
   {
-    title: 'From Project to Profit: How to Build a Business Around Your Open Source Project',
-    author: 'Heather Meeker',
-    image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61fphUGywxL._SL1499_.jpg',
-  },
-  {
     title: 'Do Less Better: The Power of Strategic Sacrifice in a Complex World',
     author: 'J. Bell',
     image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71ofWMyUX6L._SL1500_.jpg',
@@ -331,6 +301,31 @@ const booksToRead = [
     title: 'Same as Ever: A Guide to What Never Changes',
     author: 'Gabriel Weinberg',
     image: 'https://m.media-amazon.com/images/I/71znMAUESWL._SL1500_.jpg',
+  },
+  {
+    title: 'The Art of War',
+    author: 'Sun Tzu',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/715-VdNvB+L._SL1360_.jpg',
+  },
+  {
+    title: 'What It Takes: Lessons in the Pursuit of Excellence',
+    author: 'Stephen A. Schwarzman',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/71xeKpYSNEL._SL1500_.jpg',
+  },
+  {
+    title: 'Skin in the Game: Hidden Asymmetries in Daily Life',
+    author: 'Nassim Nicholas Taleb',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/614VKfxGzPL._SL1500_.jpg',
+  },
+  {
+    title: 'Inspired: How to Create Tech Products Customers Love',
+    author: 'Marty Cagan',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/61Ga-ZFeDXL._SL1500_.jpg',
+  },
+  {
+    title: 'Make Time: How to Focus on What Matters Every Day',
+    author: 'Jake Knapp, John Zeratsky',
+    image: 'https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/716hMrmP-KL._SL1500_.jpg',
   },
 ];
 

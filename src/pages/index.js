@@ -121,7 +121,7 @@ export default function Home() {
             What I believe in.
           </h1>
           <p className='italic'>
-            "Open source is the most powerful idea of our generation."
+            "Open source is the most powerful idea of our generation." - Matt Mullenweg
           </p>
           <div className="_subtitle text-lg">
           </div>

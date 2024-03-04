@@ -1,17 +1,17 @@
 ---
 slug: 2024-03-02-moving-from-london-to-the-bay-area-and-what-changed
-title: Moving from London to the Bay area and what changed
+title: Moving from London to the Bay Area and what changed
 date: 2024-03-02
 image: https://github.com/DidierRLopes/my-website/assets/25267873/7943cde2-0230-4577-9f83-cc5b75b23f28
 tags: ['learning', 'experience', 'growth', 'moving', 'london', 'bay', 'US', 'travel']
-description: Moving from London to the Bay area and what changed
+description: Moving from London to the Bay Area and what changed
 ---
 
 <p align="center">
     <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/7943cde2-0230-4577-9f83-cc5b75b23f28"/>
 </p>
 
-The culture shock from moving to the Bay area from London.
+The culture shock from moving to the Bay Area from London.
 
 <br />
 
@@ -19,7 +19,7 @@ The culture shock from moving to the Bay area from London.
 
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-A few months ago, I wrote a blogpost about what was needed in order for my wife and our 2 dogs to move to the Bay area from London. You can check that blog post [here](/blog/leaving-london-to-live-in-san-francisco/).
+A few months ago, I wrote a blogpost about what was needed in order for my wife and our 2 dogs to move to the Bay Area from London. You can check that blog post [here](/blog/leaving-london-to-live-in-san-francisco/).
 
 Since then, I’ve had some people asking me after living in the Bay for 1 year, what are the biggest differences I’ve experienced in terms of lifestyle & culture.
 
@@ -33,7 +33,7 @@ Once I moved to London (in 2017) to pursue a MSc. at Imperial College I was payi
 
 So there was a shock that I experienced in terms of living costs from Lisbon to London.
 
-Once I decided to move to the Bay area (2023) I knew that the living costs were going to be higher, but in my head “how higher can these be?”.
+Once I decided to move to the Bay Area (2023) I knew that the living costs were going to be higher, but in my head “how higher can these be?”.
 
 Oh boy.
 
@@ -92,7 +92,7 @@ Note that in restaurants they expect you to leave your credit card on the top of
 
 Growing up in Portugal I used to watch every Benfica game and then in high school you would talk about the games you watched during the weekend. There was no other sport, it was a binary - either you are a soccer fan or you don’t watch any sports at all. When I moved to London, this changed slightly, there were people that liked other sports but Soccer was still the main sport by a very big margin. People would fill up a pub to watch Soccer only - maybe the other sport that came closest was Cricket.
 
-In the US, people don’t really care about Soccer. It feels like it’s a sport that kids do, but adults don’t really talk about it or watch it. They know about Messi/Ronaldo, but aren’t really fans. On the other hand, American football, Basketball and Baseball are very big. Aquatic pole also seems to be popular in the Bay area.
+In the US, people don’t really care about Soccer. It feels like it’s a sport that kids do, but adults don’t really talk about it or watch it. They know about Messi/Ronaldo, but aren’t really fans. On the other hand, American football, Basketball and Baseball are very big. Aquatic pole also seems to be popular in the Bay Area.
 
 I remember when we got the apartment, I was walking my dogs and there was a soccer pitch nearby. I was super happy because I thought that I could do what I used to do in London and just show up to the ground on the weekend and do a pick-up play with random folks. Unfortunately, after several attempts of walking nearby I realized that the pitch was only used for kids to play soccer and never adults. In London, on a sunny day, it’s hard (maybe impossible?) to find a soccer field empty.
 
@@ -122,9 +122,9 @@ My plan was to live in the US for the duration of my visa (O-1) and then return 
 
 In London, I felt like the culture was very strong towards finishing your working day and going to the pub at 5/6pm - get drunk. And then repeat. Before London I didn’t drink alcohol, and in London I started drinking sometimes to socialize. In the Bay I feel like there isn’t an expectation that everyone wants to drink, and people leave events early because they want to head home to work on something - which is something I used to do back in London.
 
-I also feel like in the Bay area, when you go to events you can talk about what you are working on without people judging you for bringing “work” into the conversation. And I tend to find these conversations more interesting. In London, there’s less emphasis in tech, and the interests tend to be a bit broader: music, arts, history, etc..
+I also feel like in the Bay Area, when you go to events you can talk about what you are working on without people judging you for bringing “work” into the conversation. And I tend to find these conversations more interesting. In London, there’s less emphasis in tech, and the interests tend to be a bit broader: music, arts, history, etc..
 
-While people say that London is a big hub for startups & founders, I didn’t find this to be the case. In the Bay area, the likelihood of you encountering someone on the street and them working at a startup (most of the time their own) is really high. You can even feel the strength of this tech community on Twitter, whereas that doesn’t exist (AFAIK) in London.
+While people say that London is a big hub for startups & founders, I didn’t find this to be the case. In the Bay Area, the likelihood of you encountering someone on the street and them working at a startup (most of the time their own) is really high. You can even feel the strength of this tech community on Twitter, whereas that doesn’t exist (AFAIK) in London.
 
 <p align="center">
     <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/de60d56a-194e-4f62-8aaa-20e3451936e1"/>
@@ -133,7 +133,7 @@ While people say that London is a big hub for startups & founders, I didn’t fi
 
 ### Equity as part of compensation package
 
-Most European startups do not offer any equity. In the Bay area, all startups offer equity. The earlier you join (higher risk) the more meaningful the options you get are. One of the reasons this works is because US employees are, in general, hard-working and will go the long way for their company. So this makes it so that incentives are aligned, and employees want to work harder because that equity can become much more meaningful than their base salary (potentially life-changing).
+Most European startups do not offer any equity. In the Bay Area, all startups offer equity. The earlier you join (higher risk) the more meaningful the options you get are. One of the reasons this works is because US employees are, in general, hard-working and will go the long way for their company. So this makes it so that incentives are aligned, and employees want to work harder because that equity can become much more meaningful than their base salary (potentially life-changing).
 
 One of the reasons this works so well is that pretty much every US person knows someone in firsthand who made f-u money by selling their shares in secondaries, or has at least heard stories about this. While I was in the UK, before starting OpenBB, I didn’t hear about this once. Also because companies have no interest in offering you equity if they don’t have to.
 
@@ -163,7 +163,7 @@ On the first day I had to go to Fedex which was a 15-20m walk, and when I told t
 
 Waymo, a self-driving car division that started off Google, was the first startup I applied to when I finished university. I have been bullish on self-driving cars since university - my dissertation was on that topic and I had to propose it myself, since there were no proposals for such. So seeing Waymo operating in SF was mind-blowing to me.
 
-Autonomous cars are a matter of time - and SF (and the Bay area) being the city where Waymo starts operating, shows a lot about how progressive this city is. I recommend everyone to try one out.
+Autonomous cars are a matter of time - and SF (and the Bay Area) being the city where Waymo starts operating, shows a lot about how progressive this city is. I recommend everyone to try one out.
 
 My dad, someone who was born and raised in a small town in Portugal, and who understands very little about technology seeing this was something. Him seated in the passenger’s seat for the full 16 min drive recording a wheel with no driver and ending the journey telling me “I never thought I would see this in my life, thank you” is something that no amount of money in this world could buy.
 
@@ -198,7 +198,7 @@ When doing anything official in the UK, you get asked about your passport (and t
 
 ### Debit vs credit card
 
-In Portugal and the UK, I only had a Debit card which had access to all the cash in the bank. When moving to the Bay area, everyone told me to get a credit card and leave the debit card at home. There are a lot of scams in the US, and having a credit card is safer since banks limit the withdrawal amounts based on your credit score and will protect in case of theft.
+In Portugal and the UK, I only had a Debit card which had access to all the cash in the bank. When moving to the Bay Area, everyone told me to get a credit card and leave the debit card at home. There are a lot of scams in the US, and having a credit card is safer since banks limit the withdrawal amounts based on your credit score and will protect in case of theft.
 
 In the UK, there isn’t a concept of a credit score - at least publicly. Banks will have something like that based on how on time you pay for things, but it’s only used internally for loans or others. In the US, everything revolves around your credit score. The amount of money you can withdraw from your credit card, the loans you get, the apartments you can rent, … so it’s important to pay everything on time and avoid debt.
 

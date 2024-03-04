@@ -22,7 +22,12 @@ export default function Home() {
               OpenBB
             </a>
           </div>
-          <div className="flex items-center content-center mx-auto align-center justify-center flex-wrap mt-4 gap-8">
+          <div className="flex items-center content-center mx-auto align-center justify-center flex-wrap mt-4 gap-8 mb-4"> 
+            <img
+              className="rounded-3xl max-h-[300px] mx-auto"
+              src="img/tattoo.webp"
+              alt="OpenBB Tattoo"
+            />
             <img
               className="rounded-3xl max-h-[300px] mx-auto"
               src="img/me_timegpt.webp"
@@ -30,13 +35,33 @@ export default function Home() {
             />
             <img
               className="rounded-3xl max-h-[300px] mx-auto"
-              src="img/tattoo.webp"
-              alt="OpenBB Tattoo"
+              src="img/bridge_sticker.webp"
+              alt="OpenBB bridget sticker"
             />
           </div>
-          <div className="flex-none overflow-y-scroll rounded-sm mx-auto text-base my-8">
+        </div>
+        <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center rounded-[14px]">
+          <h1>
+            My journey.
+          </h1>
+          <ul className='mt-4 text-left'>
+            <p>🇨🇭 I was born in Switzerland, but all my family are Portuguese.</p>
+            <p>🇵🇹 Moved to Portugal when I was 8yo and did a BSc. in Electrical and Computer Engineering.</p>
+            <p>🇳🇱 Did a semester in TU Delft and learned about self-driving cars.</p>
+            <p>🇬🇧 Moved to London to do an MSc. in Control Systems at Imperial College London.</p>
+            <p>🚗 Excited about AI and self-driving cars, so I worked as a Sensor Fusion Engineer.</p>
+            <p>🎓 Wrote the code behind my math teacher's thesis on <a href="https://github.com/DidierRLopes/UnivariateTimeSeriesForecast" target="_blank" rel="noreferrer">Forecasting of Financial timeseries</a>.</p>
+            <p>😤 Performed my own investment research and got frustrated by how time-consuming it was.</p>
+            <p>🦠 During Covid my flight got cancelled over holidays. So started building my financial terminal.</p>
+            <p>🦍 I made Gamestonk Terminal open source and we went viral on Reddit and HackerNews.</p>
+            <p>📈 Raised $8.9M in a seed round to democratize investment research.</p>
+            <p>🦋 Announced OpenBB to the world in 2022 and rebranded the terminal.</p>
+            <p>🇺🇸 Took my wife and dogs to live in the Bay area, to be closer to tech founders and investors.</p>
+            <p>🗽 Moved with my wife and dogs again to be closer to customers in NYC.</p>
+          </ul>
+          <div className="flex-none overflow-y-scroll rounded-sm mx-auto text-base mt-4">
             <p>
-              Reach out, anytime.
+              To be continued...
             </p>
             <div className="flex mx-auto gap-8 grid-cols-2 justify-center">
               <div
@@ -93,25 +118,67 @@ export default function Home() {
         </div>
         <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center rounded-[14px]">
           <h1>
-            Open source is the way.
+            What I believe in.
           </h1>
+          <p className='italic'>
+            "Open source is the most powerful idea of our generation."
+          </p>
           <div className="_subtitle text-lg">
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/DidierRLopes"
-              className="flex items-center justify-center"
-            >
-              Building an open-source legacy, one commit at a time.
-            </a>
           </div>
-          <div className="flex items-center justify-center border-blue-200">
+          <div className="flex flex-row items-center content-center mx-auto align-center justify-center gap-8">
             <iframe
               src="https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff"
               width="500"
               height="300"
               title="GitHub Stats"
             />
+            <iframe
+              src="https://ssr-contributions-svg.vercel.app/_/DidierRLopes?chart=3dbar&format=svg&theme=blue"
+              width="500"
+              height="300"
+              title="GitHub Stats"
+            />
+          </div>
+            <p>
+              Building an open-source legacy,{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/DidierRLopes"
+              >
+                one commit at a time
+              </a>. <br />
+              {" "}Starting with the most open financial company{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://openbb.co/open"
+              >
+                openbb.co/open
+              </a>.
+            </p>
+        </div>
+        
+        <div className="mx-auto mt-16 flex flex-col px-3 text-center md:max-w-[880px]">
+          <h1 className="_h1 !mb-2">
+            Outside work
+          </h1>
+          <div className="flex-none overflow-y-scroll rounded-sm text-center mx-auto text-lg p-2 mb-4">
+            <span>
+              Nowadays I put work first. 
+              But one day I hope to visit over 100 countries.
+            </span>
+            <iframe
+              // Note that the &zoom=9 is important to set the zoom level
+              src="https://www.google.com/maps/d/u/0/embed?mid=174MaDCD2ho7QwEt4uk16eJnPxnZNxzU&ehbc=2E312F&zoom=9"
+              width="100%"
+              height="480"
+              title="My travels"
+              className="mt-2 mb-4"
+            />
+            <span className='mt-2'>
+              In my spare time I enjoy boxing 🥊, reading 📖 and playing fortnite 🎮.
+            </span>
           </div>
         </div>
         <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center mb-16">
@@ -149,25 +216,6 @@ export default function Home() {
                 </svg>
               </div>
             </a>
-          </div>
-        </div>
-        <div className="mx-auto mt-16 flex flex-col px-3 text-center md:max-w-[880px]">
-          <h1 className="_h1 !mb-2">
-            I love to experience new cultures
-          </h1>
-          <div className="flex-none overflow-y-scroll rounded-sm text-center mx-auto text-lg p-2 mb-4">
-            <span>
-              Nowadays I put work first. 
-              But one day I hope to visit over 100 countries.
-            </span>
-            <iframe
-              // Note that the &zoom=9 is important to set the zoom level
-              src="https://www.google.com/maps/d/u/0/embed?mid=174MaDCD2ho7QwEt4uk16eJnPxnZNxzU&ehbc=2E312F&zoom=9"
-              width="100%"
-              height="480"
-              title="My travels"
-              className="mt-2"
-            />
           </div>
         </div>
       </main>

@@ -1,7 +1,7 @@
 import React from 'react';
-import NewsMentionsList from './General/NewsList';
+import NewsMentionsList from '../General/NewsList';
 
-const mediaNewsMentions = [
+const data = [
   {
     title: 'OpenBB Releases Its Second Generation Open Source Investment Research Platform With a Software Development Kit (SDK) and an AI/ML Toolkit',
     link: 'https://www.newswire.com/news/openbb-releases-its-second-generation-open-source-investment-research-21885626',
@@ -22,6 +22,6 @@ const mediaNewsMentions = [
   },
 ];
 
-export default function MediaNewsMentions() {
-  return <NewsMentionsList news={mediaNewsMentions} />;
+export default function NewsMentions() {
+  return <NewsMentionsList news={data} />;
 }

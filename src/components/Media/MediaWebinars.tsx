@@ -1,7 +1,7 @@
 import React from 'react';
-import VideosList from './General/VideosList';
+import VideosList from '../General/VideosList';
 
-const mediaVideosWebinarsPresentations = [
+const data = [
   {
     title: "Didier's journey and Demo of the OpenBB Terminal and OpenBB SDK",
     embed: 'https://www.youtube.com/embed/t-EKA1xoFp8',
@@ -25,6 +25,6 @@ const mediaVideosWebinarsPresentations = [
   },
 ];
 
-export default function MediaVideosWebinarsPresentations() {
-  return <VideosList videos={mediaVideosWebinarsPresentations} />;
+export default function MediaWebinars() {
+  return <VideosList videos={data} />;
 }

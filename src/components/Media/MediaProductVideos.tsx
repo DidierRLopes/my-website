@@ -1,7 +1,7 @@
 import React from 'react';
-import VideosList from './General/VideosList';
+import VideosList from '../General/VideosList';
 
-const mediaVideosProductVideos = [
+const data = [
   {
     title: 'OpenBB Terminal Pro Tutorial - full length version',
     embed: 'https://www.youtube.com/embed/pxKqd1r2Ut4?si=9-UZw9vEciBI4PuG',
@@ -39,6 +39,6 @@ const mediaVideosProductVideos = [
   },
 ];
 
-export default function MediaVideosProductVideos() {
-  return <VideosList videos={mediaVideosProductVideos} />;
+export default function MediaProductVideos() {
+  return <VideosList videos={data} />;
 }

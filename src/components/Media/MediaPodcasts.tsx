@@ -1,7 +1,7 @@
 import React from 'react';
-import PodcastsList from './General/PodcastsList';
+import PodcastsList from '../General/PodcastsList';
 
-const mediaPodcasts = [
+const data = [
   {
     title: 'From 4,000 GitHub Stars to a Successful - Open Source Business with Didier Lopes of OpenBB',
     link: 'https://www.emilyomier.com/podcast/didier-lopes',
@@ -26,5 +26,5 @@ const mediaPodcasts = [
 ];
 
 export default function MediaPodcasts() {
-  return <PodcastsList podcasts={mediaPodcasts} />;
+  return <PodcastsList podcasts={data} />;
 }

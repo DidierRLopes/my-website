@@ -1,7 +1,7 @@
 import React from 'react';
-import VideosList from './General/VideosList';
+import VideosList from '../General/VideosList';
 
-const mediaVideosOpenBBchampions = [
+const data = [
   {
     title: 'Meet Jason Strimpel - OpenBB Champion',
     embed: 'https://www.youtube.com/embed/ULvR-oHynZE?si=EO4gSN_ojpgxeHfO',
@@ -26,6 +26,6 @@ const mediaVideosOpenBBchampions = [
   },
 ];
 
-export default function MediaVideosOpenBBchampions() {
-  return <VideosList videos={mediaVideosOpenBBchampions} />;
+export default function MediaOpenBBchampions() {
+  return <VideosList videos={data} />;
 }

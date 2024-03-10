@@ -1,7 +1,7 @@
 import React from 'react';
-import VideosList from './General/VideosList';
+import VideosList from '../General/VideosList';
 
-const mediaVideosOnStage = [
+const data = [
   {
     title: 'Creating an AI-Powered Financial Analyst with OpenBB',
     embed: 'https://www.youtube.com/embed/A-43EKK2PhE?si=fOuAbg42uEoieBNv',
@@ -46,6 +46,6 @@ const mediaVideosOnStage = [
   },
 ];
 
-export default function MediaVideosOnStage() {
-  return <VideosList videos={mediaVideosOnStage} />;
+export default function MediaOnStage() {
+  return <VideosList videos={data} />;
 }

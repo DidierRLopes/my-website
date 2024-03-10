@@ -1,7 +1,7 @@
 import React from 'react';
-import VideosList from './General/VideosList';
+import VideosList from '../General/VideosList';
 
-const mediaVideosInterviews = [
+const data = [
   {
     title: 'ClueCon',
     embed: 'https://www.youtube.com/embed/OEboNpQlwgk?si=BK5NpvyHXi7z7H7X',
@@ -39,6 +39,6 @@ const mediaVideosInterviews = [
   },
 ];
 
-export default function MediaVideosInterviews() {
-  return <VideosList videos={mediaVideosInterviews} />;
+export default function MediaInterviews() {
+  return <VideosList videos={data} />;
 }

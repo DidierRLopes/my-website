@@ -123,6 +123,10 @@ ol {
 
 /* Track */
 ::-webkit-scrollbar-track {
+  background: #fff; 
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
   background: rgba(27,27,29,1); 
 }
 

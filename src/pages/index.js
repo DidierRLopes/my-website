@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '@theme/Layout';
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 export default function Home() {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    if (ExecutionEnvironment.canUseDOM) {
+      setIsDesktop(window.innerWidth > 1024);
+    }
+  }, []);
+
   return (
     <Layout
       title="Homepage"
@@ -24,7 +33,7 @@ export default function Home() {
               OpenBB
             </a>
           </div>
-          {window.innerWidth <= 1024 ? (
+          {!isDesktop ? (
             <div className="flex max-w-[240px] items-center content-center mx-auto align-center justify-center flex-wrap mt-4 gap-8 mb-4"> 
               <Carousel showThumbs={false} showStatus={false}>
                 <div>

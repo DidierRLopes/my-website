@@ -135,3 +135,10 @@ ol {
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+
+@media (max-width: 768px) {
+  .mx-auto {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}

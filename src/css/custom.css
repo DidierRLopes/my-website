@@ -142,3 +142,28 @@ ol {
     overflow-x: hidden;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .footer__col:not(:has(.footer__socials)) .footer__title {
+    display: none;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+  .footer__others {
+    display: none;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+  .footer__col:has(.footer__socials) .footer__title {
+    display: block !important;
+  }
+  .footer__col:not(:has(.footer__socials)) {
+    display: none;
+  }
+}

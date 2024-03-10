@@ -136,23 +136,22 @@ const config = {
       footer: {
         links: [
           {
-            title: 'Links',
+            title: 'Socials',
             items: [
               {
                 label: 'Twitter',
                 to: 'https://twitter.com/didier_lopes',
+                className: 'footer__socials',
               },
               {
                 label: 'LinkedIn',
                 to: 'https://www.linkedin.com/in/didier-lopes/',
+                className: 'footer__socials',
               },
               {
                 label: 'GitHub',
                 to: 'https://github.com/DidierRLopes',
-              },
-              {
-                label: 'Cal.com',
-                to: 'https://cal.com/didierlopes/15min',
+                className: 'footer__socials',
               },
             ],
           },
@@ -162,18 +161,22 @@ const config = {
               {
                 label: 'Blog',
                 to: '/blog',
+                className: 'footer__others',
               },
               {
                 label: 'Projects',
                 to: '/projects',
+                className: 'footer__others',
               },
               {
                 label: 'Books to read',
                 to: '/books/to-read',
+                className: 'footer__others',
               },
               {
                 label: 'Books already read',
                 to: '/books/already-read',
+                className: 'footer__others',
               },
             ],
           },
@@ -183,18 +186,22 @@ const config = {
               {
                 label: 'Videos on stage',
                 to: '/media/on-stage',
+                className: 'footer__others',
               },
               {
                 label: 'Videos interviews',
                 to: '/media/interviews',
+                className: 'footer__others',
               },
               {
                 label: 'Videos on webinars',
                 to: '/media/webinars',
+                className: 'footer__others',
               },
               {
                 label: 'Videos on product videos',
                 to: '/media/product-videos',
+                className: 'footer__others',
               },
             ],
           },
@@ -204,18 +211,22 @@ const config = {
               {
                 label: 'Resume experience',
                 to: '/resume/experience',
+                className: 'footer__others',
               },
               {
                 label: 'Resume articles',
                 to: '/resume/articles',
+                className: 'footer__others',
               },
               {
                 label: 'Resume education',
                 to: '/resume/education',
+                className: 'footer__others',
               },
               {
                 label: 'Resume courses',
                 to: '/resume/courses',
+                className: 'footer__others',
               },
             ],
           },

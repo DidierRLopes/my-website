@@ -1,7 +1,7 @@
 import React from 'react';
-import EducationList from './General/EducationList';
+import EducationList from '../General/EducationList';
 
-const education = [
+const data = [
   {
     school: 'Imperial College London, United Kingdom 🇬🇧',
     link: 'https://www.imperial.ac.uk/study/courses/postgraduate-taught/control-optimisation/',
@@ -37,5 +37,5 @@ const education = [
 ];
 
 export default function ResumeEducation() {
-  return <EducationList education={education} />;
+  return <EducationList education={data} />;
 }

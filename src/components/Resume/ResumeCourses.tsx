@@ -1,7 +1,7 @@
 import React from 'react';
-import CoursesList from './General/CoursesList';
+import CoursesList from '../General/CoursesList';
 
-const courses = [
+const data = [
   {
     title: 'Scrum Master',
     date: '2022 August',
@@ -59,5 +59,5 @@ const courses = [
 ];
 
 export default function ResumeCourses() {
-  return <CoursesList courses={courses} />;
+  return <CoursesList courses={data} />;
 }

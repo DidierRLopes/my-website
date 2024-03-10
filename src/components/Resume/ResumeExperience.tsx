@@ -1,7 +1,7 @@
 import React from 'react';
-import ExperienceList from './General/ExperienceList';
+import ExperienceList from '../General/ExperienceList';
 
-const experience = [
+const data = [
   {
     company: 'OpenBB',
     title: 'Co-founder & CEO',
@@ -54,5 +54,5 @@ const experience = [
 ];
 
 export default function ResumeExperience() {
-  return <ExperienceList experience={experience} />;
+  return <ExperienceList experience={data} />;
 }

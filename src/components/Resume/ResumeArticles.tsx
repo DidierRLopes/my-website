@@ -1,7 +1,7 @@
 import React from 'react';
-import ArticlesList from './General/ArticlesList';
+import ArticlesList from '../General/ArticlesList';
 
-const articles = [
+const data = [
   {
     title:
       'Energy savings from an Eco-Cooperative Adaptive Cruise Control: a BEV platoon investigation',
@@ -22,5 +22,5 @@ const articles = [
 ];
 
 export default function ResumeArticles() {
-  return <ArticlesList articles={articles} />;
+  return <ArticlesList articles={data} />;
 }

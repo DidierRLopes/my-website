@@ -1,7 +1,7 @@
 import React from 'react';
-import BooksList from './General/BooksList';
+import BooksList from '../General/BooksList';
 
-const booksAlreadyRead = [
+const data = [
   {
     title: 'Rich Dad Poor Dad: What the Rich Teach Their Kids About Money That the Poor and Middle Class Do Not!',
     author: 'Robert T. Kiyosaki',
@@ -250,5 +250,12 @@ const booksAlreadyRead = [
 ];
 
 export default function BooksAlreadyRead() {
-  return <BooksList books={booksAlreadyRead} />;
+  return (
+    <>
+      <p>
+        Not all the books I have read, but the ones I have enjoyed the most.
+      </p>
+      <BooksList books={data} />
+    </>
+  );
 }

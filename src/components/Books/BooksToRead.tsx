@@ -1,7 +1,7 @@
 import React from 'react';
-import BooksList from './General/BooksList';
+import BooksList from '../General/BooksList';
 
-const booksToRead = [
+const data = [
   {
     title: 'Actionable Gamification: Beyond Points, Badges and Leaderboards',
     author: 'Yu-Kai Chou',
@@ -330,5 +330,12 @@ const booksToRead = [
 ];
 
 export default function BooksToRead() {
-  return <BooksList books={booksToRead} />;
+  return (
+    <>
+      <p>
+        If there is a particular book that you think I should read, feel free to recommend it.
+      </p>
+      <BooksList books={data} />
+    </>
+  );
 }

@@ -16,7 +16,7 @@ export default function VideosList({ videos }: VideosListProps) {
   return (
     <div className="mx-auto mt-8">
       {videos.map((video) => (
-        <div className="container relative justify-center items-center mb-8 my-4 mx-2 border-[1px] p-2 rounded border-[#0088CC]">
+        <div className="container relative justify-center items-center mb-8 my-4 mx-auto border-[1px] p-2 rounded border-[#0088CC]">
           <div>
             <div className='justify-left items-start text-xs'>
               {video.date}

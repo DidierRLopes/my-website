@@ -16,7 +16,7 @@ export default function ExperienceList({ experience }: ExperienceListProps) {
   return (
     <div className="mx-auto mt-8">
       {experience.map((job) => (
-        <div className="container relative justify-center items-center mb-8 my-4 mx-2 border-[1px] p-2 rounded border-[#0088CC]">
+        <div className="container relative justify-center items-center mb-8 my-4 mx-auto border-[1px] p-2 rounded border-[#0088CC]">
           <div>
             <div className='justify-left items-start text-xs'>
               {job.daterange}

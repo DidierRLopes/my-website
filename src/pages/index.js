@@ -83,29 +83,29 @@ export default function Home() {
           <h1 className="mb-4">
             My journey.
           </h1>
-          <div style={{ maxHeight: '280px', overflowY: 'scroll'}}>
-            <ul className='mt-4 text-left'>
-              <p>🇨🇭 I was born in Switzerland, but all my family are Portuguese.</p>
+          <div style={{ maxHeight: '280px', overflowY: 'scroll', padding: '2px' }}>
+            <ul className='mt-4 text-left pr-2'>
+              <p>🇨🇭 I was born in Switzerland, but both my parents are Portuguese emmigrants.</p>
               <br/>
               <p>🇵🇹 Moved to Portugal when I was 8yo and did a BSc. in Electrical and Computer Engineering.</p>
               <br/>
               <p>🇳🇱 Did a semester in TU Delft and learned about self-driving cars.</p>
               <br/>
-              <p>🇬🇧 Moved to London to do an MSc. in Control Systems at Imperial College London.</p>
+              <p>🇬🇧 Moved to London to do an MSc. in Control Systems at Imperial College London [<a href="https://ieeexplore.ieee.org/document/8796226" target="_blank" rel="noreferrer">thesis</a>].</p>
               <br/>
-              <p>🚗 Excited about AI and self-driving cars, so I worked as a Sensor Fusion Engineer.</p>
+              <p>🚗 Excited about AI and self-driving cars, so I worked as a Sensor Fusion Engineer [<a href="https://ieeexplore.ieee.org/document/9680024" target="_blank" rel="noreferrer">paper</a>].</p>
               <br/>
               <p>🎓 Wrote the code behind my math teacher's thesis on <a href="https://github.com/DidierRLopes/UnivariateTimeSeriesForecast" target="_blank" rel="noreferrer">Forecasting of Financial timeseries</a>.</p>
               <br/>
               <p>😤 Performed my own investment research and got frustrated by how time-consuming it was.</p>
               <br/>
-              <p>🦠 During Covid my flight got cancelled over holidays. So started building my financial terminal.</p>
+              <p>🦠 During Covid my flight got cancelled over Xmas. So started building a financial terminal.</p>
               <br/>
-              <p>🦍 I made Gamestonk Terminal open source and we went viral on Reddit and HackerNews.</p>
+              <p>🦍 I made Gamestonk Terminal open source and we went viral on <a href="https://www.reddit.com/r/Superstonk/comments/mx2cjh/move_over_bloomberg_terminal_here_comes_gamestonk/" target="_blank" rel="noreferrer">Reddit</a> and <a href="https://news.ycombinator.com/item?id=26258773" target="_blank" rel="noreferrer">HackerNews</a>.</p>
               <br/>
-              <p>📈 Raised $8.9M in a seed round to democratize investment research.</p>
+              <p>📈 We raised $8.9M in a seed round to democratize investment research.</p>
               <br/>
-              <p>🦋 Announced OpenBB to the world in 2022 and rebranded the terminal.</p>
+              <p>🦋 <a href="https://openbb.co/blog/gme-didnt-take-me-to-the-moon-but-gamestonk-terminal-did" target="_blank" rel="noreferrer">Announced</a> OpenBB to the world in 2022 and rebranded the terminal.</p>
               <br/>
               <p>🇺🇸 Took my wife and dogs to live in the Bay area, to be closer to tech founders and investors.</p>
               <br/>
@@ -183,13 +183,13 @@ export default function Home() {
               className='mx-auto flex'
             />
             <p className='mb-4 mt-4'>
-              Building an open-source legacy,{" "}
+              Building an open-source legacy, one commit at a time.{" "}
               <a
                 target="_blank"
                 rel="noreferrer"
                 href="https://github.com/DidierRLopes"
               >
-                one commit at a time
+                Follow my journey on GitHub
               </a>.
             </p>
             <iframe
@@ -199,7 +199,7 @@ export default function Home() {
               className='mx-auto flex'
             />
             <p className='mb-4 mt-4'>
-              Starting with the most open financial company{" "}
+              Starting with the most open financial company:{" "}
               <a
                 target="_blank"
                 rel="noreferrer"
@@ -227,10 +227,10 @@ export default function Home() {
               title="My travels"
               className="mt-2 mb-4"
             />
-            <span>
+            <p className='text-sm'>
               Nowadays I put work first. 
-              But one day I hope to visit over 100 countries.
-            </span>
+              But I intend to travel to over 100 different countries.
+            </p>
           </div>
         </div>
         <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center mb-16">

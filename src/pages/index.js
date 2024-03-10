@@ -74,34 +74,36 @@ export default function Home() {
           <h1>
             My journey.
           </h1>
-          <ul className='mt-4 text-left'>
-            <p>🇨🇭 I was born in Switzerland, but all my family are Portuguese.</p>
-            <br/>
-            <p>🇵🇹 Moved to Portugal when I was 8yo and did a BSc. in Electrical and Computer Engineering.</p>
-            <br/>
-            <p>🇳🇱 Did a semester in TU Delft and learned about self-driving cars.</p>
-            <br/>
-            <p>🇬🇧 Moved to London to do an MSc. in Control Systems at Imperial College London.</p>
-            <br/>
-            <p>🚗 Excited about AI and self-driving cars, so I worked as a Sensor Fusion Engineer.</p>
-            <br/>
-            <p>🎓 Wrote the code behind my math teacher's thesis on <a href="https://github.com/DidierRLopes/UnivariateTimeSeriesForecast" target="_blank" rel="noreferrer">Forecasting of Financial timeseries</a>.</p>
-            <br/>
-            <p>😤 Performed my own investment research and got frustrated by how time-consuming it was.</p>
-            <br/>
-            <p>🦠 During Covid my flight got cancelled over holidays. So started building my financial terminal.</p>
-            <br/>
-            <p>🦍 I made Gamestonk Terminal open source and we went viral on Reddit and HackerNews.</p>
-            <br/>
-            <p>📈 Raised $8.9M in a seed round to democratize investment research.</p>
-            <br/>
-            <p>🦋 Announced OpenBB to the world in 2022 and rebranded the terminal.</p>
-            <br/>
-            <p>🇺🇸 Took my wife and dogs to live in the Bay area, to be closer to tech founders and investors.</p>
-            <br/>
-            <p>🗽 Moved with my wife and dogs again to be closer to customers in NYC.</p>
-            <br/>
-          </ul>
+          <div style={{ maxHeight: '300px', overflowY: 'scroll'}}>
+            <ul className='mt-4 text-left'>
+              <p>🇨🇭 I was born in Switzerland, but all my family are Portuguese.</p>
+              <br/>
+              <p>🇵🇹 Moved to Portugal when I was 8yo and did a BSc. in Electrical and Computer Engineering.</p>
+              <br/>
+              <p>🇳🇱 Did a semester in TU Delft and learned about self-driving cars.</p>
+              <br/>
+              <p>🇬🇧 Moved to London to do an MSc. in Control Systems at Imperial College London.</p>
+              <br/>
+              <p>🚗 Excited about AI and self-driving cars, so I worked as a Sensor Fusion Engineer.</p>
+              <br/>
+              <p>🎓 Wrote the code behind my math teacher's thesis on <a href="https://github.com/DidierRLopes/UnivariateTimeSeriesForecast" target="_blank" rel="noreferrer">Forecasting of Financial timeseries</a>.</p>
+              <br/>
+              <p>😤 Performed my own investment research and got frustrated by how time-consuming it was.</p>
+              <br/>
+              <p>🦠 During Covid my flight got cancelled over holidays. So started building my financial terminal.</p>
+              <br/>
+              <p>🦍 I made Gamestonk Terminal open source and we went viral on Reddit and HackerNews.</p>
+              <br/>
+              <p>📈 Raised $8.9M in a seed round to democratize investment research.</p>
+              <br/>
+              <p>🦋 Announced OpenBB to the world in 2022 and rebranded the terminal.</p>
+              <br/>
+              <p>🇺🇸 Took my wife and dogs to live in the Bay area, to be closer to tech founders and investors.</p>
+              <br/>
+              <p>🗽 Moved with my wife and dogs again to be closer to customers in NYC.</p>
+              <br/>
+            </ul>
+          </div>
           <div className="flex-none overflow-y-scroll rounded-sm mx-auto text-base mt-4">
             <p>
               To be continued...

@@ -34,25 +34,25 @@ export default function Home() {
             </a>
           </div>
           {!isDesktop ? (
-            <div className="flex max-w-[240px] items-center content-center mx-auto align-center justify-center flex-wrap mt-4 gap-8 mb-4"> 
+            <div className="flex items-center content-center mx-auto align-center justify-center flex-wrap mt-4 gap-8 mb-4"> 
               <Carousel showThumbs={false} showStatus={false}>
                 <div>
                   <img
-                    className="rounded-3xl max-h-[300px] mx-auto"
+                    className="rounded-3xl max-w-[220px]"
                     src="img/me_timegpt.webp"
                     alt="Time-GPT event from Nixtla"
                   />
                 </div>
                 <div>
                   <img
-                    className="rounded-3xl max-h-[300px] mx-auto"
+                    className="rounded-3xl max-w-[220px]"
                     src="img/tattoo.webp"
                     alt="OpenBB Tattoo"
                   />
                 </div>
                 <div>
                   <img
-                    className="rounded-3xl max-h-[300px] mx-auto"
+                    className="rounded-3xl max-w-[220px]"
                     src="img/bridge_sticker.webp"
                     alt="OpenBB bridget sticker"
                   />
@@ -175,13 +175,14 @@ export default function Home() {
           <p className='_subtitle !italic'>
             "Open source is the most powerful idea of our generation." - Matt Mullenweg
           </p>
-          <div className="flex-col items-center text-center mx-auto align-center justify-center gap-8">
+          <div className="flex-col items-center text-center mx-auto align-center justify-center gap-8 mt-4">
             <iframe
               src="https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff"
               width={isDesktop ? "500" : "300"}
               title="GitHub Stats"
+              className='mx-auto flex'
             />
-            <p className='mb-4'>
+            <p className='mb-4 mt-4'>
               Building an open-source legacy,{" "}
               <a
                 target="_blank"
@@ -189,8 +190,16 @@ export default function Home() {
                 href="https://github.com/DidierRLopes"
               >
                 one commit at a time
-              </a>. <br />
-              {" "}Starting with the most open financial company{" "}
+              </a>.
+            </p>
+            <iframe
+              src="https://ssr-contributions-svg.vercel.app/_/DidierRLopes?chart=3dbar&format=svg&theme=blue"
+              width={isDesktop ? "500" : "300"}
+              title="GitHub Stats"
+              className='mx-auto flex'
+            />
+            <p className='mb-4 mt-4'>
+              Starting with the most open financial company{" "}
               <a
                 target="_blank"
                 rel="noreferrer"
@@ -199,11 +208,6 @@ export default function Home() {
                 openbb.co/open
               </a>.
             </p>
-            <iframe
-              src="https://ssr-contributions-svg.vercel.app/_/DidierRLopes?chart=3dbar&format=svg&theme=blue"
-              width={isDesktop ? "500" : "300"}
-              title="GitHub Stats"
-            />
           </div>
         </div>
         

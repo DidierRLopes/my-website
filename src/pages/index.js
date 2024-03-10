@@ -175,11 +175,10 @@ export default function Home() {
           <p className='_subtitle !italic'>
             "Open source is the most powerful idea of our generation." - Matt Mullenweg
           </p>
-          <div className="flex-col items-center content-center mx-auto align-center justify-center gap-8">
+          <div className="flex-col items-center text-center mx-auto align-center justify-center gap-8">
             <iframe
               src="https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff"
-              width="500"
-              height="300"
+              width={isDesktop ? "500" : "300"}
               title="GitHub Stats"
             />
             <p className='mb-4'>
@@ -202,8 +201,7 @@ export default function Home() {
             </p>
             <iframe
               src="https://ssr-contributions-svg.vercel.app/_/DidierRLopes?chart=3dbar&format=svg&theme=blue"
-              width="500"
-              height="300"
+              width={isDesktop ? "500" : "300"}
               title="GitHub Stats"
             />
           </div>
@@ -221,7 +219,7 @@ export default function Home() {
               // Note that the &zoom=9 is important to set the zoom level
               src="https://www.google.com/maps/d/u/0/embed?mid=174MaDCD2ho7QwEt4uk16eJnPxnZNxzU&ehbc=2E312F&zoom=9"
               width="100%"
-              height="480"
+              height={isDesktop ? "480" : "220"}
               title="My travels"
               className="mt-2 mb-4"
             />

@@ -247,6 +247,11 @@ const data = [
     author: 'David Priemer',
     image: 'https://m.media-amazon.com/images/I/711Q5WTMTJL.jpg',
   },
+  {
+    title: 'Empowered: Ordinary People, Extraordinary Products',
+    author: 'Marty Cagan',
+    image: 'https://m.media-amazon.com/images/I/71O0cfXUnLL.jpg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

@@ -113,11 +113,6 @@ const data = [
     image: 'https://m.media-amazon.com/images/I/611QkQ+CXES.jpg',
   },
   {
-    title: 'Empowered: Ordinary People, Extraordinary Products',
-    author: 'Marty Cagan',
-    image: 'https://m.media-amazon.com/images/I/71O0cfXUnLL.jpg',
-  },
-  {
     title: 'Strong Product People: A Complete Guide to Developing Great Product Managers',
     author: 'Petra Wille',
     image: 'https://m.media-amazon.com/images/I/618ws4ppSBL.jpg',

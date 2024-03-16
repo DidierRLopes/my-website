@@ -221,7 +221,7 @@ export default function Home() {
           <div className="flex-none overflow-y-scroll rounded-sm text-center mx-auto text-lg p-2 mb-4">
             <iframe
               // Note that the &zoom=9 is important to set the zoom level
-              src="https://www.google.com/maps/d/u/0/embed?mid=174MaDCD2ho7QwEt4uk16eJnPxnZNxzU&ehbc=2E312F&zoom=9"
+              src="https://www.google.com/maps/d/u/0/embed?mid=1cA9FfT4NkLqRKCsIcgtGKJXh6P9H15M&ehbc=2E312F&zoom=9"
               width="100%"
               height={isDesktop ? "480" : "220"}
               title="My travels"

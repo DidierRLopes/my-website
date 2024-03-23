@@ -9,4 +9,3 @@ import HeadTitle from '@site/src/components/General/HeadTitle.tsx'
 <HeadTitle title="Interviews - Media | Didier" />
 
 <MediaInterviews />
-

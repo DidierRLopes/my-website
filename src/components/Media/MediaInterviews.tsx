@@ -10,6 +10,13 @@ const data = [
     time: '30min',
   },
   {
+    title: 'OpenBB : Future of Quantitative Wall Street Research',
+    embed: 'https://www.youtube.com/embed/btVxYhdA-to?si=Fp0XCtIkOToLHrtq',
+    description: "Interview with Didier by Alexander Fleiss from Rebellion Research",
+    date: '2024-01-16',
+    time: '11:30min',
+  },
+  {
     title: 'OpenBB + Supabase',
     embed: 'https://www.youtube.com/embed/lHmCshk4pJc?si=oZH2Vv_jUvSFbY_t',
     description: 'Copple chats to Didier Lopes, the cofounder of OpenBB, about their origin story, their Supabase integration, and whether he prefers to fight ducks or horses.',

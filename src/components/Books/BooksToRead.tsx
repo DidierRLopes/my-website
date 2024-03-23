@@ -322,6 +322,16 @@ const data = [
     author: 'Jake Knapp, John Zeratsky',
     image: 'https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/716hMrmP-KL._SL1500_.jpg',
   },
+  {
+    title: 'The Black Swan: The Impact of the Highly Improbable',
+    author: 'Nassim Nicholas Taleb',
+    image: 'https://m.media-amazon.com/images/I/51jkBbZzJVL._SY522_.jpg',
+  },
+  {
+    title: "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It",
+    author: 'Michael E. Gerber',
+    image: 'https://m.media-amazon.com/images/I/71V-PeMYiJL._SY522_.jpg',
+  },  
 ];
 
 export default function BooksToRead() {

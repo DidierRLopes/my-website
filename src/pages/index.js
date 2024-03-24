@@ -3,6 +3,8 @@ import Layout from '@theme/Layout';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+
 
 export default function Home() {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -12,6 +14,29 @@ export default function Home() {
       setIsDesktop(window.innerWidth > 1024);
     }
   }, []);
+
+  const { siteConfig } = useDocusaurusContext();
+  const { url: siteUrl } = siteConfig;
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch(`${siteUrl}/blog/feed.json`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        const posts = data.items.slice(0, 3);
+        setPosts(posts);
+      })
+      .catch((error) => {
+        console.log('There was a problem with the fetch operation: ' + error.message);
+      });
+  }, []);
+
+  console.log(posts);
 
   return (
     <Layout
@@ -269,6 +294,42 @@ export default function Home() {
               </div>
             </a>
           </div>
+        </div>
+        <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center mb-16">
+          <h1 className="_h1 !mb-2">
+            Latest Blog Posts
+          </h1>
+          {isDesktop ? (
+            <div className="flex items-center content-center mx-auto align-center justify-center mt-4 gap-4 mb-4 flex-row">
+              {posts.map((post) => (
+                <div key={post.id} className="mx-2">
+                  <a href={`${post.id}`}>
+                    <img
+                      className="rounded-3xl w-[220px] h-[160px] object-cover mb-2"
+                      src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
+                      alt={post.title}
+                    />
+                    <p className="text-left text-sm">{post.title}</p>
+                  </a>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="flex items-center content-center mx-auto align-center justify-center mt-4 gap-4 mb-4 flex-col">
+              {posts.map((post) => (
+                <div key={post.id} className="my-2">
+                  <a href={`${post.id}`}>
+                    <img
+                      className="rounded-3xl w-[220px] h-[160px] object-cover mb-2 mx-auto"
+                      src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
+                      alt={post.title}
+                    />
+                    <p className="text-center text-sm w-[240px] mx-auto">{post.title}</p>
+                  </a>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </main>
     </Layout>

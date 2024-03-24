@@ -19,7 +19,7 @@ I have started a company. I have moved countries. It turns out that there's a lo
 
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-Recently, I wrote a blogpost about the [difference in culture between London and San Francisco](moving-from-london-to-the-bay-area-and-what-changed). I convinced my wife and dogs, packed our bags, and didn't look back. After all, I would live in the city with the highest density of builders per capita.
+Recently, I wrote a blogpost about the [difference in culture between London and San Francisco](/blog/moving-from-london-to-the-bay-area-and-what-changed). I convinced my wife and dogs, packed our bags, and didn't look back. After all, I would live in the city with the highest density of builders per capita.
 
 **But why?**
 

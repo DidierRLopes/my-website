@@ -1,5 +1,5 @@
 ---
-slug: 2024-03-24-moving-countries-and-starting-a-company-aint-so-different
+slug:moving-countries-and-starting-a-company-aint-so-different
 title: Moving Countries and Starting a Company Ain't So Different
 date: 2024-03-24
 image: https://github.com/DidierRLopes/my-website/assets/25267873/42e21efe-0555-498c-80d8-039c886d380b

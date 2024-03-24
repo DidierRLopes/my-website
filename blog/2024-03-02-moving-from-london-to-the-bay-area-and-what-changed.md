@@ -1,5 +1,5 @@
 ---
-slug: 2024-03-02-moving-from-london-to-the-bay-area-and-what-changed
+slug: moving-from-london-to-the-bay-area-and-what-changed
 title: Moving from London to the Bay Area and what changed
 date: 2024-03-02
 image: https://github.com/DidierRLopes/my-website/assets/25267873/7943cde2-0230-4577-9f83-cc5b75b23f28

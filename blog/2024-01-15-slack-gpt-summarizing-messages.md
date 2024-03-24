@@ -1,5 +1,5 @@
 ---
-slug: 2024-01-15-slack-gpt-summarizing-messages
+slug: slack-gpt-summarizing-messages
 title: SlackGPT - Your Slack bot that summarizes unread messages
 date: 2024-01-15
 image: https://github.com/DidierRLopes/my-website/assets/25267873/d87dc0c7-96b6-42b8-8c7a-8bcd6240510a

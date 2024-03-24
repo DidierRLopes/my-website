@@ -1,5 +1,5 @@
 ---
-slug: 2024-01-17-introducing-the-openbb-add-in-for-excel
+slug: introducing-the-openbb-add-in-for-excel
 title: Introducing the OpenBB Add-in for Excel
 date: 2024-01-17
 image: https://github.com/DidierRLopes/my-website/assets/25267873/4ca4c4a8-99bd-45b8-b7c9-3a43577c620e

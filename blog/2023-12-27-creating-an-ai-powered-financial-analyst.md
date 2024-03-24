@@ -1,5 +1,5 @@
 ---
-slug: 2023-12-27-creating-an-ai-powered-financial-analyst
+slug: creating-an-ai-powered-financial-analyst
 title: Creating an AI-powered financial analyst
 date: 2023-12-27
 image: https://github.com/DidierRLopes/my-website/assets/25267873/2a16e839-7298-4dcc-917e-b54cdd0f6fc7

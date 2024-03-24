@@ -1646,9 +1646,9 @@
     "@docusaurus/utils-validation" "2.4.3"
     tslib "^2.4.0"
 
-"@docusaurus/plugin-google-analytics@^3.0.1":
+"@docusaurus/plugin-google-analytics@^3.1.1":
   version "3.1.1"
-  resolved "https://registry.npmjs.org/@docusaurus/plugin-google-analytics/-/plugin-google-analytics-3.1.1.tgz"
+  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-google-analytics/-/plugin-google-analytics-3.1.1.tgz#bfc58205b4fcaf3222e04f9c3542f3bef9804887"
   integrity sha512-+q2UpWTqVi8GdlLoSlD5bS/YpxW+QMoBwrPrUH/NpvpuOi0Of7MTotsQf9JWd3hymZxl2uu1o3PIrbpxfeDFDQ==
   dependencies:
     "@docusaurus/core" "3.1.1"
@@ -11564,6 +11564,11 @@ react-fast-compare@^3.2.0:
   version "3.2.2"
   resolved "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-3.2.2.tgz"
   integrity sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==
+
+react-ga@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/react-ga/-/react-ga-3.3.1.tgz#d8e1f4e05ec55ed6ff944dcb14b99011dfaf9504"
+  integrity sha512-4Vc0W5EvXAXUN/wWyxvsAKDLLgtJ3oLmhYYssx+YzphJpejtOst6cbIHCIyF50Fdxuf5DDKqRYny24yJ2y7GFQ==
 
 react-helmet-async@*, react-helmet-async@^1.3.0:
   version "1.3.0"

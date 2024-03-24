@@ -73,16 +73,9 @@ const config = {
           customCss: ['./src/css/custom.css'],
         },
         googleAnalytics: {
-          trackingID: 'G-KSRK9JWEFQ',
+          trackingID: 'G-T39XQ0VWEB',
           anonymizeIP: true,
         },
-        googleTagManager: {
-          containerId: 'GTM-PL77JR5L',
-        },
-        // {
-        // googleTagManager: {
-        //   containerId: 'GTM-PL77JR5L',
-        // },
       }),
     ],
   ],

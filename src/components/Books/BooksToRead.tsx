@@ -337,6 +337,11 @@ const data = [
     author: 'John Kay, Mervyn King',
     image: 'https://m.media-amazon.com/images/I/71n5Pc2x-ML._SL1200_.jpg',
   },
+  {
+    title: "Startup: A Silicon Valley Adventure",
+    author: 'Jerry Kaplan',
+    image: 'https://m.media-amazon.com/images/I/513m+ETXjjL._SL1200_.jpg',
+  },
 ];
 
 export default function BooksToRead() {

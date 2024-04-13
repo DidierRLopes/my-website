@@ -331,7 +331,12 @@ const data = [
     title: "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It",
     author: 'Michael E. Gerber',
     image: 'https://m.media-amazon.com/images/I/71V-PeMYiJL._SY522_.jpg',
-  },  
+  },
+  {
+    title: "Radical Uncertainty",
+    author: 'John Kay, Mervyn King',
+    image: 'https://m.media-amazon.com/images/I/71n5Pc2x-ML._SL1200_.jpg',
+  },
 ];
 
 export default function BooksToRead() {

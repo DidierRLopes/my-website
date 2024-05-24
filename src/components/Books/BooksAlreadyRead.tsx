@@ -252,6 +252,11 @@ const data = [
     author: 'Marty Cagan',
     image: 'https://m.media-amazon.com/images/I/71O0cfXUnLL.jpg',
   },
+  {
+    title: "Amp It Up: Leading for Hypergrowth by Raising Expectations, Increasing Urgency, and Elevating Intensity",
+    author: 'Frank Slootman',
+    image: 'https://m.media-amazon.com/images/I/71+aukusbGL._SL1500_.jpg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

@@ -343,11 +343,6 @@ const data = [
     image: 'https://m.media-amazon.com/images/I/513m+ETXjjL._SL1200_.jpg',
   },
   {
-    title: "Amp It Up: Leading for Hypergrowth by Raising Expectations, Increasing Urgency, and Elevating Intensity",
-    author: 'Frank Slootman',
-    image: 'https://m.media-amazon.com/images/I/71+aukusbGL._SL1500_.jpg',
-  },
-  {
     title: "Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration",
     author: 'Ed Catmull, Amy Wallace',
     image: 'https://m.media-amazon.com/images/I/51ahp1eZekL._SL1200_.jpg',

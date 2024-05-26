@@ -275,22 +275,22 @@ const data = [
   {
     title: 'The Challenger Sale: Taking Control of the Customer Conversation',
     author: 'Matthew Dixon, Brent Adamson',
-    image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/81uVH3YVlgL._SL1500_.jpg',
+    image: 'https://m.media-amazon.com/images/I/61k3jZtOX8L._SL1200_.jpg',
   },
   {
     title: 'People Powered: How Communities Can Supercharge Your Business, Brand, and Teams',
     author: 'Jono Bacon',
-    image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/712C542YIEL._SL1500_.jpg',
+    image: 'https://m.media-amazon.com/images/I/712C542YIEL._SL1500_.jpg',
   },
   {
     title: 'Do Less Better: The Power of Strategic Sacrifice in a Complex World',
     author: 'J. Bell',
-    image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71ofWMyUX6L._SL1500_.jpg',
+    image: 'https://m.media-amazon.com/images/I/612KXFGCQ2L._SL1275_.jpg',
   },
   {
     title: 'Traction: How Any Startup Can Achieve Explosive Customer Growth',
     author: 'Gabriel Weinberg',
-    image: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/817Y5woFNGL._SL1500_.jpg',
+    image: 'https://m.media-amazon.com/images/I/61qZbtthx0L._SL1200_.jpg',
   },
   {
     title: 'Same as Ever: A Guide to What Never Changes',

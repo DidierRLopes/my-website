@@ -43,11 +43,6 @@ const data = [
     image: 'https://m.media-amazon.com/images/I/51VeJN9ikML.jpg',
   },
   {
-    title: 'The Ride of a Lifetime: Lessons Learned from 15 Years as CEO of the Walt Disney Company',
-    author: 'Robert Iger',
-    image: 'https://m.media-amazon.com/images/I/915oFtkji9L.jpg',
-  },
-  {
     title: 'Predictably Irrational, Revised and Expanded Edition: The Hidden Forces That Shape Our Decisions',
     author: 'Dr. Dan Ariely',
     image: 'https://m.media-amazon.com/images/I/61v5CqYL2WL.jpg',
@@ -346,11 +341,6 @@ const data = [
     title: "Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration",
     author: 'Ed Catmull, Amy Wallace',
     image: 'https://m.media-amazon.com/images/I/51ahp1eZekL._SL1200_.jpg',
-  },
-  {
-    title: "Behind the Cloud: The Untold Story of How Salesforce.com Went from Idea to Billion-Dollar Company-and Revolutionized an Industry",
-    author: 'Marc Benioff, Carlye Adler',
-    image: 'https://m.media-amazon.com/images/I/61mkN7DZtiL._SL1500_.jpg',
   },
 ];
 

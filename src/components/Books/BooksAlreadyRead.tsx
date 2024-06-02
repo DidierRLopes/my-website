@@ -253,9 +253,19 @@ const data = [
     image: 'https://m.media-amazon.com/images/I/71O0cfXUnLL.jpg',
   },
   {
+    title: "Behind the Cloud: The Untold Story of How Salesforce.com Went from Idea to Billion-Dollar Company-and Revolutionized an Industry",
+    author: 'Marc Benioff, Carlye Adler',
+    image: 'https://m.media-amazon.com/images/I/61mkN7DZtiL._SL1500_.jpg',
+  },
+  {
     title: "Amp It Up: Leading for Hypergrowth by Raising Expectations, Increasing Urgency, and Elevating Intensity",
     author: 'Frank Slootman',
     image: 'https://m.media-amazon.com/images/I/71+aukusbGL._SL1500_.jpg',
+  },
+  {
+    title: 'The Ride of a Lifetime: Lessons Learned from 15 Years as CEO of the Walt Disney Company',
+    author: 'Robert Iger',
+    image: 'https://m.media-amazon.com/images/I/915oFtkji9L.jpg',
   },
 ];
 

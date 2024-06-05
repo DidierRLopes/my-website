@@ -19,7 +19,7 @@ Yesterday was my 29th birthday, and I was reflecting on my life and on how sitti
 
 Yesterday I turned 29 years old.
 
-Last night, I was speaking with my dad about how grateful I am for everything he’s done for my brother and I.  I always had everything - food at the table, a roof and education.
+The night before, I was speaking with my dad about how grateful I am for everything he’s done for my brother and I.  I always had everything - food at the table, a roof and education.
 
 I’m the person I am today because of my parents.
 

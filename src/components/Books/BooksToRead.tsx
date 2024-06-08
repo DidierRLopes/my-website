@@ -295,27 +295,27 @@ const data = [
   {
     title: 'The Art of War',
     author: 'Sun Tzu',
-    image: 'https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/715-VdNvB+L._SL1360_.jpg',
+    image: 'https://m.media-amazon.com/images/I/51HwNMz3EuL._SL1500_.jpg',
   },
   {
     title: 'What It Takes: Lessons in the Pursuit of Excellence',
     author: 'Stephen A. Schwarzman',
-    image: 'https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/71xeKpYSNEL._SL1500_.jpg',
+    image: 'https://m.media-amazon.com/images/I/71xeKpYSNEL._SL1500_.jpg',
   },
   {
     title: 'Skin in the Game: Hidden Asymmetries in Daily Life',
     author: 'Nassim Nicholas Taleb',
-    image: 'https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/614VKfxGzPL._SL1500_.jpg',
+    image: 'https://m.media-amazon.com/images/I/61ZHZle28QL._SL1500_.jpg',
   },
   {
     title: 'Inspired: How to Create Tech Products Customers Love',
     author: 'Marty Cagan',
-    image: 'https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/61Ga-ZFeDXL._SL1500_.jpg',
+    image: 'https://m.media-amazon.com/images/I/61Ga-ZFeDXL._SL1500_.jpg',
   },
   {
     title: 'Make Time: How to Focus on What Matters Every Day',
     author: 'Jake Knapp, John Zeratsky',
-    image: 'https://m.media-amazon.com/images/W/MEDIAX_849526-T3/images/I/716hMrmP-KL._SL1500_.jpg',
+    image: 'https://m.media-amazon.com/images/I/716hMrmP-KL._SL1500_.jpg',
   },
   {
     title: 'The Black Swan: The Impact of the Highly Improbable',

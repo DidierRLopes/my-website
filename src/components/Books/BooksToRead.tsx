@@ -342,6 +342,11 @@ const data = [
     author: 'Ed Catmull, Amy Wallace',
     image: 'https://m.media-amazon.com/images/I/51ahp1eZekL._SL1200_.jpg',
   },
+  {
+    title: "$100M Leads: How to Get Strangers to Want to Buy Your Stuff",
+    author: 'Alex Hormozi',
+    image: 'https://m.media-amazon.com/images/I/61yM8Nr6OzL._SL1360_.jpg',
+  }
 ];
 
 export default function BooksToRead() {

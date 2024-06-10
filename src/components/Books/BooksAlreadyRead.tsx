@@ -267,6 +267,11 @@ const data = [
     author: 'Robert Iger',
     image: 'https://m.media-amazon.com/images/I/915oFtkji9L.jpg',
   },
+  {
+    title: "The Amazon Way: Amazon's 14 Leadership Principles",
+    author: 'John Rossman',
+    image: 'https://m.media-amazon.com/images/I/61dx0hEkWnS.jpg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

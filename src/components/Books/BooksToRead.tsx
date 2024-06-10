@@ -93,11 +93,6 @@ const data = [
     image: 'https://m.media-amazon.com/images/I/61yAYYNvIVL.jpg',
   },
   {
-    title: "The Amazon Way: Amazon's 14 Leadership Principles",
-    author: 'John Rossman',
-    image: 'https://m.media-amazon.com/images/I/61dx0hEkWnS.jpg',
-  },
-  {
     title: "The Innovator's Dilemma: The Revolutionary Book That Will Change the Way You Do Business",
     author: 'Clayton M. Christensen',
     image: 'https://m.media-amazon.com/images/I/618BdBwK5ML.jpg',

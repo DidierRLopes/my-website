@@ -272,6 +272,11 @@ const data = [
     author: 'John Rossman',
     image: 'https://m.media-amazon.com/images/I/61dx0hEkWnS.jpg',
   },
+  {
+    title: 'When Coffee and Kale Compete: Become great at making products people will buy',
+    author: 'Alan Klement',
+    image: 'https://m.media-amazon.com/images/I/61OI41CD53L.jpg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

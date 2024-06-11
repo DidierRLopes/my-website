@@ -133,11 +133,6 @@ const data = [
     image: 'https://m.media-amazon.com/images/I/61lpVd2HzXL.jpg',
   },
   {
-    title: 'When Coffee and Kale Compete: Become great at making products people will buy',
-    author: 'Alan Klement',
-    image: 'https://m.media-amazon.com/images/I/61OI41CD53L.jpg',
-  },
-  {
     title: 'Cracking the PM Career: The Skills, Frameworks, and Practices To Become a Great Product Manager',
     author: 'Jackie Bavaro, Gayle McDowell',
     image: 'https://m.media-amazon.com/images/I/61ytrkspHnL.jpg',

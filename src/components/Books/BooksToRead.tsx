@@ -88,11 +88,6 @@ const data = [
     image: 'https://m.media-amazon.com/images/I/71JbZ0V06zL.jpg',
   },
   {
-    title: 'Predictable Revenue: Turn Your Business Into a Sales Machine with the $100 Million Best Practices of Salesforce.com',
-    author: 'Aaron Ross, Marylou Tyler',
-    image: 'https://m.media-amazon.com/images/I/61yAYYNvIVL.jpg',
-  },
-  {
     title: "The Innovator's Dilemma: The Revolutionary Book That Will Change the Way You Do Business",
     author: 'Clayton M. Christensen',
     image: 'https://m.media-amazon.com/images/I/618BdBwK5ML.jpg',

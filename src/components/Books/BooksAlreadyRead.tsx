@@ -277,6 +277,11 @@ const data = [
     author: 'Alan Klement',
     image: 'https://m.media-amazon.com/images/I/61OI41CD53L.jpg',
   },
+  {
+    title: 'Predictable Revenue: Turn Your Business Into a Sales Machine with the $100 Million Best Practices of Salesforce.com',
+    author: 'Aaron Ross, Marylou Tyler',
+    image: 'https://m.media-amazon.com/images/I/61yAYYNvIVL.jpg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

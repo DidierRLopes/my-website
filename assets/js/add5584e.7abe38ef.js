@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[41507],{14702:s=>{s.exports=JSON.parse('{"label":"finance assistant","permalink":"/blog/tags/finance-assistant","allTagsPath":"/blog/tags","count":1}')}}]);

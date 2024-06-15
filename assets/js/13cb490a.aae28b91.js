@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[74788],{27810:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/openbb","page":1,"postsPerPage":8,"totalPages":1,"totalCount":8,"blogDescription":"This is where I drop my thoughts in the form of blogposts!","blogTitle":"Blog"}')}}]);

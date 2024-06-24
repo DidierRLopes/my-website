@@ -282,6 +282,11 @@ const data = [
     author: 'Aaron Ross, Marylou Tyler',
     image: 'https://m.media-amazon.com/images/I/61yAYYNvIVL.jpg',
   },
+  {
+    title: 'Competing Against Luck: The Story of Innovation and Customer Choice',
+    author: 'Clayton M. Christensen, Karen Dillon, Taddy Hall, David S. Duncan',
+    image: 'https://m.media-amazon.com/images/I/81jN2hzQg9L.jpg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

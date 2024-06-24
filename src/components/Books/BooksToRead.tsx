@@ -158,11 +158,6 @@ const data = [
     image: 'https://m.media-amazon.com/images/I/7153xiXZMoL.jpg',
   },
   {
-    title: 'Competing Against Luck: The Story of Innovation and Customer Choice',
-    author: 'Clayton M. Christensen, Karen Dillon, Taddy Hall, David S. Duncan',
-    image: 'https://m.media-amazon.com/images/I/81jN2hzQg9L.jpg',
-  },
-  {
     title: 'Nudge: The Final Edition: Improving Decisions About Money, Health, and the Environment',
     author: 'Richard H. Thaler, Cass R. Sunstein',
     image: 'https://m.media-amazon.com/images/I/413vkHc-U1L.jpg',

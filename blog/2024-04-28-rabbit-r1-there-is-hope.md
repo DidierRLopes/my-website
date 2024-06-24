@@ -2,13 +2,13 @@
 slug: rabbit-r1-there-is-hope
 title: rabbit r1, there is hope
 date: 2024-04-28
-image: https://github.com/DidierRLopes/my-website/assets/25267873/8c4c9b26-62d9-46cf-8758-28c822d3fd2e
+image: /blog/2024-04-28-rabbit-r1-there-is-hope.png
 tags: ['rabbit r1', 'tech', 'review', 'ai', 'gadget']
 description: I can see a future where people use rabbit r1 for very particular use cases where phone is suboptimal. For instance, when multiple people want to interact with said phone (e.g. selecting music at a party without having to give phone away) and that is not ideal due to personal information on phone, or when the phone isn't ideal because it has too many distractions and user wants to focus on doing something (e.g. practicing a presentation using recording session and then asking for feedback).
 ---
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/8c4c9b26-62d9-46cf-8758-28c822d3fd2e"/>
+    <img width="600" src="/blog/2024-04-28-rabbit-r1-there-is-hope.png"/>
 </p>
 
 I can see a future where people use rabbit r1 for very particular use cases where phone is suboptimal. For instance, when multiple people want to interact with said phone (e.g. selecting music at a party without having to give phone away) and that is not ideal due to personal information on phone, or when the phone isn't ideal because it has too many distractions and user wants to focus on doing something (e.g. practicing a presentation using recording session and then asking for feedback).
@@ -22,7 +22,7 @@ I can see a future where people use rabbit r1 for very particular use cases wher
 Rabbit r1 was first introduced at CES 2024 as a pocket AI companion (watch the keynote [here](https://www.rabbit.tech/rabbit-r1)).
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/3afa54da-ecf9-4767-a264-2e1027e83497"/>
+    <img width="600" src="/blog/2024-04-28-rabbit-r1-there-is-hope_1.png"/>
 </p>
 
 The main distinction over being just a "ChatGPT on-the-go" is the fact that they introduced what they call a Large Action Model (LAM), which is an agent capable of taking requests and making different function calls (e.g., translation, weather, finance, vision, taking notes, and more).
@@ -48,7 +48,7 @@ But they didn’t ship immediately. My batch was only meant to be shipped someti
 The event was well organized. One thing is for sure, rabbit knows how to build a community and hype with their users.
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/2f1e4169-437c-46a9-b7b0-0bf46346e9be"/>
+    <img width="600" src="/blog/2024-04-28-rabbit-r1-there-is-hope_2.png"/>
 </p>
 
 The keynote presented at the event can be found [here](https://www.rabbit.tech/live-unboxing). In it, rabbit's CEO unboxes a rabbit r1 and shows everything it can do on stage.
@@ -84,7 +84,7 @@ However, if you have a kid that is curious to understand the world. I think a ra
 It’s like using ChatGPT but with a worse interface. The keyboard reminds me of BlackBerry but it’s gimmicky to use - personally, I didn’t like the experience. I would always pick up my phone to use ChatGPT over using the Terminal mode for instance.
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/8035e678-e81d-4d71-b1ad-5bfcdbd57ffd"/>
+    <img width="600" src="/blog/2024-04-28-rabbit-r1-there-is-hope_3.png"/>
 </p>
 
 ### Translation
@@ -98,7 +98,7 @@ Sure, this could be an app, but I quite like the idea of having a device that ju
 Although I was excited about this, and it was the first thing I tried it failed badly. The CTO of the company [replied](https://x.com/LiaoPeiyuan/status/1783001793573843078) to [my tweet](https://x.com/didier_lopes/status/1783000272278569412) saying that they are working on fixing it.
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/ad21e88a-6c24-4a90-b390-24f13c7e505a"/>
+    <img width="600" src="/blog/2024-04-28-rabbit-r1-there-is-hope_4.png"/>
 </p>
 
 
@@ -107,7 +107,7 @@ Although I was excited about this, and it was the first thing I tried it failed 
 Yay, another note-taking app. NOT. I’d prefer an integration with the Apple Notes app or Notion, so I don’t need to then go into yet another website and copy-paste those notes to some other place.
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/bac0a02c-d252-4f37-a768-ca7f74a6e30e"/>
+    <img width="600" src="/blog/2024-04-28-rabbit-r1-there-is-hope_5.png"/>
 </p>
 
 ### Voice Recording
@@ -117,8 +117,8 @@ The voice recording feature is pretty good. If you are a content creator (e.g., 
 Personally, when I have ideas like this I just drop a voice note to my wife’s WhatsApp and then mark the message as unread. It’s hacky but it works and I've been doing it for a long time now. We have an inside joke where I start these audios with “Note to self” and she always makes fun of it.
 
 <div className="flex justify-center gap-2">
-  <img src="https://github.com/DidierRLopes/my-website/assets/25267873/ba21850b-dfff-4bf5-a018-722a9d68f9b2" width="50%" /> 
-  <img src="https://github.com/DidierRLopes/my-website/assets/25267873/a98d6538-9a98-49a0-802a-8e5a6ce6edd1" width="50%" />
+  <img src="/blog/2024-04-28-rabbit-r1-there-is-hope_6.png" width="50%" /> 
+  <img src="/blog/2024-04-28-rabbit-r1-there-is-hope_7.png" width="50%" />
 </div>
 
 ### Music
@@ -146,8 +146,8 @@ This may be controversial, but the thing I like the least about the hardware is 
 That's one of my biggest complaints against the hardware itself, see image below to see what I mean. I almost need to bend my right thumb in order to reach the button which is used very often. One can argue that I can wrap my hands more around the device to give a better experiencing in clicking the button which is 100% true, HOWEVER, if I do that then I can't reach the wheel to scroll.
 
 <div className="flex justify-center gap-2">
-  <img src="https://github.com/DidierRLopes/my-website/assets/25267873/2cf09c92-8607-4506-b722-0e15993b30f9" width="50%" /> 
-  <img src="https://github.com/DidierRLopes/my-website/assets/25267873/761f8013-1d62-4da0-8db6-b93b1efae431" width="50%" />
+  <img src="/blog/2024-04-28-rabbit-r1-there-is-hope_8.png" width="50%" /> 
+  <img src="/blog/2024-04-28-rabbit-r1-there-is-hope_9.png" width="50%" />
 </div>
 
 <br />
@@ -187,7 +187,7 @@ But if you are reading this, you are probably wondering what are the use cases w
 
 ... and of course, the use case is worth $200 for you. There are likely devices that can achieve the same for a cheaper cost. I like the fact that is state-of-the-art and they are trying to innovate.
 
-Also, the rabbit effect going up and down waiting to be prompted and the hears going up when listening is pretty sweet - see it [here](https://github.com/DidierRLopes/my-website/assets/25267873/9cb1ab73-eba6-481b-a4ad-dee228c8ea58).
+Also, the rabbit effect going up and down waiting to be prompted and the hears going up when listening is pretty sweet - see it [here](/blog/2024-04-28-rabbit-r1-there-is-hope_10.png).
 
 In any case, there are two recurring topics in these use cases, so let's talk about each individually.
 
@@ -199,7 +199,7 @@ In any case, there are two recurring topics in these use cases, so let's talk ab
 
 <br />
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/fb909082-d919-428e-b059-f641d6eff167"/>
+    <img width="600" src="/blog/2024-04-28-rabbit-r1-there-is-hope_11.png"/>
 </p>
 
 ## Excited about
@@ -215,7 +215,7 @@ Instead of having their team working on all these features, create the foundatio
 A few examples: Someone building a Pokedex app for animals, you take r1 to the zoo and just take a picture of the animals with it, then you go home and look into your pokedex. Or a Pokedex for travel monuments. Or integrating OpenBB so I could do research on-the-go.
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/087e2c61-d7fa-4e9c-a529-897a64f14e06"/>
+    <img width="600" src="/blog/2024-04-28-rabbit-r1-there-is-hope_12.png"/>
 </p>
 
 

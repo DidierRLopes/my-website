@@ -2,13 +2,13 @@
 slug: gamestonk-terminal-the-next-best-thing-after-bloomberg-terminal
 title: Gamestonk Terminal - The next best thing after Bloomberg Terminal
 date: 2021-03-14
-image: https://github.com/DidierRLopes/my-website/assets/88618738/f9508a33-fcee-4056-a611-a4422890bf8b
+image: /blog/2021-03-14-gamestonk-terminal-the-next-best-thing-after-bloomberg-terminal.png
 tags: ['Gamestonk Terminal', 'Finance', 'Stock Market', 'Programming', 'Open Source']
 description: In this blogpost, I introduce Gamestonk Terminal, an open-source project that aims to be a comprehensive tool for financial analysis and stock market research. It includes functionalities for discovering stocks, market sentiment analysis, fundamental and technical analysis, due diligence, prediction techniques, and more.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280495001-f9508a33-fcee-4056-a611-a4422890bf8b.png"/>
+    <img width="600" src="/blog/2021-03-14-gamestonk-terminal-the-next-best-thing-after-bloomberg-terminal_1.png"/>
 </p>
 
 <br />

@@ -2,13 +2,13 @@
 slug: goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack
 title: Goh Analyst - The AI-powered financial analyst who lives on Slack
 date: 2024-03-26
-image: https://github.com/DidierRLopes/my-website/assets/25267873/42e21efe-0555-498c-80d8-039c886d380b
+image: /blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack.png
 tags: ['learning', 'experience', 'growth', 'moving', 'london', 'bay', 'US', 'travel', 'startup', 'nyc']
 description: How I built a financial analyst that lives on Slack and has access to OpenBB.
 ---
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/5a931097-9dc7-4b7b-baa5-d8c4f52a8705"/>
+    <img width="600" src="/blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack_1.png"/>
 </p>
 
 How I built a financial analyst that lives on Slack and has access to OpenBB.
@@ -52,7 +52,7 @@ Since that was already working so well (watch the [presentation video here](http
 That’s when Goh Analyst was born.
 
 <p align="center">
-    <img width="800" src="https://github.com/DidierRLopes/my-website/assets/25267873/3460df7d-0860-4761-9f99-686afca1d78c"/>
+    <img width="800" src="/blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack_2.png"/>
 </p>
 
 Note: Goh Analyst together is GOHANalyst, which is why the image is Gohan from Dragon Ball with the OpenBB logo on his forehead.
@@ -74,17 +74,17 @@ When the Slack message contains the word “OpenBB”, I send that message throu
 In a nutshell, this is what the architecture looks like:
 
 <p align="center">
-    <img width="800" src="https://github.com/DidierRLopes/my-website/assets/25267873/6ed47ea6-47b8-4253-97cd-d29b076c7c73"/>
+    <img width="800" src="/blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack_3.png"/>
 </p>
 
 I made Goh Analyst slightly sarcastic to make it a bit more fun. This makes interacting in a public channel somewhat more human and exciting. It can handle simple financial questions, retrieve data using OpenBB tools, or even answer more complex reasoning questions.
 
 <p align="center">
-    <img width="800" src="https://github.com/DidierRLopes/my-website/assets/25267873/6ad2d3e6-2472-4b33-a29c-7fc30e84f49c"/>
+    <img width="800" src="/blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack_4.png"/>
 </p>
 
 <p align="center">
-    <img width="800" src="https://github.com/DidierRLopes/my-website/assets/25267873/7101b979-63dd-4363-995c-1dd9704513ca"/>
+    <img width="800" src="/blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack_5.png"/>
 </p>
 
 Now imagine that every organization has an analyst on their Slack to help make decisions.
@@ -94,7 +94,7 @@ Now imagine that every organization has an analyst on their Slack to help make d
 As I mentioned earlier, one of the advantages we get from OpenBB Creaton is that we test our products and give feedback to the team on what went well or less well. After working on this project, this is what I shared with the team:
 
 <p align="center">
-    <img width="800" src="https://github.com/DidierRLopes/my-website/assets/25267873/11d24983-0863-4232-a4d7-e9912837eee3"/>
+    <img width="800" src="/blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack_6.png"/>
 </p>
 
 Exciting times we live in. If you want to leverage AI within your financial firm, we can help you 🤝

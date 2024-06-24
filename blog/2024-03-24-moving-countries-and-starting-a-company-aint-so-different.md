@@ -2,13 +2,13 @@
 slug: moving-countries-and-starting-a-company-aint-so-different
 title: Moving Countries and Starting a Company Ain't So Different
 date: 2024-03-24
-image: https://github.com/DidierRLopes/my-website/assets/25267873/42e21efe-0555-498c-80d8-039c886d380b
+image: /blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack.png
 tags: ['learning', 'experience', 'growth', 'moving', 'london', 'bay', 'US', 'travel', 'startup', 'nyc']
 description: I have started a company. I have moved countries. It turns out that there's a lot in common between these.
 ---
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/42e21efe-0555-498c-80d8-039c886d380b"/>
+    <img width="600" src="/blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack.png"/>
 </p>
 
 I have started a company. I have moved countries. It turns out that there's a lot in common between these.

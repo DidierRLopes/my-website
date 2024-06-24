@@ -2,13 +2,13 @@
 slug: how-i-used-openai-api-to-improve-our-product-documentation
 title: How I Used OpenAI API to improve our product documentation
 date: 2023-04-01
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280554411-32a1e101-4357-4a0a-852c-d184ad6a7104.png
+image: /blog/2023-04-01-how-i-used-openai-api-to-improve-our-product-documentation.png
 tags: ['OpenAI', 'API', 'Product Documentation', 'ChatGPT', 'Discord', 'OpenBB Bot']
 description: In this blog post, I share how I used the OpenAI API to improve our product documentation. I used ChatGPT to generate more detailed descriptions for our OpenBB Bot Discord commands, making them more understandable for new users.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280554411-32a1e101-4357-4a0a-852c-d184ad6a7104.png"/>
+    <img width="600" src="/blog/2023-04-01-how-i-used-openai-api-to-improve-our-product-documentation.png"/>
 </p>
 
 <br />
@@ -25,13 +25,13 @@ The [documentation](https://docs.openbb.co/bot/reference/discord) of our free Op
 
 For instance, the description for the command `/dp alldp` was: "Last 15 Darkpool Trades", as seen below:
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/faf4a1e1-a5b5-4aeb-aec4-cd69c29842a7)
+![image](/blog/2023-04-01-how-i-used-openai-api-to-improve-our-product-documentation_1.png)
 
 For more experienced traders, this may be enough. But for new users, these 4 words may not mean much.
 
 For context, this is the output that a user would get if running `/dp alldp` on our [Discord server](https://openbb.co/discord).
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/5752d06d-0515-46df-aeda-1425c79e7d2c)
+![image](/blog/2023-04-01-how-i-used-openai-api-to-improve-our-product-documentation_2.png)
 
 So I talked with someone in our team about improving the documentation. Not only for the new users that wanted to utilize our free product but also so that we could train our own LLM on this better dataset.
 
@@ -41,7 +41,7 @@ So the next step was to try whether ChatGPT would indeed improve the current doc
 
 After a bit of prompt tweaking, I got a much better description than the one we currently had. See below:
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/212114a0-033e-4f7d-98dc-ef22ee318227)
+![image](/blog/2023-04-01-how-i-used-openai-api-to-improve-our-product-documentation_3.png)
 
 The next step was rather straightforward. I created a script that iterated [through all our OpenBB Bot Discord documentation](https://github.com/OpenBB-finance/OpenBBTerminal) files and updated the old description with a more detailed one.
 
@@ -53,7 +53,7 @@ Where **desc** and **example** corresponds to the current description and exampl
 
 The results can be seen below (done on [this PR](https://github.com/OpenBB-finance/OpenBBTerminal/pull/4657)),
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/32a1e101-4357-4a0a-852c-d184ad6a7104)
+![image](/blog/2023-04-01-how-i-used-openai-api-to-improve-our-product-documentation_4.png)
 
 As usual, I open source the script [here](https://github.com/DidierRLopes/improve-documentation-using-openai).
 

@@ -2,13 +2,13 @@
 slug: how-i-would-do-due-diligence-on-amt-using-openbb-terminal
 title: How I would do due diligence on $AMT using OpenBB Terminal
 date: 2022-10-20
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499804-4572fe2a-b0b0-487f-9dee-6c08b0e4c965.png
+image: /blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal.png
 tags: ['OpenBB Terminal', 'Investment Research', 'Stocks', 'Due Diligence']
 description: This blog post provides a detailed walkthrough on how to conduct due diligence on $AMT using the OpenBB Terminal, a free and open source platform for financial data analysis.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499804-4572fe2a-b0b0-487f-9dee-6c08b0e4c965.png"/>
+    <img width="600" src="/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal.png"/>
 </p>
 
 <br />
@@ -35,143 +35,143 @@ Strap in.
 $ /stocks/load AMT/candle
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/4572fe2a-b0b0-487f-9dee-6c08b0e4c965)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_1.png)
 
 ```console
 $ /stocks/fa/mktcap
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/2b91a74c-624a-4044-b9e1-9b7138bdcd1e)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_2.png)
 
 ```console
 $ /stocks/fa/mgmt
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/2e26ebbf-e26b-4423-87de-a1aace322fa6)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_3.png)
 
 ```console
 $ /stocks/fa/income/balance/cash
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/b2a496aa-18e5-4fc3-a3c4-cdf92b3e1cf4)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_4.png)
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/9ab0529c-7344-47ca-9868-32cd633bb53a)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_5.png)
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/788cd233-e8a3-4d21-8d6b-8090409950cc)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_6.png)
 
 ```console
 $ /stocks/fa/shrs
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/bed6ac95-f76b-487f-b1ee-05783a53c840)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_7.png)
 
 ```console
 $ /stocks/fa/sust
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/fd2b31f4-b29c-4d9a-a521-c1a82e870b68)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_8.png)
 
 ```console
 $ /stocks/fa/divs
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/45056b50-8210-40eb-b671-463fbd9dfd6b)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_9.png)
 
 ```console
 $ /stocks/fa/dcf
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/77086bcf-b2f3-4ca5-a431-9d6e10ed7b0f)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_10.png)
 
 ```console
 $ /stocks/ins/stats
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/28ab99a8-c9e0-48f5-80a0-f37383cde28c)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_11.png)
 
 ```console
 $ /stocks/dps/psi
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/0fc8870d-83bc-4413-97a9-c214cb0046cc)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_12.png)
 
 ```console
 $ /stocks/gov/histcont
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/5de70c19-55fb-437e-95d8-a17f4a9b9f36)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_13.png)
 
 ```console
 $ /stocks/dd/rating
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/d965a0b6-a169-49f5-88f1-87eac4ae9f42)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_14.png)
 
 ```console
 $ /stocks/dd/pt
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/f656a805-009c-4751-9842-b7638a459522)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_15.png)
 
 ```console
 $ /stocks/dd/est
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/a2bff0b4-69ed-4df0-99a0-f928220d9f2d)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_16.png)
 
 ```console
 $ /stocks/ta/sma
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/06996ce2-b1bb-4b21-936a-66b9df3b6a1d)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_17.png)
 
 ```console
 $ /stocks/ta/recom/summary
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/015f7839-de0b-45bb-9703-42f986b01d57)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_18.png)
 
 ```console
 $ /stocks/ba/sentiment
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/dee84012-741b-4db1-9755-b87afb4da3b5)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_19.png)
 
 ```console
 $ /stocks/sia/metric tc
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/bef4daa3-3b93-4a39-82a6-e60d6c3f1dcd)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_20.png)
 
 ```console
 $ /stocks/sia/metric fcf
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/c9ad6e51-d9f5-4753-813e-f6d34b697602)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_21.png)
 
 ```console
 $ /stocks/sia/vis oi
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/e33cd4a1-f333-490e-8829-16474fa05e0f)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_22.png)
 
 ```console
 $ /stocks/ca/historical/hcorr
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/d339e6bc-6dfe-4059-afb6-5152beab6301)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_23.png)
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/ae3bca4c-0a07-436a-a6c6-f9262f692df2)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_24.png)
 
 ```console
 $ /stocks/ca/cashflow/income/balance
 ```
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/8c0bda7a-a35b-43e7-9f22-1a1774ba1425)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_25.png)
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/673bd87e-aede-4917-a3b8-b2ef5f092b18)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_26.png)
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/3eeacc24-e9e8-479e-becc-5dd763420b2c)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_27.png)
 
 I know this can be overwhelming information and it takes some time to run all these commands.
 

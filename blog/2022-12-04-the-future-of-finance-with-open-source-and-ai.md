@@ -2,13 +2,13 @@
 slug: the-future-of-finance-with-open-source-and-ai
 title: The future of finance with open source and AI
 date: 2022-12-04
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280552376-81f97180-abdd-41fa-a422-becefc8fd5cd.png
+image: /blog/2022-12-04-the-future-of-finance-with-open-source-and-ai.png
 tags: ['Open Source', 'AI', 'Finance', 'Future']
 description: The future of finance is being reshaped by open source and AI. This post discusses the potential of these technologies in disrupting the financial industry, the advantages of open source, and the role of AI in user interface.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280552376-81f97180-abdd-41fa-a422-becefc8fd5cd.png"/>
+    <img width="600" src="/blog/2022-12-04-the-future-of-finance-with-open-source-and-ai.png"/>
 </p>
 
 <br />
@@ -23,7 +23,7 @@ This post will talk about my (very) u̶n̶biased opinion about the future of fin
 
 ## Open Source platform
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/61585c8f-085f-4697-9714-4fe02296053d)
+![image](/blog/2022-12-04-the-future-of-finance-with-open-source-and-ai_1.png)
 
 ### Data licensing vs Marketplace
 
@@ -63,7 +63,7 @@ Having the platform be _open source_ is key.
 
 With the new LLM advancements, such as [ChatGPT](https://chat.openai.com/chat). We are not far from this reality.
 
-![cool1](https://github.com/DidierRLopes/my-website/assets/25267873/be035d48-18c5-4f62-b367-f32ec3034a0a)
+![cool1](/blog/2022-12-04-the-future-of-finance-with-open-source-and-ai_2.png)
 
 Plus, if this is built on top of an open source project it means that the **community can help in improving the model** by providing more training data (e.g. provide a text as input and the corresponding command as output) or even confirm whether or not the chart that pops up was accurate. In addition, along with data sources you can imagine that the community could start contributing with new languages for the GPT model.
 
@@ -75,7 +75,7 @@ You can easily imagine that such interface would work well with a speech recogni
 
 One of the new features that were announced with [OpenBB Terminal 2.0](https://openbb.co/blog/openbb-terminal-2-acai) was the automated reports generation that utilizes [papermill](https://github.com/nteract/papermill) to leverage jupyter notebook templates.
 
-![cool2](https://github.com/DidierRLopes/my-website/assets/25267873/655d11ad-4069-4886-8f54-b080bfc2b7f1)
+![cool2](/blog/2022-12-04-the-future-of-finance-with-open-source-and-ai_3.png)
 
 As it stands creating one of these notebook templates requires some coding skills and reading [OpenBB documentation](https://docs.openbb.co/) to understand how to retrieve the data of interest providing the correct function and necessary arguments.
 
@@ -83,7 +83,7 @@ As it stands creating one of these notebook templates requires some coding skill
 
 The proof-of-concept below in combination with the automated report generation should allow you to further understand the breakthrough that we may accomplish in the following few months.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/81f97180-abdd-41fa-a422-becefc8fd5cd)
+![image](/blog/2022-12-04-the-future-of-finance-with-open-source-and-ai_4.png)
 
 **My prediction is that open source + AI will disrupt the financial sector in the upcoming years.**
 

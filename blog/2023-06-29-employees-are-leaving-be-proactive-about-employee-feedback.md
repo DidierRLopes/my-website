@@ -2,13 +2,13 @@
 slug: employees-are-leaving-be-proactive-about-employee-feedback
 title: Employees are leaving? Be proactive about employee feedback
 date: 2023-06-29
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280555542-969ecadc-43f8-49ea-ad81-90dad5c3011a.png
+image: /blog/2023-06-29-employees-are-leaving-be-proactive-about-employee-feedback.png
 tags: ['employee engagement', 'feedback', 'work culture', 'remote work', 'team happiness']
 description: Employees are leaving? Be proactive about employee feedback. This blogpost discusses the importance of employee feedback and how we at OpenBB are ensuring high employee engagement through a periodic feedback survey.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280555542-969ecadc-43f8-49ea-ad81-90dad5c3011a.png"/>
+    <img width="600" src="/blog/2023-06-29-employees-are-leaving-be-proactive-about-employee-feedback.png"/>
 </p>
 
 <br />
@@ -41,7 +41,7 @@ However, there was something critical missing. I will explain what it is by usin
 
 What we had built is an open loop control system, and it looks something like this:
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/783ac9e6-a6e0-40bc-b209-4577e2d816fe)
+![image](/blog/2023-06-29-employees-are-leaving-be-proactive-about-employee-feedback_1.png)
 
 The problem? open loop systems can be inaccurate and unreliable. More importantly, because there is no feedback mechanism to correct inputs as the controller (leadership) never gets the information that comes out of the system (team engagement).
 
@@ -49,7 +49,7 @@ The key word here is feedback. An office hour session is great, but it’s a poo
 
 We needed feedback. We needed to have a closed-loop system instead of an open one. By that I mean:
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/fe1c62a1-82c5-446b-95a2-b2736cea3085)
+![image](/blog/2023-06-29-employees-are-leaving-be-proactive-about-employee-feedback_2.png)
 
 This allows us to constantly monitor our team happiness, and be able to react when the feedback doesn’t match our desired culture.
 
@@ -74,7 +74,7 @@ This allowed us to come up with the following survey, where the team would reply
 
 Now you may be wondering how we made this survey completely automated, the workflow is actually very straightforward and we were able to automate it. Here is what it looks like: Airtable + Slack ✅
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/024bd126-f9c8-4097-bcaf-63adbea5614b)
+![image](/blog/2023-06-29-employees-are-leaving-be-proactive-about-employee-feedback_3.png)
 
 Even though our salaries don’t compete with the MAMAAs of this world, we believe that: our mission, our innovative products and unique culture are what makes us OpenBB. And why we can retain our talent.
 

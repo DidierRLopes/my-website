@@ -2,13 +2,13 @@
 slug: slack-gpt-summarizing-messages
 title: SlackGPT - Your Slack bot that summarizes unread messages
 date: 2024-01-15
-image: https://github.com/DidierRLopes/my-website/assets/25267873/d87dc0c7-96b6-42b8-8c7a-8bcd6240510a
+image: /blog/2024-01-15-slack-gpt-summarizing-messages.png
 tags: ['slack', 'slackgpt', 'llm', 'summarization', 'open source', 'bot']
 description: The SlackGPT is a Slack bot that summarizes conversations and sends you a summary per channel.
 ---
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/d87dc0c7-96b6-42b8-8c7a-8bcd6240510a"/>
+    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages.png"/>
 </p>
 
 <br />
@@ -52,7 +52,7 @@ Clone the open source project [here](https://github.com/DidierRLopes/slackGPT).
 <br />
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/8aae6649-7d43-41b6-95ed-80ae39996ab2"/>
+    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages_1.png"/>
 </p>
 
 4. Create a **Webhook URL** for your channel so that you can receive messages' summary. Set this value as the `SLACK_WEBHOOK_URL`` on a `.env` file if you want to run the script locally or as a GitHub secret if you want to leverage the GitHub workflow.
@@ -67,7 +67,7 @@ Clone the open source project [here](https://github.com/DidierRLopes/slackGPT).
 <br />
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/a710c526-e6ca-4fdc-954d-f720f0dbb973"/>
+    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages_2.png"/>
 </p>
 
 ### OpenAI API
@@ -77,7 +77,7 @@ Go to [OpenAI API page](https://platform.openai.com/api-keys) to extract the API
 <br />
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/92bd4c45-c34b-42f6-a5e9-b76971ee9881"/>
+    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages_3.png"/>
 </p>
 
 ### Slack channels
@@ -89,7 +89,7 @@ Set those values as the `SLACK_CHANNEL_IDS` on a `.env` file if you want to run 
 <br />
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/1c24436f-940d-473e-8549-88d3d1b53fd4"/>
+    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages_4.png"/>
 </p>
 
 ### Running
@@ -117,12 +117,12 @@ The most important part of this script is the `cron: '0 8 * * 1-5'` which specif
 By inputting the following text on the Slack channel of my choice:
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/0622eca6-76c5-46f9-86bd-e357fa8b934b"/>
+    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages_5.png"/>
 </p>
 
 The SlackGPT summarized it as follows:
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/4a20acf4-7ed6-4f18-96b8-a63f1072e6b1"/>
+    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages_6.png"/>
 </p>
 

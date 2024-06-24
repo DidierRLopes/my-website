@@ -2,13 +2,13 @@
 slug: how-to-get-hired-by-an-exciting-tech-startup-in-2023
 title: How to get hired by an exciting tech startup in 2023
 date: 2023-01-22
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280554207-496f62f8-bd60-4029-8560-1a4c25a5144a.png
+image: /blog/2023-01-22-how-to-get-hired-by-an-exciting-tech-startup-in-2023.png
 tags: ['Career Advice', 'Tech Startups', 'Open Source', 'Job Hunting', 'Software Engineering']
 description: The future is a strange place. We’re not entirely sure what it will look like, but we do know that it will be shaped by the choices we make today. And while I can’t tell you exactly how to get a job in 2023, I can help you set yourself up for success by showing you some of the best ways to build your career today.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280554207-496f62f8-bd60-4029-8560-1a4c25a5144a.png"/>
+    <img width="600" src="/blog/2023-01-22-how-to-get-hired-by-an-exciting-tech-startup-in-2023.png"/>
 </p>
 
 <br />
@@ -44,7 +44,7 @@ This means that you can:
 
 With Red Hat in the 90s this open source movement is starting to be a very hot topic. [Joseph Jacks](https://twitter.com/JosephJacks_) from OSS Capital is one of the best investors (if not the best) in this space. The chart below that he put together illustrates well the growth of open source (shared in [this tweet](https://twitter.com/JosephJacks_/status/1494840009882361859?s=20))
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/496f62f8-bd60-4029-8560-1a4c25a5144a)
+![image](/blog/2023-01-22-how-to-get-hired-by-an-exciting-tech-startup-in-2023_1.png)
 
 ### Strategic
 

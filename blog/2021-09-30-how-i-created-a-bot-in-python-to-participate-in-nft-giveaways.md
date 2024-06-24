@@ -2,13 +2,13 @@
 slug: how-i-created-a-bot-in-python-to-participate-in-nft-giveaways
 title: How I created a bot in python to participate in NFT giveaways
 date: 2021-09-30
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280496989-d965410f-6a4d-40b1-92d1-2e3fb4e24462.png
+image: /blog/2021-09-30-how-i-created-a-bot-in-python-to-participate-in-nft-giveaways.png
 tags: ['Python', 'Bot', 'NFT', 'Giveaways', 'Reddit', 'Automation']
 description: In this blogpost, I share how I created a bot in Python to automate participation in NFT giveaways on Reddit. The bot simplifies tasks such as upvoting posts, commenting, and opening Opensea links to favourite artwork.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280496989-d965410f-6a4d-40b1-92d1-2e3fb4e24462.png"/>
+    <img width="600" src="/blog/2021-09-30-how-i-created-a-bot-in-python-to-participate-in-nft-giveaways.png"/>
 </p>
 
 <br />
@@ -37,7 +37,7 @@ _When demand exceeds supply_, **prices tend to rise.**
 
 And these creators are using Reddit as the platform of their giveaways.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/d965410f-6a4d-40b1-92d1-2e3fb4e24462)
+![image](/blog/2021-09-30-how-i-created-a-bot-in-python-to-participate-in-nft-giveaways_1.png)
 
 When scrolling through reddit you will notice that all these posts have certain things in common:
 - They ask for an up-vote on the post
@@ -53,6 +53,6 @@ I’ve already won multiple NFTs with this, which is exciting— you never know 
 
 There’s actually 1 collection that I particularly like and believe has a lot of potential, it’s called [CryptoCartoonEaters](https://opensea.io/collection/crypto-cartooneaters) and due to the uniqueness of each collectible (only 100 made), I really think it has a great potential. I acquired my favourite cartoon as a kid: Goku Eating a Burger.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/c9c9f994-8fe8-401c-9b86-ad4f413da741)
+![image](/blog/2021-09-30-how-i-created-a-bot-in-python-to-participate-in-nft-giveaways_2.png)
 
 Let me know if you find this article interesting, and if you used the bot as well!

@@ -2,13 +2,13 @@
 slug: building-my-personal-website-in-docusaurus
 title: Building my personal website in Docusaurus
 date: 2024-01-08
-image: https://github.com/DidierRLopes/my-website/assets/25267873/0ae365f8-af88-4d1d-a8f2-bcbe70904749
+image: /blog/2024-01-08-building-my-personal-website-in-docusaurus.png
 tags: ['docusaurus', 'website', 'blog']
 description: How I'm using Docusaurus to build my own personal website.
 ---
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/0ae365f8-af88-4d1d-a8f2-bcbe70904749"/>
+    <img width="600" src="/blog/2024-01-08-building-my-personal-website-in-docusaurus.png"/>
 </p>
 
 <br />

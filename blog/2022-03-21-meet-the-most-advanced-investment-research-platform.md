@@ -2,13 +2,13 @@
 slug: meet-the-most-advanced-investment-research-platform
 title: Meet the most advanced investment research platform
 date: 2022-03-21
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280498967-0cd2335e-3099-43a5-996e-27bb34903348.png
+image: /blog/2022-03-21-meet-the-most-advanced-investment-research-platform.png
 tags: ['Investment Research', 'Gamestonk Terminal', 'Automation', 'Routines']
 description: Meet the most advanced investment research platform. This blog post introduces Gamestonk Terminal, an advanced investment research platform, and discusses its features and automation capabilities.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280498967-0cd2335e-3099-43a5-996e-27bb34903348.png"/>
+    <img width="600" src="/blog/2022-03-21-meet-the-most-advanced-investment-research-platform.png"/>
 </p>
 
 <br />

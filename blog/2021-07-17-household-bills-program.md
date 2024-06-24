@@ -2,13 +2,13 @@
 slug: household-bills-program
 title: Household bills Program
 date: 2021-07-17
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280496297-529b3c6f-e8d2-446f-8c22-2db738ce4769.png
+image: /blog/2021-07-17-household-bills-program.png
 tags: ['Java', 'Programming', 'GUI', 'Software Development', 'Side Project']
 description: In this blogpost, I share my journey of creating a program to split household bills. This was my first side project where I used Java to create a GUI application.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280496297-529b3c6f-e8d2-446f-8c22-2db738ce4769.png"/>
+    <img width="600" src="/blog/2021-07-17-household-bills-program.png"/>
 </p>
 
 <br />
@@ -60,15 +60,15 @@ The development process was to **“divide to conquer”**. I split the tasks in
 See images below of the program:
 
 <div className="flex justify-center gap-2">
-  <img src="https://github.com/Meg1211/my-website/assets/88618738/ff24caed-7828-474e-bc47-8e38ca8ddd7b" width="50%" />
-  <img src="https://github.com/Meg1211/my-website/assets/88618738/efdb69f2-b97d-42b7-8dea-4bf96703a70d" width="50%" /> 
+  <img src="/blog/2021-07-17-household-bills-program_1.png" width="50%" />
+  <img src="/blog/2021-07-17-household-bills-program_2.png" width="50%" /> 
 </div>
 
 <br />
 
 <div className="flex justify-center gap-2">
-  <img src="https://github.com/Meg1211/my-website/assets/88618738/529b3c6f-e8d2-446f-8c22-2db738ce4769" width="50%" />
-  <img src="https://github.com/Meg1211/my-website/assets/88618738/14878302-0ba0-407b-974b-d06424a6af69" width="50%" /> 
+  <img src="/blog/2021-07-17-household-bills-program_3.png" width="50%" />
+  <img src="/blog/2021-07-17-household-bills-program_4.png" width="50%" /> 
 </div>
 
 <br />

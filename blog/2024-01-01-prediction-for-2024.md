@@ -2,13 +2,13 @@
 slug: prediction-for-2024
 title: Prediction for 2024
 date: 2024-01-01
-image: https://github.com/DidierRLopes/my-website/assets/25267873/f5116915-e15e-40c7-9633-727a56468d94
+image: /blog/2024-01-01-prediction-for-2024.png
 tags: ['openbb', 'finance', 'ai', 'agents', 'copilot', 'llm', 'pro', 'fine-tune']
 description: Companies will own multiple fine-tuned LLMs/SLMs for specific tasks.
 ---
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/f5116915-e15e-40c7-9633-727a56468d94"/>
+    <img width="600" src="/blog/2024-01-01-prediction-for-2024.png"/>
 </p>
 
 <br />
@@ -32,7 +32,7 @@ As for the financial industry, this is 100% going to happen. Firms will fine-tun
 We are preparing for this shift at OpenBB and I spent the last few days working on a proof-of-concept with José Donato that will allow users to bring their own copilots to the Terminal Pro. And even have these interact with each other.
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/5ce7fefe-b5d2-4f91-81dd-a591bb4e86f3"/>
+    <img width="600" src="/blog/2024-01-01-prediction-for-2024_1.png"/>
 </p>
 
 For a video on how this works you can check: https://x.com/josedonato__/status/1741151037031845986?s=20

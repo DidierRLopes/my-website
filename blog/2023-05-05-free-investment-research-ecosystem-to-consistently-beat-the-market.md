@@ -2,12 +2,12 @@
 slug: free-investment-research-ecosystem-to-consistently-beat-the-market
 title: Free investment research ecosystem to consistently beat the market
 date: 2023-05-05
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280554509-bb80a9fd-e616-4c9f-b3e3-e123a3034e24.png
+image: /blog/2023-05-05-free-investment-research-ecosystem-to-consistently-beat-the-market.png
 tags: ['OpenBB', 'Investment Research', 'OpenBB Terminal', 'OpenBB Bot', 'OpenBB SDK', 'OpenBB Hub']
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280554509-bb80a9fd-e616-4c9f-b3e3-e123a3034e24.png"/>
+    <img width="600" src="/blog/2023-05-05-free-investment-research-ecosystem-to-consistently-beat-the-market.png"/>
 </p>
 
 <br />
@@ -32,7 +32,7 @@ Then, we wanted to address the social nature of investing. Instead of adding the
 
 As much customization as the OpenBB Terminal allowed, we didn’t give creators as much freedom as we could have since they would need to download the source code of the terminal in order to leverage our core.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/bb80a9fd-e616-4c9f-b3e3-e123a3034e24)
+![image](/blog/2023-05-05-free-investment-research-ecosystem-to-consistently-beat-the-market_1.png)
 
 But we we wanted to make this experience as seamless as possible so users could build on top of our foundation. Thus, we repurposed the core of the OpenBB Terminal into an OpenBB SDK that is “_pip installable_” from everywhere — [OpenBB](https://pypi.org/project/openbb/) . This means that all you need to have access to a universe of investment research data programmatically is python and running pip install openbb within a notebook.
 
@@ -53,7 +53,7 @@ Since the beginning users have installed the OpenBB Terminal in multiple desktop
 
 With [OpenBB Hub](https://my.openbb.co/) and using that account detail to log in the terminal, this problem gets fixed. Not only that, but users will benefit from default data sources, terminal color schema customization and even .openbb routines being manageable from Hub and more importantly accessible on a terminal instance as long as they login with their user details.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/e6a2e177-ee76-4871-a534-c5002a2bfb96)
+![image](/blog/2023-05-05-free-investment-research-ecosystem-to-consistently-beat-the-market_2.png)
 
 ## OpenBB Hub - OpenBB Bot
 
@@ -63,7 +63,7 @@ For users that were already users of our OpenBB Bot, the only change on the plat
 
 OpenBB bot is critical to us as we work hard towards making a full ecosystem for investment research. And now you can access this experience for free, and share investment research data with your friends / colleagues.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/b444e233-f862-41f3-b1ae-2f1dac517d47)
+![image](/blog/2023-05-05-free-investment-research-ecosystem-to-consistently-beat-the-market_3.png)
 
 ## OpenBB Hub - OpenBB SDK
 
@@ -71,7 +71,7 @@ As the OpenBB SDK is in its core a pip installable package with its [own page on
 
 In addition, we are going to display open source projects built by the community that leverage our core so that they can serve as an inspiration to you. If you are working on something that uses OpenBB at its core, tag your GitHub repository with “openbb” and we’ll add you to the list of projects that rely on our foundation.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/2d1300f0-4c3d-45d8-af6d-bfe8125a28d6)
+![image](/blog/2023-05-05-free-investment-research-ecosystem-to-consistently-beat-the-market_4.png)
 
 ## OpenBB Hub - OpenBB Terminal Pro (waitlist)
 
@@ -83,7 +83,7 @@ We will gradually roll out the OpenBB Terminal Pro to a few users from the waitl
 
 If you are one of these, I look forward to onboarding you personally 🤝
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/0cec32eb-c5ab-4765-9c21-6c13943874db)
+![image](/blog/2023-05-05-free-investment-research-ecosystem-to-consistently-beat-the-market_5.png)
 
 ## Final thoughts
 

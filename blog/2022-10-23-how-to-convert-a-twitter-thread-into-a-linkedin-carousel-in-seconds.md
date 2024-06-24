@@ -2,12 +2,12 @@
 slug: how-to-convert-a-twitter-thread-into-a-linkedin-carousel-in-seconds
 title: Twitter thread to LinkedIn carousel in python
 date: 2022-10-23
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499955-3f34f9d5-d1b2-426f-8b8d-e6d26a5367da.png
+image: /blog/2022-10-23-how-to-convert-a-twitter-thread-into-a-linkedin-carousel-in-seconds.png
 tags: ['Python', 'LinkedIn', 'Twitter', 'Carousel', 'Content Creation']
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499955-3f34f9d5-d1b2-426f-8b8d-e6d26a5367da.png"/>
+    <img width="600" src="/blog/2022-10-23-how-to-convert-a-twitter-thread-into-a-linkedin-carousel-in-seconds.png"/>
 </p>
 
 <br />
@@ -26,7 +26,7 @@ I noticed recently that LinkedIn carousels have been picking a lot of traction, 
 
 So, I looked for free tools and didn’t find anything good enough. I ended up using [canvas](https://canvas.apps.chrome/) to re-create the thread — which you can find [here](https://www.linkedin.com/posts/didier-lopes_due-diligence-on-amt-using-openbb-terminal-activity-6977569279395176448-TFMn?utm_source=share&utm_medium=member_desktop). It worked well, but it was time consuming and for most cases, I don’t want to be messing around with the design side of things.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/3f34f9d5-d1b2-426f-8b8d-e6d26a5367da)
+![image](/blog/2022-10-23-how-to-convert-a-twitter-thread-into-a-linkedin-carousel-in-seconds_1.png)
 
 As a true software engineer and pythonist, I obtained the Twitter API keys and built a tool that would convert a Twitter thread into a LinkedIn carousel in a matter of seconds.
 
@@ -44,7 +44,7 @@ python convert2carousel.py https://twitter.com/didier_lopes/status/1581247044228
 
 And the result can be found [here](https://www.linkedin.com/posts/didier-lopes_football-momentum-indicator-carousel-activity-6989972573782482944-nM9s?utm_source=share&utm_medium=member_desktop).
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/67efec99-d219-47c5-8d83-f19e97a44d76)
+![image](/blog/2022-10-23-how-to-convert-a-twitter-thread-into-a-linkedin-carousel-in-seconds_2.png)
 
 Feel free to check the project here and I look forward to having contributors helping me improve it!
 

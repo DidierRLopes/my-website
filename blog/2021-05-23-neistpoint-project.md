@@ -2,13 +2,13 @@
 slug: neistpoint-project
 title: NeistPoint Project
 date: 2021-05-23
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280495631-c2282aa1-115e-451f-b0c0-af1351936c37.png
+image: /blog/2021-05-23-neistpoint-project.png
 tags: ['NeistPoint', 'Clothing Brand', 'Sustainability', 'Project Management', 'C++', 'Stock Management']
 description: In this blogpost, I share my journey of starting a sustainable clothing brand, managing the project, and developing a stock management tool in C++.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280495631-c2282aa1-115e-451f-b0c0-af1351936c37.png"/>
+    <img width="600" src="/blog/2021-05-23-neistpoint-project.png"/>
 </p>
 
 <br />
@@ -43,13 +43,13 @@ Given that our team had no experience in clothing whatsoever, and based on our n
 
 <br />
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/d614045b-39b0-408a-bbd8-11006c55efc5)
+![image](/blog/2021-05-23-neistpoint-project_1.png)
 
 This process was **far from being optimised**. In fact, pretty much everything was manual. Apart from the creation of the clothes. Therefore, we needed a Software to keep track of the products at each of it’s stages: _material to request, material shipping, material in stock, product to create, product creating, product in stock, and product sent_.
 
 Since I didn’t find anything that I liked online, and I knew how to code, I thought the best solution was to develop something myself. This way it could be adapted to perfectly fit my own requirements (advantages of being your own product owner eheh). In addition, I wanted to improve my C++ skills, so I thought, **why not?**
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/e0dd7c35-d7f4-4175-a80e-be881ff03141)
+![image](/blog/2021-05-23-neistpoint-project_2.png)
 
 For 1 week or so, during my commute I worked on the [NeistPoint Stock Managemen](https://github.com/DidierRLopes/NeistpointCLI) tool. To be honest, I think it took longer to devise the architecture behind it than to actually write the code, as there were lots of things that I wanted to be taken into account. Also, the fact that the “database” is a .csv file, was intentional. This way, we could share this file between the team members.
 

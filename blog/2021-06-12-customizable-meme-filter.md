@@ -2,13 +2,13 @@
 slug: customizable-meme-filter
 title: Customizable Meme Filter
 date: 2021-06-12
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280495694-b123cf98-3411-4edc-9597-7b8c6d0c7e73.png
+image: /blog/2021-06-12-customizable-meme-filter.png
 tags: ['Python', 'Meme Filter', 'Image Processing', 'Face Recognition']
 description: In this blogpost, I share my journey of creating a customizable meme filter using Python. This filter selects a random meme based on the number of people on the screen and assigns each person to a character in the meme.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280495694-b123cf98-3411-4edc-9597-7b8c6d0c7e73.png"/>
+    <img width="600" src="/blog/2021-06-12-customizable-meme-filter.png"/>
 </p>
 
 <br />
@@ -37,7 +37,7 @@ Usage:
 ./didifilter.py — location=memes — caption=’Which meme am I?’ — initial=30 — final=50 -b — max=3
 ```
 
-![hair_1](https://github.com/DidierRLopes/my-website/assets/25267873/100b62e1-9c40-4532-af0d-bdfc7ada697e)
+![hair_1](/blog/2021-06-12-customizable-meme-filter_1.png)
 
 **To sum up:** This program is meant to be an advanced version of the known snapchat filter where there are random images spinning on top of people’s heads. The main improvement is that you can not only select the images you want to choose from and the caption, but you can also play it with friends (recognizing more than 1 face at the same time).
 
@@ -53,7 +53,7 @@ The best part of the script is that it is meant to be easily customizable. Any p
 
 **AND**, you can also quickly tweak the code to adapt it to do something else. Here’s me **pranking** my girlfriend with a psyduck when the query was: “_Who do I look like?_”
 
-![hair_2](https://github.com/DidierRLopes/my-website/assets/25267873/826e8bdc-39b9-4db0-a4f4-f94178d4c746)
+![hair_2](/blog/2021-06-12-customizable-meme-filter_2.png)
 
 Hope you have a nice read and enjoy the filter. You can find the code [here](https://github.com/DidierRLopes/meme-filter).
 

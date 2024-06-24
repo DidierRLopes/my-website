@@ -2,13 +2,13 @@
 slug: sector-and-industry-analysis-gamestonk-terminal
 title: Sector and Industry Analysis — Gamestonk Terminal
 date: 2021-12-02
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280497500-a8730909-278e-4186-9139-0b08f7ed88c0.png
+image: /blog/2021-12-02-sector-and-industry-analysis-gamestonk-terminal.png
 tags: ['Gamestonk Terminal', 'Sector Analysis', 'Industry Analysis', 'FinanceDatabase', 'Open Source']
 description: The development journey of a new Sector and Industry Analysis feature for Gamestonk Terminal, integrating the FinanceDatabase package.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280497500-a8730909-278e-4186-9139-0b08f7ed88c0.png"/>
+    <img width="600" src="/blog/2021-12-02-sector-and-industry-analysis-gamestonk-terminal.png"/>
 </p>
 
 <br />
@@ -25,23 +25,23 @@ The end-to-end story of developing a new **Sector and Industry Analysis** for [G
 
 On the 13th of October, [Jeroen Bouma](https://github.com/JerBouma) (a ALM advisor and python enthusiast) reached out in order to integrate his [FinanceDatabase package](https://github.com/JerBouma/FinanceDatabase) into [Gamestonk Terminal](https://github.com/GamestonkTerminal/GamestonkTerminal).
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/e98a2b76-8113-461e-a69f-48a706971adb)
+![image](/blog/2021-12-02-sector-and-industry-analysis-gamestonk-terminal_1.png)
 
 After having a call with Jeroen to bounce ideas, it was clear that our terminal needed such capability to be even more powerful (as if **over 500 features** already and counting didn’t already do the trick eheh). However, at the time I was too busy to work on the concept so I asked Jeroen if he could sketch something up on a jupyter notebook.
 
 Within the following week, Jeroen sent a Jupyter notebook explaining the FinanceDatabase module and what we could have in a Sector and Industry analysis.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/f8402594-0d19-4017-bb7b-cd61a593fd2d)
+![image](/blog/2021-12-02-sector-and-industry-analysis-gamestonk-terminal_2.png)
 
 In addition, he also mentioned his [PassiveInvestor package](https://github.com/JerBouma/ThePassiveInvestor), and ended up [implementing it on his own in Gamestonk Terminal](https://github.com/GamestonkTerminal/GamestonkTerminal/pull/857)! This was a great addition, as it strengthened our **ETF context** and provided a slick Excel report for the Excel fans out there! See his [LinkedIn post](https://www.linkedin.com/feed/update/urn:li:activity:6859887432532291584/) on the experience.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/9ce2dfd0-c891-44f0-b0ae-1a774203bdb7)
+![image](/blog/2021-12-02-sector-and-industry-analysis-gamestonk-terminal_3.png)
 
 ...
 
 Forward to last weekend (1.5 months later), I had a free Sunday afternoon so started working on the development of this menu. I started by thinking about what would make this menu more flexible and powerful.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/942f3089-6cb1-4062-b1be-2bb204a7133d)
+![image](/blog/2021-12-02-sector-and-industry-analysis-gamestonk-terminal_4.png)
 
 These were my thoughts about what it needs:
 
@@ -59,7 +59,7 @@ By Sunday night, I created the [pull request for this](https://github.com/Gamest
 
 After a lot of comments and feedback from the main maintainers, and everyone being happy with this first iteration, the PR got merged. In fact, one of the main maintainers found a hidden gem while testing it.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/e5897fb5-88f2-47c7-88a0-cacb97b15695)
+![image](/blog/2021-12-02-sector-and-industry-analysis-gamestonk-terminal_5.png)
 
 In the meantime, I’ve been in contact with Jeroen about adding some more capabilities to his FinanceDatabase package so that everyone could benefit from them. Some examples are:
 - When an industry is selected, the corresponding sector should be automatically filled.
@@ -68,11 +68,11 @@ In the meantime, I’ve been in contact with Jeroen about adding some more capab
 
 This would not only make the FinanceDatabase a more powerful Package, which would in turn benefit Gamestonk Terminal sia menu, and ultimately our thousands of users!
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/1d0b37e4-6283-4d9e-87cf-a9c547434278)
+![image](/blog/2021-12-02-sector-and-industry-analysis-gamestonk-terminal_6.png)
 
 This is an example of how the Sector and Industry Analysis menu looks (as a bonus I show how you can go into the Comparison Analysis menu):
 
-![image](https://github.com/DidierRLopes/my-website/assets/25267873/f3fac679-0f9f-45fe-9f77-c97b7351e05e)
+![image](/blog/2021-12-02-sector-and-industry-analysis-gamestonk-terminal_7.png)
 
 Next time you know, it all starts with an e-mail. At Gamestonk Terminal we are on a role to have the best investment research terminal, and hope this story reflects it.
 

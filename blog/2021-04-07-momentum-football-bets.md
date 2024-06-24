@@ -2,13 +2,13 @@
 slug: momentum-football-bets
 title: Momentum Football Bets
 date: 2021-04-07
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280495392-fbf8e3ee-21a6-47c0-95f7-97b535a07dd0.png
+image: /blog/2021-04-07-momentum-football-bets.png
 tags: ['Football', 'Betting', 'Momentum', 'Web Scraping', 'Beautiful Soup', 'Python']
 description: In this blogpost, I share how I developed an automated task to estimate the momentum of football teams for betting purposes using Beautiful Soup and Python.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280495392-fbf8e3ee-21a6-47c0-95f7-97b535a07dd0.png"/>
+    <img width="600" src="/blog/2021-04-07-momentum-football-bets.png"/>
 </p>
 
 <br />
@@ -52,7 +52,7 @@ Lastly, I added a confidence filter so that the terminal would only output the g
 
 After having this implemented, the day after was about polishing the code, adding some colouring and emojis, creating a repository for it, a README, discussing the binning of the momentum score and bet confidence terms, creating a logo for it, and creating an executable + adding the logo which my girlfriend did.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/4e16ec33-ae1a-4ade-88a0-c985fe8b8c12)
+![image](/blog/2021-04-07-momentum-football-bets_1.png)
 
 After this, we were quite excited to backtest the app. We filtered the next features with a big confidence bet score (to have less risk), and put 20 pounds on 3 different accumulators. [And it’s gone.](https://www.youtube.com/watch?v=-DT7bX-B1Mg)
 

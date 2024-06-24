@@ -2,13 +2,13 @@
 slug: how-to-grow-your-open-source-community-from-scratch.md
 title: How to grow your open source community from scratch
 date: 2022-11-10
-image: https://github.com/Meg1211/my-website/assets/88618738/ce69575c-01b5-4757-bd0d-6de67a9f5c57
+image: /blog/2022-11-10-how-to-grow-your-open-source-community-from-scratch.png
 tags: ['Open Source', 'Community Building', 'Project Management', 'OpenBB Terminal']
 description: Growing an open source community from scratch is a challenging task. This blogpost shares insights and strategies on how to effectively build and manage an open source community, using the example of the OpenBB Terminal project.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280500093-ce69575c-01b5-4757-bd0d-6de67a9f5c57.png"/>
+    <img width="600" src="/blog/2022-11-10-how-to-grow-your-open-source-community-from-scratch_1.png"/>
 </p>
 
 <br />
@@ -27,7 +27,7 @@ When I started what we call OpenBB Terminal today, the name of the project was �
 
 I am an Elon Musk fan, and was a GameStop investor. This meant that once I saw [this tweet](https://twitter.com/elonmusk/status/1354174279894642703) — I didn’t blink twice and knew this was the name I was waiting for.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/ce69575c-01b5-4757-bd0d-6de67a9f5c57)
+![image](/blog/2022-11-10-how-to-grow-your-open-source-community-from-scratch.png)
 
 That’s when Gamestonk Terminal (now OpenBB Terminal) was born.
 

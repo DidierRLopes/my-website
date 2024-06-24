@@ -2,13 +2,13 @@
 slug: firing-sucks-how-to-avoid-doing-so-by-hiring-a-players
 title: Firing sucks. How to avoid doing so by hiring A players.
 date: 2023-01-02
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280553099-c13a3c1f-b347-4703-b23b-1247c8fcf01e.png
+image: /blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players.png
 tags: ['Hiring', 'Management', 'A Players', 'OpenBB', 'Career Advice']
 description: Firing is tough. This blogpost discusses how to avoid it by hiring A players, improving the hiring process, and understanding the importance of a scorecard in recruitment.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280553099-c13a3c1f-b347-4703-b23b-1247c8fcf01e.png"/>
+    <img width="600" src="/blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players.png"/>
 </p>
 
 <br />
@@ -33,7 +33,7 @@ What is an A player? _A candidate who has at least a 90 percent chance of achiev
 
 In this post, I will go over the steps to get an A team.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/476a3287-d591-4ab2-b261-0c1fed53ca45)
+![image](/blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players_1.png)
 
 ## Scorecard
 
@@ -41,7 +41,7 @@ This is a document that describes the mission for the position, outcomes that mu
 
 This is an example of what a scorecard should look like:
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/e513bd3d-ea16-4d5e-828e-5243846f2161)
+![image](/blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players_2.png)
 
 Let’s go through each of the sections in this document.
 
@@ -248,7 +248,7 @@ These questions follow the same pattern as the other interviews. This makes it v
 
 Does somebody’s skill (what they can do) and will (what they want to do) match your scorecard? This is a person’s skill-will profile.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/9bc79e6d-34b8-41da-8fd2-57b6d9ffdc75)
+![image](/blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players_3.png)
 
 You should have plenty of data at this stage to make this assessment.
 
@@ -329,6 +329,6 @@ Once you have identified the right candidate, you must be persistent and do what
 
 In a more simplistic image, this is what the A method boils down too.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/3b6c111c-1c92-4819-ba71-7251bb21e69f)
+![image](/blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players_4.png)
 
 I really enjoyed reading this book and I am taking a lot of these learnings to improve the hiring processes at OpenBB.

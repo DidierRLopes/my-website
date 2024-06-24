@@ -2,13 +2,13 @@
 slug: handing-your-twitter-account-to-your-most-avid-community-member
 title: Handing your twitter account to your most avid community member
 date: 2021-11-17
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280497451-edb5650f-8c33-4f81-8df5-eb4ee4d48166.png
+image: /blog/2021-11-17-handing-your-twitter-account-to-your-most-avid-community-member.png
 tags: ['Community Building', 'Twitter', 'Open Source', 'Gamestonk Terminal']
 description: Handing over the Twitter account of Gamestonk Terminal to an active community member and the impact it had on the project's growth and engagement.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280497451-edb5650f-8c33-4f81-8df5-eb4ee4d48166.png"/>
+    <img width="600" src="/blog/2021-11-17-handing-your-twitter-account-to-your-most-avid-community-member.png"/>
 </p>
 
 <br />
@@ -23,19 +23,19 @@ When I started [Gamestonk Terminal](https://github.com/GamestonkTerminal/Gamesto
 
 As a result, my social life was impacted and had little time to even cuddle my puppy, due to the amount of feature requests, issues… the usual somehow ungrateful life of an open-source maintainer… I’m not complaining though, as I live for this.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/4cede88f-3d77-4457-ad21-ea68a40b3b20)
+![image](/blog/2021-11-17-handing-your-twitter-account-to-your-most-avid-community-member_1.png)
 
 Moving forward a couple of weeks, it became clear to myself that I was building a strong community around what can/will/should be a leading product in the emerging fintech industry and Internet 3.0. Therefore, I knew that github issues and discussions wouldn’t be enough to interact with all members of the community, so Discord turned out to be the best option going forward (let’s be honest: mostly because of the convenience that Discord offers to share memes, feel free to check my creations on [our Discord](https://discord.gg/2KnVnkDTxM), you can thank me later).
 
 My next rookie mistake was thinking I could use Discord announcements and @ everyone, as a means for updating the community on new features. Being the #1 investment research free and open-source project on github gets you several PRs a day being merged, so in all the fairness the announcements were recurrent with constant several new features. You can check my [one hour live programming stream](https://www.youtube.com/watch?v=9BMI9cleTTg) of adding a feature to the terminal.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/6ec95ad8-3fc8-4c16-9fd3-ca07e305270d)
+![image](/blog/2021-11-17-handing-your-twitter-account-to-your-most-avid-community-member_2.png)
 
 This is when I realized that Discord wasn’t the best place for this type of communication. I needed a platform where I could share these features ad-hoc and that only alerted users who wanted to be up-to-date with our latest features. And this is when I created our [Twitter account](https://twitter.com/gamestonkt), @gamestonkt.
 
 Reviewing the history of our Twitter feed, you can see that this is exclusively what our handle was used for. It just shared new features every day. It felt like I was always playing catchup to the growing number of features piling up in the queue waiting to be announced on Twitter. With the project already having **over 500 features** in less 1 year, this inevitable outcome would be a surprise to no one. (**yup, I repeat, over 500**).
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/1259b899-af0d-4b21-af6e-755408668956)
+![image](/blog/2021-11-17-handing-your-twitter-account-to-your-most-avid-community-member_3.png)
 
 However, I felt like **it missed personality**... With time being a limiting factor — time was more efficiently used improving the terminal — the public facing demonstrations were a lower priority. When you believe this much in a product, the product ends up speaking for itself.
 
@@ -67,6 +67,6 @@ In the future, **our report feature will allow easy sharing of this information*
 
 It made sense to bring this approach to [our Twitter](https://twitter.com/gamestonkt) feed which has since transformed and now offers insights, educational nuggets, and data as well as presenting new features. The end result speaks for itself!
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/edb5650f-8c33-4f81-8df5-eb4ee4d48166)
+![image](/blog/2021-11-17-handing-your-twitter-account-to-your-most-avid-community-member_4.png)
 
 On your end, what is your opinion? And why do you 100% agree that this was the best decision?

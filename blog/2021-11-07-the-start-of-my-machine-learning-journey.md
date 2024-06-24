@@ -2,13 +2,13 @@
 slug: the-start-of-my-machine-learning-journey
 title: The Start of my Machine Learning journey
 date: 2021-11-07
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280497284-2322ff06-a803-458c-9402-6c8ed5cdde27.png
+image: /blog/2021-11-07-the-start-of-my-machine-learning-journey.png
 tags: ['Machine Learning', 'Python', 'Data Science', 'Education', 'Self-Learning']
 description: The start of my journey into the world of Machine Learning, from learning Python to understanding the underlying mathematics of ML algorithms.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280497284-2322ff06-a803-458c-9402-6c8ed5cdde27.png"/>
+    <img width="600" src="/blog/2021-11-07-the-start-of-my-machine-learning-journey.png"/>
 </p>
 
 <br />
@@ -23,7 +23,7 @@ During my studies at [Imperial College London](https://www.imperial.ac.uk/) - 3i
 
 At that time, not only I didn't know python, as `from sklearn.decomposition import PCA` wasn’t allowed. Therefore, we had to write the PCA (and other) algorithms in Matlab from scratch, which was great because it exposed us to the maths behind each algorithm.
 
-![image](https://github.com/DidierRLopes/my-website/assets/25267873/2e527f60-8df6-47e3-bc54-bd10327e8df9)
+![image](/blog/2021-11-07-the-start-of-my-machine-learning-journey_1.png)
 
 The gif above is from my graduation at Royal Albert Hall with a MSc. in Control Systems with Distinction.
 
@@ -39,13 +39,13 @@ After this course, I knew that I had learnt a lot, but I also knew that if I wan
 
 Following this, I was rather confident with my Python skills. Therefore, I wanted to crack-on learning how to use ML algorithms with Python through the beauty of imports. It comes without saying that I had to start from the best-seller **“Hands-on Machine Learning with Scikit-Learn, Keras and TensorFlow”**. This book was what I was expecting and more. From time to time, when I’m working on personal projects, I still flick through it. This book also allowed me to develop many more personal projects (most of them public in [my GitHub](https://github.com/DidierRLopes), as I’m a big Open-Source fan — you should know that as I made [Gamestonk Terminal](https://github.com/GamestonkTerminal/GamestonkTerminal) repository public).
 
-![image](https://github.com/DidierRLopes/my-website/assets/25267873/bc7121c1-9c30-4766-8c83-e8b2ff82b4f9)
+![image](/blog/2021-11-07-the-start-of-my-machine-learning-journey_2.png)
 
 The project that has been my biggest challenge was working with a friend on his PhD thesis entitled _“Modelling and Forecasting of Time-Series: A data science approach that compares classic methodologies with deep learning methodologies”_. Not only interpreting and discussing results but writing the code behind it. S/O to the resources: **“Forecasting: Principles and Practice”** and **“https://machinelearningmastery.com”**. Without these, this work would have been much harder.
 
 Throughout my short journey, I followed many people related with DS. People that I thought that in some shape or form added value through their posts. One of these, was Andriy Burkov. I remember when he started talking about creating the **“The Hundred-Page Machine Learning Book”** and specifically, I remember his Linkedin's poll to select the colour of one of the bubbles for his books' cover. I voted purple; the result was yellow. So, I took the freedom to fix the cover of his book, as you can see below.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/2322ff06-a803-458c-9402-6c8ed5cdde27)
+![image](/blog/2021-11-07-the-start-of-my-machine-learning-journey_3.png)
 
 My gecko Reidid on “The Hundred-Page Machine Learning Book”​, in order to keep industry standards of ML books with reptiles.
 

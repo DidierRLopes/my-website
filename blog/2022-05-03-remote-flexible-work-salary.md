@@ -2,13 +2,13 @@
 slug: remote-flexible-work-salary
 title: Remote + Flexible work >> Salary
 date: 2022-05-03
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499305-ad97cd9d-c836-443c-b333-78a193b3ac99.png
+image: /blog/2022-05-03-remote-flexible-work-salary.png
 tags: ['Remote Work', 'Flexible Hours', 'Work Life Balance', 'Productivity']
 description: This blog post discusses the importance of remote and flexible work hours, and how it can significantly improve work-life balance and productivity.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499305-ad97cd9d-c836-443c-b333-78a193b3ac99.png"/>
+    <img width="600" src="/blog/2022-05-03-remote-flexible-work-salary.png"/>
 </p>
 
 <br />
@@ -67,7 +67,7 @@ All of this to say that at OpenBB we have:
 
 AND this is how I sleep at night having no idea at what time John logged in and out:
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/dbf48e0f-b711-4e57-988a-26a791f8bdaf)
+![image](/blog/2022-05-03-remote-flexible-work-salary_1.png)
 
 Ohhh, and we’re hiring!
 

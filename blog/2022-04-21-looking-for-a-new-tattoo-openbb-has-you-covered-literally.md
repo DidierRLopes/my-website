@@ -2,13 +2,13 @@
 slug: looking-for-a-new-tattoo-openbb-has-you-covered-literally
 title: Looking for a new tattoo? OpenBB has you covered… literally.
 date: 2022-04-21
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499252-fa6ca582-187b-4ddf-9ecf-1e259939f26f.png
+image: /blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally.png
 tags: ['OpenBB', 'Marketing', 'Tattoo', 'Brand Awareness']
 description: Exploring unconventional ways to increase brand visibility, OpenBB's co-founder gets a tattoo of the company logo. This blog post discusses the thought process behind this unique marketing strategy.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499252-fa6ca582-187b-4ddf-9ecf-1e259939f26f.png"/>
+    <img width="600" src="/blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally.png"/>
 </p>
 
 <br />
@@ -29,13 +29,13 @@ That’s why I started thinking of ways to share our OpenBB brand in a non-intru
 
 Funnily enough, the first thing that came to my mind was when I go to the bathroom without my phone. Although there’s no ads on the back of shampoos/shower gel/soap/spray, I would very much welcome them.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/0a8000e0-1a19-4c63-813d-caeb6fd67c9a)
+![image](/blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally_1.png)
 
 It’s not like knowing the %s of ingredients that makes up cleaning products has a lot of use cases…
 
 This brought me to the conclusion that I would only welcome ads if I was bored and didn’t have anything keeping me “too busy”. This immediately made me think of London underground ads (the most effective type of DOOH imho). I always read those ads. The main reason being that I don’t have WiFi underground and the noise is too loud to listen to a podcast. Hence, I imagined the underground looking like:
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/af42f60a-799c-468e-a5e1-b8faf1daf2ad)
+![image](/blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally_2.png)
 
 When I checked for the prices, I was looking at a marketing campaign for a couple of days in a couple of stations costing over 5 digits, which is quite expensive for the short time-span.
 
@@ -45,7 +45,7 @@ This lead me to think: **What about a tattoo?** It’s a similar concept than Op
 
 Later that day I booked a tattoo slot, paid 100 euros, and got the OpenBB logo on the back of my arm as shown below,
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/fa6ca582-187b-4ddf-9ecf-1e259939f26f)
+![image](/blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally_3.png)
 
 I will let you know on my socials how many people ask about this tattoo over the course of my life.
 

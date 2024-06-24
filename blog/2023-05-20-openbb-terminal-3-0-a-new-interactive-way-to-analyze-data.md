@@ -2,13 +2,13 @@
 slug: openbb-terminal-3-0-a-new-interactive-way-to-analyze-data
 title: OpenBB Terminal 3.0 - a new interactive way to analyze data
 date: 2023-05-20
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280555000-742ced72-3eab-4412-9002-27265c937b04.png
+image: /blog/2023-05-20-openbb-terminal-3-0-a-new-interactive-way-to-analyze-data.png
 tags: ['OpenBB', 'OpenBB Terminal', 'Interactive Charts', 'Interactive Tables', 'Data Analysis', 'Open Source']
 description: A game-changing update to OpenBB Terminal, introducing interactive charts and tables, empowering users with a new way to analyze data.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280555000-742ced72-3eab-4412-9002-27265c937b04.png"/>
+    <img width="600" src="/blog/2023-05-20-openbb-terminal-3-0-a-new-interactive-way-to-analyze-data.png"/>
 </p>
 
 <br />

@@ -2,13 +2,13 @@
 slug: 12-things-i-learned-in-2023
 title: 12 Things I Learned in 2023
 date: 2024-01-22
-image: https://github.com/DidierRLopes/my-website/assets/25267873/4282e396-9f42-42aa-90aa-62624dd8f1c2
+image: /blog/2024-01-22-12-things-i-learned-in-2023.png
 tags: ['learning', 'experience', 'growth']
 description: The 12 things I learned in 2023
 ---
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/4282e396-9f42-42aa-90aa-62624dd8f1c2"/>
+    <img width="600" src="/blog/2024-01-22-12-things-i-learned-in-2023.png"/>
 </p>
 
 <br />

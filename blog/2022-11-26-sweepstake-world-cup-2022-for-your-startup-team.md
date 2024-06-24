@@ -2,13 +2,13 @@
 slug: sweepstake-world-cup-2022-for-your-startup-team
 title: Sweepstake World Cup 2022 for your startup team
 date: 2022-11-26
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280552072-ba486af7-2579-4c00-a575-278cb74faeb6.png
+image: /blog/2022-11-26-sweepstake-world-cup-2022-for-your-startup-team.png
 tags: ['World Cup 2022', 'Startup Team', 'Sweepstake', 'Team Building', 'Slack Bot']
 description: In this blogpost, we share how we organized a World Cup 2022 sweepstake for our startup team as a team building activity, and how we built a slack bot to facilitate discussions around the event.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280552072-ba486af7-2579-4c00-a575-278cb74faeb6.png"/>
+    <img width="600" src="/blog/2022-11-26-sweepstake-world-cup-2022-for-your-startup-team.png"/>
 </p>
 
 <br />
@@ -29,7 +29,7 @@ The next step was to assign teams to each employee, so at the end of our all han
 
 This allowed us to spin the wheel of team members and then spin wheel of countries, and get a 1:1 match — it was quite funny to have everyone involved and see the reactions as the wheel was slowing down.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/ab35cfc3-143f-43bf-b345-0999289a4442)
+![image](/blog/2022-11-26-sweepstake-world-cup-2022-for-your-startup-team_1.png)
 
 **Most companies stop here.**
 
@@ -47,7 +47,7 @@ So I built one using Python which you can find [here](https://github.com/DidierR
 
 This is the notification that the #worldcup-2022 receives everyday after all the matches have been played.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/7e91f7e9-b085-455f-9768-4da69d409c52)
+![image](/blog/2022-11-26-sweepstake-world-cup-2022-for-your-startup-team_2.png)
 
 The outcome has been great so far! Our team engagement is even higher than usual and we see team members that don’t work directly with each other having the opportunity to get to know others better.
 

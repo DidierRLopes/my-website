@@ -2,13 +2,13 @@
 slug: fully-free-financial-chatbot
 title: Fully free financial chatbot
 date: 2023-05-09
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280554646-7c937b83-3087-4bf9-8c06-27f7e042ad04.png
+image: /blog/2023-05-09-fully-free-financial-chatbot.png
 tags: ['OpenBB Bot', 'Financial Chatbot', 'Investment', 'Free', 'Discord', 'Telegram', 'Equity', 'Crypto', 'Options', 'Darkpool', 'Economy']
 description: The OpenBB Bot is a financial chatbot that allows you to access financial data from Discord or Telegram along with other users. From equity data to crypto, options, darkpool, economy and much more! Now available for free to registered users.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280554646-7c937b83-3087-4bf9-8c06-27f7e042ad04.png"/>
+    <img width="600" src="/blog/2023-05-09-fully-free-financial-chatbot.png"/>
 </p>
 
 <br />
@@ -33,7 +33,7 @@ Registered users for OpenBB Bot will see the following changes:
 
 Below is a video of what the OpenBB Bot is capable of:
 
-![1_d1vD4AkwpYk42tdbHuMupQ](https://github.com/DidierRLopes/my-website/assets/25267873/b72852e8-ec33-4ec0-aa0e-6ea6290e3e20)
+![1_d1vD4AkwpYk42tdbHuMupQ](/blog/2023-05-09-fully-free-financial-chatbot_1.png)
 
 The interactive charts will open up within the [OpenBB Hub](https://my.openbb.co/) and in it you will be able to fully customize the technical analysis indicators that you see on the chart and even the candle chart color theme and type. A demo is shown below,
 
@@ -53,6 +53,6 @@ You can actually see how many users we have utilizing the bot on a daily basis o
 
 While others zig, we zag. Here’s the updated pricing:
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/7c937b83-3087-4bf9-8c06-27f7e042ad04)
+![image](/blog/2023-05-09-fully-free-financial-chatbot_2.png)
 
 Looking forward to feedback!

@@ -2,13 +2,13 @@
 slug: the-new-finai-tech-stack
 title: The new FinAI Tech Stack
 date: 2023-12-15
-image: https://github.com/DidierRLopes/my-website/assets/25267873/8dfd85c1-c1c3-4d7b-bd38-ce777c8a8dd7
+image: /blog/2023-12-15-the-new-finai-tech-stack.png
 tags: ['openbb', 'finance', 'ai', 'agents', 'langchain', 'llamaindex', 'mindsdb', 'nixtla']
 description: This blog post delves into how our collaboration with MindsDB, Nixtla, LlamaIndex, and Langchain is revolutionizing the financial world. Read on to learn all about the event "The New FinAI Tech Stack" held last week in SF, California.
 ---
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/8dfd85c1-c1c3-4d7b-bd38-ce777c8a8dd7"/>
+    <img width="600" src="/blog/2023-12-15-the-new-finai-tech-stack.png"/>
 </p>
 
 <br />
@@ -26,7 +26,7 @@ In early September, I attended a “Future of Finance” event in NYC. Despite t
 Once I was back in the Bay Area, I had a barbecue with Jorge and Max from MindsDB and Nixtla, and I was commenting on that experience. To which Jorge promptly replied - why don’t we do it ourselves? So following this discussion, we decided to put the AI in finance event in motion.
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/4c44a976-1257-4ace-b874-a6dc2f98e82f"/>
+    <img width="600" src="/blog/2023-12-15-the-new-finai-tech-stack_1.png"/>
 </p>
 
 At OpenBB, AI has become a key component in our approach to refactoring the OpenBB Platform from the ground up. We've recently recruited a Head of AI to help us build our strategy and work on this effort full-time.
@@ -34,7 +34,7 @@ At OpenBB, AI has become a key component in our approach to refactoring the Open
 You can find more details on this [here](/blog/revolutionizing-ai-at-openbb-with-new-leader-michael-struwig).
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/4bff3f1f-51a0-43a8-acff-2464fe3e9e0b"/>
+    <img width="600" src="/blog/2023-12-15-the-new-finai-tech-stack_2.png"/>
 </p>
 
 ## OpenBB x MindsDB
@@ -98,7 +98,7 @@ Over time I iterated on it to make the agent more robust, but the improvement on
 So at the event, Harrison presented this architecture which heavily relies on Langchain and OpenBB tools.
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/04d6b023-b6ab-4fe6-8d5c-4a071731611a"/>
+    <img width="600" src="/blog/2023-12-15-the-new-finai-tech-stack_3.png"/>
 </p>
 
 Later on, I demonstrated how we can integrate this architecture into OpenBB Copilot and make it available from the OpenBB Terminal Pro.

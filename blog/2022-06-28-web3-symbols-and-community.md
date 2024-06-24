@@ -2,13 +2,13 @@
 slug: web3-symbols-and-community
 title: Web3, symbols and community
 date: 2022-06-28
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499534-10b469e9-60ba-4458-b5b9-853cbffa5680.png
+image: /blog/2022-06-28-web3-symbols-and-community.png
 tags: ['Web3', 'Community', 'Decentralization', 'Blockchain', 'Smart Contracts']
 description: This blog post discusses the importance of strong communities in the Web 3.0 space, the role of decentralization, and how voting frameworks based on smart contracts can empower users.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499534-10b469e9-60ba-4458-b5b9-853cbffa5680.png"/>
+    <img width="600" src="/blog/2022-06-28-web3-symbols-and-community.png"/>
 </p>
 
 <br />
@@ -47,7 +47,7 @@ Once this happens we enter into the law of supply and demand where the value of 
 
 These communities can easily be found on CT or Discord/Telegram servers.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/10b469e9-60ba-4458-b5b9-853cbffa5680)
+![image](/blog/2022-06-28-web3-symbols-and-community_1.png)
 
 ### How are strong communities created?
 
@@ -62,7 +62,7 @@ This can be seen over and over again on Web3, particularly in CT:
 - Utilizing the NFT you acquired from a collection that you believe in
 - Adding a “.eth” at the end of the username
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/360569e7-4168-40ac-add3-096000691e87)
+![image](/blog/2022-06-28-web3-symbols-and-community_2.png)
 
 ### Why does this matter?
 
@@ -84,20 +84,20 @@ In order for our users to start relating to the butterfly emoji (🦋) with our 
 
 - On the landing page
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/d491e338-8570-4a86-a8a6-48ac95264121)
+![image](/blog/2022-06-28-web3-symbols-and-community_3.png)
 
 - Official social media channels
 - Our team members use it in their socials
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/cbfca912-0c96-40f5-b8f6-3c1e9645ee82)
+![image](/blog/2022-06-28-web3-symbols-and-community_4.png)
 
 - On the OpenBB Terminal as the default flair,
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/7d8dcf03-c340-4b35-8255-920b75daac71)
+![image](/blog/2022-06-28-web3-symbols-and-community_5.png)
 
 And even to replace the asterisk (*) when inserting the password to enter our OpenBB Bot platform, **because details matter.**
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/b6088f2a-5ec2-42f8-adef-e4dcf1e6e812)
+![image](/blog/2022-06-28-web3-symbols-and-community_6.png)
 
 And that is what we are doing at OpenBB to build a stronger community? Do you have any other tips/tricks? Feel free to share them!
 

@@ -2,13 +2,13 @@
 slug: become-an-openbb-champion
 title: Become an OpenBB Champion
 date: 2023-06-10
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280555162-2846370c-0bf8-4694-98e8-90a5c291fa64.png
+image: /blog/2023-06-10-become-an-openbb-champion.png
 tags: ['OpenBB', 'OpenBB Champion', 'Investment Research', 'Open Source', 'Community']
 description: Become an OpenBB Champion and join our passionate community. Share your experiences with our innovative products and help us democratize investment research through an open source approach.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280555162-2846370c-0bf8-4694-98e8-90a5c291fa64.png"/>
+    <img width="600" src="/blog/2023-06-10-become-an-openbb-champion.png"/>
 </p>
 
 <br />
@@ -28,7 +28,7 @@ Whether you utilize the [OpenBB Terminal](https://my.openbb.co/app/terminal) to 
 To qualify as an OpenBB Champion, you need to be an active user of one of our products and be willing to share your valuable experiences with our team. We’re eager to learn more about your journey with OpenBB and how our products have transformed your workflow.
 
 <p align="center">
-    <img width="400" src="https://github.com/Meg1211/my-website/assets/88618738/52456ea1-4455-45d9-86cb-4d31fb973c39"/>
+    <img width="400" src="/blog/2023-06-10-become-an-openbb-champion_1.png"/>
 </p>
 
 <br />

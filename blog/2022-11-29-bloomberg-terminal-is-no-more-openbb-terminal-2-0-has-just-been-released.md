@@ -2,13 +2,13 @@
 slug: bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released
 title: Bloomberg Terminal is no more. OpenBB Terminal 2.0 has just been released.
 date: 2022-11-29
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280552161-b13ac1ec-2ffd-4f25-846a-ce0fff4465d3.png
+image: /blog/2022-11-29-bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released.png
 tags: ['OpenBB Terminal 2.0', 'Investment Research', 'Financial Data', 'AI', 'ML', 'SDK']
 description: OpenBB Terminal 2.0 has been released. This blog post discusses the new features and improvements, including the release of OpenBB SDK, a state-of-the-art AI/ML toolkit for the financial industry, and the vision for a community-driven investment research platform.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280552161-b13ac1ec-2ffd-4f25-846a-ce0fff4465d3.png"/>
+    <img width="600" src="/blog/2022-11-29-bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released.png"/>
 </p>
 
 <br />
@@ -38,11 +38,11 @@ A summary:
 
 The SDK will allow users to create report templates in a matter of minutes and run them for custom tickers at any time in a matter of seconds; Instead of spending hours and starting a report from scratch every single time. We envision a world where the community can share these and help each other at becoming better investors.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/1223b162-6742-4cf8-a052-6f949873a0dd)
+![image](/blog/2022-11-29-bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released_1.png)
 
 - We are also bringing a state-of-the-art AI / ML toolkit to the financial industry, to be used alongside all the data sources our platform has access to (stocks, crypto, NFTs, options, forex, ETFs, mutual funds, macro economic data and even alternative data).
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/f2994ea5-759c-4d5a-9e17-28658f093515)
+![image](/blog/2022-11-29-bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released_2.png)
 
 For more information, you can read our announcement here: https://openbb.co/blog/openbb-terminal-2-acai
 

@@ -2,13 +2,13 @@
 slug: how-i-created-the-best-discord-meme-bot
 title: How I created the best discord meme bot
 date: 2022-04-09
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499097-f324321b-d438-4838-b0a0-e3155611538a.png
+image: /blog/2022-04-09-how-i-created-the-best-discord-meme-bot.png
 tags: ['Discord', 'Meme Bot', 'Open Source', 'Community Building']
 description: In this blog post, I share my journey of creating a Discord meme bot, the role it played in building a vibrant community around our open source project, and how you can add your own memes to the bot.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499097-f324321b-d438-4838-b0a0-e3155611538a.png"/>
+    <img width="600" src="/blog/2022-04-09-how-i-created-the-best-discord-meme-bot.png"/>
 </p>
 
 <br />
@@ -80,11 +80,11 @@ I used a playground.ipynb notebook, which is also on the repo, to increase the s
 
 This is how it looks,
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/f6b1ea15-40f8-4ebc-bbf8-209b502f943d)
+![image](/blog/2022-04-09-how-i-created-the-best-discord-meme-bot_1.png)
 
 OR
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/f324321b-d438-4838-b0a0-e3155611538a)
+![image](/blog/2022-04-09-how-i-created-the-best-discord-meme-bot_2.png)
 
 As you can see, our Discord server just stepped up. [Join us](https://openbb.co/discord) to try out the meme bot, build the future of investment research or just to say hi.
 

@@ -2,13 +2,13 @@
 slug: stop-doing-your-cv-in-word-or-latex
 title: Stop doing your CV in Word or LaTeX
 date: 2022-10-15
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499727-cfdd5535-25eb-4573-ba5a-aa7cbafb1255.png
+image: /blog/2022-10-15-stop-doing-your-cv-in-word-or-latex.png
 tags: ['GitHub', 'CV', 'Career', 'Open Source', 'Developer']
 description: The future of CVs for engineers and developers lies within GitHub. This post discusses why GitHub profiles are becoming the new CVs and how they can provide a more comprehensive view of a candidate's skills and contributions.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280499727-cfdd5535-25eb-4573-ba5a-aa7cbafb1255.png"/>
+    <img width="600" src="/blog/2022-10-15-stop-doing-your-cv-in-word-or-latex.png"/>
 </p>
 
 <br />
@@ -27,7 +27,7 @@ In my humble opinion, this isn’t being talked enough. Previously, you needed a
 
 This is my current [GitHub profile page](https://github.com/DidierRLopes).
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/97106218-c1d7-4f54-ae7d-e566bb126b71)
+![image](/blog/2022-10-15-stop-doing-your-cv-in-word-or-latex_1.png)
 
 My profile page is now much simpler since I’ve worked on my [own personal website](https://didierrlopes.github.io/personal-website/), but you can see [here](https://github.com/DidierRLopes/DidierRLopes/tree/98c27cfb087fc8ce6986f4ea8136e76ca14f145b) what my GitHub profile page looked like before. Creating your own personalized website for me is the next step after GitHub, as you can be as creative as you want while showing off your coding skills.
 
@@ -37,7 +37,7 @@ The reason I think that GitHub profile’s are the CVs of the future for enginee
 
 With products like: https://ossinsight.io/analyze/DidierRLopes, you will be able to dive deeper on engineering skills than ever before.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/cfdd5535-25eb-4573-ba5a-aa7cbafb1255)
+![image](/blog/2022-10-15-stop-doing-your-cv-in-word-or-latex_2.png)
 
 Companies will be able to assess a candidate based on their open source work:
 
@@ -51,7 +51,7 @@ Companies will be able to assess a candidate based on their open source work:
 
 Imagine a world where everyone develops in the wild. You can see everything and be part of any project. You have your own profile, you talk with others through issues or PRs, you build together. There is no gender, no race, no nationality,.. people are conneced through projects they believe in. **In essence, this is the developer metaverse, and I’m all here for it.**
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/d98a8384-4230-42d8-8ea3-0d43e0199735)
+![image](/blog/2022-10-15-stop-doing-your-cv-in-word-or-latex_3.png)
 
 **EDIT:** The reader should be aware that nowadays a properly formatted resume is still critical when added to a job board. This is because automated resume readers expect a certain format in order to recommend candidates to companies and vice-versa.
 

@@ -2,13 +2,13 @@
 slug: how-to-handle-equity-at-a-seed-stage-startup-from-silicon-valley
 title: How to handle equity at a seed-stage startup from Silicon Valley
 date: 2023-08-03
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280556768-c4d5f9ed-d2b4-4faf-802d-1de3e3e83d71.png
+image: /blog/2023-08-03-how-to-handle-equity-at-a-seed-stage-startup-from-silicon-valley.png
 tags: ['startup', 'equity', 'Silicon Valley', 'seed-stage', 'OpenBB']
 description: A step-by-step guide on how to handle equity at a seed-stage startup, using a fictional example from OpenBB.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280556768-c4d5f9ed-d2b4-4faf-802d-1de3e3e83d71.png"/>
+    <img width="600" src="/blog/2023-08-03-how-to-handle-equity-at-a-seed-stage-startup-from-silicon-valley.png"/>
 </p>
 
 <br />
@@ -41,7 +41,7 @@ The Option Guidelines are an Excel spreadsheet approved by the board. In this do
 
 Here’s what the document looks like:
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/c4d5f9ed-d2b4-4faf-802d-1de3e3e83d71)
+![image](/blog/2023-08-03-how-to-handle-equity-at-a-seed-stage-startup-from-silicon-valley_1.png)
 The total number of shares is random and not representative of OpenBB.
 
 First, you need to ask yourself what roles your company envisions needing. Within those roles, there are two things to consider:
@@ -62,13 +62,13 @@ On the top left of the document, we will insert the number of shares, which is 1
 
 Let’s go through a fake example for the SW role:
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/39ea2b1f-af4b-45b1-be7d-ba88f4c03c40)
+![image](/blog/2023-08-03-how-to-handle-equity-at-a-seed-stage-startup-from-silicon-valley_2.png)
 
 The column “Low Shrs” is computed by multiplying the % LOW by the total number of shares. On the other hand, the column “High Shrs” is computed by multiplying the % HIGH by the total number of shares. This value is important as it represents the amount stipulated in the contract.
 
 Let’s consider a scenario where the company is in the Pre-Profit stage with Production Revenue, and we want to hire an Engineering IC. Based on our assessment of their skillset and fairness in comparison to other team members, we would offer a contract that vests over time between 1000 and 2000 shares.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/b84e4085-b26c-41a5-87cc-7667fe279d62)
+![image](/blog/2023-08-03-how-to-handle-equity-at-a-seed-stage-startup-from-silicon-valley_3.png)
 
 Next, you need to decide on the vesting calendar that the company supports. The most common option is a 4-year vesting schedule with a 1-year cliff. This means that while you begin vesting during your first year, you need to stay with the company for the entire year to be able to exercise those options. The 1-year cliff protects the company from employees leaving early or underperforming.
 

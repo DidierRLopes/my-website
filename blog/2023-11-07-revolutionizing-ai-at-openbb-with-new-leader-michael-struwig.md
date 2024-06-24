@@ -2,13 +2,13 @@
 slug: revolutionizing-ai-at-openbb-with-new-leader-michael-struwig
 title: Revolutionizing AI at OpenBB with new leader, Michael Struwig
 date: 2023-11-07
-image: https://github.com/DidierRLopes/my-website/assets/25267873/e14614a5-7ec0-408d-9d49-85392d82ebeb
+image: /blog/2023-11-07-revolutionizing-ai-at-openbb-with-new-leader-michael-struwig.png
 tags: ['ai', 'openbb', 'startup', 'finance', 'hiring']
 description: With the launch of the OpenBB Terminal Pro approaching, we're excited to announce the hiring of Michael Struwig, a Ph.D. with expertise in AI and quantitative finance. Michael will help us to further our AI capabilities, reinforcing our commitment to innovation in the open-source finance space.
 ---
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/e14614a5-7ec0-408d-9d49-85392d82ebeb"/>
+    <img width="600" src="/blog/2023-11-07-revolutionizing-ai-at-openbb-with-new-leader-michael-struwig.png"/>
 </p>
 
 <br />
@@ -39,7 +39,7 @@ These features allow us to bring AI to our platform from the ground up, and thin
 For instance this is an extension that James added to the OpenBB Platform.
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/d819e1cc-1459-4bb6-9130-0c9a6ad26afa"/>
+    <img width="600" src="/blog/2023-11-07-revolutionizing-ai-at-openbb-with-new-leader-michael-struwig_1.png"/>
 </p>
 
 There are a lot of products out there utilizing generative AI for finance. Most of these can be classified as:
@@ -57,14 +57,14 @@ Some examples below:
 <br />
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/fc67ec33-523b-43c8-9856-3f692f092c0d"/>
+    <img width="600" src="/blog/2023-11-07-revolutionizing-ai-at-openbb-with-new-leader-michael-struwig_2.png"/>
 </p>
 
 <li>Ask more detailed questions to your widgets like earnings transcript or even insider trading</li>
 <br />
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/35999cbd-4012-4dd0-a492-e625ada2cbcf"/>
+    <img width="600" src="/blog/2023-11-07-revolutionizing-ai-at-openbb-with-new-leader-michael-struwig_3.png"/>
 </p>
 
 <li>And more.</li>

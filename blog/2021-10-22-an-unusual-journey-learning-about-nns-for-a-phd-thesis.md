@@ -2,12 +2,12 @@
 slug: an-unusual-journey-learning-about-nns-for-a-phd-thesis
 title: An unusual journey learning about NNs for a PhD thesis
 date: 2021-10-22
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280497057-46ba8ff7-2f83-4fc4-8fed-350fc18246da.png
+image: /blog/2021-10-22-an-unusual-journey-learning-about-nns-for-a-phd-thesis.png
 tags: ['PhD Thesis', 'Neural Networks', 'Python', 'Time Series Forecasting']
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280497057-46ba8ff7-2f83-4fc4-8fed-350fc18246da.png"/>
+    <img width="600" src="/blog/2021-10-22-an-unusual-journey-learning-about-nns-for-a-phd-thesis.png"/>
 </p>
 
 <br />
@@ -40,14 +40,14 @@ During this time, Filipe was also working full-time as he was a teaching assista
 
 My character waiting for people to join my chatroom to discuss our poster.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/9222b0c5-4620-4eb1-88d3-a68a2eb71e1b)
+![image](/blog/2021-10-22-an-unusual-journey-learning-about-nns-for-a-phd-thesis_1.png)
 
 Last week, at XXV Congress of the Portuguese Statistical Society (SPE 2021), we presented:
 
 - A poster that you can find [here](https://www.researchgate.net/publication/355360806_Forecasting_models_for_time-series_a_comparative_study_between_classical_methodologies_and_Deep_Learning), titled: _“Forecasting models for time-series: a comparative study between classical methodologies and Deep Learning”_
 - A presentation that you can find [here](https://www.researchgate.net/publication/355360897_Explorando_o_poder_da_memoria_das_redes_neuronais_LSTM_na_modelacao_e_previsao_do_PSI_20), titled: _“Explorando o poder da memória das redes neuronais LSTM na modelação e previsão do PSI 20”_
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/c5921349-99d1-46bf-878f-0ecfaedf2b1e)
+![image](/blog/2021-10-22-an-unusual-journey-learning-about-nns-for-a-phd-thesis_2.png)
 
 The poster above was presented at XXV Congress of the Portuguese Statistical Society (SPE 2021).
 

@@ -2,13 +2,13 @@
 slug: introducing-the-openbb-add-in-for-excel
 title: Introducing the OpenBB Add-in for Excel
 date: 2024-01-17
-image: https://github.com/DidierRLopes/my-website/assets/25267873/4ca4c4a8-99bd-45b8-b7c9-3a43577c620e
+image: /blog/2024-01-17-introducing-the-openbb-add-in-for-excel.png
 tags: ['excel', 'launch', 'openbb', 'announcement']
 description: We acknowledged the enduring centrality of Excel in the financial sector, so we're now making data from the Terminal Pro readily available in Excel. We're also excitedly working to integrate the "Bring Your Own Data" feature into our Excel Add-in, a move we foresee as a transformative step in the financial data industry.
 ---
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/4ca4c4a8-99bd-45b8-b7c9-3a43577c620e"/>
+    <img width="600" src="/blog/2024-01-17-introducing-the-openbb-add-in-for-excel.png"/>
 </p>
 
 <br />
@@ -42,7 +42,7 @@ But as we do for all our products, we wanted to understand where this product wo
 Since the Terminal Pro offers a basic data tier (including historical price, fundamentals, analyst estimates, news, macro-economy, and forex) with redistribution rights, we decided to make those same datasets available in Excel.
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/9a37a99b-cc82-42a6-a322-4db6e0d124da"/>
+    <img width="600" src="/blog/2024-01-17-introducing-the-openbb-add-in-for-excel_1.png"/>
 </p>
 
 ## Getting Started
@@ -56,7 +56,7 @@ You can read more information about it in our [Documentation](https://docs.openb
 This is how it looks:
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/5e8e2dbd-000e-4f84-8fce-654117b1ddf7"/>
+    <img width="600" src="/blog/2024-01-17-introducing-the-openbb-add-in-for-excel_2.png"/>
 </p>
 
 This was a huge step for us.
@@ -74,13 +74,13 @@ We figured that enterprise users would be interested in accessing the data they 
 So we allowed them to get the Excel function directly from each widget:
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/3cfc1276-ee52-4759-8903-eff92542ece9"/>
+    <img width="600" src="/blog/2024-01-17-introducing-the-openbb-add-in-for-excel_3.png"/>
 </p>
 
 After clicking on the “Functions” button in the ellipsis icon of the widget data you are interested in, this is what a user sees:
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/c6c6c5de-fdb9-4a02-9530-f9a1d039527f"/>
+    <img width="600" src="/blog/2024-01-17-introducing-the-openbb-add-in-for-excel_4.png"/>
 </p>
 
 ## Templates
@@ -88,13 +88,13 @@ After clicking on the “Functions” button in the ellipsis icon of the widget 
 Since [OpenBB Terminal Pro](https://my.openbb.co/app/pro) users are used to the templates they have access to with our product, e.g. our equity analyst template:
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/09c074fd-e6e1-4c53-90bc-14451b585d1a"/>
+    <img width="600" src="/blog/2024-01-17-introducing-the-openbb-add-in-for-excel_5.png"/>
 </p>
 
 We ensured that similar templates were available for the Excel Add-in, and you can find them [here](https://my.openbb.co/app/excel/templates).
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/7b3be142-ee3e-4023-b4a3-c04443225f12"/>
+    <img width="600" src="/blog/2024-01-17-introducing-the-openbb-add-in-for-excel_6.png"/>
 </p>
 
 ## What's Next

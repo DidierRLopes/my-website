@@ -2,13 +2,13 @@
 slug: why-the-need-for-an-open-source-investment-research-platform
 title: Why the need for an open source investment research platform?
 date: 2023-07-16
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280555950-76a539bb-bb5a-46a8-b4ab-d2875a697921.png
+image: /blog/2023-07-16-why-the-need-for-an-open-source-investment-research-platform.png
 tags: ['Open Source', 'Investment Research', 'Data Licensing', 'Transparency', 'Community']
 description: OpenBB Terminal, an open-source investment research platform, is transforming the financial industry by addressing issues like data licensing, full-price bundle, lack of transparency and customization, and the need for a diverse community. This post explores why open source is crucial for us and the main problems in the space.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280555950-76a539bb-bb5a-46a8-b4ab-d2875a697921.png"/>
+    <img width="600" src="/blog/2023-07-16-why-the-need-for-an-open-source-investment-research-platform.png"/>
 </p>
 
 <br />
@@ -25,7 +25,7 @@ The [OpenBB Terminal](https://github.com/OpenBB-finance/OpenBBTerminal) is the p
 
 This number kept on growing along with the community (most of which gathers on [our Discord server](http://openbb.co/discord)) and allowed us to create the company OpenBB, see the story [here](http://openbb.co/blog/gme-didnt-take-me-to-the-moon-but-gamestonk-terminal-did).
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/d7b91689-b820-40bb-88cd-e41e15a227f6)
+![image](/blog/2023-07-16-why-the-need-for-an-open-source-investment-research-platform_1.png)
 
 But why is open source so important for us? To understand this, it’s important for us go over the main problems in the space.
 
@@ -72,10 +72,10 @@ OpenBB has been driven a lot by the community so far. What started as a terminal
 
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/9c1b32d4-1efb-4dd4-b1fe-3b8be17f3fc4)
+![image](/blog/2023-07-16-why-the-need-for-an-open-source-investment-research-platform_2.png)
 
 We are close to 23,000 stars. If you haven’t already, starring our project would mean the world.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/f285e5dc-7765-4aab-8bb8-2e1e58493e86)
+![image](/blog/2023-07-16-why-the-need-for-an-open-source-investment-research-platform_3.png)
 
 Any feedback is welcome 🙏🏽

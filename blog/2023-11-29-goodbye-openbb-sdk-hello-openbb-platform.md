@@ -2,13 +2,13 @@
 slug: goodbye-openbb-sdk-hello-openbb-platform
 title: Goodbye OpenBB SDK. Hello OpenBB Platform
 date: 2023-11-29
-image: https://github.com/DidierRLopes/my-website/assets/25267873/628d34ee-a2a5-4be7-ae76-4b455bc2f1fd
+image: /blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform.png
 tags: ['openbb', 'platform', 'sdk', 'core', 'extensions']
 description: Today, we are thrilled to announce the new OpenBB SDK, a game-changing platform that is now divided into the robustness of OpenBB Core and the limitless potential of OpenBB extensions.
 ---
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/628d34ee-a2a5-4be7-ae76-4b455bc2f1fd"/>
+    <img width="600" src="/blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform.png"/>
 </p>
 
 <br />
@@ -86,19 +86,19 @@ In order to adhere to one of OpenBB's core values - Transparency - we want you t
 So, for the first time, we're sharing a confidential email thread that circulated among our entire team. This thread provides insight into our thought process when it comes to handling large projects at OpenBB.
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/b95a1bc1-d256-472f-8458-6c56878fee1e"/>
+    <img width="600" src="/blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform_1.png"/>
 </p>
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/8e54299f-df2e-40d8-9416-a03a7cb6b7b7"/>
+    <img width="600" src="/blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform_2.png"/>
 </p>
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/e538c600-b717-496e-94e6-1d811b5ebd35"/>
+    <img width="600" src="/blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform_3.png"/>
 </p>
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/72125cd9-d062-49f1-8496-533756b21fcd"/>
+    <img width="600" src="/blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform_4.png"/>
 </p>
 
 Over the next few weeks we will keep iterating on our Platform, based on user feedback, so we can keep pushing for a platform that can be adopted by everyone - from professional investors, data scientists, quants, to students.

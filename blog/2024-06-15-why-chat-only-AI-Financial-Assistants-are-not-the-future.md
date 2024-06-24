@@ -2,13 +2,13 @@
 slug: why-chat-only-AI-Financial-Assistants-are-not-the-future
 title: Why chat-only AI Financial Assistants are not the future
 date: 2024-06-15
-image: https://github.com/DidierRLopes/my-website/assets/25267873/20c98336-49d8-46a2-9709-3b5d037c1b07
+image: /blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future.png
 tags: ['finance', 'ai', 'openbb', 'chat', 'finance assistant', 'chatgpt', 'perplexity', 'investment research']
 description: Financial assistants structured like ChatGPT are great for quick searches but fall short for comprehensive investment research. 
 ---
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/20c98336-49d8-46a2-9709-3b5d037c1b07"/>
+    <img width="600" src="/blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future.png"/>
 </p>
 
 Financial assistants structured like ChatGPT are great for quick searches but fall short for comprehensive investment research. They are limited by their one-dimensional approach, which hinders efficient data retrieval and long-term usability. Read on to discover how OpenBB Terminal Pro addresses these issues with a three-dimensional solution.
@@ -38,7 +38,7 @@ Let me explain why and how OpenBB differs from them.
 Financial assistants are, in general, 1-dimensional. By that, I mean that all you have on a screen is a “dashboard” with an unlimited y-axis (1 single dimension).
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/1dee6889-fa27-4dc1-8a5d-ee0bdd9d0fa1"/>
+    <img width="600" src="/blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future_1.png"/>
 </p>
 
 This means that whatever information they output will always be in the same position, which is great for the short term.
@@ -54,7 +54,7 @@ The problem with this approach is that you can’t easily find data within one o
 How do we handle those issues? We have 3 dimensions.
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/df35b86d-8305-4932-9963-eb2f272430bf"/>
+    <img width="600" src="/blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future_2.png"/>
 </p>
 
 Our Terminal Pro has a Copilot on the side, similar to other financial assistants.
@@ -92,7 +92,7 @@ The current level of AI is equivalent to having a smart intern that you would ne
 This is why our Copilot always answers based on data that is readily available on the dashboard — and (due to our “Bring Your Own Data” technology) that data can be brought by your firm rather than being limited to what we offer out of the box.
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/6dc12b25-e6e4-490b-bb1f-b42c8b289fb7"/>
+    <img width="600" src="/blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future_3.png"/>
 </p>
 
 ## Financial chats are not collaborative
@@ -118,7 +118,7 @@ And guess what?
 This can be considered yet another dimension that we allow users to explore.
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/64086fac-c601-4b3c-946b-4a453dd94205"/>
+    <img width="600" src="/blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future_4.png"/>
 </p>
 
 ## Wrap up

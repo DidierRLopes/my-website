@@ -2,13 +2,13 @@
 slug: the-role-of-ai-and-openbb-in-the-future-of-investment-research
 title: The role of AI and OpenBB in the future of investment research
 date: 2023-04-03
-image: https://github.com/DidierRLopes/my-website/assets/25267873/ed54bfac-5457-43a3-9235-b7f1ad46321f
+image: /blog/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research.png
 tags: ['OpenAI', 'future', 'ChatGPT', 'Discord']
 description: How OpenBB can lead the future of finance using AI on top of an open source investment research platform.
 ---
 
 <p align="center">
-    <img width="600" src="https://github.com/DidierRLopes/my-website/assets/25267873/ed54bfac-5457-43a3-9235-b7f1ad46321f"/>
+    <img width="600" src="/blog/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research.png"/>
 </p>
 
 <br />
@@ -55,7 +55,7 @@ The screenshot below shows that ChatGPT can accurately return the right OpenBB c
 
 EDIT: Bloomberg introduced [BloombergGPT](https://openai.com/research/whisper) last week, and the following screenshot is taken from their research paper which validates the argument above.
 
-![image](https://github.com/DidierRLopes/my-website/assets/25267873/04734b1f-3fa9-4d30-86b3-1ea81b73983c)
+![image](/blog/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research_1.png)
 
 ## WhisperAI as the interface
 
@@ -91,6 +91,6 @@ But, for a second, imagine if you could build these notebook templates with almo
 
 The proof-of-concept below in combination with the automated report generation should allow you to further understand the breakthrough that we may accomplish in the future.
 
-![image](https://github.com/DidierRLopes/my-website/assets/25267873/cd04a141-1ce6-4a20-80c5-f697ce83979d)
+![image](/blog/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research_2.png)
 
 My prediction is that open source + AI will disrupt the financial sector in the upcoming years, and OpenBB will be leading that wave.

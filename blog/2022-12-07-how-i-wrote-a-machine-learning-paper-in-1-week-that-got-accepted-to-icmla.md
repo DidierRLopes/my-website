@@ -2,13 +2,13 @@
 slug: how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla
 title: How I wrote a machine learning paper in 1 week that got accepted to International Conference in Machine Learning Applications
 date: 2022-12-07
-image: https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280552697-4de8034a-3530-43f3-8b3f-1c703c6dd001.png
+image: /blog/2022-12-07-how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla.png
 tags: ['Machine Learning', 'Data Science', 'Academia', 'ICMLA', 'NURVV Run', 'Open Source']
 description: How I wrote a machine learning paper in 1 week that got accepted to ICMLA while working full time and raised $8.8 million for OpenBB Terminal.
 ---
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/88618738/280552697-4de8034a-3530-43f3-8b3f-1c703c6dd001.png"/>
+    <img width="600" src="/blog/2022-12-07-how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla.png"/>
 </p>
 
 <br />
@@ -25,7 +25,7 @@ One year ago, I raised $ 8.8 millions to build [OpenBB Terminal](https://github.
 
 During that time I worked on documenting pretty much everything I had been working on, BUT that felt short. I felt like the data that came out of our [NURVV Run](http://www.nurvv.com/) product could be used with a machine learning algorithm in order to detect a foot strike quite efficiently.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/cc98a4d3-8540-4510-9a0c-04716ae1f965)
+![image](/blog/2022-12-07-how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla_1.png)
 
 So I asked my company:
 
@@ -51,21 +51,21 @@ The Nurvv trackers have an **Inertial Measurement Unit (IMU) tracks linear accel
 
 My first step was to look into how this data looked. On the left you can see the acceleration (m/s²) and the angular velocity (rad/s).
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/6d4bf022-e6d3-43f2-971f-55977766ed7e)
+![image](/blog/2022-12-07-how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla_2.png)
 
 I knew that our **IMU had a sampling rate of 1125 Hz** (which means that each data point gets sampled at approximately every 888.89μs) and **this was critical in order to detect the oscillations that occur when a foot strike occurs** (i.e. impact of the foot on the floor makes the IMU oscillate). Thus I zoomed in the zone of impact and used a scatter plot to understand if we were “missing” information.
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/20921a7e-9407-4ff0-9d81-b36de1358231)
+![image](/blog/2022-12-07-how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla_3.png)
 
 I found it interesting that **the distance between the samples were larger at the time of the impact**. So I plotted the IMU accelerometer data and the IMU gyroscope data in a 3D plot interactively as a function of time (below you can see a snapshot).
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/10936207-7a13-4ab8-8988-3a6b8c1caa22)
+![image](/blog/2022-12-07-how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla_4.png)
 
 From here it was interesting to note that when the foot is in the air, the samples are somehow concentrated (darker blue), whereas when a step occurs (more sparse) they behave erratically. The plot above was snapshotted with 3 steps that occurred.
 
 From that 3D plot I had the intuition that by utilizing a **principal component analysis (PCA**)**, I could reduce the dimensionality without losing much information. The result is shown below,
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/3b97fb32-fdc3-4f12-aca2-fc9feecc5b1d)
+![image](/blog/2022-12-07-how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla_5.png)
 
 This made me think that I could use a **support vector machine (SVM)** in order to detect whether a foot strike has occurred or not. And what I was most excited about it was:
 
@@ -93,13 +93,13 @@ So I knew that I would have to classify the data myself. Manually would have bee
 
 Below you can see the formulas and signal changes that were made in order to obtain the final result:
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/c3d365a4-ac66-402f-8584-ce2892c7805c)
+![image](/blog/2022-12-07-how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla_6.png)
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/48edd37d-cc62-4960-831f-0c676ed3884e)
+![image](/blog/2022-12-07-how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla_7.png)
 
 After this, I selected a sensible value of 0.3 to be used as a threshold on the resulting signal to classify step vs no-step.
 
-![image](https://github.com/DidierRLopes/my-website/assets/25267873/8c7185c4-21f6-410d-9334-1f58df71d151)
+![image](/blog/2022-12-07-how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla_8.png)
 
 I applied the difference between each first foot strike detected in order to make sure that there was no missed step. As you can see above the stride time is around 700ms which is what is expected of a runner jogging.
 
@@ -107,7 +107,7 @@ Someone might be wondering; If this gives such a great result, why did I need ma
 
 For illustration purposes, here is how the initial raw IMU data behaves against the labelling from signal processing approach (red background means no step, while green background means step).
 
-![image](https://github.com/DidierRLopes/my-website/assets/25267873/394a59f7-6fe5-4272-85c0-a91b427bd22a)
+![image](/blog/2022-12-07-how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla_9.png)
 
 ## Support Vector Machine for classification
 
@@ -119,7 +119,7 @@ For the model, SVM was selected because:
 
 This is the type of classification that SVM is capable of (this is the raw acceleration data with a PCA applied, and the SVM classification on the background for a model that was trained using that same data).
 
-![image](https://github.com/Meg1211/my-website/assets/88618738/4de8034a-3530-43f3-8b3f-1c703c6dd001)
+![image](/blog/2022-12-07-how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla_10.png)
 
 ### C and gamma hyperparameters
 
@@ -139,7 +139,7 @@ This is the type of classification that SVM is capable of (this is the raw accel
 
 In the same dataset where we trained our SVM, we were able to achieve a G-Mean of 0.9645. This is rather expected since this is a powerful model and it was trained on that same data.
 
-![image](https://github.com/DidierRLopes/my-website/assets/25267873/4988fec5-7d2a-4234-b172-dcd6490a6088)
+![image](/blog/2022-12-07-how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla_11.png)
 
 From the graph above this result is very positive given that the mislabelling always occurs at the boundary of a step / no-step detection. And since the sampling occurs very fast, we have some margin of error.
 
@@ -147,7 +147,7 @@ From the graph above this result is very positive given that the mislabelling al
 
 This model as expected had a poor performance in an unseen dataset. This is normal as the data came from a different runner, running at a different speed in a different terrain. Thus, in order to create a more robust model, we built this ensemble SVM model architecture.
 
-![image](https://github.com/DidierRLopes/my-website/assets/25267873/28bf71ae-cd2c-4c15-8711-5d74b8164f45)
+![image](/blog/2022-12-07-how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla_12.png)
 
 Each dataset has the signal processing technique applied in order to obtain the labelling. With this labels, an SVM model can be trained.
 
@@ -163,7 +163,7 @@ Finally, I applied a **5-sample moving average** to the step (1) / no-step (0) o
 
 The prediction for a single SVM was extremely accurate because the model was trained on data samples from that same run (i.e. distribution). On the other hand, the ensemble prediction didn’t run on data from that distribution, hence, making this problem much more complex. However, even with that constraint, a G-Mean of 0.8756 was still achieved.
 
-![image](https://github.com/DidierRLopes/my-website/assets/25267873/57d14bdc-336d-4f59-845f-438d7c2bb2c0)
+![image](/blog/2022-12-07-how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla_13.png)
 
 ## Future work
 

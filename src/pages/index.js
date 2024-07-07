@@ -110,33 +110,35 @@ export default function Home() {
           </h1>
           <div style={{ maxHeight: '280px', overflowY: 'scroll', padding: '2px' }}>
             <ul className='mt-4 text-left pr-2'>
-              <p>🇨🇭 I was born in Switzerland, but both my parents are Portuguese emmigrants.</p>
+              <p>2024 🗽 Moved with family again to be closer to customers in NYC.</p>
               <br/>
-              <p>🇵🇹 Moved to Portugal when I was 8yo and did a BSc. in Electrical and Computer Engineering.</p>
+              <p>2023 🇺🇸 Moved with family to the Bay area, to be closer to tech founders and investors.</p>
+              <br/>              
+              <p>2022 🦋 Announced OpenBB to the world and rebranded the terminal - [<a href="https://openbb.co/blog/gme-didnt-take-me-to-the-moon-but-gamestonk-terminal-did" target="_blank" rel="noreferrer">announcement</a>].</p>
               <br/>
-              <p>🇳🇱 Did a semester in TU Delft and learned about self-driving cars.</p>
+              <p>2021 📈 We raised $8.9M in a seed round to democratize investment research.</p>
+              <br/>              
+              <p>2021 🦍 Gamestonk Terminal was open source and went viral on <a href="https://www.reddit.com/r/Superstonk/comments/mx2cjh/move_over_bloomberg_terminal_here_comes_gamestonk/" target="_blank" rel="noreferrer">Reddit</a> and <a href="https://news.ycombinator.com/item?id=26258773" target="_blank" rel="noreferrer">HackerNews</a>.</p>
+              <br/>              
+              <p>2020 🦠 During Xmas my flight got cancelled. So started building a financial terminal.</p>
               <br/>
-              <p>🇬🇧 Moved to London to do an MSc. in Control Systems at Imperial College London [<a href="https://ieeexplore.ieee.org/document/8796226" target="_blank" rel="noreferrer">thesis</a>].</p>
+              <p>2020 😤 Performing own investment research and frustrated by how time-consuming it was.</p>
               <br/>
-              <p>🚗 Excited about AI and self-driving cars, so I worked as a Sensor Fusion Engineer [<a href="https://ieeexplore.ieee.org/document/9680024" target="_blank" rel="noreferrer">paper</a>].</p>
+              <p>2020 🏃 Joined startup NURVV and worked as Sensor Fusion Engineer [<a href="https://ieeexplore.ieee.org/document/9680024" target="_blank" rel="noreferrer">paper</a>].</p>
               <br/>
-              <p>🎓 Wrote the code behind my math teacher's thesis on <a href="https://github.com/DidierRLopes/UnivariateTimeSeriesForecast" target="_blank" rel="noreferrer">Forecasting of Financial timeseries</a>.</p>
+              <p>2019 🎓 Wrote code behind my math teacher's thesis on <a href="https://github.com/DidierRLopes/UnivariateTimeSeriesForecast" target="_blank" rel="noreferrer">Forecasting of Financial timeseries</a>.</p>
               <br/>
-              <p>😤 Performed my own investment research and got frustrated by how time-consuming it was.</p>
+              <p>2018 🚗 Excited about AI and self-driving cars, worked as Software Engineer at u-blox.</p>
               <br/>
-              <p>🦠 During Covid my flight got cancelled over Xmas. So started building a financial terminal.</p>
+              <p>2017 🇬🇧 Moved to London for a MSc. in Control Systems at Imperial College London [<a href="https://ieeexplore.ieee.org/document/8796226" target="_blank" rel="noreferrer">paper</a>].</p>
               <br/>
-              <p>🦍 I made Gamestonk Terminal open source and we went viral on <a href="https://www.reddit.com/r/Superstonk/comments/mx2cjh/move_over_bloomberg_terminal_here_comes_gamestonk/" target="_blank" rel="noreferrer">Reddit</a> and <a href="https://news.ycombinator.com/item?id=26258773" target="_blank" rel="noreferrer">HackerNews</a>.</p>
+              <p>2016 🇳🇱 Did a semester in TU Delft and learned about self-driving cars.</p>
               <br/>
-              <p>📈 We raised $8.9M in a seed round to democratize investment research.</p>
+              <p>2013 📚 BSc. in Electrical and Computer Engineering at FCT-UNL.</p>
               <br/>
-              <p>🦋 <a href="https://openbb.co/blog/gme-didnt-take-me-to-the-moon-but-gamestonk-terminal-did" target="_blank" rel="noreferrer">Announced</a> OpenBB to the world in 2022 and rebranded the terminal.</p>
+              <p>2003 🇵🇹 Moved to Portugal when I was 8yo.</p>
               <br/>
-              <p>🇺🇸 Took my wife and dogs to live in the Bay area, to be closer to tech founders and investors.</p>
-              <br/>
-              <p>🗽 Moved with my wife and dogs again to be closer to customers in NYC.</p>
-              <br/>
-              <p className="text-center">to be continued...</p>
+              <p>1995 🇨🇭 I was born in Switzerland, but both my parents are Portuguese emmigrants.</p>
             </ul>
           </div>
           <div className="flex-none overflow-y-scroll rounded-sm mx-auto text-base mt-4">
@@ -193,6 +195,44 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
+        <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center mb-16">
+          <h1 className="_h1 !mb-2">
+            Latest Blog Posts
+          </h1>
+          {isDesktop ? (
+            <div className="flex items-start content-center mx-auto align-center justify-center mt-4 gap-4 mb-4 flex-row">
+              {posts.map((post) => (
+                <div key={post.id} className="mx-2 max-w-[250px] flex flex-col items-center">
+                  <a href={`${post.id}`} className="flex flex-col items-center">
+                    <img
+                      className="rounded-3xl object-cover mb-2 text-center justify-center align-center mx-auto"
+                      src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
+                      alt={post.title}
+                    />
+                    <p className="text-left text-sm w-full mt-auto">{post.title}</p>
+                  </a>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="flex items-center content-center mx-auto align-center justify-center mt-4 gap-4 mb-4 flex-col">
+              {posts.map((post) => (
+                <div key={post.id} className="my-2">
+                  <a href={`${post.id}`}>
+                    <img
+                      className="rounded-3xl w-[220px] h-[160px] object-cover mb-2 mx-auto"
+                      src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
+                      alt={post.title}
+                    />
+                    <p className="text-center text-sm w-[240px] mx-auto">{post.title}</p>
+                  </a>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
         <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center rounded-[14px]">
           <h1>
             What I believe in.
@@ -294,42 +334,6 @@ export default function Home() {
               </div>
             </a>
           </div>
-        </div>
-        <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center mb-16">
-          <h1 className="_h1 !mb-2">
-            Latest Blog Posts
-          </h1>
-          {isDesktop ? (
-            <div className="flex items-center content-center mx-auto align-center justify-center mt-4 gap-4 mb-4 flex-row">
-              {posts.map((post) => (
-                <div key={post.id} className="mx-2">
-                  <a href={`${post.id}`}>
-                    <img
-                      className="rounded-3xl w-[220px] h-[160px] object-cover mb-2"
-                      src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
-                      alt={post.title}
-                    />
-                    <p className="text-left text-sm">{post.title}</p>
-                  </a>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="flex items-center content-center mx-auto align-center justify-center mt-4 gap-4 mb-4 flex-col">
-              {posts.map((post) => (
-                <div key={post.id} className="my-2">
-                  <a href={`${post.id}`}>
-                    <img
-                      className="rounded-3xl w-[220px] h-[160px] object-cover mb-2 mx-auto"
-                      src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
-                      alt={post.title}
-                    />
-                    <p className="text-center text-sm w-[240px] mx-auto">{post.title}</p>
-                  </a>
-                </div>
-              ))}
-            </div>
-          )}
         </div>
       </main>
     </Layout>

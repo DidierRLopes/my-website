@@ -326,6 +326,11 @@ const data = [
     title: "$100M Leads: How to Get Strangers to Want to Buy Your Stuff",
     author: 'Alex Hormozi',
     image: '/books/100m-leads-how-to-get-strangers-to-want-to-buy-your-stuff.jpg',
+  },
+  {
+    title: "On Writing: A Memoir of the Craft",
+    author: 'Stephen King',
+    image: "/books/on-writing-a-memoir-of-the-craft.jpg"
   }
 ];
 

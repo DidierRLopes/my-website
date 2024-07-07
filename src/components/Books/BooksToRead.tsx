@@ -331,6 +331,11 @@ const data = [
     title: "On Writing: A Memoir of the Craft",
     author: 'Stephen King',
     image: "/books/on-writing-a-memoir-of-the-craft.jpg"
+  },
+  {
+    title: "Working Backwards: Insights, Stories, and Secrets from Inside Amazon",
+    author: 'Colin Bryar, Bill Carr',
+    image: "/books/working-backwards-insights-stories-and-secrets-from-inside-amazon.jpg"
   }
 ];
 

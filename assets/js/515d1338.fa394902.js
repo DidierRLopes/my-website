@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[53037],{8289:e=>{e.exports=JSON.parse('{"label":"Interactive Tables","permalink":"/blog/tags/interactive-tables","allTagsPath":"/blog/tags","count":1}')}}]);

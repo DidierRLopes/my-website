@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[91881],{6071:s=>{s.exports=JSON.parse('{"label":"Industry Analysis","permalink":"/blog/tags/industry-analysis","allTagsPath":"/blog/tags","count":1}')}}]);

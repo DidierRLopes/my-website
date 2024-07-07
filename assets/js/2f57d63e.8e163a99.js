@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[23259],{96235:a=>{a.exports=JSON.parse('{"label":"Data Customization","permalink":"/blog/tags/data-customization","allTagsPath":"/blog/tags","count":1}')}}]);

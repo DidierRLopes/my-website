@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[56998],{82045:e=>{e.exports=JSON.parse('{"label":"Memory Palace","permalink":"/blog/tags/memory-palace","allTagsPath":"/blog/tags","count":1}')}}]);

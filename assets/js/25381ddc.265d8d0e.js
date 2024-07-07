@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[47380],{83115:s=>{s.exports=JSON.parse('{"label":"Smart Contracts","permalink":"/blog/tags/smart-contracts","allTagsPath":"/blog/tags","count":1}')}}]);

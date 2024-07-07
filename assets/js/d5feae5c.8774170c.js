@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[52580],{59472:e=>{e.exports=JSON.parse('{"label":"Sorting Algorithm","permalink":"/blog/tags/sorting-algorithm","allTagsPath":"/blog/tags","count":1}')}}]);

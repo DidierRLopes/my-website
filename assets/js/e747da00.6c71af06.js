@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[37902],{87160:e=>{e.exports=JSON.parse('{"label":"Interactive Charts","permalink":"/blog/tags/interactive-charts","allTagsPath":"/blog/tags","count":1}')}}]);

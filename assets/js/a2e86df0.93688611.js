@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[8330],{43839:e=>{e.exports=JSON.parse('{"label":"World Cup 2022","permalink":"/blog/tags/world-cup-2022","allTagsPath":"/blog/tags","count":1}')}}]);

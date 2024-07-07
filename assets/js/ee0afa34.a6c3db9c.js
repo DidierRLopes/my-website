@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[64409],{37566:e=>{e.exports=JSON.parse('{"label":"IMDbPy","permalink":"/blog/tags/im-db-py","allTagsPath":"/blog/tags","count":1}')}}]);

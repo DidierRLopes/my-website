@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[55822],{34202:e=>{e.exports=JSON.parse('{"label":"OpenBB SDK","permalink":"/blog/tags/open-bb-sdk","allTagsPath":"/blog/tags","count":2}')}}]);

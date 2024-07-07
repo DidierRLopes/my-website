@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[34081],{31165:a=>{a.exports=JSON.parse('{"label":"FinanceDatabase","permalink":"/blog/tags/finance-database","allTagsPath":"/blog/tags","count":1}')}}]);

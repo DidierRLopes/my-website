@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[45298],{88959:s=>{s.exports=JSON.parse('{"label":"mindsdb","permalink":"/blog/tags/mindsdb","allTagsPath":"/blog/tags","count":1}')}}]);

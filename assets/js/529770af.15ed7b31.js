@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[49745],{60294:e=>{e.exports=JSON.parse('{"label":"BCG Matrix","permalink":"/blog/tags/bcg-matrix","allTagsPath":"/blog/tags","count":1}')}}]);

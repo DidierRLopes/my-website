@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[96982],{46663:e=>{e.exports=JSON.parse('{"label":"GE McKinsey Matrix","permalink":"/blog/tags/ge-mc-kinsey-matrix","allTagsPath":"/blog/tags","count":1}')}}]);

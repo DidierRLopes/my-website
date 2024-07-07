@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[30930],{7761:e=>{e.exports=JSON.parse('{"label":"Data Science","permalink":"/blog/tags/data-science","allTagsPath":"/blog/tags","count":3}')}}]);

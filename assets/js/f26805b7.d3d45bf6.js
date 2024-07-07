@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[23872],{2347:e=>{e.exports=JSON.parse('{"label":"Data Licensing","permalink":"/blog/tags/data-licensing","allTagsPath":"/blog/tags","count":1}')}}]);

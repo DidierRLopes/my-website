@@ -72,10 +72,6 @@ const config = {
         theme: {
           customCss: ['./src/css/custom.css'],
         },
-        googleAnalytics: {
-          trackingID: 'G-T39XQ0VWEB',
-          anonymizeIP: true,
-        },
       }),
     ],
   ],
@@ -256,6 +252,13 @@ const config = {
     }),
 
   plugins: [
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-T39XQ0VWEB',
+        anonymizeIP: true,
+      },
+    ],
     async function myPlugin(context, options) {
       return {
         name: "docusaurus-tailwindcss",

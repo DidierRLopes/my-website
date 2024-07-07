@@ -239,6 +239,10 @@ const config = {
           async: true,
           defer: true,
         },
+        {
+          src: 'https://www.googletagmanager.com/gtm.js?id=GTM-PL77JR5L',
+          async: true,
+        },
       ],
       themeConfig: {
         // ... other theme configurations
@@ -259,6 +263,12 @@ const config = {
         anonymizeIP: true,
       },
     ],
+    // [
+    //   'docusaurus-plugin-simple-analytics',
+    //   {
+    //     domain: 'didierlopes.com'
+    //   }
+    // ],
     async function myPlugin(context, options) {
       return {
         name: "docusaurus-tailwindcss",

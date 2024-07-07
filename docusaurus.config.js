@@ -237,6 +237,22 @@ const config = {
           },
         ],
       },
+      scripts: [
+        {
+          src: 'https://scripts.simpleanalyticscdn.com/latest.js',
+          async: true,
+          defer: true,
+        },
+      ],
+      themeConfig: {
+        // ... other theme configurations
+        headTags: [
+          {
+            tagName: 'noscript',
+            innerHTML: '<img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" />',
+          },
+        ],
+      },
     }),
 
   plugins: [

@@ -88,11 +88,6 @@ const data = [
     image: '/books/influence-the-psychology-of-persuasion.jpeg',
   },
   {
-    title: "The Innovator's Dilemma: The Revolutionary Book That Will Change the Way You Do Business",
-    author: 'Clayton M. Christensen',
-    image: '/books/the-innovator-s-dilemma-the-revolutionary-book-that-will-change-the-way-you-do-business.jpeg',
-  },
-  {
     title: 'Continuous Discovery Habits: Discover Products that Create Customer Value and Business Value',
     author: 'Teresa Torres',
     image: '/books/continuous-discovery-habits-discover-products-that-create-customer-value-and-business-value.jpeg',

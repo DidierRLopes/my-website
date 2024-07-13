@@ -287,6 +287,11 @@ const data = [
     author: 'Clayton M. Christensen, Karen Dillon, Taddy Hall, David S. Duncan',
     image: '/books/competing-against-luck-the-story-of-innovation-and-customer-choice.jpeg',
   },
+  {
+    title: "The Innovator's Dilemma: The Revolutionary Book That Will Change the Way You Do Business",
+    author: 'Clayton M. Christensen',
+    image: '/books/the-innovator-s-dilemma-the-revolutionary-book-that-will-change-the-way-you-do-business.jpg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

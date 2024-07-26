@@ -13,11 +13,6 @@ const data = [
     image: '/books/how-google-works.jpeg',
   },
   {
-    title: 'No Rules Rules: Netflix and the Culture of Reinvention',
-    author: 'Reed Hastings, Erin Meyer',
-    image: '/books/no-rules-rules-netflix-and-the-culture-of-reinvention.jpeg',
-  },
-  {
     title: 'Story: Substance, Structure, Style, and the Principles of Screenwriting',
     author: 'Robert McKee',
     image: '/books/story-substance-structure-style-and-the-principles-of-screenwriting.jpeg',

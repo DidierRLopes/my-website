@@ -292,6 +292,11 @@ const data = [
     author: 'Clayton M. Christensen',
     image: '/books/the-innovator-s-dilemma-the-revolutionary-book-that-will-change-the-way-you-do-business.jpg',
   },
+  {
+    title: 'No Rules Rules: Netflix and the Culture of Reinvention',
+    author: 'Reed Hastings, Erin Meyer',
+    image: '/books/no-rules-rules-netflix-and-the-culture-of-reinvention.jpeg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

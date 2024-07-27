@@ -174,7 +174,7 @@ ol {
 
 
 .book-wrapper {
-  width: 900px;
+  width: 100%;
   position: relative;
   margin: 0 auto;
   column-count: 3;
@@ -185,10 +185,38 @@ ol {
 .book-items {
   position: relative;
   cursor: default;
-  padding: 16px;
+  padding: 8px;
   margin: 0;
   display: grid;
   break-inside: avoid;
+}
+
+@media screen and (max-width: 900px) {
+  .book-wrapper {
+    column-count: 3;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .book-wrapper {
+    column-count: 2;
+  }
+  
+  .book-items {
+    padding: 6px;
+  }
+  
+  .book-cover .book-inside {
+    left: 6px;
+  }
+  
+  .effect {
+    margin-left: 6px;
+  }
+  
+  .book-image:hover .effect {
+    margin-left: 4px;
+  }
 }
 
 .main-book-wrap {

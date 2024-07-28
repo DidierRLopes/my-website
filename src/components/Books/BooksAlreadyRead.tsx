@@ -297,6 +297,11 @@ const data = [
     author: 'Reed Hastings, Erin Meyer',
     image: '/books/no-rules-rules-netflix-and-the-culture-of-reinvention.jpeg',
   },
+  {
+    title: 'User Story Mapping: Discover the Whole Story, Build the Right Product',
+    author: 'Jeff Patton',
+    image: '/books/user-story-mapping-discover-the-whole-story-build-the-right-product.jpeg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

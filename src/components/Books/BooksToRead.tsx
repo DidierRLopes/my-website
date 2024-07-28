@@ -48,11 +48,6 @@ const data = [
     image: '/books/sprint-how-to-solve-big-problems-and-test-new-ideas-in-just-five-day.jpeg',
   },
   {
-    title: 'User Story Mapping: Discover the Whole Story, Build the Right Product',
-    author: 'Jeff Patton',
-    image: '/books/user-story-mapping-discover-the-whole-story-build-the-right-product.jpeg',
-  },
-  {
     title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger",
     author: 'Peter D. Kaufman',
     image: '/books/poor-charlie-s-almanack-the-wit-and-wisdom-of-charles-t-munger.jpeg',

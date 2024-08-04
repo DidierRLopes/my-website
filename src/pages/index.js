@@ -98,19 +98,13 @@ export default function Home() {
           )}
         </div>
         <div className="mt-16 max-w-[880px] mx-auto">
-          {ExecutionEnvironment.canUseDOM &&
-          document.documentElement.getAttribute('data-theme') === 'dark' ? (
+          {ExecutionEnvironment.canUseDOM && (
             <iframe
-              src="https://embeds.beehiiv.com/8a4b3599-3ce0-40ad-8586-910fd9a20ee4"
-              data-test-id="beehiiv-embed"
-              width="100%"
-              height="200"
-              frameBorder="0"
-              scrolling="no"
-            ></iframe>
-          ) : (
-            <iframe
-              src="https://embeds.beehiiv.com/57f8fb43-3409-4d9a-9979-66489741be0c"
+              src={
+                document.documentElement.getAttribute('data-theme') !== 'dark'
+                  ? 'https://embeds.beehiiv.com/57f8fb43-3409-4d9a-9979-66489741be0c'
+                  : 'https://embeds.beehiiv.com/8a4b3599-3ce0-40ad-8586-910fd9a20ee4'
+              }
               data-test-id="beehiiv-embed"
               width="100%"
               height="200"

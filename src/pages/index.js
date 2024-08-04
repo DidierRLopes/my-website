@@ -98,7 +98,8 @@ export default function Home() {
           )}
         </div>
         <div className="mt-16 max-w-[880px] mx-auto">
-          {document.documentElement.getAttribute('data-theme') === 'dark' ? (
+          {ExecutionEnvironment.canUseDOM &&
+          document.documentElement.getAttribute('data-theme') === 'dark' ? (
             <iframe
               src="https://embeds.beehiiv.com/8a4b3599-3ce0-40ad-8586-910fd9a20ee4"
               data-test-id="beehiiv-embed"

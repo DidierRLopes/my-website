@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
@@ -40,8 +41,19 @@ export default function Home() {
   return (
     <Layout
       title="Homepage"
-      description="Description will go into a meta tag in <head />"
+      description="Didier Rodrigues Lopes personal website"
     >
+      <Head>
+        <meta property="og:title" content="Didier Website" />
+        <meta
+          property="og:description"
+          content="Where you can find my posts, personal projects and everything in between."
+        />
+        <meta property="og:image" content={`img/goku.png`} />{' '}
+        {/* Update with your thumbnail URL */}
+        <meta property="og:url" content={'http://didierlopes.com'} />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
       <main>
         <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center md:mt-16">
           <h1 className="_h1 !mb-2">Who am I?</h1>

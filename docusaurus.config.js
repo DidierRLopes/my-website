@@ -41,27 +41,26 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           path: 'content',
-          routeBasePath: "/",
+          routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/DidierRLopes/my-website/tree/main/',
+          editUrl: 'https://github.com/DidierRLopes/my-website/tree/main/',
         },
         blog: {
           blogTitle: 'Blog',
-          blogDescription: 'This is where I drop my thoughts in the form of blogposts!',
+          blogDescription:
+            'This is where I drop my thoughts in the form of blogposts!',
           blogSidebarCount: 'ALL',
           postsPerPage: 'ALL',
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/DidierRLopes/my-website/tree/main/',
+          editUrl: 'https://github.com/DidierRLopes/my-website/tree/main/',
           feedOptions: {
             type: 'all',
             copyright: `Copyright © ${new Date().getFullYear()} Didier Lopes.`,
             createFeedItems: async (params) => {
-              const {blogPosts, defaultCreateFeedItems, ...rest} = params;
+              const { blogPosts, defaultCreateFeedItems, ...rest } = params;
               return defaultCreateFeedItems({
                 // keep only the 10 most recent blog posts in the feed
                 blogPosts: blogPosts.filter((item, index) => index < 10),
@@ -93,6 +92,11 @@ const config = {
         items: [
           {
             position: 'left',
+            to: '/blog',
+            label: 'Blog',
+          },
+          {
+            position: 'left',
             label: 'Projects',
             to: '/projects',
           },
@@ -110,11 +114,6 @@ const config = {
             position: 'left',
             label: 'Resume',
             to: '/resume/experience',
-          },
-          {
-            to: '/blog',
-            label: 'Blog',
-            position: 'right'
           },
         ],
       },
@@ -250,7 +249,8 @@ const config = {
         headTags: [
           {
             tagName: 'noscript',
-            innerHTML: '<img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" />',
+            innerHTML:
+              '<img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" />',
           },
         ],
       },
@@ -272,20 +272,18 @@ const config = {
     // ],
     async function myPlugin(context, options) {
       return {
-        name: "docusaurus-tailwindcss",
+        name: 'docusaurus-tailwindcss',
         configurePostCss(postcssOptions) {
           // Appends TailwindCSS and AutoPrefixer.
-          postcssOptions.plugins.push(require("tailwindcss"));
-          postcssOptions.plugins.push(require("autoprefixer"));
+          postcssOptions.plugins.push(require('tailwindcss'));
+          postcssOptions.plugins.push(require('autoprefixer'));
           return postcssOptions;
         },
       };
     },
   ],
 
-  stylesheets: [
-    "src/css/custom.css"
-  ]
+  stylesheets: ['src/css/custom.css'],
 };
 
 module.exports = config;

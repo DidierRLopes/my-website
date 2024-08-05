@@ -51,12 +51,10 @@ h1 {
 }
 
 a[href^="http"] {
-  font-style: italic;
   text-decoration: underline;
 }
 
-a[href^="/"]:not([class^="menu__link"]):not([class^="sidebarItemLink"]):not([class^="navbar__item"]):not([itemprop^="url"]):not([class^="navbar__title"]):not([class^="tag_"]):not([class^="navbar__brand"]):not([class^="footer__link-item"]):not([class^="pagination-nav"])  {
-  font-style: italic;
+a[href^="/"]:not([class^="menu__link"]):not([class^="sidebarItemLink"]):not([class^="navbar__item"]):not([itemprop^="url"]):not([class^="navbar__title"]):not([class^="tag_"]):not([class^="navbar__brand"]):not([class^="footer__link-item"]):not([class^="pagination-nav"]):not([class^="table-of-contents__link toc-highlight"]):not([href^="/blog/"]) {
   text-decoration: underline;
 }
 
@@ -65,11 +63,13 @@ h2[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-H
   font-weight: 600;
 }
 
-[data-theme="light"] h2[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-modul"]  {
-  color: --ifm-color-primary;
+[data-theme="light"] h2[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-module"]  {
+  color: black;
+  font-size: 1.5em;
 }
-[data-theme="dark"] h2[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-modul"] {
-  color: --ifm-color-primary;
+[data-theme="dark"] h2[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-module"] {
+  color: white;
+  font-size: 1.5em;
 }
 
 h1[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-module"] {
@@ -78,32 +78,37 @@ h1[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-H
 }
 
 [data-theme="light"] h1[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-module"]  {
-  color: --ifm-color-primary;
+  color: black;
 }
 [data-theme="dark"] h1[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-module"] {
-  color: --ifm-color-primary;
+  color: white;
 }
 
-h2[class^="anchor"] {
+h2[class^="anchor"], h2 {
   font-size: 1.75em;
   font-weight: 650;
 }
 
-[data-theme="light"] h2[class^="anchor"] {
-  color: --ifm-color-primary;
+[data-theme="light"] h2[class^="anchor"], [data-theme="light"] h2 {
+  color: black;
 }
-[data-theme="dark"] h2[class^="anchor"] {
-  color: --ifm-color-primary;
+[data-theme="dark"] h2[class^="anchor"], [data-theme="dark"] h2 {
+  color: white;
 }
 
-h3[class^="anchor"] {
+h3[class^="anchor"], h3 {
   font-size: 1.5em;
   font-weight: 600;
 }
 
-h4[class^="anchor"] {
+h4[class^="anchor"], h4 {
   font-size: 1.25em;
   font-weight: 550;
+}
+
+h5[class^="anchor"], h5 {
+  font-size: 1em;
+  font-weight: 500;
 }
 
 ul {

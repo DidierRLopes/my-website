@@ -303,17 +303,27 @@ export default function Home() {
         <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center mb-16">
           <h1 className="_h1 !mb-2">Latest Blog Posts</h1>
           {isDesktop ? (
-            <div className="flex items-start content-center mx-auto align-center justify-center mt-4 gap-4 mb-4 flex-row">
+            <div className="flex items-start content-center mx-auto align-center justify-center mt-4 gap-8 mb-4 flex-row">
               {posts.map((post) => (
                 <div
                   key={post.id}
                   className="mx-2 max-w-[250px] flex flex-col items-center"
+                  style={{ height: '100%' }}
                 >
-                  <a href={`${post.id}`} className="flex flex-col items-center">
+                  <a
+                    href={`${post.id}`}
+                    className="flex flex-col items-center h-full"
+                  >
                     <img
                       className="rounded-3xl object-cover mb-2 text-center justify-center align-center mx-auto"
                       src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
                       alt={post.title}
+                      style={{
+                        flex: '1 0 auto',
+                        width: '220px',
+                        height: '150px',
+                        objectFit: 'cover',
+                      }}
                     />
                     <p className="text-left text-sm w-full mt-auto">
                       {post.title}

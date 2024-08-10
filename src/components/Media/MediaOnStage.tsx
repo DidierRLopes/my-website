@@ -3,6 +3,14 @@ import VideosList from '../General/VideosList';
 
 const data = [
   {
+    title: 'Incorporating an open-source AI financial analyst into a financial terminal',
+    description: "In this talk, Didier Lopes, founder and CEO of OpenBB will talk about how the open source OpenBB Platform standardizes and aggregates access to financial data. He will also talk about how the team has open source an AI financial analyst that leverages the OpenBB platform and datasets from dozens of different data vendors. Finally, Didier will go over why financial terminals should enable users to bring their own custom agents and how the OpenBB Terminal Pro enables users to do this.",
+    date: '2024-08-07',
+    location: 'CIBC New York',
+    image: '/media/incorporating-an-open-source-ai-financial-analyst-into-a-financial-terminal.png',
+    info: '<p>The 15min presentation can be seen in Mindstone content <a href="https://app.mindstone.com/annotate/article_Akn6C4queFqPoWMeTB">here</a>.'
+  },
+  {
     title: 'AI x Wall Street Night',
     description: "Discover how traditional Wall Street firms are adapting to technological transformations with cutting-edge applications. This event goes beyond traditional panel discussions, focusing on real-time demonstrations of what's achievable today with AI in finance: The first AI-Powered Financial Terminal - Watch how efficient analysts can perform research in 2024 using generative AI.",
     date: '2024-05-22',

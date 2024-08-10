@@ -3,6 +3,13 @@ import VideosList from '../General/VideosList';
 
 const data = [
   {
+    title: 'OpenBB Terminal Pro in 12 minutes',
+    embed: 'https://www.youtube.com/embed/UjpnnTNJcoQ?si=PYHoJRYBY1NfB41B',
+    description: 'The OpenBB Terminal Pro is the first AI-powered and customizable investment research tool for financial analysts and quants looking to increase efficiency, productivity, and team collaboration.',
+    date: '2024-05-06',
+    time: '12 minutes',
+  },
+  {
     title: 'OpenBB Terminal Pro Tutorial - full length version',
     embed: 'https://www.youtube.com/embed/pxKqd1r2Ut4?si=9-UZw9vEciBI4PuG',
     description: 'Discover the superior investment research capabilities of the OpenBB Terminal Pro. Built on top of the open-source OpenBB Terminal, our platform provides a sleek graphical interface that is intuitive and fully customizable, making it easier for you to access and analyze financial information with ease.',

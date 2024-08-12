@@ -302,6 +302,11 @@ const data = [
     author: 'Jeff Patton',
     image: '/books/user-story-mapping-discover-the-whole-story-build-the-right-product.jpeg',
   },
+  {
+    title: 'Traction: Get a Grip on Your Business',
+    author: 'Gino Wickman',
+    image: '/books/traction-get-a-grip-on-your-business.jpeg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

@@ -316,6 +316,21 @@ const data = [
     title: "Working Backwards: Insights, Stories, and Secrets from Inside Amazon",
     author: 'Colin Bryar, Bill Carr',
     image: "/books/working-backwards-insights-stories-and-secrets-from-inside-amazon.jpg"
+  },
+  {
+    title: "The Third Wave: An Entrepreneur's Vision of the Future",
+    author: 'Steve Case',
+    image: "/books/the-third-wave-an-entrepreneur-s-vision-of-the-future.jpg"
+  },
+  {
+    title: "The Real Madrid Way: How Values Created the Most Successful Sports Team on the Planet",
+    author: 'Steven G. Mandis',
+    image: "/books/the-real-madrid-way-how-values-created-the-most-successful-sports-team-on-the-planet.jpg"
+  },
+  {
+    title: "The Art of Learning: An Inner Journey to Optimal Performance",
+    author: "Josh Waitzkin",
+    image: "/books/the-art-of-learning-an-inner-journey-to-optimal-performance.jpg"
   }
 ];
 

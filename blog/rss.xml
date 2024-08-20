@@ -4,11 +4,86 @@
         <title>Didier Lopes Blog</title>
         <link>https://didierlopes.com/blog</link>
         <description>Didier Lopes Blog</description>
-        <lastBuildDate>Thu, 01 Aug 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 06 Aug 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2024 Didier Lopes.</copyright>
+        <item>
+            <title><![CDATA[Why AI Will Replace Jobs in Finance and How You Should Prepare]]></title>
+            <link>https://didierlopes.com/blog/why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare</link>
+            <guid>https://didierlopes.com/blog/why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare</guid>
+            <pubDate>Tue, 06 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[As AI continues to advance, many jobs in finance are at risk. Learn why this shift is happening and how to prepare for the future.]]></description>
+            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare.png"></p>
+<p>It's not a matter of if, but a matter of when. AI will replace analysts' jobs, and we actually believe that's a good thing. In this blog post, we explain why and how you can prepare for this revolutionary change in the world of finance.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<h2 id="introduction">Introduction</h2>
+<p>This is the current state of Quant/Finance/Investing conferences in 2024</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare_1.png"></p>
+<p>I’ve heard panels defending both sides: Yes and No.</p>
+<p>I think that people who say “No” don’t understand how AI fundamentally works, and most people who say “Yes” are understating the impact it will have.</p>
+<p>Personally, a much better question is “When will AI replace financial analysts?” or “How can I prepare for the shift?”.</p>
+<h2 id="history">History</h2>
+<p>If we look back at the automotive industry, 100 years ago - this is what a Ford factory looked like:</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare.png"></p>
+<p>How many of these blue-collar workers would have said that their jobs would be extinct in less than 100 years? And for the most part, they are.</p>
+<p>This is where we are today in terms of AI.</p>
+<p>Some tooling (read: AI) can help humans do their job, but it still needs to be supervised.</p>
+<p>But with enough time (for the automotive industry that was 100 years), AI will take over.</p>
+<p>This is what Tesla’s Giga Berlin factory looks like today.</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/7-4yOx1CnXE?si=k-adJ_cOlXS6Ldlv" width="800" height="400"></iframe></div>
+<h2 id="when-will-ai-replace-financial-analysts">When will AI replace financial analysts?</h2>
+<p>Bill Gates famously said: “Most people overestimate what they can achieve in a year and underestimate what they can achieve in ten years”.</p>
+<p>I’ve found this to be mostly true for everything tech.</p>
+<p>EXCEPT AI.</p>
+<p>This is why I’m so bullish on the category as a whole.</p>
+<p>I subscribe to a few newsletters that share daily AI updates, and it’s crazy that every single day there’s something big happening. Either a new model is released and open source, a new framework to do RAG or fine-tune, a new company announces they are working on foundational models, a new paper that pushes the field forward, or a new investment from a big corporation.</p>
+<p>I mean, even enterprises are rushing to jump into the AI train. Either releasing AI features to millions of users before proper testing (e.g. Gemini overview on Google and the whole Reddit answers), adding AI where it isn’t really necessary (e.g. Meta AI on WhatsApp), exploring new monetization opportunities (e.g. Amazon Bedrock for fine-tuning) or risking on their values to not be left behind (e.g. Apple partnering with OpenAI — risking the security brand they worked so hard for).</p>
+<p>So, I think this will happen soon.</p>
+<p>And it’s with that in mind that we have been building OpenBB.</p>
+<h2 id="how-can-i-prepare-for-the-shift">How can I prepare for the shift?</h2>
+<p>I think that the most important question that financial analysts should ask themselves is not ‘<strong>when</strong>’ but ‘<strong>what can I do to prepare myself for when AI starts taking over</strong>’.</p>
+<p>There’s going to be multiple stages before AI fully takes over. Here’s how I envision it playing out:</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare_2.png"></p>
+<p>(For what it’s worth, I think this is equivalent to what will happen to developers in general).</p>
+<h3 id="short-term">Short term</h3>
+<p>We are starting to enter this timeline.</p>
+<p>A timeline where analysts will use AI to augment their output.</p>
+<p>A good analyst using AI will be able to perform at a better level than a great analyst who doesn’t use AI.</p>
+<p>Interestingly, a mediocre analyst will be able to increase their output but nowhere as much as a good or great analyst. This is because the AI usage will supervised and still “driven” by the analyst (through prompts). So mediocre analysts will not benefit as much because they will either trust too much the AI (without being able to discern its validity), not use the best prompts because they don’t know what to use the AI for, or not use the output because they won’t comprehend the insights that the AI is generating.</p>
+<p>During this period, the gap between mediocre and great analysts will be at an all-time high. This will expose more who is pushing their weight and who isn’t.</p>
+<p>Another thing is that firms that will be hiring high-talented juniors/interns will start adding AI experience as a requirement (e.g. OpenBB experience) since they understand that they will have a higher leverage and their output will be much better. Potentially even replacing a current analyst with many years of experience that doesn’t leverage AI in the day-to-day.</p>
+<p>I think there are 2 reasons for this:</p>
+<ol>
+<li>
+<p><strong>AI will allow financial analysts to have much broader mandates</strong> as they will be able to automate the process of research and screen the best companies. Instead of analyzing 20 companies per quarter, they will do 500.</p>
+</li>
+<li>
+<p><strong>AI will be able to extract trends and patterns that humans simply can’t due to the amount of data necessary to process</strong>. The amount of data that financial firms use to invest is constantly on the rise, that’s where they get their alpha from. Given that an analyst has a limited amount of resources, they will either have to narrow down the companies in their mandate or process less data for each.</p>
+</li>
+</ol>
+<h3 id="long-term">Long term</h3>
+<p>In the long term, AI will start taking the reigns.</p>
+<p>This is the equivalent of self-driving cars becoming fully autonomous.</p>
+<p>The gap between mediocre and great analysts will narrow over time because AI is doing all the heavy work.</p>
+<p>At that time, it will be very hard to distinguish the competency of mediocre and great analysts — the main indicator will be how they interpret/understand the AI model, i.e. how they can explain what led to the AI “deciding” to invest in companies based on hundreds of different datasets.</p>
+<p>This is why we spend hours obsessing over the UX of the <a href="https://openbb.co/products/pro">OpenBB Terminal Pro</a>. We want to make sure analysts know at all times what the AI Copilot is doing and thinking. Because interpretability will be a big topic in the future.</p>
+<p>It’s important to note that the best analysts will be the ones who have their jobs more secure over time. That is because provided the AI is taking the reigns, when it fully takes the reigns, the output of all analysts will be more or less the same. However, in the period before, the great analyst will have an edge because their skill is still in use and so the leverage lever is bigger.</p>
+<p>I think that when AI fully takes over analysts' jobs, the best ones will move towards opening their investment firms and focus on the human part of the job: communication.</p>
+<p>Communicating to their investors why they made their decisions, e.g. “We have access to this dataset which others don’t, and our AI model correlated that data with x, y, and z which enabled us to invest ahead of the rest of the market”. This is the “interpretability” of the AI that I mentioned earlier.</p>
+<h2 id="what-can-you-do">What can you do?</h2>
+<p>You should still pursue a career in the space.</p>
+<p>But you should do so with AI in mind.</p>
+<p>Experiment with products out there that leverage AI to make you more efficient (you can try OpenBB for free at pro.openbb.co). You will soon realize that your output can compete with someone who is neglecting AI in their day-to-day.</p>
+<p>Being a top financial analyst is still something you should strive for since these are going to be the last to be replaced. And when they are, you will still have an edge because your role is likely to evolve into a communication/management role that explains what the AI is doing to investors. And that would be much easier if you’re a top analyst in the first place - because you would understand the insights extracted from an AI copilot.</p>
+<p>What is your opinion on this topic?</p>]]></content:encoded>
+            <category>artificial intelligence</category>
+            <category>finance</category>
+            <category>career development</category>
+            <category>technology</category>
+            <category>future of work</category>
+        </item>
         <item>
             <title><![CDATA[Inspired by Bia - How Her Fight Against Cancer Changed My Life]]></title>
             <link>https://didierlopes.com/blog/inspired-by-bia-how-her-fight-against-cancer-changed-my-life</link>
@@ -878,63 +953,6 @@ My friends &amp; family are “protected” by an imaginary shield that I create
             <category>generative ai</category>
             <category>ai</category>
             <category>llm</category>
-        </item>
-        <item>
-            <title><![CDATA[12 Things I Learned in 2023]]></title>
-            <link>https://didierlopes.com/blog/12-things-i-learned-in-2023</link>
-            <guid>https://didierlopes.com/blog/12-things-i-learned-in-2023</guid>
-            <pubDate>Mon, 22 Jan 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[The 12 things I learned in 2023]]></description>
-            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-01-22-12-things-i-learned-in-2023.png"></p>
-<br>
-<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
-<p>The 12 things I learned in 2023</p>
-<h3 id="1-dont-delegate-anything-that-you-wouldnt-do-yourself">1. Don't delegate anything that you wouldn't do yourself.</h3>
-<p>It's extremely important to work on little things to show your team that nothing is too small to spend time on, and sets a precedent that you are willing to work on the ground next to them.</p>
-<p>E.g. Elon Musk sleeping at the gigafactory to show his team that he was there next to them.</p>
-<h3 id="2-be-curious-and-humble-enough-to-be-willing-to-ask-dumb-questions">2. Be curious and humble enough to be willing to ask dumb questions.</h3>
-<p>If I don't know something, I never pretend understanding what the person is talking about.</p>
-<p>I would take the knowledge over a "smart" label, any day.</p>
-<h3 id="3-implement-feedback-loops-on-everything-you-do-otherwise-you-cant-adapt">3. Implement feedback loops on everything you do, otherwise you can't adapt.</h3>
-<p>Last year I decided to work on <a href="https://openbb.co/company/open/team">tracking our employee engagement</a>, and this is one of the best and most valuable initiatives I have worked on.</p>
-<p>It has provided us tons of feedback that we were able to act on, and improve what it's like to work for OpenBB. More information on this <a href="https://openbb.co/blog/employee-engagement">here</a>.</p>
-<h3 id="4-ux-is-more-important-than-ui">4. UX is more important than UI.</h3>
-<p>I keep seeing tweets about UI improvements on a website and/or product. I love that type of posts, and wish there was a similar trend going on for UX improvements.</p>
-<p>While UI is critical to attract users, UX is king to retain them.</p>
-<p>It’s like dating - the looks is in the UI and the personality is the UX.</p>
-<p>While they may be perceived as their own separate bubble, they are not. Someone with an amazing personality (UX) will appear as more beautiful (UI).</p>
-<h3 id="5-if-in-presence-of-a-2-way-door-decision-you-should-decide-fast">5. If in presence of a 2-way door decision, you should decide fast.</h3>
-<p>Being fast to decide to do A instead of B in a 2-way door decision is ideal because even if that wasn’t the correct decision, adapting after will still be better than being stuck at the decision stage.</p>
-<p>Plus, you’ll be surprised by how many time you actually get it right given the level of context and knowledge you have in the space.</p>
-<p>Knowing what is a 1 and a 2-way door decision, separates great from poor leaders.</p>
-<p>I like <a href="https://tiktok.com/@evancarmichael/video/7317081673865235717">this video</a> from Jeff Bezzos talking about this.</p>
-<h3 id="6-theres-a-ton-of-data-in-intuition-and-common-sense">6. There’s a ton of data in intuition and common sense.</h3>
-<p>As a leader, most of the times you have to make decisions with no hard data evidence. And by hard data I mean a spreadsheet with numbers or a powerpoint with charts.</p>
-<p>However, you do have that data. It’s just not in a clean format and lives on your head.</p>
-<p>This data has been aggregating by spending more time thinking about the problem you are solving than anyone else, by talking with customers, by talking with partners, and everything in between.</p>
-<p>Trust your intuition, more often than not presentations are done to justify decisions that you knew were right all along. Skip that and you will be able to move faster.</p>
-<h3 id="7-hear-feedback-from-everyone-but-only-listen-from-a-few">7. Hear feedback from everyone but only listen from a few.</h3>
-<p>People paying for your product, will provide you 10x feedback compared to others. Use common sense for others.</p>
-<h3 id="8-be-there-for-your-team">8. Be there for your team.</h3>
-<p>Make sure to remind your team that you couldn't do it without them.</p>
-<p>A single off-line event per year is not enough.</p>
-<p>Show that you care by being there: asking about their family/pets/hobbies, messaging them when they perform above expectations, send them gifts when something negative happens, ... act like a friend but manage like a captain</p>
-<h3 id="9-fire-b-and-c-players-early">9. Fire B and C players early.</h3>
-<p>Keeping a team of A players is hard but extremely rewarding, and necessary.</p>
-<p>It sets the precedent that average work is not enough to work at your company, and high performers will want to work for you to be surrounded by people that push them everyday.</p>
-<h3 id="10-distribution-is-more-important-than-product">10. Distribution is more important than product.</h3>
-<p>Took me some time to understand this, but I have no doubts about this now.</p>
-<p>This is why the sentence of “A good product with great distribution will almost always beat a great product with poor distribution.”</p>
-<h3 id="11-leave-your-comfort-zone">11. Leave your comfort zone.</h3>
-<p>I'm really shy on stage and this year I've presented a few times. And I’ve impressed myself, while I'm far from good I've come a long way.</p>
-<p>When i started learning english my goal was to be able to make people laugh in english, that took a while.</p>
-<p>I've now been able to make people laugh whilst on stage and I didn't expect that I’d be able to do this anytime soon.</p>
-<h3 id="12-tell-your-loved-ones-how-much-they-mean-to-you">12. Tell your loved ones how much they mean to you.</h3>
-<p>Most of us have someone by our side that allow us to keep performing at highest level day in and day out.</p>
-<p>Ensure they know you couldn't be the person you are today without them.</p>]]></content:encoded>
-            <category>learning</category>
-            <category>experience</category>
-            <category>growth</category>
         </item>
     </channel>
 </rss>

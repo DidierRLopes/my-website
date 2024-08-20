@@ -2,12 +2,166 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://didierlopes.com/blog</id>
     <title>Didier Lopes Blog</title>
-    <updated>2024-08-06T00:00:00.000Z</updated>
+    <updated>2024-08-20T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://didierlopes.com/blog"/>
     <subtitle>Didier Lopes Blog</subtitle>
     <icon>https://didierlopes.com/img/favicon.ico</icon>
     <rights>Copyright © 2024 Didier Lopes.</rights>
+    <entry>
+        <title type="html"><![CDATA[What I Learned in 3 Years at OpenBB]]></title>
+        <id>https://didierlopes.com/blog/what-i-learned-in-3-years-at-openb</id>
+        <link href="https://didierlopes.com/blog/what-i-learned-in-3-years-at-openb"/>
+        <updated>2024-08-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The OpenBB journey started officially 3 years ago. So I want to celebrate it by sharing 36 lessons I learned over the past 36 months as a founder and CEO of a fintech company.]]></summary>
+        <content type="html"><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-08-20-what-i-learned-in-3-years-at-openb.jpeg"></p>
+<p>The OpenBB journey started officially 3 years ago.</p>
+<p>So I want to celebrate it by sharing 36 lessons I learned over the past 36 months as a founder and CEO of a fintech company.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>The OpenBB journey started officially 3 years ago.</p>
+<p>So I want to celebrate it by sharing 36 lessons I learned over the past 36 months as a founder and CEO of a fintech company.</p>
+<ol>
+<li>
+<p>Be curious.</p>
+</li>
+<li>
+<p>Talk to users.</p>
+</li>
+<li>
+<p>Protect your time.</p>
+</li>
+<li>
+<p>Do the right thing.</p>
+</li>
+<li>
+<p>Culture is everything.</p>
+</li>
+<li>
+<p>Energy is contagious.</p>
+</li>
+<li>
+<p>Hire slow and fire fast.</p>
+</li>
+<li>
+<p>Write everything down.</p>
+</li>
+<li>
+<p>Reward people who care.</p>
+</li>
+<li>
+<p>Celebrate every little win.</p>
+</li>
+<li>
+<p>Work on your storytelling.</p>
+</li>
+<li>
+<p>Ship often and iterate fast.</p>
+</li>
+<li>
+<p>Listen more than you speak.</p>
+</li>
+<li>
+<p>Be comfortable with saying no.</p>
+</li>
+<li>
+<p>When in doubt, there's no doubt.</p>
+</li>
+<li>
+<p>Over communicate with the team.</p>
+</li>
+<li>
+<p>Have an inherent sense of urgency.</p>
+</li>
+<li>
+<p>Don't overthink, estimate and iterate.</p>
+</li>
+<li>
+<p>Failing is ok, not learning from it isn't.</p>
+</li>
+<li>
+<p>Measure success by impact, not effort.</p>
+</li>
+<li>
+<p>Do not run away from hard conversations.</p>
+</li>
+<li>
+<p>Having common sense is a very powerful skill.</p>
+</li>
+<li>
+<p>How you do anything is how you do everything.</p>
+</li>
+<li>
+<p>It's not because you can build it that you should.</p>
+</li>
+<li>
+<p>Seeing your vision materialize gives goosebumps.</p>
+</li>
+<li>
+<p>Be so excited in your product that users can feel it.</p>
+</li>
+<li>
+<p>Lack of focus is likely the biggest risk you face as a company.</p>
+</li>
+<li>
+<p>It turns out that there's a ton of data in your gut feeling.</p>
+</li>
+<li>
+<p>Make people accountable for both successes and failures.</p>
+</li>
+<li>
+<p>Hiring is the most important thing you will do at your company.</p>
+</li>
+<li>
+<p>Create a culture where feedback is not only welcome but expected.</p>
+</li>
+<li>
+<p>Work side-by-side with the team on things that are considered "boring".</p>
+</li>
+<li>
+<p>Be there for your team when they need you, they will repay you with loyalty.</p>
+</li>
+<li>
+<p>One of the worst things you can do is optimizing something that shouldn't exist.</p>
+</li>
+<li>
+<p>Vast majority of decisions are 2-way door decisions. Make a decision and move on.</p>
+</li>
+<li>
+<p>Startups are hard and fun. Working with people you like makes it less hard and more fun.</p>
+</li>
+</ol>
+<br>
+<p>In the past 3 years, we have:</p>
+<ul>
+<li>The <a href="https://github.com/OpenBB-finance/OpenBB">open source repo</a> has been starred over 28,000 times and 220 contributors</li>
+<li>The OG OpenBB Terminal installer was downloaded over 150k times</li>
+<li>Refactored that application to a platform that could be pip installable</li>
+<li>Enabled users to fully <a href="https://youtu.be/cgeN3Ep2nEw?si=8e5en_xunWcBdKMM">automate their research workflow in a script</a></li>
+<li>Open-sourced an <a href="https://github.com/OpenBB-finance/openbb-agents">LLM-powered financial analyst agent built on top of the OpenBB platform</a></li>
+<li>Made an <a href="https://openbb.co/products/bot">OpenBB Bot</a> that run over 4M commands in 20k+ servers with 50k+ users</li>
+<li>Developed an <a href="https://openbb.co/products/excel">Add-in for Excel</a></li>
+<li>Grew to a team of 16</li>
+<li>Built a community of over 100k people</li>
+<li>And finally, we built the foundation of the <a href="https://openbb.co/products/pro">first AI-powered financial terminal</a> - more on this very very soon.</li>
+</ul>
+<br>
+<p>Personally, during that timeline:</p>
+<ul>
+<li>I got a second dog</li>
+<li>Visited US for the first time</li>
+<li>Got married on that first visit</li>
+<li>Left London to move to the Bay area a couple weeks after</li>
+<li>Moved to NYC</li>
+<li>Started boxing regularly</li>
+</ul>
+<p>We are more locked in than ever before.</p>
+<p>Can’t wait for the next 3 years. 🥂</p>]]></content>
+        <category label="career development" term="career development"/>
+        <category label="technology" term="technology"/>
+        <category label="OpenBB" term="OpenBB"/>
+        <category label="learning" term="learning"/>
+        <category label="leadership" term="leadership"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Why AI Will Replace Jobs in Finance and How You Should Prepare]]></title>
         <id>https://didierlopes.com/blog/why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare</id>
@@ -885,72 +1039,5 @@ My friends &amp; family are “protected” by an imaginary shield that I create
         <category label="bay" term="bay"/>
         <category label="US" term="US"/>
         <category label="travel" term="travel"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[OpenBB Copilot is now available to all Terminal Pro users]]></title>
-        <id>https://didierlopes.com/blog/openbb-copilot-now-available-to-all-terminal-pro-users</id>
-        <link href="https://didierlopes.com/blog/openbb-copilot-now-available-to-all-terminal-pro-users"/>
-        <updated>2024-02-27T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Introducing the OpenBB Copilot, an ever-present financial analyst at your fingertips with the OpenBB Terminal Pro.]]></summary>
-        <content type="html"><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-02-27-openbb-copilot-now-available-to-all-terminal-pro-users.png"></p>
-<p>For the past few weeks, we’ve been working on the OpenBB Copilot, an ever-present financial analyst at your fingertips with the OpenBB Terminal Pro.</p>
-<br>
-<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
-<p>The <a href="https://openbb.co/use-cases/ai">OpenBB Copilo</a> is our latest addition to the <a href="https://openbb.co/products/pro">Terminal Pro</a>, and we could not be more excited to share it with you.</p>
-<p>If you don't have access yet, join the <a href="https://my.openbb.co/app/pro/early-access">Terminal Pro waitlist</a> and enjoy your 3-week free trial soon!</p>
-<p>Now, take a moment to meet your new <strong>AI investment research partner</strong>.</p>
-<h2 id="what-can-the-openbb-copilot-do">What can the OpenBB Copilot do?</h2>
-<p>OpenBB Copilot is multi-functional and can perform several tasks that are useful to analysts. We’ll be exploring these below.</p>
-<h3 id="generic-financial-knowledge">Generic financial knowledge</h3>
-<p>Using OpenBB Copilot, you can ask any general financial question. For example:</p>
-<p><strong>What is the P/E ratio?</strong></p>
-<video controls=""><source src="https://openbb-cms.directus.app/assets/7c8c9658-4c4d-4090-8a61-826de823981b"></video>
-<p>As an additional bonus feature, OpenBB Copilot includes a LaTeX renderer to display mathematical formulas and equations.</p>
-<h3 id="conversation-capability">Conversation capability</h3>
-<p>OpenBB Copilot is a conversational agent and is, therefore, aware of the chat history of the current conversation.</p>
-<p>As a result, you can ask follow-up questions and steer OpenBB Copilot toward your line of inquiry while developing an investment thesis.</p>
-<p>To clear the message history, for example, when investigating a new asset, you can click on the trashcan icon to start a new conversation.</p>
-<video controls=""><source src="https://openbb-cms.directus.app/assets/3e1170f2-59b4-458a-bc6e-cd86c688b8db"></video>
-<h3 id="terminal-pro-as-context">Terminal Pro as context</h3>
-<p>If you ask questions about the data on the dashboard, OpenBB Copilot will query the Terminal Pro for the data necessary to answer your query.</p>
-<p>The Copilot has access to the dashboard metadata on the backend and can decide to retrieve data from any of the widgets currently on your dashboard.</p>
-<p>In most cases, if you can see the data on your dashboard, you can assume OpenBB Copilot has access to it.</p>
-<video controls=""><source src="https://openbb-cms.directus.app/assets/6c22201f-67ce-49a7-ab4d-213b594c657b"></video>
-<p>This is an application of what’s known in the AI world as function calling, which allows LLMs to interact with external systems.</p>
-<p>The OpenBB Copilot can choose to automatically retrieve the data from your dashboard if it needs it to answer your query.</p>
-<p>The advantage of this approach is that, since you can retrieve data from any widget, you can also expand OpenBB Copilot’s knowledge by adding custom widgets or by bringing your own data to the Terminal Pro.</p>
-<h3 id="query-specific-widgets">Query specific widgets</h3>
-<p>Sometimes, you may wish to focus your analysis and use OpenBB Copilot with only a specific subset of widgets.</p>
-<p>For example, you may want to use OpenBB Copilot to assist you in a deep analysis of an earnings transcript in the "Earnings Transcript" widget without retrieving data from the rest of the dashboard.</p>
-<p>To achieve this, you can chat with specifically selected widgets by clicking on the "Add widgets as context".</p>
-<video controls=""><source src="https://openbb-cms.directus.app/assets/dc74b30a-73ed-4b85-af23-9bb8ab9c844c"></video>
-<p>Selecting a widget will make that widget's data available to OpenBB Copilot while excluding all the other widgets.</p>
-<p>You can then use the Copilot as normal and the unselected widgets will be ignored by the Copilot.</p>
-<h3 id="query-your-own-documents">Query your own documents</h3>
-<p>You’re also not limited by the data that is available in Terminal Pro.</p>
-<p>You can upload your own documents for OpenBB Copilot to use as context while answering your queries.</p>
-<p>OpenBB Copilot currently supports txt, PDF, CSV and XLSX documents.</p>
-<video controls=""><source src="https://openbb-cms.directus.app/assets/dec690c2-ed07-40c1-8b3e-ff0ad7294258"></video>
-<h3 id="citations">Citations</h3>
-<p>We understand that sometimes getting an answer from an AI chatbot with financial knowledge isn’t satisfactory.</p>
-<p>You often want to do further research or do your own fact-checking of the sources used to answer to your query.</p>
-<p>That is why OpenBB Copilot provides citations as part of its answers.</p>
-<p>When using the Terminal Pro as context or chatting with your uploaded data files, the Copilot will cite which data sources it used to formulate the answers.</p>
-<p>Simply mouse over the citation to see which widget data was used, or which uploaded file was referenced. For PDF document specifically, the Copilot will also source the specific page that was used to answer your query.</p>
-<video controls=""><source src="https://openbb-cms.directus.app/assets/e35a0b2c-8150-4d2b-9743-a72862ba3b6d"></video>
-<h2 id="what-if-you-dont-want-to-use-our-copilot">What if you don't want to use our copilot?</h2>
-<p>You don’t have to. That is the reason we came up with the Bring Your Own Copilot concept.</p>
-<p>If you’re an OpenBB Terminal Pro user, you’re able to bring your own financial Copilot that has been fine-tuned and tweaked on your enterprise’s private data.</p>
-<p>This provides an edge to financial firms as they can access their own fine-tuned LLM with access to real-time data provided by the OpenBB Terminal Pro - making this the perfect combo to perform investment research.</p>
-<p>We have an <a href="https://github.com/OpenBB-finance/copilot-for-terminal-pro/tree/main">open-source repository</a> to help you make your own copilots accessible on the Terminal Pro.</p>
-<p>You can also see the video below:</p>
-<video controls=""><source src="https://openbb-cms.directus.app/assets/2703e8d8-2497-40ab-b513-678d78989f5b"></video>
-<br>
-<p>Check out our <a href="https://openbb.co/use-cases/ai">AI page</a> to learn more about these features and stay updated in the future.</p>]]></content>
-        <category label="openbb" term="openbb"/>
-        <category label="copilot" term="copilot"/>
-        <category label="generative ai" term="generative ai"/>
-        <category label="ai" term="ai"/>
-        <category label="llm" term="llm"/>
     </entry>
 </feed>

@@ -74,15 +74,15 @@ Now, let’s discuss the decisions we need to make for the second option grant:
 
 By utilizing maths, we can create the following equation:
 
-![image](/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup_3.png)
+![image](/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup_3.jpeg)
 
 By filling in the information that we know, we get:
 
-![image](/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup_4.png)
+![image](/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup_4.jpeg)
 
 And thus we know that we can get the value that makes this happen.
 
-![image](/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup_5.png)
+![image](/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup_5.jpeg)
 
 However, we don’t want to give the employee fractional shares each month, so we select a round number around the one that makes him receive around 1,500 additional shares over the course of 4 years.
 

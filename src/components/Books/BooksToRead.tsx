@@ -138,11 +138,6 @@ const data = [
     image: '/books/dare-to-lead-brave-work-tough-conversations-whole-hearts.jpeg',
   },
   {
-    title: 'Start with Why: How Great Leaders Inspire Everyone to Take Action',
-    author: 'Simon Sinek',
-    image: '/books/start-with-why-how-great-leaders-inspire-everyone-to-take-action.jpeg',
-  },
-  {
     title: 'Nudge: The Final Edition: Improving Decisions About Money, Health, and the Environment',
     author: 'Richard H. Thaler, Cass R. Sunstein',
     image: '/books/nudge-the-final-edition-improving-decisions-about-money-health-and-the-environment.jpeg',
@@ -321,11 +316,6 @@ const data = [
     title: "The Third Wave: An Entrepreneur's Vision of the Future",
     author: 'Steve Case',
     image: "/books/the-third-wave-an-entrepreneur-s-vision-of-the-future.jpg"
-  },
-  {
-    title: "The Real Madrid Way: How Values Created the Most Successful Sports Team on the Planet",
-    author: 'Steven G. Mandis',
-    image: "/books/the-real-madrid-way-how-values-created-the-most-successful-sports-team-on-the-planet.jpg"
   },
   {
     title: "The Art of Learning: An Inner Journey to Optimal Performance",

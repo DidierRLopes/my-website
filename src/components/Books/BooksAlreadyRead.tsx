@@ -307,6 +307,16 @@ const data = [
     author: 'Gino Wickman',
     image: '/books/traction-get-a-grip-on-your-business.jpeg',
   },
+  {
+    title: "The Real Madrid Way: How Values Created the Most Successful Sports Team on the Planet",
+    author: 'Steven G. Mandis',
+    image: "/books/the-real-madrid-way-how-values-created-the-most-successful-sports-team-on-the-planet.jpg"
+  },
+  {
+    title: 'Start with Why: How Great Leaders Inspire Everyone to Take Action',
+    author: 'Simon Sinek',
+    image: '/books/start-with-why-how-great-leaders-inspire-everyone-to-take-action.jpeg',
+  },
 ];
 
 export default function BooksAlreadyRead() {

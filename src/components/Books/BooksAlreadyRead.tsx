@@ -317,6 +317,11 @@ const data = [
     author: 'Simon Sinek',
     image: '/books/start-with-why-how-great-leaders-inspire-everyone-to-take-action.jpeg',
   },
+  {
+    title: "The Art of Learning: An Inner Journey to Optimal Performance",
+    author: "Josh Waitzkin",
+    image: "/books/the-art-of-learning-an-inner-journey-to-optimal-performance.jpg"
+  }
 ];
 
 export default function BooksAlreadyRead() {

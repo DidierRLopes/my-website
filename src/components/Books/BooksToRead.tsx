@@ -387,6 +387,12 @@ const data = [
 		author: "Andrew Wilkinson",
 		image: "/books/never-enough-from-barista-to-billionaire.jpg",
 	},
+	{
+		title: "Alchemy: The Surprising Power of Ideas That Don't Make Sense",
+		author: "Rory Sutherland",
+		image:
+			"/books/alchemy-the-surprising-power-of-ideas-that-don-t-make-sense.jpg",
+	},
 ];
 
 export default function BooksToRead() {

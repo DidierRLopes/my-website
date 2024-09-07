@@ -393,6 +393,11 @@ const data = [
 		image:
 			"/books/alchemy-the-surprising-power-of-ideas-that-don-t-make-sense.jpg",
 	},
+	{
+		title: "Badass: Making Users Awesome",
+		author: "Kathy Sierra",
+		image: "/books/badass-making-users-awesome.jpg",
+	},
 ];
 
 export default function BooksToRead() {

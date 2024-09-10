@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import Layout from '@theme/Layout';
-import Head from '@docusaurus/Head';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+import Head from '@docusaurus/Head';
+import Layout from '@theme/Layout';
+import React, { useState, useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -122,7 +122,8 @@ export default function Home() {
               height="200"
               frameBorder="0"
               scrolling="no"
-            ></iframe>
+              title="Didier newsletter"
+            />
           )}
         </div>
         <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center rounded-[14px]">

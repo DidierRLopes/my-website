@@ -398,6 +398,16 @@ const data = [
 		author: "Kathy Sierra",
 		image: "/books/badass-making-users-awesome.jpg",
 	},
+	{
+		title: "Sales Pitch: How to Craft a Story to Stand Out and Win",
+		author: "April Dunford",
+		image: "/books/sales-pitch-how-to-craft-a-story-to-stand-out-and-win.jpg",
+	},
+	{
+		title: "The JOLT Effect: How High Performers Overcome Customer Indecision",
+		author: "Matthew Dixon, Ted McKenna",
+		image: "/books/the-jolt-effect-how-high-performers-overcome-customer-indecision.jpg",
+	}
 ];
 
 export default function BooksToRead() {

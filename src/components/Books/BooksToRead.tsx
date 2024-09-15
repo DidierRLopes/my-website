@@ -406,8 +406,9 @@ const data = [
 	{
 		title: "The JOLT Effect: How High Performers Overcome Customer Indecision",
 		author: "Matthew Dixon, Ted McKenna",
-		image: "/books/the-jolt-effect-how-high-performers-overcome-customer-indecision.jpg",
-	}
+		image:
+			"/books/the-jolt-effect-how-high-performers-overcome-customer-indecision.jpg",
+	},
 ];
 
 export default function BooksToRead() {

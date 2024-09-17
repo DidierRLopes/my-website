@@ -321,7 +321,12 @@ const data = [
     title: "The Art of Learning: An Inner Journey to Optimal Performance",
     author: "Josh Waitzkin",
     image: "/books/the-art-of-learning-an-inner-journey-to-optimal-performance.jpg"
-  }
+  },
+	{
+		title: "The Third Wave: An Entrepreneur's Vision of the Future",
+		author: "Steve Case",
+		image: "/books/the-third-wave-an-entrepreneur-s-vision-of-the-future.jpg",
+	}
 ];
 
 export default function BooksAlreadyRead() {

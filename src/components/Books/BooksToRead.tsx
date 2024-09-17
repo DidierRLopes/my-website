@@ -378,11 +378,6 @@ const data = [
 			"/books/working-backwards-insights-stories-and-secrets-from-inside-amazon.jpg",
 	},
 	{
-		title: "The Third Wave: An Entrepreneur's Vision of the Future",
-		author: "Steve Case",
-		image: "/books/the-third-wave-an-entrepreneur-s-vision-of-the-future.jpg",
-	},
-	{
 		title: "Never Enough: From Barista to Billionaire",
 		author: "Andrew Wilkinson",
 		image: "/books/never-enough-from-barista-to-billionaire.jpg",

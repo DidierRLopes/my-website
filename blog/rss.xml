@@ -4,11 +4,199 @@
         <title>Didier Lopes Blog</title>
         <link>https://didierlopes.com/blog</link>
         <description>Didier Lopes Blog</description>
-        <lastBuildDate>Mon, 09 Sep 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 21 Sep 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2024 Didier Lopes.</copyright>
+        <item>
+            <title><![CDATA[ChatGPT and The Future of AI in Finance]]></title>
+            <link>https://didierlopes.com/blog/chatgpt-and-the-future-of-ai-in-finance</link>
+            <guid>https://didierlopes.com/blog/chatgpt-and-the-future-of-ai-in-finance</guid>
+            <pubDate>Sat, 21 Sep 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[I took the stage at the Cornell Quant Conference alongside Yu Yu (BlackRock) Tony Berkman (Two Sigma), and Samson Qian (Citadel), to discuss ChatGPT & The Future of AI in Finance.]]></description>
+            <content:encoded><![CDATA[<p align="center"><img width="900" src="https://didierlopes.com/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance.jpg"></p>
+<p>I took the stage at the Cornell Quant Conference alongside Yu Yu (BlackRock) Tony Berkman (Two Sigma), and Samson Qian (Citadel), to discuss ChatGPT &amp; The Future of AI in Finance.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>Last week, I participated in a panel at the Cornell Financial Engineering Manhattan Conference. The topic of the panel was ‘ChatGPT &amp; The Future of AI in Finance.’</p>
+<p>The other panelists were:</p>
+<ul>
+<li><strong>Yu Yu</strong>, Director of Data Science - BlackRock</li>
+<li><strong>Tony Berkman</strong>, Managing Director - Two Sigma</li>
+<li><strong>Samson Qian</strong>, Trader - Citadel</li>
+</ul>
+<p>After the discussion, several people reached out, mentioning it was one of their favorite panels of the day.</p>
+<p>Since this wasn't recorded, I took the opportunity to write down some of the topics discussed, along with a few additional thoughts that I believe in.</p>
+<p>I will organize the following sections based on the topics discussed at the event:</p>
+<ol>
+<li>Hallucinations</li>
+<li>Agents are the future</li>
+<li>When does it make sense to fine-tune?</li>
+<li>Compliance and Data security</li>
+</ol>
+<h2 id="1-hallucinations">1. Hallucinations</h2>
+<p>When talking about the topic of hallucinations, I have a <a href="https://x.com/didier_lopes/status/1675630822093918209">quote</a> that I love from Marc Andreesen:</p>
+<blockquote>
+<p>“Hallucination is what we call when we don't like it. Creativity is what we call it when we do like it.”</p>
+</blockquote>
+<h3 id="confident-hallucinations">Confident hallucinations</h3>
+<p>The fundamental issue with hallucinations is the fact that the model hallucinates with confidence.</p>
+<p>Imagine asking two different friends: “Do you know where location X is?”</p>
+<p><strong>Friend A</strong>: It’s there.</p>
+<p><strong>Friend B</strong>: Hmm, I’m not really sure. If I had to guess, I’d say there, but I’m not 100% certain.</p>
+<p>If both gave wrong directions, you would consider <strong>Friend A</strong> a liar, but not Friend B. This is because <strong>Friend B</strong> lacked confidence in their answer, they were trying to help but highlighted that they weren’t sure about it.</p>
+<p>The problem with current LLMs is that they are, for the most part, like <strong>Friend A</strong>. They say wrong things with certainty.</p>
+<p>Hallucinations would be less problematic if the default behavior were more like the answer on the right, when the LLM is not 100% confident.</p>
+<div class="flex justify-center items-center"><img width="350" src="https://didierlopes.com/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_1.png" style="margin-right:10px"><img width="350" src="https://didierlopes.com/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_2.png"></div>
+<br>
+<p>The problem with confident hallucinations is that, similar to why everyone dislikes liars, it leads to a lack of trust. So users begin to put everything that is output by an LLM under a microscope - even if what the model says is accurate.</p>
+<h3 id="how-to-avoid-hallucinations">How to avoid hallucinations</h3>
+<p>There are ways to address this and one of the key approaches we are extremely strong about at OpenBB is always tapping into information that is available.</p>
+<p>When a user asks a question that requires financial data, the OpenBB Copilot always searches for that data on OpenBB (either through data we make available or through private data that customers bring).</p>
+<p>The Copilot will only answer the question if that data exists. This allows the model to cite the data used in its response, so the user can double-check.</p>
+<p>This is how it looks.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_3.png"></p>
+<p>While I've heard a few vendors promising 100% accuracy, this is simply not true.</p>
+<p>We are at a stage where technology is not even yet at the ‘trust but verify’ level.</p>
+<p>So instead of hallucinating with confidence, when data is unavailable, we prompt the model to return that there was no real-time information accessible to answer the query.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_4.png"></p>
+<h3 id="function-calling-to-increase-accuracy">Function calling to increase accuracy</h3>
+<p>One thing we found that significantly reduces hallucinations is enabling our agent, OpenBB Copilot, to have access to all the API backends that users have through OpenBB or those they've added themselves.</p>
+<p>Here’s the sequence of actions that happen:</p>
+<ol>
+<li>The user asks the OpenBB Copilot a question.</li>
+<li>The prompt is converted into embeddings.</li>
+<li>We compare that embedding with all the ones that we have on an OpenBB vector store which contains widget signatures - name, description, category, subcategory and source.</li>
+<li>We retrieve the widgets with the highest similarity.</li>
+<li>The Copilot then decides which widget to use based on the prompt.</li>
+<li>Then Copilot also decides what parameters to use when calling that API</li>
+</ol>
+<br>
+<p>This leads to less hallucination because the LLM isn't outputting tokens based on a prompt and its internal weights. Instead, it's using its internal weights, the prompt, and a function call.</p>
+<p>Assuming the function call succeeds - with correct widget retrieval and parameters - the data becomes available for the Copilot to use, which leads to higher accuracy.</p>
+<p>Note: This still means that Copilot needs to use the correct widget and the correct parameter, but there's a <strong>higher likelihood of success</strong> because if it isn't, the API call will fail, prompting the LLM to try again.</p>
+<p>Here's how it works behind the scenes, the OpenBB Copilot highlights its step-by-step reasoning so users can understand its thought process. Transparency is key.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_5.png"></p>
+<h3 id="workflows-to-avoid-hallucinations">Workflows to avoid hallucinations</h3>
+<p>In order to reduce the number of hallucinations, there are two things that can be done.</p>
+<h4 id="enable-users-to-quickly-detect-whether-a-hallucination-has-occurred">Enable users to quickly detect whether a hallucination has occurred</h4>
+<p>For instance, if a user utilizes the following prompt on the OpenBB Copilot:</p>
+<blockquote>
+<p><em>Using&nbsp;the&nbsp;earnings&nbsp;transcript,&nbsp;create&nbsp;a&nbsp;table&nbsp;with&nbsp;columns:&nbsp;financial&nbsp;metric,&nbsp;value,&nbsp;sentence&nbsp;in&nbsp;the&nbsp;earnings&nbsp;where&nbsp;it&nbsp;was&nbsp;extracted&nbsp;from.&nbsp;Double&nbsp;check&nbsp;whether&nbsp;the&nbsp;information&nbsp;you&nbsp;are&nbsp;using&nbsp;is&nbsp;correct.</em></p>
+</blockquote>
+<br>
+<p>They get the "<em>Sentence Extracted From</em>" column, which they can copy and paste into a search field added at the top of the Earnings Transcript widget. This enable users to quickly validate the numbers that have been found.</p>
+<p>See example below,</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_6.png"></p>
+<h4 id="add-deterministic-processes-to-check-for-hallucinations">Add deterministic processes to check for hallucinations</h4>
+<p>For example, let’s say the user prompt involves a data retrieval task.</p>
+<p>We can run a deterministic process to check whether the retrieved values exist or not. Sure this won't be 100% accurate because the numbers could be flagged by referring to another thing, BUT it's all about improving the overall accuracy of Copilot.</p>
+<p>Ultimately, whatever can be done to improve the Copilot’s accuracy should be done.</p>
+<h2 id="2-agents-are-the-future">2. Agents are the future</h2>
+<p>When we think about how humans operate, we recognize that the brain coordinates all the actions of our body and our thought processes. This is similar to how agents work.</p>
+<p>If I'm playing soccer, the muscles I use are different from those I would use if I were boxing. If I'm programming, the parts of my brain I use differ from those I would use when listening to music.</p>
+<p>However, it's not as simple as "activity A requires legs". Most of your body and mind are always involved, but at different times and in different capacities. And what dictates that are external factors.</p>
+<p>For instance, if I am playing soccer as a winger and my team is attacking, I will likely be using both legs to run forward and a lot of mental energy to decide where to position myself on the field.</p>
+<p>And that will change a lot based on where the ball is. If the ball is on the opposite side, I'll likely run less and stay more in the middle to be ready for a counterattack. If the ball is in the middle, I'll probably be running at full speed to create space. If the ball is close to me I have to worry more about controlling it and understand what I can do with it next.</p>
+<p>The environment affects my plan to carry out an action where I want to have a successful outcome.</p>
+<p><strong>This is how agents work.</strong></p>
+<p>Agents aren't just about a single LLM performing well, but about a full workflow that interacts with multiple language models, function calls, or any other process to carry an action.</p>
+<p>At the core, the biggest advantage of an agent over a LLM is that an agent has a full feedback loop. It understands the impact of the LLM output and can use that data in the next step of the process. Whereas a single LLM API call returns its best output but won't know how that affected the external environment.</p>
+<p>This is why, at OpenBB, we believe in compound AI systems.</p>
+<p>And apparently, <a href="https://finance.yahoo.com/news/sequoia-sees-bigger-money-ai-203655254.html?guccounter=1">so does Sequoia</a>.</p>
+<p align="center"><img width="300" src="https://didierlopes.com/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_7.png"></p>
+<h3 id="the-strawberry-issue-will-be-solved">The “Strawberry” issue will be solved</h3>
+<p>A panelist commented on stage that LLMs can’t even count how many R's are in the word "Strawberry".</p>
+<p>This <a href="https://x.com/MwangoCapital/status/1828857579860095428">tweet</a> offers a good explanation of why this happens — it turns out it's due to the tokenizer, and it can be solved. In fact, it's solved by simply ensuring that the model takes each letter as a token. See below,</p>
+<div class="flex justify-center items-center"><img width="300" src="https://didierlopes.com/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_8.png" style="margin-right:10px"><img width="300" src="https://didierlopes.com/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_9.png"></div>
+<br>
+<p>This means that the model's output can be improved by doing extra work at the input level.</p>
+<p>Data cleaning and pre-processing strikes again? 😃</p>
+<p>Interestingly, a few days ago, <a href="https://openai.com/o1/">OpenAI announced OpenAI o1</a>. Which is basically GPT-4o with Chain-of-Thought (COT). This means that this model is a "wannabe agent".</p>
+<p>It takes in a prompt from the user and decomposes it in natural steps to solve it. Then at each step, it takes the output of the model from the previous step and predicts the next token. It turns out that this improves accuracy substantially.</p>
+<p>However, it still doesn’t have access to external data. And that is why I call it a "wannabe agent".</p>
+<p>I love how Jeremiah put it in this <a href="https://x.com/jlowin/status/1834722014839418962">tweet</a>:</p>
+<blockquote>
+<p>(...) Agents are also characterized by iterative behavior. But there's a key difference: while models like o1 iterate internally to refine their reasoning, agents engage in iterative interactions with the external world. They perceive the environment, take actions, observe the outcomes (or side effects) and adjust accordingly. This recursive process enables agents to handle tasks that require adaptability and responsiveness to real-world changes. (...)</p>
+</blockquote>
+<br>
+<p>So, o1's model isn't an agent - but it can solve this problem. The reason is that it applies its own data cleaning/pre-processing step on its own, and doesn't rely on external factors.</p>
+<h3 id="small-language-models">Small Language Models</h3>
+<p>Once agents work, Small Language Models (SLM) will be much more viable for very specific use cases.</p>
+<p>In logical terms, a Large Language Model is a model with weights.</p>
+<p>Large means that it has a lot of them. But what tends to happen is LLMs need to be very big because they want these models to be really good at everything. The problem is that if you want the exact same model to be good at discussing soccer, programming, and speaking Portuguese, its weights are updated using these drastically different datasets. Now the premise is that the more weights there are, the less each weight will be affected by data from completely different domains.</p>
+<p>What a big LLM like GPT-4o is doing is trying to build a single Jarvis that knows about everything. Whereas we could have an SLM that does something extremely well and just focus on that, e.g. translating from English to Portuguese. The benefit of an SLM is that inference is likely faster, can be hosted on devices, and, in theory, it's better on a topic because it's been less "contaminated" during training by data that doesn't relate to the task at hand.</p>
+<p>Imagine that a firm decides to use an SLM trained to retrieve data from SEC filings quickly and at scale. Or, we could train our own SLM to understand user intent and interact directly with the OpenBB Terminal interface.</p>
+<h3 id="large-language-models-as-orchestrator">Large Language Models as orchestrator</h3>
+<p>In my opinion, the best LLM in each category will win. And the second and third won't matter. It's a winner-takes-all kind of market. Unless in specific verticals such as inference time or open weights (e.g. for data security; more on this later).</p>
+<p>The best example of this is OpenAI vs Anthropic.</p>
+<p>I had been using OpenAI's GPT-4 for coding for several months. After trying Anthropic's Sonnet 3.5 for coding, I never went back to OpenAI.</p>
+<p align="center"><img width="400" src="https://didierlopes.com/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_10.png"></p>
+<p>The market share for the best LLM will be gigantic. That’s why <a href="https://www.bloomberg.com/news/articles/2024-09-11/openai-fundraising-set-to-vault-startup-s-value-to-150-billion">OpenAI is looking to raise at a $150 billion valuation</a>. While the valuation reflects the market size, the amount that will be raised represents the capital needed to reach that valuation. This is why only a few players will be able to compete at that level.</p>
+<p>In an "agentic future", I believe the best LLM will serve as the core "brain" - the main LLM that routes all prompts and decides what happens next.</p>
+<p>And who wouldn't want the smartest model controlling the actions with a list of models, functions and data at its disposal?</p>
+<p>I know I would.</p>
+<p>That's also why, when discussing OpenBB Copilot, we don’t rely on a single foundational model. Instead, we use the models that are best suited for each specific task.</p>
+<p>For instance, OpenAI o1 can be the brains, but when a user uses @web it triggers the Perplexity model, and when they upload an image, we have Anthropic's Haiku. Or maybe if they want to do intraday trading, we use Llama 3.1 through Groq for fast inference.</p>
+<p>You get the idea.</p>
+<h2 id="3-when-does-it-make-sense-to-fine-tune">3. When does it make sense to fine-tune</h2>
+<p>A good comment was made on the panel: "<em>it’s expensive to spend time fine-tuning a new model, just for that entire work to be 'eradicated' by a new model that has a higher performance in that specific domain than the model has been fine-tuned</em>".</p>
+<p>In my opinion, this happens because the timing isn't right yet. We are still unlocking remarkable achievements through each new model release. Although there is a massive bump in terms of capability between these releases, I wouldn't recommend that a firm fine-tune its own models at this stage.</p>
+<p>However, at some point, whether due to a lack of data to train or architecture needing to be reinvented, improvements in LLM performance won't be substantial - they may not even be noticeable. This is when the fine-tuning technique becomes relevant because at this stage you are trying to repurpose everything the model has towards a specific vertical / use-case - and at that vertical/use-case that model will be better than the following one.</p>
+<p>Then after some new models come out, you may consider reapplying fine-tuning to that model, but this would likely be years later, not weeks or months. So, the ROI can be quite high. Particularly when you are trying to win in your specific market.</p>
+<p>This is how I see it working in my head:</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_11.png"></p>
+<h2 id="4-compliance-and-data-security">4. Compliance and Data security</h2>
+<p>Another question I received was about compliance and data security.</p>
+<p>Recently, during a discussion with one of the largest hedge funds in the world, we were asked about the entire workflow of the data when our AI Copilot has access to it.</p>
+<p>Their main concern was ensuring that no data was being shared with third-party vendors like OpenAI. For such firms, their data is their alpha, and keeping it within their network is paramount.</p>
+<p>Crypto enthusiasts often say, "Not your keys, not your coins" to emphasize the importance of storing assets in a cold wallet rather than leaving them on an exchange that might implode (looking at you, FTX). The same principle applies here: "Not your weights, not your data".</p>
+<p>When you send information to a large foundation model provider like OpenAI, your data enters their ecosystem, and you have to trust they’ll honor the terms of your contract.</p>
+<p>A more secure approach is to host an open-source model locally within your firm, ensuring that sensitive data remains entirely within your infrastructure and network.</p>
+<p>Although open-source models aren’t yet as powerful as closed-source ones, they are catching up quickly. If you think that GPT-4o can already do a lot for you, think about how at some point there will be an open-source model that is GPT-4o equivalent. Sure, at that time closed-source models will be better, but the question is: How much better?</p>
+<p>Or better, the question is: <strong>"How much are you willing to sacrifice in terms of data security for performance?”</strong>.</p>
+<p>At OpenBB, we take this very seriously and have taken measures to allow enterprise customers to fully control their data.</p>
+<h3 id="bring-your-own-copilot">Bring your own copilot</h3>
+<p>Enable firms to bring their own LLMs to access data within OpenBB. This means that we provide an interface for research, but also allow them to integrate their internal LLMs and interact directly with it from OpenBB.</p>
+<div class="flex justify-center items-center"><img width="350" src="https://didierlopes.com/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_12.png" style="margin-right:10px"><img width="350" src="https://didierlopes.com/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_13.png"></div>
+<br>
+<p>We believe in this idea so much, that we have open-source the architecture for firms to bring their own Copilot to OpenBB. More information is available <a href="https://github.com/OpenBB-finance/copilot-for-terminal-pro/">here</a>.</p>
+<h3 id="turn-off-ai-workflows">Turn off AI workflows</h3>
+<p>We have incorporated workflows that make users' lives MUCH better. But they come at a cost: sharing data with an LLM provider.</p>
+<p>These are the features:</p>
+<ul>
+<li><strong>Widget title/description suggestion from Copilot</strong>: This sends the content of the table or note output by Copilot to an LLM provider to receive suggestions of a title and description.</li>
+</ul>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_14.png"></p>
+<ul>
+<li><strong>Widget title/description suggestion upon upload</strong>: It sends the content of the file that has been uploaded to an LLM provider to receive suggestions of title and description.</li>
+</ul>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_15.png"></p>
+<ul>
+<li><strong>Copilot chat title generation</strong>: Upon the first user prompt, the content is sent to an LLM provider to update the chat title, reflecting the nature of the conversation.</li>
+</ul>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_16.png"></p>
+<ul>
+<li><strong>Dashboard name generation</strong>: When renaming the dashboard, we send the title and descriptions of all widgets on that dashboard to an LLM provider, to ensure that the suggested name is relevant.</li>
+</ul>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_17.png"></p>
+<p>To allow firms to keep their data within their network, one of our enterprise features is the option to disable these AI workflows.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_18.png"></p>
+<p>In the future, we could direct these AI workflows to use an LLM that our customers are running locally.</p>
+<h2 id="so-in-a-nutshell-what-can-you-expect-from-openbb">So, in a nutshell, what can you expect from OpenBB?</h2>
+<p>We are building an AI-powered research workspace.</p>
+<p>At the core it is an AI compound system, where users can bring their own data (structured, unstructured, API, custom backend, database, data warehouse, etc..) and have our (or their own copilot) access all this data seamlessly - in an interface that is customizable, flexible and enables teams to work together.</p>
+<p>If you want to learn more, e-mail me directly at <a href="mailto:didier.lopes@openbb.finance">didier.lopes@openbb.finance</a></p>]]></content:encoded>
+            <category>finance</category>
+            <category>ai</category>
+            <category>agents</category>
+            <category>chatgpt</category>
+            <category>quant</category>
+            <category>cornell</category>
+            <category>twosigma</category>
+            <category>blackrock</category>
+            <category>citadel</category>
+        </item>
         <item>
             <title><![CDATA[Why I love boxing]]></title>
             <link>https://didierlopes.com/blog/why-i-love-boxing</link>
@@ -885,79 +1073,6 @@ My friends &amp; family are “protected” by an imaginary shield that I create
 <p>As I mentioned earlier, one of the advantages we get from OpenBB Creaton is that we test our products and give feedback to the team on what went well or less well. After working on this project, this is what I shared with the team:</p>
 <p align="center"><img width="800" src="https://didierlopes.com/blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack_6.png"></p>
 <p>Exciting times we live in. If you want to leverage AI within your financial firm, we can help you 🤝</p>]]></content:encoded>
-            <category>learning</category>
-            <category>experience</category>
-            <category>growth</category>
-            <category>moving</category>
-            <category>london</category>
-            <category>bay</category>
-            <category>US</category>
-            <category>travel</category>
-            <category>startup</category>
-            <category>nyc</category>
-        </item>
-        <item>
-            <title><![CDATA[Moving Countries and Starting a Company Ain't So Different]]></title>
-            <link>https://didierlopes.com/blog/moving-countries-and-starting-a-company-aint-so-different</link>
-            <guid>https://didierlopes.com/blog/moving-countries-and-starting-a-company-aint-so-different</guid>
-            <pubDate>Sun, 24 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[I have started a company. I have moved countries. It turns out that there's a lot in common between these.]]></description>
-            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack.png"></p>
-<p>I have started a company. I have moved countries. It turns out that there's a lot in common between these.</p>
-<br>
-<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
-<p>Recently, I wrote a blogpost about the <a href="https://didierlopes.com/blog/moving-from-london-to-the-bay-area-and-what-changed">difference in culture between London and San Francisco</a>. I convinced my wife and dogs, packed our bags, and didn't look back. After all, I would live in the city with the highest density of builders per capita.</p>
-<p><strong>But why?</strong></p>
-<p>Most of my friends and family didn't understand why I would leave London. I liked the city, I enjoyed my lifestyle, I had friends, I played football with the same group every week, had dinner at the same restaurants, was close to family, and wouldn't be able to save money.</p>
-<p>Logically speaking, this move didn't make any sense. No one really told me that I was doing the right thing, but internally, I knew I had to.</p>
-<p>I believe this isn't so different from creating a startup. This blog post will explain what they have in common and why I did it.</p>
-<h2 id="creating-a-startup--deciding-to-leave-yourcountry">Creating a startup / Deciding to leave your&nbsp;country</h2>
-<p><a href="http://eladgil.com/">Elad Gil</a> wrote a really good <a href="https://blog.eladgil.com/p/startups-are-an-act-of-desperation">article</a> on how creating a startup is an act of desperation. I believe that post could be equally applicable to moving countries, so I will list the same points used by Elad in the context of moving countries and provide examples. Most of the time, the person moving countries has a mix of the below bullet points.</p>
-<blockquote>
-<p><strong>Career desperation.</strong> Startups allow people early or stuck in their careers to jump a few steps ahead.</p>
-</blockquote>
-<br>
-<p>This applies equally to moving, and is why I left Portugal to pursue an MSc at Imperial College London.</p>
-<blockquote>
-<p><strong>Financial desperation.</strong> If successful, a startup will also leapfrog you financially.</p>
-</blockquote>
-<br>
-<p>This is the biggest motivation for people to move countries. This is why I was born in Switzerland, even though my parents are Portuguese. Having blue-collar jobs, they emigrated to a country with a better economy to provide my brother and me with a better life.</p>
-<blockquote>
-<p><strong>Product or mission desperation.</strong> The other reason startups often exist is that the founders are desperate for a product to exist in the world.</p>
-</blockquote>
-<br>
-<p>In this case, it's the equivalent of hearing about Silicon Valley in documentaries or watching Steve Jobs presenting the iPhone in 2007. You cannot ignore that as an engineer, so you are desperate to move to be part of that tech scene.</p>
-<blockquote>
-<p><strong>Desperation to do something big or important, and to avoid wasted time.</strong> Some people want to "make a dent in the universe" and are motivated by doing something useful with their lives.</p>
-</blockquote>
-<br>
-<p>This is what the "American dream" is all about. People moved to the US to do something bigger than themselves and achieve the promised dream.</p>
-<blockquote>
-<p><strong>Revenge vs the Arena</strong></p>
-</blockquote>
-<br>
-<p>The equivalent to this is when someone returns to their home country after several years outside with more wealth and/or experience.</p>
-<h2 id="growing-a-startup--livingabroad">Growing a startup / Living&nbsp;abroad</h2>
-<h3 id="mission-andvision">Mission and&nbsp;Vision</h3>
-<p>When creating a company, you must have a clear mission and vision. This allows you to create a community/team that will be with you for the long run. Similarly, when moving countries, it's essential to have a well-defined goal. This doesn't mean that the goal cannot change; after all, companies pivot. However, you need to have a strategy that you follow until you don't.</p>
-<h3 id="risk-and-uncertainty">Risk and Uncertainty</h3>
-<p>Startups and moving to a new country both involve stepping into the unknown. Entrepreneurs often take financial and personal risks, while those moving countries leave behind familiar surroundings, support systems, and sometimes even their careers. Uncertainty becomes a constant companion, demanding adaptability, problem-solving skills, and the ability to embrace change with open arms.</p>
-<h3 id="cultural-integration-and-networking">Cultural Integration and Networking</h3>
-<p>Building a successful startup requires networking, forming strategic partnerships, and understanding the market. Similarly, when moving countries, one must navigate cultural differences, learn new languages, and establish a network of contacts. Expanding social circles, building relationships, and immersing oneself in the local culture contribute to personal growth and enhance professional opportunities, just like in the startup world.</p>
-<h3 id="resilience-and-persistence">Resilience and Persistence</h3>
-<p>Building a startup and moving countries demands unwavering resilience and persistence in facing challenges. Startups encounter setbacks, pivots, and failures, but successful entrepreneurs persist and learn from their experiences. Similarly, moving countries can bring unexpected hurdles, such as language barriers, difficulties making friends, challenges adapting to a new culture, or not finding a routine. Embracing these challenges with determination and adaptability paves the way for growth and achievement.</p>
-<h3 id="learning-andgrowth">Learning and&nbsp;Growth</h3>
-<p>Startups and moving countries are transformative experiences that offer immense personal and professional growth opportunities. Entrepreneurs continuously learn from their successes and failures in the startup world, refining their strategies and acquiring new skills. Likewise, moving countries provides a unique chance to learn about different cultures, broaden perspectives, and develop resilience, patience, and empathy. Both experiences foster personal development and shape individuals into more well-rounded and adaptable individuals.</p>
-<h2 id="why-did-i-doit">Why did I do&nbsp;it?</h2>
-<p>The reason why I started OpenBB and also moved country is a combination of 2 factors:</p>
-<h3 id="product-or-mission-desperation">Product or mission desperation.</h3>
-<p>On a startup level, I have experienced the need for an open-source investment research platform. That's why I wanted to create this platform, which was yet to exist. I think it wouldn't be possible if I didn't dedicate my time to it. This is why OpenBB's success is so important-it will enable millions of investors to have better access to data and better understand the financial market.</p>
-<p>Growing up as an engineer fascinated by tech and innovation, the US has always been home to the biggest companies and hottest products. I've always been attracted to Silicon Valley, but before OpenBB, I never had the chance to. The first job I applied to after finishing university was Waymo in CA, but they didn't sponsor VISAs for that role.</p>
-<h3 id="desperation-to-do-something-big-or-important">Desperation to do something big or important.&nbsp;</h3>
-<p>On a startup level, I want to work on something bigger than myself. I want to solve a problem that no one has solved before and build something useful for millions of people that can withstand time.</p>
-<p>I will do whatever it takes to build the first truly open-source investment research platform. Moving to SF increased my network opportunities with other entrepreneurs and builders from whom I can learn. I want to be fully immersed in this ecosystem and give it my all to do everything possible to help OpenBB succeed as a company, regardless of the outcome.</p>
-<p>Note: A few weeks ago, I moved to NYC because I truly believe living here would increase the chances of OpenBB's success compared to living in SF.</p>]]></content:encoded>
             <category>learning</category>
             <category>experience</category>
             <category>growth</category>

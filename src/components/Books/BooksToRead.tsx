@@ -408,6 +408,11 @@ const data = [
 		title: "Liar's Poker: Rising through the Wreckage on Wall Street",
 		author: "Michael Lewis",
 		image: "/books/liars-poker-rising-through-the-wreckage-on-wall-street.jpg",
+	},
+	{
+		title: "Zen and the Art of Motorcycle Maintenance: An Inquiry into Values",
+		author: "Robert M. Pirsig",
+		image: "/books/zen-and-the-art-of-motorcycle-maintenance-an-inquiry-into-values.jpg",
 	}
 ];
 

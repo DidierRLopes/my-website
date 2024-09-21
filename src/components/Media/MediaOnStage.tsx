@@ -9,7 +9,7 @@ const data = [
 		date: "2024-09-14",
 		location: "Cornell Financial Engineering Manhattan",
 		image: "/media/chatgpt-the-future-of-ai-in-finance.jpg",
-		info: "A blogpost about the event will be published soon. More information on the event can be found <a href='https://www.rebellionresearch.com/cornell-financial-engineering-manhattan-rebellion-research-2024-future-of-finance-conference' target='_blank' rel='noopener noreferrer'>here</a>.",
+		info: "A blogpost about the talk can be found <a href='https://didierlopes.com/blog/chatgpt-and-the-future-of-ai-in-finance' target='_blank' rel='noopener noreferrer'>here</a>. More information on the event can be found <a href='https://www.rebellionresearch.com/cornell-financial-engineering-manhattan-rebellion-research-2024-future-of-finance-conference' target='_blank' rel='noopener noreferrer'>here</a>.",
 	},
 	{
 		title:
@@ -29,7 +29,7 @@ const data = [
 		date: "2024-05-22",
 		location: "Tower Research Ventures",
 		image: "/media/ai-x-wall-street-night.jpeg",
-		info: '<p>The OpenBB demo at the event has been pre-recorded <a href="https://www.youtube.com/watch?v=Uj_wpLC-Zho">here</a>.',
+		info: "<p>The OpenBB demo at the event has been pre-recorded <a href='https://www.youtube.com/watch?v=Uj_wpLC-Zho' target='_blank' rel='noopener noreferrer'>here</a>.",
 	},
 	{
 		title: "Python Uses in Quant Finance and Entrepreneurships",
@@ -38,7 +38,7 @@ const data = [
 		date: "2024-03-07",
 		location: "CFA Society New York",
 		image: "/media/python-uses-in-quant-finance-and-entrepreneurships.jpeg",
-		info: '<p>More information can be found <a href="https://cfany.org/event/python-uses-in-quant-finance-and-entrepreneurships/">here</a>.',
+		info: '<p>More information can be found <a href="https://cfany.org/event/python-uses-in-quant-finance-and-entrepreneurships/" target="_blank" rel="noopener noreferrer">here</a>.',
 	},
 	{
 		title: "Creating an AI-Powered Financial Analyst with OpenBB",

@@ -412,7 +412,13 @@ const data = [
 	{
 		title: "Zen and the Art of Motorcycle Maintenance: An Inquiry into Values",
 		author: "Robert M. Pirsig",
-		image: "/books/zen-and-the-art-of-motorcycle-maintenance-an-inquiry-into-values.jpg",
+		image:
+			"/books/zen-and-the-art-of-motorcycle-maintenance-an-inquiry-into-values.jpg",
+	},
+	{
+		title: "Why Machines Learn: The Elegant Math Behind Modern AI",
+		author: "Anil Ananthaswamy",
+		image: "/books/why-machines-learn-the-elegant-math-behind-modern-ai.jpg",
 	}
 ];
 

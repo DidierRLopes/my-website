@@ -419,6 +419,11 @@ const data = [
 		title: "Why Machines Learn: The Elegant Math Behind Modern AI",
 		author: "Anil Ananthaswamy",
 		image: "/books/why-machines-learn-the-elegant-math-behind-modern-ai.jpg",
+	},
+	{
+		title: "Read Write Own: Building the Next Era of the Internet",
+		author: "Chris Dixon",
+		image: "/books/read-write-own-building-the-next-era-of-the-internet.jpg",
 	}
 ];
 

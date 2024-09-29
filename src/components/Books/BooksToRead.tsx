@@ -378,11 +378,6 @@ const data = [
 			"/books/working-backwards-insights-stories-and-secrets-from-inside-amazon.jpg",
 	},
 	{
-		title: "Never Enough: From Barista to Billionaire",
-		author: "Andrew Wilkinson",
-		image: "/books/never-enough-from-barista-to-billionaire.jpg",
-	},
-	{
 		title: "Alchemy: The Surprising Power of Ideas That Don't Make Sense",
 		author: "Rory Sutherland",
 		image:
@@ -392,11 +387,6 @@ const data = [
 		title: "Badass: Making Users Awesome",
 		author: "Kathy Sierra",
 		image: "/books/badass-making-users-awesome.jpg",
-	},
-	{
-		title: "Sales Pitch: How to Craft a Story to Stand Out and Win",
-		author: "April Dunford",
-		image: "/books/sales-pitch-how-to-craft-a-story-to-stand-out-and-win.jpg",
 	},
 	{
 		title: "The JOLT Effect: How High Performers Overcome Customer Indecision",

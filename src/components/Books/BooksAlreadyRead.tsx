@@ -326,7 +326,17 @@ const data = [
 		title: "The Third Wave: An Entrepreneur's Vision of the Future",
 		author: "Steve Case",
 		image: "/books/the-third-wave-an-entrepreneur-s-vision-of-the-future.jpg",
-	}
+	},
+	{
+		title: "Never Enough: From Barista to Billionaire",
+		author: "Andrew Wilkinson",
+		image: "/books/never-enough-from-barista-to-billionaire.jpg",
+	},
+	{
+		title: "Sales Pitch: How to Craft a Story to Stand Out and Win",
+		author: "April Dunford",
+		image: "/books/sales-pitch-how-to-craft-a-story-to-stand-out-and-win.jpg",
+	},
 ];
 
 export default function BooksAlreadyRead() {

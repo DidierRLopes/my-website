@@ -1,11 +1,11 @@
 ---
-title: News Mentions
-sidebar_position: 6
+title: News Coverage
+sidebar_position: 0
 ---
 
-import NewsMentions from '@site/src/components/Media/MediaNewsMentions.tsx'
+import NewsCoverage from '@site/src/components/Media/MediaNewsCoverage.tsx'
 import HeadTitle from '@site/src/components/General/HeadTitle.tsx'
 
-<HeadTitle title="News Mentions - Media | Didier" />
+<HeadTitle title="News Coverage - Media | Didier" />
 
-<NewsMentions />
+<NewsCoverage />

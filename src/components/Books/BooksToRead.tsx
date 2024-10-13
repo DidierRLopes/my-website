@@ -424,6 +424,11 @@ const data = [
 		title: "7 Powers: The Foundations of Business Strategy",
 		author: "Hamilton Helmer",
 		image: "/books/7-powers-the-foundations-of-business-strategy.jpg",
+	},
+	{
+		title: "make: The Indie Maker Handbook",
+		author: "Pieter Levels",
+		image: "/books/make-the-indie-maker-handbook.jpg",
 	}
 ];
 

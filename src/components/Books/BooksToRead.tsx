@@ -429,6 +429,11 @@ const data = [
 		title: "make: The Indie Maker Handbook",
 		author: "Pieter Levels",
 		image: "/books/make-the-indie-maker-handbook.jpg",
+	},
+	{
+		title: "Only the Paranoid Survive: How to Exploit the Crisis Points That Challenge Every Company",
+		author: "Andrew S. Grove",
+		image: "/books/only-the-paranoid-survive-how-to-exploit-the-crisis-points-that-challenge-every-company.jpg",
 	}
 ];
 

@@ -11,6 +11,12 @@ const data = [
 		img: "/media/tech-crunch-2024-october.png",
 	},
 	{
+		title:"OpenBB: I am Not Uncertain",
+		link: "https://ted-merz.com/2024/03/07/openbb-i-am-not-uncertain/",
+		magazine: "Ted Merz",
+		date: "2024-03-24",
+	},
+	{
 		title:
 			"OpenBB Releases Its Second Generation Open Source Investment Research Platform With a Software Development Kit (SDK) and an AI/ML Toolkit",
 		link: "https://www.newswire.com/news/openbb-releases-its-second-generation-open-source-investment-research-21885626",

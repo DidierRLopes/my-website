@@ -29,7 +29,7 @@ const data = [
 		date: "2024-05-22",
 		location: "Tower Research Ventures",
 		image: "/media/ai-x-wall-street-night.jpeg",
-		info: "<p>The OpenBB demo at the event has been pre-recorded <a href='https://www.youtube.com/watch?v=Uj_wpLC-Zho' target='_blank' rel='noopener noreferrer'>here</a>.",
+		info: "<p>The OpenBB demo at the event has been pre-recorded <a href='https://www.youtube.com/watch?v=Uj_wpLC-Zho' target='_blank' rel='noopener noreferrer'>here</a>. More information on the event can be found <a href='https://tower-research.com/trv-ai-x-wall-street-event/' target='_blank' rel='noopener noreferrer'>here</a>.",
 	},
 	{
 		title: "Python Uses in Quant Finance and Entrepreneurships",

@@ -133,17 +133,17 @@ export default function Home() {
           >
             <ul className="mt-4 text-left pr-2">
               <p>
-                2024 🗽 Moved with family again to be closer to customers in
+                <strong>2024</strong> 🗽 Moved with family again to be closer to customers in
                 NYC.
               </p>
               <br />
               <p>
-                2023 🇺🇸 Moved with family to the Bay area, to be closer to tech
+                <strong>2023</strong> 🇺🇸 Moved with family to the Bay area, to be closer to tech
                 founders and investors.
               </p>
               <br />
               <p>
-                2022 🦋 Announced OpenBB to the world and rebranded the terminal
+                <strong>2022</strong> 🦋 Announced OpenBB to the world and rebranded the terminal
                 - [
                 <a
                   href="https://openbb.co/blog/gme-didnt-take-me-to-the-moon-but-gamestonk-terminal-did"
@@ -156,12 +156,12 @@ export default function Home() {
               </p>
               <br />
               <p>
-                2021 📈 We raised $8.9M in a seed round to democratize
+                <strong>2021</strong> 📈 We raised $8.9M in a seed round to democratize
                 investment research.
               </p>
               <br />
               <p>
-                2021 🦍 Gamestonk Terminal was open source and went viral on{' '}
+                <strong>2021</strong> 🦍 Gamestonk Terminal was open source and went viral on{' '}
                 <a
                   href="https://www.reddit.com/r/Superstonk/comments/mx2cjh/move_over_bloomberg_terminal_here_comes_gamestonk/"
                   target="_blank"
@@ -181,17 +181,17 @@ export default function Home() {
               </p>
               <br />
               <p>
-                2020 🦠 During Xmas my flight got cancelled. So started building
+                <strong>2020</strong> 🦠 During Xmas my flight got cancelled. So started building
                 a financial terminal.
               </p>
               <br />
               <p>
-                2020 😤 Performing own investment research and frustrated by how
+                <strong>2020</strong> 😤 Performing own investment research and frustrated by how
                 time-consuming it was.
               </p>
               <br />
               <p>
-                2020 🏃 Joined startup NURVV and worked as Sensor Fusion
+                <strong>2020</strong> 🏃 Joined startup NURVV and worked as Sensor Fusion
                 Engineer [
                 <a
                   href="https://ieeexplore.ieee.org/document/9680024"
@@ -204,7 +204,7 @@ export default function Home() {
               </p>
               <br />
               <p>
-                2019 🎓 Wrote code behind my math teacher's thesis on{' '}
+                <strong>2019</strong> 🎓 Wrote code behind my math teacher's thesis on{' '}
                 <a
                   href="https://github.com/DidierRLopes/UnivariateTimeSeriesForecast"
                   target="_blank"
@@ -216,12 +216,12 @@ export default function Home() {
               </p>
               <br />
               <p>
-                2018 🚗 Excited about AI and self-driving cars, worked as
+                <strong>2018</strong> 🚗 Excited about AI and self-driving cars, worked as
                 Software Engineer at u-blox.
               </p>
               <br />
               <p>
-                2017 🇬🇧 Moved to London for a MSc. in Control Systems at
+                <strong>2017</strong> 🇬🇧 Moved to London for a MSc. in Control Systems at
                 Imperial College London [
                 <a
                   href="https://ieeexplore.ieee.org/document/8796226"
@@ -234,18 +234,18 @@ export default function Home() {
               </p>
               <br />
               <p>
-                2016 🇳🇱 Did a semester in TU Delft and learned about
+                <strong>2016</strong> 🇳🇱 Did a semester in TU Delft and learned about
                 self-driving cars.
               </p>
               <br />
               <p>
-                2013 📚 BSc. in Electrical and Computer Engineering at FCT-UNL.
+                <strong>2013</strong> 📚 BSc. in Electrical and Computer Engineering at FCT-UNL.
               </p>
               <br />
-              <p>2003 🇵🇹 Moved to Portugal when I was 8yo.</p>
+              <p><strong>2003</strong> 🇵🇹 Moved to Portugal when I was 8yo.</p>
               <br />
               <p>
-                1995 🇨🇭 I was born in Switzerland, but both my parents are
+                <strong>1995</strong> 🇨🇭 I was born in Switzerland, but both my parents are
                 Portuguese emmigrants.
               </p>
             </ul>
@@ -355,34 +355,34 @@ export default function Home() {
 
         <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center rounded-[14px]">
           <h1>What I believe in.</h1>
-          <p className="_subtitle !italic">
-            "Open source is the most powerful idea of our generation." - Matt
-            Mullenweg
+          <p className="mb-4 mt-4">
+            Building an open-source legacy, one commit at a time.{' '}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/DidierRLopes"
+            >
+              Follow my journey on GitHub
+            </a>
+            .
           </p>
           <div className="flex-col items-center text-center mx-auto align-center justify-center gap-8 mt-4">
-            <iframe
-              src="https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff"
-              width={isDesktop ? '500' : '300'}
-              title="GitHub Stats"
-              className="mx-auto flex"
-            />
-            <p className="mb-4 mt-4">
-              Building an open-source legacy, one commit at a time.{' '}
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://github.com/DidierRLopes"
-              >
-                Follow my journey on GitHub
-              </a>
-              .
-            </p>
-            <iframe
-              src="https://ssr-contributions-svg.vercel.app/_/DidierRLopes?chart=3dbar&format=svg&theme=blue"
-              width={isDesktop ? '500' : '300'}
-              title="GitHub Stats"
-              className="mx-auto flex"
-            />
+            <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+              <iframe
+                src="https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff"
+                width={isDesktop ? '400' : '300'}
+                height="200"
+                title="GitHub Stats"
+                className="flex"
+              />
+              <iframe
+                src="https://ssr-contributions-svg.vercel.app/_/DidierRLopes?chart=3dbar&format=svg&theme=blue"
+                width={isDesktop ? '400' : '300'}
+                height="200"
+                title="GitHub Contributions"
+                className="flex"
+              />
+            </div>
             <p className="mb-4 mt-4">
               Starting with the most open financial company:{' '}
               <a target="_blank" rel="noreferrer" href="https://openbb.co/open">

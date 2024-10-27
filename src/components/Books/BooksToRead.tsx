@@ -331,11 +331,6 @@ const data = [
 		image: "/books/make-time-how-to-focus-on-what-matters-every-day.jpg",
 	},
 	{
-		title: "The Black Swan: The Impact of the Highly Improbable",
-		author: "Nassim Nicholas Taleb",
-		image: "/books/the-black-swan-the-impact-of-the-highly-improbable.jpg",
-	},
-	{
 		title:
 			"The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It",
 		author: "Michael E. Gerber",
@@ -416,9 +411,11 @@ const data = [
 		image: "/books/read-write-own-building-the-next-era-of-the-internet.jpg",
 	},
 	{
-		title: "The Black Swan, Second Edition: The Impact of the Highly Improbable: With a new section: “On Robustness and Fragility”: Incerto, Book 2",
+		title:
+			"The Black Swan, Second Edition: The Impact of the Highly Improbable: With a new section: “On Robustness and Fragility”: Incerto, Book 2",
 		author: "Nassim Nicholas Taleb",
-		image: "/books/the-black-swan-second-edition-the-impact-of-the-highly-improbable.jpg",
+		image:
+			"/books/the-black-swan-second-edition-the-impact-of-the-highly-improbable.jpg",
 	},
 	{
 		title: "7 Powers: The Foundations of Business Strategy",
@@ -431,10 +428,12 @@ const data = [
 		image: "/books/make-the-indie-maker-handbook.jpg",
 	},
 	{
-		title: "Only the Paranoid Survive: How to Exploit the Crisis Points That Challenge Every Company",
+		title:
+			"Only the Paranoid Survive: How to Exploit the Crisis Points That Challenge Every Company",
 		author: "Andrew S. Grove",
-		image: "/books/only-the-paranoid-survive-how-to-exploit-the-crisis-points-that-challenge-every-company.jpg",
-	}
+		image:
+			"/books/only-the-paranoid-survive-how-to-exploit-the-crisis-points-that-challenge-every-company.jpg",
+	},
 ];
 
 export default function BooksToRead() {

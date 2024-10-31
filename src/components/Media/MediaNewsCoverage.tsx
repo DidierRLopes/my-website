@@ -11,7 +11,7 @@ const data = [
 		img: "/media/tech-crunch-2024-october.png",
 	},
 	{
-		title:"OpenBB: I am Not Uncertain",
+		title: "OpenBB: I am Not Uncertain",
 		link: "https://ted-merz.com/2024/03/07/openbb-i-am-not-uncertain/",
 		magazine: "Ted Merz",
 		date: "2024-03-24",
@@ -29,6 +29,13 @@ const data = [
 		magazine: "Venture Beat",
 		date: "2022-03-30",
 		img: "/media/venture-beats-2022-march.png",
+	},
+	{
+		title: "Português cria versão gratuita de terminal da Bloomberg",
+		link: "https://visao.pt/exameinformatica/2022-03-29-portugues-cria-versao-gratuita-do-terminal-da-bloomberg/#google_vignette",
+		magazine: "Visão",
+		date: "2022-03-29",
+		img: "/media/visao-2022-march.jpg",
 	},
 	{
 		title:

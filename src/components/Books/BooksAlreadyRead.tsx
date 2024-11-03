@@ -420,6 +420,11 @@ const data = [
 		author: "Nassim Nicholas Taleb",
 		image: "/books/the-black-swan-the-impact-of-the-highly-improbable.jpg",
 	},
+	{
+		title: "Skin in the Game: Hidden Asymmetries in Daily Life",
+		author: "Nassim Nicholas Taleb",
+		image: "/books/skin-in-the-game-hidden-asymmetries-in-daily-life.jpg",
+	},
 ];
 
 export default function BooksAlreadyRead() {

@@ -316,11 +316,6 @@ const data = [
 		image: "/books/what-it-takes-lessons-in-the-pursuit-of-excellence.jpg",
 	},
 	{
-		title: "Skin in the Game: Hidden Asymmetries in Daily Life",
-		author: "Nassim Nicholas Taleb",
-		image: "/books/skin-in-the-game-hidden-asymmetries-in-daily-life.jpg",
-	},
-	{
 		title: "Inspired: How to Create Tech Products Customers Love",
 		author: "Marty Cagan",
 		image: "/books/inspired-how-to-create-tech-products-customers-love.jpg",

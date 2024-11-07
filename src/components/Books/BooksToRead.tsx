@@ -406,13 +406,6 @@ const data = [
 		image: "/books/read-write-own-building-the-next-era-of-the-internet.jpg",
 	},
 	{
-		title:
-			"The Black Swan, Second Edition: The Impact of the Highly Improbable: With a new section: “On Robustness and Fragility”: Incerto, Book 2",
-		author: "Nassim Nicholas Taleb",
-		image:
-			"/books/the-black-swan-second-edition-the-impact-of-the-highly-improbable.jpg",
-	},
-	{
 		title: "7 Powers: The Foundations of Business Strategy",
 		author: "Hamilton Helmer",
 		image: "/books/7-powers-the-foundations-of-business-strategy.jpg",

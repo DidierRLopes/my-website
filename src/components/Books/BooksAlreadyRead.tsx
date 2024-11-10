@@ -425,6 +425,11 @@ const data = [
 		author: "Nassim Nicholas Taleb",
 		image: "/books/skin-in-the-game-hidden-asymmetries-in-daily-life.jpg",
 	},
+	{
+		title: "Rework",
+		author: "Jason Fried, David Heinemeier Hansson",
+		image: "/books/rework.jpeg",
+	},
 ];
 
 export default function BooksAlreadyRead() {

@@ -248,11 +248,6 @@ const data = [
 			"/books/built-to-sell-creating-a-business-that-can-thrive-without-you.jpeg",
 	},
 	{
-		title: "Rework",
-		author: "Jason Fried, David Heinemeier Hansson",
-		image: "/books/rework.jpeg",
-	},
-	{
 		title: "Resilience: Hard-Won Wisdom for Living a Better Life",
 		author: "Eric Greitens",
 		image: "/books/resilience-hard-won-wisdom-for-living-a-better-life.jpeg",

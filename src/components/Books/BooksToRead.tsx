@@ -417,6 +417,12 @@ const data = [
 		image:
 			"/books/only-the-paranoid-survive-how-to-exploit-the-crisis-points-that-challenge-every-company.jpg",
 	},
+	{
+		title: "Shape Up: Stop Running in Circles and Ship Work that Matters",
+		author: "Ryan Singer",
+		image:
+			"/books/shape-up-stop-running-in-circles-and-ship-work-that-matters.png",
+	},
 ];
 
 export default function BooksToRead() {

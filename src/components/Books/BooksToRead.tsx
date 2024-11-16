@@ -423,6 +423,12 @@ const data = [
 		image:
 			"/books/shape-up-stop-running-in-circles-and-ship-work-that-matters.png",
 	},
+	{
+		title: "Writing That Works; How to Communicate Effectively In Business",
+		author: "Kenneth Roman, Joel Raphaelson",
+		image:
+			"/books/writing-that-works-how-to-communicate-effectively-in-business.jpg",
+	}
 ];
 
 export default function BooksToRead() {

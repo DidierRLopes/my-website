@@ -380,11 +380,6 @@ const data = [
 			"/books/the-jolt-effect-how-high-performers-overcome-customer-indecision.jpg",
 	},
 	{
-		title: "Liar's Poker: Rising through the Wreckage on Wall Street",
-		author: "Michael Lewis",
-		image: "/books/liars-poker-rising-through-the-wreckage-on-wall-street.jpg",
-	},
-	{
 		title: "Zen and the Art of Motorcycle Maintenance: An Inquiry into Values",
 		author: "Robert M. Pirsig",
 		image:
@@ -428,7 +423,7 @@ const data = [
 		author: "Kenneth Roman, Joel Raphaelson",
 		image:
 			"/books/writing-that-works-how-to-communicate-effectively-in-business.jpg",
-	}
+	},
 ];
 
 export default function BooksToRead() {

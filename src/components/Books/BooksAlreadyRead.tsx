@@ -430,6 +430,11 @@ const data = [
 		author: "Jason Fried, David Heinemeier Hansson",
 		image: "/books/rework.jpeg",
 	},
+	{
+		title: "Liar's Poker: Rising through the Wreckage on Wall Street",
+		author: "Michael Lewis",
+		image: "/books/liars-poker-rising-through-the-wreckage-on-wall-street.jpg",
+	},
 ];
 
 export default function BooksAlreadyRead() {

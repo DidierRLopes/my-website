@@ -4,11 +4,409 @@
         <title>Didier Lopes Blog</title>
         <link>https://didierlopes.com/blog</link>
         <description>Didier Lopes Blog</description>
-        <lastBuildDate>Sat, 21 Sep 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 09 Nov 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2024 Didier Lopes.</copyright>
+        <item>
+            <title><![CDATA[Why we got rid of PIPs at OpenBB]]></title>
+            <link>https://didierlopes.com/blog/why-we-got-rid-of-pips-at-openbb</link>
+            <guid>https://didierlopes.com/blog/why-we-got-rid-of-pips-at-openbb</guid>
+            <pubDate>Sat, 09 Nov 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[My thoughts on how removing PIPs can increase the company talent level]]></description>
+            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-11-09-why-we-got-rid-of-pips-at-openbb.png"></p>
+<p>At OpenBB, we removed Performance Improvement Plans (PIPs) in an attempt to increase the company's talent density pool rate.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<h2 id="how-did-we-get-here">How did we get here?</h2>
+<p>We are currently 16 FTE and since the company started 3 years ago, we’ve let go 15 people.</p>
+<p>This means we’re letting go of more than 1 person a quarter since the start of OpenBB.</p>
+<p>Most people had a 3-week PIP process before their departures. But out of the 15 PIPs done, only one was successful. All the others have resulted in a contract termination.</p>
+<p>That’s a success rate of less than 7%, which is extremely low.</p>
+<h3 id="statistics">Statistics</h3>
+<p>If we go into the machine learning domain and have a model that predicts that a team member who gets into a PIP is let go every time - this is the classification matrix that we would have.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2024-11-09-why-we-got-rid-of-pips-at-openbb_02.png"></p>
+<p>Which has:</p>
+<ul>
+<li>
+<p>93.3% precision - answers: of all the people predicted to be let go (15), how many were let go? (14)</p>
+</li>
+<li>
+<p>100% recall - answers: of all the people that were let go (14), how many were predicted correctly (14)</p>
+</li>
+</ul>
+<p>Now, this isn’t the full story.</p>
+<p>This is the equivalent of a physics book treating an object as a point mass, considering the body as perfectly rigid or assuming the system is isolated with no external forces.</p>
+<p>So what are the other things to consider? Let’s separate these time-wise:</p>
+<ol>
+<li>
+<p>Before a PIP happens</p>
+</li>
+<li>
+<p>During the PIP</p>
+</li>
+<li>
+<p>After the PIP</p>
+</li>
+</ol>
+<h2 id="before-a-pip">Before a PIP</h2>
+<p>Before someone starts a PIP, their performance has already been subpar.</p>
+<p>By definition, performance is a lagging indicator, which means you are already late when you catch this person not pulling as much value as others.</p>
+<p>Particularly when you consider that the person who would be initiating the PIP is the team lead (TL)/manager and isn’t working as closely with this person as others on a daily basis. Hence, coworkers are likely to see firsthand this suboptimal performance in advance of the team lead or manager.</p>
+<p>So, the suboptimal performance from this person over a few days or weeks is likely to go unnoticed and slow down the company.</p>
+<p>In addition, individual contributors (ICs) who work closely with this person are likely to notice this before the TL/manager, thus impacting their motivation.</p>
+<p><em><strong>"If this person can get the same compensation as I do for average work, why am I putting in so much time and effort?"</strong></em></p>
+<p>Honestly, if there’s one thing that I’ve learned, it’s that A players get motivated by other A players (“A players attract A players”).</p>
+<h2 id="during-a-pip">During a PIP</h2>
+<p>A PIP takes time. <strong>A LOT of it.</strong></p>
+<p>And that’s the one thing that startups don’t have.</p>
+<p>Imagine that you have the following org:</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2024-11-09-why-we-got-rid-of-pips-at-openbb_03.png"></p>
+<p>If an IC is underperforming, the TL will discuss it with the IC in advance.</p>
+<p>Then the team lead may ask for feedback from other ICs who work with the IC in question.</p>
+<p>After that, the TL will talk with the Director about this before initiating the PIP.</p>
+<p>Then the Director will mention this to the CEO of the company.</p>
+<p>The CEO will likely want to talk with the team lead about this, given that in an organization of 15 people, each team member accounts for more than 5% of the org.</p>
+<p>Now, you may be thinking, “But this happens before the PIP”.</p>
+<p>This happens before and continues throughout the entire PIP. But, during the PIP, it’s even worse because there are regular meetings for a shorter feedback loop, and there needs to be documentation on the progress.</p>
+<p>So yes, this not only takes a lot of time, but it’s also a distraction to the team.</p>
+<p>And that’s the other thing that companies need: “focus”.</p>
+<p>You can’t fully focus at 100% when you know that someone is “fighting” for their job. And not being able to focus impacts each individual’s performance.</p>
+<p>So this inefficiency ends up spreading across the team.</p>
+<h2 id="after-the-pip">After the PIP</h2>
+<h3 id="needs-to-be-let-go">Needs to be let go</h3>
+<p>Ok, someone was underperforming and needs to be let go.</p>
+<p>The company needs to figure out:</p>
+<ul>
+<li>
+<p>How many options this person has vested and handle the paperwork if they want to buy them</p>
+</li>
+<li>
+<p>Whether they have company equipment that needs to be returned</p>
+</li>
+<li>
+<p>What the severance package will be</p>
+</li>
+<li>
+<p>How to handle the news and how the team will react</p>
+</li>
+</ul>
+<p>Again, this will be a distraction for at least an additional week and will affect other team members, who may be surprised by this.</p>
+<p>Particularly because, most of the time, they aren’t aware that the PIP is happening and from their perspective, someone they liked to work with was let go.</p>
+<h3 id="has-a-successful-pip">Has a successful PIP</h3>
+<p>Let’s be honest, these cases are very rare.</p>
+<p>Not just at OpenBB. I’ve spoken with other founders, and this is the same feedback I’ve received.</p>
+<p>But let’s ignore that, we already mentioned it at the start.</p>
+<p>Someone on a PIP—almost by definition—isn’t a high performer. They could be a high performer in some parts of the job, but not as a whole. However, this is the exception, not the rule.</p>
+<p>The rule, often, is that this person has been doing just enough to be competent at the company—but not excel. Then, over a period of time, due to internal reasons, lack of motivation, etc., they fall below that threshold.</p>
+<p>This means that even after a successful PIP, you are putting all of these resources toward getting—not a high performer, but a B+ player.</p>
+<p>And ultimately, this is why we are getting rid of the PIP at OpenBB.</p>
+<p>Being <strong>“good enough”</strong> isn’t the culture we want for OpenBB and doesn’t represent our team today. If you let the bar slip, you won’t even realize it until it’s too late.</p>
+<p>Again, performance is a lagging indicator and can have both positive and negative effects on the team—so it’s important to protect the team from poor performers.</p>
+<p>There are two exceptions to this:</p>
+<p><strong>1. Imagine that this person can turn their output into 4x, imagine they had a wake-up call.</strong></p>
+<p>Several questions need to be asked:</p>
+<ul>
+<li>
+<p>If this person can perform at this level, why weren't they doing it before?</p>
+</li>
+<li>
+<p>How long will they maintain this level of performance?</p>
+</li>
+<li>
+<p>Will we need to have another serious conversation to get this person to reach this level of competency again at a later stage?</p>
+</li>
+<li>
+<p>Will they always resent the company because of the PIP?</p>
+</li>
+</ul>
+<p>It all boils down to this: if this person isn’t motivated by what we’re building, regardless of their skill set, they weren’t a good fit in the first place.</p>
+<p>We’re fortunate to have a pipeline of people applying for positions at OpenBB, not just for the money but for the product and the mission of the company.</p>
+<p><strong>2. The person is a high performer but has been performing poorly in some areas of the job (e.g. communications, testing, documentation, …)</strong></p>
+<p>This person had likely received feedback multiple times, but the PIP made it more real: <em>“This is what we are looking for in a person for your role; you have 2-3 weeks to prove that you can double down on your weaknesses and reach the level the team needs you to be at.”</em></p>
+<p>This is what happened to us, and the person improved significantly, so much so that they are now a core part of who OpenBB is today.</p>
+<p>This success story was one of the main reasons we continued doing PIPs.</p>
+<p>But the likelihood of it happening again is so low that it’s not worth keeping PIP to look for another success story like this one.</p>
+<h2 id="so-whats-next">So what’s next?</h2>
+<h3 id="how-we-think-about-talent-level-at-openbb">How we think about talent level at OpenBB</h3>
+<p>Let’s say you define company’s talent value as the sum of the talent of each individual divided by the total number of team members.</p>
+<p>There are two ways to increase this value:</p>
+<ul>
+<li>
+<p>Hire people who are above OpenBB’s talent level</p>
+</li>
+<li>
+<p>Let go of people who fall below the talent level</p>
+</li>
+</ul>
+<p>Or, ideally, do both.</p>
+<p>The problem is that for the first option, you often need <strong>a LOT</strong> of capital.</p>
+<p>For the second, you don’t. Not only that but letting go of low performers will accomplish two things simultaneously:</p>
+<ul>
+<li>
+<p>Increase OpenBB’s talent level immediately.</p>
+</li>
+<li>
+<p>Free up resources that can be invested in someone above OpenBB’s current talent value (assuming that companies should always seek high performers and avoid settling for underperformers).</p>
+</li>
+</ul>
+<p>And that’s why removing PIPs leads to an increase in the company’s talent level. You’re not just increasing the talent level once, but likely twice.</p>
+<p>Here’s an example:</p>
+<p>Imagine we have 5 people at OpenBB with talent scores of 2, 7, 7, 7, and 9. Then OpenBB’s talent level is:</p>
+<p>(2+7+7+7+9)/5 = 6.4</p>
+<p>If we let go of the employee with a talent score of 2, our talent level becomes 7.4. Then, if we bring in someone with a score of 8 using the same resources, that talent level increases to 7.6.</p>
+<p>You get the idea.</p>
+<h3 id="what-the-team-can-expect">What the team can expect?</h3>
+<p>Full transparency.</p>
+<p>We want to build a culture where feedback is an ever-present element, and we don’t need to wait for performance reviews to give feedback that can substantially improve team performance and push the company forward.</p>
+<p>In fact, not sharing this feedback puts the company in a worse position, and it is your duty to share it. But do so with candor, in a constructive manner that keeps the team member motivated.</p>
+<p>However, each team member must care. This means you can’t rely solely on your team lead to give you feedback every day—you need to ask for it regularly. That’s the best way for you to grow.</p>
+<h2 id="final-notes">Final notes</h2>
+<p>We made this decision after reading <em>No Rules Rules: Netflix and the Culture of Reinvention</em>, where they also removed PIPs.</p>
+<p>Unlike Netflix, we don’t have the resources to:</p>
+<ul>
+<li>
+<p>Pay top of the market</p>
+</li>
+<li>
+<p>Offer a generous severance</p>
+</li>
+</ul>
+<p>We still pay good salaries, just not enough to compete with public companies. This means we need to spend much more time finding diamonds in the rough.</p>
+<p>And that’s why we have a higher turnover; finding diamonds in the rough is much riskier.</p>
+<p>In any case, I think optimizing to pay top of the market is misguided—at least for startups—as it incentivizes the wrong type of talent.</p>
+<p>It incentivizes mercenaries instead of missionaries.</p>
+<p>At an early stage, you need people who want a lot of ownership and autonomy, who are excited to work with a team and on a product they believe in, and who have a chip on their shoulders.</p>
+<p>Regardless of the startup, I have yet to see someone with this mentality who doesn’t end up being successful.</p>
+<p><strong>Note</strong>: Most of the people who were let go would be considered good employees in most companies today, and they had strong referrals. But companies have different types of needs that evolve over time, and as founders, it’s our role to look at the company as a whole and understand what it needs at the moment and, more importantly, what it will need in the coming months and years.</p>]]></content:encoded>
+            <category>openbb</category>
+            <category>management</category>
+            <category>leadership</category>
+            <category>talent</category>
+            <category>hiring</category>
+            <category>performance</category>
+            <category>company-culture</category>
+            <category>startups</category>
+        </item>
+        <item>
+            <title><![CDATA[Implement feedback loops EVERYWHERE you can]]></title>
+            <link>https://didierlopes.com/blog/implement-feedback-loops-everywhere-you-can</link>
+            <guid>https://didierlopes.com/blog/implement-feedback-loops-everywhere-you-can</guid>
+            <pubDate>Fri, 25 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Maximizing team transparency through focused feedback sessions.]]></description>
+            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-10-25-implement-feedback-loops-everywhere-you-can.jpeg"></p>
+<p>A couple of months ago, my co-founder came to NYC for our board meeting.</p>
+<p>During that week, we took a day to sync up with everyone on the team—literally. We had 14 conversations, each lasting up to 30 minutes. Apart from lunch, we did all these back-to-back.</p>
+<p>The goal of this exercise was 2-fold:</p>
+<ul>
+<li>
+<p>Check up on the team. Basically, a more in-depth version of:
+<a href="https://openbb.co/company/open/team">https://openbb.co/company/open/team</a></p>
+</li>
+<li>
+<p>Have the team share anything they want with leadership or ask any questions openly.</p>
+</li>
+</ul>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2024-10-25-implement-feedback-loops-everywhere-you-can_2.jpeg"></p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<h2 id="structure">Structure</h2>
+<h3 id="part-1---20-minutes">Part 1 - 20 minutes</h3>
+<p>For the first 20 minutes, we asked the following questions to each team member:</p>
+<ol>
+<li>
+<p>How do you feel working for OpenBB today?</p>
+</li>
+<li>
+<p>What do you enjoy the most about working at this company?</p>
+</li>
+<li>
+<p>Who do you get along the best? and why?</p>
+</li>
+<li>
+<p>Who do you feel like you have a not-so-close relationship with? and why?</p>
+</li>
+<li>
+<p>What does your day-to-day look like?</p>
+</li>
+<li>
+<p>How would you describe the relationship with your manager/team lead?</p>
+</li>
+<li>
+<p>It's 2028 and OpenBB didn't make it. What are potential reasons that you would bet on that lead to this?</p>
+</li>
+<li>
+<p>If you had to tell us what your biggest achievement is since being in the company, which one would you pick?</p>
+</li>
+<li>
+<p>What was your lowest moment during company time - and why? What could we have done better?</p>
+</li>
+<li>
+<p>(for managers/team leads) How do you feel about the team you have today?</p>
+</li>
+</ol>
+<h3 id="part-2---10-minutes">Part 2 - 10 minutes</h3>
+<p>During the last 10 minutes, the team could ask us about anything.</p>
+<p>Funnily enough, we learned just as much (if not more) from the questions the team asked than the ones from Part 1.</p>
+<h2 id="results">Results</h2>
+<p>Lack of focus is the biggest risk/challenge that we face as a company.</p>
+<h3 id="culture">Culture</h3>
+<ul>
+<li>
+<p>Handbook is important (folks didn't know about personal development budget, PIP, etc…)</p>
+</li>
+<li>
+<p>The team's main reasons for being happy at OpenBB are autonomy, ownership, smart team, transparency and freedom - very aligned with our values.</p>
+</li>
+<li>
+<p>Remote work is a benefit that more people should take advantage of. Celebrate it even more.</p>
+</li>
+<li>
+<p>It's vital to set boundaries when overworking and know when to decompress to avoid burnout</p>
+</li>
+</ul>
+<h3 id="management">Management</h3>
+<ul>
+<li>
+<p>It's key to consider that each person has different preferences in terms of management style - execution vs contributing to discussion.</p>
+</li>
+<li>
+<p>1:1s are essential and everyone should have them set.</p>
+</li>
+<li>
+<p>1:1s should be focused on the direct report and not necessarily on tasks at hand. Several people highlighted that they felt that their manager cared about them based on conversations about their personal life and personal development.</p>
+</li>
+<li>
+<p>Feedback should go both ways, the manager/leader appreciates when feedback is provided.</p>
+</li>
+<li>
+<p>Setting up expectations clearly for each individual is critical. People appreciate when they know exactly what is expected of them, so they understand how their value is perceived from the company's perspective.</p>
+</li>
+</ul>
+<h3 id="rituals">Rituals</h3>
+<ul>
+<li>
+<p>Monthly update emails are very good. Sometimes even more details would be better.</p>
+</li>
+<li>
+<p>Some people are so focused on execution that they try to protect their time at all costs. It's important to respect this decision and default to async text-based conversations instead of setting up a meeting</p>
+</li>
+<li>
+<p>Dogfood the product from people from different backgrounds is important as it gives different points of view that we can leverage to make our product better</p>
+</li>
+</ul>
+<h3 id="communicatiions">Communicatiions</h3>
+<ul>
+<li>
+<p>Be aware of different comms styles throughout org. In general, people have shared that they appreciate when others send them a DM with feedback based on a conversation in a public channel.</p>
+</li>
+<li>
+<p>Sometimes team members need to put themselves in the shoes of other people first instead of defaulting to defence.</p>
+</li>
+<li>
+<p>We shouldn't compromise on quality. We should aim to agree first on the best solution and then adapt if there's a lack of resources, but knowing what the best solution is and what is the trade-off that is being made</p>
+</li>
+<li>
+<p>When a conversation is taking a few messages back and forth, sometimes a quick huddle should be done</p>
+</li>
+<li>
+<p>Making sure that all stakeholders are involved regarding features or changes in the product before any green light is given to execute. It happened that a green light was given, mockups were created based on that context and the engineering team added the feature. Only for that to get pushed back because a stakeholder that wasn't involved in the discussion saw the final result on Slack chat.</p>
+</li>
+</ul>
+<h3 id="transparency">Transparency</h3>
+<ul>
+<li>
+<p>More transparency when deals are closed - e.g. what are they interested in, how many seats, what do they do on a day-to-day basis</p>
+</li>
+<li>
+<p>When mentioning increased transparency, the vast majority of people think that our level of transparency is very high.</p>
+</li>
+<li>
+<p>A common answer: "If I have any questions I know can just DM you and you will answer"</p>
+</li>
+<li>
+<p>Add a Q&amp;A at the end of the status update where everyone can put questions to be answered</p>
+</li>
+<li>
+<p>A common answer: "I don't like when someone leaves out of a sudden". Unfortunately, we can't do anything here. We've also asked for feedback on what we could do better, but people understood that there's not much we can do. This is a conversation between the person and the manager and it's unfair for the person being let go if we share their personal information. There's a PIP and that means that before everyone leaves the company they are in 3-4 weeks PIP, where expectations are set clearly and their continuity depends on their output.</p>
+</li>
+<li>
+<p>People appreciate feedback a lot, regardless of if it's positive or not. It's the best way for them to improve.</p>
+</li>
+</ul>
+<h3 id="thoughts">Thoughts</h3>
+<p>I think, at an early stage, everyone should do this. And maybe even at a later stage but in each subset of the org.</p>
+<p>One of the reasons I think this worked so well is that for the first 20 minutes, you are asking the exact same questions to everyone and so that allows you to get answers that you can compare across the board.</p>
+<p>Then, once those 20 minutes are over, the team member feels that they have already been so transparent that they openly ask questions that they are curious about.</p>
+<p>The final result was a presentation with all the combined learnings and actionable.</p>
+<p><strong>What do you think?</strong></p>]]></content:encoded>
+            <category>openbb</category>
+            <category>management</category>
+            <category>leadership</category>
+            <category>feedback</category>
+            <category>transparency</category>
+            <category>culture</category>
+            <category>remote-work</category>
+        </item>
+        <item>
+            <title><![CDATA[OpenBB Mobile App - Coming soon!]]></title>
+            <link>https://didierlopes.com/blog/openbb-mobile-app-coming-soon</link>
+            <guid>https://didierlopes.com/blog/openbb-mobile-app-coming-soon</guid>
+            <pubDate>Sat, 05 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[How we built a mobile app, in 1 evening, with 1 engineer.]]></description>
+            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-10-05-openbb-mobile-app-coming-soon.png"></p>
+<p>Let’s start with a bit of background to this story. 📖</p>
+<p>Back in September 2021, our first full-time team member was <a href="https://x.com/josedonato__?utm_source=didierlopes.beehiiv.com&amp;utm_medium=referral&amp;utm_campaign=openbb-mobile-app-coming-soon">Jose Donato</a>. He started full-time, even before I did (due to my 3 months notice period in Europe, yikes).</p>
+<p>We met through Reddit, only to discover that we are both Portuguese and our hometowns aren’t far from each other.</p>
+<p>I’ve learned more from him about web development than from any YouTube, tutorial or book - combined.</p>
+<p>One of the topics he was very passionate about, was the concept of Progressive Web Apps (PWAs). So much so, that he talked about it in his thesis (<a href="https://jose-donato.deno.dev/master_thesis.pdf?utm_source=didierlopes.beehiiv.com&amp;utm_medium=referral&amp;utm_campaign=openbb-mobile-app-coming-soon">2.2 native applications</a>).</p>
+<p>I had never heard of it before, but the concept intrigued me. Why wouldn’t more companies do that?</p>
+<p>Jose is currently writing a post about it, you can subscribe to the <a href="https://openbb.co/newsletter?utm_source=didierlopes.beehiiv.com&amp;utm_medium=referral&amp;utm_campaign=openbb-mobile-app-coming-soon">company newsletter</a> to keep an eye out for it.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<h2 id="mobile-compatibility">Mobile compatibility</h2>
+<p>Fast forward to September 3rd, 2024. 🏃‍♂️</p>
+<p>We are 1 week away from one of the biggest launches in the company. Earlier surprise for my subscribers, but we are about to announce a free version of our enterprise product.</p>
+<p>A web app that allows users to bring any type of data and have access to an agent to interact with all these different datasets to extract patterns, trends and insights.</p>
+<p>This web app has been built over 2 years and all workflows, tests, and iterations have been done for desktop usage.</p>
+<p>Jose sent me a video of a mobile version somewhat polished. It had the same UX as the terminal, but it rendered nicely on mobile.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2024-10-05-openbb-mobile-app-coming-soon_2.png"></p>
+<p>Given that we were aiming at adoption, he believed it was important for users to be able to access the terminal through their phones on the web.</p>
+<p>And so over 2 weeks, he spent no more than 3h polishing the mobile version.</p>
+<h2 id="mobile-ux">Mobile UX</h2>
+<p>On the 23rd of September, I pinged <a href="https://www.linkedin.com/in/ana-rita-soares-48b247152/?utm_source=didierlopes.beehiiv.com&amp;utm_medium=referral&amp;utm_campaign=openbb-mobile-app-coming-soon">Rita Soares</a> - our lead UI/UX.</p>
+<p>I had been thinking about mobile user experience and wasn’t happy that we just adapted the interface to work with mobile. But, mobile represents a completely different paradigm on how we use a product. The screen space, the speed at which you can type, not necessarily used for work, more distractions, etc…</p>
+<p>So, I asked Rita to create a few mobile mockups for me - the idea was to improve the UX to make the copilot shine. I.e. more front and center and have the data visualization pushed more to the background.</p>
+<p>That same evening, she shared these mockups with me:</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2024-10-05-openbb-mobile-app-coming-soon_3.png"></p>
+<p>I promptly shared in a group with her and Jose - this was 7:35 pm my time, which would be 0:35 am their time.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2024-10-05-openbb-mobile-app-coming-soon_4.png"></p>
+<p>In less than 24 hours the bulk of the mockups had been implemented.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2024-10-05-openbb-mobile-app-coming-soon_5.png"></p>
+<h3 id="progressive-web-apps-pwas">Progressive Web Apps (PWAs)</h3>
+<p>On that same day, after Jose shared the bulk of mockups implemented.</p>
+<p>I sent him this message at 8:55 pm EST (1:55 am Portugal time for Jose).</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2024-10-05-openbb-mobile-app-coming-soon_7.png"></p>
+<p>To which he replied:</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2024-10-05-openbb-mobile-app-coming-soon_8.png"></p>
+<p>I was right, it didn’t take him 30s. But it didn’t take him much longer (15 minutes).</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2024-10-05-openbb-mobile-app-coming-soon_9.png"></p>
+<p>15 minutes to have OpenBB as an application on my phone.</p>
+<p>I was mind-blown.</p>
+<p>We iterated on it for an additional 1h30m together, until we had something we would be proud to share with the team the following day.</p>
+<p align="center"><img width="300" src="https://didierlopes.com/blog/2024-10-05-openbb-mobile-app-coming-soon_10.png"></p>
+<p>We still had to iterate on a few more areas and involve more people from the team. But the bulk of the mobile app was done.</p>
+<p>In pretty much 1 evening.</p>
+<p>With 1 person.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>I could tell you that this doesn’t happen often, but it does.</p>
+<p>Small, highly motivated teams (or individuals like Jose) with a strong initiative and a drive to make a difference, can have a tremendous impact on the company.</p>
+<p>I hope this post inspires more builders to share behind the scenes on how great products/features are built and how serendipity can play a role in it.</p>]]></content:encoded>
+            <category>openbb</category>
+            <category>mobile</category>
+            <category>pwa</category>
+            <category>web-development</category>
+            <category>ux</category>
+            <category>engineering</category>
+        </item>
         <item>
             <title><![CDATA[ChatGPT and The Future of AI in Finance]]></title>
             <link>https://didierlopes.com/blog/chatgpt-and-the-future-of-ai-in-finance</link>
@@ -804,285 +1202,6 @@ My friends &amp; family are “protected” by an imaginary shield that I create
             <category>chatgpt</category>
             <category>perplexity</category>
             <category>investment research</category>
-        </item>
-        <item>
-            <title><![CDATA[29 years old and sitting on the top of giants]]></title>
-            <link>https://didierlopes.com/blog/29-years-old-and-sitting-on-the-top-of-giants</link>
-            <guid>https://didierlopes.com/blog/29-years-old-and-sitting-on-the-top-of-giants</guid>
-            <pubDate>Wed, 05 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Yesterday was my 29th birthday, and I was reflecting on my life and on how sitting on the top of giants isn’t given enough credit. My giants are my parents.]]></description>
-            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-06-05-29-years-old-and-sitting-on-the-top-of-giants.png"></p>
-<p>Yesterday was my 29th birthday, and I was reflecting on my life and on how sitting on the top of giants isn’t given enough credit. My giants are my parents.</p>
-<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
-<p>Yesterday I turned 29 years old.</p>
-<p>The night before, I was speaking with my dad about how grateful I am for everything he’s done for my brother and I.  I always had everything - food at the table, a roof and education.</p>
-<p>I’m the person I am today because of my parents.</p>
-<p>But my dad didn’t have it easy.</p>
-<p>And so instead of writing about how grateful I am for the life I have today, I want to share some parts of my dad’s life.</p>
-<p>I don’t like to share personal information about my family, but I feel like from all the posts I read on success - sitting on the top of giants isn’t given enough credit.</p>
-<p>My giants are my parents.</p>
-<p>Here’s his story.</p>
-<p>My dad grew up with very little in a town in the middle of nowhere in Portugal with 6 siblings.</p>
-<p>He did a few years in school and after classes he would come home and watch his parents sheep until it was dark. He did his homework during that time since there was no electricity back then.</p>
-<p>If a sheep ran away while he was doing his homework, his dad would punish him with whatever was at hand, a stick or a belt.</p>
-<p>Times were different back then.</p>
-<p>In school, if he got questions like 7x8 wrong, teachers wouldn’t just say the correct answer. They had a special ruler that was used to hit a student’s hand.</p>
-<p>Again, times were different.</p>
-<p>After a couple of years in school - he didn’t like it (I wonder why eh) and they didn’t have a lot of money. So he started working at the age of 11 in construction.</p>
-<p>An 11 year old kid, taking 2 buckets of cement up and down the stairs to build houses.</p>
-<p>At the age of 17 he moved to Geneva (Switzerland) for a better paid job, as a bricklayer but also did painting jobs and similar.</p>
-<p>At 18, his mum died.  She was run over by a car near our hometown.</p>
-<p>At 20, he had to come to Portugal because of his passport and he met my mum.</p>
-<p>1 year later, my mum moved to Geneva to be with him. She worked in a factory making boxes for Rolex watches.</p>
-<p>At 22, his dad died from a disease.</p>
-<p>He kept working his ass off. 6 days a week, starting at 6 am whether it was snowing, raining or extremely hot.</p>
-<p>No travelling or unnecessary expenses, except tobacco, it was his only addiction as everyone around him smoked - it was a social thing.</p>
-<p>At 24 he got married with my mum. My mum’s family didn’t like his, so they didn’t attend the wedding and they had to cover it with all of their savings.</p>
-<p>At 31, he had me.</p>
-<p>The week before I was born would be the last he would ever smoke, since my mum said that she didn’t want smoke near us because of our health. At some point he was smoking 2 packs a day, and he stopped from one day to the other which is wild.</p>
-<p>At 32 his painting shift had just finished and his boss asked him to give one more painting layer to the outside of an apartment. And he went up the ladder, and it broke. He fell from a 2-story apartment on his foot, and his foot bone got smashed into pieces. (He had actually mentioned to his boss that the ladder didn’t feel very stable earlier that day).
- The doctor told him that he would never be able to do any physical work ever again. 24 years later, and he still struggles to walk for long periods of time.</p>
-<p>At 33, he had my brother.</p>
-<p>Because of the accident, he stayed at home to raise my brother and I.</p>
-<p>A bit after, Portugal joined the Euro. So my dad thought that the living conditions in Portugal would improve overall like other European countries (spoiler alert: it didn’t).</p>
-<p>So, he decided to start building a house on the same land where his hometown house was, in Portugal.</p>
-<p>They couldn’t afford to buy a house in Geneva, but had enough savings that they could build one in his hometown.</p>
-<p>They went back when he was 39 (I was 8), and that’s where I grew up.</p>
-<p>My mum struggled to find a job for many years - she only got a job as a secretary at a furniture store - until they went bankrupt.</p>
-<p>My dad had depression since he was stuck at home with nothing to do.</p>
-<p>Growing up, I wanted to work as a bricklayer in summers to make some cash and my dad forbid me doing so.</p>
-<p>He said that it was dangerous and he didn’t want me to have that life. He has seen a lot of young people dropping out of school because they start receiving salaries early and prioritise short-term outcomes over long-term ones.</p>
-<p>He didn’t want me to follow that path.</p>
-<p>He wanted to give me the opportunities that he didn’t have growing up. And he did.</p>
-<p>One day I got home from high school, and commented that someone I knew always had expensive clothes and watches. He happened to know their family and got upset. He was upset because he knew that they owed a lot of money to a lot of people - and kept living a luxury lifestyle.
- So he told me “You may not wear all of that, but you will never hear in your life that we owe anything to anyone. Everything you have has been bought with a lot of hard work from your mother and I, and not by stealing or owing anything to anyone”.</p>
-<p>I still think about this often, and how appearances are often just that.</p>
-<p>A few years later after I got into university, my parents decided to move back to Switzerland.</p>
-<p>My mum still didn’t have a job and we weren’t going home as much (we both studied relatively far from our hometown). It was hard on her to move away from us, but it was the right thing to do.</p>
-<p>She found a job as a cleaner, which she has been doing for almost 10 years now.</p>
-<p>In the meantime my dad wondered if he could leverage all the skills he had learned growing up to manage a housing project. So he bought land in Portugal, and was heavily involved in the management of the project. Meaning he worked across everything, except the physical aspects of the job.</p>
-<p>It was an investment, but after having so many years in real estate - it was hard for someone to have as much knowledge breadth as he did in terms of costs of materials and staff since he had been on the other side of the coin for a long time.</p>
-<p>Now he does that every now and then, which keeps him busy. But since it involves being far from my mum, this time he’s hiring an agency to be more involved at the expense of less headaches and a lower margin.</p>
-<p>He has a good life now. But he came from nothing, literally.</p>
-<p>Most people on his shoes, don’t make it.</p>
-<p>Damn.</p>
-<p>Most people with more opportunities than him don’t make it.</p>
-<p>I often feel guilty because I get to live life in a way that my parents could never.</p>
-<p>The best way I can think to repay them is to work hard and show them that their hard life will be the last that the future Lopes generation will have to endure.</p>
-<p>That and hopefully buying them a nice car one day.</p>]]></content:encoded>
-            <category>birthday</category>
-            <category>dad</category>
-            <category>family</category>
-        </item>
-        <item>
-            <title><![CDATA[rabbit r1, there is hope]]></title>
-            <link>https://didierlopes.com/blog/rabbit-r1-there-is-hope</link>
-            <guid>https://didierlopes.com/blog/rabbit-r1-there-is-hope</guid>
-            <pubDate>Sun, 28 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[I can see a future where people use rabbit r1 for very particular use cases where phone is suboptimal. For instance, when multiple people want to interact with said phone (e.g. selecting music at a party without having to give phone away) and that is not ideal due to personal information on phone, or when the phone isn't ideal because it has too many distractions and user wants to focus on doing something (e.g. practicing a presentation using recording session and then asking for feedback).]]></description>
-            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-04-28-rabbit-r1-there-is-hope.png"></p>
-<p>I can see a future where people use rabbit r1 for very particular use cases where phone is suboptimal. For instance, when multiple people want to interact with said phone (e.g. selecting music at a party without having to give phone away) and that is not ideal due to personal information on phone, or when the phone isn't ideal because it has too many distractions and user wants to focus on doing something (e.g. practicing a presentation using recording session and then asking for feedback).</p>
-<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
-<h2 id="what-is-the-rabbit-r1">What is the rabbit r1</h2>
-<p>Rabbit r1 was first introduced at CES 2024 as a pocket AI companion (watch the keynote <a href="https://www.rabbit.tech/rabbit-r1">here</a>).</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-04-28-rabbit-r1-there-is-hope_1.png"></p>
-<p>The main distinction over being just a "ChatGPT on-the-go" is the fact that they introduced what they call a Large Action Model (LAM), which is an agent capable of taking requests and making different function calls (e.g., translation, weather, finance, vision, taking notes, and more).</p>
-<p>There are now quite a few consumer products that are trying to win this category. Here are a few:</p>
-<ul>
-<li>
-<p><a href="https://humane.com/">AI pin</a> from Humane. MKBHD did a good <a href="https://www.youtube.com/watch?v=TitZV6k8zfA">review</a> on this product (or should I say 'bad review'?).</p>
-</li>
-<li>
-<p><a href="https://www.limitless.ai/">pendant</a> from Limitless (previously Rewind AI).</p>
-</li>
-<li>
-<p><a href="https://www.openinterpreter.com/">01</a> from Open Interpreter. I ordered this one because it's <a href="https://github.com/OpenInterpreter/open-interpreter">open source</a> and I can build on top.</p>
-</li>
-</ul>
-<p>While at the surface these devices are somewhat similar, they approach the problem from a different angle. AI pin relies on users to clip their device to their clothes, the pendant is put on the collar of your top and 01 is held handheld. Rabbit r1 is also handheld, but unlike the others contains a screen to interact with - so it's closer to a phone than the others.</p>
-<p>Nonetheless, according to Jesse (rabbit's CEO) they are currently the most successful AI device in terms of sales (sold over 100,000 rabbit r1 in a few weeks).</p>
-<h2 id="how-i-got-my-r1">How I got my r1</h2>
-<p>My wife saw me watching a few videos of rabbit r1 and decided to surprise me with one, a one-time $199 purchase without any subscription fee. I wonder why she didn’t do it when I was watching Apple Vision Pro 😄.</p>
-<p>But they didn’t ship immediately. My batch was only meant to be shipped sometime in June. However, rabbit tweeted that there would be a Pickup Party in NYC. I added notifications on their X account and once they announced that registrations were open I was ready. I RSVPd and this week I attended the event to grab mine.</p>
-<p>The event was well organized. One thing is for sure, rabbit knows how to build a community and hype with their users.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-04-28-rabbit-r1-there-is-hope_2.png"></p>
-<p>The keynote presented at the event can be found <a href="https://www.rabbit.tech/live-unboxing">here</a>. In it, rabbit's CEO unboxes a rabbit r1 and shows everything it can do on stage.</p>
-<h2 id="my-experience">My experience</h2>
-<p>I have been playing with rabbit r1 for a couple of days now. A few funny things I've done since:</p>
-<ul>
-<li>
-<p>Jailbreak rabbit r1 to say <a href="https://x.com/didier_lopes/status/1783335809459859708">f*ck which falls outside the guidelines</a></p>
-</li>
-<li>
-<p>Ask it what LLM it was using under the hood, to which it said <a href="https://x.com/didier_lopes/status/1783346493832753477">it was using a fine-tuned version of OpenAI's GPT-3</a></p>
-</li>
-<li>
-<p>Have rabbit r1 make a <a href="https://x.com/didier_lopes/status/1784228313717776505">Deez Nuts joke</a></p>
-</li>
-<li>
-<p>Use rabbit r1 as a <a href="https://x.com/didier_lopes/status/1784357946920505387">Not Hotdog app</a> (<a href="https://www.imdb.com/title/tt2575988/">Silicon Valley reference</a>)</p>
-</li>
-</ul>
-<p>But now onto the serious stuff. Since I was at the Pickup Party where Jesse split the presentation based on the major features of the products, I want to address each of these individually after having time to play with them.</p>
-<h3 id="search">Search</h3>
-<p>For search, rabbit r1 relies on <a href="https://www.perplexity.ai/">Perplexity</a>. I'm a Perplexity fan myself and at some point I even replaced my default <a href="https://arc.net/">Arc browser</a> search engine with Perplexity. This only lasted one day because then I realized how many times I just wanted to end up on a landing page or on someone's LinkedIn/X. It made me realize why Google is, well, Google. Regardless, this is something that I do with my phone, and so I don't think it's a strong use case.</p>
-<p>However, if you have a kid that is curious to understand the world. I think a rabbit r1 is well worth it to use it to ask questions that they are curious about, without having the distractions that a phone provides.</p>
-<h3 id="vision">Vision</h3>
-<p><strong>What is this</strong> - I just don't think this is a strong use case overall. This is not something that you do daily, weekly, or even monthly. Maybe once a year or so. The last time I did it was last year in Mexico to know the name of an animal that was nearby. I went to Google and looked for "Mexico animal that looks like a racoon" and the first answer was Coati which was what I was looking for. If that query didn't work, I would have taken a picture of the animal and then Google search - but that's my second choice because of the effort of doing so. This to say that it's not really a pain point that users will have.</p>
-<p><strong>Edit spreadsheet</strong> - This is a somewhat interesting use case choice, I wonder if they picked it up because no other device showed being capable of doing this (taking a picture to a handwritten table, asking for a change and emailing the image to your email). Personally, I don't write tables that much anymore on paper, and the ones I do are small enough that if I want to transcribe it takes me seconds to do. It may be a strong use case for certain jobs, but I’m not sure about it, nor the performance it would have on large tables. The example Jesse shared at the event was a 5x3 tabl.</p>
-<h3 id="terminal-mode">Terminal mode</h3>
-<p>It’s like using ChatGPT but with a worse interface. The keyboard reminds me of BlackBerry but it’s gimmicky to use - personally, I didn’t like the experience. I would always pick up my phone to use ChatGPT over using the Terminal mode for instance.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-04-28-rabbit-r1-there-is-hope_3.png"></p>
-<h3 id="translation">Translation</h3>
-<p>YES. Having Portuguese parents that don’t speak english, whenever they are with my wife, I need to be the translator. So having a device that allows them to translate in “real-time” both ways is a huge value add.</p>
-<p>Yes, I know that Google already has this feature - but it's shit and if you disagree, you never actually used it. LLMs can understand expression and meaning, in a way that a model like BERT cannot. I actually did this post where I prompted ChatGPT to do exactly this - act as a device that stays in the middle of a conversation translating from one language to another based on who the speaker was (tweet <a href="https://x.com/didier_lopes/status/1740049615804846461">here</a>, it went kind of viral).</p>
-<p>Sure, this could be an app, but I quite like the idea of having a device that just does this. I think that’s because the translation works both ways, so I imagine you passing the device to the other person to press the button when they want to speak. So that way, it feels more like a “common” object whereas your phone is more personal.</p>
-<p>Although I was excited about this, and it was the first thing I tried it failed badly. The CTO of the company <a href="https://x.com/LiaoPeiyuan/status/1783001793573843078">replied</a> to <a href="https://x.com/didier_lopes/status/1783000272278569412">my tweet</a> saying that they are working on fixing it.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-04-28-rabbit-r1-there-is-hope_4.png"></p>
-<h3 id="notes">Notes</h3>
-<p>Yay, another note-taking app. NOT. I’d prefer an integration with the Apple Notes app or Notion, so I don’t need to then go into yet another website and copy-paste those notes to some other place.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-04-28-rabbit-r1-there-is-hope_5.png"></p>
-<h3 id="voice-recording">Voice Recording</h3>
-<p>The voice recording feature is pretty good. If you are a content creator (e.g., writer, youtuber), I think this is very powerful. The way I see it is that rabbit offers way less distractions than your phone, so you could go on a walk and take r1 and just speak with it to brainstorm ideas. Then go to the website and analyze your ideas to transform it into content.</p>
-<p>Personally, when I have ideas like this I just drop a voice note to my wife’s WhatsApp and then mark the message as unread. It’s hacky but it works and I've been doing it for a long time now. We have an inside joke where I start these audios with “Note to self” and she always makes fun of it.</p>
-<div class="flex justify-center gap-2"><img src="https://didierlopes.com/blog/2024-04-28-rabbit-r1-there-is-hope_6.png" width="50%"><img src="https://didierlopes.com/blog/2024-04-28-rabbit-r1-there-is-hope_7.png" width="50%"></div>
-<h3 id="music">Music</h3>
-<p>Last year for my birthday my wife gave me a <a href="https://divoom.com/products/divoom-pro">Divoom Ditoo-Pro Retro</a> - it does a lot of things (e.g. music, radio, alarm, voice memo, games, music, planner, pixel art). Honestly, I just use it for music. It lived in my car during the entire year as a speaker since I didn't have bluetooth audio in the car. I think the advantage of rabbit r1 over it is that I can use my voice to change the music, which is handy if you are driving. On the other hand, my Divoom allows me to listen to my audibles since it acts as a bluetooth speaker whereas rabbit r1 would need an audible integration.</p>
-<p>I think this can be a compelling use case as sitting in the middle of the table at a dinner or party with friends, where if someone wants to change the music they can just use the rabbit r1 to ask for something - and this way you can keep your phone/laptop on you instead of using it for everybody else to touch.</p>
-<h3 id="apps">Apps</h3>
-<p><strong>Doordash/Uber</strong> - I haven’t tried it yet, but I feel like the phone is so good at it already and with a rich UI/UX, that I don’t see the point in using rabbit r1.</p>
-<p><strong>Generative AI</strong> - This is an interesting use case. Personally I don’t use Midjourney so I'm not the target audience. I do find it interesting that you can generate these images on the go on r1 directly without having to go through Discord (suboptimal) experience. I'm excited about the opportunities that this presents - for instance, integrating with <a href="https://openbb.co/products/bot">OpenBB Bot</a> to display financial data on rabbit r1 directly.</p>
-<h3 id="teach-mode">Teach mode</h3>
-<p>Jesse showed a brief preview of how teach mode works but mentioned that this feature is not yet available and they want to nail the user experience and add guardrails so users cannot use it for something malicious. I'm very excited about the teach mode prospect, since I think this falls in the category of "app creation" and allows users to use the device for very specific needs, hence opening the total addressable market.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>First of all, the rabbit r1 is beautiful. It's light, well made and has this bright appealing color. This isn't surprising since it was done in collaboration with <a href="https://teenage.engineering/">Teenage Engineering</a> (a company known for making products that I want without knowing what they do).</p>
-<p>This may be controversial, but the thing I like the least about the hardware is the button being located on the right side. The reason why I hate that decision is that I cannot easily use the device with one hand only. If I try, it becomes very gimmicky where I do gymnastics just to press the button. I don't get why they didn't make it right under the scrolling wheel, it would resemble more a controller/phone which is something that our hands have long been accustomed to. Even if the button was located on the upper side of the device, the UX would be MUCH better.</p>
-<p>That's one of my biggest complaints against the hardware itself, see image below to see what I mean. I almost need to bend my right thumb in order to reach the button which is used very often. One can argue that I can wrap my hands more around the device to give a better experiencing in clicking the button which is 100% true, HOWEVER, if I do that then I can't reach the wheel to scroll.</p>
-<div class="flex justify-center gap-2"><img src="https://didierlopes.com/blog/2024-04-28-rabbit-r1-there-is-hope_8.png" width="50%"><img src="https://didierlopes.com/blog/2024-04-28-rabbit-r1-there-is-hope_9.png" width="50%"></div>
-<br>
-<p>Also, related with the picture from the above. The battery is pretty weak, it needs to be charged often.</p>
-<p>The rabbit r1 OS has a lot of room for improvement, a few things I've experienced:</p>
-<ul>
-<li>Having a black screen that doesn't recover until I manually power off device;</li>
-<li>Not triggering the function I want - sometimes it looks for a specific wording, e.g. "start a recording session" works but "do a voice recording" does not. I would have expected for it to be able to understand intent;</li>
-<li>Sometimes I get a "The app is under maintenance. Please try again later" for functions that I know it is capable of doing;</li>
-<li>Every few minutes getting "unable to connect to Rabbit OS";</li>
-<li>Randomly losing the previous context - I assume this is because of the number of tokens that can fit in the context?;</li>
-<li>Spotify integration broken;</li>
-<li>Even though it knows my location (due to getting weather app location correct), the time is not correct and I can't update it through the settings.</li>
-</ul>
-<p>But this is also the first product version and LLMs are by nature non-deterministic so these type of bugs are kind of expected.</p>
-<p>It's a one-time $199 price tag. There's no recurring subscription. As a consumer, I like this a lot. A one-time purchase allows users to buy the product to experiment without any strong commitment (apart from that one-time fee of course). In terms of economics, I'm not sure how Rabbit will handle a growing user base and better LLMs. During the event, they mentioned a partnership with both OpenAI and Anthropic. If they are using one of these models, someone needs to be paying for these tokens. For instance, for <a href="https://openbb.co/products/pro">OpenBB Terminal Pro</a> we decided to allow usage similarly to how the ChatGPT free tier works, which basically rate limits based on usage and allows us to keep our costs controlled.</p>
-<p>Meta is attempting to commoditize LLMs, so if I were in rabbit's shoes I would consider hosting <a href="https://llama.meta.com/llama3/">Llama 3</a> locally and providing inference from this directly. Maybe even do a partnership with <a href="https://groq.com/">Groq</a> for users paying a small subscription - not so much because of the impressive 800 tokens/s inference (using Llama 3) since rabbit r1 uses voice and inference speed is less relevant, but for the cold start (i.e. the lag between user question and output). Meta's commercial license only applies to companies with over 700 Million active users, so I think Rabbit would be good for some time.</p>
-<p>Personally, I wouldn’t recommend rabbit r1 as a phone alternative. Not even close. If someone says that they stopped using their phone after having their rabbit r1, I can guarantee you that they weren’t using their phone a lot anyway. I agree a lot with MKBHD in saying <a href="https://www.youtube.com/watch?v=TitZV6k8zfA">Phones are OP</a>.</p>
-<p>But if you are reading this, you are probably wondering what are the use cases where I would recommend Rabbit r1. So let's do that.</p>
-<h3 id="this-is-a-buy-if">This is a buy if</h3>
-<ul>
-<li>
-<p>For kids that are curious and want to learn more about the world. Being able to have it before a phone, is very compelling. Imagine your kid being able to ask r1 what a word means and how to use it in a sentence, who person X is, how something works, to practice learning another language, as a complement when reading a book/studying. The advantage over the phone is that it doesn't have any other distractions. It would basically be Perplexity on the go, and thus the Perplexity tagline "Where knowledge begins" makes total sense.</p>
-</li>
-<li>
-<p>As a device for two-way translation. The two-way is important, because if it’s just one-way then using the phone is preferred. But being two-way allows for both people to interact with the device, which in my opinion is less personal than a phone and more like a gadget. We aren't there yet, but I'm sure the model will keep improving and becoming better at this.</p>
-</li>
-<li>
-<p>For content creators who want to “zone out” and leave their phone at home and just use the record feature to record content, whether that is a blog post, a new lyrics or a podcast idea.</p>
-</li>
-<li>
-<p>As a music device to be at the center of a table at a dinner, in the corner at a party selecting the tunes or on a roadtrip. People will enjoy interacting with it due to its unique nature, and that way you don't need to be blocked from using your phone.</p>
-</li>
-<li>
-<p>As a virtual assistant. If the alarm feature was already implemented, I would've likely already replace my Alexa, since rabbit r1 looks much nicer. Even more with the cool standing case.</p>
-</li>
-</ul>
-<p>... and of course, the use case is worth $200 for you. There are likely devices that can achieve the same for a cheaper cost. I like the fact that is state-of-the-art and they are trying to innovate.</p>
-<p>Also, the rabbit effect going up and down waiting to be prompted and the hears going up when listening is pretty sweet - see it <a target="_blank" data-nobrokenlinkcheck="true" href="https://didierlopes.com/assets/files/2024-04-28-rabbit-r1-there-is-hope_10-7f8ddd0aa7943163b831fe104197e46a.png">here</a>.</p>
-<p>In any case, there are two recurring topics in these use cases, so let's talk about each individually.</p>
-<h3 id="main-use-cases">Main use cases</h3>
-<ol>
-<li>
-<p><strong>A very targeted use case</strong> - The phone can be a double-edged sword. On the one hand, it's your door to the world and what's happening. On the other hand, it's your door to the world and what's happening. I say it this way because this can be extremely good or bad depending on the use case. Phones are optimized for users to spend time on them, apps are optimized to provide dopamine hits so users use them for longer. Notifications will interrupt you throughout the day so you remember to go back to the app, etc.. But sometimes you only want to do 1 thing, and don't want to be distracted from it. The best example are E-Books. You can read on your phone, iPad or laptop - yet people decide to buy a kindle so they can just do that. Read with no distractions. You are paying a premium for a product to remove the distractions. I believe that rabbit r1 can achieve this, particularly if they allow developers to build specific apps for specific use cases.</p>
-</li>
-<li>
-<p><strong>Gadget to be used by multiple people</strong> (examples above: two-way translation or music device) - The phone has become a very personal device over the years. If someone gets access to your phone unlocked they have access to who you are (important emails, personal photos, chat conversations, the apps you use and how do you spend your time, the songs you listen or books you read, even confidential documents). So, there are certain scenarios where you don't want to borrow your phone to someone to do something, since that requires trust that they won't see anything that is confidential. I think Rabbit r1 can go after this category because its a shiny gadget that doesn't really hold any personal information from the user, and this way allows the user to keep their phone in their pocket while using rabbit r1 for some tasks that the phone could also do but would require for others to have access to it.</p>
-</li>
-</ol>
-<br>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-04-28-rabbit-r1-there-is-hope_11.png"></p>
-<h2 id="excited-about">Excited about</h2>
-<h3 id="developer-ecosystem">Developer Ecosystem</h3>
-<p>Apple became Apple not because of their revolutionary LCD screen without a keyboard, but because of the developer ecosystem they created. The iPhone became stickier over time, because there were more apps being built on top of it that users could easily tap into. It also allowed Apple to generate revenue from the monetization of these apps.</p>
-<p>I truly hope that this is the direction that Jesse and team want to take. If I were in their shoes, I would prioritize that over any other feature. Just allow developers to create apps (in this case functions) that the LAM can call to do something very specific.</p>
-<p>Instead of having their team working on all these features, create the foundational marketplace that allows developers to do so. Start by only allowing free apps and see what developers are building and what users are utilizing. Then move to allow developers to monetize and take a cut from it. And allow users to decide what apps are enabled within their devices and which ones aren't - show which apps are the most downloaded and used and link it to a user profile. Make it so that the user profile needs to be a rabbit r1 holder to avoid scams..</p>
-<p>A few examples: Someone building a Pokedex app for animals, you take r1 to the zoo and just take a picture of the animals with it, then you go home and look into your pokedex. Or a Pokedex for travel monuments. Or integrating OpenBB so I could do research on-the-go.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-04-28-rabbit-r1-there-is-hope_12.png"></p>
-<h3 id="native-ai-phone">Native AI-phone</h3>
-<p><a href="https://us.nothing.tech/">Nothing</a> has one of the best consumer tech brands out there. If the Apple ecosystem wasn't as sticky as it is today, I would buy one. Both Nothing and Rabbit are very unique brands, and I think a partnership between them could be a game-changer.</p>
-<p>I'm imagining a Native AI-phone built on Android with rabbit's LAM. So, in simple terms, it would be like Nothing Phone (2) but it would have an r1 button that you can use to interact with it through voice instead of fingers. The challenge would be combining the LAM from rabbit r1 to all the apps that Nothing Phone (2) provides - but I believe in a future where applications will be built not only thinking about how humans will utilize them but also LLMs - at least <a href="https://github.com/OpenBB-finance/openbb-agents">we are doing that at OpenBB</a> with the <a href="https://github.com/OpenBB-finance/OpenBBTerminal">OpenBB Platform</a>.</p>]]></content:encoded>
-            <category>rabbit r1</category>
-            <category>tech</category>
-            <category>review</category>
-            <category>ai</category>
-            <category>gadget</category>
-        </item>
-        <item>
-            <title><![CDATA[Goh Analyst - The AI-powered financial analyst who lives on Slack]]></title>
-            <link>https://didierlopes.com/blog/goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack</link>
-            <guid>https://didierlopes.com/blog/goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack</guid>
-            <pubDate>Tue, 26 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[How I built a financial analyst that lives on Slack and has access to OpenBB.]]></description>
-            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack_1.png"></p>
-<p>How I built a financial analyst that lives on Slack and has access to OpenBB.</p>
-<p>The open source code is available <a href="https://github.com/DidierRLopes/openbb-slack-agent">here</a>.</p>
-<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
-<h2 id="context">Context</h2>
-<p>At OpenBB, we have the tradition of hosting an internal Creaton on the penultimate week of the year.</p>
-<p>The OpenBB Creaton is our creative Hackathon, where every team member picks a project to work on throughout the week and gets fully focused on it. The only rule is that it relies on OpenBB technology.</p>
-<p>It’s a way for us to get further contact with our technology, but it also allows us to create proofs-of-concept of products/features that we may invest in the feature. Think of it as an R&amp;D week.</p>
-<p>We do it then because our team members get the last week of the year as time off. So, if they want to present their project to the rest of the team in January, they can also use that time to wrap up.</p>
-<h2 id="my-project">My Project</h2>
-<p>At the Open Core Summit III, I presented a way of creating an AI-powered financial analyst capable of handling complex financial queries.</p>
-<p>I wrote more about this in this <a href="https://didierlopes.com/blog/creating-an-ai-powered-financial-analyst">blog post</a>. This robust architecture can access 100+ financial datasets from OpenBB tools and reason about them. The code is open source here.</p>
-<p>I shared how our AI-powered financial analyst was able to answer</p>
-<blockquote>
-<p>“Check what TSLA peers are. From those, check which one has the highest market cap. Then, for the ticker that has the highest market cap, get the most recent price target estimate from an analyst, and tell me who it was and on what date the estimate was made.”</p>
-</blockquote>
-<br>
-<p>and</p>
-<blockquote>
-<p>“Perform a fundamentals financial analysis of AMZN using the most recently available data. What do you find that’s interesting?”</p>
-</blockquote>
-<br>
-<p>Since that was already working so well (watch the <a href="https://www.youtube.com/watch?v=A-43EKK2PhE&amp;embeds_referring_euri=https://openbb.co/blog/creating-an-ai-powered-financial-analyst&amp;source_ve_path=MjM4NTE">presentation video here</a>), I wanted to bring these capabilities to Slack, show that this could be the future, and prove it would impact every analyst job.</p>
-<p>That’s when Goh Analyst was born.</p>
-<p align="center"><img width="800" src="https://didierlopes.com/blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack_2.png"></p>
-<p>Note: Goh Analyst together is GOHANalyst, which is why the image is Gohan from Dragon Ball with the OpenBB logo on his forehead.</p>
-<h2 id="how-does-it-work">How does it work?</h2>
-<p>To get started, you can see the <a href="https://github.com/DidierRLopes/openbb-slack-agent/tree/main">open-source repository and instructions</a>.</p>
-<p>First, I forked the <a href="https://github.com/OpenBB-finance/openbb-agents">open-source code of the OpenBB agents repository</a> that we have been using for R&amp;D. This repository contains all the code for the OpenBB agent and has access to 100+ financial datasets.</p>
-<p>Then, I modified it to my needs:</p>
-<p>Created the Slack bot interface</p>
-<p>When a Slack message mentions @Gohanalyst this workflow gets triggered</p>
-<p>When the Slack message contains the word “OpenBB”, I send that message through the OpenBB agent since the assumption is that data retrieval will be necessary. Otherwise, it goes straight through OpenAI.</p>
-<p>In a nutshell, this is what the architecture looks like:</p>
-<p align="center"><img width="800" src="https://didierlopes.com/blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack_3.png"></p>
-<p>I made Goh Analyst slightly sarcastic to make it a bit more fun. This makes interacting in a public channel somewhat more human and exciting. It can handle simple financial questions, retrieve data using OpenBB tools, or even answer more complex reasoning questions.</p>
-<p align="center"><img width="800" src="https://didierlopes.com/blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack_4.png"></p>
-<p align="center"><img width="800" src="https://didierlopes.com/blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack_5.png"></p>
-<p>Now imagine that every organization has an analyst on their Slack to help make decisions.</p>
-<h2 id="whats-next">What's next</h2>
-<p>As I mentioned earlier, one of the advantages we get from OpenBB Creaton is that we test our products and give feedback to the team on what went well or less well. After working on this project, this is what I shared with the team:</p>
-<p align="center"><img width="800" src="https://didierlopes.com/blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack_6.png"></p>
-<p>Exciting times we live in. If you want to leverage AI within your financial firm, we can help you 🤝</p>]]></content:encoded>
-            <category>learning</category>
-            <category>experience</category>
-            <category>growth</category>
-            <category>moving</category>
-            <category>london</category>
-            <category>bay</category>
-            <category>US</category>
-            <category>travel</category>
-            <category>startup</category>
-            <category>nyc</category>
         </item>
     </channel>
 </rss>

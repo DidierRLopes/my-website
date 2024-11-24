@@ -13,6 +13,12 @@ hideSidebar: true
     <img width="600" src="/blog/2024-10-25-implement-feedback-loops-everywhere-you-can.jpeg"/>
 </p>
 
+Maximizing team transparency through focused feedback sessions.
+
+<!-- truncate -->
+
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
+
 A couple of months ago, my co-founder came to NYC for our board meeting.
 
 During that week, we took a day to sync up with everyone on the team—literally. We had 14 conversations, each lasting up to 30 minutes. Apart from lunch, we did all these back-to-back.
@@ -28,11 +34,8 @@ The goal of this exercise was 2-fold:
     <img width="900" src="/blog/2024-10-25-implement-feedback-loops-everywhere-you-can_2.jpeg"/>
 </p>
 
-<!-- truncate -->
-
-<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
-
 ## Structure
+
 ### Part 1 - 20 minutes
 
 For the first 20 minutes, we asked the following questions to each team member:

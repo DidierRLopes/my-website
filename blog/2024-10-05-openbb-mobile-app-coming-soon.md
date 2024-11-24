@@ -13,6 +13,12 @@ hideSidebar: true
     <img width="600" src="/blog/2024-10-05-openbb-mobile-app-coming-soon.png"/>
 </p>
 
+How we built a mobile app, in 1 evening, with 1 engineer.
+
+<!-- truncate -->
+
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
+
 Let’s start with a bit of background to this story. 📖
 
 Back in September 2021, our first full-time team member was [Jose Donato](https://x.com/josedonato__?utm_source=didierlopes.beehiiv.com&utm_medium=referral&utm_campaign=openbb-mobile-app-coming-soon). He started full-time, even before I did (due to my 3 months notice period in Europe, yikes).
@@ -26,10 +32,6 @@ One of the topics he was very passionate about, was the concept of Progressive W
 I had never heard of it before, but the concept intrigued me. Why wouldn’t more companies do that?
 
 Jose is currently writing a post about it, you can subscribe to the [company newsletter](https://openbb.co/newsletter?utm_source=didierlopes.beehiiv.com&utm_medium=referral&utm_campaign=openbb-mobile-app-coming-soon) to keep an eye out for it.
-
-<!-- truncate -->
-
-<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 ## Mobile compatibility
 

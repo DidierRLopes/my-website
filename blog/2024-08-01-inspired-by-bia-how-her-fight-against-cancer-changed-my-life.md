@@ -163,12 +163,22 @@ If anything, my objective with this post is to highlight that cancer is real.
 
 In a time when we talk about going to Mars and having AGI, cancer is still taking lives every day...
 
-[Haymakers for Hope](https://haymakersforhope.org/) is fundraising to help organizations fighting for the cause.
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-Although I wasn't selected to participate in the Boxing match that happens in NYC to support the cause, I will be there.
+[Haymakers for Hope](https://haymakersforhope.org/) is an organization dedicated to raising funds for cancer research and care. They organize unique events that combine athleticism with philanthropy, making a significant impact in the fight against cancer.
 
-Consider to either [donate to the fighters](https://haymakersforhope.org/events/boxing/hope-nyc-xi-2024) or buying a ticket to attend.
+On March 16, 2025, I will be running the NYC Half Marathon as part of the Haymakers for Hope team.
 
-And if you buy a ticket, the first drink at the event is on me.
+Join me in this fight against cancer, for Bia and for all those whose lives have been touched by this disease.
 
-See you on the 14th of November. 🥊
+I've created a [fundraising page](https://haymakersforhope.org/events/running/nyc-half-marathon-2025/runners/Didier-Lopes) where you can support this cause.
+
+<p align="center">
+    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_6.png"/>
+</p>
+
+<p className="text-center">
+    <a href="https://haymakersforhope.org/events/running/nyc-half-marathon-2025/runners/Didier-Lopes" className="inline-block px-5 py-2.5 bg-[#0088CC] text-white rounded font-bold hover:bg-[#006699] transition-colors duration-300">Donate here</a>
+</p>
+
+Every donation matters. ❤️

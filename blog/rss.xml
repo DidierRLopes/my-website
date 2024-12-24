@@ -4,11 +4,42 @@
         <title>Didier Lopes Blog</title>
         <link>https://didierlopes.com/blog</link>
         <description>Didier Lopes Blog</description>
-        <lastBuildDate>Sat, 09 Nov 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 18 Dec 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2024 Didier Lopes.</copyright>
+        <item>
+            <title><![CDATA[Today I saw a glimpse of the future]]></title>
+            <link>https://didierlopes.com/blog/today-i-saw-a-glimpse-of-the-future</link>
+            <guid>https://didierlopes.com/blog/today-i-saw-a-glimpse-of-the-future</guid>
+            <pubDate>Wed, 18 Dec 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Today I saw a glimpse of the future]]></description>
+            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-12-18-today-i-saw-a-glimpse-of-the-future.jpeg"></p>
+<p>My friend Matt, from VanEck, built a backend with data from Coingecko, Velodata, Artemis, CCdata, Glassnode, MSTR Tracker, Telegram and Google - all in OpenBB.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p><a href="https://x.com/mattmaximo1">Matt Maximo</a> has been building a backend with data from Coingecko, Velodata, Artemis, CCdata, Glassnode, MSTR Tracker, Telegram and Google.</p>
+<p>However, he didn't find the best product where he could:</p>
+<ol>
+<li>Bring all this data into one interface</li>
+<li>Leverage an intelligence layer on top</li>
+<li>Collaborate with his team on it</li>
+</ol>
+<br>
+<p>Until he did.</p>
+<p>With our free tier - Matt was able to single-handedly create almost 50 different data widgets that he (and his team) will be able to access seamlessly on OpenBB.</p>
+<p>As we shift to firms being more in control of their data, and with the clear gains from having an additional intelligence layer on top of that data - the need for OpenBB in the market has never been clearer.</p>
+<p>Shifting the control back to financial firms.</p>
+<p>More open. More adaptable.</p>
+<p>If you want help on connecting your own backend (crypto or other) to OpenBB - reach out to myself and team.</p>]]></content:encoded>
+            <category>openbb</category>
+            <category>leadership</category>
+            <category>talent</category>
+            <category>hiring</category>
+            <category>performance</category>
+            <category>company-culture</category>
+            <category>startups</category>
+        </item>
         <item>
             <title><![CDATA[Why we got rid of PIPs at OpenBB]]></title>
             <link>https://didierlopes.com/blog/why-we-got-rid-of-pips-at-openbb</link>
@@ -1132,81 +1163,6 @@ My friends &amp; family are “protected” by an imaginary shield that I create
             <category>analytics</category>
             <category>supervised learning</category>
             <category>machine learning</category>
-        </item>
-        <item>
-            <title><![CDATA[Why chat-only AI Financial Assistants are not the future]]></title>
-            <link>https://didierlopes.com/blog/why-chat-only-AI-Financial-Assistants-are-not-the-future</link>
-            <guid>https://didierlopes.com/blog/why-chat-only-AI-Financial-Assistants-are-not-the-future</guid>
-            <pubDate>Sat, 15 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Financial assistants structured like ChatGPT are great for quick searches but fall short for comprehensive investment research.]]></description>
-            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future.png"></p>
-<p>Financial assistants structured like ChatGPT are great for quick searches but fall short for comprehensive investment research. They are limited by their one-dimensional approach, which hinders efficient data retrieval and long-term usability. Read on to discover how OpenBB Terminal Pro addresses these issues with a three-dimensional solution.</p>
-<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
-<p>This is a spicy take but bear with me.</p>
-<p>The more I think about “ChatGPT for Finance” products, the more I think this is not the answer.</p>
-<p>They are extremely good knowledge retrieval engines because you can ask what you want to know and get the answer immediately.</p>
-<p>My problem with their approach is what happens after.</p>
-<p>However, very little thought is given to the real-world investment workflow. That's why I strongly believe that a chat-only financial platform will never be successful on its own.</p>
-<p>Sure, they can win in the categories of “search” or “screening”, but they won’t be able to compete in the category of “investment research platform”.</p>
-<p>To do that, they would need to evolve.</p>
-<p>Let me explain why and how OpenBB differs from them.</p>
-<h2 id="1-dimensional-vs-n-dimensional">1-Dimensional vs N-Dimensional</h2>
-<p>Financial assistants are, in general, 1-dimensional. By that, I mean that all you have on a screen is a “dashboard” with an unlimited y-axis (1 single dimension).</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future_1.png"></p>
-<p>This means that whatever information they output will always be in the same position, which is great for the short term.</p>
-<p>But for the long term? Not so much. If the user wants to find specific information, they will need to keep scrolling up the text to find it.</p>
-<p>When financial assistants allow multiple conversations, then we start having 2 dimensions, where each conversation introduces a new axis.</p>
-<p>The problem with this approach is that you can’t easily find data within one of those past conversations since the assistant focuses on answering your question and not on data retrieval from the previous outputs.</p>
-<h2 id="our-3-dimensional-solution-on-terminal-pro">Our 3-dimensional solution on Terminal Pro</h2>
-<p>How do we handle those issues? We have 3 dimensions.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future_2.png"></p>
-<p>Our Terminal Pro has a Copilot on the side, similar to other financial assistants.</p>
-<p>However, its big advantage is that when you want to save Copilot’s output for later, you can convert it into a text widget. And when you do so, you can place it wherever you want in this space — with the axis being infinite vertical scroll, tabs, dashboards, and folders.</p>
-<video controls=""><source src="https://openbb-cms.directus.app/assets/ebdda68a-95f7-425b-aebe-5c98936c9189"></video>
-<h2 id="storage-based-solutions-are-not-optimized-for-investment-research">Storage-based solutions are not optimized for investment research</h2>
-<p>Again, financial assistants are optimized for search rather than information storage.</p>
-<p>This means that, by nature, chat-only financial assistants assume that their output will not matter in the future, so they answer your queries similarly to how a text conversation works. It's literally called ChatGPT for that reason.</p>
-<p>However, that’s not ideal for investment research.</p>
-<p>If analysts and researchers need to access these financial assistants' output at some point in the future, they won’t be able to do it quickly. Instead, they’ll have to go through a long chat history.</p>
-<p>This is why, in our Terminal Pro, we allow users to create a markdown-based text widget from the Copilot’s output, as shown above, so that you can have that information quickly accessible, but also editable.</p>
-<h2 id="theres-no-simple-way-to-know-where-the-data-comes-from">There’s no simple way to know where the data comes from</h2>
-<p>Financial assistants are great, and they are improving every day. But if there’s something I’ve learned from talking with financial firms for over three years, it's that this is a very slow-moving industry, and adopting new technologies takes time.</p>
-<p>But with AI, it seems different. It’s so revolutionary that people are willing to incorporate it into their workflow faster because they immediately understand the benefits it can bring to their business.</p>
-<p>However, hallucinations are still a big problem — so it’s essential for these firms to be able to verify the raw data and sources.</p>
-<p>The current level of AI is equivalent to having a smart intern that you would need to double-check their work or trust but verify.</p>
-<p>This is why our Copilot always answers based on data that is readily available on the dashboard — and (due to our “Bring Your Own Data” technology) that data can be brought by your firm rather than being limited to what we offer out of the box.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future_3.png"></p>
-<h2 id="financial-chats-are-not-collaborative">Financial chats are not collaborative</h2>
-<p>Financial assistants are not collaborative by default.</p>
-<p>When someone opens a tool like ChatGPT, they are interested in getting an answer to their question. Can you imagine what would happen if more people had access to that conversation and asked ChatGPT a different question? That would translate into a horrible user experience.</p>
-<p>The interesting thing is that investment research starts as an individual process but ends up being a collaborative effort where the findings are shared and discussed within a team.</p>
-<p>So, financial assistants have a challenging task: multiple people on a team should be able to access all the conversations without being able to interact with these chats.</p>
-<p>But what if you go through a colleague’s chat where they were asking questions about a company’s earnings, and you want to do a follow-up question?</p>
-<p>That’s a complex problem.</p>
-<p>At OpenBB, we are in a very good position to solve this for our users.</p>
-<p>Since we allow them to create a widget from their conversation with the Copilot, users can effectively create the ideal dashboard to share with their team. On their turn, other team members will then be able to use the Copilot on that same dashboard to make their questions.</p>
-<p>And guess what?</p>
-<p>This can be considered yet another dimension that we allow users to explore.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future_4.png"></p>
-<h2 id="wrap-up">Wrap up</h2>
-<p>In a nutshell,</p>
-<ul>
-<li>
-<p>Most AI financial assistant products are 1-dimensional. Great at retrieving an answer quickly but poor at the overall task of doing investment research.</p>
-</li>
-<li>
-<p>OpenBB Terminal Pro is positioning itself as a flexible and customizable investment research platform with N-dimensions that an AI copilot can control to produce a full investment dashboard as if it were an analyst.</p>
-</li>
-</ul>
-<p>I'm biased, but once we provide the OpenBB Copilot with the capability to interact with the interface (create widgets, dashboards and folders) we might be the company that gets closest to replace an analyst's job.</p>]]></content:encoded>
-            <category>finance</category>
-            <category>ai</category>
-            <category>openbb</category>
-            <category>chat</category>
-            <category>finance assistant</category>
-            <category>chatgpt</category>
-            <category>perplexity</category>
-            <category>investment research</category>
         </item>
     </channel>
 </rss>

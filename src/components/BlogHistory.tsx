@@ -42,6 +42,7 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 		summary: post.summary,
 		contentSize: post.content_html.length / 1024,
 		url: post.url,
+		content_html: post.content_html,
 	}));
 
 	const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
@@ -120,51 +121,79 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 											backdropFilter: "blur(5px)",
 											borderRadius: "8px",
 											boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
+											width: "600px",
 										}}
 									>
-										<p
-											style={{
-												fontSize: "1.1em",
-												fontWeight: "normal",
-												color: "#000000",
-												marginBottom: "8px",
-											}}
-										>
-											{data.date.toLocaleDateString(undefined, {
-												year: "numeric",
-												month: "long",
-												day: "numeric",
-											})}
-										</p>
-										<p
-											style={{
-												fontSize: "1.2em",
-												fontWeight: "bold",
-												color: payload[0].color,
-												marginBottom: "8px",
-											}}
-										>
-											{data.title}
-										</p>
-										<p
-											style={{
-												fontSize: "0.9em",
-												color: "#000",
-												fontStyle: "italic",
-												marginBottom: "12px",
-											}}
-										>
-											{data.summary}
-										</p>
-										<p
-											style={{
-												fontSize: "0.9em",
-												color: "#666",
-												fontStyle: "italic",
-											}}
-										>
-											(click bar to view post)
-										</p>
+										<div style={{ display: "flex", alignItems: "center" }}>
+											<div
+												className="flex items-center justify-center mr-4"
+												style={{
+                          width: "100px",
+                          height: "100px",
+                          flexShrink: 0,
+                          backgroundColor: "#f0f0f0"
+                        }}
+											>
+												<img
+													className="rounded-xl w-full h-full"
+													src={data.content_html.match(/<img.*?src="(.*?)"/)[1]}
+													alt={data.title}
+													style={{
+														objectFit: "cover",
+                            width: "100px",
+                            height: "100px"
+													}}
+												/>
+											</div>
+											<div>
+												<p
+													style={{
+														fontSize: "1.1em",
+														fontWeight: "normal",
+														color: "#000000",
+														marginBottom: "8px",
+														textAlign: "left",
+													}}
+												>
+													{data.date.toLocaleDateString(undefined, {
+														year: "numeric",
+														month: "long",
+														day: "numeric",
+													})}
+												</p>
+												<p
+													style={{
+														fontSize: "1.2em",
+														fontWeight: "bold",
+														color: payload[0].color,
+														marginBottom: "8px",
+														textAlign: "left",
+													}}
+												>
+													{data.title}
+												</p>
+												<p
+													style={{
+														fontSize: "0.9em",
+														color: "#000",
+														fontStyle: "italic",
+														marginBottom: "12px",
+														textAlign: "left",
+													}}
+												>
+													{data.summary}
+												</p>
+												<p
+													style={{
+														fontSize: "0.9em",
+														color: "#666",
+														fontStyle: "italic",
+													}}
+												>
+													(click bar to view post)
+												</p>
+											</div>
+										</div>
 									</div>
 								);
 							}

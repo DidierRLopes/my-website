@@ -319,8 +319,9 @@ export default function Home() {
 
         <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center mb-16">
           <h1 className="_h1 !mb-2">Latest Blog Posts</h1>
+          {allPosts && allPosts.length > 0 && <BlogHistory posts={allPosts} />}
           {isDesktop ? (
-            <div className="flex items-start content-center mx-auto align-center justify-center mt-4 gap-8 mb-4 flex-row">
+            <div className="flex items-start content-center mx-auto align-center justify-center mt-8 gap-8 mb-4 flex-row">
               {postsHighlight.map((post) => (
                 <div
                   key={post.id}
@@ -350,7 +351,7 @@ export default function Home() {
               ))}
             </div>
           ) : (
-            <div className="flex items-center content-center mx-auto align-center justify-center mt-4 gap-4 mb-4 flex-col">
+            <div className="flex items-center content-center mx-auto align-center justify-center mt-8 gap-4 mb-4 flex-col">
               {postsHighlight.map((post) => (
                 <div key={post.id} className="my-2">
                   <a href={`${post.id}`}>
@@ -367,11 +368,6 @@ export default function Home() {
               ))}
             </div>
           )}
-        </div>
-
-        <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center mb-16">
-          <div className="_subtitle text-lg">Consistency</div>
-          {allPosts && allPosts.length > 0 && <BlogHistory posts={allPosts} />}
         </div>
 
         <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center rounded-[14px]">

@@ -3,8 +3,8 @@ slug: today-i-saw-a-glimpse-of-the-future
 title: Today I saw a glimpse of the future
 date: 2024-12-18
 image: /blog/2024-12-18-today-i-saw-a-glimpse-of-the-future.jpeg
-tags: ['openbb', 'leadership', 'talent', 'hiring', 'performance', 'company-culture', 'startups']
-description: Today I saw a glimpse of the future
+tags: ['openbb', 'ai', 'interface', 'crypto', 'open source', 'customization']
+description: My friend Matt, from VanEck, built a backend with data from Coingecko, Velodata, Artemis, CCdata, Glassnode, MSTR Tracker, Telegram and Google - all in OpenBB.
 hideSidebar: true
 
 ---

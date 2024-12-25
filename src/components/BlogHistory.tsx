@@ -38,6 +38,7 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 	// Prepare data for the chart
 	const data = sortedPosts.map((post) => ({
 		date: new Date(post.date_modified),
+		timestamp: new Date(post.date_modified).getTime(),
 		title: post.title,
 		summary: post.summary,
 		contentSize: post.content_html.length / 1024,
@@ -97,15 +98,16 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 					onMouseLeave={() => setActiveIndex(null)}
 				>
 					<XAxis
-						dataKey="date"
-						tickFormatter={(date) =>
-							date.toLocaleDateString(undefined, {
+						dataKey="timestamp"
+						tickFormatter={(timestamp) =>
+							new Date(timestamp).toLocaleDateString(undefined, {
 								month: "short",
 								year: "numeric",
 							})
 						}
-						type="category"
+						type="number"
 						domain={["dataMin", "dataMax"]}
+						scale="time"
 					/>
 					<Tooltip
 						content={({ active, payload, label }) => {
@@ -128,11 +130,11 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 											<div
 												className="flex items-center justify-center mr-4"
 												style={{
-                          width: "100px",
-                          height: "100px",
-                          flexShrink: 0,
-                          backgroundColor: "#f0f0f0"
-                        }}
+													width: "100px",
+													height: "100px",
+													flexShrink: 0,
+													backgroundColor: "#f0f0f0",
+												}}
 											>
 												<img
 													className="rounded-xl w-full h-full"
@@ -140,8 +142,8 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 													alt={data.title}
 													style={{
 														objectFit: "cover",
-                            width: "100px",
-                            height: "100px"
+														width: "100px",
+														height: "100px",
 													}}
 												/>
 											</div>

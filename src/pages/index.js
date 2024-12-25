@@ -33,10 +33,10 @@ export default function Home() {
       })
       .catch((error) => {
         console.log(
-          'There was a problem with the fetch operation: ' + error.message,
+          `There was a problem with the fetch operation: ${error.message}`
         );
       });
-  }, []);
+  }, [siteUrl]);
 
   return (
     <Layout
@@ -49,7 +49,7 @@ export default function Home() {
           property="og:description"
           content="Where you can find my posts, personal projects and everything in between."
         />
-        <meta property="og:image" content={`img/goku.png`} />{' '}
+        <meta property="og:image" content="img/goku.png" />{' '}
         {/* Update with your thumbnail URL */}
         <meta property="og:url" content={'http://didierlopes.com'} />
         <meta name="twitter:card" content="summary_large_image" />
@@ -264,11 +264,14 @@ export default function Home() {
                       xmlns="http://www.w3.org/2000/svg"
                       width={32}
                       height={32}
+                      title="X (formerly Twitter) logo"
+                      aria-label="X (formerly Twitter) logo"
                       stroke="currentColor"
                       fill="none"
                       strokeWidth={1.5}
                       viewBox="0 0 50 50"
                       className="mx-auto"
+                      role="img"
                     >
                       <path d="M11 4c-3.854 0-7 3.146-7 7v28c0 3.854 3.146 7 7 7h28c3.854 0 7-3.146 7-7V11c0-3.854-3.146-7-7-7H11zm0 2h28c2.774 0 5 2.226 5 5v28c0 2.774-2.226 5-5 5H11c-2.774 0-5-2.226-5-5V11c0-2.774 2.226-5 5-5zm2.086 7 9.223 13.104L13 37h2.5l7.938-9.293L29.977 37h7.937L27.79 22.613 36 13h-2.5l-6.84 8.01L21.023 13h-7.937zm3.828 2h3.065l14.107 20H31.02L16.914 15z" />
                     </svg>
@@ -287,10 +290,13 @@ export default function Home() {
                       xmlns="http://www.w3.org/2000/svg"
                       width={32}
                       height={32}
+                      title="Linkedin logo"
+                      aria-label="Linkedin logo"
                       fill="currentColor"
                       strokeWidth={1.5}
                       viewBox="0 0 30 30"
                       className="mx-auto"
+                      role="img"
                     >
                       <path d="M24 4H6a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM10.954 22h-2.95v-9.492h2.95V22zM9.449 11.151a1.72 1.72 0 1 1 0-3.44 1.72 1.72 0 0 1 0 3.44zM22.004 22h-2.948v-4.616c0-1.101-.02-2.517-1.533-2.517-1.535 0-1.771 1.199-1.771 2.437V22h-2.948v-9.492h2.83v1.297h.04c.394-.746 1.356-1.533 2.791-1.533 2.987 0 3.539 1.966 3.539 4.522V22z" />
                     </svg>

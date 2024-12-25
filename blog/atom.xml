@@ -2,18 +2,86 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://didierlopes.com/blog</id>
     <title>Didier Lopes Blog</title>
-    <updated>2024-12-18T00:00:00.000Z</updated>
+    <updated>2024-12-22T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://didierlopes.com/blog"/>
     <subtitle>Didier Lopes Blog</subtitle>
     <icon>https://didierlopes.com/img/favicon.ico</icon>
     <rights>Copyright © 2024 Didier Lopes.</rights>
     <entry>
+        <title type="html"><![CDATA[OpenBB and our global reach since leaving beta]]></title>
+        <id>https://didierlopes.com/blog/openbb-and-our-global-reach-since-leaving-beta</id>
+        <link href="https://didierlopes.com/blog/openbb-and-our-global-reach-since-leaving-beta"/>
+        <updated>2024-12-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This is how OpenBB is reaching users worldwide with Chrome's translation features, making financial analytics accessible in multiple languages and expanding our presence across 84% of countries since launch.]]></summary>
+        <content type="html"><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-12-22-openbb-and-our-global-reach-since-leaving-beta.jpeg"></p>
+<p>This is how OpenBB is reaching users worldwide with Chrome's translation features, making financial analytics accessible in multiple languages and expanding our presence across 84% of countries since launch.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>Since our launch on October 7th, we realized that while the majority of our audience is based in the US - we have users utilizing OpenBB from all around the globe.</p>
+<p>In fact, if we count sign ups since October we have a 84% country representation.</p>
+<p>Today, most of the top financial firms have reached out to OpenBB to learn more. Either because they heard about us from others, or had someone internally speaking about OpenBB.</p>
+<p>However - it has also happened having conversation with firms that focus so much on emerging markets (e.g. LatAm) that they speak mostly Portuguese or Spanish.</p>
+<p>So, here I am showing you that you can utilize the Google Translate feature that comes with Google Chrome in under 10 seconds to have our product being translated in real-time to your language of choice.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-12-22-openbb-and-our-global-reach-since-leaving-beta_1.jpeg"></p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-12-22-openbb-and-our-global-reach-since-leaving-beta_2.jpeg"></p>
+<p>I've been playing with it in Portuguese, and it works <em>surprisingly</em> well.</p>
+<p>This even means that you can utilize your AI copilot in your language of choice, which is mind blowing!</p>
+<p>It's this Christmas that I will be able to convert my family to DAU. 😃</p>]]></content>
+        <category label="openbb" term="openbb"/>
+        <category label="global audience" term="global audience"/>
+        <category label="reach" term="reach"/>
+        <category label="internationalization" term="internationalization"/>
+        <category label="languages" term="languages"/>
+        <category label="pwa" term="pwa"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why AI Analysts Need Human-Like Workspaces, Not Just Chat Interfaces]]></title>
+        <id>https://didierlopes.com/blog/why-ai-analysts-need-human-like-workspaces-not-just-chat-interfaces</id>
+        <link href="https://didierlopes.com/blog/why-ai-analysts-need-human-like-workspaces-not-just-chat-interfaces"/>
+        <updated>2024-12-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Why I believe AI agents need the same comprehensive workspace tools as human analysts, moving beyond simple chat interfaces to enable true financial research and analytics.]]></summary>
+        <content type="html"><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-12-20-why-ai-analysts-need-human-like-workspaces-not-just-chat-interfaces.jpeg"></p>
+<p>Why I believe AI agents need the same comprehensive workspace tools as human analysts, moving beyond simple chat interfaces to enable true financial research and analytics.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>This week, Insight Partners published <a href="https://www.insightpartners.com/ideas/state-of-the-ai-agent-ecosystem-use-cases-and-learnings-for-technology-builders-and-buyers/">"The state of the AI Agents ecosystem: The tech, use cases, and economics"</a> which mentions OpenBB on the map in terms of Financial Services AI agents.</p>
+<p>I'd like to explain our flavor of AI analyst.</p>
+<p>An AI agent is defined as "a program that can interact with its environment, collect data, and use the data to perform self-determined tasks to meet predetermined goals".</p>
+<p>If I were to describe the role of an Analyst I could use that exact same sentence, except that I wouldn't use "program" but "human".</p>
+<p>Yet most companies and products out there are focusing on the data and forgetting about the interface.</p>
+<p>If the job to be done by an AI agent is the same as the human agent - why aren't we starting from the assumption that they need the same tools and interface as a human analyst would.</p>
+<p>I mean, I don't see financial analysts spending their day doing analysis &amp; research on Slack or on a chat-only interface.</p>
+<p>This is where we differ and where we decided to take the longer path in doing what's right.</p>
+<p>No shortcuts.</p>
+<p>Yes, our AI agent (or the one our users bring) has access to their own data.</p>
+<p>But more importantly, it is interconnected with a workspace, effectively having the same type of capabilities that an analyst would so it can truly perform research and analytics.</p>
+<p>The goal is actually straightforward:</p>
+<p>The AI agent should be able to do anything and everything that a user can with a mouse and keyboard.</p>
+<p>That includes:</p>
+<ul>
+<li>Extracting insights from multiple datasets</li>
+<li>Adding a particular widget to a dashboard</li>
+<li>Creating a dashboard from scratch based on data available</li>
+<li>Run a particular prediction model with pre-define parameters</li>
+<li>Collaborating on a dashboard with a colleague</li>
+<li>Having access to the internet to add research notes to the dashboard</li>
+<li>Join datasets efficiently</li>
+<li>Write SQL queries to extract particular data from a data warehouse</li>
+<li>etc...</li>
+</ul>
+<p>Agree or disagree?</p>]]></content>
+        <category label="openbb" term="openbb"/>
+        <category label="ai" term="ai"/>
+        <category label="analyst" term="analyst"/>
+        <category label="agent" term="agent"/>
+        <category label="workspace" term="workspace"/>
+        <category label="vision" term="vision"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Today I saw a glimpse of the future]]></title>
         <id>https://didierlopes.com/blog/today-i-saw-a-glimpse-of-the-future</id>
         <link href="https://didierlopes.com/blog/today-i-saw-a-glimpse-of-the-future"/>
         <updated>2024-12-18T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Today I saw a glimpse of the future]]></summary>
+        <summary type="html"><![CDATA[My friend Matt, from VanEck, built a backend with data from Coingecko, Velodata, Artemis, CCdata, Glassnode, MSTR Tracker, Telegram and Google - all in OpenBB.]]></summary>
         <content type="html"><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-12-18-today-i-saw-a-glimpse-of-the-future.jpeg"></p>
 <p>My friend Matt, from VanEck, built a backend with data from Coingecko, Velodata, Artemis, CCdata, Glassnode, MSTR Tracker, Telegram and Google - all in OpenBB.</p>
 <div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
@@ -32,12 +100,11 @@
 <p>More open. More adaptable.</p>
 <p>If you want help on connecting your own backend (crypto or other) to OpenBB - reach out to myself and team.</p>]]></content>
         <category label="openbb" term="openbb"/>
-        <category label="leadership" term="leadership"/>
-        <category label="talent" term="talent"/>
-        <category label="hiring" term="hiring"/>
-        <category label="performance" term="performance"/>
-        <category label="company-culture" term="company-culture"/>
-        <category label="startups" term="startups"/>
+        <category label="ai" term="ai"/>
+        <category label="interface" term="interface"/>
+        <category label="crypto" term="crypto"/>
+        <category label="open source" term="open source"/>
+        <category label="customization" term="customization"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Why we got rid of PIPs at OpenBB]]></title>
@@ -908,259 +975,5 @@
         <category label="career development" term="career development"/>
         <category label="technology" term="technology"/>
         <category label="future of work" term="future of work"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Inspired by Bia - How Her Fight Against Cancer Changed My Life]]></title>
-        <id>https://didierlopes.com/blog/inspired-by-bia-how-her-fight-against-cancer-changed-my-life</id>
-        <link href="https://didierlopes.com/blog/inspired-by-bia-how-her-fight-against-cancer-changed-my-life"/>
-        <updated>2024-08-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[In a time when we talk about going to Mars and having AGI, cancer is still taking lives every day.]]></summary>
-        <content type="html"><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.JPG"></p>
-<p>In a time when we talk about going to Mars and having AGI, cancer is still taking lives every day.</p>
-<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
-<p>This cause could not have been a personal one, but it is.</p>
-<p>As a young kid from a small town in Portugal, people who die from cancer are on TV and I don't know them personally.
-&nbsp;
-My friends &amp; family are “protected” by an imaginary shield that I created in my head.</p>
-<p>Until they aren’t.</p>
-<p>Let me go back down memory lane and talk about Beatriz.</p>
-<p>Bia was in my class in high school.</p>
-<p>We started talking here and there.</p>
-<p>Before I knew it, she was my best friend.</p>
-<p>We would talk for hours about everything and nothing - always laughing.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.JPG"></p>
-<p>We would sit next to each other and professors would have a hard time with us because we liked to chit chat.</p>
-<p>So we created a new communication medium to not get caught.</p>
-<p>We would rip the side of those pages and write in very small font notes to each other.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_1.jpg"></p>
-<p>We would go through multiple of these in each class.</p>
-<p>It was our thing.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_2.JPG"></p>
-<p>A few months later, we had a sports class and she felt weak from her wrist.</p>
-<p>She didn't really like sports. So I remember making fun of her for trying to find an excuse to skip sports class.</p>
-<p>That would be the last time I made fun of that.</p>
-<p>She went to the hospital the day after, and to another one soon for a second opinion.</p>
-<p>She had cancer. On her back.</p>
-<p>Her floor was pulled from under her.</p>
-<p>She was 16 and while kids her age were worrying about boys and school grades, she had to fight for her life.</p>
-<p>At fucking 16.</p>
-<p>The crazy part is that the attitude she had with others was the same.</p>
-<p>She would not display any weakness throughout none of it.</p>
-<p>She was so strong. At 16.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_3.png"></p>
-<p>One day I visited her and she had no hair because of chemotherapy.</p>
-<p>She was still the same beautiful and happy girl that I loved.</p>
-<p>Underneath it all, I don't know where she got the strength to go through it.</p>
-<p>The school adapted the classes to be livestream so that she could attend from home.</p>
-<p>Not only she wasn't gonna lose this battle but she didn't want to lose 1 year of school either.</p>
-<p>She was incredibly smart for her age. So losing a year wasn't an option for her.</p>
-<p>At the graduation she wrote me a message. She didn't have strength in her hand to write so she used her wrist to be able to write it in an iPad.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_4.JPG"></p>
-<p>The translation doesn’t make it justice, but it reads as:</p>
-<blockquote><p>Didier</p><br><p>It was in the middle of laughter, in the middle of playfulness.</p><br><p>It was in the middle of tantrums and misunderstandings.</p><br><p>It was in the middle of sheets of paper fallen on the floor and of pieces of paper so efficiently utilized.</p><br><p>It was like this that our friendship grew!</p><br><p>Beatriz ❤️</p></blockquote>
-<br>
-<p>Saturday morning I got a call. A common friend let me know that she passed away unexpectedly.</p>
-<p>I was still in bed. I cried for hours. I didn't want to wake up. Maybe some part of me never did.</p>
-<p>She had her entire life ahead of her.</p>
-<p>She was kind, curious and loving. She would have accomplished so much.</p>
-<p>Yet she was gone.</p>
-<p>No one deserves to lose their best friend at 17. Not like that. It wasn't fair.</p>
-<p>But that's cancer for you.</p>
-<p>Cancer doesn't care.</p>
-<p>It never did.</p>
-<p>From that moment onwards I changed my attitude towards life.</p>
-<p>I stopped doing things for the sake of doing them and always put 120%.</p>
-<p>I went from spending most of my time as a gamer and doing just enough to have good grades in high school to being the best student of my year in my BSc in Electrical and Computer Engineering, moving to London to have a distinction at Imperial College London (top 2 uni in the world) and now moving to NYC to increase chances of success for my startup.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_5.jpeg"></p>
-<p>I have a tattoo that says “All her would-haves are our opportunities" (which is from Anne Frank's house in Amsterdam) to remind me that every day I have opportunities that she didn't get to experience.</p>
-<p>But I hope that in some way, shape or form, she is.</p>
-<p>And that I make her proud.</p>
-<p>Stories like this are not as uncommon as you may think they are.</p>
-<p>It took me over 10 years to talk about how cancer took my best friend’s life away.</p>
-<p>Imagine the number of people who never write about how it impacted their lives.</p>
-<p>If anything, my objective with this post is to highlight that cancer is real.</p>
-<p>In a time when we talk about going to Mars and having AGI, cancer is still taking lives every day...</p>
-<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
-<p><a href="https://haymakersforhope.org/">Haymakers for Hope</a> is an organization dedicated to raising funds for cancer research and care. They organize unique events that combine athleticism with philanthropy, making a significant impact in the fight against cancer.</p>
-<p>On March 16, 2025, I will be running the NYC Half Marathon as part of the Haymakers for Hope team.</p>
-<p>Join me in this fight against cancer, for Bia and for all those whose lives have been touched by this disease.</p>
-<p>I've created a <a href="https://haymakersforhope.org/events/running/nyc-half-marathon-2025/runners/Didier-Lopes">fundraising page</a> where you can support this cause.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_6.png"></p>
-<p class="text-center"><a href="https://haymakersforhope.org/events/running/nyc-half-marathon-2025/runners/Didier-Lopes" class="inline-block px-5 py-2.5 bg-[#0088CC] text-white rounded font-bold hover:bg-[#006699] transition-colors duration-300">Donate here</a></p>
-<p>Every donation matters. ❤️</p>]]></content>
-        <category label="cancer" term="cancer"/>
-        <category label="development" term="development"/>
-        <category label="disease" term="disease"/>
-        <category label="charity" term="charity"/>
-        <category label="personal" term="personal"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[My first-hand experience on AI impacting education through Perplexity, Cursor and ChatGPT]]></title>
-        <id>https://didierlopes.com/blog/my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt</id>
-        <link href="https://didierlopes.com/blog/my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt"/>
-        <updated>2024-06-30T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[AI will change education forever. Here's how I leveraged Perplexity, Cursor and ChatGPT to teach Supervised Learning and assess coursework.]]></summary>
-        <content type="html"><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt.png"></p>
-<p>AI will change education forever. Here's how I leveraged Perplexity, Cursor and ChatGPT to teach Supervised Learning and assess coursework.</p>
-<p>The open source code is available <a href="https://github.com/DidierRLopes/supervised-learning">here</a>.</p>
-<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
-<p>Recently I was invited to teach a course in Big Data and Data Analytics at Europeia University. I gave 4 hours of classes, divided into:</p>
-<ul>
-<li>Supervised Learning - Theory</li>
-<li>Supervised Learning - Practice</li>
-</ul>
-<p>And then evaluated the students coursework.</p>
-<h2 id="creating-a-new-syllabus">Creating a new syllabus</h2>
-<p>My past experience as a teacher happened during my BSc., back in 2016, where I was a TA for the course of Signal Theory and had to help students in their coursework through Matlab/Octave.</p>
-<p>Things were different at the time because I had a syllabus to follow and most of my time was spent helping students if they were blocked coding-wise or had some questions regarding the theory.</p>
-<p>And of course - there was no AI. At least not in the sense that we speak about today - i.e. there were no LLMs.</p>
-<p>This time was different - I had the flexibility to choose what I was going to cover about Supervised Learning.</p>
-<p>I’ve never worked as a Data Scientist per se, but have been passionate about data for a while and spent a lot of time reading books and learning about the topic. In my previous company, I started playing with IMU data in my spare time which lead me to publish a paper at ICMLA where I used <a href="https://ieeexplore.ieee.org/document/9680024">Support Vector Machine (SVM) for Step Detection using Nurvv trackers</a> and even open sourced the code <a href="https://github.com/DidierRLopes/step-detection-ML/tree/main">here</a>.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_svm_paper.png"></p>
-<p>I've wrote about this and how I managed to write the entire code in my spare time in a single week, and missing the yearly team event in order to pull this off. You can read more about it <a href="https://didierlopes.com/blog/how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla">here</a>.</p>
-<p>But so the question is:</p>
-<p><em>"Where do I start?"</em></p>
-<p>My first intuition was to gather some of my favorite books and courses on the topic and understand how they presented the overall subject. I wouldn’t have the same time, so I would need to touch on most topics briefly - enough for students to know about it and explore further if curious.</p>
-<p>However, given my time constraints with running OpenBB, I would have had a hard time since I would need to:</p>
-<ol>
-<li>Consume the content of these books and courses</li>
-<li>Mix and match them</li>
-<li>Cut to fit the time constraints</li>
-<li>Produce a final syllabus that I’m confident about</li>
-</ol>
-<br>
-<p>This was not a trivial task, and definitely not a weekend job.</p>
-<p>Except that <strong>IT WAS</strong>.</p>
-<h3 id="perplexity-enters-the-chat">Perplexity enters the chat</h3>
-<p>Since Perplexity’s main value proposition is being better at Google than Google - I popped the following prompt into it.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_perplexity.png"></p>
-<p>BAM.💥</p>
-<p>This was exactly what I was looking for.</p>
-<p>Did it give me the content end-to-end that I was expecting?</p>
-<p>No.</p>
-<p>Was it a perfect starting point?</p>
-<p>Yes.</p>
-<p>I didn’t literally copy-paste it. I took the parts I liked, re-iterated on the ones I didn't until I eventually did. Plus, use my experience to prioritize parts that I felt should be more relevant vs others.</p>
-<p>Were there some hallucinations?</p>
-<p>Yes, it’s not a silver bullet.</p>
-<p>But it saved me DAYS of work.</p>
-<p>I was dreading having to write the syllabus and like this, it was actually fun. It was fun because I felt like Perplexity was acting as my assistant and I was engaging in a conversation of what should be contained within the course and what shouldn’t.</p>
-<p>After having all the content ready, I asked my wife to help me with some images to make it easier for students to understand concepts.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_assets.png"></p>
-<p>I was happy with the results - but wanted a second opinion. So I asked a friend of mine who’s been a DS for over 6 years what his thoughts were on the materials I worked on - and he was impressed about the speed.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_ai_friend_message.jpeg"></p>
-<p>Being a fan of open source, I have open sourced all the theory and practice of the course and you can access it here: <a href="https://github.com/DidierRLopes/supervised-learning">https://github.com/DidierRLopes/supervised-learning</a></p>
-<p>For the practice exercises I made it so that users can run it with colab directly on the browser to focus on the learning and not on the installation of libraries - highly recommend doing this.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_colab.jpeg"></p>
-<h2 id="assessing-students-grades">Assessing students grades</h2>
-<p>After presenting the classes to the students, they had to work on a final project that involved supervised learning - and I had to grade their work on it. The grade was from 0 to 5 and I was given freedom in terms of what criteria to use.</p>
-<p>So I did what someone else in my shoes would do.</p>
-<h2 id="chatgpt-to-define-grading-criteria">ChatGPT to define grading criteria</h2>
-<p>I typed <a href="http://chat.openai.com/">chat.openai.com</a> and had a conversation with ChatGPT about the best way to grade the coursework. I wanted it to be as fair as possible, but also evaluate students based on criteria outside of coding, such as problem formulation and documentation/clarity.</p>
-<p>Note: Story for another day but with the raise of LLMs, I have a very strong opinion that documentation and clarity will be as important as the code itself.</p>
-<p>This is the outcome of that conversation:</p>
-<blockquote>
-<p><strong>PART I - Problem Formulation</strong></p>
-<ul>
-<li>
-<p>1.a. <strong>Clarity and Definition:</strong> Is the problem clearly defined and well-formulated? Are the project's objectives explicitly mentioned?</p>
-</li>
-<li>
-<p>1.b. <strong>Relevance and Context:</strong> Is the relevance of the problem within the application domain explained? Does the problem justify the use of supervised learning?</p>
-</li>
-</ul>
-</blockquote>
-<br>
-<blockquote>
-<p><strong>PART II - Documentation and Quality</strong></p>
-<ul>
-<li>
-<p><strong>2.a. Code Quality and Readability:</strong> Clarity and Structure: Is the code well-organized with clear and consistent formatting? Are comments used effectively to explain complex logic? Best Practices: Does the code follow standard coding practices (e.g., naming conventions, modularization)? Are functions and classes used appropriately?</p>
-</li>
-<li>
-<p><strong>2.b. Documentation and Explanation in Comments or Notebook Markdown</strong>: Clarity: Are the results and methodology clearly documented? Is there a detailed explanation of the steps taken and the reasons behind them? Visualization: Are visual aids (e.g., graphs, plots) used to illustrate key points and results? Are these visualizations clear and informative?</p>
-</li>
-</ul>
-</blockquote>
-<br>
-<blockquote>
-<p><strong>PART III - Code</strong></p>
-<ul>
-<li>
-<p><strong>3.a. Data Preprocessing and Cleaning</strong>: Completeness: Are all necessary steps for data preprocessing included (e.g., handling missing values, encoding categorical variables, scaling features)? Justification: Are the preprocessing steps justified and explained? Is there a clear reason for the choices made?</p>
-</li>
-<li>
-<p><strong>3.b. Data Exploration</strong>: Initial Analysis: Is there an exploratory data analysis? Are descriptive statistics used to better understand the data? Visualization: Are visualizations (e.g., graphs, plots) used to illustrate data distribution, correlations, and important patterns? Are these visualizations clear and informative?</p>
-</li>
-<li>
-<p><strong>3.c. Model Implementation and Training</strong>: Correctness: Is the model implemented correctly according to the chosen algorithm? Are appropriate libraries and functions used? Parameter Tuning: Is there evidence of parameter tuning or optimization? Are the chosen parameters explained and justified?</p>
-</li>
-<li>
-<p><strong>3.d. Evaluation and Validation</strong>: Metrics: Are appropriate evaluation metrics chosen and calculated? Are these metrics relevant to the problem at hand? Validation Techniques: Are appropriate validation techniques used (e.g., cross-validation, train-test split)? Is there an analysis of the model's performance on both training and testing data?</p>
-</li>
-</ul>
-</blockquote>
-<br>
-<p>This was it.</p>
-<p>Exactly what I was looking for.</p>
-<p>Now I could grade a student on each of these criteria, then select a final grade weight for each criteria (e.g. 5-15%), create a spreadsheet with such a table and call it a day.</p>
-<p>However, the most time-consuming task was coming - the grading itself.</p>
-<p>There were 10 groups in total. So 10 notebooks that I had to look into, exploring completely different datasets with a different ML model being used, different ways to do exploratory data analysis, different ways to assess the model, different objectives, …</p>
-<h3 id="cursor-helping-with-grading">Cursor helping with grading</h3>
-<p>I opened <a href="https://www.cursor.com/">cursor</a> (which is basically VSCode + ChatGPT) and probably the software I’ve recommended the most to developers in 2024.</p>
-<p>And opened my first notebook.</p>
-<p>Then I thought, what if I had GPT-4o on my side - helping me to assess this coursework.</p>
-<p>It didn’t need to be perfect because I was doing it myself, but it could help me understand if there was any critical thing that I missed OR if it completely had a different grade than the one I was going to provide - which would enable me to spend more time on that criteria and iterate.</p>
-<p>It gave me confidence that I was being fair to the students.</p>
-<p>And made me realize how hard it is for professors when they have 100s of students and have a subjective answer to grade. It’s impossible to get it right. They try their best, but as soon as the answer is not binary (0 or 1), they are doomed to fail.</p>
-<p>So how did I do it?</p>
-<p>Given that I just wanted GPT-4o to quickly review each of the criterias based on the code, I created a prompt that I could use for all of notebooks that the students sent.</p>
-<p>This is what my setup looked like</p>
-<p align="center"><img width="1000" src="https://didierlopes.com/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_cursor.png"></p>
-<p>Having the code on the left side and the copilot on the right side that I could use to chat really enabled me to grade more confidently.</p>
-<p>Here’s an example of a section of a response I got to one of the student’s notebooks</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_cursor_output.png"></p>
-<p>One thing I did to have the copilot produce better outputs was to push it to do chain-of-thought (CoT). Meaning that I prompted the model to explain the reasoning behind a decision before providing a grade. This has been proved to yield to less hallucinations and more accurate responses - which is what I was looking for.</p>
-<p><strong>What if I wanted to do this at scale?</strong></p>
-<p>I would have put more effort into the prompt and focused on evaluating 1 criteria at a time. I would have done few-shot prompting where I put examples of what grades 1,2,3,4,5 look like for such criteria so the model has those references and can check for similarity of issues committed or successful tasks performed.</p>
-<p>Note: the model was able to interpret comments written in Portuguese which is another benefit.</p>
-<h2 id="democratizing-access-to-tutors">Democratizing access to tutors</h2>
-<p>While I was working on my prompts to get some feedback from AI in terms of student’s coursework I realized that I only need $20/mo to access them.</p>
-<p>But then I realized - so do the students.</p>
-<p>This means that the students have no reason to NOT run their entire coursework by a LLM that can act as a critic of their work.</p>
-<p>They can keep iterating until the model doesn’t find anything - hence making students feel more confident about the work they are putting forward.</p>
-<p>My initial thought was: “this feels like cheating” (right after the - “I wish I had this a few years ago”).</p>
-<p>But it actually isn’t.</p>
-<p>Tutors have existed for a long time.</p>
-<p>Students pay tutors to spend time with them to learn outside of classes - whether it’s explaining the theory or helping with coursework.</p>
-<p>However, tutors are a vitamin and not a painkiller (they are a nice-to-have and not a must-have). And because they aren’t a requirement, it’s not a typical choice among lower-income families.</p>
-<p>On the other hand, kids from wealthy families often have multiple tutors. Not for students who are almost failing their class, but who want to bump their grades from A- to an A+.</p>
-<p>But this is about to change.</p>
-<p>For the most part, GPT-3.5 is accessible for free.</p>
-<p>This means that everyone can have access to a tutor that they can work with to have better grades but also produce better coursework.</p>
-<p>This means that the concept of a tutor will be democratized and the playing field between students who come from different wealth backgrounds will be leveled and fair.</p>
-<h2 id="a-final-thought-on-open-source">A final thought on open source</h2>
-<p>Another class that I had to give to students was "Data Analytics in Financial Markets".</p>
-<p>The goal here was to have a more real-life application of data analytics, particularly in financial markets - and even feature OpenBB which has partnered with this university.</p>
-<p>But when I started working on the content from scratch, I wondered.</p>
-<p>Can't I find a repository on GitHub that suits my needs?</p>
-<p>And I did.</p>
-<p>The GitHub repository I found was the GitHub repository that contains the code for the case studies in the O'Reilly book "Machine Learning and Data Science Blueprints for Finance" written by my friend <a href="https://www.linkedin.com/in/hariomtatsat/">Hariom Tatsat</a>: <a href="https://github.com/tatsath/fin-ml">https://github.com/tatsath/fin-ml</a>.</p>
-<p>So why would I spend the time re-inventing the wheel when I could just walk students through a few of these case studies?</p>
-<p>This is what I did.</p>
-<p>Which then made me think that all of this data has been already fed into foundational models, and so even if I were to apply the same approach I did earlier with Perplexity or ChatGPT - it is likely that with a good prompt some of the main examples would have been derived from this repository.</p>
-<p>But in this case, this repository already had the perfect case-study format I was looking for, and so I can more easily credit the author.</p>
-<p>which made me wonder:</p>
-<p><em>How will open source authors be able to get credit for their work when all of it is being translated into weights in a big neural network architecture?</em></p>]]></content>
-        <category label="education" term="education"/>
-        <category label="ai" term="ai"/>
-        <category label="perplexity" term="perplexity"/>
-        <category label="chatgpt" term="chatgpt"/>
-        <category label="cursor" term="cursor"/>
-        <category label="students" term="students"/>
-        <category label="big data" term="big data"/>
-        <category label="analytics" term="analytics"/>
-        <category label="supervised learning" term="supervised learning"/>
-        <category label="machine learning" term="machine learning"/>
     </entry>
 </feed>

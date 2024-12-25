@@ -430,6 +430,12 @@ const data = [
 		image:
 			"/books/the-nvidia-way-jensen-huang-and-the-making-of-a-tech-giant.jpg",
 	},
+	{
+		title: "American Kingpin: The Epic Hunt for the Criminal Mastermind Behind the Silk Road",
+		author: "Nick Bilton",
+		image:
+			"/books/american-kingpin-the-epic-hunt-for-the-criminal-mastermind-behind-the-silk-road.jpg",
+	}
 ];
 
 export default function BooksToRead() {

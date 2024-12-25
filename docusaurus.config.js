@@ -63,7 +63,7 @@ const config = {
               const { blogPosts, defaultCreateFeedItems, ...rest } = params;
               return defaultCreateFeedItems({
                 // keep only the 10 most recent blog posts in the feed
-                blogPosts: blogPosts.filter((item, index) => index < 10),
+                blogPosts: blogPosts, //.filter((item, index) => index < 10),
                 ...rest,
               });
             },

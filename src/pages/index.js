@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import BlogHistory from '../components/BlogHistory';
 
 export default function Home() {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -17,7 +18,8 @@ export default function Home() {
 
   const { siteConfig } = useDocusaurusContext();
   const { url: siteUrl } = siteConfig;
-  const [posts, setPosts] = useState([]);
+  const [postsHighlight, setPostsHighlight] = useState([]);
+  const [allPosts, setAllPosts] = useState([]);
 
   useEffect(() => {
     fetch(`${siteUrl}/blog/feed.json`)
@@ -28,15 +30,18 @@ export default function Home() {
         return response.json();
       })
       .then((data) => {
-        const posts = data.items.slice(0, 3);
-        setPosts(posts);
+        setAllPosts(data.items);
+        setPostsHighlight(data.items.slice(0, 3));
       })
       .catch((error) => {
         console.log(
-          `There was a problem with the fetch operation: ${error.message}`
+          `There was a problem with the fetch operation: ${error.message}`,
         );
       });
   }, [siteUrl]);
+
+  console.log(postsHighlight);
+  console.log(allPosts);
 
   return (
     <Layout
@@ -133,18 +138,18 @@ export default function Home() {
           >
             <ul className="mt-4 text-left pr-2">
               <p>
-                <strong>2024</strong> 🗽 Moved with family again to be closer to customers in
-                NYC.
+                <strong>2024</strong> 🗽 Moved with family again to be closer to
+                customers in NYC.
               </p>
               <br />
               <p>
-                <strong>2023</strong> 🇺🇸 Moved with family to the Bay area, to be closer to tech
-                founders and investors.
+                <strong>2023</strong> 🇺🇸 Moved with family to the Bay area, to
+                be closer to tech founders and investors.
               </p>
               <br />
               <p>
-                <strong>2022</strong> 🦋 Announced OpenBB to the world and rebranded the terminal
-                - [
+                <strong>2022</strong> 🦋 Announced OpenBB to the world and
+                rebranded the terminal - [
                 <a
                   href="https://openbb.co/blog/gme-didnt-take-me-to-the-moon-but-gamestonk-terminal-did"
                   target="_blank"
@@ -156,12 +161,13 @@ export default function Home() {
               </p>
               <br />
               <p>
-                <strong>2021</strong> 📈 We raised $8.9M in a seed round to democratize
-                investment research.
+                <strong>2021</strong> 📈 We raised $8.9M in a seed round to
+                democratize investment research.
               </p>
               <br />
               <p>
-                <strong>2021</strong> 🦍 Gamestonk Terminal was open source and went viral on{' '}
+                <strong>2021</strong> 🦍 Gamestonk Terminal was open source and
+                went viral on{' '}
                 <a
                   href="https://www.reddit.com/r/Superstonk/comments/mx2cjh/move_over_bloomberg_terminal_here_comes_gamestonk/"
                   target="_blank"
@@ -181,18 +187,18 @@ export default function Home() {
               </p>
               <br />
               <p>
-                <strong>2020</strong> 🦠 During Xmas my flight got cancelled. So started building
-                a financial terminal.
+                <strong>2020</strong> 🦠 During Xmas my flight got cancelled. So
+                started building a financial terminal.
               </p>
               <br />
               <p>
-                <strong>2020</strong> 😤 Performing own investment research and frustrated by how
-                time-consuming it was.
+                <strong>2020</strong> 😤 Performing own investment research and
+                frustrated by how time-consuming it was.
               </p>
               <br />
               <p>
-                <strong>2020</strong> 🏃 Joined startup NURVV and worked as Sensor Fusion
-                Engineer [
+                <strong>2020</strong> 🏃 Joined startup NURVV and worked as
+                Sensor Fusion Engineer [
                 <a
                   href="https://ieeexplore.ieee.org/document/9680024"
                   target="_blank"
@@ -204,7 +210,8 @@ export default function Home() {
               </p>
               <br />
               <p>
-                <strong>2019</strong> 🎓 Wrote code behind my math teacher's thesis on{' '}
+                <strong>2019</strong> 🎓 Wrote code behind my math teacher's
+                thesis on{' '}
                 <a
                   href="https://github.com/DidierRLopes/UnivariateTimeSeriesForecast"
                   target="_blank"
@@ -216,13 +223,13 @@ export default function Home() {
               </p>
               <br />
               <p>
-                <strong>2018</strong> 🚗 Excited about AI and self-driving cars, worked as
-                Software Engineer at u-blox.
+                <strong>2018</strong> 🚗 Excited about AI and self-driving cars,
+                worked as Software Engineer at u-blox.
               </p>
               <br />
               <p>
-                <strong>2017</strong> 🇬🇧 Moved to London for a MSc. in Control Systems at
-                Imperial College London [
+                <strong>2017</strong> 🇬🇧 Moved to London for a MSc. in Control
+                Systems at Imperial College London [
                 <a
                   href="https://ieeexplore.ieee.org/document/8796226"
                   target="_blank"
@@ -234,19 +241,22 @@ export default function Home() {
               </p>
               <br />
               <p>
-                <strong>2016</strong> 🇳🇱 Did a semester in TU Delft and learned about
-                self-driving cars.
+                <strong>2016</strong> 🇳🇱 Did a semester in TU Delft and learned
+                about self-driving cars.
               </p>
               <br />
               <p>
-                <strong>2013</strong> 📚 BSc. in Electrical and Computer Engineering at FCT-UNL.
+                <strong>2013</strong> 📚 BSc. in Electrical and Computer
+                Engineering at FCT-UNL.
               </p>
               <br />
-              <p><strong>2003</strong> 🇵🇹 Moved to Portugal when I was 8yo.</p>
+              <p>
+                <strong>2003</strong> 🇵🇹 Moved to Portugal when I was 8yo.
+              </p>
               <br />
               <p>
-                <strong>1995</strong> 🇨🇭 I was born in Switzerland, but both my parents are
-                Portuguese emmigrants.
+                <strong>1995</strong> 🇨🇭 I was born in Switzerland, but both my
+                parents are Portuguese emmigrants.
               </p>
             </ul>
           </div>
@@ -311,7 +321,7 @@ export default function Home() {
           <h1 className="_h1 !mb-2">Latest Blog Posts</h1>
           {isDesktop ? (
             <div className="flex items-start content-center mx-auto align-center justify-center mt-4 gap-8 mb-4 flex-row">
-              {posts.map((post) => (
+              {postsHighlight.map((post) => (
                 <div
                   key={post.id}
                   className="mx-2 max-w-[250px] flex flex-col items-center"
@@ -341,7 +351,7 @@ export default function Home() {
             </div>
           ) : (
             <div className="flex items-center content-center mx-auto align-center justify-center mt-4 gap-4 mb-4 flex-col">
-              {posts.map((post) => (
+              {postsHighlight.map((post) => (
                 <div key={post.id} className="my-2">
                   <a href={`${post.id}`}>
                     <img
@@ -357,6 +367,11 @@ export default function Home() {
               ))}
             </div>
           )}
+        </div>
+
+        <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center mb-16">
+          <div className="_subtitle text-lg">Consistency</div>
+          {allPosts && allPosts.length > 0 && <BlogHistory posts={allPosts} />}
         </div>
 
         <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center rounded-[14px]">
@@ -442,6 +457,9 @@ export default function Home() {
                   height={22}
                   fill="currentColor"
                   className="mx-auto"
+                  title="Cal.com logo"
+                  aria-label="Cal.com logo"
+                  role="img"
                 >
                   <path d="M10.058 20.817C4.321 20.817 0 16.277 0 10.67 0 5.046 4.1.468 10.058.468c3.163 0 5.351.971 7.061 3.195l-2.758 2.299c-1.159-1.234-2.556-1.85-4.303-1.85-3.88 0-6.013 2.97-6.013 6.558 0 3.588 2.336 6.503 6.013 6.503 1.729 0 3.2-.616 4.358-1.85l2.721 2.392c-1.636 2.13-3.88 3.102-7.079 3.102ZM29.016 5.886h3.714v14.575h-3.714v-2.13c-.772 1.514-2.06 2.523-4.523 2.523-3.935 0-7.08-3.42-7.08-7.624 0-4.205 3.145-7.624 7.08-7.624 2.445 0 3.75 1.009 4.523 2.522V5.886Zm.11 7.344c0-2.28-1.563-4.167-4.027-4.167-2.372 0-3.916 1.906-3.916 4.167 0 2.205 1.544 4.167 3.916 4.167 2.446 0 4.027-1.906 4.027-4.167ZM35.36 0h3.714v20.443H35.36V0ZM40.73 18.518c0-1.196.955-2.205 2.26-2.205a2.18 2.18 0 0 1 2.226 2.205c0 1.233-.938 2.242-2.225 2.242a2.231 2.231 0 0 1-2.262-2.242ZM59.43 18.107c-1.38 1.681-3.476 2.747-5.958 2.747-4.432 0-7.686-3.42-7.686-7.624 0-4.205 3.254-7.624 7.686-7.624 2.39 0 4.468 1.009 5.847 2.597l-2.868 2.41c-.717-.896-1.655-1.569-2.98-1.569-2.371 0-3.916 1.906-3.916 4.167s1.545 4.167 3.917 4.167c1.434 0 2.427-.747 3.163-1.757l2.795 2.486ZM59.742 13.23c0-4.205 3.255-7.624 7.686-7.624 4.432 0 7.686 3.42 7.686 7.624s-3.254 7.624-7.686 7.624c-4.431-.02-7.686-3.42-7.686-7.624Zm11.603 0c0-2.28-1.545-4.167-3.917-4.167-2.372-.019-3.916 1.887-3.916 4.167 0 2.26 1.544 4.167 3.916 4.167s3.917-1.906 3.917-4.167ZM100.232 11.548v8.895h-3.714v-7.98c0-2.522-1.177-3.606-2.942-3.606-1.655 0-2.832.823-2.832 3.607v7.979H87.03v-7.98c0-2.522-1.195-3.606-2.942-3.606-1.655 0-3.108.823-3.108 3.607v7.979h-3.714V5.868h3.714v2.018c.772-1.57 2.17-2.355 4.321-2.355 2.041 0 3.751 1.01 4.69 2.71.937-1.738 2.316-2.71 4.817-2.71 3.052.019 5.424 2.336 5.424 6.017Z" />
                 </svg>

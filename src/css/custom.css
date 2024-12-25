@@ -316,3 +316,7 @@ ol {
   font-family: sans-serif;
   text-align: center;
 }
+
+.recharts-bar-rectangle:hover {
+  filter: none !important;
+}

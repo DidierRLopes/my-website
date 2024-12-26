@@ -58,6 +58,7 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 
 	const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
 	const [isHoveringBar, setIsHoveringBar] = React.useState(false);
+	const [tooltipOpacity, setTooltipOpacity] = React.useState(0);
 
 	const getOptimalInterval = (months: Date[]) => {
 		const totalMonths = months.length;
@@ -66,6 +67,7 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 		if (totalMonths <= 8) return 1; // Show all labels if 8 or fewer months
 		if (totalMonths <= 16) return 2; // Every 2 months if <= 16 months
 		if (totalMonths <= 24) return 3; // Every quarter if <= 2 years
+		if (totalMonths <= 36) return 4; // Every 4 months if <= 3 years
 		if (totalMonths <= 48) return 6; // Every 6 months if <= 4 years
 		return 12; // Every year for longer periods
 	};
@@ -99,9 +101,9 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 				year: "numeric",
 				month: "short",
 			}),
-			showLabel,
+			showLabel, // This property is already being set based on getOptimalInterval
 			posts: postsInMonth,
-			...postSizes, // Spread individual post sizes
+			...postSizes,
 		};
 	});
 
@@ -128,12 +130,24 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 					<XAxis
 						dataKey="monthDisplay"
 						type="category"
-						interval={0}
-						angle={-45}
-						textAnchor="end"
+						interval={getOptimalInterval(months) - 1}
 						height={60}
+						tick={{ fontSize: 14 }}
 					/>
-					<YAxis />
+					<YAxis
+						label={{
+							value: "Volume",
+							angle: -90,
+							position: "insideLeft",
+							offset: -1,
+							style: {
+								textAnchor: "middle",
+								fontSize: 14,
+							},
+						}}
+						tick={false}
+						width={30}
+					/>
 					<Tooltip
 						cursor={{ fill: "rgba(0, 0, 0, 0.1)" }}
 						content={({ active, payload, label }) => {
@@ -161,6 +175,9 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 											borderRadius: "8px",
 											boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
 											width: "600px",
+											opacity: tooltipOpacity,
+											transition: "all 1s ease-in-out",
+											transform: `translateY(${tooltipOpacity ? "0" : "10px"})`,
 										}}
 									>
 										<div style={{ display: "flex", alignItems: "center" }}>
@@ -256,9 +273,11 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 							onMouseOver={(_, index) => {
 								setActiveIndex(i);
 								setIsHoveringBar(true);
+								setTooltipOpacity(1); // Fade in
 							}}
 							onMouseLeave={() => {
 								setIsHoveringBar(false);
+								setTooltipOpacity(0); // Fade out
 							}}
 							onClick={(entry, index) => {
 								if (entry && monthlyData[index].posts[i]) {

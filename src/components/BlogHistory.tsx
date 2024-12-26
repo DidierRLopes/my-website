@@ -2,6 +2,7 @@ import React from "react";
 import {
 	Bar,
 	BarChart,
+	Legend,
 	ResponsiveContainer,
 	Tooltip,
 	XAxis,
@@ -35,84 +36,110 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 			new Date(a.date_modified).getTime() - new Date(b.date_modified).getTime(),
 	);
 
-	// Prepare data for the chart
-	const data = sortedPosts.map((post) => ({
-		date: new Date(post.date_modified),
-		timestamp: new Date(post.date_modified).getTime(),
-		title: post.title,
-		summary: post.summary,
-		contentSize: post.content_html.length / 1024,
-		url: post.url,
-		content_html: post.content_html,
-	}));
+	// Get the start and end dates for the chart
+	const startDate = new Date(sortedPosts[0].date_modified);
+	const endDate = new Date(sortedPosts[sortedPosts.length - 1].date_modified);
+
+	// Generate an array of months
+	const generateMonths = (start: Date, end: Date) => {
+		const months: Date[] = [];
+		const currentDate = new Date(start);
+		currentDate.setDate(1); // Start from the beginning of the month
+
+		while (currentDate <= end) {
+			months.push(new Date(currentDate));
+			currentDate.setMonth(currentDate.getMonth() + 1);
+		}
+
+		return months;
+	};
+
+	const months = generateMonths(startDate, endDate);
 
 	const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
 
-	const handleBarClick = (entry: any, index: number) => {
-		if (entry.url) {
-			window.open(entry.url, "_blank");
-		}
+	const getOptimalInterval = (months: Date[]) => {
+		const totalMonths = months.length;
+
+		// Aim to show roughly 6-8 labels on the axis
+		if (totalMonths <= 8) return 1; // Show all labels if 8 or fewer months
+		if (totalMonths <= 16) return 2; // Every 2 months if <= 16 months
+		if (totalMonths <= 24) return 3; // Every quarter if <= 2 years
+		if (totalMonths <= 48) return 6; // Every 6 months if <= 4 years
+		return 12; // Every year for longer periods
 	};
 
-	const getColor = (date: Date) => {
-		// Calculate percentage through year (0 to 1)
-		const startOfYear = new Date(date.getFullYear(), 0, 1);
-		const endOfYear = new Date(date.getFullYear() + 1, 0, 1);
-		const percentage =
-			(date.getTime() - startOfYear.getTime()) /
-			(endOfYear.getTime() - startOfYear.getTime());
+	// Modify the monthlyData generation
+	const monthlyData = months.map((monthStart, index) => {
+		const monthEnd = new Date(monthStart);
+		monthEnd.setMonth(monthEnd.getMonth() + 1);
+		monthEnd.setDate(0);
 
-		// Convert hex to RGB
-		const startColor = {
-			r: 0x99,
-			g: 0xdd,
-			b: 0xff,
+		const postsInMonth = sortedPosts.filter((post) => {
+			const postDate = new Date(post.date_modified);
+			return postDate >= monthStart && postDate <= monthEnd;
+		});
+
+		const interval = getOptimalInterval(months);
+		const showLabel = index % interval === 0;
+
+		// Create an object with individual post sizes
+		const postSizes = postsInMonth.reduce(
+			(acc: { [key: string]: number }, post, idx) => {
+				acc[`post${idx + 1}`] = post.content_html.length / 1024;
+				return acc;
+			},
+			{},
+		);
+
+		return {
+			month: monthStart.toISOString().substring(0, 7),
+			monthDisplay: monthStart.toLocaleDateString(undefined, {
+				year: "numeric",
+				month: "short",
+			}),
+			showLabel,
+			posts: postsInMonth,
+			...postSizes, // Spread individual post sizes
 		};
+	});
 
-		const endColor = {
-			r: 0x00,
-			g: 0x66,
-			b: 0x99,
-		};
-
-		// Interpolate between colors
-		const r = Math.round(
-			startColor.r + (endColor.r - startColor.r) * percentage,
-		);
-		const g = Math.round(
-			startColor.g + (endColor.g - startColor.g) * percentage,
-		);
-		const b = Math.round(
-			startColor.b + (endColor.b - startColor.b) * percentage,
-		);
-
-		return `#${r.toString(16).padStart(2, "0")}${g.toString(16).padStart(2, "0")}${b.toString(16).padStart(2, "0")}`;
+	// Generate colors for different posts
+	const getPostColor = (index: number) => {
+		const colors = ["#0088CC", "#00AAFF", "#33BBFF", "#66CCFF", "#99DDFF"];
+		return colors[index % colors.length];
 	};
+
+	// Get maximum number of posts in any month
+	const maxPosts = Math.max(...monthlyData.map((data) => data.posts.length));
 
 	return (
 		<div style={{ width: "100%", height: 400 }}>
 			<ResponsiveContainer>
 				<BarChart
-					data={data}
+					data={monthlyData}
 					margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
 					onMouseLeave={() => setActiveIndex(null)}
 				>
 					<XAxis
-						dataKey="timestamp"
-						tickFormatter={(timestamp) =>
-							new Date(timestamp).toLocaleDateString(undefined, {
-								month: "short",
-								year: "numeric",
-							})
-						}
-						type="number"
-						domain={["dataMin", "dataMax"]}
-						scale="time"
+						dataKey="monthDisplay"
+						type="category"
+						interval={0}
+						angle={-45}
+						textAnchor="end"
+						height={60}
 					/>
+					<YAxis />
 					<Tooltip
+						cursor={{ fill: "rgba(0, 0, 0, 0.1)" }}
 						content={({ active, payload, label }) => {
-							if (active && payload && payload.length) {
+							if (active && payload && payload.length && activeIndex !== null) {
 								const data = payload[0].payload;
+								const postIndex = activeIndex;
+								const post = data.posts[postIndex];
+
+								if (!post) return null;
+
 								return (
 									<div
 										className="custom-tooltip"
@@ -138,8 +165,12 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 											>
 												<img
 													className="rounded-xl w-full h-full"
-													src={data.content_html.match(/<img.*?src="(.*?)"/)[1]}
-													alt={data.title}
+													src={
+														post.content_html.match(
+															/<img.*?src="(.*?)"/,
+														)?.[1] || ""
+													}
+													alt={post.title}
 													style={{
 														objectFit: "cover",
 														width: "100px",
@@ -157,11 +188,14 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 														textAlign: "left",
 													}}
 												>
-													{data.date.toLocaleDateString(undefined, {
-														year: "numeric",
-														month: "long",
-														day: "numeric",
-													})}
+													{new Date(post.date_modified).toLocaleDateString(
+														undefined,
+														{
+															year: "numeric",
+															month: "long",
+															day: "numeric",
+														},
+													)}
 												</p>
 												<p
 													style={{
@@ -172,7 +206,7 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 														textAlign: "left",
 													}}
 												>
-													{data.title}
+													{post.title}
 												</p>
 												<p
 													style={{
@@ -183,7 +217,7 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 														textAlign: "left",
 													}}
 												>
-													{data.summary}
+													{post.summary}
 												</p>
 												<p
 													style={{
@@ -202,17 +236,27 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 							return null;
 						}}
 					/>
-					<Bar
-						dataKey="contentSize"
-						fill="#0088CC"
-						isAnimationActive={false}
-						onMouseEnter={(_, index) => setActiveIndex(index)}
-						onClick={(entry, index) => handleBarClick(entry, index)}
-						style={{
-							cursor: "pointer",
-							transition: "fill 0.3s ease",
-						}}
-					/>
+					{Array.from({ length: maxPosts }, (_, i) => (
+						<Bar
+							key={`post${i + 1}`}
+							dataKey={`post${i + 1}`}
+							stackId="posts"
+							fill={getPostColor(i)}
+							name={`Post ${i + 1}`}
+							onMouseOver={(_, index) => {
+								setActiveIndex(i);
+							}}
+							onClick={(entry, index) => {
+								if (entry && monthlyData[index].posts[i]) {
+									window.open(monthlyData[index].posts[i].url, "_blank");
+								}
+							}}
+							style={{
+								cursor: "pointer",
+								transition: "fill 0.3s ease",
+							}}
+						/>
+					))}
 				</BarChart>
 			</ResponsiveContainer>
 		</div>

@@ -318,7 +318,7 @@ export default function Home() {
         </div>
 
         <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center mb-16">
-          <h1 className="_h1 !mb-2">Latest Blog Posts</h1>
+          <h1 className="_h1 !mb-2">Latest posts.</h1>
           {allPosts && allPosts.length > 0 && <BlogHistory posts={allPosts} />}
           {isDesktop ? (
             <div className="flex items-start content-center mx-auto align-center justify-center mt-8 gap-8 mb-4 flex-row">

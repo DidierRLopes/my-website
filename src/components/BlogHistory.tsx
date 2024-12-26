@@ -57,6 +57,7 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 	const months = generateMonths(startDate, endDate);
 
 	const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
+	const [isHoveringBar, setIsHoveringBar] = React.useState(false);
 
 	const getOptimalInterval = (months: Date[]) => {
 		const totalMonths = months.length;
@@ -119,7 +120,10 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 				<BarChart
 					data={monthlyData}
 					margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-					onMouseLeave={() => setActiveIndex(null)}
+					onMouseLeave={() => {
+						setActiveIndex(null);
+						setIsHoveringBar(false);
+					}}
 				>
 					<XAxis
 						dataKey="monthDisplay"
@@ -133,7 +137,13 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 					<Tooltip
 						cursor={{ fill: "rgba(0, 0, 0, 0.1)" }}
 						content={({ active, payload, label }) => {
-							if (active && payload && payload.length && activeIndex !== null) {
+							if (
+								active &&
+								payload &&
+								payload.length &&
+								activeIndex !== null &&
+								isHoveringBar
+							) {
 								const data = payload[0].payload;
 								const postIndex = activeIndex;
 								const post = data.posts[postIndex];
@@ -245,6 +255,10 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 							name={`Post ${i + 1}`}
 							onMouseOver={(_, index) => {
 								setActiveIndex(i);
+								setIsHoveringBar(true);
+							}}
+							onMouseLeave={() => {
+								setIsHoveringBar(false);
 							}}
 							onClick={(entry, index) => {
 								if (entry && monthlyData[index].posts[i]) {

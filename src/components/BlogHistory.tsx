@@ -107,6 +107,14 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 		};
 	});
 
+	const maxVolume = Math.max(
+		...monthlyData.flatMap((data) =>
+			Object.entries(data)
+				.filter(([key]) => key.startsWith("post"))
+				.map(([_, value]) => (typeof value === "number" ? value : 0)),
+		),
+	);
+
 	// Generate colors for different posts
 	const getPostColor = (index: number) => {
 		const colors = ["#0088CC", "#00AAFF", "#33BBFF", "#66CCFF", "#99DDFF"];
@@ -147,9 +155,10 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 						}}
 						tick={false}
 						width={30}
+						domain={[0, Math.ceil(maxVolume)]}
 					/>
 					<Tooltip
-						cursor={{ fill: "rgba(0, 0, 0, 0.1)" }}
+						cursor={{ fill: "rgba(0, 0, 0, 0)" }}
 						content={({ active, payload, label }) => {
 							if (
 								active &&
@@ -180,7 +189,55 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 											transform: `translateY(${tooltipOpacity ? "0" : "10px"})`,
 										}}
 									>
-										<div style={{ display: "flex", alignItems: "center" }}>
+										<div
+											style={{
+												display: "flex",
+												justifyContent: "space-between",
+												alignItems: "center",
+												marginBottom: "6px",
+											}}
+										>
+											<p
+												style={{
+													fontSize: "0.8em",
+													fontWeight: "normal",
+													color: "#000000",
+													margin: 0,
+													textAlign: "left",
+												}}
+											>
+												{new Date(post.date_modified).toLocaleDateString(
+													undefined,
+													{
+														year: "numeric",
+														month: "long",
+														day: "numeric",
+													},
+												)}
+											</p>
+											<p
+												style={{
+													fontSize: "0.9em",
+													color: "#666",
+													fontStyle: "italic",
+													margin: 0,
+												}}
+											>
+												(click bar to view post)
+											</p>
+										</div>
+										<p
+											style={{
+												fontSize: "1em",
+												fontWeight: "bold",
+												color: payload[0].color,
+												marginBottom: "6px",
+												textAlign: "left",
+											}}
+										>
+											{post.title}
+										</p>
+										<div style={{ display: "flex", alignItems: "flex-start" }}>
 											<div
 												className="flex items-center justify-center mr-4"
 												style={{
@@ -205,57 +262,18 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 													}}
 												/>
 											</div>
-											<div>
-												<p
-													style={{
-														fontSize: "1.1em",
-														fontWeight: "normal",
-														color: "#000000",
-														marginBottom: "8px",
-														textAlign: "left",
-													}}
-												>
-													{new Date(post.date_modified).toLocaleDateString(
-														undefined,
-														{
-															year: "numeric",
-															month: "long",
-															day: "numeric",
-														},
-													)}
-												</p>
-												<p
-													style={{
-														fontSize: "1.2em",
-														fontWeight: "bold",
-														color: payload[0].color,
-														marginBottom: "8px",
-														textAlign: "left",
-													}}
-												>
-													{post.title}
-												</p>
-												<p
-													style={{
-														fontSize: "0.9em",
-														color: "#000",
-														fontStyle: "italic",
-														marginBottom: "12px",
-														textAlign: "left",
-													}}
-												>
-													{post.summary}
-												</p>
-												<p
-													style={{
-														fontSize: "0.9em",
-														color: "#666",
-														fontStyle: "italic",
-													}}
-												>
-													(click bar to view post)
-												</p>
-											</div>
+											<p
+												style={{
+													fontSize: "0.9em",
+													color: "#000",
+													fontStyle: "italic",
+													marginBottom: "12px",
+													textAlign: "left",
+													flex: 1,
+												}}
+											>
+												{post.summary}
+											</p>
 										</div>
 									</div>
 								);

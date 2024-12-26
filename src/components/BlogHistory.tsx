@@ -144,7 +144,7 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 					/>
 					<YAxis
 						label={{
-							value: "Volume",
+							value: "Words",
 							angle: -90,
 							position: "insideLeft",
 							offset: -1,

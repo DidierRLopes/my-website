@@ -57,7 +57,7 @@ This is exactly what Kimberly Tan (partner @ a16z) predicted in [her analysis](h
 The result?
 
 <p align="center">
-    <img width="1200" src="/blog/2024-12-27-why-chatgpt-alone-wont-revolutionize-finance.png"/>
+    <img width="1200" src="/blog/2024-12-27-ai-chatbots-wont-revolutionize-finance-but-intelligent-workspaces-will.png"/>
 </p>
 
 A workspace where:

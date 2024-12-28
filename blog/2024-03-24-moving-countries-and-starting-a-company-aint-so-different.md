@@ -1,6 +1,6 @@
 ---
 slug: moving-countries-and-starting-a-company-aint-so-different
-title: Moving Countries and Starting a Company Ain't So Different
+title: Moving countries and starting a company ain't so different
 date: 2024-03-24
 image: /blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack.png
 tags: ['learning', 'experience', 'growth', 'moving', 'london', 'bay', 'US', 'travel', 'startup', 'nyc']

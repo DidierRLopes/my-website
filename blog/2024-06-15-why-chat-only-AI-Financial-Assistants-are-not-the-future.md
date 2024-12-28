@@ -1,6 +1,6 @@
 ---
 slug: why-chat-only-AI-Financial-Assistants-are-not-the-future
-title: Why chat-only AI Financial Assistants are not the future
+title: Why chat-only AI financial assistants are not the future
 date: 2024-06-15
 image: /blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future.png
 tags: ['finance', 'ai', 'openbb', 'chat', 'finance assistant', 'chatgpt', 'perplexity', 'investment research']

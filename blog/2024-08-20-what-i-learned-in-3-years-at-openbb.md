@@ -1,6 +1,6 @@
 ---
 slug: what-i-learned-in-3-years-at-openb
-title: What I Learned in 3 Years at OpenBB
+title: What I learned in 3 Years at OpenBB
 date: 2024-08-20
 image: /blog/2024-08-20-what-i-learned-in-3-years-at-openb.jpeg
 tags: ['career development', 'technology', 'OpenBB', 'learning', 'leadership']

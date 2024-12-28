@@ -1,6 +1,6 @@
 ---
 slug: ai-chatbots-wont-revolutionize-finance-but-intelligent-workspaces-will
-title: AI Chatbots Won't Revolutionize Finance, But Intelligent Workspaces Will
+title: AI chatbots won't revolutionize finance, but intelligent workspaces will
 date: 2024-12-27
 image: /blog/2024-12-27-ai-chatbots-wont-revolutionize-finance-but-intelligent-workspaces-will
 tags: ['openbb', 'artificial intelligence', 'chatgpt', 'financial analytics', 'future of finance']

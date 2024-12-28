@@ -435,6 +435,12 @@ const data = [
 		author: "Nick Bilton",
 		image:
 			"/books/american-kingpin-the-epic-hunt-for-the-criminal-mastermind-behind-the-silk-road.jpg",
+	},
+	{
+		title: "Focus: The ASML way - Inside the power struggle over the most complex machine on earth",
+		author: "Marc Hijink",
+		image:
+			"/books/focus-the-asml-way-inside-the-power-struggle-over-the-most-complex-machine-on-earth.jpg",
 	}
 ];
 

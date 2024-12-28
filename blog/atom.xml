@@ -22,18 +22,18 @@
 <li>The best AI model is useless without access to your data.</li>
 <li>Access to data isn't enough - AI needs to handle complete workflows, not just conversations.</li>
 </ul>
-<p>The problem with financial chatbots:</p>
+<p>The limitations of most financial chatbots:</p>
 <ol>
-<li>They can't access your proprietary data</li>
+<li>They only work on a specific dataset (e.g 10-K/10-Q)</li>
 <li>They can't handle complex financial workflows</li>
 <li>They force analysts to work in an unnatural chat interface</li>
 </ol>
 <br>
-<p>Here's how OpenBB solves this:</p>
-<p>First, we ensure complete data access:</p>
+<p>Here's how OpenBB addresses these challenges:</p>
+<p>First, we ensure comprehensive data access:</p>
 <ul>
 <li>Run everything on-premise or in your VPC</li>
-<li>Connect any data source: files, APIs, third-party feeds, anything</li>
+<li>Connect any data source: internal files, APIs, third-party feeds, market data - anything</li>
 <li>Use a universal data layer that standardizes everything (whether it's CSV, Excel, Snowflake, or APIs)</li>
 </ul>
 <p>But the real innovation?</p>

@@ -24,20 +24,20 @@ When ChatGPT launched, everyone rushed to build financial chatbots. But they mis
 - The best AI model is useless without access to your data.
 - Access to data isn't enough - AI needs to handle complete workflows, not just conversations.
 
-The problem with financial chatbots:
+The limitations of most financial chatbots:
 
-1. They can't access your proprietary data
+1. They only work on a specific dataset (e.g 10-K/10-Q)
 2. They can't handle complex financial workflows
 3. They force analysts to work in an unnatural chat interface
 
 <br />
 
-Here's how OpenBB solves this:
+Here's how OpenBB addresses these challenges:
 
-First, we ensure complete data access:
+First, we ensure comprehensive data access:
 
 - Run everything on-premise or in your VPC
-- Connect any data source: files, APIs, third-party feeds, anything
+- Connect any data source: internal files, APIs, third-party feeds, market data - anything
 - Use a universal data layer that standardizes everything (whether it's CSV, Excel, Snowflake, or APIs)
 
 But the real innovation?

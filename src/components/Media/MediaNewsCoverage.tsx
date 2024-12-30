@@ -3,6 +3,13 @@ import NewsMentionsList from "../General/NewsList";
 
 const data = [
 	{
+		title: "2024 Best New Quant Research & Analytics Product",
+		link: "https://www.rebellionresearch.com/2024-best-new-quant-research-analytics-product",
+		magazine: "Rebellion Research",
+		date: "2024-12-30",
+		img: "/media/rebellion-research-2024-december.png",
+	},
+	{
 		title:
 			"Fintech OpenBB aims to be more than an 'open source Bloomberg Terminal'",
 		link: "https://techcrunch.com/2024/10/07/fintech-openbb-aims-to-be-more-than-an-open-source-bloomberg-terminal/",

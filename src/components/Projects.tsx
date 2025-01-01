@@ -42,6 +42,62 @@ const projects = [
     article: '/blog/customizable-meme-filter',
   },
   {
+    title: 'Goh Analyst - OpenBB AI agent on Slack',
+    image: '/projects/gohanalyst.png',
+    desc: 'An OpenBB agent slack bot that is ready to answer any financial question',
+    language: 'Python',
+    link: 'https://github.com/DidierRLopes/openbb-slack-agent',
+    article: '/blog/goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack'
+  },
+  {
+    title: 'Creating an AI powered financial analyst',
+    image: '/projects/openbb-agent.png',
+    desc:  'R&D playground to play with agents and OpenBB',
+    langauge: 'Python',
+    link: 'https://github.com/OpenBB-finance/openbb-agents',
+    article: '/blog/creating-an-ai-powered-financial-analyst'
+  },
+  {
+    title: 'SlackGPT',
+    image: '/projects/slackgpt.png',
+    desc: 'Read slack messages from selected channels since last night and summarize them',
+    language: 'Python',
+    link: 'https://github.com/DidierRLopes/slackGPT',
+    article: '/blog/slack-gpt-summarizing-messages',
+  },
+  {
+    title: 'iOS Scriptable Widget to track company metrics',
+    image: '/projects/ios_scriptable_widget.png',
+    desc: 'iOS Widget that displays GitHub stars and forks, but also pip installs from last day',
+    language: 'JavaScript',
+    link: 'https://github.com/DidierRLopes/opensource-scriptable-widget',
+    article: '/keep-track-of-your-startup-metrics-using-a-custom-ios-widget/',
+  },
+  {
+    title: 'Target Market Analysis',
+    image: '/projects/target_market_analysis.png',
+    desc: 'Target Market Analysis with help of OpenAI GPT-4',
+    language: 'Python',
+    link: 'https://github.com/DidierRLopes/target-market-analysis',
+    article: '/blog/target-market-analysis-with-the-help-of-llms'
+  },
+  {
+    title: 'Insights from team survey',
+    image: '/projects/insights_from_team_survey.png',
+    desc: 'Extracts insights from a team survey',
+    language: 'Python',
+    link: 'https://github.com/DidierRLopes/insights-from-team-survey',
+    article: '/blog/how-to-use-openai-to-extract-insights-from-team-survey',
+  },
+  {
+    title: 'Improve Documentation using OpenAI',
+    image: '/projects/improve_documentation.png',
+    desc: 'Improve documentation using OpenAI API',
+    language: 'Python',
+    link: 'https://github.com/DidierRLopes/improve-documentation-using-openai',
+    article: '/blog/how-i-used-openai-api-to-improve-our-product-documentation',
+  },
+  {
     title: 'Reddit Giveaway NFT Bot',
     link: 'https://github.com/DidierRLopes/GiveawayNFTbot',
     image: '/projects/giveaway_nft.webp',
@@ -82,7 +138,7 @@ const projects = [
     article: '/blog/time-series-crossvalidation-for-nn',
   },
   {
-    title: 'Personal Website',
+    title: 'Personal Website (old version)',
     link: 'https://github.com/DidierRLopes/personal-website',
     image: '/projects/personal_website.webp',
     desc: 'Another personal website that I started in javascript',

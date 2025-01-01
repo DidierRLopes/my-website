@@ -116,7 +116,7 @@ So, we create a vector store using FAISS (Facebook AI Similarity Search) and Ope
 ## OpenBB Agent Architecture
 
 <p align="center">
-    <img width="600" src="/blog/2023-12-27-creating-an-ai-powered-financial-analyst_6.png"/>
+    <img width="900" src="/blog/2023-12-27-creating-an-ai-powered-financial-analyst_6.png"/>
 </p>
 
 This is the overall architecture that our agent will follow, and below we will talk about each of these components individually.

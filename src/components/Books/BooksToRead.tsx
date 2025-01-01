@@ -447,6 +447,11 @@ const data = [
 		author: "Sahil Lavingia",
 		image:
 			"/books/the-minimalist-entrepreneur-how-great-founders-do-more-with-less.jpg",
+	},
+	{
+		title: "The Art of Doing Science and Engineering: Learning to Learn",
+		author: "Richard W. Hamming",
+		image: "/books/the-art-of-doing-science-and-engineering-learning-to-learn.jpg",
 	}
 ];
 

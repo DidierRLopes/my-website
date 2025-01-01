@@ -16,7 +16,7 @@
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-T39XQ0VWEB",{anonymize_ip:!0})</script>
 
 <link rel="stylesheet" href="src/css/custom.css"><link rel="stylesheet" href="/assets/css/styles.295e5510.css">
-<script src="/assets/js/runtime~main.79855809.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.7f0e362f.js" defer="defer"></script>
 <script src="/assets/js/main.ed7f57bd.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -79,7 +79,7 @@
 <p align="center"><img width="600" src="/blog/2023-12-27-creating-an-ai-powered-financial-analyst_5.png"></p>
 <p>So, we create a vector store using FAISS (Facebook AI Similarity Search) and OpenAIEmbeddings, although any vector store with similarity search would also work.</p>
 <h2 id="openbb-agent-architecture">OpenBB Agent Architecture</h2>
-<p align="center"><img width="600" src="/blog/2023-12-27-creating-an-ai-powered-financial-analyst_6.png"></p>
+<p align="center"><img width="900" src="/blog/2023-12-27-creating-an-ai-powered-financial-analyst_6.png"></p>
 <p>This is the overall architecture that our agent will follow, and below we will talk about each of these components individually.</p>
 <h3 id="task-decomposition">Task Decomposition</h3>
 <p>First of all, we don’t want to tackle the user query in one go. This is because LLMs have limited context. Plus, we want the agent to retrieve all the necessary tools to answer the query. But the vector’s store similarity search doesn’t work with one prompt that needs multiple different tools. Additionally, similar to human analysts, breaking a larger question up into smaller manageable subquestions leads to better analysis and results.</p>

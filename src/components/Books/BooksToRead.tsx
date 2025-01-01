@@ -441,6 +441,12 @@ const data = [
 		author: "Marc Hijink",
 		image:
 			"/books/focus-the-asml-way-inside-the-power-struggle-over-the-most-complex-machine-on-earth.jpg",
+	},
+	{
+		title: "The minimalist entrepreneur: How great founders do more with less",
+		author: "Sahil Lavingia",
+		image:
+			"/books/the-minimalist-entrepreneur-how-great-founders-do-more-with-less.jpg",
 	}
 ];
 

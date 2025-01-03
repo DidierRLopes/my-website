@@ -71,7 +71,15 @@ const projects = [
     desc: 'iOS Widget that displays GitHub stars and forks, but also pip installs from last day',
     language: 'JavaScript',
     link: 'https://github.com/DidierRLopes/opensource-scriptable-widget',
-    article: '/keep-track-of-your-startup-metrics-using-a-custom-ios-widget/',
+    article: '/blog/keep-track-of-your-startup-metrics-using-a-custom-ios-widget',
+  },
+  {
+    title: 'AI agent that can post on Bluesky',
+    image: '/projects/telegram-to-bluesky-agent.png',
+    desc: 'AI agent that processes Telegram messages through a local LLM, gathers context from various sources (OpenBB, Perplexity, Grok), and automatically posts content to Bluesky',
+    language: 'Python',
+    link: 'https://github.com/DidierRLopes/telegram-text-to-bluesky-post',
+    article: '/blog/building-an-ai-agent-from-scratch-that-can-post-on-bluesky',
   },
   {
     title: 'Target Market Analysis',

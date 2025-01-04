@@ -89,7 +89,24 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 		// Create an object with individual post sizes
 		const postSizes = postsInMonth.reduce(
 			(acc: { [key: string]: number }, post, idx) => {
-				acc[`post${idx + 1}`] = post.content_html.length / 1024;
+				// Parse the HTML content
+				const parser = new DOMParser();
+				const doc = parser.parseFromString(post.content_html, 'text/html');
+				
+				// Select all text nodes, excluding those within <code>, <pre>, and <img> tags
+				const textNodes = Array.from(doc.body.childNodes).filter(node => 
+					node.nodeType === Node.TEXT_NODE || 
+					(node.nodeType === Node.ELEMENT_NODE && 
+					!['CODE', 'PRE', 'IMG'].includes(node.nodeName))
+				);
+				
+				// Calculate the total length of text content
+				const textContent = textNodes.reduce((text, node) => 
+					text + (node.textContent || ''), ''
+				);
+				
+				// Store the size in KB
+				acc[`post${idx + 1}`] = textContent.length / 1024;
 				return acc;
 			},
 			{},

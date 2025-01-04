@@ -1,4 +1,10 @@
-# Website
+# Didier Website
+
+This my open source website: https://didierlopes.com/
+
+<img width="1284" alt="Screenshot 2025-01-04 at 1 33 51 PM" src="https://github.com/user-attachments/assets/f1f669f5-558c-4a73-a9a0-17a90b4c528a" />
+
+---
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 

@@ -169,11 +169,11 @@ export default function Home() {
           <p className="text-xl text-center mb-2 md:mb-8">
             I write so I can think and communicate better.
           </p>
+          {allPosts && allPosts.length > 0 && (
+            <BlogHistory posts={allPosts} isDesktop={isDesktop} />
+          )}
           {isDesktop ? (
             <>
-              {allPosts && allPosts.length > 0 && (
-                <BlogHistory posts={allPosts} />
-              )}
               <div className="relative mt-8 mb-4 overflow-hidden">
                 <div className="flex animate-scroll gap-8">
                   {postsHighlight.concat(postsHighlight).map((post, index) => (
@@ -202,24 +202,22 @@ export default function Home() {
               </div>
             </>
           ) : (
-            <div className="flex flex-col items-center mt-8 gap-6 mb-4">
+            <Carousel showThumbs={false} showStatus={false} showIndicators={false}>
               {postsHighlight.map((post) => (
-                <div key={post.id} className="w-full max-w-[300px]">
+                <div key={post.id} className='!max-w-[260px] mx-auto text-center'>
                   <a href={`${post.id}`} className="group block">
-                    <div className="overflow-hidden rounded-xl mb-3">
-                      <img
-                        className="w-full h-[200px] object-cover transition-transform duration-300 group-hover:scale-110"
-                        src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
-                        alt={post.title}
-                      />
-                    </div>
-                    <h3 className="text-center text-sm font-semibold group-hover:text-blue-500 transition-colors duration-300">
+                    <img
+                      className="rounded-xl h-[120px] mx-auto object-cover"
+                      src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
+                      alt={post.title}
+                    />
+                    <h3 className="text-center text-sm font-semibold mt-2 group-hover:text-blue-500 transition-colors duration-300">
                       {post.title}
                     </h3>
                   </a>
                 </div>
               ))}
-            </div>
+            </Carousel>
           )}
         </div>
         
@@ -249,8 +247,7 @@ export default function Home() {
         <div className="mx-auto mt-16 flex flex-col px-3 text-center md:max-w-[880px]">
           <h1 className="_h1 !mb-2 font-bold">Outside work?</h1>
           <span className="_subtitle">
-            In my spare time I like to do boxing, read books, play soccer or PS5
-            with wife.
+            In my spare time I do boxing, play soccer, code, read books or play PS5.
           </span>
           <div className="flex-none overflow-y-scroll rounded-sm text-center mx-auto text-lg p-2 mb-4">
             <iframe
@@ -277,7 +274,7 @@ export default function Home() {
           <h1 className="_h1 !mb-2 font-bold">Let's catch up!</h1>
           <div className="flex-none overflow-y-scroll rounded-sm text-center mx-auto text-lg p-2 pr-8 mb-2">
             <span>
-              I am available for 15 minutes calls as long as you set an agenda.
+              I am available for 15m calls as long as you set an agenda.
             </span>
             <p>(and it is not a sales call)</p>
           </div>

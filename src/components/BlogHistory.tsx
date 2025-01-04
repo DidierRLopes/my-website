@@ -22,9 +22,10 @@ interface Post {
 
 interface BlogHistoryProps {
 	posts?: Post[];
+	isDesktop: boolean;
 }
 
-export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
+export default function BlogHistory({ posts = [], isDesktop }: BlogHistoryProps) {
 	// Add early return if no posts
 	if (!posts || posts.length === 0) {
 		return <div>No blog posts available</div>;
@@ -148,8 +149,10 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 					data={monthlyData}
 					margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
 					onMouseLeave={() => {
-						setActiveIndex(null);
-						setIsHoveringBar(false);
+						if (isDesktop) {
+							setActiveIndex(null);
+							setIsHoveringBar(false);
+						}
 					}}
 				>
 					<XAxis
@@ -174,130 +177,132 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 						width={30}
 						domain={[0, Math.ceil(maxVolume)]}
 					/>
-					<Tooltip
-						cursor={{ fill: "rgba(0, 0, 0, 0)" }}
-						content={({ active, payload, label }) => {
-							if (
-								active &&
-								payload &&
-								payload.length &&
-								activeIndex !== null &&
-								isHoveringBar
-							) {
-								const data = payload[0].payload;
-								const postIndex = activeIndex;
-								const post = data.posts[postIndex];
+					{isDesktop && (
+						<Tooltip
+							cursor={{ fill: "rgba(0, 0, 0, 0)" }}
+							content={({ active, payload, label }) => {
+								if (
+									active &&
+									payload &&
+									payload.length &&
+									activeIndex !== null &&
+									isHoveringBar
+								) {
+									const data = payload[0].payload;
+									const postIndex = activeIndex;
+									const post = data.posts[postIndex];
 
-								if (!post) return null;
+									if (!post) return null;
 
-								return (
-									<div
-										className="custom-tooltip"
-										style={{
-											backgroundColor: "rgba(255, 255, 255, 0.9)",
-											padding: "12px",
-											border: "1px solid rgba(204, 204, 204, 0.8)",
-											backdropFilter: "blur(5px)",
-											borderRadius: "8px",
-											boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
-											width: "600px",
-											opacity: tooltipOpacity,
-											transition: "all 1s ease-in-out",
-											transform: `translateY(${tooltipOpacity ? "0" : "10px"})`,
-										}}
-									>
+									return (
 										<div
+											className="custom-tooltip"
 											style={{
-												display: "flex",
-												justifyContent: "space-between",
-												alignItems: "center",
-												marginBottom: "6px",
+												backgroundColor: "rgba(255, 255, 255, 0.9)",
+												padding: "12px",
+												border: "1px solid rgba(204, 204, 204, 0.8)",
+												backdropFilter: "blur(5px)",
+												borderRadius: "8px",
+												boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
+												width: "600px",
+												opacity: tooltipOpacity,
+												transition: "all 1s ease-in-out",
+												transform: `translateY(${tooltipOpacity ? "0" : "10px"})`,
 											}}
 										>
-											<p
-												style={{
-													fontSize: "0.8em",
-													fontWeight: "normal",
-													color: "#000000",
-													margin: 0,
-													textAlign: "left",
-												}}
-											>
-												{new Date(post.date_modified).toLocaleDateString(
-													undefined,
-													{
-														year: "numeric",
-														month: "long",
-														day: "numeric",
-													},
-												)}
-											</p>
-											<p
-												style={{
-													fontSize: "0.9em",
-													color: "#666",
-													fontStyle: "italic",
-													margin: 0,
-												}}
-											>
-												(click bar to view post)
-											</p>
-										</div>
-										<p
-											style={{
-												fontSize: "1em",
-												fontWeight: "bold",
-												color: payload[0].color,
-												marginBottom: "6px",
-												textAlign: "left",
-											}}
-										>
-											{post.title}
-										</p>
-										<div style={{ display: "flex", alignItems: "flex-start" }}>
 											<div
-												className="flex items-center justify-center mr-4"
 												style={{
-													width: "100px",
-													height: "100px",
-													flexShrink: 0,
-													backgroundColor: "#f0f0f0",
+													display: "flex",
+													justifyContent: "space-between",
+													alignItems: "center",
+													marginBottom: "6px",
 												}}
 											>
-												<img
-													className="rounded-xl w-full h-full"
-													src={
-														post.content_html.match(
-															/<img.*?src="(.*?)"/,
-														)?.[1] || ""
-													}
-													alt={post.title}
+												<p
 													style={{
-														objectFit: "cover",
-														width: "100px",
-														height: "100px",
+														fontSize: "0.8em",
+														fontWeight: "normal",
+														color: "#000000",
+														margin: 0,
+														textAlign: "left",
 													}}
-												/>
+												>
+													{new Date(post.date_modified).toLocaleDateString(
+														undefined,
+														{
+															year: "numeric",
+															month: "long",
+															day: "numeric",
+														},
+													)}
+												</p>
+												<p
+													style={{
+														fontSize: "0.9em",
+														color: "#666",
+														fontStyle: "italic",
+														margin: 0,
+													}}
+												>
+													(click bar to view post)
+												</p>
 											</div>
 											<p
 												style={{
-													fontSize: "0.9em",
-													color: "#000",
-													fontStyle: "italic",
-													marginBottom: "12px",
+													fontSize: "1em",
+													fontWeight: "bold",
+													color: payload[0].color,
+													marginBottom: "6px",
 													textAlign: "left",
-													flex: 1,
 												}}
 											>
-												{post.summary}
+												{post.title}
 											</p>
+											<div style={{ display: "flex", alignItems: "flex-start" }}>
+												<div
+													className="flex items-center justify-center mr-4"
+													style={{
+														width: "100px",
+														height: "100px",
+														flexShrink: 0,
+														backgroundColor: "#f0f0f0",
+													}}
+												>
+													<img
+														className="rounded-xl w-full h-full"
+														src={
+															post.content_html.match(
+																/<img.*?src="(.*?)"/,
+															)?.[1] || ""
+														}
+														alt={post.title}
+														style={{
+															objectFit: "cover",
+															width: "100px",
+															height: "100px",
+														}}
+													/>
+												</div>
+												<p
+													style={{
+														fontSize: "0.9em",
+														color: "#000",
+														fontStyle: "italic",
+														marginBottom: "12px",
+														textAlign: "left",
+														flex: 1,
+													}}
+												>
+													{post.summary}
+												</p>
+											</div>
 										</div>
-									</div>
-								);
-							}
-							return null;
-						}}
-					/>
+									);
+								}
+								return null;
+							}}
+						/>
+					)}
 					{Array.from({ length: maxPosts }, (_, i) => (
 						<Bar
 							key={`post${i + 1}`}
@@ -306,21 +311,25 @@ export default function BlogHistory({ posts = [] }: BlogHistoryProps) {
 							fill={getPostColor(i)}
 							name={`Post ${i + 1}`}
 							onMouseOver={(_, index) => {
-								setActiveIndex(i);
-								setIsHoveringBar(true);
-								setTooltipOpacity(1); // Fade in
+								if (isDesktop) {
+									setActiveIndex(i);
+									setIsHoveringBar(true);
+									setTooltipOpacity(1); // Fade in
+								}
 							}}
 							onMouseLeave={() => {
-								setIsHoveringBar(false);
-								setTooltipOpacity(0); // Fade out
+								if (isDesktop) {
+									setIsHoveringBar(false);
+									setTooltipOpacity(0); // Fade out
+								}
 							}}
 							onClick={(entry, index) => {
-								if (entry && monthlyData[index].posts[i]) {
+								if (isDesktop && entry && monthlyData[index].posts[i]) {
 									window.open(monthlyData[index].posts[i].url, "_blank");
 								}
 							}}
 							style={{
-								cursor: "pointer",
+								cursor: isDesktop ? "pointer" : "default",
 								transition: "fill 0.3s ease",
 							}}
 						/>

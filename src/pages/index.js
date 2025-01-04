@@ -6,6 +6,7 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import BlogHistory from '../components/BlogHistory';
+import Timeline from '../components/Timeline';
 
 export default function Home() {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -40,9 +41,6 @@ export default function Home() {
       });
   }, [siteUrl]);
 
-  console.log(postsHighlight);
-  console.log(allPosts);
-
   return (
     <Layout
       title="Homepage"
@@ -54,14 +52,20 @@ export default function Home() {
           property="og:description"
           content="Where you can find my posts, personal projects and everything in between."
         />
-        <meta property="og:image" content="img/goku.png" />{' '}
-        {/* Update with your thumbnail URL */}
-        <meta property="og:url" content={'http://didierlopes.com'} />
+        <meta property="og:image" content={`${siteUrl}/img/goku.png`} />
+        <meta property="og:url" content="https://didierlopes.com" />
+        
+        {/* Add X-specific meta tags */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@didier_lopes" />
+        <meta name="twitter:creator" content="@didier_lopes" />
+        <meta name="twitter:title" content="Didier Rodrigues Lopes - Personal Website" />
+        <meta name="twitter:description" content="Discover my posts, personal projects, and journey as Co-founder & CEO at OpenBB." />
+        <meta name="twitter:image" content={`${siteUrl}/img/goku.png`} />
       </Head>
       <main>
         <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center md:mt-16">
-          <h1 className="_h1 !mb-2">Who am I?</h1>
+          <h1 className="_h1 !mb-2 font-bold">Who am I?</h1>
           <div className="_subtitle text-lg">
             Co-founder & CEO at{' '}
             <a target="_blank" rel="noreferrer" href="https://openbb.co/">
@@ -113,8 +117,11 @@ export default function Home() {
               />
             </div>
           )}
+          <p className="text-center mt-4">
+            You can reach me on <a href="https://twitter.com/didier_lopes" target="_blank" rel="noreferrer">X</a> and <a href="https://www.linkedin.com/in/didier-lopes/" target="_blank" rel="noreferrer">LinkedIn</a>, where I post frequently.
+          </p>
         </div>
-        <div className="mt-16 max-w-[880px] mx-auto">
+        <div className="mt-16 max-w-[880px] mx-auto px-4">
           {ExecutionEnvironment.canUseDOM && (
             <iframe
               src={
@@ -124,201 +131,66 @@ export default function Home() {
               }
               data-test-id="beehiiv-embed"
               width="100%"
-              height="200"
+              height={isDesktop ? "200" : "250"}
               frameBorder="0"
               scrolling="no"
               title="Didier newsletter"
+              style={{
+                maxWidth: '100%',
+                overflow: 'hidden',
+                display: 'block',
+                margin: '0 auto'
+              }}
             />
           )}
         </div>
-        <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center rounded-[14px]">
-          <h1 className="mb-4">My journey.</h1>
-          <div
-            style={{ maxHeight: '280px', overflowY: 'scroll', padding: '2px' }}
-          >
-            <ul className="mt-4 text-left pr-2">
-              <p>
-                <strong>2024</strong> 🗽 Moved with family again to be closer to
-                customers in NYC.
-              </p>
-              <br />
-              <p>
-                <strong>2023</strong> 🇺🇸 Moved with family to the Bay area, to
-                be closer to tech founders and investors.
-              </p>
-              <br />
-              <p>
-                <strong>2022</strong> 🦋 Announced OpenBB to the world and
-                rebranded the terminal - [
-                <a
-                  href="https://openbb.co/blog/gme-didnt-take-me-to-the-moon-but-gamestonk-terminal-did"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  announcement
-                </a>
-                ].
-              </p>
-              <br />
-              <p>
-                <strong>2021</strong> 📈 We raised $8.9M in a seed round to
-                democratize investment research.
-              </p>
-              <br />
-              <p>
-                <strong>2021</strong> 🦍 Gamestonk Terminal was open source and
-                went viral on{' '}
-                <a
-                  href="https://www.reddit.com/r/Superstonk/comments/mx2cjh/move_over_bloomberg_terminal_here_comes_gamestonk/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Reddit
-                </a>{' '}
-                and{' '}
-                <a
-                  href="https://news.ycombinator.com/item?id=26258773"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  HackerNews
-                </a>
-                .
-              </p>
-              <br />
-              <p>
-                <strong>2020</strong> 🦠 During Xmas my flight got cancelled. So
-                started building a financial terminal.
-              </p>
-              <br />
-              <p>
-                <strong>2020</strong> 😤 Performing own investment research and
-                frustrated by how time-consuming it was.
-              </p>
-              <br />
-              <p>
-                <strong>2020</strong> 🏃 Joined startup NURVV and worked as
-                Sensor Fusion Engineer [
-                <a
-                  href="https://ieeexplore.ieee.org/document/9680024"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  paper
-                </a>
-                ].
-              </p>
-              <br />
-              <p>
-                <strong>2019</strong> 🎓 Wrote code behind my math teacher's
-                thesis on{' '}
-                <a
-                  href="https://github.com/DidierRLopes/UnivariateTimeSeriesForecast"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Forecasting of Financial timeseries
-                </a>
-                .
-              </p>
-              <br />
-              <p>
-                <strong>2018</strong> 🚗 Excited about AI and self-driving cars,
-                worked as Software Engineer at u-blox.
-              </p>
-              <br />
-              <p>
-                <strong>2017</strong> 🇬🇧 Moved to London for a MSc. in Control
-                Systems at Imperial College London [
-                <a
-                  href="https://ieeexplore.ieee.org/document/8796226"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  paper
-                </a>
-                ].
-              </p>
-              <br />
-              <p>
-                <strong>2016</strong> 🇳🇱 Did a semester in TU Delft and learned
-                about self-driving cars.
-              </p>
-              <br />
-              <p>
-                <strong>2013</strong> 📚 BSc. in Electrical and Computer
-                Engineering at FCT-UNL.
-              </p>
-              <br />
-              <p>
-                <strong>2003</strong> 🇵🇹 Moved to Portugal when I was 8yo.
-              </p>
-              <br />
-              <p>
-                <strong>1995</strong> 🇨🇭 I was born in Switzerland, but both my
-                parents are Portuguese emmigrants.
-              </p>
-            </ul>
-          </div>
-          <div className="flex-none overflow-y-scroll rounded-sm mx-auto text-base mt-4">
-            <div className="flex mx-auto gap-8 grid-cols-2 justify-center">
-              <div className="flex justify-center items-center mx-auto mt-4">
-                <a
-                  href="https://twitter.com/didier_lopes"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="!no-underline"
-                >
-                  <div className="flex rounded-xl p-2 w-32 bg-[#0088CC] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#0088CC] hover:no-underline mx-auto text-white">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={32}
-                      height={32}
-                      title="X (formerly Twitter) logo"
-                      aria-label="X (formerly Twitter) logo"
-                      stroke="currentColor"
-                      fill="none"
-                      strokeWidth={1.5}
-                      viewBox="0 0 50 50"
-                      className="mx-auto"
-                      role="img"
-                    >
-                      <path d="M11 4c-3.854 0-7 3.146-7 7v28c0 3.854 3.146 7 7 7h28c3.854 0 7-3.146 7-7V11c0-3.854-3.146-7-7-7H11zm0 2h28c2.774 0 5 2.226 5 5v28c0 2.774-2.226 5-5 5H11c-2.774 0-5-2.226-5-5V11c0-2.774 2.226-5 5-5zm2.086 7 9.223 13.104L13 37h2.5l7.938-9.293L29.977 37h7.937L27.79 22.613 36 13h-2.5l-6.84 8.01L21.023 13h-7.937zm3.828 2h3.065l14.107 20H31.02L16.914 15z" />
-                    </svg>
-                  </div>
-                </a>
-              </div>
-              <div className="flex justify-center items-center mx-auto mt-4">
-                <a
-                  href="https://www.linkedin.com/in/didier-lopes/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="!no-underline"
-                >
-                  <div className="flex rounded-xl p-2 w-32 bg-[#0088CC] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#0088CC] hover:no-underline mx-auto justify-center items-center text-white">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={32}
-                      height={32}
-                      title="Linkedin logo"
-                      aria-label="Linkedin logo"
-                      fill="currentColor"
-                      strokeWidth={1.5}
-                      viewBox="0 0 30 30"
-                      className="mx-auto"
-                      role="img"
-                    >
-                      <path d="M24 4H6a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM10.954 22h-2.95v-9.492h2.95V22zM9.449 11.151a1.72 1.72 0 1 1 0-3.44 1.72 1.72 0 0 1 0 3.44zM22.004 22h-2.948v-4.616c0-1.101-.02-2.517-1.533-2.517-1.535 0-1.771 1.199-1.771 2.437V22h-2.948v-9.492h2.83v1.297h.04c.394-.746 1.356-1.533 2.791-1.533 2.987 0 3.539 1.966 3.539 4.522V22z" />
-                    </svg>
-                  </div>
-                </a>
-              </div>
+        <div className="mx-auto mt-16 max-w-[880px] px-4">
+          <h2 className="text-3xl font-bold mb-6 text-center">What I believe in</h2>
+          <p className="text-xl text-center mb-2 md:mb-8">
+            Building an open-source legacy, one commit at a time.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:mb-8">
+            <div className="relative rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+              {isDesktop ? (<h3 className="text-lg font-semibold px-4">GitHub Stats</h3>) : null}
+              <iframe
+                src="https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff"
+                width="100%"
+                height="200"
+                title="GitHub Stats"
+                className="border-0"
+              />
+              <a 
+                href="https://github.com/DidierRLopes"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="View Didier's GitHub profile"
+                className="absolute inset-0 w-full h-full opacity-0 z-10"
+              />
+            </div>
+            <div className="relative rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hidden md:block">
+              <h3 className="text-lg font-semibold px-4">Contribution Graph</h3>
+              <iframe
+                src="https://ssr-contributions-svg.vercel.app/_/DidierRLopes?chart=3dbar&format=svg&theme=blue"
+                width="100%"
+                height="200"
+                title="GitHub Contributions"
+                className="border-0"
+              />
+              <a 
+                href="https://github.com/DidierRLopes"
+                target="_blank"
+                rel="noreferrer"
+                className="absolute inset-0 w-full h-full opacity-0 z-10"
+                aria-label="View Didier's GitHub profile"
+              />
             </div>
           </div>
+          <p className="text-center mb-4">
+            Follow my progress on <a href="https://github.com/DidierRLopes" target="_blank" rel="noreferrer">GitHub</a>.
+          </p>
         </div>
-
         <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center mb-16">
-          <h1 className="_h1 !mb-2">Latest posts.</h1>
+          <h1 className="_h1 !mb-2 font-bold">Latest posts.</h1>
           {isDesktop ? (
             <>
               {allPosts && allPosts.length > 0 && (
@@ -374,48 +246,8 @@ export default function Home() {
           )}
         </div>
 
-        <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center rounded-[14px]">
-          <h1>What I believe in.</h1>
-          <p className="mb-4 mt-4">
-            Building an open-source legacy, one commit at a time.{' '}
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/DidierRLopes"
-            >
-              Follow my journey on GitHub
-            </a>
-            .
-          </p>
-          <div className="flex-col items-center text-center mx-auto align-center justify-center gap-8 mt-4">
-            <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-              <iframe
-                src="https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff"
-                width={isDesktop ? '400' : '300'}
-                height="200"
-                title="GitHub Stats"
-                className="flex"
-              />
-              <iframe
-                src="https://ssr-contributions-svg.vercel.app/_/DidierRLopes?chart=3dbar&format=svg&theme=blue"
-                width={isDesktop ? '400' : '300'}
-                height="200"
-                title="GitHub Contributions"
-                className="flex"
-              />
-            </div>
-            <p className="mb-4 mt-4">
-              Starting with the most open financial company:{' '}
-              <a target="_blank" rel="noreferrer" href="https://openbb.co/open">
-                openbb.co/open
-              </a>
-              .
-            </p>
-          </div>
-        </div>
-
         <div className="mx-auto mt-16 flex flex-col px-3 text-center md:max-w-[880px]">
-          <h1 className="_h1 !mb-2">Outside work?</h1>
+          <h1 className="_h1 !mb-2 font-bold">Outside work?</h1>
           <span className="_subtitle">
             In my spare time I like to do boxing, read books, play soccer or PS5
             with wife.
@@ -435,8 +267,14 @@ export default function Home() {
             </p>
           </div>
         </div>
+
+        <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center rounded-[14px]">
+          <h1 className="mb-4 font-bold">My journey.</h1>
+          <Timeline />
+        </div>
+
         <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center mb-16">
-          <h1 className="_h1 !mb-2">Let's catch up!</h1>
+          <h1 className="_h1 !mb-2 font-bold">Let's catch up!</h1>
           <div className="flex-none overflow-y-scroll rounded-sm text-center mx-auto text-lg p-2 pr-8 mb-2">
             <span>
               I am available for 15 minutes calls as long as you set an agenda.

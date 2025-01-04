@@ -66,7 +66,7 @@ export default function Home() {
       <main>
         <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center md:mt-16">
           <h1 className="_h1 !mb-2 font-bold">Who am I?</h1>
-          <div className="_subtitle text-lg">
+          <div className="text-xl">
             Co-founder & CEO at{' '}
             <a target="_blank" rel="noreferrer" href="https://openbb.co/">
               OpenBB
@@ -77,23 +77,23 @@ export default function Home() {
               <Carousel showThumbs={false} showStatus={false}>
                 <div>
                   <img
-                    className="rounded-3xl max-w-[220px]"
+                    className="rounded-xl max-w-[220px]"
                     src="img/me_timegpt.webp"
                     alt="Time-GPT event from Nixtla"
                   />
                 </div>
                 <div>
                   <img
-                    className="rounded-3xl max-w-[220px]"
+                    className="rounded-xl max-w-[220px]"
                     src="img/tattoo.webp"
                     alt="OpenBB Tattoo"
                   />
                 </div>
                 <div>
                   <img
-                    className="rounded-3xl max-w-[220px]"
+                    className="rounded-xl max-w-[220px]"
                     src="img/bridge_sticker.webp"
-                    alt="OpenBB bridget sticker"
+                    alt="OpenBB bridge sticker"
                   />
                 </div>
               </Carousel>
@@ -101,17 +101,17 @@ export default function Home() {
           ) : (
             <div className="flex items-center content-center mx-auto align-center justify-center flex-wrap mt-4 gap-8 mb-4">
               <img
-                className="rounded-3xl max-h-[300px] mx-auto"
+                className="rounded-xl max-h-[300px] mx-auto"
                 src="img/tattoo.webp"
                 alt="OpenBB Tattoo"
               />
               <img
-                className="rounded-3xl max-h-[300px] mx-auto"
+                className="rounded-xl max-h-[300px] mx-auto"
                 src="img/me_timegpt.webp"
                 alt="Time-GPT event from Nixtla"
               />
               <img
-                className="rounded-3xl max-h-[300px] mx-auto"
+                className="rounded-xl max-h-[300px] mx-auto"
                 src="img/bridge_sticker.webp"
                 alt="OpenBB bridget sticker"
               />
@@ -121,6 +121,108 @@ export default function Home() {
             You can reach me on <a href="https://twitter.com/didier_lopes" target="_blank" rel="noreferrer">X</a> and <a href="https://www.linkedin.com/in/didier-lopes/" target="_blank" rel="noreferrer">LinkedIn</a>, where I post frequently.
           </p>
         </div>
+        <div className="mx-auto mt-16 max-w-[880px] px-4">
+          <h2 className="text-3xl font-bold mb-2 text-center">What I believe in</h2>
+          <p className="text-xl text-center mb-2 md:mb-8">
+            Building an open-source legacy, one commit at a time.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:mb-8">
+            <div className="relative rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+              <iframe
+                src="https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff"
+                width="100%"
+                height="200"
+                title="GitHub Stats"
+                className="border-0"
+              />
+              <a 
+                href="https://github.com/DidierRLopes"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="View Didier's GitHub profile"
+                className="absolute inset-0 w-full h-full opacity-0 z-10"
+              />
+            </div>
+            <div className="relative rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hidden md:block">
+              <iframe
+                src="https://ssr-contributions-svg.vercel.app/_/DidierRLopes?chart=3dbar&format=svg&theme=blue"
+                width="100%"
+                height="200"
+                title="GitHub Contributions"
+                className="border-0"
+              />
+              <a 
+                href="https://github.com/DidierRLopes"
+                target="_blank"
+                rel="noreferrer"
+                className="absolute inset-0 w-full h-full opacity-0 z-10"
+                aria-label="View Didier's GitHub profile"
+              />
+            </div>
+          </div>
+          <p className="text-center mb-4">
+            Follow my progress on <a href="https://github.com/DidierRLopes" target="_blank" rel="noreferrer">GitHub</a>.
+          </p>
+        </div>
+        <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center mb-16">
+          <h1 className="_h1 !mb-2 font-bold">Latest posts.</h1>
+          <p className="text-xl text-center mb-2 md:mb-8">
+            I write so I can think and communicate better.
+          </p>
+          {isDesktop ? (
+            <>
+              {allPosts && allPosts.length > 0 && (
+                <BlogHistory posts={allPosts} />
+              )}
+              <div className="relative mt-8 mb-4 overflow-hidden">
+                <div className="flex animate-scroll gap-8">
+                  {postsHighlight.concat(postsHighlight).map((post, index) => (
+                    <div
+                      key={`${post.id}-${index}`}
+                      className="flex-shrink-0 w-[250px]"
+                    >
+                      <a
+                        href={`${post.id}`}
+                        className="group block h-full transition-transform duration-300 hover:scale-105"
+                      >
+                        <div className="overflow-hidden rounded-xl mb-3">
+                          <img
+                            className="w-full h-[180px] object-cover transition-transform duration-300 group-hover:scale-110"
+                            src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
+                            alt={post.title}
+                          />
+                        </div>
+                        <h3 className="text-left text-sm font-semibold group-hover:text-blue-500 transition-colors duration-300">
+                          {post.title}
+                        </h3>
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </>
+          ) : (
+            <div className="flex flex-col items-center mt-8 gap-6 mb-4">
+              {postsHighlight.map((post) => (
+                <div key={post.id} className="w-full max-w-[300px]">
+                  <a href={`${post.id}`} className="group block">
+                    <div className="overflow-hidden rounded-xl mb-3">
+                      <img
+                        className="w-full h-[200px] object-cover transition-transform duration-300 group-hover:scale-110"
+                        src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
+                        alt={post.title}
+                      />
+                    </div>
+                    <h3 className="text-center text-sm font-semibold group-hover:text-blue-500 transition-colors duration-300">
+                      {post.title}
+                    </h3>
+                  </a>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+        
         <div className="mt-16 max-w-[880px] mx-auto px-4">
           {ExecutionEnvironment.canUseDOM && (
             <iframe
@@ -144,108 +246,6 @@ export default function Home() {
             />
           )}
         </div>
-        <div className="mx-auto mt-16 max-w-[880px] px-4">
-          <h2 className="text-3xl font-bold mb-6 text-center">What I believe in</h2>
-          <p className="text-xl text-center mb-2 md:mb-8">
-            Building an open-source legacy, one commit at a time.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:mb-8">
-            <div className="relative rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
-              {isDesktop ? (<h3 className="text-lg font-semibold px-4">GitHub Stats</h3>) : null}
-              <iframe
-                src="https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff"
-                width="100%"
-                height="200"
-                title="GitHub Stats"
-                className="border-0"
-              />
-              <a 
-                href="https://github.com/DidierRLopes"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="View Didier's GitHub profile"
-                className="absolute inset-0 w-full h-full opacity-0 z-10"
-              />
-            </div>
-            <div className="relative rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hidden md:block">
-              <h3 className="text-lg font-semibold px-4">Contribution Graph</h3>
-              <iframe
-                src="https://ssr-contributions-svg.vercel.app/_/DidierRLopes?chart=3dbar&format=svg&theme=blue"
-                width="100%"
-                height="200"
-                title="GitHub Contributions"
-                className="border-0"
-              />
-              <a 
-                href="https://github.com/DidierRLopes"
-                target="_blank"
-                rel="noreferrer"
-                className="absolute inset-0 w-full h-full opacity-0 z-10"
-                aria-label="View Didier's GitHub profile"
-              />
-            </div>
-          </div>
-          <p className="text-center mb-4">
-            Follow my progress on <a href="https://github.com/DidierRLopes" target="_blank" rel="noreferrer">GitHub</a>.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center mb-16">
-          <h1 className="_h1 !mb-2 font-bold">Latest posts.</h1>
-          {isDesktop ? (
-            <>
-              {allPosts && allPosts.length > 0 && (
-                <BlogHistory posts={allPosts} />
-              )}
-              <div className="flex items-start content-center mx-auto align-center justify-center mt-8 gap-8 mb-4 flex-row">
-                {postsHighlight.map((post) => (
-                  <div
-                    key={post.id}
-                    className="mx-2 max-w-[250px] flex flex-col items-center"
-                    style={{ height: '100%' }}
-                  >
-                    <a
-                      href={`${post.id}`}
-                      className="flex flex-col items-center h-full"
-                    >
-                      <img
-                        className="rounded-3xl object-cover mb-2 text-center justify-center align-center mx-auto"
-                        src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
-                        alt={post.title}
-                        style={{
-                          flex: '1 0 auto',
-                          width: '220px',
-                          height: '150px',
-                          objectFit: 'cover',
-                        }}
-                      />
-                      <p className="text-left text-sm w-full mt-auto">
-                        {post.title}
-                      </p>
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </>
-          ) : (
-            <div className="flex items-center content-center mx-auto align-center justify-center mt-8 gap-4 mb-4 flex-col">
-              {postsHighlight.map((post) => (
-                <div key={post.id} className="my-2">
-                  <a href={`${post.id}`}>
-                    <img
-                      className="rounded-3xl w-[220px] h-[160px] object-cover mb-2 mx-auto"
-                      src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
-                      alt={post.title}
-                    />
-                    <p className="text-center text-sm w-[240px] mx-auto">
-                      {post.title}
-                    </p>
-                  </a>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-
         <div className="mx-auto mt-16 flex flex-col px-3 text-center md:max-w-[880px]">
           <h1 className="_h1 !mb-2 font-bold">Outside work?</h1>
           <span className="_subtitle">

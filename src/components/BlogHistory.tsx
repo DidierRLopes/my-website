@@ -63,14 +63,14 @@ export default function BlogHistory({ posts = [], isDesktop }: BlogHistoryProps)
 
 	const getOptimalInterval = (months: Date[]) => {
 		const totalMonths = months.length;
-
-		// Aim to show roughly 6-8 labels on the axis
-		if (totalMonths <= 8) return 1; // Show all labels if 8 or fewer months
-		if (totalMonths <= 16) return 2; // Every 2 months if <= 16 months
-		if (totalMonths <= 24) return 3; // Every quarter if <= 2 years
-		if (totalMonths <= 36) return 4; // Every 4 months if <= 3 years
-		if (totalMonths <= 48) return 6; // Every 6 months if <= 4 years
-		return 12; // Every year for longer periods
+		
+		// Determine desired number of labels based on screen size
+		let targetLabels = isDesktop ? 6 : 3;
+		
+		// Calculate interval that would give us roughly the desired number of labels
+		let interval = Math.max(1, Math.floor(totalMonths / targetLabels));
+		
+		return interval;
 	};
 
 	// Modify the monthlyData generation
@@ -85,7 +85,9 @@ export default function BlogHistory({ posts = [], isDesktop }: BlogHistoryProps)
 		});
 
 		const interval = getOptimalInterval(months);
-		const showLabel = index % interval === 0;
+		const showLabel = index === 0 || 
+			index === months.length - 1 || 
+			index % interval === 0;
 
 		// Create an object with individual post sizes
 		const postSizes = postsInMonth.reduce(
@@ -158,7 +160,9 @@ export default function BlogHistory({ posts = [], isDesktop }: BlogHistoryProps)
 					<XAxis
 						dataKey="monthDisplay"
 						type="category"
-						interval={getOptimalInterval(months) - 1}
+						interval={(index) => {
+							return monthlyData[index].showLabel;
+						}}
 						height={60}
 						tick={{ fontSize: 14 }}
 					/>

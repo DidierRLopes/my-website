@@ -149,7 +149,7 @@ export default function Home() {
                 width="100%"
                 height="200"
                 title="GitHub Contributions"
-                className="border-0"
+                className="border-0 w-[250px]"
               />
               <a 
                 href="https://github.com/DidierRLopes"

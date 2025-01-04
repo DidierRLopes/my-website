@@ -39,10 +39,10 @@ This is the workflow we are looking at:
 1. I send a message to my Telegram bot with the idea of what I want to post on Bluesky.
 2. That message gets processed by my fine-tune agent, which runs locally.
 3. That message is used to extract further context either from:
-	1. OpenBB if financial information is needed
-	2. xAI if latest news from social media is needed
-	3. Perplexity if more information from the web is necessary
-4. The agent then writes a thought on the topic
+	1. OpenBB if financial information is needed.
+	2. xAI if latest news from social media is needed.
+	3. Perplexity if more information from the web is necessary.
+4. The agent then writes a thought on the topic.
 5. Then it pushes that post to Bluesky.
 
 ## Getting Started
@@ -249,7 +249,7 @@ The only additional things I added afterwards for a better user experience were:
 
 ### 3. Agent brain
 
-I had used Ollama and `Llama3.2:latest` previously, and knew how easy it was to call the model. So I didn't bother spending time testing it up in advance.
+I have used Ollama and `Llama3.2:latest` previously, and knew how easy it was to call the model. So I didn't bother spending time testing it up in advance.
 
 <CodeBlock
     language="python"
@@ -487,7 +487,7 @@ And the implementation is [here](https://github.com/DidierRLopes/telegram-text-t
 
 ### 5. Put it all together
 
-Finally, I merged it altogether in [this file](https://github.com/DidierRLopes/telegram-text-to-bluesky-post/blob/main/bluesky-agent.py).
+Finally, I merged it all together in [this file](https://github.com/DidierRLopes/telegram-text-to-bluesky-post/blob/main/bluesky-agent.py).
 
 This is what the architecture looks like:
 

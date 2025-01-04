@@ -8,6 +8,6 @@ import HeadTitle from '@site/src/components/General/HeadTitle.tsx'
 
 <HeadTitle title="Projects | Didier" />
 
-Technically OpenBB is no longer a personal project, but for historical reasons it will remain here. Follow me on [GitHub](https://github.com/DidierRLopes) for more.
+Follow me on [GitHub](https://github.com/DidierRLopes) for more.
 
 <Projects />

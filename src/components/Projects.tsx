@@ -231,16 +231,16 @@ export default function Projects() {
   return (
     <div className="mx-auto mt-8">
       {projects.map((project) => (
-        <div className='flex my-4 mx-2 border-[1px] p-2 rounded border-[#0088CC]'>
-          <div className='flex justify-start items-center p-4'>
+        <div className='flex flex-col md:flex-row my-4 mx-2 border-[1px] p-2 rounded border-[#0088CC]' key={project.title}>
+          <div className='w-full md:w-auto flex justify-center md:justify-start items-center p-4'>
             <img
               src={project.image}
               alt={project.title}
               className="w-[200px] object-cover"
             />
           </div>
-          <div className='flex flex-col justify-start items-start ml-0 text-left p-2'>
-            <div>
+          <div className='w-full md:w-auto flex flex-col justify-start items-start md:ml-0 text-left p-2'>
+            <div className="w-full">
               <div className="title md:text-lg font-bold">
                 {project.title}
               </div>
@@ -248,7 +248,7 @@ export default function Projects() {
                 {project.desc}
               </div>
             </div>
-            <div className="flex mt-4 mb-2 items-start justify-end">
+            <div className="flex mt-4 mb-2 items-center md:items-start justify-center md:justify-start w-full">
               <a
                 target="_blank"
                 rel="noreferrer"

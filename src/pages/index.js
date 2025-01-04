@@ -10,14 +10,20 @@ import Timeline from '../components/Timeline';
 
 export default function Home() {
   const [isDesktop, setIsDesktop] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
     if (ExecutionEnvironment.canUseDOM) {
-      // Using 576px as the mobile breakpoint
-      setIsDesktop(window.innerWidth > 576);
+      const handleResize = () => {
+        // Using 576px as the mobile breakpoint and 992px as the tablet breakpoint
+        setIsTablet(window.innerWidth > 576 && window.innerWidth <= 992);
+        setIsDesktop(window.innerWidth > 992);
+      };
 
-      // Optional: Add resize listener to handle window resizing
-      const handleResize = () => setIsDesktop(window.innerWidth > 576);
+      // Initial check
+      handleResize();
+
+      // Add resize listener to handle window resizing
       window.addEventListener('resize', handleResize);
       
       return () => window.removeEventListener('resize', handleResize);
@@ -196,35 +202,36 @@ export default function Home() {
                 </div>
               </div>
             </>
+          ) : isTablet ? (
+            <div className="flex justify-center gap-8 mt-8 mb-4">
+              {postsHighlight.slice(0, 2).map((post) => (
+                <div
+                  key={post.id}
+                  className="w-[250px]"
+                >
+                  <a
+                    href={`${post.id}`}
+                    className="group block h-full transition-transform duration-300 hover:scale-105"
+                  >
+                    <div className="overflow-hidden rounded-xl mb-3">
+                      <img
+                        className="w-full h-[180px] object-cover transition-transform duration-300 group-hover:scale-110"
+                        src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
+                        alt={post.title}
+                      />
+                    </div>
+                    <h3 className="text-left text-sm font-semibold group-hover:text-blue-500 transition-colors duration-300">
+                      {post.title}
+                    </h3>
+                  </a>
+                </div>
+              ))}
+            </div>
           ) : (
-            <Carousel showThumbs={false} showStatus={false} showIndicators={false} autoPlay={true} interval={5000}
-            renderArrowPrev={(clickHandler, hasPrev) => (
-              <button
-                onClick={clickHandler}
-                disabled={!hasPrev}
-                className="absolute left-0 top-[60px] z-10 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-r"
-                aria-label="Previous slide"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-            )}
-            renderArrowNext={(clickHandler, hasNext) => (
-              <button
-                onClick={clickHandler}
-                disabled={!hasNext}
-                className="absolute right-0 top-[60px] z-10 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-l"
-                aria-label="Next slide"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            )}>
+            <Carousel showThumbs={false} showStatus={false} showIndicators={false} autoPlay={true} interval={5000}>
               {postsHighlight.map((post) => (
                 <div key={post.id} className='!max-w-[260px] mx-auto text-center'>
-                  <a href={`${post.id}`} className="group block">
+                  <a href={`${post.id}`} className="group block pt-8">
                     <img
                       className="rounded-xl h-[120px] mx-auto object-cover"
                       src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
@@ -240,7 +247,7 @@ export default function Home() {
           )}
         </div>
         
-        <div className="mt-16 max-w-[880px] mx-auto px-4">
+        <div className="mt-4 max-w-[880px] mx-auto px-4">
           {ExecutionEnvironment.canUseDOM && (
             <iframe
               src={

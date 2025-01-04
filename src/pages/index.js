@@ -13,7 +13,14 @@ export default function Home() {
 
   useEffect(() => {
     if (ExecutionEnvironment.canUseDOM) {
-      setIsDesktop(window.innerWidth > 1024);
+      // Using 576px as the mobile breakpoint
+      setIsDesktop(window.innerWidth > 576);
+
+      // Optional: Add resize listener to handle window resizing
+      const handleResize = () => setIsDesktop(window.innerWidth > 576);
+      window.addEventListener('resize', handleResize);
+      
+      return () => window.removeEventListener('resize', handleResize);
     }
   }, []);
 
@@ -123,44 +130,32 @@ export default function Home() {
         </div>
         <div className="mx-auto mt-16 max-w-[880px] px-4">
           <h2 className="text-3xl font-bold mb-2 text-center">What I believe in</h2>
-          <p className="text-xl text-center mb-2 md:mb-8">
+          <p className="text-xl text-center">
             Building an open-source legacy, one commit at a time.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:mb-8">
-            <div className="relative rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
-              <iframe
-                src="https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff"
-                width="100%"
-                height="200"
-                title="GitHub Stats"
-                className="border-0"
-              />
-              <a 
-                href="https://github.com/DidierRLopes"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="View Didier's GitHub profile"
-                className="absolute inset-0 w-full h-full opacity-0 z-10"
-              />
-            </div>
-            <div className="relative rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hidden md:block">
-              <iframe
-                src="https://ssr-contributions-svg.vercel.app/_/DidierRLopes?chart=3dbar&format=svg&theme=blue"
-                width="100%"
-                height="200"
-                title="GitHub Contributions"
-                className="border-0 w-[250px]"
-              />
-              <a 
-                href="https://github.com/DidierRLopes"
-                target="_blank"
-                rel="noreferrer"
-                className="absolute inset-0 w-full h-full opacity-0 z-10"
-                aria-label="View Didier's GitHub profile"
-              />
-            </div>
+          <div className="h-[200px] relative">
+            <Carousel showThumbs={false} showStatus={false} showIndicators={false} autoPlay={true} interval={5000}>
+              <div className="flex items-center justify-center h-full">
+                <iframe
+                  src="https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff"
+                  width="100%"
+                  height="200"
+                  title="GitHub Stats"
+                  className="border-0 my-auto pt-8"
+                />
+              </div>
+              <div className="flex items-center justify-center">
+                <iframe
+                  src="https://ssr-contributions-svg.vercel.app/_/DidierRLopes?chart=3dbar&format=svg&theme=blue"
+                  width="100%"
+                  height="200"
+                  title="GitHub Contributions"
+                  className="border-0 my-auto"
+                />
+              </div>
+            </Carousel>
           </div>
-          <p className="text-center mb-4">
+          <p className="text-center mt-8 mb-4">
             Follow my progress on <a href="https://github.com/DidierRLopes" target="_blank" rel="noreferrer">GitHub</a>.
           </p>
         </div>
@@ -202,7 +197,31 @@ export default function Home() {
               </div>
             </>
           ) : (
-            <Carousel showThumbs={false} showStatus={false} showIndicators={false}>
+            <Carousel showThumbs={false} showStatus={false} showIndicators={false} autoPlay={true} interval={5000}
+            renderArrowPrev={(clickHandler, hasPrev) => (
+              <button
+                onClick={clickHandler}
+                disabled={!hasPrev}
+                className="absolute left-0 top-[60px] z-10 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-r"
+                aria-label="Previous slide"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+            )}
+            renderArrowNext={(clickHandler, hasNext) => (
+              <button
+                onClick={clickHandler}
+                disabled={!hasNext}
+                className="absolute right-0 top-[60px] z-10 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-l"
+                aria-label="Next slide"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            )}>
               {postsHighlight.map((post) => (
                 <div key={post.id} className='!max-w-[260px] mx-auto text-center'>
                   <a href={`${post.id}`} className="group block">

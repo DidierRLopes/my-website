@@ -175,7 +175,8 @@ export default function Home() {
               showThumbs={false}
               showStatus={false}
               showIndicators={false}
-              autoPlay={true}interval={5000}
+              autoPlay={true}
+              interval={5000}
               renderArrowPrev={(clickHandler, hasPrev) => (
                 hasPrev && (
                   <button
@@ -205,20 +206,22 @@ export default function Home() {
                 )
               )
             }>
-              <div className="flex items-center justify-center h-full">
+              <div className="flex items-center justify-center h-full pt-8">
                 <iframe
-                  src="https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff"
-                  width="100%"
+                  src={
+                    document.documentElement.getAttribute('data-theme') !== 'dark'
+                      ? "https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=fff&tc=000&ic=000&bc=000"
+                      : "https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff"
+                  }
                   title="GitHub Stats"
-                  className="border-0 my-auto max-w-full scale-[0.85] md:scale-100"
+                  className="w-full h-full border-0"
                 />
               </div>
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center h-full pt-8">
                 <iframe
                   src="https://ssr-contributions-svg.vercel.app/_/DidierRLopes?chart=3dbar&format=svg&theme=blue"
-                  width="100%"
                   title="GitHub Contributions"
-                  className="border-0 my-auto max-w-full scale-[0.85] md:scale-100"
+                  className="w-full h-full border-0"
                 />
               </div>
             </Carousel>

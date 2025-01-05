@@ -4,7 +4,7 @@
         <title>Didier Lopes Blog</title>
         <link>https://didierlopes.com/blog</link>
         <description>Didier Lopes Blog</description>
-        <lastBuildDate>Fri, 10 Jan 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 04 Jan 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -13,7 +13,7 @@
             <title><![CDATA[Building an AI agent from scratch that can post on bluesky]]></title>
             <link>https://didierlopes.com/blog/building-an-ai-agent-from-scratch-that-can-post-on-bluesky</link>
             <guid>https://didierlopes.com/blog/building-an-ai-agent-from-scratch-that-can-post-on-bluesky</guid>
-            <pubDate>Fri, 10 Jan 2025 00:00:00 GMT</pubDate>
+            <pubDate>Sat, 04 Jan 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[A practical guide to building an AI agent that processes Telegram messages through a local LLM, gathers context from various sources (OpenBB, Perplexity, Grok), and automatically posts content to Bluesky.]]></description>
             <content:encoded><![CDATA[<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-01-04-building-an-ai-agent-from-scratch-that-can-post-on-bluesky.png"></p>
 <p>A practical guide to building an AI agent that processes Telegram messages through a local LLM, gathers context from various sources (OpenBB, Perplexity, Grok), and automatically posts content to Bluesky.</p>

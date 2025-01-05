@@ -233,7 +233,6 @@ export default function Home() {
               showThumbs={false}
               showStatus={false}
               showIndicators={false}
-              autoPlay={true}
               interval={5000}
               renderArrowPrev={(clickHandler, hasPrev) => (
                 hasPrev && (

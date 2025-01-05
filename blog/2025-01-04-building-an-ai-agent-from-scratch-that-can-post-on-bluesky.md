@@ -1,7 +1,7 @@
 ---
 slug: building-an-ai-agent-from-scratch-that-can-post-on-bluesky
 title: Building an AI agent from scratch that can post on bluesky
-date: 2025-01-10
+date: 2025-01-04
 image: /blog/2025-01-04-building-an-ai-agent-from-scratch-that-can-post-on-bluesky
 tags: ['openbb', 'artificial intelligence', 'ai', 'agent', 'open source', 'ollama', 'llama', 'telegram', 'bluesky', 'xai', 'grok', 'perplexity']
 description: A practical guide to building an AI agent that processes Telegram messages through a local LLM, gathers context from various sources (OpenBB, Perplexity, Grok), and automatically posts content to Bluesky.

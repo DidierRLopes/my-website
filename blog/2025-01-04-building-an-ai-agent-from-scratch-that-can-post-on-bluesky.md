@@ -17,7 +17,6 @@ A practical guide to building an AI agent that processes Telegram messages throu
 
 The open source code is available [here](https://github.com/DidierRLopes/telegram-text-to-bluesky-post).
 
-
 <!-- truncate -->
 
 import CodeBlock from '@theme/CodeBlock';

@@ -82,6 +82,14 @@ const projects = [
     article: '/blog/building-an-ai-agent-from-scratch-that-can-post-on-bluesky',
   },
   {
+    title: 'Blog history generator',
+    image: '/projects/blog-history.png',
+    desc: 'Generates beautiful SVG visualizations of your blog post history, supporting both JSON and ATOM XML feeds',
+    language: 'JavaScript',
+    link: 'https://github.com/DidierRLopes/blog-history-generator',
+    article: '/blog/tracking-my-writing-progress-through-an-open-source-blog-tracker-generator',
+  },
+  {
     title: 'Target Market Analysis',
     image: '/projects/target_market_analysis.png',
     desc: 'Target Market Analysis with help of OpenAI GPT-4',

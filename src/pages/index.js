@@ -233,7 +233,6 @@ export default function Home() {
                   height="100"
                   title="GitHub Stats"
                   className="h-[200px] w-full border-0 mx-auto"
-                  style="max-width: 100%"
                 />
               </div>
               <div className="flex items-center justify-center h-full w-full pt-8">
@@ -243,7 +242,6 @@ export default function Home() {
                   height="100"
                   title="GitHub Contributions"
                   className="h-[200px] w-full border-0 mx-auto"
-                  style="max-width: 100%"
                 />
               </div>
             </Carousel>

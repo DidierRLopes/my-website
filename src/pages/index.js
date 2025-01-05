@@ -13,6 +13,7 @@ export default function Home() {
   const [isTablet, setIsTablet] = useState(false);
   const [beehiivSrc, setBehiivSrc] = useState('');
   const [githubSrc, setGithubSrc] = useState('');
+  const [githubChartSrc, setGithubChartSrc] = useState('');
 
   useEffect(() => {
     if (ExecutionEnvironment.canUseDOM) {
@@ -47,6 +48,12 @@ export default function Home() {
           ? 'https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff'
           : 'https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=fff&tc=000&ic=000&bc=000'
       );
+
+      setGithubChartSrc(
+        isDarkTheme
+          ? 'https://contribution.oooo.so/_/DidierRLopes?chart=calendar&format=png&weeks=20&theme=blue&widget_size=small&dark=true'
+          : 'https://contribution.oooo.so/_/DidierRLopes?chart=calendar&format=png&weeks=20&theme=blue&widget_size=small'
+      )
     }
   }, []);
 
@@ -187,8 +194,11 @@ export default function Home() {
         </div>
         <div className="mx-auto mt-16 max-w-[880px] px-4">
           <h2 className="text-3xl font-bold mb-2 text-center">What I believe in</h2>
-          <p className="text-xl text-center">
+          <p className="text-xl text-center sm:block hidden mb-4">
             Building an open-source legacy, one commit at a time.
+          </p>
+          <p className="text-xl text-center sm:hidden block mb-4">
+            Building an open-source legacy,<br />one commit at a time.
           </p>
           <div className="h-[200px] relative">
             <Carousel
@@ -226,27 +236,19 @@ export default function Home() {
                 )
               )
             }>
-              <div className="flex items-center justify-center h-full w-full pt-8">
-                <iframe
-                  src={githubSrc}
-                  width="300"
-                  height="100"
-                  title="GitHub Stats"
-                  className="h-[200px] w-full border-0 mx-auto"
-                />
-              </div>
-              <div className="flex items-center justify-center h-full w-full pt-8">
-                <iframe
-                  src="https://ssr-contributions-svg.vercel.app/_/DidierRLopes?chart=3dbar&format=svg&theme=blue"
-                  width="300"
-                  height="100"
-                  title="GitHub Contributions"
-                  className="h-[200px] w-full border-0 mx-auto"
-                />
+              <picture className="flex justify-center">
+                <source srcSet={githubSrc} />
+                <img alt="" src="https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=fff&tc=000&ic=000&bc=000" style={{ maxWidth: '400px', margin: '0 auto' }} />
+              </picture>
+              <div className="flex items-center justify-center w-full">
+                <picture className="flex justify-center">
+                  <source srcSet={githubChartSrc} />
+                  <img alt="" src={githubChartSrc} style={{ maxWidth: '400px', margin: '0 auto' }} />
+                </picture>
               </div>
             </Carousel>
           </div>
-          <p className="text-center mt-8 mb-4">
+          <p className="text-center mb-4">
             Follow my progress on <a href="https://github.com/DidierRLopes" target="_blank" rel="noreferrer">GitHub</a>.
           </p>
         </div>

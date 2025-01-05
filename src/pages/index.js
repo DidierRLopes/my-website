@@ -132,7 +132,7 @@ export default function Home() {
         <meta name="twitter:image" content={`${siteUrl}/img/goku.png`} />
       </Head>
       <main>
-        <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center md:mt-16">
+        <div className="mt-16 mx-auto flex max-w-[880px] flex-col px-3 text-center">
           <h1 className="_h1 !mb-2 font-bold">Who am I?</h1>
           <div className="text-xl">
             Co-founder & CEO at{' '}
@@ -220,7 +220,7 @@ export default function Home() {
             You can reach me on <a href="https://twitter.com/didier_lopes" target="_blank" rel="noreferrer">X</a> and <a href="https://www.linkedin.com/in/didier-lopes/" target="_blank" rel="noreferrer">LinkedIn</a>, where I post frequently.
           </p>
         </div>
-        <div className="mx-auto mt-16 max-w-[880px] px-4">
+        <div className="mt-16 md:mt-32 mx-auto max-w-[880px] px-4">
           <h2 className="text-3xl font-bold mb-2 text-center">What I believe in</h2>
           <p className="text-xl text-center sm:block hidden mb-4">
             Building an open-source legacy, one commit at a time.
@@ -281,7 +281,7 @@ export default function Home() {
             Follow my progress on <a href="https://github.com/DidierRLopes" target="_blank" rel="noreferrer">GitHub</a>.
           </p>
         </div>
-        <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center mb-16">
+        <div className="mt-16 md:mt-32 mx-auto flex max-w-[880px] flex-col px-3 text-center">
           <h1 className="_h1 !mb-2 font-bold">Latest posts.</h1>
           <p className="text-xl text-center mb-2 md:mb-8">
             I write so I can think and communicate better.
@@ -291,7 +291,7 @@ export default function Home() {
           )}
           {isDesktop ? (
             <>
-              <div className="relative mb-4 overflow-hidden">
+              <div className="relative overflow-hidden">
                 <div className="flex animate-scroll gap-8">
                   {postsHighlight.concat(postsHighlight).map((post, index) => (
                     <div
@@ -391,8 +391,7 @@ export default function Home() {
             </Carousel>
           )}
         </div>
-        
-        <div className="mt-4 max-w-[880px] mx-auto px-4">
+        <div className="max-w-[880px] mx-auto px-4">
           {ExecutionEnvironment.canUseDOM && (
             <iframe
               src={beehiivSrc}
@@ -411,7 +410,7 @@ export default function Home() {
             />
           )}
         </div>
-        <div className="mx-auto mt-16 flex flex-col px-3 text-center md:max-w-[880px]">
+        <div className="mt-16 md:mt-32 flex flex-col px-3 mx-auto  text-center md:max-w-[880px]">
           <h1 className="_h1 !mb-2 font-bold">Outside work?</h1>
           <span className="_subtitle">
             In my spare time I do boxing, play soccer, code, read books or play PS5.
@@ -431,8 +430,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-
-        <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center rounded-[14px] mb-8">
+        <div className="mt-16 md:mt-32 mx-auto flex max-w-[880px] flex-col px-3 text-center rounded-[14px] mb-8">
           <h1 className="mb-4 font-bold">My journey.</h1>
           <Timeline />
         </div>

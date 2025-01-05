@@ -11,6 +11,8 @@ import Timeline from '../components/Timeline';
 export default function Home() {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
+  const [beehiivSrc, setBehiivSrc] = useState('');
+  const [githubSrc, setGithubSrc] = useState('');
 
   useEffect(() => {
     if (ExecutionEnvironment.canUseDOM) {
@@ -27,6 +29,24 @@ export default function Home() {
       window.addEventListener('resize', handleResize);
       
       return () => window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (ExecutionEnvironment.canUseDOM) {
+      const isDarkTheme = document.documentElement.getAttribute('data-theme') === 'dark';
+
+      setBehiivSrc(
+        isDarkTheme
+          ? 'https://embeds.beehiiv.com/8a4b3599-3ce0-40ad-8586-910fd9a20ee4'
+          : 'https://embeds.beehiiv.com/57f8fb43-3409-4d9a-9979-66489741be0c'
+      );
+
+      setGithubSrc(
+        isDarkTheme
+          ? 'https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff'
+          : 'https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=fff&tc=000&ic=000&bc=000'
+      );
     }
   }, []);
 
@@ -208,11 +228,7 @@ export default function Home() {
             }>
               <div className="flex items-center justify-center h-full pt-8">
                 <iframe
-                  src={
-                    document.documentElement.getAttribute('data-theme') !== 'dark'
-                      ? "https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=fff&tc=000&ic=000&bc=000"
-                      : "https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff"
-                  }
+                  src={githubSrc}
                   title="GitHub Stats"
                   className="w-full h-full border-0"
                 />
@@ -344,11 +360,7 @@ export default function Home() {
         <div className="mt-4 max-w-[880px] mx-auto px-4">
           {ExecutionEnvironment.canUseDOM && (
             <iframe
-              src={
-                document.documentElement.getAttribute('data-theme') !== 'dark'
-                  ? 'https://embeds.beehiiv.com/57f8fb43-3409-4d9a-9979-66489741be0c'
-                  : 'https://embeds.beehiiv.com/8a4b3599-3ce0-40ad-8586-910fd9a20ee4'
-              }
+              src={beehiivSrc}
               data-test-id="beehiiv-embed"
               width="100%"
               height={isDesktop ? "200" : "250"}

@@ -226,18 +226,20 @@ export default function Home() {
                 )
               )
             }>
-              <div className="flex items-center justify-center h-full w-[300px] pt-8">
+              <div className="flex items-center justify-center h-full w-full pt-8">
                 <iframe
                   src={githubSrc}
                   title="GitHub Stats"
-                  className="h-[200px] border-0 mx-auto"
+                  className="h-[200px] w-full border-0 mx-auto"
+                  style={{ maxWidth: '100%', overflow: 'hidden' }}
                 />
               </div>
-              <div className="flex items-center justify-center h-full w-[300px] pt-8">
+              <div className="flex items-center justify-center h-full w-full pt-8">
                 <iframe
                   src="https://ssr-contributions-svg.vercel.app/_/DidierRLopes?chart=3dbar&format=svg&theme=blue"
                   title="GitHub Contributions"
-                  className="h-[200px] border-0 mx-auto"
+                  className="h-[200px] w-full border-0 mx-auto"
+                  style={{ maxWidth: '100%', overflow: 'hidden' }}
                 />
               </div>
             </Carousel>

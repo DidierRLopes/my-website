@@ -209,18 +209,16 @@ export default function Home() {
                 <iframe
                   src="https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff"
                   width="100%"
-                  height={isDesktop ? "200" : "150"}
                   title="GitHub Stats"
-                  className="border-0 my-auto pt-8 max-w-full"
+                  className="border-0 my-auto max-w-full scale-[0.85] md:scale-100"
                 />
               </div>
               <div className="flex items-center justify-center">
                 <iframe
                   src="https://ssr-contributions-svg.vercel.app/_/DidierRLopes?chart=3dbar&format=svg&theme=blue"
                   width="100%"
-                  height={isDesktop ? "200" : "150"}
                   title="GitHub Contributions"
-                  className="border-0 my-auto max-w-full"
+                  className="border-0 my-auto max-w-full scale-[0.85] md:scale-100"
                 />
               </div>
             </Carousel>

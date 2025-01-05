@@ -145,7 +145,7 @@ export default function BlogHistory({ posts = [], isDesktop }: BlogHistoryProps)
 	const maxPosts = Math.max(...monthlyData.map((data) => data.posts.length));
 
 	return (
-		<div style={{ width: "100%", height: 400 }}>
+		<div style={{ width: "100%", height: isDesktop ? 400 : 300 }}>
 			<ResponsiveContainer>
 				<BarChart
 					data={monthlyData}

@@ -90,6 +90,14 @@ const projects = [
     article: '/blog/tracking-my-writing-progress-through-an-open-source-blog-tracker-generator',
   },
   {
+    title: 'Turn blog feed into a QA dataset',
+    image: '/projects/turn-blog-feed-into-qa-dataset.png',
+    desc: 'Turns a blog feed into a Q&A dataset utilizing open source Llama 3.2 (through Ollama)',
+    language: 'Python',
+    link: 'https://github.com/DidierRLopes/turn-blog-feed-into-qa-dataset',
+    article: '/blog/turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm'
+  },
+  {
     title: 'Target Market Analysis',
     image: '/projects/target_market_analysis.png',
     desc: 'Target Market Analysis with help of OpenAI GPT-4',

@@ -152,7 +152,7 @@ ol {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
   .footer__col:not(:has(.footer__socials)) .footer__title {
     display: none;
     margin: 0;
@@ -319,4 +319,18 @@ ol {
 
 .recharts-bar-rectangle:hover {
   filter: none !important;
+}
+
+.footer {
+  padding: 2rem 0;
+  background-color: var(--ifm-footer-background-color);
+  color: var(--ifm-footer-color);
+}
+
+:root {
+  --ifm-navbar-background-color: #f0f0f0;
+}
+
+[data-theme='dark'] {
+  --ifm-navbar-background-color: #2c2c2c;
 }

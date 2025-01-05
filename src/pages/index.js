@@ -87,7 +87,38 @@ export default function Home() {
           </div>
           {!isDesktop ? (
             <div className="flex items-center content-center mx-auto align-center justify-center flex-wrap mt-4 gap-8 mb-4">
-              <Carousel showThumbs={false} showStatus={false}>
+              <Carousel
+                showThumbs={false}
+                showStatus={false}
+                renderArrowPrev={(clickHandler, hasPrev) => (
+                  hasPrev && (
+                    <button
+                      type="button"
+                      onClick={clickHandler}
+                      className="absolute left-0 z-10 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+                      aria-label="Previous slide"
+                    >
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                      </svg>
+                    </button>
+                  )
+                )}
+                renderArrowNext={(clickHandler, hasNext) => (
+                  hasNext && (
+                    <button
+                      type="button"
+                      onClick={clickHandler}
+                      className="absolute right-0 z-10 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+                      aria-label="Next slide"
+                    >
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                  )
+                )
+              }>
                 <div>
                   <img
                     className="rounded-xl max-w-[220px]"
@@ -140,7 +171,40 @@ export default function Home() {
             Building an open-source legacy, one commit at a time.
           </p>
           <div className="h-[200px] relative">
-            <Carousel showThumbs={false} showStatus={false} showIndicators={false} autoPlay={true} interval={5000}>
+            <Carousel
+              showThumbs={false}
+              showStatus={false}
+              showIndicators={false}
+              autoPlay={true}interval={5000}
+              renderArrowPrev={(clickHandler, hasPrev) => (
+                hasPrev && (
+                  <button
+                    type="button"
+                    onClick={clickHandler}
+                    className="absolute left-0 z-10 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+                    aria-label="Previous slide"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                )
+              )}
+              renderArrowNext={(clickHandler, hasNext) => (
+                hasNext && (
+                  <button
+                    type="button"
+                    onClick={clickHandler}
+                    className="absolute right-0 z-10 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+                    aria-label="Next slide"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                )
+              )
+            }>
               <div className="flex items-center justify-center h-full">
                 <iframe
                   src="https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff"
@@ -184,16 +248,16 @@ export default function Home() {
                     >
                       <a
                         href={`${post.id}`}
-                        className="group block h-full transition-transform duration-300 hover:scale-105"
+                        className="block h-full"
                       >
                         <div className="overflow-hidden rounded-xl mb-3">
                           <img
-                            className="w-full h-[180px] object-cover transition-transform duration-300 group-hover:scale-110"
+                            className="w-full h-[180px] object-cover transition-transform duration-300 hover:scale-110"
                             src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
                             alt={post.title}
                           />
                         </div>
-                        <h3 className="text-left text-sm font-semibold group-hover:text-blue-500 transition-colors duration-300">
+                        <h3 className="text-left text-sm font-semibold">
                           {post.title}
                         </h3>
                       </a>
@@ -228,10 +292,39 @@ export default function Home() {
               ))}
             </div>
           ) : (
-            <Carousel showThumbs={false} showStatus={false} showIndicators={false} autoPlay={true} interval={5000}>
+            <Carousel showThumbs={false} showStatus={false} showIndicators={false} autoPlay={true} interval={5000}
+            renderArrowPrev={(clickHandler, hasPrev) => (
+              hasPrev && (
+                <button
+                  type="button"
+                  onClick={clickHandler}
+                  className="absolute left-0 z-10 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+                  aria-label="Previous slide"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+              )
+            )}
+            renderArrowNext={(clickHandler, hasNext) => (
+              hasNext && (
+                <button
+                  type="button"
+                  onClick={clickHandler}
+                  className="absolute right-0 z-10 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+                  aria-label="Next slide"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              )
+            )}
+          >
               {postsHighlight.map((post) => (
                 <div key={post.id} className='!max-w-[260px] mx-auto text-center'>
-                  <a href={`${post.id}`} className="group block pt-8">
+                  <a href={`${post.id}`} className="group block pt-12">
                     <img
                       className="rounded-xl h-[120px] mx-auto object-cover"
                       src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
@@ -291,42 +384,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center rounded-[14px]">
+        <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center rounded-[14px] mb-8">
           <h1 className="mb-4 font-bold">My journey.</h1>
           <Timeline />
-        </div>
-
-        <div className="mx-auto mt-16 flex max-w-[880px] flex-col px-3 text-center mb-16">
-          <h1 className="_h1 !mb-2 font-bold">Let's catch up!</h1>
-          <div className="flex-none overflow-y-scroll rounded-sm text-center mx-auto text-lg p-2 pr-8 mb-2">
-            <span>
-              I am available for 15m calls as long as you set an agenda.
-            </span>
-            <p>(and it is not a sales call)</p>
-          </div>
-          <div className="flex justify-center items-center mx-auto mt-2">
-            <a
-              href="https://cal.com/didierlopes/15min"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="flex justify-center items-center mx-auto"
-            >
-              <div className="flex rounded-xl p-2 w-32 bg-[#0088CC] hover:bg-grey-200 hover:dark:bg-grey-200 hover:text-[#0088CC] hover:no-underline mx-auto text-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={101}
-                  height={22}
-                  fill="currentColor"
-                  className="mx-auto"
-                  title="Cal.com logo"
-                  aria-label="Cal.com logo"
-                  role="img"
-                >
-                  <path d="M10.058 20.817C4.321 20.817 0 16.277 0 10.67 0 5.046 4.1.468 10.058.468c3.163 0 5.351.971 7.061 3.195l-2.758 2.299c-1.159-1.234-2.556-1.85-4.303-1.85-3.88 0-6.013 2.97-6.013 6.558 0 3.588 2.336 6.503 6.013 6.503 1.729 0 3.2-.616 4.358-1.85l2.721 2.392c-1.636 2.13-3.88 3.102-7.079 3.102ZM29.016 5.886h3.714v14.575h-3.714v-2.13c-.772 1.514-2.06 2.523-4.523 2.523-3.935 0-7.08-3.42-7.08-7.624 0-4.205 3.145-7.624 7.08-7.624 2.445 0 3.75 1.009 4.523 2.522V5.886Zm.11 7.344c0-2.28-1.563-4.167-4.027-4.167-2.372 0-3.916 1.906-3.916 4.167 0 2.205 1.544 4.167 3.916 4.167 2.446 0 4.027-1.906 4.027-4.167ZM35.36 0h3.714v20.443H35.36V0ZM40.73 18.518c0-1.196.955-2.205 2.26-2.205a2.18 2.18 0 0 1 2.226 2.205c0 1.233-.938 2.242-2.225 2.242a2.231 2.231 0 0 1-2.262-2.242ZM59.43 18.107c-1.38 1.681-3.476 2.747-5.958 2.747-4.432 0-7.686-3.42-7.686-7.624 0-4.205 3.254-7.624 7.686-7.624 2.39 0 4.468 1.009 5.847 2.597l-2.868 2.41c-.717-.896-1.655-1.569-2.98-1.569-2.371 0-3.916 1.906-3.916 4.167s1.545 4.167 3.917 4.167c1.434 0 2.427-.747 3.163-1.757l2.795 2.486ZM59.742 13.23c0-4.205 3.255-7.624 7.686-7.624 4.432 0 7.686 3.42 7.686 7.624s-3.254 7.624-7.686 7.624c-4.431-.02-7.686-3.42-7.686-7.624Zm11.603 0c0-2.28-1.545-4.167-3.917-4.167-2.372-.019-3.916 1.887-3.916 4.167 0 2.26 1.544 4.167 3.916 4.167s3.917-1.906 3.917-4.167ZM100.232 11.548v8.895h-3.714v-7.98c0-2.522-1.177-3.606-2.942-3.606-1.655 0-2.832.823-2.832 3.607v7.979H87.03v-7.98c0-2.522-1.195-3.606-2.942-3.606-1.655 0-3.108.823-3.108 3.607v7.979h-3.714V5.868h3.714v2.018c.772-1.57 2.17-2.355 4.321-2.355 2.041 0 3.751 1.01 4.69 2.71.937-1.738 2.316-2.71 4.817-2.71 3.052.019 5.424 2.336 5.424 6.017Z" />
-                </svg>
-              </div>
-            </a>
-          </div>
         </div>
       </main>
     </Layout>

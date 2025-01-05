@@ -11,9 +11,10 @@ import Timeline from '../components/Timeline';
 export default function Home() {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
-  const [beehiivSrc, setBehiivSrc] = useState('');
-  const [githubSrc, setGithubSrc] = useState('');
-  const [githubChartSrc, setGithubChartSrc] = useState('');
+  const [beehiivSrc, setBehiivSrc] = useState('https://embeds.beehiiv.com/8a4b3599-3ce0-40ad-8586-910fd9a20ee4');
+  const [githubSrc, setGithubSrc] = useState('https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=fff&tc=000&ic=000&bc=000');
+  const [githubChartSrc, setGithubChartSrc] = useState('https://contribution.oooo.so/_/DidierRLopes?chart=calendar&format=png&weeks=20&theme=blue&widget_size=small');
+
 
   useEffect(() => {
     if (ExecutionEnvironment.canUseDOM) {

@@ -36,25 +36,52 @@ export default function Home() {
 
   useEffect(() => {
     if (ExecutionEnvironment.canUseDOM) {
-      const isDarkTheme = document.documentElement.getAttribute('data-theme') === 'dark';
-
-      setBehiivSrc(
-        isDarkTheme
-          ? 'https://embeds.beehiiv.com/8a4b3599-3ce0-40ad-8586-910fd9a20ee4'
-          : 'https://embeds.beehiiv.com/57f8fb43-3409-4d9a-9979-66489741be0c'
-      );
-
-      setGithubSrc(
-        isDarkTheme
-          ? 'https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff'
-          : 'https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=fff&tc=000&ic=000&bc=000'
-      );
-
-      setGithubChartSrc(
-        isDarkTheme
-          ? 'https://contribution.oooo.so/_/DidierRLopes?chart=calendar&format=png&weeks=20&theme=blue&widget_size=small&dark=true'
-          : 'https://contribution.oooo.so/_/DidierRLopes?chart=calendar&format=png&weeks=20&theme=blue&widget_size=small'
-      )
+      // Function to update sources based on theme
+      const updateSources = () => {
+        const isDarkTheme = document.documentElement.getAttribute('data-theme') === 'dark';
+  
+        setBehiivSrc(
+          isDarkTheme
+            ? 'https://embeds.beehiiv.com/8a4b3599-3ce0-40ad-8586-910fd9a20ee4'
+            : 'https://embeds.beehiiv.com/57f8fb43-3409-4d9a-9979-66489741be0c'
+        );
+  
+        setGithubSrc(
+          isDarkTheme
+            ? 'https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=000&tc=fff&ic=fff&bc=fff'
+            : 'https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=fff&tc=000&ic=000&bc=000'
+        );
+  
+        setGithubChartSrc(
+          isDarkTheme
+            ? 'https://contribution.oooo.so/_/DidierRLopes?chart=calendar&format=png&weeks=20&theme=blue&widget_size=small&dark=true'
+            : 'https://contribution.oooo.so/_/DidierRLopes?chart=calendar&format=png&weeks=20&theme=blue&widget_size=small'
+        );
+      };
+  
+      // Initial update
+      updateSources();
+  
+      // Create mutation observer
+      const observer = new MutationObserver((mutations) => {
+        for (const mutation of mutations) {
+          if (
+            mutation.type === 'attributes' &&
+            mutation.attributeName === 'data-theme'
+          ) {
+            updateSources();
+          }
+        }
+      });
+  
+      // Start observing
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['data-theme']
+      });
+  
+      // Cleanup
+      return () => observer.disconnect();
     }
   }, []);
 

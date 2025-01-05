@@ -201,7 +201,7 @@ export default function Home() {
           <p className="text-xl text-center sm:hidden block mb-4">
             Building an open-source legacy,<br />one commit at a time.
           </p>
-          <div className="h-[200px] relative">
+          <div className="mb-4">
             <Carousel
               showThumbs={false}
               showStatus={false}
@@ -237,14 +237,16 @@ export default function Home() {
                 )
               )
             }>
-              <picture className="flex justify-center">
-                <source srcSet={githubSrc} />
-                <img alt="" src="https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=fff&tc=000&ic=000&bc=000" style={{ maxWidth: '400px', margin: '0 auto' }} />
-              </picture>
-              <div className="flex items-center justify-center w-full">
+              <div className="flex items-center justify-center w-full pt-8">
+                <picture className="flex justify-center">
+                  <source srcSet={githubSrc} />
+                  <img alt="" src="https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=fff&tc=000&ic=000&bc=000" style={{ width: '700px' }} />
+                </picture>
+              </div>
+              <div className="flex items-center justify-center w-full pt-8">
                 <picture className="flex justify-center">
                   <source srcSet={githubChartSrc} />
-                  <img alt="" src={githubChartSrc} style={{ maxWidth: '400px', margin: '0 auto' }} />
+                  <img alt="" src={githubChartSrc} style={{ maxWidth: isDesktop ? '600px' : isTablet ? '500px' : '300px', margin: '0 auto' }} />
                 </picture>
               </div>
             </Carousel>

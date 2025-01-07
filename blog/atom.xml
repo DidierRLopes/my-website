@@ -2,12 +2,107 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://didierlopes.com/blog</id>
     <title>Didier Lopes Blog</title>
-    <updated>2025-01-04T00:00:00.000Z</updated>
+    <updated>2025-01-07T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://didierlopes.com/blog"/>
     <subtitle>Didier Lopes Blog</subtitle>
     <icon>https://didierlopes.com/img/favicon.ico</icon>
     <rights>Copyright © 2025 Didier Lopes.</rights>
+    <entry>
+        <title type="html"><![CDATA[Tracking my writing progress through an open source blog tracker generator]]></title>
+        <id>https://didierlopes.com/blog/tracking-my-writing-progress-through-an-open-source-blog-tracker-generator</id>
+        <link href="https://didierlopes.com/blog/tracking-my-writing-progress-through-an-open-source-blog-tracker-generator"/>
+        <updated>2025-01-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Learn how I built an open-source tool that generates beautiful SVG visualizations of your blog post history, supporting both JSON and ATOM XML feeds. Perfect for keeping yourself accountable and monitoring your writing progress over time.]]></summary>
+        <content type="html"><![CDATA[<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator.png"></p>
+<p>Learn how I built an open-source tool that generates beautiful SVG visualizations of your blog post history, supporting both JSON and ATOM XML feeds. Perfect for keeping yourself accountable and monitoring your writing progress over time.</p>
+<p>The open source code is available <a href="https://github.com/DidierRLopes/blog-history-generator">here</a>.</p>
+<!-- -->
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>As a developer, you measure your productivity based on the <del>amount</del> quality of code you produce.</p>
+<p>If we assume that the quality coming from an engineer remains constant (slightly improving) based on their current experience and continuously growing knowledge of the codebase, then we can assume that their productivity can be measured based on the amount of code they push into the codebase.</p>
+<p>As the founder of OpenBB, I don't have a lot of time to code (at least not as much as I used to).</p>
+<p>But I love programming, so I try to hop into Cursor at least once a day (every day). Sometimes I just don't have the bandwidth, but it's much easier to fall into that if you are not constantly reminding yourself that you haven't coded since x days ago.</p>
+<p>So, in order to keep myself accountable I bought a DeskHub which sits on my desk and I use to keep track of when I am shipping.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_1.jpeg"></p>
+<p>I am less interested in the quality and quantity, but that every day I open Cursor and do one of the following:</p>
+<ul>
+<li>Fix a small bug or improve UI/UX on OpenBB (usually during the day)</li>
+<li>Add a new feature (usually during evening as more time is required)</li>
+<li>Write a new post on my website, like this one (evenings or weekend)</li>
+<li>Do a side project (weekend or holidays)</li>
+</ul>
+<p>While this has been working for a while, I realized that - for me - writing is as important as coding.</p>
+<p>It not only helps me communicate better as a leader, but also (and more importantly) think more clearly.</p>
+<p>But I didn't have a way to track that I have been practicing writing and putting myself out there.</p>
+<p>So, I built one.</p>
+<p>I built a program that generates an SVG visualization of your blog post history - as long as you get your blog post history in ATOM XML or JSON feed.</p>
+<p>And open source it <a href="https://github.com/DidierRLopes/blog-history-generator" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<h2 id="blog-format">Blog format</h2>
+<div class="language-javascript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockTitle_Ktv7">Common interface that all formats must conform to</div><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-javascript codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv codeBlockLinesWithNumbering_o6Pm"><span class="token-line codeLine_lJS_" style="color:#F8F8F2"><span class="codeLineNumber_Tfdd"></span><span class="codeLineContent_feaV"><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">interface</span><span class="token plain"> </span><span class="token class-name">Post</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span></span><br></span><span class="token-line codeLine_lJS_" style="color:#F8F8F2"><span class="codeLineNumber_Tfdd"></span><span class="codeLineContent_feaV"><span class="token plain">  </span><span class="token literal-property property">id</span><span class="token operator">:</span><span class="token plain"> string</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span></span><br></span><span class="token-line codeLine_lJS_" style="color:#F8F8F2"><span class="codeLineNumber_Tfdd"></span><span class="codeLineContent_feaV"><span class="token plain">  </span><span class="token literal-property property">title</span><span class="token operator">:</span><span class="token plain"> string</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span></span><br></span><span class="token-line codeLine_lJS_" style="color:#F8F8F2"><span class="codeLineNumber_Tfdd"></span><span class="codeLineContent_feaV"><span class="token plain">  </span><span class="token literal-property property">url</span><span class="token operator">:</span><span class="token plain"> string</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span></span><br></span><span class="token-line codeLine_lJS_" style="color:#F8F8F2"><span class="codeLineNumber_Tfdd"></span><span class="codeLineContent_feaV"><span class="token plain">  </span><span class="token literal-property property">content_html</span><span class="token operator">:</span><span class="token plain"> string</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain">     </span><span class="token comment" style="color:rgb(98, 114, 164)">// Falls back to 'content' in some formats</span><span class="token plain"></span></span><br></span><span class="token-line codeLine_lJS_" style="color:#F8F8F2"><span class="codeLineNumber_Tfdd"></span><span class="codeLineContent_feaV"><span class="token plain">  </span><span class="token literal-property property">summary</span><span class="token operator">:</span><span class="token plain"> string</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain">           </span><span class="token comment" style="color:rgb(98, 114, 164)">// Falls back to 'excerpt' in some formats</span><span class="token plain"></span></span><br></span><span class="token-line codeLine_lJS_" style="color:#F8F8F2"><span class="codeLineNumber_Tfdd"></span><span class="codeLineContent_feaV"><span class="token plain">  </span><span class="token literal-property property">date_modified</span><span class="token operator">:</span><span class="token plain"> string</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain">  </span><span class="token comment" style="color:rgb(98, 114, 164)">// Falls back to date_published/date/updated/published</span><span class="token plain"></span></span><br></span><span class="token-line codeLine_lJS_" style="color:#F8F8F2"><span class="codeLineNumber_Tfdd"></span><span class="codeLineContent_feaV"><span class="token plain">  </span><span class="token literal-property property">tags</span><span class="token operator">:</span><span class="token plain"> string</span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain">                </span><span class="token comment" style="color:rgb(98, 114, 164)">// Defaults to [] if missing</span><span class="token plain"></span></span><br></span><span class="token-line codeLine_lJS_" style="color:#F8F8F2"><span class="codeLineNumber_Tfdd"></span><span class="codeLineContent_feaV"><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span></span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h2 id="examples">Examples</h2>
+<div class="tabs-container tabList__CuJ"><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_LNqP tabs__item--active">JSON</li><li role="tab" tabindex="-1" aria-selected="false" class="tabs__item tabItem_LNqP">ATOM XML</li></ul><div class="margin-top--md"><div role="tabpanel" class="tabItem_Ymn6"><p>Example: <a href="https://didierlopes.com/blog/feed.json" target="_blank" rel="noopener noreferrer"></a><a href="https://didierlopes.com/blog/feed.json">https://didierlopes.com/blog/feed.json</a></p><br><p align="center"><img width="900" src="https://didierlopes.com/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_2.png"></p></div><div role="tabpanel" class="tabItem_Ymn6" hidden=""><p>Example: <a href="https://simonwillison.net/tags/datasette.atom" target="_blank" rel="noopener noreferrer"></a><a href="https://simonwillison.net/tags/datasette.atom">https://simonwillison.net/tags/datasette.atom</a></p><br><p align="center"><img width="900" src="https://didierlopes.com/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_3.png"></p></div></div></div>
+<h2 id="quick-setup">Quick Setup</h2>
+<ol>
+<li>
+<p>Fork this <a href="https://github.com/DidierRLopes/blog-history-generator" target="_blank" rel="noopener noreferrer">repository</a>.</p>
+</li>
+<li>
+<p>Give the repo the correct permissions.</p>
+<ol>
+<li>Click on Settings.</li>
+<li>Then go into Actions and click General.</li>
+<li>Scroll down and in Workflow permissions set "Read and write permissions".</li>
+</ol>
+</li>
+</ol>
+<br>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_4.png"></p>
+<ol start="3">
+<li>Run the workflow.<!-- -->
+<ol>
+<li>Click on Actions.</li>
+<li>Click on "Generate Blog History" on the left side.</li>
+<li>On the right side click on "Run workflow".</li>
+<li>A blog feed URL will be required to run this (e.g. <a href="https://didierlopes.com/blog/feed.json">https://didierlopes.com/blog/feed.json</a> or <a href="https://simonwillison.net/tags/datasette.atom">https://simonwillison.net/tags/datasette.atom</a>).</li>
+<li>Click "Run workflow".</li>
+</ol>
+</li>
+</ol>
+<br>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_5.png"></p>
+<p>That's it.</p>
+<p>The SVG will be available here: <a href="https://didierlopes.com/blog/output/blog-history.svg">./output/blog-history.svg</a>.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_6.png"></p>
+<h2 id="more-customization">More customization</h2>
+<p>If you want further customization, you need to:</p>
+<ol>
+<li>
+<p>Clone this repository.</p>
+</li>
+<li>
+<p>Install dependencies.</p>
+</li>
+</ol>
+<pre><code>npm install
+</code></pre>
+<ol start="3">
+<li>Run script.</li>
+</ol>
+<pre><code>npm run generate
+</code></pre>
+<h2 id="interactive">Interactive</h2>
+<p>If for some reason you want this widget to be interactive, you can check <a href="https://github.com/DidierRLopes/my-website/blob/main/src/components/BlogHistory.tsx">this</a> which is the one I used to integrate into <a href="https://didierlopes.com/">my homepage</a>.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_7.png"></p>]]></content>
+        <category label="writing" term="writing"/>
+        <category label="productivity" term="productivity"/>
+        <category label="open source" term="open source"/>
+        <category label="svg" term="svg"/>
+        <category label="visualization" term="visualization"/>
+        <category label="blog" term="blog"/>
+        <category label="tracking" term="tracking"/>
+        <category label="metrics" term="metrics"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Building an AI agent from scratch that can post on bluesky]]></title>
         <id>https://didierlopes.com/blog/building-an-ai-agent-from-scratch-that-can-post-on-bluesky</id>

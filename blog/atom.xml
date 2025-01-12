@@ -2,12 +2,55 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://didierlopes.com/blog</id>
     <title>Didier Lopes Blog</title>
-    <updated>2025-01-07T00:00:00.000Z</updated>
+    <updated>2025-01-09T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://didierlopes.com/blog"/>
     <subtitle>Didier Lopes Blog</subtitle>
     <icon>https://didierlopes.com/img/favicon.ico</icon>
     <rights>Copyright © 2025 Didier Lopes.</rights>
+    <entry>
+        <title type="html"><![CDATA[The cost of building software is plummeting to zero]]></title>
+        <id>https://didierlopes.com/blog/the-cost-of-building-software-is-plummeting-to-zero</id>
+        <link href="https://didierlopes.com/blog/the-cost-of-building-software-is-plummeting-to-zero"/>
+        <updated>2025-01-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[AI is revolutionizing software development costs and shifting value creation in the financial industry. I talk about the growing importance of data infrastructure, the rise of customizable solutions, and how OpenBB Workspace enables firms to build specialized AI-powered financial tools.]]></summary>
+        <content type="html"><![CDATA[<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-01-09-the-cost-of-building-software-is-plummeting-to-zero.png"></p>
+<p>AI is revolutionizing software development costs and shifting value creation in the financial industry. I talk about the growing importance of data infrastructure, the rise of customizable solutions, and how OpenBB Workspace enables firms to build specialized AI-powered financial tools.</p>
+<p>The cost of building software is plummeting to zero—and it's happening faster than anyone predicted.</p>
+<p>AI isn't just transforming software development; it's completely rewriting the rules of the game. What once took months and millions now takes days and thousands.</p>
+<p>But here's the critical insight: this seismic shift is redistributing where value is created.</p>
+<p>Traditional desktop financial applications? They're becoming commodities. The real value is migrating rapidly to the data layer, the foundation beneath the application.</p>
+<p>Look at Snowflake's meteoric rise in financial services. It's not just adoption; it's a fundamental restructuring of how the industry manages and leverages data.</p>
+<p>So how do you build lasting value in this new landscape?</p>
+<p>The answer is threefold:</p>
+<ol>
+<li>Provide flexible, customizable infrastructure</li>
+<li>Embrace open-source and on-premise deployment</li>
+<li>Enable seamless integration of proprietary datasets</li>
+</ol>
+<br>
+<p>But 2025 brings an even more transformative opportunity: AI agents that can be built on top of these applications, creating hyper-specialized workflows that adapt to each user's needs.</p>
+<p>While we're still under wraps about some of our client work, here's a concrete example: During the holiday break, our Director of Engineering showcased the future of portfolio management.</p>
+<p>Using OpenBB Workspace, he built a sophisticated portfolio optimization system that:</p>
+<ul>
+<li>Integrates his proprietary (and sensitive) portfolio data</li>
+<li>Leverages a custom AI agent for risk analysis</li>
+<li>Automatically rebalances his portfolio based on complex criteria</li>
+</ul>
+<p>This isn't just a tool - it's a glimpse into how OpenBB Workspace can transform entire departments within investment firms.</p>
+<p>This 6-minute demo of OpenBB Workspace is one of the most compelling I’ve seen.</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/K80ayaZYyk4?si=IA9sNtq2figh1k5m" width="800" height="400"></iframe></div>
+<br>
+<p>The future of financial software is here.</p>]]></content>
+        <category label="ai" term="ai"/>
+        <category label="software development" term="software development"/>
+        <category label="fintech" term="fintech"/>
+        <category label="data infrastructure" term="data infrastructure"/>
+        <category label="open source" term="open source"/>
+        <category label="snowflake" term="snowflake"/>
+        <category label="openbb" term="openbb"/>
+        <category label="portfolio optimization" term="portfolio optimization"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Tracking my writing progress through an open source blog tracker generator]]></title>
         <id>https://didierlopes.com/blog/tracking-my-writing-progress-through-an-open-source-blog-tracker-generator</id>

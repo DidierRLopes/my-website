@@ -44,7 +44,9 @@ I remember when we were kids I told one of my friends jokingly "if you do x, I w
 
 More recently, I promised my friends that if the open source project I had started (Gamestonk Terminal) ever became a company, I'd cover a two-week stay accommodation in Bali. When <a href="https://openbb.co/blog/gme-didnt-take-me-to-the-moon-but-gamestonk-terminal-did" target="_blank" rel="noopener noreferrer">OpenBB raised money</a>, I let them know and we booked that trip for the following year.
 
-IMAGE OF BALIa
+<p align="center">
+    <img width="600" src="/blog/2025-01-xx-what-it-means-to-have-skin-in-the-game_2.JPG"/>
+</p>
 
 That wasn’t just talk. It was a real promise, tied to real accountability.
 

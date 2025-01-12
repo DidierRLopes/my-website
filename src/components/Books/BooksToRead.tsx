@@ -452,6 +452,11 @@ const data = [
 		title: "The Art of Doing Science and Engineering: Learning to Learn",
 		author: "Richard W. Hamming",
 		image: "/books/the-art-of-doing-science-and-engineering-learning-to-learn.jpg",
+	},
+	{
+		title: "Thinking in Systems",
+		author: "Donella H. Meadows",
+		image: "/books/thinking-in-systems.jpg",
 	}
 ];
 

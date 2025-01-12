@@ -45,6 +45,9 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/DidierRLopes/my-website/tree/main/',
+          typography: {
+            fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif',
+          },
         },
         blog: {
           blogTitle: 'Blog',

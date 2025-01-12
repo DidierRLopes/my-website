@@ -24,7 +24,7 @@ The pendulum of software development has swung between open and closed source fo
 
 The traditional moat of proprietary software companies – their secret sauce of complex codebases built over years with massive engineering teams – is rapidly eroding.
 
-AI tools are democratizing software development to an unprecedented degree (wrote a small post about this recently <a href="/blog/the-cost-of-building-software-is-plummeting-to-zero/" target="_blank" rel="noopener noreferrer">here</a>). A small team can now accomplish what previously required hundreds of engineers, dramatically reducing the cost and complexity of building sophisticated software systems.
+AI tools are democratizing software development to an unprecedented degree (wrote a small post about this recently <a href="https://didierlopes.com/blog/the-cost-of-building-software-is-plummeting-to-zero/" target="_blank" rel="noopener noreferrer">here</a>). A small team can now accomplish what previously required hundreds of engineers, dramatically reducing the cost and complexity of building sophisticated software systems.
 
 What's particularly interesting is how AI itself has been trained on vast repositories of open source code. This creates a virtuous cycle: more open source code leads to better AI models, which in turn makes it easier to contribute to and build upon open source projects. The barriers to entry for meaningful code contributions have never been lower.
 

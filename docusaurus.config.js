@@ -83,7 +83,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/goku.png',
       navbar: {
-        title: 'Didier Rodrigues Lopes',
+        title: 'Didier Lopes',
         logo: {
           alt: 'Goku NFT',
           src: 'img/goku.png',

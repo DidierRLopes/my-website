@@ -116,6 +116,11 @@ const config = {
             label: 'Resume',
             to: '/resume/experience',
           },
+          {
+            position: 'right',
+            label: 'Newsletter',
+            to: '/newsletter',
+          },
         ],
       },
       prism: {

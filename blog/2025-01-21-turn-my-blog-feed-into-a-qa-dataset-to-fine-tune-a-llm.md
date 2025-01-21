@@ -1,17 +1,16 @@
 ---
 slug: turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm
 title: Turn my blog feed into a QA dataset to fine-tune a LLM
-date: 2025-01-10
-image: /blog/2025-01-10-turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm
+date: 2025-01-21
+image: /blog/2025-01-21-turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm
 tags: ['artificial intelligence', 'machine learning', 'llm', 'dataset', 'hugging face', 'ollama', 'llama', 'fine-tuning', 'qa', 'blog']
 description: This project converts blog feed content into a structured Question-Answer dataset using LLaMA 3.2 (via Ollama) for local processing. The generated dataset follows a conversational format and can be automatically pushed to Hugging Face.
 hideSidebar: true
-unlisted: true
 
 ---
 
 <p align="center">
-    <img width="900" src="/blog/2025-01-10-turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm.png"/>
+    <img width="900" src="/blog/2025-01-21-turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm.png"/>
 </p>
 
 This project converts blog feed content into a structured Question-Answer dataset using LLaMA 3.2 (via Ollama) for local processing. The generated dataset follows a conversational format and can be automatically pushed to Hugging Face.
@@ -70,7 +69,7 @@ In this case, we want to run `llama3.2:latest` (https://ollama.com/library/llama
 </CodeBlock>
 
 <p align="center">
-    <img width="900" src="/blog/2025-01-10-turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm_1.png"/>
+    <img width="900" src="/blog/2025-01-21-turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm_1.png"/>
 </p>
 
 Then, we can check that the model has been downloaded with:
@@ -80,7 +79,7 @@ Then, we can check that the model has been downloaded with:
 </CodeBlock>
 
 <p align="center">
-    <img width="900" src="/blog/2025-01-10-turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm_2.png"/>
+    <img width="900" src="/blog/2025-01-21-turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm_2.png"/>
 </p>
 
 Finally, we can test that it works with:
@@ -90,7 +89,7 @@ Finally, we can test that it works with:
 </CodeBlock>
 
 <p align="center">
-    <img width="900" src="/blog/2025-01-10-turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm_3.png"/>
+    <img width="900" src="/blog/2025-01-21-turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm_3.png"/>
 </p>
 
 #### 3. Configure Hugging Face
@@ -153,7 +152,7 @@ Below you can see the feed structure being used - which is the default coming fr
 This is what the dataset will look like in HuggingFace: https://huggingface.co/datasets/didierlopes/my-blog-qa-dataset/viewer.
 
 <p align="center">
-    <img width="900" src="/blog/2025-01-10-turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm_4.png"/>
+    <img width="900" src="/blog/2025-01-21-turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm_4.png"/>
 </p>
 
 <br />

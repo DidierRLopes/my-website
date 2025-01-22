@@ -107,7 +107,7 @@ However, we build these relationships differently:
 
 ## Why this matters
 
-Our approach is already showing results. With a team ratio of 12 developers to 17 total team members, we've achieved what others do with massive sales forces. We've reached over 80,000 users through a combination of organic growth and strategic enterprise partnerships.
+Our approach is already showing results. With a team ratio of 12 developers to 17 total team members, we've achieved what others do with massive sales forces. We're close to crossing 80,000 users through a combination of organic growth and strategic enterprise partnerships.
 
 We want users to become advocates for OpenBB before they ever pay us a cent. When companies choose to pay for our enterprise solutions, it's because both their teams love the product AND their executives see clear organizational value – creating a perfect alignment of bottom-up enthusiasm and top-down support.
 
@@ -117,4 +117,14 @@ This is just the beginning. Our commitment to open source and product-led sales 
 
 By maintaining our focus on building exceptional products and fostering genuine relationships at all levels of an organization, we're not just growing a company – we're transforming how the financial industry thinks about software.
 
-What are you waiting for to give us a try?
+<p align="center">
+  <a href="https://www.producthunt.com/golden-kitty-awards/finance-tech-2" target="_blank">
+    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=491158&theme=dark" 
+         alt="OpenBB&#0032;Terminal&#0032;2&#0046;0 - Open&#0032;source&#0032;investment&#0032;research&#0032;platform | Product Hunt" 
+         style={{width: '250px', height: '54px'}}/>
+  </a>
+</p>
+
+If you read this far, I'd love if I could count on you to upvote OpenBB on the Finance Tech category of the Golden Kitty Awards from Product Hunt.
+
+Thank you.

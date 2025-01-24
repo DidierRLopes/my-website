@@ -441,7 +441,9 @@ export default function BooksAlreadyRead() {
 	return (
 		<>
 			<p>
-				Not all the books I have read, but the ones I have enjoyed the most.
+				Most of the books I have read or listened to. 
+				<br />
+				Here's a thread with the ones I read in <a href="https://x.com/didier_lopes/status/1615510616025993217" target="_blank" rel="noopener noreferrer">2023</a>, in <a href="https://x.com/didier_lopes/status/1742748040220328189" target="_blank" rel="noopener noreferrer">2024</a> and in <a href="https://x.com/didier_lopes/status/1882635148694606134" target="_blank" rel="noopener noreferrer">2025</a>.
 			</p>
 			<BooksList books={data} />
 		</>

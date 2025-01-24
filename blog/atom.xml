@@ -2,12 +2,87 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://didierlopes.com/blog</id>
     <title>Didier Lopes Blog</title>
-    <updated>2025-01-21T00:00:00.000Z</updated>
+    <updated>2025-01-24T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://didierlopes.com/blog"/>
     <subtitle>Didier Lopes Blog</subtitle>
     <icon>https://didierlopes.com/img/favicon.ico</icon>
     <rights>Copyright © 2025 Didier Lopes.</rights>
+    <entry>
+        <title type="html"><![CDATA[Building a developer friendly interface for financial analysts]]></title>
+        <id>https://didierlopes.com/blog/building-a-developer-friendly-interface-for-financial-analysts</id>
+        <link href="https://didierlopes.com/blog/building-a-developer-friendly-interface-for-financial-analysts"/>
+        <updated>2025-01-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In the financial software industry, there's a well-worn playbook - build proprietary software, deploy large sales teams, and leverage executive relationships. At OpenBB, we're taking a fundamentally different approach - creating open-source financial tools that users genuinely love to use.]]></summary>
+        <content type="html"><![CDATA[<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts.png"></p>
+<p>It's an open, AI-native application that unifies data, streamlines workflows, and delivers enterprise-grade collaboration and control for teams of all sizes</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p><strong>What is the OpenBB Workspace, and how is it reimagining financial analysis?</strong></p>
+<p>Our workspace represents a paradigm shift in financial analysis - a unified platform that combines enterprise-grade power with an interface users love. We've created an ecosystem that doesn't just solve today's challenges in data integration and analysis - it anticipates tomorrow's needs.</p>
+<h3 id="collaborative">Collaborative</h3>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts_1.png"></p>
+<p>The OpenBB workspace combines three essential pillars that transform how teams work with financial data:</p>
+<ul>
+<li>
+<p><strong>Empowering analysts</strong>: Break free from technical constraints - analysts can create sophisticated workflows and dynamic dashboards with an intuitive interface, accelerating time-to-insight without writing a single line of code.</p>
+</li>
+<li>
+<p><strong>Unmatched security and control</strong>: Enterprise-grade security meets operational flexibility with on-premises deployment options, granular access controls, and complete audit trails that satisfy the most stringent compliance requirements.</p>
+</li>
+<li>
+<p><strong>Truly collaborative platform</strong>: Transform siloed analysis into synchronized teamwork with real-time collaboration features that enable instant sharing, live co-editing, and seamless knowledge transfer across teams.</p>
+</li>
+</ul>
+<h3 id="unified-data-integration">Unified data integration</h3>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts_2.png"></p>
+<p>Our open source data integration framework (<a href="https://github.com/OpenBB-finance/backend-for-terminal-pro" target="_blank" rel="noopener noreferrer">open source repository here</a>) supports:</p>
+<ul>
+<li>
+<p><strong>Open ecosystem for developers</strong>: Drive innovation with our MIT-licensed framework - developers can rapidly build and deploy custom widgets that seamlessly integrate any data source, from proprietary feeds to public datasets.</p>
+</li>
+<li>
+<p><strong>Data agnostic</strong>: No data left behind - our platform effortlessly handles any financial data type, from traditional equities to crypto assets, adapting to your evolving analytical needs.</p>
+</li>
+<li>
+<p><strong>Built for scale</strong>: Enterprise-ready architecture that scales with your ambition - analyze thousands of datasets simultaneously, build complex dashboards, and leverage AI seamlessly.</p>
+</li>
+</ul>
+<h3 id="ai-powered-intelligence">AI-powered intelligence</h3>
+<p>A single interface that transforms complex financial analysis into an intuitive, powerful experience.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts_3.png"></p>
+<p>Our open agentic framework (<a href="https://github.com/OpenBB-finance/copilot-for-openbb" target="_blank" rel="noopener noreferrer">open source repository here</a>) delivers intelligent capabilities through three key pillars:</p>
+<ul>
+<li>
+<p><strong>Integrated  intelligence</strong>: Experience seamless AI augmentation that enhances rather than disrupts - AI agents work invisibly alongside your team, amplifying capabilities while maintaining absolute data privacy and security.</p>
+</li>
+<li>
+<p><strong>Tailored and secure</strong>: Purpose-built AI systems that understand the nuances of financial data - delivering precise, context-aware insights while maintaining security standards and complete control over your data.</p>
+</li>
+<li>
+<p><strong>Transparent and actionable</strong>: AI you can trust and verify - every insight comes with clear reasoning and sourcing, automatically integrated into your dashboards for immediate action and impact.</p>
+</li>
+</ul>
+<h2 id="unified-workspace">Unified Workspace</h2>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts.png"></p>
+<p>We have organically grown our user base to nearly 80,000 through strategic partnerships and an unwavering commitment to user experience.</p>
+<p>We're not just building software – we're pioneering a future where financial tools are:</p>
+<ul>
+<li>Loved by users for their intuitive design and powerful capabilities</li>
+<li>Trusted by organizations for enterprise-grade security and control</li>
+<li>Designed for seamless, real-world collaboration at any scale</li>
+</ul>
+<p align="center"><a href="https://www.producthunt.com/golden-kitty-awards/finance-tech-2" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=491158&amp;theme=dark" alt="OpenBB Terminal 2.0 - Open source investment research platform | Product Hunt" style="width:250px;height:54px"></a></p>
+<p>If you read this far, we'd appreciate your vote in the <a href="https://www.producthunt.com/golden-kitty-awards/finance-tech-2">Finance Tech category of the Golden Kitty Awards on Product Hunt</a>.</p>
+<p>Thank you.</p>]]></content>
+        <category label="openbb" term="openbb"/>
+        <category label="plg" term="plg"/>
+        <category label="pls" term="pls"/>
+        <category label="open-source" term="open-source"/>
+        <category label="fintech" term="fintech"/>
+        <category label="ux" term="ux"/>
+        <category label="sales" term="sales"/>
+        <category label="startup" term="startup"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Turn my blog feed into a QA dataset to fine-tune a LLM]]></title>
         <id>https://didierlopes.com/blog/turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm</id>

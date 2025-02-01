@@ -1,17 +1,16 @@
 ---
 slug: what-it-means-to-have-skin-in-the-game
 title: What it means to have skin in the game
-date: 2025-01-20
-image: /blog/2025-01-20-what-it-means-to-have-skin-in-the-game
-tags: ['openbb', 'plg', 'pls', 'open-source', 'fintech', 'ux', 'sales', 'startup']
+date: 2025-01-30
+image: /blog/2025-01-30-what-it-means-to-have-skin-in-the-game
+tags: ['openbb', 'leadership', 'accountability', 'commitment', 'startup']
 description: From getting the OpenBB logo tattooed to honoring a promise of a Bali trip, this is a personal reflection on what it truly means to have "skin in the game". It's not about reckless commitment, but about standing fully behind your words and actions - a principle that's shaped both my personal life and my approach to building OpenBB.
 hideSidebar: true
-unlisted: true
 
 ---
 
 <p align="center">
-    <img width="900" src="/blog/2025-01-xx-what-it-means-to-have-skin-in-the-game.png"/>
+    <img width="900" src="/blog/2025-01-30-what-it-means-to-have-skin-in-the-game.png"/>
 </p>
 
 From getting the OpenBB logo tattooed to honoring a promise of a Bali trip, this is a personal reflection on what it truly means to have "skin in the game". It's not about reckless commitment, but about standing fully behind your words and actions - a principle that's shaped both my personal life and my approach to building OpenBB.
@@ -23,7 +22,7 @@ From getting the OpenBB logo tattooed to honoring a promise of a Bali trip, this
 I just finished reading Nassim Taleb's "Skin in the Game," and it hit home in a big way. (PS: you can find more books that I've read over the years <a href="/books/already-read" target="_blank" rel="noopener noreferrer">here</a>).
 
 <p align="center">
-    <img width="600" src="/blog/2025-01-xx-what-it-means-to-have-skin-in-the-game_1.png"/>
+    <img width="600" src="/blog/2025-01-30-what-it-means-to-have-skin-in-the-game_1.png"/>
 </p>
 
 The idea of having real stakes in your decisions isn’t new to me – it’s something I’ve lived by for as long as I can remember. Taleb’s writing puts it into words beautifully, but for me, this has always been a way of life.
@@ -31,7 +30,7 @@ The idea of having real stakes in your decisions isn’t new to me – it’s so
 I believe in going all-in on what matters. In fact, I’m so committed to this philosophy that I have OpenBB logo tattooed on my body.
 
 <p align="center">
-    <img width="600" src="/blog/2025-01-xx-what-it-means-to-have-skin-in-the-game.png"/>
+    <img width="600" src="/blog/2025-01-30-what-it-means-to-have-skin-in-the-game.png"/>
 </p>
 
 It’s not about showing off or trying to prove something. It’s a reminder that when I’m in, I’m all the way in. No half measures, no excuses. This isn’t about taking wild risks for the sake of it – it’s about standing behind what you believe in, fully and without hesitation.
@@ -45,7 +44,7 @@ I remember when we were kids I told one of my friends jokingly "if you do x, I w
 More recently, I promised my friends that if the open source project I had started (Gamestonk Terminal) ever became a company, I'd cover a two-week stay accommodation in Bali. When <a href="https://openbb.co/blog/gme-didnt-take-me-to-the-moon-but-gamestonk-terminal-did" target="_blank" rel="noopener noreferrer">OpenBB raised money</a>, I let them know and we booked that trip for the following year.
 
 <p align="center">
-    <img width="600" src="/blog/2025-01-xx-what-it-means-to-have-skin-in-the-game_2.JPG"/>
+    <img width="600" src="/blog/2025-01-30-what-it-means-to-have-skin-in-the-game_2.JPG"/>
 </p>
 
 That wasn’t just talk. It was a real promise, tied to real accountability.

@@ -15,12 +15,13 @@ hideSidebar: true
 
 It's an open, AI-native application that unifies data, streamlines workflows, and delivers enterprise-grade collaboration and control for teams of all sizes
 
+<!-- truncate -->
+
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 **What is the OpenBB Workspace, and how is it reimagining financial analysis?**
 
 Our workspace represents a paradigm shift in financial analysis - a unified platform that combines enterprise-grade power with an interface users love. We've created an ecosystem that doesn't just solve today's challenges in data integration and analysis - it anticipates tomorrow's needs.
-
 
 ### Collaborative
 

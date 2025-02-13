@@ -435,6 +435,11 @@ const data = [
 		author: "Michael Lewis",
 		image: "/books/liars-poker-rising-through-the-wreckage-on-wall-street.jpg",
 	},
+	{
+		title: "Thinking in Systems",
+		author: "Donella H. Meadows",
+		image: "/books/thinking-in-systems.jpg",
+	}
 ];
 
 export default function BooksAlreadyRead() {

@@ -5,6 +5,15 @@ const data = [
 	{
 		title: "PANEL DISCUSSION: ChatGPT & The Future of AI in Finance",
 		description:
+			"With Professor Francesco Fabozzi, Yale University, Didier Lopes, OpenBB and Dan Joldzic, Alexandria Technology, moderated by Christos Koutsoyannis, Atlas Ridge Capital. Join leading practitioners for a discussion on the practical applications of unstructured data in quant trading. This session will address the opportunities and nuances of deploying these models, including data sourcing, processing, and integration.",
+		date: "2025-02-12",
+		location: "Eagle Alpha's New York Alternative Data Conference 2025",
+		image: "/media/eagle-alpha-conference-2025.jpg",
+		info: "More information on the event can be found <a href='https://www.eaglealpha.com/2024/05/12/alt-data-conference-february-2025/' target='_blank' rel='noopener noreferrer'>here</a>.",
+	},
+	{
+		title: "PANEL DISCUSSION: The Opportunities And Nuances of Deploying Unstructured Data In Quant Trading Models",
+		description:
 			"Yu Yu - Director of Data Science at BlackRock, Tony Berkman - Managing Director at Two Sigma, Samson Qian - Citadel, Didier Rodrigues Lopes - Founder and CEO @ OpenBB",
 		date: "2024-09-14",
 		location: "Cornell Financial Engineering Manhattan",

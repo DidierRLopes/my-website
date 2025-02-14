@@ -3,6 +3,13 @@ import VideosList from "../General/VideosList";
 
 const data = [
 	{
+		title: "It's Just Function Calling",
+		embed: "https://www.youtube.com/embed/gH1mMtRa84Y?si=fc3ClW3RrbqDk9Rt",
+		description: "In this presentation, Didier goes over what happens under the hood in OpenBB Copilot.",
+		date: "2025-02-12",
+		time: "13 minutes",
+	},
+	{
 		title: "Webinar - The Next Chapter: AI Meets the OpenBB Terminal",
 		embed: "https://www.youtube.com/embed/QSpMrj947G8?si=-s_qxg6ldiPJQaPb",
 		description:

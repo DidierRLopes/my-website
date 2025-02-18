@@ -2,12 +2,194 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://didierlopes.com/blog</id>
     <title>Didier Lopes Blog</title>
-    <updated>2025-01-30T00:00:00.000Z</updated>
+    <updated>2025-02-18T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://didierlopes.com/blog"/>
     <subtitle>Didier Lopes Blog</subtitle>
     <icon>https://didierlopes.com/img/favicon.ico</icon>
     <rights>Copyright © 2025 Didier Lopes.</rights>
+    <entry>
+        <title type="html"><![CDATA[Long live long context with Gemini]]></title>
+        <id>https://didierlopes.com/blog/2025-02-18-long-live-long-context-with-gemini</id>
+        <link href="https://didierlopes.com/blog/2025-02-18-long-live-long-context-with-gemini"/>
+        <updated>2025-02-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A practical exploration of using Gemini's long context window capabilities to analyze multi-page documents, featuring a Streamlit app for testing and iterating prompts.]]></summary>
+        <content type="html"><![CDATA[<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-02-18-long-live-long-context-with-gemini.png"></p>
+<p>A practical exploration of using Gemini's long context window capabilities to analyze multi-page documents, featuring a Streamlit app for testing and iterating prompts.</p>
+<p>Learn how to move beyond traditional RAG approaches for document analysis and leverage the power of large context windows for more accurate information retrieval.</p>
+<p>The open source code is available <a href="https://github.com/DidierRLopes/long-live-long-context">here</a>.</p>
+<!-- -->
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<h2 id="introduction">Introduction</h2>
+<p>Last week, a friend of mine was mentioning an interesting challenge that they had. They had to handle multiple documents with over 200-300 pages each with text, tables and images. Their current process of doing this with RAG wasn't leading to the best results and it was very time consuming when analyzing the results. But also there wasn't a systematic approach being taken to improve the prompt for data retrieval (e.g. few-shot prompt).</p>
+<p>Given that I had been reading about people saying that "RAG is dead" because of Gemini models havign 1M+ input context, I wanted to test this model myself. At the same time I wanted to help my friend in setting up a pipeline that would help them automating their data retrieval pipeline.</p>
+<p>This post is going to focus on the approach I took, why and how you can set it up yourself.</p>
+<p>Note: This isn't meant to be a production ready pipeline, but enable you to "vibe test" your ingestion pipeline + data retrieval model + prompts. Funnily enough, this was mostly built in a day through <em>vibe coding</em> (Karpathy's coined the term recently).</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-02-18-long-live-long-context-with-gemini_1.png"></p><p align="center" class="mt-1" style="font-size:0.75em"><a href="https://x.com/karpathy/status/1886192184808149383" target="_blank" rel="noopener noreferrer">Karpathy tweet</a></p><p></p>
+<h2 id="starting-point">Starting point</h2>
+<p>This is what my friend sent me:</p>
+<ul>
+<li>Complex PDFs with 200 pages comprised of text, images and tables</li>
+<li>An Excel spreadsheet with rows corresponding to values that were being attempted to retrieve and columns including prompt, value returned and correct value.</li>
+</ul>
+<p>The Excel spreadsheet effectively served as eval, which enabled them to understand whether a better model/pipeline would lead to better results or not. However, this process was very manual.</p>
+<p>The equivalent here is the following:</p>
+<ul>
+<li>
+<p>I will be using the following documents: <a href="https://github.com/DidierRLopes/long-live-long-context/blob/main/DeepSeek_R1.pdf">DeepSeek_R1 paper</a> and <a href="https://github.com/DidierRLopes/long-live-long-context/blob/main/ME-cio-weekly-letter.pdf">Capital Market Outlook report</a>. I just had these two at hand to serve as an example.</p>
+</li>
+<li>
+<p>I won't be using an Excel spreadsheet, but instead will rely on files in a directory called <code>data</code> within the project.</p>
+</li>
+</ul>
+<p>Here are the prompts that I'm going to test:</p>
+<table><thead><tr><th>idx</th><th>ID</th><th>Prompt</th><th>Expected Result</th></tr></thead><tbody><tr><td>0</td><td>Consumer Discretionary vs Consumer Staples comparison cap-weighted</td><td>By how much did Consumer Discretionary outperform Consumer Staples over the last three months on cap-weighted?</td><td>+17%</td></tr><tr><td>1</td><td>Consumer Discretionary vs Consumer Staples comparison equal-weighted</td><td>By how much did Consumer Discretionary outperform Consumer Staples over the last three months on equal-weighted?</td><td>+13%</td></tr><tr><td>2</td><td>Fed funds rate Q4 2024E</td><td>What is the Fed funds rate, end period (%) for Q4 2024E?</td><td>4.38</td></tr><tr><td>3</td><td>DeepSeek-R1-Zero GPQA Diamond pass@1</td><td>What was DeepSeek-R1-Zero GPQA Diamond pass@1 benchmark?</td><td>73.3</td></tr><tr><td>4</td><td>DeepSeek V3 C-SimpleQA</td><td>What was DeepSeek V3 C-SimpleQA bemchmark?</td><td>68.0%</td></tr><tr><td>5</td><td>Number of reasoning related training samples</td><td>How many reasoning related training samples were collected?</td><td>600k</td></tr></tbody></table>
+<p>Note: Prompts 0-2 can be found in Capital Market Outlook report whilst prompts 3-5 in DeepSeek R1 paper.</p>
+<h2 id="setting-up-this-experiment">Setting up this experiment</h2>
+<h3 id="architecture">Architecture</h3>
+<p>Create a folder called data with the following structure:</p>
+<pre><code class="language-bash">data/
+├── system_prompt.txt
+├── 0/
+│   ├── id.txt
+│   ├── prompt.txt
+│   └── expected.txt
+└── 1/
+    ├── id.txt
+    ├── prompt.txt
+    └── expected.txt
+</code></pre>
+<p>See our example <a href="https://github.com/DidierRLopes/long-live-long-context/tree/main/data">here</a>.</p>
+<p>Let's go through each of these:</p>
+<h3 id="system-prompt">System prompt</h3>
+<p>Contains the system prompt to be used throughout entire application in a <code>system_prompt.txt</code> file.</p>
+<p align="center"><img width="1200" src="https://didierlopes.com/blog/2025-02-18-long-live-long-context-with-gemini_2.png"></p>
+<h3 id="prompt">Prompt</h3>
+<p>Each prompt will have a folder with the idx in the order of it being run - e.g. 0, 1, 2, ...</p>
+<p>Inside this folder you will find 3 files: <code>id.txt</code>, <code>prompt.txt</code> and <code>expected.txt</code>. Note that this follows the table that we displayed above.</p>
+<h4 id="id">ID</h4>
+<p>Contains an identifier that we can use to understand what prompt that is. This can be a slug of the prompt, a KPI number or anything else. It doesn't affect anything apart from helping user to be able to distinguish more easily between prompts at a higher level.</p>
+<p align="center"><img width="1200" src="https://didierlopes.com/blog/2025-02-18-long-live-long-context-with-gemini_3.png"></p>
+<h4 id="prompt-1">Prompt</h4>
+<p>Contains the actual prompt to run through all the documents that have been loaded.</p>
+<p align="center"><img width="1200" src="https://didierlopes.com/blog/2025-02-18-long-live-long-context-with-gemini_4.png"></p>
+<h4 id="expected">Expected</h4>
+<p>Contains the expected value or information to be retrieved.</p>
+<p align="center"><img width="1200" src="https://didierlopes.com/blog/2025-02-18-long-live-long-context-with-gemini_5.png"></p>
+<h2 id="running-the-streamlit-app">Running the Streamlit app</h2>
+<p>Clone <a href="https://github.com/DidierRLopes/long-live-long-context">this repository</a>.</p>
+<p>Install the following libraries with <code>pip install &lt;library&gt;</code>:</p>
+<pre><code class="language-bash">streamlit
+google-generativeai
+PyMuPDF
+pytesseract
+pdf2image
+Pillow
+</code></pre>
+<p>or simply do <code>pip install -r requirements.txt</code>.</p>
+<p>Retrieve a Gemini API key from <a href="https://ai.google.dev/gemini-api/docs/api-key">here</a>.</p>
+<p>And finally run <code>streamlit run app.py</code>.</p>
+<p>Note: This application has 500 lines of code and all the logic lives in <a href="https://github.com/DidierRLopes/long-live-long-context/blob/main/app.py">app.py</a>.</p>
+<h2 id="how-the-app-works">How the app works</h2>
+<h3 id="1-gemini-api-key">1. Gemini API key</h3>
+<p>Since the purpose of this is to test Gemini 2.0 Flash model, then we are asking for the API key to be inserted at the top of the script. It could also have been done through <code>.env</code> variable which in general is a better alternative, but I wanted to make this more easier on the people who will run this script.</p>
+<p align="center"><img width="1200" src="https://didierlopes.com/blog/2025-02-18-long-live-long-context-with-gemini_6.png"></p>
+<h3 id="2-system-prompt">2. System Prompt</h3>
+<p>This is the system prompt that will be used across all prompts utilized to retrieve data from context.</p>
+<p align="center"><img width="1200" src="https://didierlopes.com/blog/2025-02-18-long-live-long-context-with-gemini_7.png"></p>
+<p>The EDIT button allows user to modify the content that lives in <a href="https://github.com/DidierRLopes/long-live-long-context/blob/main/data/system_prompt.txt"><code>data/system_prompt.txt</code></a> and override it.</p>
+<h3 id="3-load-documents">3. Load documents</h3>
+<p>This allows the user to pick any document that are next to the <code>app.py</code> file on the root of the project. You can select multiple documents and their content will be appended together.</p>
+<p align="center"><img width="1200" src="https://didierlopes.com/blog/2025-02-18-long-live-long-context-with-gemini_8.png"></p>
+<p>When a document is loaded, you will be able to understand how many tokens each document utilizes when being pushed into Gemini 2.0 flash - through <code>model.count_tokens()</code>. In addition, you will understand how many tokens are being utilized with the combination of all documents uploaded.</p>
+<h3 id="4-run-prompts">4. Run prompts</h3>
+<p>This one is slightly more complex, let's take it each section at a time.</p>
+<p align="center"><img width="1200" src="https://didierlopes.com/blog/2025-02-18-long-live-long-context-with-gemini_9.png"></p>
+<h4 id="run-all-prompts">Run all prompts</h4>
+<p>By clicking on "▶️▶️▶️ Run all prompts", all prompts get run utilizing Gemini 2.0 Flash with the context provided, in the following format:</p>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">response </span><span class="token operator">=</span><span class="token plain"> model</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">generate_content</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">f"""</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">    </span><span class="token string-interpolation interpolation punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token string-interpolation interpolation">system_prompt</span><span class="token string-interpolation interpolation punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token string-interpolation string" style="color:rgb(255, 121, 198)"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">    ---</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">    </span><span class="token string-interpolation interpolation punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token string-interpolation interpolation">st</span><span class="token string-interpolation interpolation punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token string-interpolation interpolation">session_state</span><span class="token string-interpolation interpolation punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token string-interpolation interpolation">document_content</span><span class="token string-interpolation interpolation punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token string-interpolation string" style="color:rgb(255, 121, 198)"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">    ---</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">    </span><span class="token string-interpolation interpolation punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token string-interpolation interpolation">prompt</span><span class="token string-interpolation interpolation punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token string-interpolation string" style="color:rgb(255, 121, 198)"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">    """</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    generation_config</span><span class="token operator">=</span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token string" style="color:rgb(255, 121, 198)">"temperature"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token plain"> </span><span class="token number">0</span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>The "Free Gemini tier (adds timer if running all prompts)" toggle is meant for users that aren't paying for Google API and adds a 60s delay after running each prompt. Note: Upgrading to a paid API key is recommended if you are dealing with sensitive data, so that your data is not used by Google for training.</p>
+<p>Remember: "If something is free, you are the product" 🙂.</p>
+<p>Now you may be wondering:</p>
+<blockquote>
+<p><em>"Why is there a green '✅ Response matches expected result' box. How does the model know that the answer is accurate?"</em>.</p>
+</blockquote>
+<br>
+<p>That is because after running the prompt, I take the output and use Gemini 2.0 Flash to compare it against the compared answer. Basically doing LLM as a judge so I have a quick sense of how many prompts I got correct and which ones I didn't and work on the failed ones.</p>
+<p>This is the prompt that happens under the hood:</p>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">comparison_response </span><span class="token operator">=</span><span class="token plain"> model</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">generate_content</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">f"""</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">    Compare these two texts and return only 'True' if they convey the same meaning,</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">    or 'False' if they differ in meaning.</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">    Don't worry about units as long as the numerical value are the same.</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="display:inline-block;color:rgb(255, 121, 198)"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">    Do not add anything else. Just one word: 'True' or 'False'.</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">    </span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">    Expected:</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">    </span><span class="token string-interpolation interpolation punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token string-interpolation interpolation">expected</span><span class="token string-interpolation interpolation punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token string-interpolation string" style="color:rgb(255, 121, 198)"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">    </span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">    Actual:</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">    </span><span class="token string-interpolation interpolation punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token string-interpolation interpolation">response</span><span class="token string-interpolation interpolation punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token string-interpolation interpolation">text</span><span class="token string-interpolation interpolation punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token string-interpolation string" style="color:rgb(255, 121, 198)"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="display:inline-block;color:rgb(255, 121, 198)"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">    The meaning of the expected response and the actual response is the same. This statement is: </span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token string-interpolation string" style="color:rgb(255, 121, 198)">    """</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    generation_config</span><span class="token operator">=</span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        </span><span class="token string" style="color:rgb(255, 121, 198)">"temperature"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token plain"> </span><span class="token number">0</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        </span><span class="token string" style="color:rgb(255, 121, 198)">"candidate_count"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token plain"> </span><span class="token number">1</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h4 id="individual-prompts">Individual prompts</h4>
+<p>The concept of running an individual prompt is very similar to the run all prompts, with the exception that it takes approximately "Run all prompts time"/"Number of all prompts" for each. So it's better to iterate on a single prompt and the quality of its data retrieval.</p>
+<p>In addition, it has a few additional features that can be helpful to iterate:</p>
+<ul>
+<li>You can click on "EDIT" to edit the <code>prompt.txt</code> directly from the interface. This enables to tweak the prompt to be better at retrieving that specific information (e.g. few shot prompt, which is something that my friend wasn't doing and was contributing to lower accuracy).</li>
+<li>You can click on "EDIT" to edit the <code>expected.txt</code> directly from the interface. This was particularly relevant when I saw that the LLM as a judge failed when the model retrieved 68.0% for a particular prompt and the expected string I had was 68.0. In this case, the model was actually accurate and my expected value should have been either 68.0% or 0.68.</li>
+</ul>
+<h2 id="final-thoughts">Final thoughts</h2>
+<h3 id="data-ingestion">Data ingestion</h3>
+<p>This is one of the most important parts of the workflow:</p>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token comment" style="color:rgb(98, 114, 164)"># Convert PDF to images</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">images </span><span class="token operator">=</span><span class="token plain"> convert_from_path</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">tmp_path</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> dpi</span><span class="token operator">=</span><span class="token number">300</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain">  </span><span class="token comment" style="color:rgb(98, 114, 164)"># can be increased for higher accuracy</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># Open PDF with fitz</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">pdf_document </span><span class="token operator">=</span><span class="token plain"> fitz</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token builtin" style="color:rgb(189, 147, 249)">open</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">tmp_path</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">file_content </span><span class="token operator">=</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">""</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># Process each page</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">for</span><span class="token plain"> page_number </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">in</span><span class="token plain"> </span><span class="token builtin" style="color:rgb(189, 147, 249)">range</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token builtin" style="color:rgb(189, 147, 249)">len</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">pdf_document</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    page </span><span class="token operator">=</span><span class="token plain"> pdf_document</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">load_page</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">page_number</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">if</span><span class="token plain"> page</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">get_drawings</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token plain">  </span><span class="token comment" style="color:rgb(98, 114, 164)"># OCR needed for vector content</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        text </span><span class="token operator">=</span><span class="token plain"> pytesseract</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">image_to_string</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">            images</span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain">page_number</span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> lang</span><span class="token operator">=</span><span class="token string" style="color:rgb(255, 121, 198)">"eng"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        </span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">else</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token plain">  </span><span class="token comment" style="color:rgb(98, 114, 164)"># Extract text directly</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        text </span><span class="token operator">=</span><span class="token plain"> page</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">get_text</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token string" style="color:rgb(255, 121, 198)">"text"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    file_content </span><span class="token operator">+=</span><span class="token plain"> text </span><span class="token operator">+</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"\n"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">pdf_document</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">close</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>From my friend results, I saw that it was consistently failing for a few prompts. The main reason for that was because the data was in a table that was an image underneat and the PDF reader didn't parse images. That meant that it didn't matter how good the prompt was, the model was set up for failure.</p>
+<p>I don't think the pipeline I've built is particularly strong but it highlights an example of how one can handle a scenario with text, tables and images going through each page individually by:</p>
+<ul>
+<li>Check if there is an image<!-- -->
+<ul>
+<li>If there is, do OCR using Tesseract to extract text</li>
+<li>If there isn't, use PyMuPDF to extract text</li>
+</ul>
+</li>
+</ul>
+<p>I believe that something that would improve results immediately is running the output of the OCR by a LLM and trying to reconstruct the table/image in markdown format if possible. I say this because I noticed that sometimes the OCR output can be a bit messy, and having an LLM focused on adding structure to each page OCR may lead to better outcomes.</p>
+<h3 id="long-context-is-a-blessing">Long context is a blessing</h3>
+<p>Something I noticed from the data my friend shared is that the RAG pipeline they had implemented struggled when the value that the model had to return wasn't immediate but it had to pick values from different places to piece it together.</p>
+<p>Imagine you were asking the model about the number of reasoning related training samples and the PDF mentioned that the number of reasoning related training samples was 2% of the training dataset samples. And in another page it said that the training dataset has 30 million samples. You need to get both of these in order to infer that the number of reasoning related training samples is 600k samples.</p>
+<h3 id="subject-matter-experts-are-more-relevant-than-ever">Subject matter experts are more relevant than ever</h3>
+<p>Despite advances in LLM capabilities, domain expertise remains crucial for effective prompt engineering. During testing, many retrieval failures stemmed not from model limitations, but from prompts that didn't properly account for domain-specific context and terminology.</p>
+<p>As a non-expert, I found it challenging to craft effective prompts because I lacked deep understanding of:</p>
+<ul>
+<li>How specific data points are typically represented in this type of document</li>
+<li>The precise meaning and significance of domain terminology</li>
+<li>Common document structures and conventions in the field</li>
+<li>How small variations in wording could make it so that the metric extracted wasn't the correct one</li>
+</ul>
+<h3 id="set-a-benchmark-and-work-reverse-from-there">Set a benchmark and work reverse from there</h3>
+<p>Before starting this work I had a benchmark where I was working backwards from. This was super helpful as it allows me to understand how this workflow, out-of-the-box, compares with my friends' one.</p>
+<p>Then we can work backwards from there and:</p>
+<ul>
+<li>Improve the system prompt</li>
+<li>Use a different model (and get rid of RAG eheh)</li>
+<li>Improve ingestion pipeline to process images</li>
+<li>Automate process a bit better with a Streamlit app</li>
+<li>Improve each individual prompt to retrieve information more accurately (few-shot prompt)</li>
+</ul>
+<h3 id="prompt-testing-and-validation">Prompt testing and validation</h3>
+<p>Using LLMs as judges and being able to run prompts from the app, enabled to have a much more seamless workflow. This approach:</p>
+<ul>
+<li>Provides immediate feedback on prompt effectiveness</li>
+<li>Helps iterate and refine prompting strategies</li>
+<li>Ensures consistency in information extraction</li>
+<li>Reduces the need for manual verification</li>
+</ul>
+<h2 id="long-live-long-context">Long live Long Context</h2>
+<p>Honestly, long context is f*ing awesome.</p>
+<p>Here are a few things that made me really happy:</p>
+<ul>
+<li>Ability to handle multiple documents at once without having to worry about chunking or managing context windows</li>
+<li>No need to worry about losing context between different sections of a document</li>
+<li>Reduced complexity in the overall pipeline since we don't need complex RAG infrastructure</li>
+<li>Better accuracy (in theory) since the model has access to the full context and can make connections across different parts of the document</li>
+<li>Faster development time since we don't need to spend time optimizing chunking strategies or fine-tuning retrieval mechanisms</li>
+</ul>
+<h2 id="next">Next</h2>
+<p>I won't be spending more time on this project, as I did it to help a friend on their specific problem. I wrote this post so that I could share this with them and any other person in the future that is getting into LLMs.</p>
+<p>Feel free to fork the project and go wild.</p>]]></content>
+        <category label="long context window" term="long context window"/>
+        <category label="gemini" term="gemini"/>
+        <category label="streamlit" term="streamlit"/>
+        <category label="rag" term="rag"/>
+        <category label="pdf parsing" term="pdf parsing"/>
+        <category label="analyst" term="analyst"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[What it means to have skin in the game]]></title>
         <id>https://didierlopes.com/blog/what-it-means-to-have-skin-in-the-game</id>

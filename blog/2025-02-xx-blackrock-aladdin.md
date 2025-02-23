@@ -1,6 +1,6 @@
 ---
-slug: 2025-02-18-long-live-long-context-with-gemini
-title: Validation from BlackRock Aladdin
+slug: 2025-02-xx-long-live-long-context-with-gemini
+title: Thank you Blackrock for the validation
 date: 2025-02-22
 image: /blog/2025-02-xx-validation-from-blackrock-aladdin
 tags: ['openbb', 'blackrock', 'copilot', 'enterprise', 'agent', 'widgets', 'architecture', 'open-source', 'finance', 'portfolio', 'security']
@@ -11,7 +11,7 @@ unlisted: true
 ---
 
 <p align="center">
-    <img width="900" src="/blog/2025-02-18-long-live-long-context-with-gemini.png" />
+    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation.png" />
 </p>
 
 At the recent AI Engineering Summit, BlackRock unveiled their Aladdin Copilot - a platform remarkably similar to what we've built at OpenBB, but with a key difference.
@@ -26,7 +26,9 @@ On Friday 21st, I attended the [AI Engineering Summit](https://www.ai.engineer/s
 
 One presentation that particularly caught my attention was BlackRock's session about their Aladdin Copilot. While I can't share the presentation materials as they're conference-exclusive, what I saw left me incredibly bullish about OpenBB's direction.
 
-IMAGE: OF THE SCHEDULE
+<p align="center">
+    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_1.png" />
+</p>
 
 Here's why: BlackRock's copilot is remarkably similar to what we've built at OpenBB - but with 1% of their resources and one major distinction.
 
@@ -60,8 +62,17 @@ Seeing this in their demo was genuinely shocking - it looked remarkably similar 
 
 Both platforms prioritize data transparency. Every copilot response that references dashboard data clearly highlights its source. This enables users to validate LLM outputs and trace information back to its origin, maintaining trust and accountability.
 
-(SHOW CITATION IN PDF + SHOW REFERENCE FROM WIDGET)
+An example of how it can highlight sentence or table level in unstructured document:
 
+<p align="center">
+    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_7.png" />
+</p>
+
+An example of how it can highlight the widget origin that was used to answer to the prompt:
+
+<p align="center">
+    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_8.png" />
+</p>
 
 ## Secure environment first approach
 
@@ -78,11 +89,15 @@ Our OpenBB Copilot acts as an orchestrator, gathering context from three main so
 2. Dashboard: Data currently visible in the dashboard
 3. Product-wide: Connected to the workspace but not visible
 
-IMAGE: FUNCTION CALL WITH 3 SLIDES
+<p align="center">
+    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_9.png" />
+</p>
 
 This context exists in the form of widgets, and there can be thousands! In the case of BlackRock, they refer to this as Plugin Registry.
 
-IMAGE: DATA CONNECTORS FROM FUNCTION CALLING SLIDES
+<p align="center">
+    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_10.png" />
+</p>
 
 ### What is a widget?
 
@@ -93,6 +108,10 @@ In our system, a widget combines:
 - Metadata (title, description, category, sub-category, and source)
 
 The metadata enables our copilot to identify and utilize appropriate widget based on user prompts, by controlling the widget through its parameters.
+
+<p align="center">
+    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_11.png" />
+</p>
 
 You can think of these widgets effectively as tools that are rendered on our workspace. Therefore, our agent can call different widgets to retrieve the data it needs to reply more effectively to the user.
 

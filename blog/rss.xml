@@ -4,11 +4,71 @@
         <title>Didier Lopes Blog</title>
         <link>https://didierlopes.com/blog</link>
         <description>Didier Lopes Blog</description>
-        <lastBuildDate>Tue, 18 Feb 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 25 Feb 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2025 Didier Lopes.</copyright>
+        <item>
+            <title><![CDATA[UI layer is the next big frontier]]></title>
+            <link>https://didierlopes.com/blog/ui-layer-is-the-next-big-frontier</link>
+            <guid>https://didierlopes.com/blog/ui-layer-is-the-next-big-frontier</guid>
+            <pubDate>Tue, 25 Feb 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[A deep dive into why the UI layer represents the next major frontier in financial technology. While the industry has heavily invested in data, the user interface remains a critical yet overlooked bridge between raw information and actionable intelligence. This piece explores how OpenBB is leading the charge in revolutionizing how financial professionals interact with data.]]></description>
+            <content:encoded><![CDATA[<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-02-25-ui-layer-is-the-next-big-frontier.png"></p>
+<p>A deep dive into why the UI layer represents the next major frontier in financial technology.</p>
+<p>While the industry has heavily invested in data, the user interface remains a critical yet overlooked bridge between raw information and actionable intelligence. This piece explores how OpenBB is leading the charge in revolutionizing how financial professionals interact with data.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<blockquote>
+<p><em><strong>Note</strong>: This post was written after reading the <a href="https://open.substack.com/pub/theterminalist/p/10000x-bloombergs-return-and-why" target="_blank" rel="noopener noreferrer">10,000x. Bloomberg's return and why financial data is so darn lucrative</a> from the <a href="https://x.com/TheTerminalist" target="_blank" rel="noopener noreferrer">TheTerminalist</a>.</em></p>
+</blockquote>
+<br>
+<p>For decades, financial research and analytics have been locked in complex, fragmented workflows.</p>
+<p>Firms rely on an ever-expanding set of data providers, yet the tools they use to extract value from that data remain clunky and disconnected. The market has seen heavy investment in solving the data layer, but little attention has been paid to the UI layer—the critical bridge between raw data and actionable intelligence.</p>
+<p><strong>Why?</strong></p>
+<p>Because building intuitive financial UIs requires a rare combination of deep market knowledge and modern technical expertise.</p>
+<p>Most financial professionals excel at understanding markets but aren't software engineers, while most software engineers don't have extensive financial domain experience.</p>
+<p>This expertise gap has led to a reliance on familiar but limited tools like Excel, or third party desktop apps.</p>
+<p>But the shift is happening. With AI dramatically reducing the cost and complexity of building software, the barriers between financial expertise and technical implementation are finally breaking down.</p>
+<p>And OpenBB is here to bootstrap that revolution.</p>
+<h2 id="the-challenge-at-the-delivery-stage">The challenge at the delivery stage</h2>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-02-25-ui-layer-is-the-next-big-frontier_1.png"></p><p align="center" class="mt-1" style="font-size:0.75em"></p><div>Excerpt from <a href="https://x.com/TheTerminalist" target="_blank" rel="noopener noreferrer">TheTerminalist</a>'s blogpost: </div><a href="https://open.substack.com/pub/theterminalist/p/10000x-bloombergs-return-and-why" target="_blank" rel="noopener noreferrer">10,000x. Bloomberg's return and why financial data is so darn lucrative</a><p></p><p></p>
+<p>The finance and AI space is cost-intensive.</p>
+<p>Innovation requires deep R&amp;D, technical expertise, and the ability to handle highly flexible yet complex workflows. This is why many past attempts to improve financial research software have been set up for failure - they focused on owning or controlling data rather than optimizing how users interact with it.</p>
+<p>The real opportunity lies at the application layer.</p>
+<p>Data is increasingly commoditized, and as financial marketplaces grow, the real value is shifting towards how that data is consumed.</p>
+<p>Intelligence - how insights are generated, refined, and acted upon—is where the competitive edge lies.</p>
+<h2 id="why-the-ui-layer-has-been-overlooked">Why the UI layer has been overlooked</h2>
+<p>Building a beloved financial desktop application isn’t just about better charts or a sleeker interface. It requires a fundamental rethink of how users interact with their data.</p>
+<p>The industry’s reliance on fragmented workflows has meant that firms have learned to tolerate inefficiencies, simply because “it works.”</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-02-25-ui-layer-is-the-next-big-frontier_2.png"></p><p align="center" class="mt-1" style="font-size:0.75em"></p><div>Excerpt from <a href="https://x.com/TheTerminalist" target="_blank" rel="noopener noreferrer">TheTerminalist</a>'s blogpost: </div><a href="https://open.substack.com/pub/theterminalist/p/10000x-bloombergs-return-and-why" target="_blank" rel="noopener noreferrer">10,000x. Bloomberg's return and why financial data is so darn lucrative</a><p></p><p></p>
+<h2 id="the-openbb-approach-a-different-path">The OpenBB approach: a different path</h2>
+<p>We aren’t competing with data vendors.</p>
+<p>Instead, we’re offering something that no one else has attempted: a flexible, modular workspace where firms can build on top of their own data. Imagine a world where research is seamless, where AI is not just bolted on but deeply embedded into workflows, and where analysts spend more time uncovering insights rather than wrangling data.</p>
+<p>Data providers are starting to recognize this shift, but innovation on their platforms is slow.</p>
+<p>Meanwhile, AI is accelerating workflows at a pace that demands a new approach.</p>
+<p>AI chatbots alone aren’t enough; without a stronger visualization and interaction layer, they remain a novelty rather than a necessity.</p>
+<p>With OpenBB, we are deliberately avoiding the data layer because we believe intelligence — the ability to derive value from data—is the future. Firms want more control over their data and the ability to leverage it without leakage.</p>
+<p>That’s why the biggest demand we’ve seen is for on-prem deployments, ensuring security while unlocking intelligence.</p>
+<h2 id="timing-matters-why-now">Timing matters: why now?</h2>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-02-25-ui-layer-is-the-next-big-frontier_3.png"></p><p align="center" class="mt-1" style="font-size:0.75em"></p><div>Excerpt from <a href="https://x.com/TheTerminalist" target="_blank" rel="noopener noreferrer">TheTerminalist</a>'s blogpost: </div><a href="https://open.substack.com/pub/theterminalist/p/10000x-bloombergs-return-and-why" target="_blank" rel="noopener noreferrer">10,000x. Bloomberg's return and why financial data is so darn lucrative</a><p></p><p></p>
+<p>The cost of compute has dropped, making powerful AI-driven applications more feasible.</p>
+<p>The best products emerge at the intersection of technical and domain expertise, and that’s exactly where OpenBB sits—with deep engineering talent combined with financial knowledge.</p>
+<p>One of our clients recently put it best:</p>
+<blockquote>
+<p><em>“OpenBB is the bridge infrastructure between my data and my intelligence.”</em></p>
+</blockquote>
+<br>
+<p>That’s the mission.</p>
+<p>Not just another financial tool, but a true workspace for the next generation of research and analytics.</p>
+<p>If you have your own data in Snowflake, Databricks, GCP, Azure or other, and want to build a customized workspace that fits your needs - reach out.</p>
+<p>The future of finance is being rewritten.</p>]]></content:encoded>
+            <category>openbb</category>
+            <category>fintech</category>
+            <category>ui</category>
+            <category>innovation</category>
+            <category>financial-software</category>
+        </item>
         <item>
             <title><![CDATA[Long live long context with Gemini]]></title>
             <link>https://didierlopes.com/blog/2025-02-18-long-live-long-context-with-gemini</link>

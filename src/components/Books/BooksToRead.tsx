@@ -306,11 +306,6 @@ const data = [
 		image: "/books/the-art-of-war.jpg",
 	},
 	{
-		title: "What It Takes: Lessons in the Pursuit of Excellence",
-		author: "Stephen A. Schwarzman",
-		image: "/books/what-it-takes-lessons-in-the-pursuit-of-excellence.jpg",
-	},
-	{
 		title: "Inspired: How to Create Tech Products Customers Love",
 		author: "Marty Cagan",
 		image: "/books/inspired-how-to-create-tech-products-customers-love.jpg",
@@ -453,6 +448,26 @@ const data = [
 		author: "Richard W. Hamming",
 		image: "/books/the-art-of-doing-science-and-engineering-learning-to-learn.jpg",
 	},
+	{
+		title: "Founder vs Investor: The Honest Truth About Venture Capital from Startup to IPO",
+		author: "Elizabeth Zalman, Jerry Neumann",
+		image: "/books/founder-vs-investor-the-honest-truth-about-venture-capital-from-startup-to-ipo.jpg",
+	},
+	{
+		title: "Secrets of Sand Hill Road: Venture Capital and How to Get It",
+		author: "Scott Kupor, Eric Ries",
+		image: "/books/secrets-of-sand-hill-road-venture-capital-and-how-to-get-it.jpg",
+	},
+	{
+		title: "Venture Deals: Be Smarter Than Your Lawyer and Venture Capitalist",
+		author: "Brad Feld, Jason Mendelson",
+		image: "/books/venture-deals-be-smarter-than-your-lawyer-and-venture-capitalist.jpg",
+	},
+	{
+		title: "This is Marketing: You Can't Be Seen Until You Learn to See",
+		author: "Seth Godin",
+		image: "/books/this-is-marketing-you-can-t-be-seen-until-you-learn-to-see.jpg",
+	}
 ];
 
 export default function BooksToRead() {

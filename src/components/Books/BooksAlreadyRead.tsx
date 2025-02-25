@@ -439,6 +439,11 @@ const data = [
 		title: "Thinking in Systems",
 		author: "Donella H. Meadows",
 		image: "/books/thinking-in-systems.jpg",
+	},
+	{
+		title: "What It Takes: Lessons in the Pursuit of Excellence",
+		author: "Stephen A. Schwarzman",
+		image: "/books/what-it-takes-lessons-in-the-pursuit-of-excellence.jpg",
 	}
 ];
 

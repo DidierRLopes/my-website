@@ -134,14 +134,14 @@ export default function Home() {
       <main>
         <div className="w-full bg-blue-100 dark:bg-blue-900 py-3">
           <div className="max-w-[880px] mx-auto px-4 flex items-center justify-center gap-4 flex-wrap">
-            <span className="font-medium">🏃‍♂️ Running a half marathon in memory of Bia - Help me fight cancer!</span>
+            <span className="font-medium">📰 Yes, I started a newsletter about open source, AI and finance.</span>
             <a
-              href="https://haymakersforhope.org/events/running/nyc-half-marathon-2025/runners/Didier-Lopes"
+              href="https://didierlopes.beehiiv.com/"
               target="_blank"
               rel="noreferrer"
               className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded-full text-sm transition-colors duration-200"
             >
-              Donate Now →
+              Check it out
             </a>
           </div>
         </div>

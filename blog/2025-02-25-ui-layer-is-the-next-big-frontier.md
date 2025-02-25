@@ -6,7 +6,6 @@ image: /blog/2025-02-25-ui-layer-is-the-next-big-frontier
 tags: ['openbb', 'fintech', 'ui', 'innovation', 'financial-software']
 description: A deep dive into why the UI layer represents the next major frontier in financial technology. While the industry has heavily invested in data, the user interface remains a critical yet overlooked bridge between raw information and actionable intelligence. This piece explores how OpenBB is leading the charge in revolutionizing how financial professionals interact with data.
 hideSidebar: true
-unlisted: true
 
 ---
 
@@ -108,7 +107,7 @@ The best products emerge at the intersection of technical and domain expertise, 
 
 One of our clients recently put it best:
 
-> _“OpenBB is the bridge between data and intelligence.”_
+> _“OpenBB is the bridge infrastructure between my data and my intelligence.”_
 
 <br />
 

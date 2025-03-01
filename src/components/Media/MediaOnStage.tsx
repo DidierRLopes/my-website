@@ -3,6 +3,15 @@ import VideosList from "../General/VideosList";
 
 const data = [
 	{
+		title: "Autonomous Agents — The Next Step in AI Applications?",
+		description:
+			"Autonomous agents - AI programs that interact independently with multiple applications, LLMs or websites to complete an entire workflow – promise to be the next step in enhancing productivity in investment management. In response to an inflow into a mutual fund, for example, a group of agents might build a list of buy orders using the OMS, stage the orders to an EMS, review liquidity conditions to craft a trading strategy and send orders to the broker algorithms best suited to execute the orders, rather than requiring traders to interact with several applications. What are the challenges, risks and benefits of creating and deploying autonomous agents in the investment management enterprise?",
+		date: "2025-02-24",
+		location: "2025 Financial Technology Forum Winter Workshop & Automating Alpha (Ft. Lauderdale, FL)",
+		image: "/media/institutional-investor-conference-2025.jpg",
+		info: "More information on the event can be found <a href='https://event.institutionalinvestor.com/event/c16a1d32-6bae-42ac-b45d-f951f986fa39/summary' target='_blank' rel='noopener noreferrer'>here</a>.",
+	},
+	{
 		title: "PANEL DISCUSSION: ChatGPT & The Future of AI in Finance",
 		description:
 			"With Professor Francesco Fabozzi, Yale University, Didier Lopes, OpenBB and Dan Joldzic, Alexandria Technology, moderated by Christos Koutsoyannis, Atlas Ridge Capital. Join leading practitioners for a discussion on the practical applications of unstructured data in quant trading. This session will address the opportunities and nuances of deploying these models, including data sourcing, processing, and integration.",

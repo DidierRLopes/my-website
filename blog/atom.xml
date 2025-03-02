@@ -2,12 +2,113 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://didierlopes.com/blog</id>
     <title>Didier Lopes Blog</title>
-    <updated>2025-02-25T00:00:00.000Z</updated>
+    <updated>2025-03-15T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://didierlopes.com/blog"/>
     <subtitle>Didier Lopes Blog</subtitle>
     <icon>https://didierlopes.com/img/favicon.ico</icon>
     <rights>Copyright © 2025 Didier Lopes.</rights>
+    <entry>
+        <title type="html"><![CDATA[How function calling and context-aware AI shapes OpenBB]]></title>
+        <id>https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb</id>
+        <link href="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb"/>
+        <updated>2025-03-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Building on OpenBB's presentation at the Anote AI Day Summit, this post explores how intelligent function calling serves as the cornerstone of our AI-native workspace for data analytics.]]></summary>
+        <content type="html"><![CDATA[<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb.png"></p>
+<p>Building on OpenBB's presentation at the Anote AI Day Summit, this post explores how intelligent function calling serves as the cornerstone of our AI-native workspace for data analytics.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>I recently had the opportunity to present our OpenBB Copilot and how most of what it does is function calling, in the Anote AI Day Summit: <a href="https://www.youtube.com/watch?v=gH1mMtRa84Y">It is All Function Calling - Anote AI Day Summit 2025</a>.</p>
+<p>This blog post is a similar presentation in text-written format.</p>
+<h2 id="our-vision-for-the-openbb-workspace">Our vision for the OpenBB Workspace</h2>
+<p>At the core of our product is the OpenBB workspace, a fully customizable dashboard where users can control their data visualization and analysis. The middle section shows a dashboard that you can fully customize with widgets containing relevant data widgets. We've designed it with a practical sidebar for managing dashboards, folder organization, sharing capabilities, templates, and data connections.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_1.png"></p>
+<p>But what I'm going to talk about is our agentic sidebar on the right. This is effectively your AI agent that works as an analyst with access to all the data inside the product. And this is where our implementation of function calling becomes crucial.</p>
+<h2 id="context-is-key">Context is key</h2>
+<p>We've developed three ways to provide context to our Copilot:</p>
+<ol>
+<li><strong>Explicit context</strong>: We've added a simple button on the top right of widgets that allows users to directly add them to the Copilot's context. You can also simply drop files into the Copilot window.</li>
+</ol>
+<br>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_2.png"></p>
+<ol start="2">
+<li><strong>Dashboard context</strong>: In this case, the Copilot can access all data present on the current dashboard and will then inform the user which widgets were used.</li>
+</ol>
+<br>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_3.png"></p>
+<ol start="3">
+<li><strong>Global context</strong>: Through a feature flag, users can also enable searching across all widgets within the workspace.</li>
+</ol>
+<br>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_4.png"></p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_5.png"></p>
+<p>What's important is how we've prioritized these: explicit context takes precedence, followed by dashboard context, and then global context.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_6.png"></p>
+<p>It's similar to an analyst's process—you begin by examining the document in front of you, then assess the items on your desk, and finally consider your wider resources, such as Google Drive or Slack.</p>
+<h3 id="the-power-of-widget-metadata">The power of widget metadata</h3>
+<p>One of our key innovations is our metadata system.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_7.png"></p>
+<p>Each widget in our product has what we call "widget metadata" composed of five components:</p>
+<ul>
+<li>Title</li>
+<li>Category</li>
+<li>Subcategory</li>
+<li>Description</li>
+<li>Data source</li>
+</ul>
+<p>We convert this metadata into embeddings and compare it against user prompts to determine which functions the Copilot should access. This allows us to scale effectively while maintaining accuracy, especially since there can be literally thousands of data widgets. Due to the metadata, widgets are only invoked when a user triggers a relevant prompt.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_8.png"></p>
+<h2 id="function-calling-in-practice">Function Calling in practice</h2>
+<p>Let me share some real examples of how this works.</p>
+<h3 id="basic-function-calls">Basic function calls</h3>
+<p>When analyzing unstructured data like market reports, our Copilot can extract specific information without parameter changes:</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_9.png"></p>
+<p>Copilot understands from widget metadata that the user requires information from it and queries it:</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_10.png"></p>
+<p>In turn that data is utilized to answer the prompt:</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_11.png"></p>
+<h3 id="parameter-modified-calls">Parameter-modified calls</h3>
+<p>We can handle cases where users want to switch contexts.</p>
+<p>For instance, even if you're looking at Apple news, you can ask about Palantir, and our system will automatically adjust the parameters:</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_12.png"></p>
+<p>Copilot understands from widget metadata that the user requires information from it and queries it:</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_13.png"></p>
+<p>But, not as is. It requires updating input parameters accordingly (symbol and dates):</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_14.png"></p>
+<p>In turn, that data is utilized to answer the prompt:</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_15.png"></p>
+<p>Finally, the utilized widget (with updated parameters) can be added to the dashboard seamlessly.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_16.png"></p>
+<h3 id="complex-analysis">Complex analysis</h3>
+<p>For more sophisticated tasks like analyzing futures contracts for arbitrage opportunities, our Copilot can make multiple function calls, process the data, and create visualizations.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_17.png"></p>
+<p>Copilot understands from widget metadata that the user requires information from it, with updated parameters, and queries it.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_18.png"></p>
+<p>In turn, that data is utilized to answer the prompt...</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_19.png"></p>
+<p>and creating a chart like the user asked:</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_20.png"></p>
+<p>Finally, the resulting artifact (in this case, a chart) can be added to the dashboard:</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_21.png"></p>
+<h2 id="verification-and-output">Verification and output</h2>
+<p>We're particularly proud of our verification system for the Copilot. It allows users to:</p>
+<ul>
+<li>See the step-by-step reasoning</li>
+<li>Access data sources through citations</li>
+<li>Add source widgets to their dashboard</li>
+<li>Get highlights of specific data references</li>
+</ul>
+<p>The output can be added directly to the dashboard as new widgets, creating a seamless workflow from query to visualization to presentation.</p>
+<h2 id="looking-forward">Looking forward</h2>
+<p>We've built something that I believe truly changes how people can interact with financial data, and we're just getting started. The combination of intelligent function calling, context awareness, and user-friendly interface is making sophisticated financial analysis more accessible than ever before.</p>
+<p>You can get started for free at <a href="http://pro.openbb.co/">pro.openbb.co</a>.</p>]]></content>
+        <category label="AI" term="AI"/>
+        <category label="function calling" term="function calling"/>
+        <category label="data analytics" term="data analytics"/>
+        <category label="openbb" term="openbb"/>
+        <category label="financial analysis" term="financial analysis"/>
+        <category label="agent" term="agent"/>
+        <category label="copilot" term="copilot"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[UI layer is the next big frontier]]></title>
         <id>https://didierlopes.com/blog/ui-layer-is-the-next-big-frontier</id>

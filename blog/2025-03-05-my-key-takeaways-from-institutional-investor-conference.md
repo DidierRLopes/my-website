@@ -41,7 +41,7 @@ Financial institutions increasingly prefer building over buying complete solutio
 
 Despite the hype, financial services firms struggle with AI implementation, primarily due to unclear use cases. There is no dominant AI product in the industry, and most organizations cautiously use general tools under strict controls.
 
-> **OpenBB hat on**: This is a great sign that we are still early, and there isn’t yet a clear winner in AI financial products. It also indicates that companies need to invest capital in educating the market—not just about their products (I’m guilty of this) but about the workflows that AI can enable. (Luckily, we recently brought Ihsan to OpenBB, and I’ve seen him execute full earnings workflows, fixed income analysis, and more—all on OpenBB! If you’re looking for something specific, he’s the person to ask!)
+> **OpenBB hat on**: This is a great sign that we are still early, and there isn’t yet a clear winner in AI financial products. It also indicates that companies need to invest capital in educating the market—not just about their products (I’m guilty of this) but about the workflows that AI can enable. (Luckily, [Ihsan](https://www.linkedin.com/in/ihsan-erman-saracgil-42628454/) joined the team recently, and I’ve seen him build full workflows for clients like this [earnings workflow](https://www.youtube.com/watch?v=JTlyU6HdWjQ) solely on OpenBB. If you’re looking for something specific, he’s the person to ask!)
 
 <br />
 

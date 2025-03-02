@@ -1,7 +1,7 @@
 ---
-slug: 2025-02-xx-long-live-long-context-with-gemini
+slug: 2025-02-xx-validation-from-blackrock-aladdin
 title: Thank you Blackrock for the validation
-date: 2025-02-22
+date: 2025-03-20
 image: /blog/2025-02-xx-validation-from-blackrock-aladdin
 tags: ['openbb', 'blackrock', 'copilot', 'enterprise', 'agent', 'widgets', 'architecture', 'open-source', 'finance', 'portfolio', 'security']
 description: "At the recent AI Engineering Summit, BlackRock unveiled their Aladdin Copilot - a platform remarkably similar to what we've built at OpenBB, but with a key difference. While they've invested massive resources into building a closed system, we've created an open-source solution that achieves the same goals: multi-application support, seamless agent integration, explainable AI, and enterprise-grade security. Here's a deep dive into how the world's largest asset manager validated our approach to AI-powered financial workflows."
@@ -34,17 +34,17 @@ Here's why: BlackRock's copilot is remarkably similar to what we've built at Ope
 
 Let's dive into the striking similarities first.
 
-
 ## Not a single workflow, but multiple applications
 
 BlackRock's Aladdin platform centers heavily on Portfolio - enabling users to handle portfolio construction, management, and monitoring.
 
 In contrast, OpenBB's Workspace functions as an open playground. While it certainly handles portfolio management (as demonstrated in [this example](https://www.youtube.com/watch?v=K80ayaZYyk4)), it extends far beyond that. Our platform supports risk management, equity/crypto/macro research, ideation, ranking, client advisory, and even compliance workflows.
 
-IMAGE OF IT BEING USED BY PUBLIC COMPANY ON SHIPPING VS CLIENT ADVISORY VS COMPLIANCE VS PORTFOLIO
+<p align="center">
+    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_2.png" />
+</p>
 
 This versatility stems from our workspace architecture where users build on their own data. The flexible widget creation system can accommodate virtually any workflow - provided users have the necessary data.
-
 
 ## Not a single chatting interface, the agent is on the side and is invoked when needed
 
@@ -56,7 +56,9 @@ BlackRock appears to share this view. Their agentic copilot acts as a sidebar to
 
 Seeing this in their demo was genuinely shocking - it looked remarkably similar to what we've had in OpenBB for over a year now. It's validating to see the world's largest asset manager (with 20k employees) arriving at the same conclusions we did.
 
-(SHOW IMAGE OF OPENBB WITHOUT COPILOT -> THEN ASK QUESTION AND GET ANSWER AND SHOW COPILOT, HIGHLIGHT THAT)
+<p align="center">
+    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_3.png" />
+</p>
 
 ## Explainability
 
@@ -65,19 +67,18 @@ Both platforms prioritize data transparency. Every copilot response that referen
 An example of how it can highlight sentence or table level in unstructured document:
 
 <p align="center">
-    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_7.png" />
+    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_4.png" />
 </p>
 
 An example of how it can highlight the widget origin that was used to answer to the prompt:
 
 <p align="center">
-    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_8.png" />
+    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_5.png" />
 </p>
 
 ## Secure environment first approach
 
-This is non-negotiable in finance, where both data and prompts can be competitive advantages. Our president recently detailed our approach to this in our [on-prem announcement](https://openbb.co/blog/run-openbb-on-premises-and-be-in-control-of-your-data-and-UI).
-
+This is non-negotiable in finance, where both data and prompts can be competitive advantages. Our president, [Heidi Jonhson](https://www.linkedin.com/in/heidisjohnson/), recently detailed our approach to this in our [on-prem announcement](https://openbb.co/blog/run-openbb-on-premises-and-be-in-control-of-your-data-and-UI).
 
 ## Architecture
 
@@ -85,18 +86,20 @@ While I can't share specifics from BlackRock's presentation, I can explain OpenB
 
 Our OpenBB Copilot acts as an orchestrator, gathering context from three main sources (in order of importance):
 
-1. In-context: Either attached files or explicitly referenced data widgets
-2. Dashboard: Data currently visible in the dashboard
-3. Product-wide: Connected to the workspace but not visible
+1. **In-context**: Either attached files or explicitly referenced data widgets
+2. **Dashboard**: Data currently visible in the dashboard
+3. **Product-wide**: Connected to the workspace but not visible
+
+<br />
 
 <p align="center">
-    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_9.png" />
+    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_6.png" />
 </p>
 
 This context exists in the form of widgets, and there can be thousands! In the case of BlackRock, they refer to this as Plugin Registry.
 
 <p align="center">
-    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_10.png" />
+    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_7.png" />
 </p>
 
 ### What is a widget?
@@ -110,7 +113,7 @@ In our system, a widget combines:
 The metadata enables our copilot to identify and utilize appropriate widget based on user prompts, by controlling the widget through its parameters.
 
 <p align="center">
-    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_11.png" />
+    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_8.png" />
 </p>
 
 You can think of these widgets effectively as tools that are rendered on our workspace. Therefore, our agent can call different widgets to retrieve the data it needs to reply more effectively to the user.
@@ -122,6 +125,10 @@ For a deeper dive into this architecture, check out my recent [10-minute present
 So what is the main distinction?
 
 How Open we are.
+
+<p align="center">
+    <img width="1200" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_9.png" />
+</p>
 
 We have an open source data integration framework that enables any firm from bringing any type of data into our product.
 

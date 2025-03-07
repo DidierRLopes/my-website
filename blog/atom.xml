@@ -2,12 +2,43 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://didierlopes.com/blog</id>
     <title>Didier Lopes Blog</title>
-    <updated>2025-03-05T00:00:00.000Z</updated>
+    <updated>2025-03-07T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://didierlopes.com/blog"/>
     <subtitle>Didier Lopes Blog</subtitle>
     <icon>https://didierlopes.com/img/favicon.ico</icon>
     <rights>Copyright © 2025 Didier Lopes.</rights>
+    <entry>
+        <title type="html"><![CDATA[Proactive Agents Are the Future of AI in Finance]]></title>
+        <id>https://didierlopes.com/blog/2025-03-07-proactive-agents-are-the-future-of-ai-in-finance</id>
+        <link href="https://didierlopes.com/blog/2025-03-07-proactive-agents-are-the-future-of-ai-in-finance"/>
+        <updated>2025-03-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How AI is evolving from reactive to proactive in financial services, and why this shift will transform how investors discover opportunities and generate alpha.]]></summary>
+        <content type="html"><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-03-07-proactive-agents-are-the-future-of-ai-in-finance.png"></p>
+<p>How AI is evolving from reactive to proactive in financial services, and why this shift will transform how investors discover opportunities and generate alpha.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>This week I was asked the question "Where is OpenBB with AI next year?".</p>
+<p>Our play here is clear, we are the Enterprise UI that lives between data and AI.</p>
+<p>So when someone asks this question, they are ultimately asking "What will be possible to do on OpenBB as models get better and cheaper".</p>
+<p>And I think that it all comes down to: Reactive VS Proactive</p>
+<p>Today, LLMs/agents/AI is reactive for the most part.</p>
+<p>It requires users to have a clear intent on what they want the LLM to do, they are required to be prompted (pun intended).</p>
+<p>However, what happens when models get better and cheaper and they have an interface that has access to all their data in one place?</p>
+<p>Simple.</p>
+<p>It can scan the data every few seconds and generate investment ideas, find alpha and truly act like a partner.</p>
+<p>More importantly, as the agent starts to engage with the user, we will be able to provide feedback to the model: "this wasn't a good idea because of X", "semi-conductors are not part of my mandate", ... and these models will adapt to become more personalized.</p>
+<p>The exciting thing?</p>
+<p>We aren't that far off from this being a reality.</p>
+<p>This is how I envision the future:</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/xTvaks7EDh0?si=szd8RNFyMD_SPAHm" width="1000" height="500"></iframe></div>]]></content>
+        <category label="openbb" term="openbb"/>
+        <category label="financial-services" term="financial-services"/>
+        <category label="ai" term="ai"/>
+        <category label="investment" term="investment"/>
+        <category label="proactive-agents" term="proactive-agents"/>
+        <category label="agents" term="agents"/>
+        <category label="future" term="future"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[My key takeaways from Institutional Investor conference]]></title>
         <id>https://didierlopes.com/blog/2025-03-05-my-key-takeaways-from-institutional-investor-conference</id>
@@ -83,7 +114,7 @@
 <p>Funnily enough, we commented on how we were speaking on a Saturday morning and the weekends are the times where we are the most productive.</p>
 <p>As I was sharing more of OpenBB and how he can utilize it for the content in his newsletter, he shared a table chart that he crafts manually to his audience, which always takes him a significant amount of time to do every single day.</p>
 <p>Well, I wouldn't be an engineer by training if I didn't solve this for him.</p>
-<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/9hQtFL_0NjU?si=oUC-X0XsnKad-V9E" width="800" height="400"></iframe></div>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/9hQtFL_0NjU?si=oUC-X0XsnKad-V9E" width="1000" height="500"></iframe></div>
 <p>More than that - to celebrate 1 year of Opening Bell Daily:</p>
 <blockquote>
 <p>Any OpenBB user can add this URL as a custom backend application on OpenBB and have Phil's market snapshot on their screen every day. <a href="https://openbb-opening-bell-daily.fly.dev/">https://openbb-opening-bell-daily.fly.dev</a></p>

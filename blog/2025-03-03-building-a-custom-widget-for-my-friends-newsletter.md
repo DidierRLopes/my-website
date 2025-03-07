@@ -38,8 +38,8 @@ Well, I wouldn't be an engineer by training if I didn't solve this for him.
 <div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
     <iframe
         src="https://www.youtube.com/embed/9hQtFL_0NjU?si=oUC-X0XsnKad-V9E"
-        width="800"
-        height="400"
+        width="1000"
+        height="500"
     />
 </div>
 

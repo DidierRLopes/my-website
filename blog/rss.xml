@@ -68,6 +68,38 @@
             <category>local-deployment</category>
         </item>
         <item>
+            <title><![CDATA[Building a custom widget for my friends newsletter]]></title>
+            <link>https://didierlopes.com/blog/2025-03-03-building-a-custom-widget-for-my-friends-newsletter</link>
+            <guid>https://didierlopes.com/blog/2025-03-03-building-a-custom-widget-for-my-friends-newsletter</guid>
+            <pubDate>Mon, 03 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[How I built a custom OpenBB widget to save my friend hours of manual work on his newsletter with 190,000+ subscribers.]]></description>
+            <content:encoded><![CDATA[<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-03-building-a-custom-widget-for-my-friends-newsletter.png"></p>
+<p>How I built a custom OpenBB widget to save my friend hours of manual work on his newsletter with 190,000+ subscribers.</p>
+<p>The open source code is available <a href="https://github.com/DidierRLopes/opening-bell-daily-openbb">here</a>.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>Last weekend I spoke with my friend <a href="https://www.linkedin.com/in/philrosen/" target="_blank">Phil Rosen</a>.</p>
+<p>He used to work as a Senior Markets Reporter at Business Insider.</p>
+<p>And left to start his own news and research outlet: <a href="https://www.openingbelldailynews.com/" target="_blank">Opening Bell Daily</a>, just over 1 year ago.</p>
+<p>He's been sharing a newsletter everyday since and has crossed over 190,000 subscribers!!!</p>
+<p>Funnily enough, we commented on how we were speaking on a Saturday morning and the weekends are the times where we are the most productive.</p>
+<p>As I was sharing more of OpenBB and how he can utilize it for the content in his newsletter, he shared a table chart that he crafts manually to his audience, which always takes him a significant amount of time to do every single day.</p>
+<p>Well, I wouldn't be an engineer by training if I didn't solve this for him.</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/9hQtFL_0NjU?si=oUC-X0XsnKad-V9E" width="800" height="400"></iframe></div>
+<p>More than that - to celebrate 1 year of Opening Bell Daily:</p>
+<blockquote>
+<p>Any OpenBB user can add this URL as a custom backend application on OpenBB and have Phil's market snapshot on their screen every day. <a href="https://openbb-opening-bell-daily.fly.dev/">https://openbb-opening-bell-daily.fly.dev</a></p>
+</blockquote>
+<br>
+<p>Or you can also sign up to Phil's newsletter and get it in your inbox along with insightful content, every day!</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-03-building-a-custom-widget-for-my-friends-newsletter_1.png"></p>
+<p>PS: I have made this code <a href="https://github.com/DidierRLopes/opening-bell-daily-openbb">open source</a> so others can create their own widgets for OpenBB or get inspired.</p>]]></content:encoded>
+            <category>openbb</category>
+            <category>financial-services</category>
+            <category>widget</category>
+            <category>automation</category>
+            <category>open-source</category>
+        </item>
+        <item>
             <title><![CDATA[How function calling and context-aware AI shapes OpenBB]]></title>
             <link>https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb</link>
             <guid>https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb</guid>

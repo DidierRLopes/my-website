@@ -1,8 +1,8 @@
 ---
-slug: 2025-02-xx-validation-from-blackrock-aladdin
-title: Thank you Blackrock for the validation
-date: 2025-03-20
-image: /blog/2025-02-xx-validation-from-blackrock-aladdin
+slug: 2025-03-11-the-10-trillion-openbb-copilot-validation
+title: The $10 trillion OpenBB Copilot validation
+date: 2025-03-11
+image: /blog/2025-03-11-the-10-trillion-openbb-copilot-validation
 tags: ['openbb', 'blackrock', 'copilot', 'enterprise', 'agent', 'widgets', 'architecture', 'open-source', 'finance', 'portfolio', 'security']
 description: "At the recent AI Engineering Summit, BlackRock unveiled their Aladdin Copilot - a platform remarkably similar to what we've built at OpenBB, but with a key difference. While they've invested massive resources into building a closed system, we've created an open-source solution that achieves the same goals: multi-application support, seamless agent integration, explainable AI, and enterprise-grade security. Here's a deep dive into how the world's largest asset manager validated our approach to AI-powered financial workflows."
 hideSidebar: true
@@ -11,7 +11,7 @@ unlisted: true
 ---
 
 <p align="center">
-    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation.png" />
+    <img width="900" src="/blog/2025-03-11-the-10-trillion-openbb-copilot-validation.png" />
 </p>
 
 At the recent AI Engineering Summit, BlackRock unveiled their Aladdin Copilot - a platform remarkably similar to what we've built at OpenBB, but with a key difference.
@@ -27,7 +27,7 @@ On Friday 21st, I attended the [AI Engineering Summit](https://www.ai.engineer/s
 One presentation that particularly caught my attention was BlackRock's session about their Aladdin Copilot. While I can't share the presentation materials as they're conference-exclusive, what I saw left me incredibly bullish about OpenBB's direction.
 
 <p align="center">
-    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_1.png" />
+    <img width="900" src="/blog/2025-03-11-the-10-trillion-openbb-copilot-validation_1.png" />
 </p>
 
 Here's why: BlackRock's copilot is remarkably similar to what we've built at OpenBB - but with 1% of their resources and one major distinction.
@@ -41,7 +41,7 @@ BlackRock's Aladdin platform centers heavily on Portfolio - enabling users to ha
 In contrast, OpenBB's Workspace functions as an open playground. While it certainly handles portfolio management (as demonstrated in [this example](https://www.youtube.com/watch?v=K80ayaZYyk4)), it extends far beyond that. Our platform supports risk management, equity/crypto/macro research, ideation, ranking, client advisory, and even compliance workflows.
 
 <p align="center">
-    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_2.png" />
+    <img width="900" src="/blog/2025-03-11-the-10-trillion-openbb-copilot-validation_2.png" />
 </p>
 
 This versatility stems from our workspace architecture where users build on their own data. The flexible widget creation system can accommodate virtually any workflow - provided users have the necessary data.
@@ -57,7 +57,7 @@ BlackRock appears to share this view. Their agentic copilot acts as a sidebar to
 Seeing this in their demo was genuinely shocking - it looked remarkably similar to what we've had in OpenBB for over a year now. It's validating to see the world's largest asset manager (with 20k employees) arriving at the same conclusions we did.
 
 <p align="center">
-    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_3.png" />
+    <img width="900" src="/blog/2025-03-11-the-10-trillion-openbb-copilot-validation_3.png" />
 </p>
 
 ## Explainability
@@ -67,13 +67,13 @@ Both platforms prioritize data transparency. Every copilot response that referen
 An example of how it can highlight sentence or table level in unstructured document:
 
 <p align="center">
-    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_4.png" />
+    <img width="900" src="/blog/2025-03-11-the-10-trillion-openbb-copilot-validation_4.png" />
 </p>
 
 An example of how it can highlight the widget origin that was used to answer to the prompt:
 
 <p align="center">
-    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_5.png" />
+    <img width="900" src="/blog/2025-03-11-the-10-trillion-openbb-copilot-validation_5.png" />
 </p>
 
 ## Secure environment first approach
@@ -93,13 +93,13 @@ Our OpenBB Copilot acts as an orchestrator, gathering context from three main so
 <br />
 
 <p align="center">
-    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_6.png" />
+    <img width="900" src="/blog/2025-03-11-the-10-trillion-openbb-copilot-validation_6.png" />
 </p>
 
 This context exists in the form of widgets, and there can be thousands! In the case of BlackRock, they refer to this as Plugin Registry.
 
 <p align="center">
-    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_7.png" />
+    <img width="900" src="/blog/2025-03-11-the-10-trillion-openbb-copilot-validation_7.png" />
 </p>
 
 ### What is a widget?
@@ -113,12 +113,12 @@ In our system, a widget combines:
 The metadata enables our copilot to identify and utilize appropriate widget based on user prompts, by controlling the widget through its parameters.
 
 <p align="center">
-    <img width="900" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_8.png" />
+    <img width="900" src="/blog/2025-03-11-the-10-trillion-openbb-copilot-validation_8.png" />
 </p>
 
 You can think of these widgets effectively as tools that are rendered on our workspace. Therefore, our agent can call different widgets to retrieve the data it needs to reply more effectively to the user.
 
-For a deeper dive into this architecture, check out my recent [10-minute presentation](https://www.youtube.com/watch?v=gH1mMtRa84Y).
+For a deeper dive into this architecture, check out my recent [10-minute presentation](https://www.youtube.com/watch?v=gH1mMtRa84Y) or the blog [here](https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb).
 
 ## Distinction
 
@@ -127,7 +127,7 @@ So what is the main distinction?
 How Open we are.
 
 <p align="center">
-    <img width="1200" src="/blog/2025-02-xx-thank-you-blackrock-for-the-validation_9.png" />
+    <img width="1200" src="/blog/2025-03-11-the-10-trillion-openbb-copilot-validation_9.png" />
 </p>
 
 We have an open source data integration framework that enables any firm from bringing any type of data into our product.

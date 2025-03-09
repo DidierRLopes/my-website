@@ -18,20 +18,46 @@
             <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-03-07-proactive-agents-are-the-future-of-ai-in-finance.png"></p>
 <p>How AI is evolving from reactive to proactive in financial services, and why this shift will transform how investors discover opportunities and generate alpha.</p>
 <div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>Imagine waking up to find your AI assistant has already analyzed overnight market movements, identified three potential investment opportunities aligned with your strategy, and prepared a briefing on key economic indicators that might impact your portfolio today. This isn't science fiction—it's the imminent future of AI in finance.</p>
+<h2 id="the-evolution-of-financial-ai-from-reactive-to-proactive">The Evolution of Financial AI: From Reactive to Proactive</h2>
 <p>This week I was asked the question "Where is OpenBB with AI next year?".</p>
 <p>Our play here is clear, we are the Enterprise UI that lives between data and AI.</p>
 <p>So when someone asks this question, they are ultimately asking "What will be possible to do on OpenBB as models get better and cheaper".</p>
-<p>And I think that it all comes down to: Reactive VS Proactive</p>
+<p>And I think that it all comes down to: <strong>Reactive VS Proactive</strong></p>
+<h3 id="the-current-state-reactive-ai">The Current State: Reactive AI</h3>
 <p>Today, LLMs/agents/AI is reactive for the most part.</p>
-<p>It requires users to have a clear intent on what they want the LLM to do, they are required to be prompted (pun intended).</p>
+<p>It requires users to have a clear intent on what they want the LLM to do, they are required to be prompted (pun intended). You ask a question, the AI answers. You request an analysis, the AI delivers. The interaction is fundamentally user-initiated and bounded by the specificity of your requests.</p>
+<p>This reactive paradigm, while powerful, places the burden of discovery on the human user. You need to know what to ask for, when to ask for it, and how to frame your questions.</p>
+<h3 id="the-future-state-proactive-ai">The Future State: Proactive AI</h3>
 <p>However, what happens when models get better and cheaper and they have an interface that has access to all their data in one place?</p>
 <p>Simple.</p>
-<p>It can scan the data every few seconds and generate investment ideas, find alpha and truly act like a partner.</p>
+<p>It can scan the data every few seconds and generate investment ideas, find alpha and truly act like a partner. A proactive AI agent might:</p>
+<ul>
+<li>Alert you to unusual trading patterns in a sector you're tracking</li>
+<li>Identify correlations between market events and your portfolio performance</li>
+<li>Suggest portfolio rebalancing based on changing market conditions</li>
+<li>Highlight emerging trends before they become mainstream investment theses</li>
+</ul>
 <p>More importantly, as the agent starts to engage with the user, we will be able to provide feedback to the model: "this wasn't a good idea because of X", "semi-conductors are not part of my mandate", ... and these models will adapt to become more personalized.</p>
+<h2 id="real-world-applications">Real-World Applications</h2>
+<p>Imagine a portfolio manager receiving an alert: "Three companies in your watchlist have shown unusual options activity following yesterday's Fed announcement. Based on your previous trading patterns, this may represent an opportunity in line with your contrarian strategy."</p>
+<p>Or consider a risk analyst being notified: "We've detected a 3.2 standard deviation move in correlation between your two largest positions. Here's an analysis of what might be driving this change and three potential hedging strategies."</p>
 <p>The exciting thing?</p>
 <p>We aren't that far off from this being a reality.</p>
+<h2 id="the-openbb-vision">The OpenBB Vision</h2>
+<p>At OpenBB, we're building the infrastructure to make this proactive AI future possible. By creating a unified interface between financial data and AI capabilities, we're enabling the next generation of intelligent financial assistants that don't just answer questions—they anticipate needs.</p>
 <p>This is how I envision the future:</p>
-<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/xTvaks7EDh0?si=szd8RNFyMD_SPAHm" width="1000" height="500"></iframe></div>]]></content:encoded>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/xTvaks7EDh0?si=szd8RNFyMD_SPAHm" width="1000" height="500"></iframe></div>
+<h2 id="what-this-means-for-you">What this means for you</h2>
+<p>The shift from reactive to proactive AI will fundamentally change how financial professionals work:</p>
+<ol>
+<li><strong>Time efficiency</strong>: Less time spent on routine data gathering and more time on high-value decision making</li>
+<li><strong>Expanded opportunity set</strong>: Discover investment ideas outside your usual information channels</li>
+<li><strong>Personalized intelligence</strong>: AI that learns your preferences, risk tolerance, and investment style</li>
+<li><strong>Competitive edge</strong>: Early identification of market shifts and anomalies</li>
+</ol>
+<br>
+<p>The future of finance isn't just about having better answers—it's about having an AI partner that asks better questions.</p>]]></content:encoded>
             <category>openbb</category>
             <category>financial-services</category>
             <category>ai</category>

@@ -6,7 +6,6 @@ image: /blog/2025-03-11-the-10-trillion-openbb-copilot-validation
 tags: ['openbb', 'blackrock', 'copilot', 'enterprise', 'agent', 'widgets', 'architecture', 'open-source', 'finance', 'portfolio', 'security']
 description: "At the recent AI Engineering Summit, BlackRock unveiled their Aladdin Copilot - a platform remarkably similar to what we've built at OpenBB, but with a key difference. While they've invested massive resources into building a closed system, we've created an open-source solution that achieves the same goals: multi-application support, seamless agent integration, explainable AI, and enterprise-grade security. Here's a deep dive into how the world's largest asset manager validated our approach to AI-powered financial workflows."
 hideSidebar: true
-unlisted: true
 
 ---
 

@@ -420,12 +420,6 @@ const data = [
 			"/books/writing-that-works-how-to-communicate-effectively-in-business.jpg",
 	},
 	{
-		title: "The Nvidia Way: Jensen Huang and the Making of a Tech Giant",
-		author: "Tae Kim",
-		image:
-			"/books/the-nvidia-way-jensen-huang-and-the-making-of-a-tech-giant.jpg",
-	},
-	{
 		title: "American Kingpin: The Epic Hunt for the Criminal Mastermind Behind the Silk Road",
 		author: "Nick Bilton",
 		image:

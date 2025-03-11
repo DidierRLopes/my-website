@@ -444,7 +444,13 @@ const data = [
 		title: "What It Takes: Lessons in the Pursuit of Excellence",
 		author: "Stephen A. Schwarzman",
 		image: "/books/what-it-takes-lessons-in-the-pursuit-of-excellence.jpg",
-	}
+	},
+	{
+		title: "The Nvidia Way: Jensen Huang and the Making of a Tech Giant",
+		author: "Tae Kim",
+		image:
+			"/books/the-nvidia-way-jensen-huang-and-the-making-of-a-tech-giant.jpg",
+	},
 ];
 
 export default function BooksAlreadyRead() {

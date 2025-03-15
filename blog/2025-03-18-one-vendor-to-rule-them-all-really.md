@@ -47,6 +47,12 @@ When I open sourced OpenBB, we saw hundreds of contributors adding data sources 
 
 Yup, there was a lot.
 
+My screen looked like this:
+
+<p align="center">
+    <img width="600" src="/blog/2025-03-18-one-vendor-to-rule-them-all-really_1.jpg" />
+</p>
+
 It turns out that professionals had the same pain points that I did. This widespread adoption revealed a fundamental truth about the financial data landscape that continues to shape our vision today.
 
 ## A single data vendor
@@ -94,7 +100,7 @@ This isn't just speculation. We're already seeing evidence of this transformatio
 
 I believe that AI will be able to find Alpha at the intersection of different datasets and their relationships, or even utilizing proprietary data (which third party products do not offer).
 
-Regardless, for that you need an AI-first Enterprise UI.
+Regardless, for that you need an AI-first enterprise UI.
 
 This is what we are building at OpenBB – not just another data aggregator, but an intelligent interface that:
 
@@ -102,6 +108,10 @@ This is what we are building at OpenBB – not just another data aggregator, but
 - Applies AI to identify patterns and relationships that humans might miss
 - Adapts to your unique workflow and proprietary data
 - Reduces the friction between question and insight
+
+<p align="center">
+    <img width="900" src="/blog/2025-03-18-one-vendor-to-rule-them-all-really_2.png" />
+</p>
 
 ## The role of data
 
@@ -111,9 +121,47 @@ The issue with this is that data by itself doesn't do much.
 
 You need an interface to analyze that data or for AI to do so.
 
-OpenBB Workspace is precisely this AI-first Enterprise UI – the critical missing piece that transforms raw data into actionable intelligence.
+OpenBB Workspace is precisely this – the critical missing piece that transforms raw data into actionable intelligence.
 
 Where traditional platforms simply aggregate information, our solution applies intelligence to that information, creating a multiplier effect on your data investments.
+
+## The power shift: From data to interface
+
+<p align="center">
+    <img width="600" src="/blog/2025-03-18-one-vendor-to-rule-them-all-really_3.jpeg" />
+</p>
+
+Historically, the power in financial markets has been centered around data access. The interface was merely a distribution channel - a means to an end.
+
+But this model has been limiting for some time now.
+
+Think about it: All humans are different in how we process information, yet somehow we're all expected to use the same software interfaces?
+
+Make it make sense.
+
+The reality is that each professional has unique cognitive patterns, analytical strengths, and decision-making processes. A one-size-fits-all approach to financial interfaces is fundamentally at odds with how humans actually work.
+
+## Owning your workflow
+
+As firms consume more data from diverse sources, they should also own their workflow and interface.
+
+Why?
+
+1. **Competitive advantage**: Your unique process is what differentiates you in the market
+2. **Adaptability**: Markets evolve rapidly - your tools should evolve with them
+3. **Integration**: Proprietary data becomes truly valuable when seamlessly incorporated into your workflow
+4. **Personalization**: Different team members need different views of the same data
+
+<br />
+
+This is why OpenBB Workspace is designed to be adaptable to your specific needs - not forcing you into a rigid framework, but empowering you to create the exact workflow that matches how your team thinks and operates.
+
+Plus, you can **fully own** your workflow, data and everything in between.
+
+<p align="center">
+    <img width="900" src="/blog/2025-03-18-one-vendor-to-rule-them-all-really_4.png" />
+</p>
+
 
 ## Looking ahead
 

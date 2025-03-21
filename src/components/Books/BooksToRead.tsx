@@ -443,11 +443,6 @@ const data = [
 		image: "/books/the-art-of-doing-science-and-engineering-learning-to-learn.jpg",
 	},
 	{
-		title: "Founder vs Investor: The Honest Truth About Venture Capital from Startup to IPO",
-		author: "Elizabeth Zalman, Jerry Neumann",
-		image: "/books/founder-vs-investor-the-honest-truth-about-venture-capital-from-startup-to-ipo.jpg",
-	},
-	{
 		title: "Secrets of Sand Hill Road: Venture Capital and How to Get It",
 		author: "Scott Kupor, Eric Ries",
 		image: "/books/secrets-of-sand-hill-road-venture-capital-and-how-to-get-it.jpg",

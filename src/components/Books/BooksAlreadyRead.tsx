@@ -451,6 +451,11 @@ const data = [
 		image:
 			"/books/the-nvidia-way-jensen-huang-and-the-making-of-a-tech-giant.jpg",
 	},
+	{
+		title: "Founder vs Investor: The Honest Truth About Venture Capital from Startup to IPO",
+		author: "Elizabeth Zalman, Jerry Neumann",
+		image: "/books/founder-vs-investor-the-honest-truth-about-venture-capital-from-startup-to-ipo.jpg",
+	},
 ];
 
 export default function BooksAlreadyRead() {

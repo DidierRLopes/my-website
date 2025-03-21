@@ -1,6 +1,6 @@
 ---
 title: News Coverage
-sidebar_position: 0
+sidebar_position: 1
 ---
 
 import NewsCoverage from '@site/src/components/Media/MediaNewsCoverage.tsx'

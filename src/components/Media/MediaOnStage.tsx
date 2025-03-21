@@ -3,6 +3,15 @@ import VideosList from "../General/VideosList";
 
 const data = [
 	{
+		title: "PANEL DISCUSSION: Future of Data in Investing",
+		description:
+			"With Didier Rodrigues Lopes, Founder & CEO @ OpenBB; Richard Peterson, CEO, MarketPsych (division of London Stock Exchange); Yosef Zweibach, Chief Operating Officer of Quantic, Walleye Capital; Chris White, CEO at ViableMkts & BondCliQ and moderated by Christina Qi, CEO Databento & Founder Domeyard LP, MIT Trustee.",
+		date: "2025-03-20",
+		location: "Columbia University",
+		image: "/media/columbia-2025-march.jpg",
+		info: "More information on the event can be found <a href='https://www.rebellionresearch.com/columbia-mathematics-of-finance-mafn-2025-future-of-portfolio-management-lars-tyge-nielsen-memorial-conference' target='_blank' rel='noopener noreferrer'>here</a>.",
+	},
+	{
 		title: "Autonomous Agents — The Next Step in AI Applications?",
 		description:
 			"Autonomous agents - AI programs that interact independently with multiple applications, LLMs or websites to complete an entire workflow – promise to be the next step in enhancing productivity in investment management. In response to an inflow into a mutual fund, for example, a group of agents might build a list of buy orders using the OMS, stage the orders to an EMS, review liquidity conditions to craft a trading strategy and send orders to the broker algorithms best suited to execute the orders, rather than requiring traders to interact with several applications. What are the challenges, risks and benefits of creating and deploying autonomous agents in the investment management enterprise?",

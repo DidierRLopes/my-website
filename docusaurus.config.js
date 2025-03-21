@@ -109,7 +109,7 @@ const config = {
           {
             position: 'left',
             label: 'Media',
-            to: '/media/news-mentions',
+            to: '/media/on-stage',
           },
           {
             position: 'left',

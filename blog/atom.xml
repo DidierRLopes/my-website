@@ -2,12 +2,140 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://didierlopes.com/blog</id>
     <title>Didier Lopes Blog</title>
-    <updated>2025-03-11T00:00:00.000Z</updated>
+    <updated>2025-03-18T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://didierlopes.com/blog"/>
     <subtitle>Didier Lopes Blog</subtitle>
     <icon>https://didierlopes.com/img/favicon.ico</icon>
     <rights>Copyright © 2025 Didier Lopes.</rights>
+    <entry>
+        <title type="html"><![CDATA[Doing my first Half Marathon]]></title>
+        <id>https://didierlopes.com/blog/2025-03-18-my-first-half-marathon</id>
+        <link href="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon"/>
+        <updated>2025-03-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A personal journey through my first NYC Half Marathon, from fundraising $1,615 for cancer research to crossing the finish line in 1h45min, complete with training insights and my race day experience.]]></summary>
+        <content type="html"><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon.JPG"></p>
+<p>A personal journey through my first NYC Half Marathon, from fundraising $1,615 for cancer research to crossing the finish line in 1h45min, complete with training insights and my race day experience.</p>
+<!-- -->
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<h2 id="background">Background</h2>
+<p>I'm currently 29 years old.</p>
+<p>That means that as other hundred of thousands of runners, I'm having a mid-life crisis... just kidding.</p>
+<p>Last year, I signed up to participate in a boxing match for Haymakers for Hope - where I would have to raise $10k for Cancer research.</p>
+<p>I didn't get selected in the end.</p>
+<p>However, raising money for charity (something I had never done before) was something that I've always wanted to do. Particularly when it affected me so much at a young age (more on that <a href="http://didierlopes.com/blog/inspired-by-bia-how-her-fight-against-cancer-changed-my-life/" target="_blank">here</a>).</p>
+<p>So when I received an email about the United NYC Half marathon, organized by Haymakers for Hope. I had to sign up.</p>
+<h2 id="fundraising">Fundraising</h2>
+<p>The New York City Half Marathon is incredibly popular, with nearly 30,000 people participating this year. Unlike most races, you can't simply sign up - you actually need to apply through an organization that has allocated "bibs" for the race.</p>
+<p>If you're accepted, you commit to raising money for the chosen cause. I love this approach because it means everyone running on race day has raised funds for organizations they're passionate about, giving the event deeper meaning and purpose.</p>
+<p>In my case, I commit to raise at least $1500. In total I was able to raise $1615.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_1.png"></p>
+<p>Although I've previously raised $8.9M for OpenBB, as mentioned in <a href="https://venturebeat.com/data-infrastructure/openbb-wants-to-be-an-open-source-challenger-to-bloomberg-terminal/" target="_blank">this article</a>. Raising wasn't straightforward.</p>
+<p>Here are a few things that I did in order to raise this amount:</p>
+<ul>
+<li>I shared the <a href="http://didierlopes.com/blog/inspired-by-bia-how-her-fight-against-cancer-changed-my-life/" target="_blank">story of Bia</a> and why this cause is important to me. First on socials and then on my newsletter.</li>
+<li>I asked my closest friends and family to support me in this cause.</li>
+<li>For the people that couldn't support, I asked to repost my fundraising efforts for higher visibility.</li>
+<li>Added that CTA on the top of my website, where I share blogs weekly.</li>
+</ul>
+<p>Other things that I was thinking of doing, but ended up not requiring to do so:</p>
+<ul>
+<li>Asking if any company would like to contribute to the fundraising and I would run with their merch</li>
+<li>Doing a stream on building something from scratch where I have on the banner that I'm raising money for Cancer</li>
+<li>Selling items that I don't use as much anymore</li>
+</ul>
+<h2 id="preparation-and-paperwork">Preparation and paperwork</h2>
+<p>The administrative side of race preparation was straightforward but required attention to detail:</p>
+<p>First, I had to sign up with New York Road Runners (<a href="https://www.nyrr.org/" target="_blank">NYRR</a>).</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>Important tip: be realistic about your estimated completion time.</p><br><p>This determines your starting wave. I conservatively estimated 2 hours since it was my first half marathon, but I should have put 1:45 instead. A faster wave would have meant less congestion at the start, and going with runners that are aiming to do the same time as I am.</p></div></div>
+<p>This is what the wave scheduled looked like.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_2.png"></p>
+<p>After paying the race fee, I scheduled my bib pickup.</p>
+<p>The pickup location was actually great! There was a ton of race merchandise, giveaways, photoshoots and more going on.</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>Check that you get the running bib, your number that contains the chip tracker and the clips to set them on. For instance, mine had a missing clip to attach it to the shirt.</p></div></div>
+<p>The location also displayed a wall with all runner's names, my mom actually found my name on the wall!</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_3.jpeg"></p>
+<p>I also took an event guide, which had pretty much all the information I needed for the day of the race.</p>
+<div style="display:flex;justify-content:center;gap:20px"><img width="45%" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_4.jpeg"><img width="45%" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_5.jpeg"></div>
+<h2 id="training">Training</h2>
+<p>My training wasn't as structured as it could have been, but my regular boxing sessions (2-3 times weekly) provided a great foundation.</p>
+<p>To ensure I could complete the distance, I ran a practice half marathon one month before the race near my boxing Gym Gleason's, finishing in 2 hours. This gave me confidence and a benchmark to improve upon.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_6.jpeg"></p>
+<div style="display:flex;justify-content:center;gap:20px"><img width="45%" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_7.PNG"><img width="45%" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_8.PNG"></div>
+<br>
+<p>A week before the event, I completed a 12-mile run with elevation in Central Park to prepare for any challenging terrain. This made me understand how elevation actually plays a role, since in that previous training session the terrain was very much flat!</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_9.jpeg"></p>
+<div style="display:flex;justify-content:center;gap:20px"><img width="45%" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_10.jpeg"><img width="45%" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_11.jpeg"></div>
+<h2 id="race-day">Race day</h2>
+<p>For the race day I woke up a couple hours before the event.</p>
+<p>For breakfast, I had three eggs and a banana to provide energy for the run.</p>
+<p>I wore the bib given by the organization with my number plate, non-grip socks, running shoes, shorts with pockets for my airpods box and the Haymakers for Hope hat. This was a good shout as I saw someone from our team on the starting line and they recognized me because of that.</p>
+<p>For garments I brought my AirPods to listen to a Spotify playlist that I had prepared the day before with fast paced music to give a boost. Example of songs in that playlist include:</p>
+<ul>
+<li>
+<a href="https://www.youtube.com/watch?v=cdgbI17JbII" target="_blank" rel="noopener noreferrer">Camo &amp; Krooked - Climax</a>
+</li>
+<li>
+<a href="https://www.youtube.com/watch?v=xvtNS6hbVy4" target="_blank" rel="noopener noreferrer">Deadmau5 feat Chris James - The Veldt</a>
+</li>
+<li>
+<a href="https://www.youtube.com/watch?v=Lo0ELoepTCM" target="_blank" rel="noopener noreferrer">Monolink - Return to Oz (ARTBAT Remix)</a>
+</li>
+</ul>
+<p>Shoutout to <a href="https://www.linkedin.com/in/ulyanaermolova/">Ulyana</a> who shared some of the songs she listens while running!</p>
+<p>I also brought an old sweater to stay warm before the race, which I later donated through the race's clothing drive for charity. I loved this concept.</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>You can actually take more things with you and then check-in that bag before the race. The organization will take that bag to the finish line which you can then pick up by using your bib number or name.</p></div></div>
+<p>With all this preparation, I forgot something that was critical - and I still cannot believe that I did. I forgot my Apple Watch!! 🤦🏽‍♂️</p>
+<p>This resulted in me running with the phone in my hand throughout the race, looking like a schmuck.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_12.png"></p>
+<p>Note: LLMs are getting so good, that Gemini 2.0 Flash (Image Generation) is now able to remove watermarks of pictures. See <a href="https://x.com/didier_lopes/status/1902067982123319637">this tweet</a> for reference.</p>
+<h3 id="during-the-race">During the race</h3>
+<p>Just before starting, I consumed one of my energy gels for an initial boost.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_13.jpeg"></p>
+<p>The race experience was awesome in itself. Your timing chip activates when you cross the start line, so your official time is accurate regardless of where you stand in your wave.</p>
+<p>However, starting in a slower wave meant navigating through crowds of runners, which proved challenging at times.</p>
+<p>There were several water and Gatorade stations throughout the course, eliminating the need to carry your own water bottle.</p>
+<p>You will actually receive map course information before the race so you can prepare for where these stations are.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_14.png"></p>
+<p>The elevation chart on this map is actually very important. This allows you to be strategic when you think about when to conserve your energy or speed up.</p>
+<p>I saw many runners that started walking when they were on a uphill. I think that being able to push through in these sections is critical, since if you break your rhythm then it becomes harder to keep going.</p>
+<p>Running across the Brooklyn Bridge (a first ever for any race!) and through Times Square were big highlights for me.</p>
+<div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap"><img width="32%" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_15.jpeg"><img width="32%" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_16.jpeg"><img width="32%" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_17.jpeg"></div>
+<br>
+<p>The energy from spectators was also incredible, with creative and humorous signs everywhere.</p>
+<p>Some of my favorites included:</p>
+<ul>
+<li>"Pain is temporary, Strava is 4eva"</li>
+<li>"Your outie is running a half marathon"</li>
+<li>"If you slow down I'll drop this" held by a naked spectator with a strategically placed sign</li>
+<li>"When you need to actually run the race you signed up for" with the face of someone screaming</li>
+<li>"From 1 to 10, you are a 13"</li>
+<li>"Run now, beer later"</li>
+<li>"You are only running this race because you are half crazy"</li>
+</ul>
+<p>Around mile 9, I used another of my energy gel to keep going. I used my one instead of the ones provided by the organization as my body knows that gel, and you don't want any surprises on the day.</p>
+<p>Without my watch, I paced myself by mental calculations from my start time. I saved energy for a final push in the last mile to hit my target of 1h:45m.</p>
+<p>Having my parents and wife near the finish line providing support was amazing.</p>
+<p>This is a picture taken by them, with less than 400m left:</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_18.JPG"></p>
+<h2 id="after-the-race">After the race</h2>
+<p>As soon as I crossed the finish line, volunteers handed out care packages containing water, Gatorade, a cereal bar, pretzels, and an apple.</p>
+<p>As you walk a few dozen meters, they also hand you your medal and blankets to warm you up. Then there's also locations where people can take pictures.</p>
+<p>Here's the picture I took with my family after leaving the half marathon area.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_19.jpeg"></p>
+<p>The entire experience exceeded my expectations.</p>
+<p>While running isn't my favorite activity, completing a half marathon with my parents on the finish line was awesome.</p>
+<p>Finally, at home, I sent an e-mail to everyone who donated thanking them for the donation, letting them know how much was raised, and how the event went.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-03-18-my-first-half-marathon_20.png"></p>
+<p>This is something I borrowed from my friend <a href="https://www.linkedin.com/in/nicolasbcarreras/">Nick</a> when I donated to his team relay race.</p>
+<p>Looking forward to doing a full marathon next!</p>]]></content>
+        <category label="running" term="running"/>
+        <category label="half-marathon" term="half-marathon"/>
+        <category label="nyc" term="nyc"/>
+        <category label="charity" term="charity"/>
+        <category label="fitness" term="fitness"/>
+        <category label="personal" term="personal"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[The $10 trillion OpenBB Copilot validation]]></title>
         <id>https://didierlopes.com/blog/2025-03-11-the-10-trillion-openbb-copilot-validation</id>

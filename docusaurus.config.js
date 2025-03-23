@@ -194,6 +194,13 @@ const config = {
   ],
 
   stylesheets: ['src/css/custom.css'],
+
+  markdown: {
+    mermaid: true,
+    mdx1Compat: {
+      admonitions: true,
+    },
+  },
 };
 
 module.exports = config;

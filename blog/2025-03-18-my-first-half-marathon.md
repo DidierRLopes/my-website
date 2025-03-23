@@ -6,7 +6,6 @@ image: /blog/2025-03-18-my-first-half-marathon
 tags: ['running', 'half-marathon', 'nyc', 'charity', 'fitness', 'personal']
 description: A personal journey through my first NYC Half Marathon, from fundraising $1,615 for cancer research to crossing the finish line in 1h45min, complete with training insights and my race day experience.
 hideSidebar: true
-unlisted: true
 
 ---
 

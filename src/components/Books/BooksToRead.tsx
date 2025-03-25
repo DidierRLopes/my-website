@@ -466,6 +466,11 @@ const data = [
 		title: "Design Is Storytelling",
 		author: "Ellen Lupton",
 		image: "/books/design-is-storytelling.jpg",
+	},
+	{
+		title: "The Qualified Sales Leader: Proven Lessons from a Five Time CRO",
+		author: "John McMahon",
+		image: "/books/the-qualified-sales-leader-proven-lessons-from-a-five-time-cro.jpg",
 	}
 ];
 

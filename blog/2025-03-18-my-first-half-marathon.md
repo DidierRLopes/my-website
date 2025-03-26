@@ -244,3 +244,12 @@ Finally, at home, I sent an e-mail to everyone who donated thanking them for the
 This is something I borrowed from my friend [Nick](https://www.linkedin.com/in/nicolasbcarreras/) when I donated to his team relay race.
 
 Looking forward to doing a full marathon next!
+
+## Stats
+
+Some stats below for the curious,
+
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px', flexWrap: 'wrap' }}>
+    <img width="49%" src="/blog/2025-03-18-my-first-half-marathon_21.png" />
+    <img width="49%" src="/blog/2025-03-18-my-first-half-marathon_22.png" />
+</div>

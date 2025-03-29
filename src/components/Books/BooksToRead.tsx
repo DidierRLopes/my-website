@@ -83,12 +83,6 @@ const data = [
 		image: "/books/change-how-to-make-big-things-happen.jpeg",
 	},
 	{
-		title: "The Beginning of Infinity: Explanations That Transform the World",
-		author: "David Deutsch",
-		image:
-			"/books/the-beginning-of-infinity-explanations-that-transform-the-world.jpeg",
-	},
-	{
 		title: "Influence: The Psychology of Persuasion",
 		author: "Robert B. Cialdini",
 		image: "/books/influence-the-psychology-of-persuasion.jpeg",

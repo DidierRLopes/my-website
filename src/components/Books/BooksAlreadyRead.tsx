@@ -436,6 +436,12 @@ const data = [
 		image: "/books/liars-poker-rising-through-the-wreckage-on-wall-street.jpg",
 	},
 	{
+		title: "The Beginning of Infinity: Explanations That Transform the World",
+		author: "David Deutsch",
+		image:
+			"/books/the-beginning-of-infinity-explanations-that-transform-the-world.jpeg",
+	},
+	{
 		title: "Thinking in Systems",
 		author: "Donella H. Meadows",
 		image: "/books/thinking-in-systems.jpg",

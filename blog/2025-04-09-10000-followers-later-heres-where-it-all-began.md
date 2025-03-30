@@ -1,6 +1,6 @@
 ---
 slug: 2025-04-09-10000-followers-later-heres-where-it-all-began
-title: 10,000 Followers Later, Here’s Where It All Began
+title: 10,000 followers later, here’s where it all began
 date: 2025-04-09
 image: /blog/2025-04-09-10000-followers-later-heres-where-it-all-began
 tags: ['career', 'social media', 'linkedin', 'build in public']
@@ -17,6 +17,8 @@ unlisted: true
 A personal reflection on my 6-year journey to 10,000 LinkedIn followers and how sharing my work publicly led to unexpected opportunities and the creation of OpenBB.
 
 <!-- truncate -->
+
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
 I crossed 10,000 followers on LinkedIn.
 

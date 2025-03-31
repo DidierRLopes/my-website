@@ -187,20 +187,6 @@ Do I _want_ to click on “Thinking model”? Not really. But Cursor doesn’t y
 
 Even better—do I _really_ care that it’s Claude? Nope. If it turns out Gemini 2.5 is the best at coding, I’ll happily switch and never look back.
 
-### Other worthy mentions
-
-**Replit** - Ideal for people who aren’t developers and/or don’t want the hassle of setting up a new environment, variables, API connections, etc. 
-
-- Moats:
-    - **Workflows** – they’ve built an IDE that’s been perfected for this type of user.
-    - **Data** – they’ve been able to aggregate data on deployment, script execution, code runs, etc., through their own platform.
-
-**v0** - Ideal for people who want to get a nice-looking frontend.
-
-- Moat:
-    - **Data** – the access to data they have, and shadcn, is really what makes the difference here.
-
-
 ## OpenBB
 
 Ok, so where do we fit?

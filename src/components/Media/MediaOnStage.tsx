@@ -7,7 +7,7 @@ const data = [
 		description:
 			"With Didier Rodrigues Lopes, Founder & CEO @ OpenBB; Richard Peterson, CEO, MarketPsych (division of London Stock Exchange); Yosef Zweibach, Chief Operating Officer of Quantic, Walleye Capital; Chris White, CEO at ViableMkts & BondCliQ and moderated by Christina Qi, CEO Databento & Founder Domeyard LP, MIT Trustee.",
 		date: "2025-03-20",
-		location: "Columbia University",
+		location: "Columbia Mathematics of Finance - 2025 Future of Portfolio Management & Artificial Intelligence Conference",
 		image: "/media/columbia-2025-march.jpg",
 		info: "More information on the event can be found <a href='https://www.rebellionresearch.com/columbia-mathematics-of-finance-mafn-2025-future-of-portfolio-management-lars-tyge-nielsen-memorial-conference' target='_blank' rel='noopener noreferrer'>here</a>.",
 	},
@@ -34,7 +34,7 @@ const data = [
 		description:
 			"Yu Yu - Director of Data Science at BlackRock, Tony Berkman - Managing Director at Two Sigma, Samson Qian - Citadel, Didier Rodrigues Lopes - Founder and CEO @ OpenBB",
 		date: "2024-09-14",
-		location: "Cornell Financial Engineering Manhattan",
+		location: "Cornell Financial Engineering Manhattan - 2024 Future of Finance & AI Conference",
 		image: "/media/chatgpt-the-future-of-ai-in-finance.jpg",
 		info: "A blogpost about the talk can be found <a href='https://didierlopes.com/blog/chatgpt-and-the-future-of-ai-in-finance' target='_blank' rel='noopener noreferrer'>here</a>. More information on the event can be found <a href='https://www.rebellionresearch.com/cornell-financial-engineering-manhattan-rebellion-research-2024-future-of-finance-conference' target='_blank' rel='noopener noreferrer'>here</a>.",
 	},

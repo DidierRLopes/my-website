@@ -2,12 +2,157 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://didierlopes.com/blog</id>
     <title>Didier Lopes Blog</title>
-    <updated>2025-03-25T00:00:00.000Z</updated>
+    <updated>2025-04-03T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://didierlopes.com/blog"/>
     <subtitle>Didier Lopes Blog</subtitle>
     <icon>https://didierlopes.com/img/favicon.ico</icon>
     <rights>Copyright © 2025 Didier Lopes.</rights>
+    <entry>
+        <title type="html"><![CDATA[Stop building AI products, start building workflows]]></title>
+        <id>https://didierlopes.com/blog/2025-04-03-stop-building-ai-products-start-building-workflows</id>
+        <link href="https://didierlopes.com/blog/2025-04-03-stop-building-ai-products-start-building-workflows"/>
+        <updated>2025-04-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The secret to building defensible AI companies isn't better AI - it's better workflows. An insider's perspective on why some AI companies thrive while others will become obsolete with each new model release.]]></summary>
+        <content type="html"><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-04-03-stop-building-ai-products-start-building-workflows.png"></p>
+<p>The secret to building defensible AI companies isn't better AI - it's better workflows. An insider's perspective on why some AI companies thrive while others will become obsolete with each new model release.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>Lately, I've been asked several times about my opinion on how better AI models are ultimately going to impact financial companies and OpenBB.</p>
+<p>If you're not an AI lab, then your product is a wrapper around an LLM.</p>
+<p>In the AI space, a lot of people use the term wrapper with a negative connotation. But not all wrappers are created equal.</p>
+<p>Being a wrapper around an LLM just means that your product is not the LLM—but the wrapper itself.</p>
+<h2 id="chatting-with-your-internal-data">Chatting with your internal data</h2>
+<p>If you're building a general-purpose AI model to be used on any user data, and your pitch is: our model is better at retrieval than any other AI lab.</p>
+<p>Then you’ve already lost.</p>
+<p>The funny thing is, the companies that fall into this trap will say:</p>
+<blockquote>
+<p><em>"OpenAI isn't a competitor because we are better at understanding the user data"</em></p>
+</blockquote>
+<br>
+<p>But then, every time a new model drops they will tell investors:</p>
+<blockquote>
+<p><em>"Our product just got 2x better because of the latest OpenAI release"</em></p>
+</blockquote>
+<br>
+<p>You see the irony right?</p>
+<p>If you have <em>this</em> thin of a wrapper, then in the words of Sam Altman — OpenAI will steamroll you.</p>
+<p>I.e., while you're telling investors that your product performance improved thanks to the latest model, we both know that the value gap between using OpenAI directly and your product just got smaller.</p>
+<p>You're fighting a fight you can't win.</p>
+<h2 id="but-our-chatting-interface-is-better">But our chatting interface is better</h2>
+<p>How is it better?</p>
+<ul>
+<li>Does it create charts and tables?</li>
+<li>Does it create artifacts?</li>
+<li>Does it highlight citations?</li>
+<li>Does it provide reasoning?</li>
+<li>Does it do web search?</li>
+<li>Does it do deep research?</li>
+<li>Does it allow you to upload documents?</li>
+</ul>
+<p>I'm sorry to tell you, but OpenAI already does all these things.</p>
+<p>Even worse - in the financial services, firms are likely already using Microsoft or Google as a cloud vendor.</p>
+<p>And both of these have products where OpenAI and Gemini, respectively, work on top of firm's data.</p>
+<p>So why would a firm even look at your product if this is where you fall?</p>
+<h2 id="what-about-perplexity">What about Perplexity?</h2>
+<p>Perplexity needs to be studied. For good reasons.</p>
+<p>They fine-tuned an open-weight model and used it for web search.</p>
+<p>Nothing groundbreaking here.</p>
+<p>Except that their execution is seamless.</p>
+<p>They did it much earlier than any of the main AI labs—and every day that passed, Perplexity was gaining market share around AI for querying the internet.</p>
+<p>While they were gaining market share, they never let the momentum die—either through launches, partnerships, competitions...</p>
+<p>And so today, although OpenAI and others have web search, Perplexity is considered the best product for queries that involve the web.</p>
+<p>Ultimately, I think their moat is a combination of being first to market (on search), having a strong brand, and—more importantly—flawless execution by Aravind.</p>
+<p>One of the things I never understood was why they didn’t push more on the Enterprise AI angle. After all, they have the best demo there is:</p>
+<blockquote>
+<p><em>“If we can give you an answer based on a personal blog post written 17 years ago by a professor of history from Portugal, do you really think we can’t get your ‘extract the company’s last twelve months’ revenue’?”</em></p>
+</blockquote>
+<br>
+<p>But they announced crossing $100M ARR, so they’re doing pretty well.</p>
+<h2 id="where-does-the-highest-value-lie">Where does the highest value lie?</h2>
+<p>I'm seeing two dimensions here:</p>
+<ol>
+<li>Data</li>
+<li>Workflows</li>
+</ol>
+<br>
+<p>Let's approach each individually.</p>
+<h3 id="1-data">1. Data</h3>
+<p>When it comes to data, we are talking about:</p>
+<blockquote>
+<p><em>Do you have your own proprietary data that firms would pay for?</em></p>
+</blockquote>
+<br>
+<p>If the answer is yes—then <em>this</em> is your moat.</p>
+<p>Note that this has nothing to do with AI, but with the data itself.</p>
+<p>AI is just the delivery mechanism for that data. Not an API call, not a dashboard with the data, not a notification... a box that expects natural language and returns the data.</p>
+<p>If the answer is no, then you don’t have a moat here.</p>
+<p><strong>BUT.</strong></p>
+<p>If you were thinking, <em>“But my application connects with data from FactSet, S&amp;P, ...”</em></p>
+<p>Then your moat is not the data itself, but the <strong>workflow</strong>—which takes me to the next moat discussion.</p>
+<h3 id="2-workflows">2. Workflows</h3>
+<p>Here, the question is: what types of workflows do you allow users to get done on your product?</p>
+<p>The definition of a <em>workflow</em> is: a sequence of steps or tasks that are carried out to complete a specific process or achieve a particular goal.</p>
+<p>There’s no mention of AI anywhere in that definition. AI is a tool that can help get a workflow done, but it isn’t required.</p>
+<p>What <em>is</em> required is understanding users—and understanding what they want to get done.</p>
+<p>So there's a <em>lot</em> of value in going narrow and nailing the workflow for a specific type of user.</p>
+<p><em>"But if you go narrow in a vertical, can’t you be disrupted more easily?"</em> — you ask.</p>
+<p>Yes and no.</p>
+<ul>
+<li>
+<p><strong>YES</strong>, if OpenAI ultimately wanted to go after that market, it could. But OpenAI won’t care. Not necessarily because the market isn’t big, but because they’re pursuing one that’s even bigger.</p>
+</li>
+<li>
+<p><strong>NO</strong>, because the more vertical and narrow you go, the fewer experts there are, the stronger the word-of-mouth is, and the lower the competition. And once you’re in—you have first-mover advantage.</p>
+</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<p>Cursor and Windsurf are amazing products because they <em>nail the workflow</em> of developers.</p>
+<p>It’s not just about the AI model being used—but <em>when</em> and <em>how</em> it's used.</p>
+<p>It’s about being in a full IDE that users are already familiar with, and plugging in the AI at the exact moments a user needs it.</p>
+<p>They understood the pain of developers—and used AI to alleviate that pain.</p>
+<p>The moat is in nailing the workflow and the user experience.</p>
+<p><strong>What about better models being released? How do they impact these products?</strong></p>
+<p>They get better.</p>
+<p>Because the developers behind the product understand how to use these better models to remove <em>even more</em> friction for their users.</p>
+<p>Another thing worth saying here—I don’t actually believe in users selecting different models.</p>
+<p>It sounds good in theory, but in practice, it doesn’t really work.</p>
+<p>I don’t care what model Cursor is using—I care about getting my workflow done.</p>
+<p>As a developer, I have <em>zero</em> loyalty to my tools. I’ll use whatever gets the job done faster and more efficiently.</p>
+<p>I mean—how many people actually switch models manually on Cursor? I think not many, and definitely not frequently.</p>
+<p>I, for one, use Claude because it’s the best for coding right now. But if I’m asking an implementation question, then I’ll click on the “Claude Thinking” model.</p>
+<p>Do I <em>want</em> to click on “Thinking model”? Not really. But Cursor doesn’t yet understand my intent to get all the “firepower” I can for this answer—so for now, this will do.</p>
+<p>Even better—do I <em>really</em> care that it’s Claude? Nope. If it turns out Gemini 2.5 is the best at coding, I’ll happily switch and never look back.</p>
+<h2 id="openbb">OpenBB</h2>
+<p>Ok, so where do we fit?</p>
+<p>We’re very much in the category of <strong>Workflows</strong> - similar to Cursor.</p>
+<p>The difference is: we didn’t have a VSCode that we could fork and build on top of.</p>
+<p>The best financial terminals used in the space — Bloomberg, FactSet, CapIQ — are all closed-source.</p>
+<p>So we had to build <strong>OpenBB Workspace</strong> from scratch over three years to match the capability and quality that financial professionals expect.</p>
+<p>And now, we’re adding AI where it makes sense.</p>
+<p>Some of these workflows that can be done on OpenBB include:</p>
+<ol>
+<li><strong>Public Equity</strong>: Earnings guidance intelligence; Investor call preparation.</li>
+<li><strong>Wealth Management</strong>: AI-Generated investment notes; Portfolio optimization &amp; risk management.</li>
+<li><strong>Private Equity &amp; Credit</strong>: AI-enhanced due diligence; Credit data room intelligence.</li>
+<li><strong>Crypto</strong>: On-chain &amp; off-chain analysis; Sentiment &amp; community perception tracking.</li>
+<li><strong>Commodities &amp; Macro</strong>: Scenario-based forecasting; Regime shift analysis.</li>
+<li><strong>Client Advisory</strong>: Generate draft investor letters; Client sentiment analysis.</li>
+<li><strong>Logistics &amp; Operations</strong>: Bunkering intelligence; Regulatory compliance &amp; risk monitoring.</li>
+</ol>
+<br>
+<p>And we’re adding more fast.</p>
+<p>Now that we have a UI that meets industry standards, we can double down on <strong>workflows that delight customers</strong>.</p>
+<p>And we’ll keep expanding how many workflows can be done on OpenBB—ultimately with the goal of making OpenBB the <strong>central interface</strong> used within a firm, built on top of their own data.</p>
+<p>Here’s an example of an application built on OpenBB in just a couple of days by one of our engineers, for a workshop we’re putting together with risk managers:</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-04-03-stop-building-ai-products-start-building-workflows_1.jpeg"></p>
+<p>This highlights not only what we’ve built, but also how quickly we can delight customers on top of our product.</p>]]></content>
+        <category label="AI" term="AI"/>
+        <category label="product strategy" term="product strategy"/>
+        <category label="business" term="business"/>
+        <category label="openai" term="openai"/>
+        <category label="workflows" term="workflows"/>
+        <category label="openbb" term="openbb"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[One data vendor to rule them all. Really?]]></title>
         <id>https://didierlopes.com/blog/2025-03-25-one-data-vendor-to-rule-them-all-really</id>

@@ -6,7 +6,6 @@ image: /blog/2025-04-03-stop-building-ai-products-start-building-workflows
 tags: ['AI', 'product strategy', 'business', 'openai', 'workflows', 'openbb']
 description: The secret to building defensible AI companies isn't better AI - it's better workflows. An insider's perspective on why some AI companies thrive while others will become obsolete with each new model release.
 hideSidebar: true
-unlisted: true
 
 ---
 
@@ -221,6 +220,8 @@ And we’ll keep expanding how many workflows can be done on OpenBB—ultimately
 
 Here’s an example of an application built on OpenBB in just a couple of days by one of our engineers, for a workshop we’re putting together with risk managers:
 
-**Insert PM risk video workflow**
+<p align="center">
+    <img width="900" src="/blog/2025-04-03-stop-building-ai-products-start-building-workflows_1.jpeg" />
+</p>
 
 This highlights not only what we’ve built, but also how quickly we can delight customers on top of our product.

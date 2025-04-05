@@ -462,6 +462,13 @@ const data = [
 		author: "Elizabeth Zalman, Jerry Neumann",
 		image: "/books/founder-vs-investor-the-honest-truth-about-venture-capital-from-startup-to-ipo.jpg",
 	},
+	{
+		title:
+			"Working Backwards: Insights, Stories, and Secrets from Inside Amazon",
+		author: "Colin Bryar, Bill Carr",
+		image:
+			"/books/working-backwards-insights-stories-and-secrets-from-inside-amazon.jpg",
+	},
 ];
 
 export default function BooksAlreadyRead() {

@@ -345,13 +345,6 @@ const data = [
 		image: "/books/on-writing-a-memoir-of-the-craft.jpg",
 	},
 	{
-		title:
-			"Working Backwards: Insights, Stories, and Secrets from Inside Amazon",
-		author: "Colin Bryar, Bill Carr",
-		image:
-			"/books/working-backwards-insights-stories-and-secrets-from-inside-amazon.jpg",
-	},
-	{
 		title: "Alchemy: The Surprising Power of Ideas That Don't Make Sense",
 		author: "Rory Sutherland",
 		image:

@@ -1,17 +1,16 @@
 ---
-slug: 2025-04-09-10000-followers-later-heres-where-it-all-began
+slug: 2025-04-11-10000-followers-later-heres-where-it-all-began
 title: 10,000 followers later, here’s where it all began
-date: 2025-04-09
-image: /blog/2025-04-09-10000-followers-later-heres-where-it-all-began
+date: 2025-04-11
+image: /blog/2025-04-11-10000-followers-later-heres-where-it-all-began
 tags: ['career', 'social media', 'linkedin', 'build in public']
 description: A personal reflection on my 6-year journey to 10,000 LinkedIn followers and how sharing my work publicly led to unexpected opportunities and the creation of OpenBB.
 hideSidebar: true
-unlisted: true
 
 ---
 
 <p align="center">
-    <img width="600" src="/blog/2025-04-09-10000-followers-later-heres-where-it-all-began.png" />
+    <img width="600" src="/blog/2025-04-11-10000-followers-later-heres-where-it-all-began.png" />
 </p>
 
 A personal reflection on my 6-year journey to 10,000 LinkedIn followers and how sharing my work publicly led to unexpected opportunities and the creation of OpenBB.
@@ -41,7 +40,7 @@ The freedom to pick a path.
 After university, I landed a role as a Firmware Engineer where I was working on GNSS receivers. (I wanted to go into self-driving cars, and this role allowed me to work on chips that were used for positioning by self-driving cars—close enough, eh?)
 
 <p align="center">
-    <img width="600" src="/blog/2025-04-09-10000-followers-later-heres-where-it-all-began_1.jpg" />
+    <img width="600" src="/blog/2025-04-11-10000-followers-later-heres-where-it-all-began_1.jpg" />
     <em style={{fontSize: '0.9em'}}>Presenting my thesis at Imperial, where I selected the topic of "Energy savings from an Eco-Cooperative Adaptive Cruise Control: a BEV platoon investigation"</em>
 </p>
 
@@ -79,7 +78,7 @@ During my university years, I experienced two very different environments:
 I liked the competitiveness of TU Delft, but preferred the teamwork of the Portuguese university.
 
 <p align="center">
-    <img width="600" src="/blog/2025-04-09-10000-followers-later-heres-where-it-all-began_2.jpg" />
+    <img width="600" src="/blog/2025-04-11-10000-followers-later-heres-where-it-all-began_2.jpg" />
     <em style={{fontSize: '0.9em'}}>Picture of me in Delft, back in 2016, where I did an exchange program</em>
 </p>
 
@@ -91,20 +90,20 @@ And so in that same vein, I decided to do something that I wasn't comfortable do
 Here's that <a href="https://www.linkedin.com/posts/didier-lopes_didierrlopesjobanalysis-activity-6499793502912815104-xa7_?utm_source=share&utm_medium=member_desktop&rcm=ACoAABub6aIBaA7HieEI5VizHglQPohLA_Wptag" target="_blank" rel="noopener noreferrer">first post</a> 6 years ago.
 
 <p align="center">
-    <img width="600" src="/blog/2025-04-09-10000-followers-later-heres-where-it-all-began_3.png" />
+    <img width="600" src="/blog/2025-04-11-10000-followers-later-heres-where-it-all-began_3.png" />
 </p>
 
 
 A bit later I <a href="https://www.linkedin.com/posts/didier-lopes_yesterday-while-being-on-the-gym-i-was-activity-6517111978396393472-aRoe?utm_source=share&utm_medium=member_desktop&rcm=ACoAABub6aIBaA7HieEI5VizHglQPohLA_Wptag" target="_blank" rel="noopener noreferrer">posted about another mini project I worked on</a>:
 
 <p align="center">
-    <img width="600" src="/blog/2025-04-09-10000-followers-later-heres-where-it-all-began_4.png" />
+    <img width="600" src="/blog/2025-04-11-10000-followers-later-heres-where-it-all-began_4.png" />
 </p>
 
 Due to these posts, I got this message in my inbox from my previous Maths teacher.
 
 <p align="center">
-    <img width="600" src="/blog/2025-04-09-10000-followers-later-heres-where-it-all-began_5.png" />
+    <img width="600" src="/blog/2025-04-11-10000-followers-later-heres-where-it-all-began_5.png" />
 </p>
 
 That message was about challenging me to help him write the [code behind his thesis](https://github.com/DidierRLopes/UnivariateTimeSeriesForecast), which was about ***Modeling and Forecasting of Financial Time Series.***

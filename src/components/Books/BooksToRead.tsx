@@ -458,6 +458,11 @@ const data = [
 		title: "The Qualified Sales Leader: Proven Lessons from a Five Time CRO",
 		author: "John McMahon",
 		image: "/books/the-qualified-sales-leader-proven-lessons-from-a-five-time-cro.jpg",
+	},
+	{
+		title: "Play Nice But Win: A CEO's Journey from Founder to Leader",
+		author: "Michael Dell, James Kaplan",
+		image: "/books/play-nice-but-win-a-ceos-journey-from-founder-to-leader.jpg",
 	}
 ];
 

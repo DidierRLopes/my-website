@@ -2,12 +2,62 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://didierlopes.com/blog</id>
     <title>Didier Lopes Blog</title>
-    <updated>2025-04-11T00:00:00.000Z</updated>
+    <updated>2025-05-01T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://didierlopes.com/blog"/>
     <subtitle>Didier Lopes Blog</subtitle>
     <icon>https://didierlopes.com/img/favicon.ico</icon>
     <rights>Copyright © 2025 Didier Lopes.</rights>
+    <entry>
+        <title type="html"><![CDATA[Introducing OpenBB Apps, tailored by users for optimized workflows]]></title>
+        <id>https://didierlopes.com/blog/2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows</id>
+        <link href="https://didierlopes.com/blog/2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows"/>
+        <updated>2025-05-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[OpenBB Apps introduces a customizable platform where financial organizations can build tailored workflow solutions with dashboard templates, data widgets, and AI agents - putting firms in complete control of their data and tech stack.]]></summary>
+        <content type="html"><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows.png"></p>
+<p>OpenBB Apps introduces a customizable platform where financial organizations can build tailored workflow solutions with dashboard templates, data widgets, and AI agents - putting firms in complete control of their data and tech stack.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p><em>"Be in control. Be free"</em> was something our lead investor posted a few weeks ago.</p>
+<p>This is a great representation of the direction the financial industry is taking—to a place where firms are in control of their data and tech stack. Fully.</p>
+<p>Without the vendor lock-in. Without being limited by their vendor’s data/technology, or being stuck in siloed systems and workflows.</p>
+<p>Paraphrasing an industry leader (CIO at $40 bn AUM Investment Firm) that I heard at a conference recently:</p>
+<blockquote>
+<p><em>There are a lot of nuances in our workflows, and it’s hard — or even impossible — for a third-party vendor to nail our workflows fully.</em></p>
+</blockquote>
+<p>At OpenBB, we believe there’s no one-size-fits-all and that firms should be able to own their workflows. End-to-end. From the proprietary data they own and the AI model they choose, to the way these two work together. While we provide the infrastructure and the interface layer, the goal is for financial organizations to <strong>build custom solutions</strong> on top of it.</p>
+<h2 id="how">How?</h2>
+<p>By integrating their data, choosing how to display it, setting up custom dashboards, and combining all of this with their preferred AI agents. Ultimately, OpenBB enables a streamlined analysis workflow that will save your team’s time and your firm’s money.</p>
+<p>And that’s why, today, we are <strong>introducing the concept of Apps</strong> on OpenBB.</p>
+<p>Built for specific use cases, these apps consist of a dashboard template that can include custom data widgets, AI agents, and pre-saved prompts — all carefully set up by each firm to improve their specific analysis work.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows_1.png"></p>
+<p>This future has been coming for some time, and this time has arrived.</p>
+<p>We have been building some apps as examples and have also been helping enterprise customers and individual users build their own, and while it’s still early stages, we’re amazed by the results.</p>
+<p>Here are some exciting apps (and where you can find them) that you can run on OpenBB today:</p>
+<ul>
+<li>
+<p>Portfolio Risk Management and DTCC trades - built for demo purposes by our team and available <a href="https://github.com/OpenBB-finance/backend-examples-for-openbb-workspace/tree/main/demo-apps/demo-risk">here</a>.</p>
+</li>
+<li>
+<p>FOMC, FRED, BLS, IMF - built for demo purposes by our team and available through our <a href="https://docs.openbb.co/workspace/platform-installer">open source Platform</a></p>
+</li>
+<li>
+<p>Congressional data and Executive orders - built for demo purposes by our team and available <a href="https://github.com/andrewkenreich/congress">here</a></p>
+</li>
+<li>
+<p>Crypto - built by user Matt Maximo and available <a href="https://github.com/MattMaximo/CryptoBB">here</a></p>
+</li>
+<li>
+<p>Macro - built by user Caíque Cober and available <a href="https://openbb.co/blog/from-excel-to-agents-rebuilding-the-macro-research-workflow-for-the-ai-era">here</a></p>
+</li>
+<li>
+<p>and more highlighted <a href="https://docs.openbb.co/workspace/gallery">here</a></p>
+</li>
+</ul>
+<p>Remember, the best part is that you can build your own.</p>
+<p>If you’re looking to get started building an OpenBB App, don’t forget to visit <a href="https://docs.openbb.co/workspace">our Documentation</a>.</p>
+<p>If you’d like to discuss bringing OpenBB to your firm, ping me!</p>]]></content>
+        <category label="sd" term="sd"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[10,000 followers later, here’s where it all began]]></title>
         <id>https://didierlopes.com/blog/2025-04-11-10000-followers-later-heres-where-it-all-began</id>

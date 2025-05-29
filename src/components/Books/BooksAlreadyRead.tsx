@@ -469,6 +469,11 @@ const data = [
 		image:
 			"/books/working-backwards-insights-stories-and-secrets-from-inside-amazon.jpg",
 	},
+	{
+		title: "Influence: The Psychology of Persuasion",
+		author: "Robert B. Cialdini",
+		image: "/books/influence-the-psychology-of-persuasion.jpeg",
+	},
 ];
 
 export default function BooksAlreadyRead() {

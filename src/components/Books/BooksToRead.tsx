@@ -83,11 +83,6 @@ const data = [
 		image: "/books/change-how-to-make-big-things-happen.jpeg",
 	},
 	{
-		title: "Influence: The Psychology of Persuasion",
-		author: "Robert B. Cialdini",
-		image: "/books/influence-the-psychology-of-persuasion.jpeg",
-	},
-	{
 		title:
 			"Continuous Discovery Habits: Discover Products that Create Customer Value and Business Value",
 		author: "Teresa Torres",

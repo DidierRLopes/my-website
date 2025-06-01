@@ -463,6 +463,11 @@ const data = [
 		title: "Play Nice But Win: A CEO's Journey from Founder to Leader",
 		author: "Michael Dell, James Kaplan",
 		image: "/books/play-nice-but-win-a-ceos-journey-from-founder-to-leader.jpg",
+	},
+	{
+		title: "The Book of Why: The New Science of Cause and Effect",
+		author: "Judea Pearl, Dana Mackenzie",
+		image: "/books/the-book-of-why-the-new-science-of-cause-and-effect.jpg",
 	}
 ];
 

@@ -440,11 +440,6 @@ const data = [
 		image: "/books/this-is-marketing-you-can-t-be-seen-until-you-learn-to-see.jpg",
 	},
 	{
-		title: "AI Engineering: Building Applications with Foundation Models",
-		author: "Chip Huyen",
-		image: "/books/ai-engineering-building-applications-with-foundation-models.jpg",
-	},
-	{
 		title: "Design Is Storytelling",
 		author: "Ellen Lupton",
 		image: "/books/design-is-storytelling.jpg",

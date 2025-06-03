@@ -474,6 +474,11 @@ const data = [
 		author: "Robert B. Cialdini",
 		image: "/books/influence-the-psychology-of-persuasion.jpeg",
 	},
+	{
+		title: "AI Engineering: Building Applications with Foundation Models",
+		author: "Chip Huyen",
+		image: "/books/ai-engineering-building-applications-with-foundation-models.jpg",
+	},
 ];
 
 export default function BooksAlreadyRead() {

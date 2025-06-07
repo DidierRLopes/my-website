@@ -31,23 +31,48 @@ export default function BlogHistory({ posts = [], isDesktop }: BlogHistoryProps)
 		return <div>No blog posts available</div>;
 	}
 
+	// Helper function to parse dates consistently without timezone issues
+	const parseDate = (dateString: string) => {
+		// Extract date from strings that start with YYYY-MM-DD pattern (like blog post slugs)
+		const dateMatch = dateString.match(/^(\d{4}-\d{2}-\d{2})/);
+		if (dateMatch) {
+			const dateOnly = dateMatch[1]; // Extract just the YYYY-MM-DD part
+			const [year, month, day] = dateOnly.split('-').map(Number);
+			// Create date in local timezone (month is 0-indexed)
+			return new Date(year, month - 1, day);
+		}
+		
+		// If the date string is exactly in YYYY-MM-DD format, parse it manually
+		if (dateString.length === 10 && dateString.includes('-')) {
+			const [year, month, day] = dateString.split('-').map(Number);
+			// Create date in local timezone (month is 0-indexed)
+			return new Date(year, month - 1, day);
+		}
+		
+		return new Date(dateString);
+	};
+
 	// Sort posts by date
 	const sortedPosts = [...posts].sort(
 		(a, b) =>
-			new Date(a.date_modified).getTime() - new Date(b.date_modified).getTime(),
+			parseDate(a.date_modified).getTime() - parseDate(b.date_modified).getTime(),
 	);
 
 	// Get the start and end dates for the chart
-	const startDate = new Date(sortedPosts[0].date_modified);
-	const endDate = new Date(sortedPosts[sortedPosts.length - 1].date_modified);
-
+	const startDate = parseDate(sortedPosts[0].date_modified);
+	const endDate = parseDate(sortedPosts[sortedPosts.length - 1].date_modified);
+	
 	// Generate an array of months
 	const generateMonths = (start: Date, end: Date) => {
 		const months: Date[] = [];
 		const currentDate = new Date(start);
 		currentDate.setDate(1); // Start from the beginning of the month
 
-		while (currentDate <= end) {
+		// Create end date at the beginning of its month for comparison
+		const endMonthStart = new Date(end);
+		endMonthStart.setDate(1);
+
+		while (currentDate <= endMonthStart) {
 			months.push(new Date(currentDate));
 			currentDate.setMonth(currentDate.getMonth() + 1);
 		}
@@ -65,29 +90,29 @@ export default function BlogHistory({ posts = [], isDesktop }: BlogHistoryProps)
 		const totalMonths = months.length;
 		
 		// Determine desired number of labels based on screen size
-		let targetLabels = isDesktop ? 6 : 3;
+		const targetLabels = isDesktop ? 6 : 3;
 		
 		// Calculate interval that would give us roughly the desired number of labels
-		let interval = Math.max(1, Math.floor(totalMonths / targetLabels));
+		const interval = Math.max(1, Math.floor(totalMonths / targetLabels));
 		
 		return interval;
 	};
 
 	// Modify the monthlyData generation
-	const monthlyData = months.map((monthStart, index) => {
+	const monthlyData = months.map((monthStart) => {
 		const monthEnd = new Date(monthStart);
 		monthEnd.setMonth(monthEnd.getMonth() + 1);
 		monthEnd.setDate(0);
+		// Set to end of day to ensure we capture all posts in the month
+		monthEnd.setHours(23, 59, 59, 999);
 
 		const postsInMonth = sortedPosts.filter((post) => {
-			const postDate = new Date(post.date_modified);
-			return postDate >= monthStart && postDate <= monthEnd;
+			const postDate = parseDate(post.date_modified);
+			const monthStartOfDay = new Date(monthStart);
+			monthStartOfDay.setHours(0, 0, 0, 0);
+			
+			return postDate >= monthStartOfDay && postDate <= monthEnd;
 		});
-
-		const interval = getOptimalInterval(months);
-		const showLabel = index === 0 || 
-			index === months.length - 1 || 
-			index % interval === 0;
 
 		// Create an object with individual post sizes
 		const postSizes = postsInMonth.reduce(
@@ -121,7 +146,6 @@ export default function BlogHistory({ posts = [], isDesktop }: BlogHistoryProps)
 				year: "numeric",
 				month: "short",
 			}),
-			showLabel, // This property is already being set based on getOptimalInterval
 			posts: postsInMonth,
 			...postSizes,
 		};
@@ -160,9 +184,7 @@ export default function BlogHistory({ posts = [], isDesktop }: BlogHistoryProps)
 					<XAxis
 						dataKey="monthDisplay"
 						type="category"
-						interval={(index) => {
-							return monthlyData[index].showLabel;
-						}}
+						interval={getOptimalInterval(months)}
 						height={60}
 						tick={{ fontSize: 14 }}
 					/>
@@ -231,7 +253,7 @@ export default function BlogHistory({ posts = [], isDesktop }: BlogHistoryProps)
 														textAlign: "left",
 													}}
 												>
-													{new Date(post.date_modified).toLocaleDateString(
+													{parseDate(post.date_modified).toLocaleDateString(
 														undefined,
 														{
 															year: "numeric",

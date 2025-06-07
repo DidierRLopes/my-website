@@ -3,6 +3,15 @@ import VideosList from "../General/VideosList";
 
 const data = [
 	{
+		title: "AI for Finance Summit: Rise of Multi-Agent Systems",
+		description:
+			"Use Case Fireside: Deploying AI in Financial Workflows with Pete Petersen (CTO and Chief Cybersecurity Officer) of Causeway Capital Management.",
+		date: "2025-06-04",
+		location: "NY Tech Week",
+		image: "/media/ai-for-finance-summit-rise-of-multi-agent-systems.jpg",
+		info: "More information on the event can be found <a href='https://partiful.com/e/eStqfkIQo7pAlpykUmYh?guest=UL3z5QaMwDO8jmR80ymI' target='_blank' rel='noopener noreferrer'>here</a>.",
+	},
+	{
 		title: "PANEL DISCUSSION: Future of Data in Investing",
 		description:
 			"With Didier Rodrigues Lopes, Founder & CEO @ OpenBB; Richard Peterson, CEO, MarketPsych (division of London Stock Exchange); Yosef Zweibach, Chief Operating Officer of Quantic, Walleye Capital; Chris White, CEO at ViableMkts & BondCliQ and moderated by Christina Qi, CEO Databento & Founder Domeyard LP, MIT Trustee.",

@@ -95,16 +95,6 @@ const config = {
         items: [
           {
             position: 'left',
-            to: '/blog',
-            label: 'Blog',
-          },
-          {
-            position: 'left',
-            label: 'Projects',
-            to: '/projects',
-          },
-          {
-            position: 'left',
             label: 'Books',
             to: '/books/to-read',
           },
@@ -117,6 +107,11 @@ const config = {
             position: 'left',
             label: 'Resume',
             to: '/resume/experience',
+          },
+          {
+            position: 'right',
+            to: '/blog',
+            label: 'Blog',
           },
           {
             position: 'right',

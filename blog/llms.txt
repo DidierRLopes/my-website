@@ -112,3 +112,4 @@
 - [2025-04-03-stop-building-ai-products-start-building-workflows](https://didierlopes.com/blog/2025-04-03-stop-building-ai-products-start-building-workflows)
 - [2025-04-09-10000-followers-later-heres-where-it-all-began](https://didierlopes.com/blog/2025-04-09-10000-followers-later-heres-where-it-all-began)
 - [2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows](https://didierlopes.com/blog/2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows)
+- [2025-05-28-openbb-is-underrated](https://didierlopes.com/blog/2025-05-28-openbb-is-underrated)

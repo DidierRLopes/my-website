@@ -4,11 +4,82 @@
         <title>Didier Lopes Blog</title>
         <link>https://didierlopes.com/blog</link>
         <description>Didier Lopes Blog</description>
-        <lastBuildDate>Wed, 28 May 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 10 Jun 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2025 Didier Lopes.</copyright>
+        <item>
+            <title><![CDATA[How I connected Figma to Cursor using MCP]]></title>
+            <link>https://didierlopes.com/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp</link>
+            <guid>https://didierlopes.com/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp</guid>
+            <pubDate>Tue, 10 Jun 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[A step-by-step guide on how to connect Figma to Cursor using MCP (Model-Client-Protocol), enabling seamless design-to-code workflow and improving developer productivity through direct design system integration.]]></description>
+            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp.png"></p>
+<p>A step-by-step guide on how to connect Figma to Cursor using MCP (Model-Client-Protocol), enabling seamless design-to-code workflow and improving developer productivity through direct design system integration.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>This weekend, I was - <strong>again</strong> - mind blown by technology.</p>
+<p>As I was working on OpenBB, and needed to copy the style from the Figma mockups - I stumbled upon Figma MCP.</p>
+<p>Here's what I said on the <a href="https://www.linkedin.com/posts/didier-lopes_i-still-cant-believe-this-i-was-deep-into-activity-7337573643431944192-f9-L?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAABub6aIBaA7HieEI5VizHglQPohLA_Wptag" target="_blank" rel="noreferrer">LinkedIn post</a>.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_1.png"></p>
+<p>And this is the video that I added to the post:</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/UwC_pbEnN3U?si=w15gGna5j1OhgPFp" width="800" height="400"></iframe></div>
+<br>
+<p>So, in this short post, I'm going to tell you how you can do the same in a couple of steps.</p>
+<h2 id="enabling-mcp-server-on-figma">Enabling MCP Server on Figma</h2>
+<ol>
+<li>
+<p>Make sure you are using Figma desktop app.</p>
+</li>
+<li>
+<p>Go into "Dev Mode" on the bottom toolbar.</p>
+</li>
+</ol>
+<br>
+<p align="center"><img width="400" src="https://didierlopes.com/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_2.png"></p>
+<ol start="3">
+<li>Enable MCP Server.</li>
+</ol>
+<br>
+<p align="center"><img width="400" src="https://didierlopes.com/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_3.png"></p>
+<h2 id="set-up-mcp-client-cursor">Set up MCP client (Cursor)</h2>
+<ol>
+<li>Open Cursor Settings</li>
+</ol>
+<br>
+<p align="center"><img width="500" src="https://didierlopes.com/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_4.png"></p>
+<ol start="2">
+<li>Add a new MCP server</li>
+</ol>
+<br>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_5.png"></p>
+<p>When clicking on "Add Custom MCP", copy paste the following block of code:</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">{</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  "mcpServers": {</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    "Figma": {</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      "url": "http://127.0.0.1:3845/sse"</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Then save it, like this:</p>
+<p align="center"><img width="400" src="https://didierlopes.com/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_6.png"></p>
+<p>Once you close that file, you'll see that Cursor Settings MCP tab now displays "Loading tools":</p>
+<p align="center"><img width="700" src="https://didierlopes.com/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_7.png"></p>
+<p>After a few seconds you can toggle the Figma MCP and you should be able to see a few tools.</p>
+<p align="center"><img width="700" src="https://didierlopes.com/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_8.png"></p>
+<h2 id="usage">Usage</h2>
+<p>The usage is very simple.</p>
+<p>You just need to select the layout you want to pass to Cursor on Figma, and then right click on it and select "Copy link to selection".</p>
+<p align="center"><img width="400" src="https://didierlopes.com/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_9.png"></p>
+<p>Then you paste that link to Cursor and you prompt accordingly.</p>
+<p align="center"><img width="400" src="https://didierlopes.com/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_10.png"></p>
+<p>Note: I recommend to be explicit with the model to utilize MCP.</p>
+<p>That's it. I hope this is helpful.</p>
+<p>Happy hacking.</p>]]></content:encoded>
+            <category>figma</category>
+            <category>cursor</category>
+            <category>mcp</category>
+            <category>developer-tools</category>
+            <category>tutorial</category>
+            <category>integration</category>
+            <category>design-to-code</category>
+            <category>productivity</category>
+            <category>development-workflow</category>
+        </item>
         <item>
             <title><![CDATA[OpenBB is underrated]]></title>
             <link>https://didierlopes.com/blog/2025-05-28-openbb-is-underrated</link>

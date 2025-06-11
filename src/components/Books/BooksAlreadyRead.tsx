@@ -479,6 +479,11 @@ const data = [
 		author: "Chip Huyen",
 		image: "/books/ai-engineering-building-applications-with-foundation-models.jpg",
 	},
+	{
+		title: "This is Marketing: You Can't Be Seen Until You Learn to See",
+		author: "Seth Godin",
+		image: "/books/this-is-marketing-you-can-t-be-seen-until-you-learn-to-see.jpg",
+	}
 ];
 
 export default function BooksAlreadyRead() {

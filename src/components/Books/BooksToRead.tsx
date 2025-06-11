@@ -435,11 +435,6 @@ const data = [
 		image: "/books/venture-deals-be-smarter-than-your-lawyer-and-venture-capitalist.jpg",
 	},
 	{
-		title: "This is Marketing: You Can't Be Seen Until You Learn to See",
-		author: "Seth Godin",
-		image: "/books/this-is-marketing-you-can-t-be-seen-until-you-learn-to-see.jpg",
-	},
-	{
 		title: "Design Is Storytelling",
 		author: "Ellen Lupton",
 		image: "/books/design-is-storytelling.jpg",

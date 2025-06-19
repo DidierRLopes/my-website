@@ -11,6 +11,7 @@ interface BlogPost {
     description: string;
     date: string;
     formattedDate: string;
+    readingTime?: number;
     tags: { label: string; permalink: string }[];
     permalink: string;
     frontMatter: {
@@ -36,29 +37,36 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
     return urlParams.get('tags')?.split(',').filter(Boolean) || [];
   });
 
-  // Initialize state from URL parameters
+  // Sync state from URL search params
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
     const searchParam = urlParams.get('search') || '';
     const tagsParam = urlParams.get('tags')?.split(',').filter(Boolean) || [];
 
-    setSearchInput(prev => prev === searchParam ? prev : searchParam);
-    setSelectedTags(prev => {
-      const areArraysEqual = prev.length === tagsParam.length && prev.every((tag, idx) => tag === tagsParam[idx]);
-      return areArraysEqual ? prev : tagsParam;
-    });
+    setSearchInput(searchParam);
+    setSelectedTags(tagsParam);
   }, [location.search]);
 
   // Update URL when search or tags change
   useEffect(() => {
     const urlParams = new URLSearchParams();
     const textForUrl = searchInput.trim();
-    if (textForUrl) urlParams.set('search', textForUrl);
-    if (selectedTags.length > 0) urlParams.set('tags', selectedTags.join(','));
+    if (textForUrl) {
+      urlParams.set('search', textForUrl);
+    } else {
+      urlParams.delete('search');
+    }
+    
+    if (selectedTags.length > 0) {
+      urlParams.set('tags', selectedTags.join(','));
+    } else {
+      urlParams.delete('tags');
+    }
     
     const newSearch = urlParams.toString();
     const newUrl = newSearch ? `${location.pathname}?${newSearch}` : location.pathname;
-    
+
+    // Only replace history if the search string differs
     if (newUrl !== location.pathname + location.search) {
       history.replace(newUrl);
     }
@@ -78,12 +86,10 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
     });
 
     if (newTags.length > 0) {
-      setSelectedTags(currentTags => [...currentTags, ...newTags]);
+      setSelectedTags(currentTags => [...new Set([...currentTags, ...newTags])]);
     }
 
-    // Keep the text exactly as typed (except collapsing duplicate spaces and stripping leading spaces)
-    const cleanedText = remainingText.replace(/\s{2,}/g, ' ').replace(/^\s+/, '');
-    setSearchInput(cleanedText);
+    setSearchInput(remainingText);
   };
   
   // Get all unique tags for autocomplete (or other UI features)
@@ -135,7 +141,7 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
     return (
       <div className={styles.terminal}>
         <div className={styles.noResults}>
-          <p>&gt; No blog posts found</p>
+          <p>&gt; No results found for your query</p>
         </div>
       </div>
     );
@@ -150,7 +156,7 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
             <input
               type="text"
               placeholder='> Search posts... (use tag:"tagname" to filter by tags)'
-              className={styles.searchInput}
+              className={`${styles.searchInput} ${selectedTags.length > 0 ? styles.searchInputActive : ''}`}
               value={searchInput}
               onChange={handleInputChange}
             />
@@ -199,19 +205,29 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
             <li className={styles.postItem} key={post.id}>
               <div className={styles.postContent}>
                 <div className={styles.postDate}>{post.metadata?.formattedDate}</div>
-                <div className={styles.tagsContainer}>
-                  {post.metadata?.tags?.map((tag) => (
-                    <button
-                      type="button"
-                      key={tag.label}
-                      onClick={() => toggleTag(tag.label)}
-                      className={`${styles.tag} ${selectedTags.includes(tag.label) ? styles.tagSelected : ''}`}
-                      title={`Filter by ${tag.label} tag`}
-                    >
-                      {tag.label}
-                    </button>
-                  ))}
+                
+                <div className={styles.metaContainer}>
+                  <div className={styles.tagsContainer}>
+                    {post.metadata?.tags?.map((tag) => (
+                      <button
+                        type="button"
+                        key={tag.label}
+                        onClick={() => toggleTag(tag.label)}
+                        className={`${styles.tag} ${selectedTags.includes(tag.label) ? styles.tagSelected : ''}`}
+                        title={`Filter by ${tag.label} tag`}
+                      >
+                        {tag.label}
+                      </button>
+                    ))}
+                  </div>
+
+                  {post.metadata.readingTime && (
+                    <div className={styles.readingTime}>
+                      {Math.round(post.metadata.readingTime)} min
+                    </div>
+                  )}
                 </div>
+
                 <div className={styles.postMain}>
                   <div className={styles.leftSection}>
                     {post.metadata?.frontMatter?.image ? (
@@ -245,7 +261,7 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
         </ul>
       ) : (
         <div className={styles.noResults}>
-          <p>&gt; No blog posts found</p>
+          <p>&gt; No results found for your query</p>
         </div>
       )}
     </div>

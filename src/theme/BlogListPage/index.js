@@ -2,12 +2,9 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import CustomBlogList from '../../components/Blog/CustomBlogList';
-import { useLocation } from '@docusaurus/router';
 
 export default function BlogListPageWrapper(props) {
   const { items, metadata } = props;
-  
-  const location = useLocation();
   
   // Transform the items to match our CustomBlogList expected format
   const posts = items.map(item => {
@@ -40,6 +37,7 @@ export default function BlogListPageWrapper(props) {
           month: 'long',
           day: 'numeric'
         }),
+        readingTime: item.content.metadata.readingTime,
         tags: item.content.metadata.tags,
         permalink: item.content.metadata.permalink,
         frontMatter: {
@@ -70,7 +68,7 @@ export default function BlogListPageWrapper(props) {
           }}>
             {metadata?.blogTitle || 'Blog'}
           </h1>
-          <CustomBlogList key={`blog-list-${location.search}`} posts={posts} />
+          <CustomBlogList posts={posts} />
         </div>
       </div>
       

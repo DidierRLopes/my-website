@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+/* eslint-disable react/no-danger */
+import React from 'react';
 import Layout from '@theme/Layout';
 import CustomBlogList from '../../components/Blog/CustomBlogList';
+import { useLocation } from '@docusaurus/router';
 
 export default function BlogListPageWrapper(props) {
-  const { items, metadata, sidebar } = props;
-  const [hasActiveFilters, setHasActiveFilters] = useState(false);
+  const { items, metadata } = props;
+  
+  const location = useLocation();
   
   // Transform the items to match our CustomBlogList expected format
   const posts = items.map(item => {
@@ -15,7 +18,7 @@ export default function BlogListPageWrapper(props) {
       // Try common image extensions in order of preference
       const possibleExtensions = ['.png', '.jpg', '.jpeg', '.JPG', '.PNG', '.JPEG'];
       // For posts without extensions, we'll try the first extension that commonly exists
-      imagePath = imagePath + '.png';
+      imagePath = `${imagePath}.png`;
     }
     
     // Special handling for known problematic images
@@ -53,9 +56,9 @@ export default function BlogListPageWrapper(props) {
       description={metadata?.blogDescription || 'Blog posts'}
       noFooter={false}
     >
-      <div className={`blog-wrapper ${hasActiveFilters ? 'blog-wrapper--no-sidebar' : ''}`}>
+      <div className="blog-wrapper blog-wrapper--no-sidebar">
         <div style={{ 
-          maxWidth: hasActiveFilters ? '1200px' : '1000px', 
+          maxWidth: '1200px', 
           margin: '0 auto', 
           padding: '2rem 1rem',
           minHeight: '50vh'
@@ -67,29 +70,24 @@ export default function BlogListPageWrapper(props) {
           }}>
             {metadata?.blogTitle || 'Blog'}
           </h1>
-          <CustomBlogList 
-            posts={posts} 
-            onFilterChange={setHasActiveFilters}
-          />
+          <CustomBlogList key={`blog-list-${location.search}`} posts={posts} />
         </div>
       </div>
       
-      {/* Custom CSS to hide sidebar when filters are active */}
-      {hasActiveFilters && (
-        <style dangerouslySetInnerHTML={{
-          __html: `
-            .theme-doc-sidebar-container {
-              display: none !important;
-            }
-            .main-wrapper {
-              margin-left: 0 !important;
-            }
-            .container {
-              max-width: none !important;
-            }
-          `
-        }} />
-      )}
+      {/* Custom CSS to hide sidebar permanently */}
+      <style>
+        {`
+          .theme-doc-sidebar-container {
+            display: none !important;
+          }
+          .main-wrapper {
+            margin-left: 0 !important;
+          }
+          .container {
+            max-width: none !important;
+          }
+        `}
+      </style>
     </Layout>
   );
 }

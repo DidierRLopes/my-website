@@ -21,29 +21,39 @@ interface BlogPost {
 
 interface CustomBlogListProps {
   posts: BlogPost[];
-  onFilterChange?: (hasActiveFilters: boolean) => void;
 }
 
-export default function CustomBlogList({ posts, onFilterChange }: CustomBlogListProps) {
-  const [searchInput, setSearchInput] = useState(''); // This is now just for text search
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+export default function CustomBlogList({ posts }: CustomBlogListProps) {
   const history = useHistory();
   const location = useLocation();
+
+  const [searchInput, setSearchInput] = useState(() => {
+    const urlParams = new URLSearchParams(location.search);
+    return urlParams.get('search') || '';
+  });
+  const [selectedTags, setSelectedTags] = useState<string[]>(() => {
+    const urlParams = new URLSearchParams(location.search);
+    return urlParams.get('tags')?.split(',').filter(Boolean) || [];
+  });
 
   // Initialize state from URL parameters
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
     const searchParam = urlParams.get('search') || '';
     const tagsParam = urlParams.get('tags')?.split(',').filter(Boolean) || [];
-    
-    setSearchInput(searchParam);
-    setSelectedTags(tagsParam);
+
+    setSearchInput(prev => prev === searchParam ? prev : searchParam);
+    setSelectedTags(prev => {
+      const areArraysEqual = prev.length === tagsParam.length && prev.every((tag, idx) => tag === tagsParam[idx]);
+      return areArraysEqual ? prev : tagsParam;
+    });
   }, [location.search]);
 
   // Update URL when search or tags change
   useEffect(() => {
     const urlParams = new URLSearchParams();
-    if (searchInput) urlParams.set('search', searchInput);
+    const textForUrl = searchInput.trim();
+    if (textForUrl) urlParams.set('search', textForUrl);
     if (selectedTags.length > 0) urlParams.set('tags', selectedTags.join(','));
     
     const newSearch = urlParams.toString();
@@ -53,12 +63,6 @@ export default function CustomBlogList({ posts, onFilterChange }: CustomBlogList
       history.replace(newUrl);
     }
   }, [searchInput, selectedTags, history, location.pathname, location.search]);
-
-  // Notify parent about filter state changes
-  useEffect(() => {
-    const hasActiveFilters = searchInput.length > 0 || selectedTags.length > 0;
-    onFilterChange?.(hasActiveFilters);
-  }, [searchInput, selectedTags, onFilterChange]);
 
   // Handle input changes to extract tags and update text search
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -77,7 +81,9 @@ export default function CustomBlogList({ posts, onFilterChange }: CustomBlogList
       setSelectedTags(currentTags => [...currentTags, ...newTags]);
     }
 
-    setSearchInput(remainingText.trim());
+    // Keep the text exactly as typed (except collapsing duplicate spaces and stripping leading spaces)
+    const cleanedText = remainingText.replace(/\s{2,}/g, ' ').replace(/^\s+/, '');
+    setSearchInput(cleanedText);
   };
   
   // Get all unique tags for autocomplete (or other UI features)
@@ -108,10 +114,12 @@ export default function CustomBlogList({ posts, onFilterChange }: CustomBlogList
   });
 
   // Tag manipulation functions
-  const addTag = (tagLabel: string) => {
-    if (!selectedTags.includes(tagLabel)) {
-      setSelectedTags(currentTags => [...currentTags, tagLabel]);
-    }
+  const toggleTag = (tagLabel: string) => {
+    setSelectedTags(currentTags =>
+      currentTags.includes(tagLabel)
+        ? currentTags.filter(tag => tag !== tagLabel)
+        : [...currentTags, tagLabel]
+    );
   };
 
   const removeTag = (tagLabel: string) => {
@@ -162,12 +170,19 @@ export default function CustomBlogList({ posts, onFilterChange }: CustomBlogList
           {selectedTags.length > 0 && (
             <div className={styles.activeFiltersDisplay}>
               {selectedTags.map(tag => (
-                <div key={tag} className={styles.activeFilterChip}>
+                <div
+                  key={tag}
+                  className={styles.activeFilterChip}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => toggleTag(tag)}
+                  onKeyPress={(e) => { if (e.key === 'Enter') toggleTag(tag); }}
+                >
                   <span className={styles.filterType}>Tag:</span>
                   <span className={styles.filterValue}>{tag}</span>
                   <button 
                     type="button"
-                    onClick={() => removeTag(tag)}
+                    onClick={(e) => { e.stopPropagation(); removeTag(tag); }}
                     className={styles.removeFilterButton}
                     title={`Remove ${tag} filter`}
                   >
@@ -190,7 +205,7 @@ export default function CustomBlogList({ posts, onFilterChange }: CustomBlogList
                     <button
                       type="button"
                       key={tag.label}
-                      onClick={() => addTag(tag.label)}
+                      onClick={() => toggleTag(tag.label)}
                       className={`${styles.tag} ${selectedTags.includes(tag.label) ? styles.tagSelected : ''}`}
                       title={`Filter by ${tag.label} tag`}
                     >
@@ -231,7 +246,7 @@ export default function CustomBlogList({ posts, onFilterChange }: CustomBlogList
         </ul>
       ) : (
         <div className={styles.noResults}>
-          <p>&gt; No results found for your query</p>
+          <p>&gt; No blog posts found</p>
         </div>
       )}
     </div>

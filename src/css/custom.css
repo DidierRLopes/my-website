@@ -94,6 +94,15 @@
   --border-primary: rgba(255, 255, 255, 0.15);
   --border-secondary: rgba(255, 255, 255, 0.1);
   
+  /* Mission Container Dark Mode Variables */
+  --mission-card-bg: #111111;
+  --mission-card-border: rgba(255, 255, 255, 0.1);
+  --mission-text-color: #e0e0e0;
+  --mission-button-bg: #1c1c1c;
+  --mission-button-border: rgba(255, 255, 255, 0.2);
+  --mission-button-hover-bg: #2a2a2a;
+  --mission-button-hover-border: rgba(255, 255, 255, 0.4);
+  
   /* Docusaurus Dark Mode Overrides */
   --ifm-color-primary: var(--ds-blue-light);
   --ifm-color-primary-dark: var(--ds-blue-primary);
@@ -614,30 +623,7 @@ html {
 .ds-m-4 { margin: var(--ds-space-4); }
 .ds-m-6 { margin: var(--ds-space-6); }
 
-/* Mission Container Card Styles - Light Mode Default */
-:root {
-  --mission-card-bg: #f8f9fa;
-  --mission-card-border: rgba(0, 0, 0, 0.15);
-  --mission-text-color: #2c3e50;
-  --mission-button-bg: #ffffff;
-  --mission-button-border: rgba(0, 0, 0, 0.2);
-  --mission-button-hover-bg: #f1f3f4;
-  --mission-button-hover-border: rgba(0, 0, 0, 0.3);
-  --mission-border-radius: 6px;
-  --mission-font-family: 'IBM Plex Mono', 'Courier New', 'Menlo', monospace;
-}
-
-/* Mission Container Card Styles - Dark Mode */
-[data-theme='dark'] {
-  --mission-card-bg: #111111;
-  --mission-card-border: rgba(255, 255, 255, 0.1);
-  --mission-text-color: #e0e0e0;
-  --mission-button-bg: #1c1c1c;
-  --mission-button-border: rgba(255, 255, 255, 0.2);
-  --mission-button-hover-bg: #2a2a2a;
-  --mission-button-hover-border: rgba(255, 255, 255, 0.4);
-}
-
+/* Mission Container Card Styles */
 .mission-container {
   background: var(--mission-card-bg);
   border: 1px solid var(--mission-card-border);
@@ -648,7 +634,46 @@ html {
   margin-bottom: 16px;
   position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease-in-out;
+  transition: all;
+}
+
+/* Override for dark mode */
+html[data-theme='dark'] .mission-container {
+  background: #111111;
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Mission button styles */
+.mission-button {
+  background: var(--mission-button-bg);
+  border: 1px solid var(--mission-button-border);
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-family: var(--mission-font-family);
+  font-size: 12px;
+  color: var(--mission-text-color);
+  text-decoration: none;
+  transition: all;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Override for dark mode buttons */
+html[data-theme='dark'] .mission-button {
+  background: #1c1c1c;
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #e0e0e0;
+}
+
+html[data-theme='dark'] .mission-button:hover {
+  background: #2a2a2a;
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .mission-code {
@@ -682,24 +707,6 @@ html {
   align-items: center;
 }
 
-.mission-button {
-  background: var(--mission-button-bg);
-  border: 1px solid var(--mission-button-border);
-  border-radius: 4px;
-  padding: 10px 16px;
-  font-family: var(--mission-font-family);
-  font-size: 12px;
-  color: var(--mission-text-color);
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
 .mission-button:hover {
   background: var(--mission-button-hover-bg);
   border-color: var(--mission-button-hover-border);
@@ -715,39 +722,6 @@ html {
   content: '»';
   margin-left: 4px;
   font-weight: bold;
-}
-
-/* Enhanced styling for better light/dark mode support */
-
-[data-theme='dark'] .mission-container {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.mission-container:hover {
-  transform: translateY(-1px);
-}
-
-[data-theme='light'] .mission-container:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-[data-theme='dark'] .mission-container:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-/* Ensure text colors work in both themes */
-.mission-description {
-  color: var(--mission-text-color);
-}
-
-/* Make sure links work in both themes */
-.mission-description a {
-  color: var(--ds-blue-primary);
-  text-decoration: underline;
-}
-
-.mission-description a:hover {
-  color: var(--ds-blue-accent);
 }
 
 /* === Blog Post Header Spacing === */

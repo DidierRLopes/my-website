@@ -49,6 +49,18 @@
   --ds-space-4: 16px;
   --ds-space-6: 24px;
   
+  /* Mission Container Variables */
+  --mission-card-bg: #f1f1f1;
+  --mission-card-border: #d9dce1;
+  --mission-text-color: var(--text-primary);
+  --mission-button-bg: var(--background-secondary);
+  --mission-button-border: #d9dce1;
+  --mission-button-hover-bg: var(--background-primary);
+  --mission-button-hover-border: #adb5bd; /* A slightly darker gray */
+  --mission-border-radius: 4px;
+  --mission-font-family: var(--ds-font-primary);
+  --mission-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  
   /* Docusaurus overrides - Light Mode */
   --ifm-color-primary: var(--ds-blue-primary);
   --ifm-color-primary-dark: var(--ds-blue-dark);
@@ -101,6 +113,9 @@
   --mission-button-border: rgba(255, 255, 255, 0.2);
   --mission-button-hover-bg: #2a2a2a;
   --mission-button-hover-border: rgba(255, 255, 255, 0.4);
+  --mission-border-radius: 4px;
+  --mission-font-family: var(--ds-font-primary);
+  --mission-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   
   /* Docusaurus Dark Mode Overrides */
   --ifm-color-primary: var(--ds-blue-light);
@@ -635,27 +650,13 @@ html {
   background: var(--mission-card-bg);
   border: 1px solid var(--mission-card-border);
   border-radius: var(--mission-border-radius);
-  padding: 16px;
+  padding: var(--ds-space-4);
   font-family: var(--mission-font-family);
   color: var(--mission-text-color);
   margin-bottom: 16px;
   position: relative;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--mission-box-shadow);
   transition: all;
-}
-
-/* Override for dark mode */
-html[data-theme='dark'] .mission-container {
-  background: #111111;
-  border-color: rgba(255, 255, 255, 0.1);
-  color: #e0e0e0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-html[data-theme='light'] .mission-container {
-  background-color: #f1f1f1;
-  border-color: #d9dce1;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Mission button styles */
@@ -667,7 +668,7 @@ html[data-theme='light'] .mission-container {
   font-family: var(--mission-font-family);
   font-size: 12px;
   color: var(--mission-text-color);
-  text-decoration: none;
+  text-decoration: none !important;
   transition: all;
   cursor: pointer;
   text-transform: uppercase;
@@ -724,7 +725,7 @@ html[data-theme='dark'] .mission-button:hover {
   background: var(--mission-button-hover-bg);
   border-color: var(--mission-button-hover-border);
   color: var(--mission-text-color);
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .mission-button--details {

@@ -50,28 +50,57 @@ export default function BlogPostItemWrapper(props) {
     }
   }, []);
 
+  useEffect(() => {
+    // On blog post page, remove intro thumbnail/preview and the decorative border
+    if (isBlogPostPage && ExecutionEnvironment.canUseDOM) {
+      // Select the rendered markdown article
+      const article = document.querySelector('article');
+      if (!article) return;
+
+      // Locate the border divider that follows the excerpt
+      const borderDiv = article.querySelector('div[style*="border-top"]');
+      if (!borderDiv) return;
+
+      // Remove every node that comes before the border (intro image, paragraphs, etc.)
+      let node = borderDiv.previousSibling;
+      while (node) {
+        const prevNode = node.previousSibling;
+        if (node.remove) {
+          node.remove();
+        }
+        node = prevNode;
+      }
+      // Finally, remove the border itself
+      borderDiv.remove();
+    }
+  }, [isBlogPostPage]);
+
+  const containerStyle = !isBlogPostPage ? { marginBottom: '5rem' } : {};
+
   return (
     <>
-      <BlogPostItem {...props}>
-        {props.children}
-        {isBlogPostPage && (
-          <BrowserOnly>
-            {() => (
-              <div>
-                <iframe
-                  src={beehiivSrc}
-                  data-test-id="beehiiv-embed"
-                  width="100%"
-                  height="200"
-                  frameBorder="0"
-                  scrolling="no"
-                  title="Didier newsletter"
-                />
-              </div>
-            )}
-          </BrowserOnly>
-        )}
-      </BlogPostItem>
+      <div style={containerStyle}>
+        <BlogPostItem {...props}>
+          {props.children}
+          {isBlogPostPage && (
+            <BrowserOnly>
+              {() => (
+                <div>
+                  <iframe
+                    src={beehiivSrc}
+                    data-test-id="beehiiv-embed"
+                    width="100%"
+                    height="200"
+                    frameBorder="0"
+                    scrolling="no"
+                    title="Didier newsletter"
+                  />
+                </div>
+              )}
+            </BrowserOnly>
+          )}
+        </BlogPostItem>
+      </div>
     </>
   );
 }

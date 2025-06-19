@@ -25,7 +25,7 @@ export default function NewsMentionsList({ news }: NewsMentionsListProps) {
 							{single_news.title}
 						</div>
 						{single_news.img && (
-							<div className="my-4">
+							<div className="my-4 flex justify-center">
 								<img
 									src={single_news.img}
 									alt={single_news.title}

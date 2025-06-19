@@ -749,3 +749,24 @@ html {
 .mission-description a:hover {
   color: var(--ds-blue-accent);
 }
+
+/* === Blog Post Header Spacing === */
+article header {
+  /* Extra space between the header (title + meta) and the beginning of the post */
+  margin-bottom: 2.5rem;
+}
+
+/* Style the metadata container to be inline */
+article header .theme-blog-post-metadata {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Remove individual margins from date/time elements since container handles spacing */
+article header time,
+article header span[class*="date"],
+article header div[class*="date"] {
+  margin: 0;
+}

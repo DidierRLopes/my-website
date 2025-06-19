@@ -47,12 +47,13 @@
 }
 
 .bookThumbnail {
-  height: 60px;
-  width: auto;
+  height: auto;
+  width: 40px;
   border-radius: 2px;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
   color: var(--ds-blue-light);
+  object-fit: cover;
 }
 
 .bookThumbnail:hover {

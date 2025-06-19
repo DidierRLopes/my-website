@@ -14,20 +14,22 @@ interface CourseListProps {
 export default function CoursesList({ courses }: CourseListProps) {
   return (
     <div className="mx-auto mt-8">
-      {courses.map((course) => (
-        <div className="container relative justify-center items-center mb-8 my-4 mx-auto border-[1px] p-2 rounded border-[#0088CC]">
-          <div>
-            <div className='justify-left items-start text-xs'>
+      {courses.map((course, index) => (
+        <div key={index} className="mission-container">
+          <div className="mission-description">
+            <div className='text-xs mb-2'>
               {course.date}, {course.issuer}
             </div>
-            <h3 className="justify-center items-center text-base mt-1 mb-2 font-semibold">
+            <div className="text-base font-semibold mb-4">
               {course.title}
-            </h3>
+            </div>
+          </div>
+          <div className="mission-buttons">
             <a
               href={course.link}
               rel="noopener noreferrer"
               target="_blank"
-              className="justify-center items-center text-base mb-2"
+              className="mission-button mission-button--join"
             >
               Certificate here
             </a>

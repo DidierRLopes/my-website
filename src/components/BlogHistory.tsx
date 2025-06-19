@@ -159,9 +159,9 @@ export default function BlogHistory({ posts = [], isDesktop }: BlogHistoryProps)
 		),
 	);
 
-	// Generate colors for different posts
+	// Generate colors for different posts using design system blue colors
 	const getPostColor = (index: number) => {
-		const colors = ["#0088CC", "#00AAFF", "#33BBFF", "#66CCFF", "#99DDFF"];
+		const colors = ["#3b82f6", "#1e40af", "#60a5fa", "#2563eb", "#93c5fd"];
 		return colors[index % colors.length];
 	};
 

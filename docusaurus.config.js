@@ -146,10 +146,6 @@ const config = {
           async: true,
           defer: true,
         },
-        {
-          src: 'https://www.googletagmanager.com/gtm.js?id=GTM-PL77JR5L',
-          async: true,
-        },
       ],
       themeConfig: {
         // ... other theme configurations
@@ -165,10 +161,9 @@ const config = {
 
   plugins: [
     [
-      '@docusaurus/plugin-google-gtag',
+      '@docusaurus/plugin-google-tag-manager',
       {
-        trackingID: 'G-T39XQ0VWEB',
-        anonymizeIP: true,
+        containerId: 'GTM-PL77JR5L',
       },
     ],
     async function blogLlmsPlugin(context) {

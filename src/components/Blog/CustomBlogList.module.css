@@ -14,12 +14,101 @@
   margin-bottom: var(--ds-space-4);
 }
 
+.searchWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-2);
+}
+
+.searchInputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.clearSearchButton {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  color: var(--ifm-color-emphasis-600);
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 4px;
+  border-radius: 2px;
+  transition: all 0.2s ease-in-out;
+}
+
+.clearSearchButton:hover {
+  background-color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-800);
+}
+
+.activeFiltersDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ds-space-1);
+  margin-top: var(--ds-space-2);
+  padding: var(--ds-space-2);
+  background-color: var(--ifm-color-emphasis-50);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 4px;
+}
+
+.activeFilterChip {
+  display: flex;
+  align-items: center;
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-color-white);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  gap: 4px;
+}
+
+.filterType {
+  font-weight: 600;
+  opacity: 0.8;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+
+.filterValue {
+  font-weight: 500;
+}
+
+.removeFilterButton {
+  background: none;
+  border: none;
+  color: var(--ifm-color-white);
+  cursor: pointer;
+  padding: 0;
+  margin-left: 4px;
+  font-size: 0.9rem;
+  line-height: 1;
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.removeFilterButton:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 .searchInput {
   width: 100%;
   background-color: var(--background-secondary);
   color: var(--text-primary);
   border: 1px solid var(--border-primary);
   padding: var(--ds-space-2);
+  padding-right: 2.5rem;
   font-family: var(--ds-font-primary);
   font-size: var(--ds-font-size-md);
 }
@@ -73,15 +162,31 @@
   font-size: 0.7rem;
   font-weight: 400;
   text-decoration: none;
-  transition: color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   border: 1px solid var(--ifm-color-emphasis-300);
   opacity: 0.7;
+  cursor: pointer;
 }
 
 .tag:hover {
   color: var(--ifm-color-emphasis-800);
   text-decoration: none;
   opacity: 1;
+  border-color: var(--ifm-color-emphasis-500);
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.tagSelected {
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-color-white);
+  border-color: var(--ifm-color-primary);
+  opacity: 1;
+}
+
+.tagSelected:hover {
+  background-color: var(--ifm-color-primary-dark);
+  color: var(--ifm-color-white);
+  border-color: var(--ifm-color-primary-dark);
 }
 
 .postMain {

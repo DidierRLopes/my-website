@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import CustomBlogList from '../../components/Blog/CustomBlogList';
 
 export default function BlogListPageWrapper(props) {
   const { items, metadata, sidebar } = props;
+  const [hasActiveFilters, setHasActiveFilters] = useState(false);
   
   // Transform the items to match our CustomBlogList expected format
   const posts = items.map(item => {
@@ -50,22 +51,45 @@ export default function BlogListPageWrapper(props) {
     <Layout
       title={metadata?.blogTitle || 'Blog'}
       description={metadata?.blogDescription || 'Blog posts'}
+      noFooter={false}
     >
-      <div style={{ 
-        maxWidth: '1000px', 
-        margin: '0 auto', 
-        padding: '2rem 1rem',
-        minHeight: '50vh'
-      }}>
-        <h1 style={{ 
-          textAlign: 'center', 
-          marginBottom: '2rem',
-          color: 'var(--ds-blue-light)'
+      <div className={`blog-wrapper ${hasActiveFilters ? 'blog-wrapper--no-sidebar' : ''}`}>
+        <div style={{ 
+          maxWidth: hasActiveFilters ? '1200px' : '1000px', 
+          margin: '0 auto', 
+          padding: '2rem 1rem',
+          minHeight: '50vh'
         }}>
-          {metadata?.blogTitle || 'Blog'}
-        </h1>
-        <CustomBlogList posts={posts} />
+          <h1 style={{ 
+            textAlign: 'center', 
+            marginBottom: '2rem',
+            color: 'var(--ds-blue-light)'
+          }}>
+            {metadata?.blogTitle || 'Blog'}
+          </h1>
+          <CustomBlogList 
+            posts={posts} 
+            onFilterChange={setHasActiveFilters}
+          />
+        </div>
       </div>
+      
+      {/* Custom CSS to hide sidebar when filters are active */}
+      {hasActiveFilters && (
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            .theme-doc-sidebar-container {
+              display: none !important;
+            }
+            .main-wrapper {
+              margin-left: 0 !important;
+            }
+            .container {
+              max-width: none !important;
+            }
+          `
+        }} />
+      )}
     </Layout>
   );
 }

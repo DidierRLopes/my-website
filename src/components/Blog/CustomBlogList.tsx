@@ -178,8 +178,7 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
                   onClick={() => toggleTag(tag)}
                   onKeyPress={(e) => { if (e.key === 'Enter') toggleTag(tag); }}
                 >
-                  <span className={styles.filterType}>Tag:</span>
-                  <span className={styles.filterValue}>{tag}</span>
+                  <span>{tag}</span>
                   <button 
                     type="button"
                     onClick={(e) => { e.stopPropagation(); removeTag(tag); }}

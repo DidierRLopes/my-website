@@ -11,7 +11,7 @@
 }
 
 .searchContainer {
-  margin-bottom: var(--ds-space-12);
+  margin-bottom: 4rem;
 }
 
 .searchWrapper {
@@ -59,11 +59,6 @@
 .activeFilterChip {
   display: flex;
   align-items: center;
-  background-color: var(--ifm-color-primary);
-  color: var(--ifm-color-white);
-  padding: 4px 8px;
-  border-radius: 12px;
-  font-size: 0.75rem;
   gap: 4px;
 }
 
@@ -81,14 +76,14 @@
 .removeFilterButton {
   background: none;
   border: none;
-  color: var(--ifm-color-white);
+  color: inherit;
   cursor: pointer;
   padding: 0;
   margin-left: 4px;
   font-size: 0.9rem;
   line-height: 1;
-  opacity: 0.8;
-  transition: opacity 0.2s ease-in-out;
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
   border-radius: 50%;
   width: 16px;
   height: 16px;
@@ -99,7 +94,62 @@
 
 .removeFilterButton:hover {
   opacity: 1;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tagSelected .removeFilterButton {
+  opacity: 0.8;
+}
+
+.tagSelected .removeFilterButton:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.2); /* A bit stronger for dark backgrounds */
+}
+
+@media (prefers-color-scheme: dark) {
+  .removeFilterButton {
+    color: var(--ifm-color-emphasis-300);
+  }
+
+  .removeFilterButton:hover {
+    background-color: var(--ifm-color-emphasis-700);
+    color: var(--ifm-color-emphasis-100);
+  }
+
+  .tag {
+    background-color: var(--ifm-color-emphasis-200);
+    color: var(--ifm-color-emphasis-900);
+    border-color: var(--ifm-color-emphasis-300);
+  }
+
+  .tag:hover {
+    background-color: var(--ifm-color-emphasis-300);
+    color: var(--ifm-color-emphasis-900);
+    border-color: var(--ifm-color-emphasis-400);
+  }
+
+  .activeFilterChip {
+    background-color: var(--ifm-color-emphasis-200);
+    color: var(--ifm-color-emphasis-900);
+    border-color: var(--ifm-color-emphasis-300);
+  }
+
+  .activeFilterChip:hover {
+    background-color: var(--ifm-color-emphasis-300);
+    color: var(--ifm-color-emphasis-900);
+    border-color: var(--ifm-color-emphasis-400);
+  }
+
+  .tagSelected {
+    background-color: var(--ifm-color-emphasis-600);
+    color: var(--ifm-color-white);
+    border-color: var(--ifm-color-emphasis-600);
+  }
+
+  .tagSelected:hover {
+    background-color: var(--ifm-color-emphasis-700);
+    border-color: var(--ifm-color-emphasis-700);
+  }
 }
 
 .searchInput {
@@ -154,39 +204,41 @@
   margin-bottom: var(--ds-space-2);
 }
 
-.tag {
-  background-color: transparent;
-  color: var(--ifm-color-emphasis-600);
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 0.7rem;
-  font-weight: 400;
+.tag, .activeFilterChip {
+  background-color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-700);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  opacity: 0.7;
   cursor: pointer;
+  line-height: 1.2;
 }
 
-.tag:hover {
-  color: var(--ifm-color-emphasis-800);
-  text-decoration: none;
-  opacity: 1;
-  border-color: var(--ifm-color-emphasis-500);
-  background-color: var(--ifm-color-emphasis-100);
+.activeFilterChip {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tag:hover, .activeFilterChip:hover {
+  background-color: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-300);
 }
 
 .tagSelected {
-  background-color: var(--ifm-color-primary);
-  color: var(--ifm-color-white);
-  border-color: var(--ifm-color-primary);
-  opacity: 1;
+  background-color: var(--ifm-color-emphasis-800);
+  color: var(--ifm-background-color);
+  border-color: var(--ifm-color-emphasis-800);
 }
 
 .tagSelected:hover {
-  background-color: var(--ifm-color-primary-dark);
-  color: var(--ifm-color-white);
-  border-color: var(--ifm-color-primary-dark);
+  background-color: var(--ifm-color-emphasis-900);
+  border-color: var(--ifm-color-emphasis-900);
+  color: var(--ifm-background-color);
 }
 
 .postMain {

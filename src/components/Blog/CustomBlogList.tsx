@@ -228,33 +228,35 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
                   )}
                 </div>
 
-                <div className={styles.postMain}>
-                  <div className={styles.leftSection}>
-                    {post.metadata?.frontMatter?.image ? (
-                      <div className={styles.postImageContainer}>
-                        <img
-                          src={post.metadata.frontMatter.image}
-                          alt={`${post.metadata.title} cover`}
-                          className={styles.postThumbnail}
-                        />
-                      </div>
-                    ) : (
-                      <div className={styles.postImageContainer}>
-                        <div className={styles.placeholderThumbnail}>
-                          No Image
+                <Link to={post.metadata?.permalink} className={styles.postLink}>
+                  <div className={styles.postMain}>
+                    <div className={styles.leftSection}>
+                      {post.metadata?.frontMatter?.image ? (
+                        <div className={styles.postImageContainer}>
+                          <img
+                            src={post.metadata.frontMatter.image}
+                            alt={`${post.metadata.title} cover`}
+                            className={styles.postThumbnail}
+                          />
                         </div>
+                      ) : (
+                        <div className={styles.postImageContainer}>
+                          <div className={styles.placeholderThumbnail}>
+                            No Image
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                    <div className={styles.postInfo}>
+                      <h2 className={styles.postTitle}>
+                        {post.metadata?.title}
+                      </h2>
+                      <div className={styles.postDescription}>
+                        {post.metadata?.description}
                       </div>
-                    )}
-                  </div>
-                  <div className={styles.postInfo}>
-                    <Link to={post.metadata?.permalink} className={styles.postTitle}>
-                      {post.metadata?.title}
-                    </Link>
-                    <div className={styles.postDescription}>
-                      {post.metadata?.description}
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </li>
           ))}

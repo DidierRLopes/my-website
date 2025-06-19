@@ -1,7 +1,5 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Any CSS placed here will be global and applied to the entire site.
  */
 
 @tailwind base;
@@ -41,7 +39,7 @@
   --ds-font-size-lg: 16px;
   --ds-font-size-xl: 18px;
   --ds-line-height: 1.4;
-  --ds-letter-spacing: 0.05em;
+  --ds-letter-spacing: 0.1em;
   --ds-letter-spacing-normal: 0em;
   
   /* Spacing (4px grid system) */
@@ -70,6 +68,7 @@
   --ifm-footer-background-color: var(--background-secondary);
   --ifm-toc-border-color: var(--border-primary);
   --ifm-color-content-secondary: var(--text-secondary);
+  --ifm-icon-external: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'%3E%3C/path%3E%3Cpolyline points='15 3 21 3 21 9'%3E%3C/polyline%3E%3Cline x1='10' y1='14' x2='21' y2='3'%3E%3C/line%3E%3C/svg%3E");
 }
 
 /* Dark theme - Cyberpunk Terminal Aesthetic */
@@ -118,6 +117,7 @@
   --ifm-footer-background-color: var(--background-primary);
   --ifm-toc-border-color: var(--border-primary);
   --ifm-color-content-secondary: var(--text-secondary);
+  --ifm-icon-external: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'%3E%3C/path%3E%3Cpolyline points='15 3 21 3 21 9'%3E%3C/polyline%3E%3Cline x1='10' y1='14' x2='21' y2='3'%3E%3C/line%3E%3C/svg%3E");
 }
 
 h1 {
@@ -475,6 +475,12 @@ html {
   border-radius: 0;
 }
 
+[data-theme='light'] .ds-card {
+  background-color: #f0f2f5;
+  border-color: #d9dce1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
 .ds-card--semi-black {
   background: rgba(0, 0, 0, 0.6);
 }
@@ -521,7 +527,7 @@ html {
 }
 
 .ds-tag--gray {
-  color: var(--ds-gray-muted);
+  color: var(--ds-gray-medium);
 }
 
 /* Design System Stat Block */
@@ -530,6 +536,7 @@ html {
   display: flex;
   align-items: center;
   gap: var(--ds-space-2);
+  vertical-align: middle;
 }
 
 .ds-stat-block--vertical {
@@ -633,7 +640,7 @@ html {
   color: var(--mission-text-color);
   margin-bottom: 16px;
   position: relative;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   transition: all;
 }
 
@@ -643,6 +650,12 @@ html[data-theme='dark'] .mission-container {
   border-color: rgba(255, 255, 255, 0.1);
   color: #e0e0e0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme='light'] .mission-container {
+  background-color: #f1f1f1;
+  border-color: #d9dce1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Mission button styles */
@@ -743,4 +756,48 @@ article header time,
 article header span[class*="date"],
 article header div[class*="date"] {
   margin: 0;
+}
+
+article header time,
+.theme-blog-post-meta a {
+  font-family: var(--ds-font-primary);
+  font-size: var(--ds-font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--ds-letter-spacing);
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+/* External link icon styles */
+.navbar__item.navbar-item-external {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem; /* space before theme toggle */
+}
+
+.navbar__item.navbar-item-external::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.3em; /* gap between icon and text */
+  background-color: currentColor; /* inherits link color */
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6' fill='none' stroke='%23000'/%3E%3Cpolyline points='15 3 21 3 21 9' fill='none' stroke='%23000'/%3E%3Cline x1='10' y1='14' x2='21' y2='3' fill='none' stroke='%23000'/%3E%3C/svg%3E") center/contain no-repeat;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6' fill='none' stroke='%23000'/%3E%3Cpolyline points='15 3 21 3 21 9' fill='none' stroke='%23000'/%3E%3Cline x1='10' y1='14' x2='21' y2='3' fill='none' stroke='%23000'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+/* Ensure hover colour matches nav bar hover */
+.navbar__item.navbar-item-external:hover {
+  color: var(--ifm-color-primary);
+}
+
+article header h1 {
+  font-size: 24px;
+}
+
+.blog-list__title {
+  font-size: 2.5rem; /* Larger font size for BLOG heading */
+  text-align: center;
+  margin-bottom: 2rem;
 }

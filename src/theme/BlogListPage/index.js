@@ -61,11 +61,7 @@ export default function BlogListPageWrapper(props) {
           padding: '2rem 1rem',
           minHeight: '50vh'
         }}>
-          <h1 style={{ 
-            textAlign: 'center', 
-            marginBottom: '2rem',
-            color: 'var(--ds-blue-light)'
-          }}>
+          <h1 className="blog-list__title">
             {metadata?.blogTitle || 'Blog'}
           </h1>
           <CustomBlogList posts={posts} />

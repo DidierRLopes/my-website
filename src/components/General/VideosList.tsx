@@ -18,10 +18,10 @@ interface VideosListProps {
 export default function VideosList({ videos }: VideosListProps) {
   return (
     <div className="mx-auto mt-8">
-      {videos.map((video) => (
-        <div className="container relative justify-center items-center mb-8 my-4 mx-auto border-[1px] p-2 rounded border-[#0088CC]">
-          <div>
-            <div className='flex justify-between'>
+      {videos.map((video, index) => (
+        <div key={index} className="mission-container">
+          <div className="mission-description">
+            <div className='flex justify-between mb-2'>
               <div className='text-xs'>
                 {video.date}
               </div>
@@ -29,44 +29,44 @@ export default function VideosList({ videos }: VideosListProps) {
                 {video.location}
               </div>
             </div>
-            <h3 className="justify-center font-bold items-center text-base mb-2">
+            <div className="font-bold text-base mb-4">
               {video.title}
-            </h3>
-          </div>
-          {video.embed && (
-            <>
-              <div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
-                <iframe
-                  src={video.embed}
-                  width="512"
-                  height="256"
-                  title={video.title}
-                />
-              </div>
-              <div className="flex-none overflow-y-scroll rounded-sm mx-auto text-sm p-2 pr-8 mt-2">
-                <p><strong>{video.time}</strong> - {video.description}</p>
-              </div>
-            </>
-          )}
-          {video.image && (
-            <>
-              <div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
-                <img
-                  src={video.image}
-                  width="512"
-                  height="256"
-                />
-              </div>
-              <div className="flex-none overflow-y-scroll rounded-sm mx-auto text-sm p-2 pr-8 mt-2">
-                <p>{video.description}</p>
-              </div>
-            </>
-          )}
-          {video.info && (
-            <div className="flex-none overflow-y-scroll rounded-sm mx-auto text-sm p-2 pr-8 mt-2">
-              <p dangerouslySetInnerHTML={{ __html: video.info }} />
             </div>
-          )}
+            {video.embed && (
+              <>
+                <div className="flex place-items-center justify-center items-center rounded-sm mx-auto mb-4">
+                  <iframe
+                    src={video.embed}
+                    width="512"
+                    height="256"
+                    title={video.title}
+                  />
+                </div>
+                <div className="text-sm mb-4">
+                  <p><strong>{video.time}</strong> - {video.description}</p>
+                </div>
+              </>
+            )}
+            {video.image && (
+              <>
+                <div className="flex place-items-center justify-center items-center rounded-sm mx-auto mb-4">
+                  <img
+                    src={video.image}
+                    width="512"
+                    height="256"
+                  />
+                </div>
+                <div className="text-sm mb-4">
+                  <p>{video.description}</p>
+                </div>
+              </>
+            )}
+            {video.info && (
+              <div className="text-sm mb-4">
+                <p dangerouslySetInnerHTML={{ __html: video.info }} />
+              </div>
+            )}
+          </div>
         </div>
       ))}
     </div>

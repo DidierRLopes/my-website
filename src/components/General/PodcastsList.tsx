@@ -16,31 +16,32 @@ export default function PodcastsList({ podcasts }: PodcastsListProps) {
 
   return (
     <div className="mx-auto mt-8">
-      {podcasts.map((podcast) => (
-        <div className="container relative justify-center items-center mb-8 my-4 mx-auto border-[1px] p-2 rounded border-[#0088CC]">
-          <div>
-            <div className='justify-left items-start text-xs'>
+      {podcasts.map((podcast, index) => (
+        <div key={index} className="mission-container">
+          <div className="mission-description">
+            <div className='text-xs mb-2'>
               {podcast.date}
             </div>
-            <h3 className="justify-center items-center font-bold text-base mb-2">
+            <div className="font-bold text-base mb-2">
               {podcast.title}
-            </h3>
-          </div>
-          <div className="flex-none overflow-y-scroll rounded-sm mx-auto text-sm p-2 pr-8 mt-2">
-            <span className="font-semibold">
-              {podcast.host}
-            </span>
-            <p>
+            </div>
+            <div className="text-sm mb-2">
+              <span className="font-semibold">
+                {podcast.host}
+              </span>
+            </div>
+            <p className="text-sm mb-4">
               {podcast.summary}
             </p>
-            <div className="mt-2">
-              <a
-                href={podcast.link}
-                rel="noopener noreferrer"
-                target="_blank">
-                Learn more
-              </a>
-            </div>
+          </div>
+          <div className="mission-buttons">
+            <a
+              href={podcast.link}
+              rel="noopener noreferrer"
+              target="_blank"
+              className="mission-button mission-button--join">
+              Learn more
+            </a>
           </div>
         </div>
       ))}

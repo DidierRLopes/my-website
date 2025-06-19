@@ -1,0 +1,119 @@
+/* src/components/General/BooksList.module.css */
+
+.terminal {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 4px;
+  padding: var(--ds-space-4);
+  font-family: var(--ds-font-primary);
+  color: var(--text-primary);
+  margin-bottom: var(--ds-space-6);
+}
+
+.searchContainer {
+  margin-bottom: var(--ds-space-4);
+}
+
+.searchInput {
+  width: 100%;
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-primary);
+  padding: var(--ds-space-2);
+  font-family: var(--ds-font-primary);
+  font-size: var(--ds-font-size-md);
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--ds-blue-light);
+  box-shadow: 0 0 5px var(--ds-blue-light);
+}
+
+.bookList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bookItem {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--ds-space-4);
+  padding: var(--ds-space-2);
+  border-radius: 2px;
+  cursor: default;
+}
+
+.bookThumbnail {
+  height: auto;
+  width: 40px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  color: var(--ds-blue-light);
+  object-fit: cover;
+}
+
+.bookThumbnail:hover {
+    transform: scale(1.1);
+}
+
+.bookTitle {
+  font-weight: 500;
+  color: var(--ds-blue-light);
+}
+
+.bookAuthor {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.bookInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  position: relative;
+}
+
+.modalImage {
+  display: block;
+  max-width: 90vw;
+  max-height: 90vh;
+  border: 2px solid var(--border-primary);
+}
+
+.closeButton {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: var(--ds-white);
+  font-size: 30px;
+  cursor: pointer;
+  font-family: var(--ds-font-primary);
+}
+
+.noResults {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: var(--ds-space-6);
+  font-family: var(--ds-font-primary);
+} 

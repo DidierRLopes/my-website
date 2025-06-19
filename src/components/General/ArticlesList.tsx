@@ -13,20 +13,22 @@ interface ArticleListProps {
 export default function ArticlesList({ articles }: ArticleListProps) {
   return (
     <div className="mx-auto mt-8">
-      {articles.map((article) => (
-        <div className="container relative justify-center items-center mb-8 my-4 mx-auto border-[1px] p-2 rounded border-[#0088CC]">
-          <div>
-            <div className='justify-left items-start text-xs'>
+      {articles.map((article, index) => (
+        <div key={index} className="mission-container">
+          <div className="mission-description">
+            <div className='text-xs mb-2'>
               {article.conference}
             </div>
-            <h3 className="justify-center items-center font-semibold text-base mt-1 mb-3">
+            <div className="font-semibold text-base mb-4">
               {article.title}
-            </h3>
+            </div>
+          </div>
+          <div className="mission-buttons">
             <a
               href={article.link}
               rel="noopener noreferrer"
               target="_blank"
-              className="justify-center items-center text-base mb-2"
+              className="mission-button mission-button--join"
             >
               Learn more
             </a>

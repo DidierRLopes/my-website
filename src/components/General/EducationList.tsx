@@ -15,32 +15,33 @@ interface EducationListProps {
 export default function EducationList({ education }: EducationListProps) {
   return (
     <div className="mx-auto mt-8">
-      {education.map((program) => (
-        <div className="container relative justify-center items-center mb-8 my-4 mx-auto border-[1px] p-2 rounded border-[#0088CC]">
-          <div>
-            <div className='justify-left items-start text-xs'>
+      {education.map((program, index) => (
+        <div key={index} className="mission-container">
+          <div className="mission-description">
+            <div className='text-xs mb-2'>
               {program.date}
             </div>
-            <div className='justify-left items-start text-s'>
+            <div className='text-sm mb-2'>
               {program.school}
             </div>
-            <h3 className="justify-center items-center text-base mt-2 mb-2 font-semibold">
+            <div className="text-base font-semibold mb-4">
               {program.degree}
-            </h3>
+            </div>
+            <div className="text-sm mb-4">
+              {program.summary.map((point, pointIndex) => (
+                <p key={pointIndex} className="mb-1">- {point}</p>
+              ))}
+            </div>
           </div>
-          <div className="flex-none overflow-y-scroll rounded-sm mx-auto text-sm p-2 pr-8 mt-2">
-            {program.summary.map((point, index) => (
-              <p key={index}>- {point}</p>
-            ))}
+          <div className="mission-buttons">
+            <a
+              href={program.link}
+              rel="noopener noreferrer"
+              target="_blank"
+              className="mission-button mission-button--join">
+              Learn more
+            </a>
           </div>
-          <a
-            href={program.link}
-            rel="noopener noreferrer"
-            target="_blank"
-            className="justify-center items-center text-base mb-2"
-          >
-            Learn more
-          </a>
         </div>
       ))}
     </div>

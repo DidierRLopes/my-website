@@ -8,39 +8,116 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import fonts if using Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* Import IBM Plex Mono font for design system */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
 
-/* You can override the default Infima variables here. */
+/* Design System Color Palette - Light Mode Default */
 :root {
-  --ifm-color-primary: #0088CC;
-  --ifm-color-primary-dark: #0088CC;
-  --ifm-color-primary-darker: #0088CC;
-  --ifm-color-primary-darkest: #0088CC;
-  --ifm-color-primary-light: #0088CC;
-  --ifm-color-primary-lighter: #0088CC;
-  --ifm-color-primary-lightest: #0088CC;
+  /* Core Design System Colors - Light Mode */
+  --ds-black: #1a1a1a;
+  --ds-white: #f8f9fa;
+  --ds-gray-light: #2c3e50;
+  --ds-gray-medium: #5a6c7d;
+  --ds-gray-dark: #1a1a1a;
+  --ds-blue-primary: #1e40af;
+  --ds-blue-dark: #1e3a8a;
+  --ds-blue-light: #3b82f6;
+  --ds-blue-accent: #2563eb;
+  --ds-gray-muted: #6c757d;
+  
+  /* Global Theme Colors */
+  --background-primary: #f8f9fa;
+  --background-secondary: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #2c3e50;
+  --border-primary: rgba(0, 0, 0, 0.15);
+  --border-secondary: rgba(0, 0, 0, 0.1);
+  
+  /* Typography */
+  --ds-font-primary: 'IBM Plex Mono', 'Courier New', monospace;
+  --ds-font-size-xs: 10px;
+  --ds-font-size-sm: 12px;
+  --ds-font-size-md: 14px;
+  --ds-font-size-lg: 16px;
+  --ds-font-size-xl: 18px;
+  --ds-line-height: 1.4;
+  --ds-letter-spacing: 0.05em;
+  --ds-letter-spacing-normal: 0em;
+  
+  /* Spacing (4px grid system) */
+  --ds-space-1: 4px;
+  --ds-space-2: 8px;
+  --ds-space-3: 12px;
+  --ds-space-4: 16px;
+  --ds-space-6: 24px;
+  
+  /* Docusaurus overrides - Light Mode */
+  --ifm-color-primary: var(--ds-blue-primary);
+  --ifm-color-primary-dark: var(--ds-blue-dark);
+  --ifm-color-primary-darker: var(--ds-blue-dark);
+  --ifm-color-primary-darkest: var(--ds-blue-dark);
+  --ifm-color-primary-light: var(--ds-blue-light);
+  --ifm-color-primary-lighter: var(--ds-blue-light);
+  --ifm-color-primary-lightest: var(--ds-blue-light);
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  --ifm-heading-font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  --ifm-font-size-base: 18px;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.05);
+  --ifm-font-family-base: var(--ds-font-primary);
+  --ifm-heading-font-family: var(--ds-font-primary);
+  --ifm-font-size-base: var(--ds-font-size-md);
+  --ifm-background-color: var(--background-primary);
+  --ifm-font-color-base: var(--text-primary);
+  --ifm-navbar-background-color: var(--background-secondary);
+  --ifm-footer-background-color: var(--background-secondary);
+  --ifm-toc-border-color: var(--border-primary);
+  --ifm-color-content-secondary: var(--text-secondary);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark theme - Cyberpunk Terminal Aesthetic */
 [data-theme='dark'] {
-  --ifm-color-primary: #33BBFF;
-  --ifm-color-primary-dark: #33BBFF;
-  --ifm-color-primary-darker: #33BBFF;
-  --ifm-color-primary-darkest: #33BBFF;
-  --ifm-color-primary-light: #33BBFF;
-  --ifm-color-primary-lighter: #33BBFF;
-  --ifm-color-primary-lightest: #33BBFF;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Override Design System Colors for Dark Mode */
+  --ds-black: #000000;
+  --ds-white: #FFFFFF;
+  --ds-gray-light: #CCCCCC;
+  --ds-gray-medium: #888888;
+  --ds-gray-dark: #333333;
+  --ds-blue-primary: #60a5fa;
+  --ds-blue-dark: #3b82f6;
+  --ds-blue-light: #93c5fd;
+  --ds-blue-accent: #60a5fa;
+  --ds-gray-muted: #AAAAAA;
+  
+  /* Global Theme Colors - Dark Mode */
+  --background-primary: #000000;
+  --background-secondary: #111111;
+  --text-primary: #CCCCCC;
+  --text-secondary: #888888;
+  --border-primary: rgba(255, 255, 255, 0.15);
+  --border-secondary: rgba(255, 255, 255, 0.1);
+  
+  /* Docusaurus Dark Mode Overrides */
+  --ifm-color-primary: var(--ds-blue-light);
+  --ifm-color-primary-dark: var(--ds-blue-primary);
+  --ifm-color-primary-darker: var(--ds-blue-primary);
+  --ifm-color-primary-darkest: var(--ds-blue-primary);
+  --ifm-color-primary-light: var(--ds-blue-light);
+  --ifm-color-primary-lighter: var(--ds-blue-light);
+  --ifm-color-primary-lightest: var(--ds-blue-light);
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+  --ifm-background-color: var(--background-primary);
+  --ifm-font-color-base: var(--text-primary);
+  --ifm-navbar-background-color: var(--background-primary);
+  --ifm-footer-background-color: var(--background-primary);
+  --ifm-toc-border-color: var(--border-primary);
+  --ifm-color-content-secondary: var(--text-secondary);
 }
 
 h1 {
-  font-size: 2rem; /* Adjust this value to your preference */
+  font-family: var(--ds-font-primary);
+  font-size: var(--ds-font-size-xl);
+  text-transform: uppercase;
+  letter-spacing: var(--ds-letter-spacing);
+  color: var(--text-primary);
+  font-weight: 500;
 }
 
 .theme-edit-this-page {
@@ -58,56 +135,57 @@ a[href^="/"]:not([class^="menu__link"]):not([class^="sidebarItemLink"]):not([cla
 }
 
 h2[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-module"] {
-  font-size: 2em;
-  font-weight: 600;
-}
-
-[data-theme="light"] h2[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-module"]  {
-  color: black;
-  font-size: 1.5em;
-}
-[data-theme="dark"] h2[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-module"] {
-  color: white;
-  font-size: 1.5em;
+  font-family: var(--ds-font-primary);
+  font-size: var(--ds-font-size-lg);
+  text-transform: uppercase;
+  letter-spacing: var(--ds-letter-spacing);
+  color: var(--text-primary);
+  font-weight: 500;
 }
 
 h1[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-module"] {
-  font-size: 2em;
-  font-weight: 700;
-}
-
-[data-theme="light"] h1[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-module"]  {
-  color: black;
-}
-[data-theme="dark"] h1[class^="title_node_modules-@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Title-styles-module"] {
-  color: white;
+  font-family: var(--ds-font-primary);
+  font-size: var(--ds-font-size-xl);
+  text-transform: uppercase;
+  letter-spacing: var(--ds-letter-spacing);
+  color: var(--text-primary);
+  font-weight: 500;
 }
 
 h2[class^="anchor"], h2 {
-  font-size: 1.75em;
-  font-weight: 650;
-}
-
-[data-theme="light"] h2[class^="anchor"], [data-theme="light"] h2 {
-  color: black;
-}
-[data-theme="dark"] h2[class^="anchor"], [data-theme="dark"] h2 {
-  color: white;
+  font-family: var(--ds-font-primary);
+  font-size: var(--ds-font-size-lg);
+  text-transform: uppercase;
+  letter-spacing: var(--ds-letter-spacing);
+  font-weight: 500;
+  color: var(--text-primary);
 }
 
 h3[class^="anchor"], h3 {
-  font-size: 1.5em;
-  font-weight: 600;
+  font-family: var(--ds-font-primary);
+  font-size: var(--ds-font-size-md);
+  text-transform: uppercase;
+  letter-spacing: var(--ds-letter-spacing);
+  font-weight: 500;
+  color: var(--text-secondary);
 }
 
 h4[class^="anchor"], h4 {
-  font-size: 1.25em;
-  font-weight: 550;
+  font-family: var(--ds-font-primary);
+  font-size: var(--ds-font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--ds-letter-spacing);
+  font-weight: 500;
+  color: var(--text-secondary);
 }
 
 h5[class^="anchor"], h5 {
-  font-size: 1em;
+  font-family: var(--ds-font-primary);
+  font-size: var(--ds-font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--ds-letter-spacing);
   font-weight: 500;
+  color: var(--text-secondary);
 }
 
 ul {
@@ -177,143 +255,10 @@ ol {
 }
 
 
-.book-wrapper {
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
-  column-count: 3;
-  column-gap: 12px;
-  padding: 4px;
-}
-
-.book-items {
-  position: relative;
-  cursor: default;
-  padding: 8px;
-  margin: 0;
-  display: grid;
-  break-inside: avoid;
-}
-
-@media screen and (max-width: 900px) {
-  .book-wrapper {
-    column-count: 3;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .book-wrapper {
-    column-count: 2;
-  }
-  
-  .book-items {
-    padding: 6px;
-  }
-  
-  .book-cover .book-inside {
-    left: 6px;
-  }
-  
-  .effect {
-    margin-left: 6px;
-  }
-  
-  .book-image:hover .effect {
-    margin-left: 4px;
-  }
-}
-
-.main-book-wrap {
-  position: relative;
-}
-
-.book-cover {
-  position: relative;
-}
-
-.book-cover .book-inside {
-  position: absolute;
-  width: 90%;
-  height: 96%;
-  top: 1%;
-  left: 16px;
-  border: 1px solid grey;
-  border-radius: 2px 6px 6px 2px;
-  background: white;
-  box-shadow: 10px 40px 40px -10px #00000030, inset -2px 0 0 grey,
-    inset -3px 0 0 #dbdbdb, inset -4px 0 0 white, inset -5px 0 0 #dbdbdb,
-    inset -6px 0 0 white, inset -7px 0 0 #dbdbdb, inset -8px 0 0 white,
-    inset -9px 0 0 #dbdbdb;
-}
-
-.book-cover .book-image {
-  line-height: 0;
-  position: relative;
-  border-radius: 2px 6px 6px 2px;
-  box-shadow: 6px 6px 18px -2px rgba(0, 0, 0, 0.2),
-    24px 28px 40px -6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-  transform: perspective(2000px) rotateY(-15deg) translateX(-10px) scaleX(0.94);
-  cursor: pointer;
-}
-
-.book-image img {
-  grid-row: 1 / -1;
-  grid-column: 1;
-  width: 100%;
-  border-radius: 2px 6px 6px 2px;
-}
-
-.book-image:hover {
-  transform: perspective(2000px) rotateY(0deg) translateX(0px) scaleX(1);
-  transform-style: preserve-3d;
-  box-shadow: 6px 6px 12px -1px rgba(0, 0, 0, 0.1),
-    20px 14px 16px -6px rgba(0, 0, 0, 0.1);
-}
-
-.effect {
-  position: absolute;
-  width: 20px;
-  height: 100%;
-  margin-left: 16px;
-  top: 0;
-  border-left: 2px solid #00000010;
-  background-image: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  transition: all 0.5s ease;
-  z-index: 5;
-}
-
-.light {
-  width: 90%;
-  height: 100%;
-  position: absolute;
-  border-radius: 3px;
-  background-image: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.2) 100%
-  );
-  top: 0;
-  right: 0;
-  opacity: 0.1;
-  transition: all 0.5s ease;
-  z-index: 4;
-}
-
-.book-image:hover .effect {
-  margin-left: 14px;
-}
-
 .realvjy {
-  width: 900px;
-  padding: 20px;
-  margin: 0 auto;
-  font-family: sans-serif;
+  display: block;
   text-align: center;
+  margin-top: 2rem;
 }
 
 .recharts-bar-rectangle:hover {
@@ -326,10 +271,502 @@ ol {
   color: var(--ifm-footer-color);
 }
 
-:root {
-  --ifm-navbar-background-color: #f0f0f0;
+/* Light theme cyberpunk adjustments */
+[data-theme='light'] {
+  /* Enhanced light mode borders for cyberpunk feel */
+  --ifm-toc-border-color: rgba(0, 0, 0, 0.2);
+  --ifm-hr-border-color: rgba(0, 0, 0, 0.15);
 }
 
+/* Additional cyberpunk styling for both themes */
+/* Terminal-like borders and effects */
+.menu__link {
+  border-left: 2px solid transparent;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.menu__link:hover,
+.menu__link--active {
+  border-left-color: var(--ifm-color-primary);
+}
+
+/* Cyberpunk code blocks */
+pre {
+  border: 1px solid var(--border-primary);
+  border-radius: 0;
+}
+
+/* Terminal-style blockquotes */
+blockquote {
+  border-left: 3px solid var(--ifm-color-primary);
+  background: transparent;
+}
+
+/* Enhanced cyberpunk aesthetic for both themes */
+/* Light mode cyberpunk enhancements */
+[data-theme='light'] body {
+  /* Add subtle scan lines effect for light mode */
+  background-image: 
+    linear-gradient(90deg, transparent 50%, rgba(0, 0, 0, 0.02) 50%);
+  background-size: 4px 4px;
+}
+
+/* Dark mode cyberpunk enhancements */
+[data-theme='dark'] body {
+  /* Add subtle scan lines effect for dark mode */
+  background-image: 
+    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.02) 50%);
+  background-size: 4px 4px;
+}
+
+/* Terminal-style focus states */
+*:focus {
+  outline: 1px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Cyberpunk table styling */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--border-primary);
+}
+
+table th,
+table td {
+  border-right: 1px solid var(--border-secondary);
+  border-bottom: 1px solid var(--border-secondary);
+  padding: 8px 12px;
+}
+
+table th {
+  background: var(--background-secondary);
+  font-family: var(--ds-font-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+}
+
+/* Enhanced input styling */
+input, textarea, select {
+  background: var(--background-secondary);
+  border: 1px solid var(--border-primary);
+  color: var(--text-primary);
+  font-family: var(--ds-font-primary);
+  border-radius: 0;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 1px var(--ifm-color-primary);
+}
+
+/* Design System Base Typography - Responsive to Theme */
+body {
+  font-family: var(--ds-font-primary);
+  font-size: var(--ds-font-size-md);
+  line-height: var(--ds-line-height);
+  letter-spacing: var(--ds-letter-spacing-normal);
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+html {
+  background-color: var(--background-primary);
+  min-height: 100%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#__docusaurus {
+  background-color: var(--background-primary);
+  min-height: 100vh;
+}
+
+/* Design System Typography Scale */
+.ds-text-xs {
+  font-size: var(--ds-font-size-xs);
+}
+
+.ds-text-sm {
+  font-size: var(--ds-font-size-sm);
+}
+
+.ds-text-md {
+  font-size: var(--ds-font-size-md);
+}
+
+.ds-text-lg {
+  font-size: var(--ds-font-size-lg);
+}
+
+.ds-text-xl {
+  font-size: var(--ds-font-size-xl);
+}
+
+/* Design System Headings */
+.ds-heading {
+  font-family: var(--ds-font-primary);
+  text-transform: uppercase;
+  letter-spacing: var(--ds-letter-spacing);
+  font-weight: 500;
+  color: var(--ds-white);
+}
+
+/* Design System Button Base */
+.ds-button {
+  font-family: var(--ds-font-primary);
+  font-size: var(--ds-font-size-sm);
+  text-transform: uppercase;
+  padding: var(--ds-space-1) var(--ds-space-3);
+  border: none;
+  background: transparent;
+  color: var(--ds-gray-light);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.ds-button:hover {
+  color: var(--ds-blue-accent);
+  text-decoration: underline;
+}
+
+.ds-button:active {
+  font-weight: bold;
+}
+
+.ds-button:disabled {
+  color: #555555;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+/* Design System Button Variants */
+.ds-button--ghost {
+  border-bottom: 1px solid transparent;
+}
+
+.ds-button--ghost:hover {
+  border-bottom-color: var(--ds-blue-accent);
+}
+
+.ds-button--chevron::after {
+  content: ' »';
+  margin-left: var(--ds-space-1);
+}
+
+/* Design System Cards */
+.ds-card {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: var(--ds-space-4);
+  background: transparent;
+  border-radius: 0;
+}
+
+.ds-card--semi-black {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Design System Dividers */
+.ds-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin: var(--ds-space-4) 0;
+}
+
+.ds-divider--dashed {
+  border-top-style: dashed;
+}
+
+.ds-divider--half {
+  width: 50%;
+}
+
+/* Design System Tags/Labels */
+.ds-tag {
+  font-family: var(--ds-font-primary);
+  font-size: var(--ds-font-size-sm);
+  text-transform: uppercase;
+  padding: 2px 6px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.ds-tag--blue {
+  color: var(--ds-blue-primary);
+}
+
+.ds-tag--blue-accent {
+  color: var(--ds-blue-accent);
+}
+
+.ds-tag--blue-dark {
+  color: var(--ds-blue-dark);
+}
+
+.ds-tag--orange {
+  color: var(--ds-orange-warn);
+}
+
+.ds-tag--gray {
+  color: var(--ds-gray-muted);
+}
+
+/* Design System Stat Block */
+.ds-stat-block {
+  font-family: var(--ds-font-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2);
+}
+
+.ds-stat-block--vertical {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Design System Indicators */
+.ds-indicator {
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  margin-right: var(--ds-space-1);
+}
+
+.ds-indicator--blue {
+  background-color: var(--ds-blue-primary);
+}
+
+.ds-indicator--blue-accent {
+  background-color: var(--ds-blue-accent);
+}
+
+.ds-indicator--blue-dark {
+  background-color: var(--ds-blue-dark);
+}
+
+.ds-indicator--orange {
+  background-color: var(--ds-orange-warn);
+}
+
+.ds-indicator--gray {
+  background-color: var(--ds-gray-muted);
+}
+
+/* Design System Animations */
+@keyframes ds-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0.3; }
+}
+
+.ds-blink {
+  animation: ds-blink 1s infinite;
+}
+
+.ds-transition {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Design System Utility Classes */
+.ds-uppercase {
+  text-transform: uppercase;
+  letter-spacing: var(--ds-letter-spacing);
+}
+
+.ds-grid {
+  display: grid;
+  gap: var(--ds-space-4);
+}
+
+.ds-grid-cols-12 {
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* Design System Color Utilities */
+.ds-text-white { color: var(--ds-white); }
+.ds-text-gray-light { color: var(--ds-gray-light); }
+.ds-text-gray-medium { color: var(--ds-gray-medium); }
+.ds-text-gray-dark { color: var(--ds-gray-dark); }
+.ds-text-blue { color: var(--ds-blue-primary); }
+.ds-text-blue-accent { color: var(--ds-blue-accent); }
+.ds-text-blue-dark { color: var(--ds-blue-dark); }
+.ds-text-blue-light { color: var(--ds-blue-light); }
+.ds-text-orange { color: var(--ds-orange-warn); }
+.ds-text-muted { color: var(--ds-gray-muted); }
+
+.ds-bg-black { background-color: var(--ds-black); }
+.ds-bg-transparent { background-color: transparent; }
+.ds-bg-semi-black { background-color: rgba(0, 0, 0, 0.6); }
+
+/* Design System Spacing Utilities */
+.ds-p-1 { padding: var(--ds-space-1); }
+.ds-p-2 { padding: var(--ds-space-2); }
+.ds-p-3 { padding: var(--ds-space-3); }
+.ds-p-4 { padding: var(--ds-space-4); }
+.ds-p-6 { padding: var(--ds-space-6); }
+
+.ds-m-1 { margin: var(--ds-space-1); }
+.ds-m-2 { margin: var(--ds-space-2); }
+.ds-m-3 { margin: var(--ds-space-3); }
+.ds-m-4 { margin: var(--ds-space-4); }
+.ds-m-6 { margin: var(--ds-space-6); }
+
+/* Mission Container Card Styles - Light Mode Default */
+:root {
+  --mission-card-bg: #f8f9fa;
+  --mission-card-border: rgba(0, 0, 0, 0.15);
+  --mission-text-color: #2c3e50;
+  --mission-button-bg: #ffffff;
+  --mission-button-border: rgba(0, 0, 0, 0.2);
+  --mission-button-hover-bg: #f1f3f4;
+  --mission-button-hover-border: rgba(0, 0, 0, 0.3);
+  --mission-border-radius: 6px;
+  --mission-font-family: 'IBM Plex Mono', 'Courier New', 'Menlo', monospace;
+}
+
+/* Mission Container Card Styles - Dark Mode */
 [data-theme='dark'] {
-  --ifm-navbar-background-color: #2c2c2c;
+  --mission-card-bg: #111111;
+  --mission-card-border: rgba(255, 255, 255, 0.1);
+  --mission-text-color: #e0e0e0;
+  --mission-button-bg: #1c1c1c;
+  --mission-button-border: rgba(255, 255, 255, 0.2);
+  --mission-button-hover-bg: #2a2a2a;
+  --mission-button-hover-border: rgba(255, 255, 255, 0.4);
+}
+
+.mission-container {
+  background: var(--mission-card-bg);
+  border: 1px solid var(--mission-card-border);
+  border-radius: var(--mission-border-radius);
+  padding: 16px;
+  font-family: var(--mission-font-family);
+  color: var(--mission-text-color);
+  margin-bottom: 16px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.mission-code {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.mission-code-label {
+  font-weight: 500;
+  color: var(--mission-text-color);
+}
+
+.mission-code-value {
+  font-weight: 700;
+  color: var(--mission-text-color);
+}
+
+.mission-description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  max-width: 100%;
+}
+
+.mission-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.mission-button {
+  background: var(--mission-button-bg);
+  border: 1px solid var(--mission-button-border);
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-family: var(--mission-font-family);
+  font-size: 12px;
+  color: var(--mission-text-color);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mission-button:hover {
+  background: var(--mission-button-hover-bg);
+  border-color: var(--mission-button-hover-border);
+  color: var(--mission-text-color);
+  text-decoration: none;
+}
+
+.mission-button--details {
+  clip-path: polygon(8px 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.mission-button--join::after {
+  content: '»';
+  margin-left: 4px;
+  font-weight: bold;
+}
+
+/* Enhanced styling for better light/dark mode support */
+
+[data-theme='dark'] .mission-container {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.mission-container:hover {
+  transform: translateY(-1px);
+}
+
+[data-theme='light'] .mission-container:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme='dark'] .mission-container:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Ensure text colors work in both themes */
+.mission-description {
+  color: var(--mission-text-color);
+}
+
+/* Make sure links work in both themes */
+.mission-description a {
+  color: var(--ds-blue-primary);
+  text-decoration: underline;
+}
+
+.mission-description a:hover {
+  color: var(--ds-blue-accent);
+}
+
+/* === Blog Post Header Spacing === */
+article header {
+  /* Extra space between the header (title + meta) and the beginning of the post */
+  margin-bottom: 2.5rem;
+}
+
+/* Style the metadata container to be inline */
+article header .theme-blog-post-metadata {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Remove individual margins from date/time elements since container handles spacing */
+article header time,
+article header span[class*="date"],
+article header div[class*="date"] {
+  margin: 0;
 }

@@ -2,11 +2,34 @@ import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
 import React, { useState, useEffect } from 'react';
-import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import BlogHistory from '../components/BlogHistory';
-import Timeline from '../components/Timeline';
+import Section from '../components/common/Section';
+import WhoAmI from '../components/home/WhoAmI';
+import Beliefs from '../components/home/Beliefs';
+import LatestPosts from '../components/home/LatestPosts';
+import OutsideWork from '../components/home/OutsideWork';
+import Journey from '../components/home/Journey';
+
+if (typeof window !== 'undefined') {
+  // Prevent TradingView cross-origin "Script error." from triggering the dev-server overlay
+  window.addEventListener(
+    'error',
+    (evt) => {
+      if (evt.message === 'Script error.') {
+        evt.preventDefault();
+        evt.stopImmediatePropagation();
+        return false;
+      }
+    },
+    true,
+  );
+
+  // Fallback: hide the overlay element if it still shows up
+  const style = document.createElement('style');
+  style.innerHTML = '#webpack-dev-server-client-overlay { display: none !important; }';
+  document.head.appendChild(style);
+}
 
 export default function Home() {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -132,285 +155,43 @@ export default function Home() {
         <meta name="twitter:image" content={`${siteUrl}/img/goku.png`} />
       </Head>
       <main>
-        <div className="w-full bg-blue-100 dark:bg-blue-900 py-3">
+        <div className="w-full bg-blue-300 dark:bg-blue-900 py-3">
           <div className="max-w-[880px] mx-auto px-4 flex items-center justify-center gap-4 flex-wrap">
-            <span className="font-medium">📰 Yes, I started a newsletter about open source, AI and finance.</span>
             <a
               href="https://didierlopes.beehiiv.com/"
               target="_blank"
               rel="noreferrer"
-              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded-full text-sm transition-colors duration-200"
+              className="mission-buttons"
             >
-              Check it out
+              I write about open source, AI and finance.
             </a>
           </div>
         </div>
-        <div className="mt-16 mx-auto flex max-w-[880px] flex-col px-3 text-center">
-          <h1 className="_h1 !mb-2 font-bold">Who am I?</h1>
-          <div className="text-xl">
-            Co-founder & CEO at{' '}
-            <a target="_blank" rel="noreferrer" href="https://openbb.co/">
-              OpenBB
-            </a>
-          </div>
-          {!isDesktop ? (
-            <div className="flex items-center content-center mx-auto align-center justify-center flex-wrap mt-4 gap-8 mb-4">
-              <Carousel
-                showThumbs={false}
-                showStatus={false}
-                renderArrowPrev={(clickHandler, hasPrev) => (
-                  hasPrev && (
-                    <button
-                      type="button"
-                      onClick={clickHandler}
-                      className="absolute left-0 z-10 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
-                      aria-label="Previous slide"
-                    >
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                      </svg>
-                    </button>
-                  )
-                )}
-                renderArrowNext={(clickHandler, hasNext) => (
-                  hasNext && (
-                    <button
-                      type="button"
-                      onClick={clickHandler}
-                      className="absolute right-0 z-10 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
-                      aria-label="Next slide"
-                    >
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </button>
-                  )
-                )
-              }>
-                <div>
-                  <img
-                    className="rounded-xl max-w-[220px]"
-                    src="img/me_timegpt.webp"
-                    alt="Time-GPT event from Nixtla"
-                  />
-                </div>
-                <div>
-                  <img
-                    className="rounded-xl max-w-[220px]"
-                    src="img/tattoo.webp"
-                    alt="OpenBB Tattoo"
-                  />
-                </div>
-                <div>
-                  <img
-                    className="rounded-xl max-w-[220px]"
-                    src="img/bridge_sticker.webp"
-                    alt="OpenBB bridge sticker"
-                  />
-                </div>
-              </Carousel>
-            </div>
-          ) : (
-            <div className="flex items-center content-center mx-auto align-center justify-center flex-wrap mt-4 gap-8 mb-4">
-              <img
-                className="rounded-xl max-h-[300px] mx-auto"
-                src="img/tattoo.webp"
-                alt="OpenBB Tattoo"
-              />
-              <img
-                className="rounded-xl max-h-[300px] mx-auto"
-                src="img/me_timegpt.webp"
-                alt="Time-GPT event from Nixtla"
-              />
-              <img
-                className="rounded-xl max-h-[300px] mx-auto"
-                src="img/bridge_sticker.webp"
-                alt="OpenBB bridget sticker"
-              />
-            </div>
-          )}
-          <p className="text-center mt-4">
-            You can reach me on <a href="https://twitter.com/didier_lopes" target="_blank" rel="noreferrer">X</a> and <a href="https://www.linkedin.com/in/didier-lopes/" target="_blank" rel="noreferrer">LinkedIn</a>, where I post frequently.
-          </p>
-        </div>
-        <div className="mt-16 md:mt-32 mx-auto max-w-[880px] px-4">
-          <h2 className="text-3xl font-bold mb-2 text-center">What I believe in</h2>
-          <p className="text-xl text-center sm:block hidden mb-4">
-            Building an open-source legacy, one commit at a time.
-          </p>
-          <p className="text-xl text-center sm:hidden block mb-4">
-            Building an open-source legacy,<br />one commit at a time.
-          </p>
-          <div className="mb-2">
-            <Carousel
-              showThumbs={false}
-              showStatus={false}
-              showIndicators={false}
-              interval={5000}
-              renderArrowPrev={(clickHandler, hasPrev) => (
-                hasPrev && (
-                  <button
-                    type="button"
-                    onClick={clickHandler}
-                    className="absolute left-0 z-10 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
-                    aria-label="Previous slide"
-                  >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                  </button>
-                )
-              )}
-              renderArrowNext={(clickHandler, hasNext) => (
-                hasNext && (
-                  <button
-                    type="button"
-                    onClick={clickHandler}
-                    className="absolute right-0 z-10 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
-                    aria-label="Next slide"
-                  >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
-                )
-              )
-            }>
-              <div className="flex items-center justify-center w-full">
-                <picture className="flex justify-center">
-                  <source srcSet={githubSrc} />
-                  <img alt="" src="https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=fff&tc=000&ic=000&bc=000" style={{ width: '700px' }} />
-                </picture>
-              </div>
-              <div className="flex items-center justify-center w-full h-full">
-                <picture className="flex justify-center items-center">
-                  <source srcSet={githubChartSrc} />
-                  <img alt="" src={githubChartSrc} style={{ maxWidth: isDesktop ? '600px' : isTablet ? '500px' : '300px', margin: 'auto' }} />
-                </picture>
-              </div>
-            </Carousel>
-          </div>
-          <p className="text-center mb-4">
-            Follow my progress on <a href="https://github.com/DidierRLopes" target="_blank" rel="noreferrer">GitHub</a>.
-          </p>
-        </div>
-        <div className="mt-16 md:mt-32 mx-auto flex max-w-[880px] flex-col px-3 text-center">
-          <h1 className="_h1 !mb-2 font-bold">Latest posts.</h1>
-          <p className="text-xl text-center mb-2 md:mb-8">
-            I write so I can think and communicate better.
-          </p>
-          {allPosts && allPosts.length > 0 && (
-            <BlogHistory posts={allPosts} isDesktop={isDesktop} />
-          )}
-          {isDesktop ? (
-            <>
-              <div className="relative overflow-hidden">
-                <div className="flex animate-scroll gap-8">
-                  {postsHighlight.concat(postsHighlight).map((post, index) => (
-                    <div
-                      key={`${post.id}-${index}`}
-                      className="flex-shrink-0 w-[250px]"
-                    >
-                      <a
-                        href={`${post.id}`}
-                        className="block h-full"
-                      >
-                        <div className="overflow-hidden rounded-xl mb-3">
-                          <img
-                            className="w-full h-[180px] object-cover transition-transform duration-300 hover:scale-110"
-                            src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
-                            alt={post.title}
-                          />
-                        </div>
-                        <h3 className="text-left text-sm font-semibold">
-                          {post.title}
-                        </h3>
-                      </a>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </>
-          ) : isTablet ? (
-            <div className="flex justify-center gap-8 mb-4">
-              {postsHighlight.slice(0, 2).map((post) => (
-                <div
-                  key={post.id}
-                  className="w-[250px]"
-                >
-                  <a
-                    href={`${post.id}`}
-                    className="group block h-full transition-transform duration-300 hover:scale-105"
-                  >
-                    <div className="overflow-hidden rounded-xl mb-3">
-                      <img
-                        className="w-full h-[180px] object-cover transition-transform duration-300 group-hover:scale-110"
-                        src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
-                        alt={post.title}
-                      />
-                    </div>
-                    <h3 className="text-left text-sm font-semibold group-hover:text-blue-500 transition-colors duration-300">
-                      {post.title}
-                    </h3>
-                  </a>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <Carousel showThumbs={false} showStatus={false} showIndicators={false} autoPlay={true} interval={5000}
-            renderArrowPrev={(clickHandler, hasPrev) => (
-              hasPrev && (
-                <button
-                  type="button"
-                  onClick={clickHandler}
-                  className="absolute left-0 z-10 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
-                  aria-label="Previous slide"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-              )
-            )}
-            renderArrowNext={(clickHandler, hasNext) => (
-              hasNext && (
-                <button
-                  type="button"
-                  onClick={clickHandler}
-                  className="absolute right-0 z-10 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
-                  aria-label="Next slide"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              )
-            )}
-          >
-              {postsHighlight.map((post) => (
-                <div key={post.id} className='!max-w-[260px] mx-auto text-center'>
-                  <a href={`${post.id}`} className="group block pt-12">
-                    <img
-                      className="rounded-xl h-[120px] mx-auto object-cover"
-                      src={post.content_html.match(/<img.*?src="(.*?)"/)[1]}
-                      alt={post.title}
-                    />
-                    <h3 className="text-center text-sm font-semibold mt-2 group-hover:text-blue-500 transition-colors duration-300">
-                      {post.title}
-                    </h3>
-                  </a>
-                </div>
-              ))}
-            </Carousel>
-          )}
-        </div>
-        <div className="max-w-[880px] mx-auto px-4">
+        {/* Home Sections */}
+        <WhoAmI isDesktop={isDesktop} isTablet={isTablet} />
+
+        <Beliefs
+          isDesktop={isDesktop}
+          isTablet={isTablet}
+          githubSrc={githubSrc}
+          githubChartSrc={githubChartSrc}
+        />
+
+        <LatestPosts
+          allPosts={allPosts}
+          postsHighlight={postsHighlight}
+          isDesktop={isDesktop}
+          isTablet={isTablet}
+        />
+
+        {/* Newsletter embed retained here for now */}
+        <Section className="max-w-[880px] px-4 !mt-0">
           {ExecutionEnvironment.canUseDOM && (
             <iframe
               src={beehiivSrc}
               data-test-id="beehiiv-embed"
               width="100%"
-              height={isDesktop ? "200" : "250"}
+              height={isDesktop ? '200' : '250'}
               frameBorder="0"
               scrolling="no"
               title="Didier newsletter"
@@ -418,35 +199,15 @@ export default function Home() {
                 maxWidth: '100%',
                 overflow: 'hidden',
                 display: 'block',
-                margin: '0 auto'
+                margin: '0 auto',
               }}
             />
           )}
-        </div>
-        <div className="mt-16 md:mt-32 flex flex-col px-3 mx-auto  text-center md:max-w-[880px]">
-          <h1 className="_h1 !mb-2 font-bold">Outside work?</h1>
-          <span className="_subtitle">
-            In my spare time I do boxing, play soccer, code, read books or play PS5.
-          </span>
-          <div className="flex-none overflow-y-scroll rounded-sm text-center mx-auto text-lg p-2 mb-4">
-            <iframe
-              // Note that the &zoom=9 is important to set the zoom level
-              src="https://www.google.com/maps/d/u/0/embed?mid=1cA9FfT4NkLqRKCsIcgtGKJXh6P9H15M&ehbc=2E312F&zoom=9"
-              width="100%"
-              height={isDesktop ? '480' : '220'}
-              title="My travels"
-              className="mt-2 mb-4"
-            />
-            <p className="text-sm">
-              Nowadays I put work first. But I intend to travel to over 100
-              different countries.
-            </p>
-          </div>
-        </div>
-        <div className="mt-16 md:mt-32 mx-auto flex max-w-[880px] flex-col px-3 text-center rounded-[14px] mb-8">
-          <h1 className="mb-4 font-bold">My journey.</h1>
-          <Timeline />
-        </div>
+        </Section>
+
+        <OutsideWork isDesktop={isDesktop} />
+
+        <Journey />
       </main>
     </Layout>
   );

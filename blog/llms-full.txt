@@ -3,9 +3,17 @@ slug: gamestonk-terminal-the-next-best-thing-after-bloomberg-terminal
 title: Gamestonk Terminal - The next best thing after Bloomberg Terminal
 date: 2021-03-14
 image: /blog/2021-03-14-gamestonk-terminal-the-next-best-thing-after-bloomberg-terminal.png
-tags: ['Gamestonk Terminal', 'Finance', 'Stock Market', 'Programming', 'Open Source']
+tags:
+- gamestonk-terminal
+- finance
+- stock-market
+- programming
+- open-source
 description: In this blogpost, I introduce Gamestonk Terminal, an open-source project that aims to be a comprehensive tool for financial analysis and stock market research. It includes functionalities for discovering stocks, market sentiment analysis, fundamental and technical analysis, due diligence, prediction techniques, and more.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-03-14-gamestonk-terminal-the-next-best-thing-after-bloomberg-terminal_1.png"/>
@@ -65,9 +73,18 @@ slug: momentum-football-bets
 title: Momentum Football Bets
 date: 2021-04-07
 image: /blog/2021-04-07-momentum-football-bets.png
-tags: ['Football', 'Betting', 'Momentum', 'Web Scraping', 'Beautiful Soup', 'Python']
+tags:
+- football
+- betting
+- momentum
+- web-scraping
+- beautiful-soup
+- python
 description: In this blogpost, I share how I developed an automated task to estimate the momentum of football teams for betting purposes using Beautiful Soup and Python.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-04-07-momentum-football-bets.png"/>
@@ -128,9 +145,17 @@ slug: move-over-bloomberg-terminal-here-comes-gamestonk-terminal
 title: Move over Bloomberg Terminal, here comes Gamestonk Terminal
 date: 2021-04-23
 image: /blog/2021-04-23-move-over-bloomberg-terminal-here-comes-gamestonk-terminal.png
-tags: ['Gamestonk Terminal', 'Finance', 'Stock Market', 'Programming', 'Open Source']
+tags:
+- gamestonk-terminal
+- finance
+- stock-market
+- programming
+- open-source
 description: In this blogpost, we introduce Gamestonk Terminal, an open-source project that aims to be a comprehensive tool for financial analysis and stock market research. It includes functionalities for discovering stocks, market sentiment analysis, fundamental and technical analysis, due diligence, prediction techniques, and more.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-04-23-move-over-bloomberg-terminal-here-comes-gamestonk-terminal.png"/>
@@ -189,9 +214,18 @@ slug: neistpoint-project
 title: NeistPoint Project
 date: 2021-05-23
 image: /blog/2021-05-23-neistpoint-project.png
-tags: ['NeistPoint', 'Clothing Brand', 'Sustainability', 'Project Management', 'C++', 'Stock Management']
+tags:
+- neistpoint
+- clothing-brand
+- sustainability
+- project-management
+- c++
+- stock-management
 description: In this blogpost, I share my journey of starting a sustainable clothing brand, managing the project, and developing a stock management tool in C++.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-05-23-neistpoint-project.png"/>
@@ -253,9 +287,16 @@ slug: customizable-meme-filter
 title: Customizable Meme Filter
 date: 2021-06-12
 image: /blog/2021-06-12-customizable-meme-filter.png
-tags: ['Python', 'Meme Filter', 'Image Processing', 'Face Recognition']
+tags:
+- python
+- meme-filter
+- image-processing
+- face-recognition
 description: In this blogpost, I share my journey of creating a customizable meme filter using Python. This filter selects a random meme based on the number of people on the screen and assigns each person to a character in the meme.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-06-12-customizable-meme-filter.png"/>
@@ -317,9 +358,20 @@ slug: my-journey-of-memorising-a-deck-of-52-shuffled-cards
 title: My journey of memorising a deck of 52 shuffled cards
 date: 2021-06-26
 image: /blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards.png
-tags: ['memory-training', 'pao-system', 'memory-palace', 'card-memorization', 'learning-techniques', 'cognitive-skills', 'mnemonics', 'personal-challenge', 'mind-hacking']
+tags:
+- memory-training
+- pao-system
+- memory-palace
+- card-memorization
+- learning-techniques
+- cognitive-skills
+- mnemonics
+- personal-challenge
+- mind-hacking
 description: In this blogpost, I share my journey of memorising a deck of 52 shuffled cards using the PAO system and Memory Palace technique.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards.png"/>
@@ -473,9 +525,18 @@ slug: household-bills-program
 title: Household bills Program
 date: 2021-07-17
 image: /blog/2021-07-17-household-bills-program.png
-tags: ['side-project', 'java', 'programming', 'gui', 'origin-story', 'learning-to-code', 'software-development']
+tags:
+- side-project
+- java
+- programming
+- gui
+- origin-story
+- learning-to-code
+- software-development
 description: In this blogpost, I share my journey of creating a program to split household bills. This was my first side project where I used Java to create a GUI application.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-07-17-household-bills-program.png"/>
@@ -559,9 +620,16 @@ slug: minion-recipes-program
 title: Minion Recipes Program
 date: 2021-07-23
 image: /blog/2021-07-23-minion-recipes-program.png
-tags: ['Python', 'Programming', 'Recipes', 'Software Development']
+tags:
+- python
+- programming
+- recipes
+- software-development
 description: In this blogpost, I share how I developed a program to help my mum manage her recipes. The program allows for adding, editing, and removing recipes, and even includes fun minion icons.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-07-23-minion-recipes-program.png"/>
@@ -632,9 +700,19 @@ slug: k-means-clustering-to-visit-a-new-city
 title: K-means algorithm to visit a new city
 date: 2021-08-01
 image: /blog/2021-08-01-k-means-clustering-to-visit-a-new-city.png
-tags: ['K-means', 'Algorithm', 'Travel', 'Efficiency', 'London', 'GPS', 'Clustering']
+tags:
+- k-means
+- algorithm
+- travel
+- efficiency
+- london
+- gps
+- clustering
 description: In this blogpost, I share how I used the K-means algorithm to plan a visit to London. The algorithm helps to decide which attractions to visit based on the number of days of the visit and the GPS coordinates of the attractions.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-08-01-k-means-clustering-to-visit-a-new-city.png"/>
@@ -698,9 +776,17 @@ slug: ranking-99-mind-f-ck-movies
 title: Ranking 99 Mind f*ck movies
 date: 2021-08-15
 image: /blog/2021-08-15-ranking-99-mind-f-ck-movies.png
-tags: ['Movies', 'Thrillers', 'IMDbPy', 'Python', 'Sorting Algorithm']
+tags:
+- movies
+- thrillers
+- imdbpy
+- python
+- sorting-algorithm
 description: Ranking and sorting a list of 99 mind-bending thriller movies using IMDbPy API in Python.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-08-15-ranking-99-mind-f-ck-movies.png"/>
@@ -750,9 +836,18 @@ slug: time-series-crossvalidation-for-nn
 title: Time-Series CrossValidation for NN
 date: 2021-09-04
 image: /blog/2021-09-04-time-series-crossvalidation-for-nn.png
-tags: ['Python', 'Data Science', 'Deep Learning', 'Time Series', 'Cross Validation', 'Neural Networks']
+tags:
+- python
+- data-science
+- deep-learning
+- time-series
+- cross-validation
+- neural-networks
 description: This blog post discusses the creation of a Python module for splitting univariate time-series data using cross-validation techniques. The module is designed to prepare data for training, validation, and testing in a Deep Neural Network (DNN).
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-09-04-time-series-crossvalidation-for-nn.png"/>
@@ -856,9 +951,20 @@ slug: gamestonk-terminal-cant-stop-won-t-stop
 title: Gamestonk Terminal — Can’t Stop, Won’t Stop
 date: 2021-09-16
 image: /blog/2021-09-16-gamestonk-terminal-cant-stop-won-t-stop.png
-tags: ['Gamestonk Terminal', 'Open Source', 'Docker', 'Jupyter Lab', 'Hugo Website', 'Python', 'Finance', 'Trading']
+tags:
+- gamestonk-terminal
+- open-source
+- docker
+- jupyter-lab
+- hugo-website
+- python
+- finance
+- trading
 description: Gamestonk Terminal's latest updates including Docker integration, Jupyter Lab integration, a new Hugo website, and new features. A summary of the recent developments and future plans for the open-source financial tool.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-09-16-gamestonk-terminal-cant-stop-won-t-stop_1.png"/>
@@ -936,9 +1042,18 @@ slug: how-i-created-a-bot-in-python-to-participate-in-nft-giveaways
 title: How I created a bot in python to participate in NFT giveaways
 date: 2021-09-30
 image: /blog/2021-09-30-how-i-created-a-bot-in-python-to-participate-in-nft-giveaways.png
-tags: ['Python', 'Bot', 'NFT', 'Giveaways', 'Reddit', 'Automation']
+tags:
+- python
+- bot
+- nft
+- giveaways
+- reddit
+- automation
 description: In this blogpost, I share how I created a bot in Python to automate participation in NFT giveaways on Reddit. The bot simplifies tasks such as upvoting posts, commenting, and opening Opensea links to favourite artwork.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-09-30-how-i-created-a-bot-in-python-to-participate-in-nft-giveaways.png"/>
@@ -998,8 +1113,15 @@ slug: an-unusual-journey-learning-about-nns-for-a-phd-thesis
 title: An unusual journey learning about NNs for a PhD thesis
 date: 2021-10-22
 image: /blog/2021-10-22-an-unusual-journey-learning-about-nns-for-a-phd-thesis.png
-tags: ['PhD Thesis', 'Neural Networks', 'Python', 'Time Series Forecasting']
+tags:
+- phd-thesis
+- neural-networks
+- python
+- time-series-forecasting
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-10-22-an-unusual-journey-learning-about-nns-for-a-phd-thesis.png"/>
@@ -1060,9 +1182,17 @@ slug: the-start-of-my-machine-learning-journey
 title: The Start of my Machine Learning journey
 date: 2021-11-07
 image: /blog/2021-11-07-the-start-of-my-machine-learning-journey.png
-tags: ['Machine Learning', 'Python', 'Data Science', 'Education', 'Self-Learning']
+tags:
+- machine-learning
+- python
+- data-science
+- education
+- self-learning
 description: The start of my journey into the world of Machine Learning, from learning Python to understanding the underlying mathematics of ML algorithms.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-11-07-the-start-of-my-machine-learning-journey.png"/>
@@ -1126,9 +1256,16 @@ slug: handing-your-twitter-account-to-your-most-avid-community-member
 title: Handing your twitter account to your most avid community member
 date: 2021-11-17
 image: /blog/2021-11-17-handing-your-twitter-account-to-your-most-avid-community-member.png
-tags: ['Community Building', 'Twitter', 'Open Source', 'Gamestonk Terminal']
+tags:
+- community-building
+- twitter
+- open-source
+- gamestonk-terminal
 description: Handing over the Twitter account of Gamestonk Terminal to an active community member and the impact it had on the project's growth and engagement.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-11-17-handing-your-twitter-account-to-your-most-avid-community-member.png"/>
@@ -1202,9 +1339,17 @@ slug: sector-and-industry-analysis-gamestonk-terminal
 title: Sector and Industry Analysis — Gamestonk Terminal
 date: 2021-12-02
 image: /blog/2021-12-02-sector-and-industry-analysis-gamestonk-terminal.png
-tags: ['Gamestonk Terminal', 'Sector Analysis', 'Industry Analysis', 'FinanceDatabase', 'Open Source']
+tags:
+- gamestonk-terminal
+- sector-analysis
+- industry-analysis
+- financedatabase
+- open-source
 description: The development journey of a new Sector and Industry Analysis feature for Gamestonk Terminal, integrating the FinanceDatabase package.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-12-02-sector-and-industry-analysis-gamestonk-terminal.png"/>
@@ -1285,9 +1430,16 @@ slug: gamestonk-terminal-ux-features
 title: UX/UI is better than features
 date: 2022-01-06
 image: /blog/2022-01-06-gamestonk-terminal-ux-features.png
-tags: ['Gamestonk Terminal', 'UX/UI', 'Software Development', 'Teamwork']
+tags:
+- gamestonk-terminal
+- ux/ui
+- software-development
+- teamwork
 description: Gamestonk Terminal's UX/UI features and the teamwork behind their implementation.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-01-06-gamestonk-terminal-ux-features.png"/>
@@ -1387,9 +1539,16 @@ slug: meet-the-most-advanced-investment-research-platform
 title: Meet the most advanced investment research platform
 date: 2022-03-21
 image: /blog/2022-03-21-meet-the-most-advanced-investment-research-platform.png
-tags: ['Investment Research', 'Gamestonk Terminal', 'Automation', 'Routines']
+tags:
+- investment-research
+- gamestonk-terminal
+- automation
+- routines
 description: Meet the most advanced investment research platform. This blog post introduces Gamestonk Terminal, an advanced investment research platform, and discusses its features and automation capabilities.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-03-21-meet-the-most-advanced-investment-research-platform.png"/>
@@ -1454,9 +1613,16 @@ slug: how-i-created-the-best-discord-meme-bot
 title: How I created the best discord meme bot
 date: 2022-04-09
 image: /blog/2022-04-09-how-i-created-the-best-discord-meme-bot.png
-tags: ['Discord', 'Meme Bot', 'Open Source', 'Community Building']
+tags:
+- discord
+- meme-bot
+- open-source
+- community-building
 description: In this blog post, I share my journey of creating a Discord meme bot, the role it played in building a vibrant community around our open source project, and how you can add your own memes to the bot.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-04-09-how-i-created-the-best-discord-meme-bot.png"/>
@@ -1549,9 +1715,19 @@ slug: looking-for-a-new-tattoo-openbb-has-you-covered-literally
 title: Looking for a new tattoo? OpenBB has you covered… literally.
 date: 2022-04-21
 image: /blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally.png
-tags: ['openbb', 'marketing', 'branding', 'brand-awareness', 'tattoo', 'guerilla-marketing', 'startup-culture', 'founder-story']
+tags:
+- openbb
+- marketing
+- branding
+- brand-awareness
+- tattoo
+- guerilla-marketing
+- startup-culture
+- founder-story
 description: Exploring unconventional ways to increase brand visibility, OpenBB's co-founder gets a tattoo of the company logo. This blog post discusses the thought process behind this unique marketing strategy.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally.png"/>
@@ -1609,9 +1785,16 @@ slug: remote-flexible-work-salary
 title: Remote + Flexible work >> Salary
 date: 2022-05-03
 image: /blog/2022-05-03-remote-flexible-work-salary.png
-tags: ['Remote Work', 'Flexible Hours', 'Work Life Balance', 'Productivity']
+tags:
+- remote-work
+- flexible-hours
+- work-life-balance
+- productivity
 description: This blog post discusses the importance of remote and flexible work hours, and how it can significantly improve work-life balance and productivity.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-05-03-remote-flexible-work-salary.png"/>
@@ -1687,9 +1870,17 @@ slug: web3-symbols-and-community
 title: Web3, symbols and community
 date: 2022-06-28
 image: /blog/2022-06-28-web3-symbols-and-community.png
-tags: ['Web3', 'Community', 'Decentralization', 'Blockchain', 'Smart Contracts']
+tags:
+- web3
+- community
+- decentralization
+- blockchain
+- smart-contracts
 description: This blog post discusses the importance of strong communities in the Web 3.0 space, the role of decentralization, and how voting frameworks based on smart contracts can empower users.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-06-28-web3-symbols-and-community.png"/>
@@ -1797,9 +1988,20 @@ slug: how-i-became-ceo-of-openbb
 title: How I became CEO of OpenBB
 date: 2022-08-14
 image: /blog/2022-08-14-how-i-became-ceo-of-openbb.png
-tags: ['openbb', 'ceo', 'founder-story', 'origin-story', 'startup', 'open-source', 'career-path', 'entrepreneurship', 'side-project']
-description: This post talks about my story of becoming the CEO of OpenBB, the company behind the fastest growing open source project in finance.
+tags:
+- openbb
+- ceo
+- founder-story
+- origin-story
+- startup
+- open-source
+- career-path
+- entrepreneurship
+- side-project
+description: This post talks about my story of becoming the CEO of OpenBB, the company behind the fastest growing open source project in finance.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-08-14-how-i-became-ceo-of-openbb.png"/>
@@ -1852,9 +2054,17 @@ slug: why-you-should-drop-yfinance-api-and-adopt-openbb-sdk
 title: Why you should drop yfinance API and adopt OpenBB SDK
 date: 2022-10-01
 image: /blog/2022-10-01-why-you-should-drop-yfinance-api-and-adopt-openbb-sdk.png
-tags: ['OpenBB SDK', 'yfinance API', 'Financial Data', 'APIs', 'Open Source']
+tags:
+- openbb-sdk
+- yfinance-api
+- financial-data
+- apis
+- open-source
 description: Why you should consider switching from yfinance API to OpenBB SDK for financial data retrieval. OpenBB SDK offers access to multiple data sources, potential for unlimited data, and incentives for data source partners.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-10-01-why-you-should-drop-yfinance-api-and-adopt-openbb-sdk.png"/>
@@ -1922,9 +2132,17 @@ slug: stop-doing-your-cv-in-word-or-latex
 title: Stop doing your CV in Word or LaTeX
 date: 2022-10-15
 image: /blog/2022-10-15-stop-doing-your-cv-in-word-or-latex.png
-tags: ['GitHub', 'CV', 'Career', 'Open Source', 'Developer']
+tags:
+- github
+- cv
+- career
+- open-source
+- developer
 description: The future of CVs for engineers and developers lies within GitHub. This post discusses why GitHub profiles are becoming the new CVs and how they can provide a more comprehensive view of a candidate's skills and contributions.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-10-15-stop-doing-your-cv-in-word-or-latex.png"/>
@@ -1984,9 +2202,16 @@ slug: how-i-would-do-due-diligence-on-amt-using-openbb-terminal
 title: How I would do due diligence on $AMT using OpenBB Terminal
 date: 2022-10-20
 image: /blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal.png
-tags: ['OpenBB Terminal', 'Investment Research', 'Stocks', 'Due Diligence']
+tags:
+- openbb-terminal
+- investment-research
+- stocks
+- due-diligence
 description: This blog post provides a detailed walkthrough on how to conduct due diligence on $AMT using the OpenBB Terminal, a free and open source platform for financial data analysis.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal.png"/>
@@ -2174,8 +2399,18 @@ slug: how-to-convert-a-twitter-thread-into-a-linkedin-carousel-in-seconds
 title: Twitter thread to LinkedIn carousel in python
 date: 2022-10-23
 image: /blog/2022-10-23-how-to-convert-a-twitter-thread-into-a-linkedin-carousel-in-seconds.png
-tags: ['python', 'linkedin', 'twitter', 'carousel', 'content-creation', 'automation', 'api', 'side-project']
+tags:
+- python
+- linkedin
+- twitter
+- carousel
+- content-creation
+- automation
+- api
+- side-project
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-10-23-how-to-convert-a-twitter-thread-into-a-linkedin-carousel-in-seconds.png"/>
@@ -2229,9 +2464,15 @@ slug: how-to-learn-10x-faster-than-average
 title: How to learn 10x faster than average
 date: 2022-10-27
 image: /blog/2022-10-27-how-to-learn-10x-faster-than-average.png
-tags: ['learning', 'self-improvement', 'skills', 'education']
+tags:
+- learning
+- self-improvement
+- skills
+- education
 description: Learn how to accelerate your learning process and become 10x faster than average. This blog post provides practical steps to enhance your self-learning abilities and master new skills effectively.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-10-27-how-to-learn-10x-faster-than-average.png"/>
@@ -2318,9 +2559,16 @@ slug: how-to-grow-your-open-source-community-from-scratch.md
 title: How to grow your open source community from scratch
 date: 2022-11-10
 image: /blog/2022-11-10-how-to-grow-your-open-source-community-from-scratch.png
-tags: ['Open Source', 'Community Building', 'Project Management', 'OpenBB Terminal']
+tags:
+- open-source
+- community-building
+- project-management
+- openbb-terminal
 description: Growing an open source community from scratch is a challenging task. This blogpost shares insights and strategies on how to effectively build and manage an open source community, using the example of the OpenBB Terminal project.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-11-10-how-to-grow-your-open-source-community-from-scratch_1.png"/>
@@ -2408,9 +2656,20 @@ slug: 5-steps-i-used-to-change-my-job-title-in-less-than-1-year
 title: 5 steps I used to change my job title in less than 1 year
 date: 2022-11-14
 image: /blog/2022-11-14-5-steps-i-used-to-change-my-job-title-in-less-than-1-year.png
-tags: ['career-path', 'career-growth', 'job-title', 'promotion', 'skill-development', 'self-improvement', 'personal-story', 'hard-work', 'engineering']
+tags:
+- career-path
+- career-growth
+- job-title
+- promotion
+- skill-development
+- self-improvement
+- personal-story
+- hard-work
+- engineering
 description: This blog post outlines the five steps I took to change my job title from an Embedded Firmware Engineer to a Sensor Fusion Engineer in less than a year. It provides a roadmap for others who may be looking to make a similar career transition.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-11-14-5-steps-i-used-to-change-my-job-title-in-less-than-1-year_1.png"/>
@@ -2512,9 +2771,18 @@ slug: sweepstake-world-cup-2022-for-your-startup-team
 title: Sweepstake World Cup 2022 for your startup team
 date: 2022-11-26
 image: /blog/2022-11-26-sweepstake-world-cup-2022-for-your-startup-team.png
-tags: ['team-building', 'startup-culture', 'world-cup', 'sweepstake', 'slack-bot', 'python', 'side-project']
+tags:
+- team-building
+- startup-culture
+- world-cup
+- sweepstake
+- slack-bot
+- python
+- side-project
 description: In this blogpost, we share how we organized a World Cup 2022 sweepstake for our startup team as a team building activity, and how we built a slack bot to facilitate discussions around the event.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-11-26-sweepstake-world-cup-2022-for-your-startup-team.png"/>
@@ -2572,9 +2840,20 @@ slug: bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released
 title: Bloomberg Terminal is no more. OpenBB Terminal 2.0 has just been released.
 date: 2022-11-29
 image: /blog/2022-11-29-bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released.png
-tags: ['openbb', 'product-launch', 'investment-research', 'sdk', 'api', 'ai', 'ml', 'open-source', 'fintech']
+tags:
+- openbb
+- product-launch
+- investment-research
+- sdk
+- api
+- ai
+- ml
+- open-source
+- fintech
 description: OpenBB Terminal 2.0 has been released. This blog post discusses the new features and improvements, including the release of OpenBB SDK, a state-of-the-art AI/ML toolkit for the financial industry, and the vision for a community-driven investment research platform.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-11-29-bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released.png"/>
@@ -2625,9 +2904,16 @@ slug: the-future-of-finance-with-open-source-and-ai
 title: The future of finance with open source and AI
 date: 2022-12-04
 image: /blog/2022-12-04-the-future-of-finance-with-open-source-and-ai.png
-tags: ['Open Source', 'AI', 'Finance', 'Future']
+tags:
+- open-source
+- ai
+- finance
+- future
 description: The future of finance is being reshaped by open source and AI. This post discusses the potential of these technologies in disrupting the financial industry, the advantages of open source, and the role of AI in user interface.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-12-04-the-future-of-finance-with-open-source-and-ai.png"/>
@@ -2721,9 +3007,18 @@ slug: how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla
 title: How I wrote a machine learning paper in 1 week that got accepted to International Conference in Machine Learning Applications
 date: 2022-12-07
 image: /blog/2022-12-07-how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla.png
-tags: ['Machine Learning', 'Data Science', 'Academia', 'ICMLA', 'NURVV Run', 'Open Source']
+tags:
+- machine-learning
+- data-science
+- academia
+- icmla
+- nurvv-run
+- open-source
 description: How I wrote a machine learning paper in 1 week that got accepted to ICMLA while working full time and raised $8.8 million for OpenBB Terminal.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-12-07-how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla.png"/>
@@ -2905,9 +3200,17 @@ slug: how-chatgpt-allowed-me-to-leverage-twitter-api-10x-faster
 title: How ChatGPT allowed me to leverage Twitter API 10x faster
 date: 2022-12-11
 image: /blog/2022-12-11-how-chatgpt-allowed-me-to-leverage-twitter-api-10x-faster.png
-tags: ['ChatGPT', 'Twitter API', 'Tweepy', 'Python', 'Programming']
+tags:
+- chatgpt
+- twitter-api
+- tweepy
+- python
+- programming
 description: Leveraging the power of ChatGPT to interact with Twitter API for real-time financial news updates.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-12-11-how-chatgpt-allowed-me-to-leverage-twitter-api-10x-faster.png"/>
@@ -2979,9 +3282,17 @@ slug: firing-sucks-how-to-avoid-doing-so-by-hiring-a-players
 title: Firing sucks. How to avoid doing so by hiring A players.
 date: 2023-01-02
 image: /blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players.png
-tags: ['Hiring', 'Management', 'A Players', 'OpenBB', 'Career Advice']
+tags:
+- hiring
+- management
+- a-players
+- openbb
+- career-advice
 description: Firing is tough. This blogpost discusses how to avoid it by hiring A players, improving the hiring process, and understanding the importance of a scorecard in recruitment.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players.png"/>
@@ -3317,9 +3628,18 @@ slug: financial-chat-bots-are-underrated-and-heres-why
 title: Financial chat bots are underrated, and here’s why.
 date: 2023-01-05
 image: /blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why.png
-tags: ['chatbots', 'finance', 'AI', 'Discord', 'OpenBB', 'OptionsFamBot']
+tags:
+- chatbots
+- finance
+- ai
+- discord
+- openbb
+- optionsfambot
 description: In this blog post, we discuss the underrated potential of financial chat bots, our collaboration with OptionsFamBot, and why chat bots are becoming increasingly popular.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why.png"/>
@@ -3442,9 +3762,19 @@ slug: how-to-get-hired-by-an-exciting-tech-startup-in-2023
 title: How to get hired by an exciting tech startup in 2023
 date: 2023-01-22
 image: /blog/2023-01-22-how-to-get-hired-by-an-exciting-tech-startup-in-2023.png
-tags: ['career-advice', 'tech-startups', 'open-source', 'job-hunting', 'hiring', 'recruiting', 'software-engineering', 'personal-branding']
+tags:
+- career-advice
+- tech-startups
+- open-source
+- job-hunting
+- hiring
+- recruiting
+- software-engineering
+- personal-branding
 description: The future is a strange place. We’re not entirely sure what it will look like, but we do know that it will be shaped by the choices we make today. And while I can’t tell you exactly how to get a job in 2023, I can help you set yourself up for success by showing you some of the best ways to build your career today.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-01-22-how-to-get-hired-by-an-exciting-tech-startup-in-2023.png"/>
@@ -3533,9 +3863,19 @@ slug: how-i-used-openai-api-to-improve-our-product-documentation
 title: How I Used OpenAI API to improve our product documentation
 date: 2023-04-01
 image: /blog/2023-04-01-how-i-used-openai-api-to-improve-our-product-documentation.png
-tags: ['openai', 'api', 'chatgpt', 'llm', 'documentation', 'automation', 'openbb-bot', 'discord']
+tags:
+- openai
+- api
+- chatgpt
+- llm
+- documentation
+- automation
+- openbb-bot
+- discord
 description: In this blog post, I share how I used the OpenAI API to improve our product documentation. I used ChatGPT to generate more detailed descriptions for our OpenBB Bot Discord commands, making them more understandable for new users.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-04-01-how-i-used-openai-api-to-improve-our-product-documentation.png"/>
@@ -3599,9 +3939,16 @@ slug: the-role-of-ai-and-openbb-in-the-future-of-investment-research
 title: The role of AI and OpenBB in the future of investment research
 date: 2023-04-03
 image: /blog/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research.png
-tags: ['OpenAI', 'future', 'ChatGPT', 'Discord']
+tags:
+- openai
+- future
+- chatgpt
+- discord
 description: How OpenBB can lead the future of finance using AI on top of an open source investment research platform.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research.png"/>
@@ -3698,8 +4045,17 @@ slug: free-investment-research-ecosystem-to-consistently-beat-the-market
 title: Free investment research ecosystem to consistently beat the market
 date: 2023-05-05
 image: /blog/2023-05-05-free-investment-research-ecosystem-to-consistently-beat-the-market.png
-tags: ['OpenBB', 'Investment Research', 'OpenBB Terminal', 'OpenBB Bot', 'OpenBB SDK', 'OpenBB Hub']
+tags:
+- openbb
+- investment-research
+- openbb-terminal
+- openbb-bot
+- openbb-sdk
+- openbb-hub
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-05-05-free-investment-research-ecosystem-to-consistently-beat-the-market.png"/>
@@ -3810,9 +4166,23 @@ slug: fully-free-financial-chatbot
 title: Fully free financial chatbot
 date: 2023-05-09
 image: /blog/2023-05-09-fully-free-financial-chatbot.png
-tags: ['OpenBB Bot', 'Financial Chatbot', 'Investment', 'Free', 'Discord', 'Telegram', 'Equity', 'Crypto', 'Options', 'Darkpool', 'Economy']
+tags:
+- openbb-bot
+- financial-chatbot
+- investment
+- free
+- discord
+- telegram
+- equity
+- crypto
+- options
+- darkpool
+- economy
 description: The OpenBB Bot is a financial chatbot that allows you to access financial data from Discord or Telegram along with other users. From equity data to crypto, options, darkpool, economy and much more! Now available for free to registered users.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-05-09-fully-free-financial-chatbot.png"/>
@@ -3872,9 +4242,18 @@ slug: leaving-london-to-live-in-san-francisco
 title: Leaving London to live in San Francisco
 date: 2023-05-13
 image: /blog/2023-05-13-leaving-london-to-live-in-san-francisco.png
-tags: ['San Francisco', 'London', 'Relocation', 'Visa Process', 'Startup', 'OpenBB']
+tags:
+- san-francisco
+- london
+- relocation
+- visa-process
+- startup
+- openbb
 description: Leaving London to live in San Francisco. A personal journey of relocating and starting a tech company in the heart of Silicon Valley.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-05-13-leaving-london-to-live-in-san-francisco.png"/>
@@ -4096,9 +4475,18 @@ slug: openbb-terminal-3-0-a-new-interactive-way-to-analyze-data
 title: OpenBB Terminal 3.0 - a new interactive way to analyze data
 date: 2023-05-20
 image: /blog/2023-05-20-openbb-terminal-3-0-a-new-interactive-way-to-analyze-data.png
-tags: ['OpenBB', 'OpenBB Terminal', 'Interactive Charts', 'Interactive Tables', 'Data Analysis', 'Open Source']
+tags:
+- openbb
+- openbb-terminal
+- interactive-charts
+- interactive-tables
+- data-analysis
+- open-source
 description: A game-changing update to OpenBB Terminal, introducing interactive charts and tables, empowering users with a new way to analyze data.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-05-20-openbb-terminal-3-0-a-new-interactive-way-to-analyze-data.png"/>
@@ -4200,10 +4588,19 @@ slug: streamline-your-openbb-terminal-experience-with-openbb-hub
 title: Streamline your OpenBB Terminal experience with OpenBB Hub
 date: 2023-05-25
 image: /blog/2023-05-25-streamline-your-openbb-terminal-experience-with-openbb-hub.png
-tags: ['OpenBB', 'OpenBB Hub', 'Terminal', 'API Key Management', 'Data Customization', 'Personalization', 'Script Management']
+tags:
+- openbb
+- openbb-hub
+- terminal
+- api-key-management
+- data-customization
+- personalization
+- script-management
 description: Streamline your OpenBB Terminal experience with OpenBB Hub. Learn about its key features, including API key management, data customization, personalization, and script management.
-
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-05-25-streamline-your-openbb-terminal-experience-with-openbb-hub.png"/>
@@ -4303,9 +4700,17 @@ slug: become-an-openbb-champion
 title: Become an OpenBB Champion
 date: 2023-06-10
 image: /blog/2023-06-10-become-an-openbb-champion.png
-tags: ['OpenBB', 'OpenBB Champion', 'Investment Research', 'Open Source', 'Community']
+tags:
+- openbb
+- openbb-champion
+- investment-research
+- open-source
+- community
 description: Become an OpenBB Champion and join our passionate community. Share your experiences with our innovative products and help us democratize investment research through an open source approach.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-06-10-become-an-openbb-champion.png"/>
@@ -4375,9 +4780,17 @@ slug: hybrid-work-sucks-its-worse-than-remote-and-office
 title: Hybrid work sucks. It’s worse than remote and office.
 date: 2023-06-12
 image: /blog/2023-06-12-hybrid-work-sucks-its-worse-than-remote-and-office.png
-tags: ['remote work', 'office work', 'hybrid work', 'productivity', 'work culture']
+tags:
+- remote-work
+- office-work
+- hybrid-work
+- productivity
+- work-culture
 description: Hybrid work, a combination of remote and office work, is not as beneficial as it seems. This blog post discusses the pros and cons of remote and office work, and why hybrid work might not be the best solution.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-06-12-hybrid-work-sucks-its-worse-than-remote-and-office.png"/>
@@ -4520,9 +4933,17 @@ slug: employees-are-leaving-be-proactive-about-employee-feedback
 title: Employees are leaving? Be proactive about employee feedback
 date: 2023-06-29
 image: /blog/2023-06-29-employees-are-leaving-be-proactive-about-employee-feedback.png
-tags: ['employee engagement', 'feedback', 'work culture', 'remote work', 'team happiness']
+tags:
+- employee-engagement
+- feedback
+- work-culture
+- remote-work
+- team-happiness
 description: Employees are leaving? Be proactive about employee feedback. This blogpost discusses the importance of employee feedback and how we at OpenBB are ensuring high employee engagement through a periodic feedback survey.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-06-29-employees-are-leaving-be-proactive-about-employee-feedback.png"/>
@@ -4605,9 +5026,18 @@ slug: from-open-source-to-open-startup
 title: From Open Source to Open Startup
 date: 2023-07-06
 image: /blog/2023-07-06-from-open-source-to-open-startup.png
-tags: ['open-source', 'open-startup', 'transparency', 'openbb', 'startup-culture', 'business-metrics', 'community']
+tags:
+- open-source
+- open-startup
+- transparency
+- openbb
+- startup-culture
+- business-metrics
+- community
 description: From Open Source to Open Startup. A journey of OpenBB towards transparency in the financial world.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-07-06-from-open-source-to-open-startup.png"/>
@@ -4711,9 +5141,17 @@ slug: why-the-need-for-an-open-source-investment-research-platform
 title: Why the need for an open source investment research platform?
 date: 2023-07-16
 image: /blog/2023-07-16-why-the-need-for-an-open-source-investment-research-platform.png
-tags: ['Open Source', 'Investment Research', 'Data Licensing', 'Transparency', 'Community']
+tags:
+- open-source
+- investment-research
+- data-licensing
+- transparency
+- community
 description: OpenBB Terminal, an open-source investment research platform, is transforming the financial industry by addressing issues like data licensing, full-price bundle, lack of transparency and customization, and the need for a diverse community. This post explores why open source is crucial for us and the main problems in the space.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-07-16-why-the-need-for-an-open-source-investment-research-platform.png"/>
@@ -4796,9 +5234,18 @@ slug: how-to-use-openai-to-extract-insights-from-team-survey
 title: How to Use OpenAI to Extract Insights from Team Survey
 date: 2023-07-21
 image: /blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey.png
-tags: ['OpenAI', 'Team Survey', 'Insights', 'Automation', 'Slack', 'Airtable']
+tags:
+- openai
+- team-survey
+- insights
+- automation
+- slack
+- airtable
 description: This blog post discusses how to use OpenAI to extract insights from team survey data. It covers the motivation behind the project, the requirements, and the implementation process, including the use of the Slack API and Airtable API for automation.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey.png"/>
@@ -5080,9 +5527,18 @@ slug: keep-track-of-your-startup-metrics-using-a-custom-ios-widget
 title: Keep track of your startup metrics using a custom iOS widget
 date: 2023-07-29
 image: /blog/2023-07-29-keep-track-of-your-startup-metrics-using-a-custom-ios-widget.png
-tags: ['iOS', 'Startup', 'Metrics', 'OpenBB', 'Scriptable', 'Open Source']
+tags:
+- ios
+- startup
+- metrics
+- openbb
+- scriptable
+- open-source
 description: Keep track of your startup metrics using a custom iOS widget. This blog post will guide you on how to build a custom iOS widget that displays your startup metrics at all times. The entire code is open source and requires minimal coding skills.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-07-29-keep-track-of-your-startup-metrics-using-a-custom-ios-widget.png"/>
@@ -5173,9 +5629,17 @@ slug: how-to-handle-equity-at-a-seed-stage-startup-from-silicon-valley
 title: How to handle equity at a seed-stage startup from Silicon Valley
 date: 2023-08-03
 image: /blog/2023-08-03-how-to-handle-equity-at-a-seed-stage-startup-from-silicon-valley.png
-tags: ['startup', 'equity', 'Silicon Valley', 'seed-stage', 'OpenBB']
+tags:
+- startup
+- equity
+- silicon-valley
+- seed-stage
+- openbb
 description: A step-by-step guide on how to handle equity at a seed-stage startup, using a fictional example from OpenBB.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-08-03-how-to-handle-equity-at-a-seed-stage-startup-from-silicon-valley.png"/>
@@ -5262,9 +5726,19 @@ slug: how-to-handle-equity-top-ups-at-a-seed-stage-startup
 title: How to handle equity top-ups at a seed stage startup
 date: 2023-08-09
 image: /blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup.png
-tags: ['startups', 'seed-stage', 'equity', 'compensation', 'employee-retention', 'vesting', 'management', 'human-resources']
+tags:
+- startups
+- seed-stage
+- equity
+- compensation
+- employee-retention
+- vesting
+- management
+- human-resources
 description: In this post, we discuss how to handle equity top-ups at a seed stage startup, providing a step-by-step guide on the implementation process and including links to relevant spreadsheets.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup.png"/>
@@ -5405,9 +5879,17 @@ slug: openbb-2-year-anniversary
 title: OpenBB 2 year anniversary
 date: 2023-08-20
 image: /blog/2023-08-20-openbb-2-year-anniversary.png
-tags: ['OpenBB', 'Anniversary', 'Achievements', 'Growth', 'Finance']
+tags:
+- openbb
+- anniversary
+- achievements
+- growth
+- finance
 description: Two years of OpenBB. A look back at our achievements and growth in the world of open-source finance.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-08-20-openbb-2-year-anniversary.png"/>
@@ -5480,9 +5962,19 @@ slug: target-market-analysis-with-the-help-of-llms
 title: Target Market Analysis with the help of LLMs
 date: 2023-09-10
 image: /blog/2023-09-10-target-market-analysis-with-the-help-of-llms.png
-tags: ['Target Market Analysis', 'LLMs', 'OpenBB', 'BCG Matrix', 'GE McKinsey Matrix', 'Market Attractiveness', 'Competitive Advantage']
+tags:
+- target-market-analysis
+- llms
+- openbb
+- bcg-matrix
+- ge-mckinsey-matrix
+- market-attractiveness
+- competitive-advantage
 description: This blog post provides a comprehensive guide on how to perform target market analysis for your company using LLMs. It includes a detailed explanation of the BCG Matrix and the GE McKinsey Matrix, and how these frameworks can be used to determine market attractiveness and competitive advantage.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-09-10-target-market-analysis-with-the-help-of-llms.png"/>
@@ -5719,9 +6211,18 @@ slug: work-life-balance-is-bullsh-t
 title: Work-life balance is bullsh*t
 date: 2023-09-16
 image: /blog/2023-09-16-work-life-balance-is-bullsh-t.png
-tags: ['work-life-balance', 'success', 'career', 'hard-work', 'startup-culture', 'philosophy', 'hustle-culture']
+tags:
+- work-life-balance
+- success
+- career
+- hard-work
+- startup-culture
+- philosophy
+- hustle-culture
 description: This blog post challenges the concept of work-life balance, arguing that success often requires sacrifices in personal time and relationships. It suggests that true balance comes from finding joy in your work and surrounding yourself with like-minded individuals.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-09-16-work-life-balance-is-bullsh-t.png"/>
@@ -5773,9 +6274,17 @@ slug: a-500k-bet-to-build-the-best-platform-to-do-ai-using-financial-data
 title: A $500k bet to build the best platform to do AI using financial data
 date: 2023-10-14
 image: /blog/2023-10-14-a-500k-bet-to-build-the-best-platform-to-do-ai-using-financial-data.png
-tags: ['AI', 'Financial Data', 'OpenBB', 'Data Access', 'Agents']
+tags:
+- ai
+- financial-data
+- openbb
+- data-access
+- agents
 description: This blog post discusses our $500k investment in building the best platform for AI using financial data. We focus on the rebranding of OpenBB SDK to OpenBB Platform, its features, and the potential payoff of this bet in 2024.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-10-14-a-500k-bet-to-build-the-best-platform-to-do-ai-using-financial-data.png"/>
@@ -5848,9 +6357,16 @@ slug: building-the-worlds-investment-research-infrastructure
 title: Building the world’s investment research infrastructure
 date: 2023-10-19
 image: /blog/2023-10-19-building-the-worlds-investment-research-infrastructure.png
-tags: ['investment', 'research', 'infrastructure', 'OpenBB']
+tags:
+- investment
+- research
+- infrastructure
+- openbb
 description: This blog post discusses the process and challenges of building the world's investment research infrastructure. It provides an insight into the products developed by the OpenBB team and their efficient operation.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-10-19-building-the-worlds-investment-research-infrastructure.png"/>
@@ -5890,9 +6406,16 @@ slug: writing-documentation-as-a-founder-is-underrated
 title: Writing documentation, as a founder, is underrated.
 date: 2023-10-29
 image: /blog/2023-10-29-writing-documentation-as-a-founder-is-underrated.png
-tags: ['documentation', 'founder', 'startup', 'writing', 'product']
+tags:
+- documentation
+- founder
+- startup
+- writing
+- product
 description: This blog post emphasizes the importance of writing documentation as a founder. It discusses how it can give an edge when pitching your product and how it can result in less customer support and a better user experience overall.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-10-29-writing-documentation-as-a-founder-is-underrated.png"/>
@@ -5934,9 +6457,16 @@ slug: revolutionizing-ai-at-openbb-with-new-leader-michael-struwig
 title: Revolutionizing AI at OpenBB with new leader, Michael Struwig
 date: 2023-11-07
 image: /blog/2023-11-07-revolutionizing-ai-at-openbb-with-new-leader-michael-struwig.png
-tags: ['ai', 'openbb', 'startup', 'finance', 'hiring']
+tags:
+- ai
+- openbb
+- startup
+- finance
+- hiring
 description: With the launch of the OpenBB Terminal Pro approaching, we're excited to announce the hiring of Michael Struwig, a Ph.D. with expertise in AI and quantitative finance. Michael will help us to further our AI capabilities, reinforcing our commitment to innovation in the open-source finance space.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-11-07-revolutionizing-ai-at-openbb-with-new-leader-michael-struwig.png"/>
@@ -6041,9 +6571,20 @@ slug: openbb-bot-our-new-addition-to-the-openbb-open-source-family
 title: OpenBB Bot - our new addition to the OpenBB open source family
 date: 2023-11-21
 image: /blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family.png
-tags: ['openbb', 'openbb-bot', 'open-source', 'discord', 'telegram', 'chatbots', 'monetization', 'business-strategy', 'product-story']
+tags:
+- openbb
+- openbb-bot
+- open-source
+- discord
+- telegram
+- chatbots
+- monetization
+- business-strategy
+- product-story
 description: The OpenBB Bot architecture is now open source. Check out our Discord Bot architecture now on GitHub.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family.png"/>
@@ -6155,9 +6696,16 @@ slug: goodbye-openbb-sdk-hello-openbb-platform
 title: Goodbye OpenBB SDK. Hello OpenBB Platform
 date: 2023-11-29
 image: /blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform.png
-tags: ['openbb', 'platform', 'sdk', 'core', 'extensions']
+tags:
+- openbb
+- platform
+- sdk
+- core
+- extensions
 description: Today, we are thrilled to announce the new OpenBB SDK, a game-changing platform that is now divided into the robustness of OpenBB Core and the limitless potential of OpenBB extensions.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform.png"/>
@@ -6267,9 +6815,19 @@ slug: the-new-finai-tech-stack
 title: The new FinAI Tech Stack
 date: 2023-12-15
 image: /blog/2023-12-15-the-new-finai-tech-stack.png
-tags: ['openbb', 'finance', 'ai', 'agents', 'langchain', 'llamaindex', 'mindsdb', 'nixtla']
+tags:
+- openbb
+- finance
+- ai
+- agents
+- langchain
+- llamaindex
+- mindsdb
+- nixtla
 description: This blog post delves into how our collaboration with MindsDB, Nixtla, LlamaIndex, and Langchain is revolutionizing the financial world. Read on to learn all about the event "The New FinAI Tech Stack" held last week in SF, California.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-12-15-the-new-finai-tech-stack.png"/>
@@ -6400,9 +6958,19 @@ slug: creating-an-ai-powered-financial-analyst
 title: Creating an AI-powered financial analyst
 date: 2023-12-27
 image: /blog/2023-12-27-creating-an-ai-powered-financial-analyst.png
-tags: ['openbb', 'ai', 'llm', 'agents', 'copilot', 'function-calling', 'pydantic', 'langchain']
+tags:
+- openbb
+- ai
+- llm
+- agents
+- copilot
+- function-calling
+- pydantic
+- langchain
 description: Our Platform aims to empower the OpenBB Copilot, an AI-powered financial analyst, to perform tasks ranging from knowledge retrieval to fully autonomous analysis. The architecture involves task decomposition, tool retrieval, and subtask agents, showcasing impressive results in both deterministic and non-deterministic workflows. Read on to explore its capabilities and don't forget to watch the demos.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-12-27-creating-an-ai-powered-financial-analyst.png"/>
@@ -6634,9 +7202,19 @@ slug: prediction-for-2024
 title: Prediction for 2024
 date: 2024-01-01
 image: /blog/2024-01-01-prediction-for-2024.png
-tags: ['openbb', 'finance', 'ai', 'agents', 'copilot', 'llm', 'pro', 'fine-tune']
+tags:
+- openbb
+- finance
+- ai
+- agents
+- copilot
+- llm
+- pro
+- fine-tune
 description: Companies will own multiple fine-tuned LLMs/SLMs for specific tasks.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-01-01-prediction-for-2024.png"/>
@@ -6676,9 +7254,14 @@ slug: building-my-personal-website-in-docusaurus
 title: Building my personal website in Docusaurus
 date: 2024-01-08
 image: /blog/2024-01-08-building-my-personal-website-in-docusaurus.png
-tags: ['docusaurus', 'website', 'blog']
+tags:
+- docusaurus
+- website
+- blog
 description: How I'm using Docusaurus to build my own personal website.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-01-08-building-my-personal-website-in-docusaurus.png"/>
@@ -6726,9 +7309,18 @@ slug: slack-gpt-summarizing-messages
 title: SlackGPT - Your Slack bot that summarizes unread messages
 date: 2024-01-15
 image: /blog/2024-01-15-slack-gpt-summarizing-messages.png
-tags: ['slack', 'slackgpt', 'llm', 'summarization', 'open source', 'bot']
+tags:
+- slack
+- slackgpt
+- llm
+- summarization
+- open-source
+- bot
 description: The SlackGPT is a Slack bot that summarizes conversations and sends you a summary per channel.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages.png"/>
@@ -6858,9 +7450,15 @@ slug: introducing-the-openbb-add-in-for-excel
 title: Introducing the OpenBB Add-in for Excel
 date: 2024-01-17
 image: /blog/2024-01-17-introducing-the-openbb-add-in-for-excel.png
-tags: ['excel', 'launch', 'openbb', 'announcement']
+tags:
+- excel
+- launch
+- openbb
+- announcement
 description: We acknowledged the enduring centrality of Excel in the financial sector, so we're now making data from the Terminal Pro readily available in Excel. We're also excitedly working to integrate the "Bring Your Own Data" feature into our Excel Add-in, a move we foresee as a transformative step in the financial data industry.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-01-17-introducing-the-openbb-add-in-for-excel.png"/>
@@ -6993,9 +7591,20 @@ slug: 12-things-i-learned-in-2023
 title: 12 things I learned in 2023
 date: 2024-01-22
 image: /blog/2024-01-22-12-things-i-learned-in-2023.png
-tags: ['learnings', 'reflection', 'leadership', 'startup', 'growth', 'product-management', 'user-experience', 'decision-making', 'life-lessons']
+tags:
+- learnings
+- reflection
+- leadership
+- startup
+- growth
+- product-management
+- user-experience
+- decision-making
+- life-lessons
 description: The 12 things I learned in 2023
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-01-22-12-things-i-learned-in-2023.png"/>
@@ -7103,9 +7712,17 @@ slug: openbb-copilot-now-available-to-all-terminal-pro-users
 title: OpenBB Copilot is now available to all Terminal Pro users
 date: 2024-02-27
 image: /blog/2024-02-27-openbb-copilot-now-available-to-all-terminal-pro-users.png
-tags: ['openbb', 'copilot', 'generative ai', 'ai', 'llm']
+tags:
+- openbb
+- copilot
+- generative-ai
+- ai
+- llm
 description: Introducing the OpenBB Copilot, an ever-present financial analyst at your fingertips with the OpenBB Terminal Pro.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-02-27-openbb-copilot-now-available-to-all-terminal-pro-users.png"/>
@@ -7263,9 +7880,20 @@ slug: moving-from-london-to-the-bay-area-and-what-changed
 title: Moving from London to the Bay Area and what changed
 date: 2024-03-02
 image: /blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed.png
-tags: ['learning', 'experience', 'growth', 'moving', 'london', 'bay', 'US', 'travel']
+tags:
+- learning
+- experience
+- growth
+- moving
+- london
+- bay
+- us
+- travel
 description: Moving from London to the Bay Area and what changed
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed.png"/>
@@ -7516,9 +8144,20 @@ slug: moving-countries-and-starting-a-company-aint-so-different
 title: Moving countries and starting a company ain't so different
 date: 2024-03-24
 image: /blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack.png
-tags: ['startup', 'founder-story', 'relocation', 'personal-growth', 'career-path', 'risk-taking', 'ambition', 'resilience', 'life-lessons']
+tags:
+- startup
+- founder-story
+- relocation
+- personal-growth
+- career-path
+- risk-taking
+- ambition
+- resilience
+- life-lessons
 description: I have started a company. I have moved countries. It turns out that there's a lot in common between these.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack.png"/>
@@ -7624,9 +8263,22 @@ slug: goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack
 title: Goh Analyst - The AI-powered financial analyst who lives on Slack
 date: 2024-03-26
 image: /blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack.png
-tags: ['learning', 'experience', 'growth', 'moving', 'london', 'bay', 'US', 'travel', 'startup', 'nyc']
+tags:
+- learning
+- experience
+- growth
+- moving
+- london
+- bay
+- us
+- travel
+- startup
+- nyc
 description: How I built a financial analyst that lives on Slack and has access to OpenBB.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack_1.png"/>
@@ -7727,9 +8379,17 @@ slug: rabbit-r1-there-is-hope
 title: rabbit r1, there is hope
 date: 2024-04-28
 image: /blog/2024-04-28-rabbit-r1-there-is-hope.png
-tags: ['rabbit r1', 'tech', 'review', 'ai', 'gadget']
+tags:
+- rabbit-r1
+- tech
+- review
+- ai
+- gadget
 description: I can see a future where people use rabbit r1 for very particular use cases where phone is suboptimal. For instance, when multiple people want to interact with said phone (e.g. selecting music at a party without having to give phone away) and that is not ideal due to personal information on phone, or when the phone isn't ideal because it has too many distractions and user wants to focus on doing something (e.g. practicing a presentation using recording session and then asking for feedback).
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-04-28-rabbit-r1-there-is-hope.png"/>
@@ -7958,9 +8618,14 @@ slug: 29-years-old-and-sitting-on-the-top-of-giants
 title: 29 years old and sitting on the top of giants
 date: 2024-06-05
 image: /blog/2024-06-05-29-years-old-and-sitting-on-the-top-of-giants.png
-tags: ['birthday', 'dad', 'family']
+tags:
+- birthday
+- dad
+- family
 description: Yesterday was my 29th birthday, and I was reflecting on my life and on how sitting on the top of giants isn’t given enough credit. My giants are my parents.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-06-05-29-years-old-and-sitting-on-the-top-of-giants.png"/>
@@ -8090,9 +8755,20 @@ slug: why-chat-only-AI-Financial-Assistants-are-not-the-future
 title: Why chat-only AI financial assistants are not the future
 date: 2024-06-15
 image: /blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future.png
-tags: ['openbb', 'ai', 'fintech', 'workspaces', 'investment-research', 'chatbots', 'ui', 'ux', 'collaboration']
-description: Financial assistants structured like ChatGPT are great for quick searches but fall short for comprehensive investment research. 
+tags:
+- openbb
+- ai
+- fintech
+- workspaces
+- investment-research
+- chatbots
+- ui
+- ux
+- collaboration
+description: Financial assistants structured like ChatGPT are great for quick searches but fall short for comprehensive investment research.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future.png"/>
@@ -8225,9 +8901,20 @@ slug: my-first-hand-experience-on-ai-impacting-education-through-perplexity-curs
 title: My first-hand experience on AI impacting education through Perplexity, Cursor and ChatGPT
 date: 2024-06-30
 image: /blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt.png
-tags: ['ai', 'education', 'teaching', 'llm', 'chatgpt', 'perplexity', 'cursor', 'supervised-learning', 'edtech']
+tags:
+- ai
+- education
+- teaching
+- llm
+- chatgpt
+- perplexity
+- cursor
+- supervised-learning
+- edtech
 description: AI will change education forever. Here's how I leveraged Perplexity, Cursor and ChatGPT to teach Supervised Learning and assess coursework.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt.png"/>
@@ -8489,9 +9176,20 @@ slug: inspired-by-bia-how-her-fight-against-cancer-changed-my-life
 title: Inspired by Bia - How her fight against cancer changed my life
 date: 2024-08-01
 image: /blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.JPG
-tags: ['personal-story', 'grief', 'motivation', 'cancer-awareness', 'charity', 'fundraising', 'life-lessons', 'resilience', 'inspiration']
+tags:
+- personal-story
+- grief
+- motivation
+- cancer-awareness
+- charity
+- fundraising
+- life-lessons
+- resilience
+- inspiration
 description: In a time when we talk about going to Mars and having AGI, cancer is still taking lives every day.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.JPG"/>
@@ -8676,9 +9374,19 @@ slug: why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare
 title: Why AI Will Replace Jobs in Finance and How You Should Prepare
 date: 2024-08-06
 image: /blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare.png
-tags: ['ai', 'finance', 'fintech', 'future-of-work', 'career-advice', 'automation', 'reskilling', 'analyst']
+tags:
+- ai
+- finance
+- fintech
+- future-of-work
+- career-advice
+- automation
+- reskilling
+- analyst
 description: As AI continues to advance, many jobs in finance are at risk. Learn why this shift is happening and how to prepare for the future.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare.png"/>
@@ -8818,10 +9526,20 @@ slug: what-i-learned-in-3-years-at-openb
 title: What I learned in 3 Years at OpenBB
 date: 2024-08-20
 image: /blog/2024-08-20-what-i-learned-in-3-years-at-openb.jpeg
-tags: ['openbb', 'founder-story', 'startup', 'leadership', 'learnings', 'reflection', 'career-growth', 'milestones', 'life-lessons']
+tags:
+- openbb
+- founder-story
+- startup
+- leadership
+- learnings
+- reflection
+- career-growth
+- milestones
+- life-lessons
 description: The OpenBB journey started officially 3 years ago. So I want to celebrate it by sharing 36 lessons I learned over the past 36 months as a founder and CEO of a fintech company.
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-08-20-what-i-learned-in-3-years-at-openb.jpeg"/>
@@ -8948,11 +9666,21 @@ slug: why-i-love-boxing
 title: Why I love boxing
 date: 2024-09-09
 image: /blog/2024-09-09-why-i-love-boxing.jpeg
-tags: ['boxing', 'startup', 'personal-growth', 'learning', 'resilience', 'comfort-zone', 'mindset', 'philosophy', 'life-lessons']
+tags:
+- boxing
+- startup
+- personal-growth
+- learning
+- resilience
+- comfort-zone
+- mindset
+- philosophy
+- life-lessons
 description: Exploring the parallels between boxing and startup life, and how both push me beyond my comfort zone to foster personal growth, resilience, and continuous learning.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="300" src="/blog/2024-09-09-why-i-love-boxing.jpeg"/>
@@ -9062,11 +9790,21 @@ slug: chatgpt-and-the-future-of-ai-in-finance
 title: ChatGPT and The Future of AI in Finance
 date: 2024-09-21
 image: /blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance.jpg
-tags: ['ai', 'fintech', 'llm', 'agents', 'hallucinations', 'fine-tuning', 'data-security', 'openbb', 'thought-leadership']
+tags:
+- ai
+- fintech
+- llm
+- agents
+- hallucinations
+- fine-tuning
+- data-security
+- openbb
+- thought-leadership
 description: I took the stage at the Cornell Quant Conference alongside Yu Yu (BlackRock) Tony Berkman (Two Sigma), and Samson Qian (Citadel), to discuss ChatGPT & The Future of AI in Finance.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance.jpg"/>
@@ -9404,11 +10142,20 @@ slug: openbb-mobile-app-coming-soon
 title: OpenBB Mobile App - Coming soon
 date: 2024-10-05
 image: /blog/2024-10-05-openbb-mobile-app-coming-soon.png
-tags: ['openbb', 'mobile-app', 'pwa', 'web-development', 'ux', 'engineering', 'startup-culture', 'rapid-prototyping']
+tags:
+- openbb
+- mobile-app
+- pwa
+- web-development
+- ux
+- engineering
+- startup-culture
+- rapid-prototyping
 description: How we built a mobile app, in 1 evening, with 1 engineer.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-10-05-openbb-mobile-app-coming-soon.png"/>
@@ -9533,11 +10280,19 @@ slug: implement-feedback-loops-everywhere-you-can
 title: Implement feedback loops EVERYWHERE you can
 date: 2024-10-25
 image: /blog/2024-10-25-implement-feedback-loops-everywhere-you-can.jpeg
-tags: ['openbb', 'management', 'leadership', 'feedback', 'transparency', 'culture', 'remote-work']
+tags:
+- openbb
+- management
+- leadership
+- feedback
+- transparency
+- culture
+- remote-work
 description: Maximizing team transparency through focused feedback sessions.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-10-25-implement-feedback-loops-everywhere-you-can.jpeg"/>
@@ -9675,11 +10430,20 @@ slug: why-we-got-rid-of-pips-at-openbb
 title: Why we got rid of PIPs at OpenBB
 date: 2024-11-09
 image: /blog/2024-11-09-why-we-got-rid-of-pips-at-openbb.png
-tags: ['openbb', 'management', 'leadership', 'talent', 'hiring', 'performance', 'company-culture', 'startups']
+tags:
+- openbb
+- management
+- leadership
+- talent
+- hiring
+- performance
+- company-culture
+- startups
 description: My thoughts on how removing PIPs can increase the company talent level
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-11-09-why-we-got-rid-of-pips-at-openbb.png"/>
@@ -9918,11 +10682,20 @@ slug: today-i-saw-a-glimpse-of-the-future
 title: Today I saw a glimpse of the future
 date: 2024-12-18
 image: /blog/2024-12-18-today-i-saw-a-glimpse-of-the-future.jpeg
-tags: ['openbb', 'ai', 'fintech', 'crypto', 'data-aggregation', 'customization', 'open-source', 'future-of-finance']
+tags:
+- openbb
+- ai
+- fintech
+- crypto
+- data-aggregation
+- customization
+- open-source
+- future-of-finance
 description: My friend Matt, from VanEck, built a backend with data from Coingecko, Velodata, Artemis, CCdata, Glassnode, MSTR Tracker, Telegram and Google - all in OpenBB.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-12-18-today-i-saw-a-glimpse-of-the-future.jpeg"/>
@@ -9963,11 +10736,20 @@ slug: why-ai-analysts-need-human-like-workspaces-not-just-chat-interfaces
 title: Why AI analysts need human-like workspaces, not just chat interfaces
 date: 2024-12-20
 image: /blog/2024-12-20-why-ai-analysts-need-human-like-workspaces-not-just-chat-interfaces.jpeg
-tags: ['openbb', 'ai', 'analyst', 'agent', 'workspace', 'fintech', 'user-interface', 'future-of-ai']
+tags:
+- openbb
+- ai
+- analyst
+- agent
+- workspace
+- fintech
+- user-interface
+- future-of-ai
 description: Why I believe AI agents need the same comprehensive workspace tools as human analysts, moving beyond simple chat interfaces to enable true financial research and analytics.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-12-20-why-ai-analysts-need-human-like-workspaces-not-just-chat-interfaces.jpeg"/>
@@ -10027,11 +10809,20 @@ slug: openbb-and-our-global-reach-since-leaving-beta
 title: OpenBB and our global reach since leaving beta
 date: 2024-12-22
 image: /blog/2024-12-22-openbb-and-our-global-reach-since-leaving-beta.jpeg
-tags: ['openbb', 'fintech', 'growth', 'global-audience', 'internationalization', 'accessibility', 'translation', 'languages']
+tags:
+- openbb
+- fintech
+- growth
+- global-audience
+- internationalization
+- accessibility
+- translation
+- languages
 description: This is how OpenBB is reaching users worldwide with Chrome's translation features, making financial analytics accessible in multiple languages and expanding our presence across 84% of countries since launch.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-12-22-openbb-and-our-global-reach-since-leaving-beta.jpeg"/>
@@ -10075,11 +10866,21 @@ slug: ai-chatbots-wont-revolutionize-finance-but-intelligent-workspaces-will
 title: AI chatbots won't revolutionize finance, but intelligent workspaces will
 date: 2024-12-27
 image: /blog/2024-12-27-ai-chatbots-wont-revolutionize-finance-but-intelligent-workspaces-will
-tags: ['openbb', 'ai', 'fintech', 'workspaces', 'future-of-finance', 'financial-analytics', 'chatbots', 'ui', 'ux']
+tags:
+- openbb
+- ai
+- fintech
+- workspaces
+- future-of-finance
+- financial-analytics
+- chatbots
+- ui
+- ux
 description: Beyond the AI hype - why the future of financial analysis isn't about chatbots, but about intelligent workspaces that combine your data, tools, and AI exactly when you need them.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-12-27-ai-chatbots-wont-revolutionize-finance-but-intelligent-workspaces-will.png"/>
@@ -10168,11 +10969,21 @@ slug: building-an-ai-agent-from-scratch-that-can-post-on-bluesky
 title: Building an AI agent from scratch that can post on bluesky
 date: 2025-01-04
 image: /blog/2025-01-04-building-an-ai-agent-from-scratch-that-can-post-on-bluesky
-tags: ['ai', 'agent', 'python', 'open-source', 'llm', 'ollama', 'telegram', 'bluesky', 'api']
+tags:
+- ai
+- agent
+- python
+- open-source
+- llm
+- ollama
+- telegram
+- bluesky
+- api
 description: A practical guide to building an AI agent that processes Telegram messages through a local LLM, gathers context from various sources (OpenBB, Perplexity, Grok), and automatically posts content to Bluesky.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-01-04-building-an-ai-agent-from-scratch-that-can-post-on-bluesky.png"/>
@@ -10688,11 +11499,20 @@ slug: tracking-my-writing-progress-through-an-open-source-blog-tracker-generator
 title: Tracking my writing progress through an open source blog tracker generator
 date: 2025-01-07
 image: /blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator
-tags: ['writing', 'productivity', 'open-source', 'svg', 'visualization', 'blog', 'tracking', 'metrics']
+tags:
+- writing
+- productivity
+- open-source
+- svg
+- visualization
+- blog
+- tracking
+- metrics
 description: Learn how I built an open-source tool that generates beautiful SVG visualizations of your blog post history, supporting both JSON and ATOM XML feeds. Perfect for keeping yourself accountable and monitoring your writing progress over time.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator.png"/>
@@ -10854,11 +11674,21 @@ slug: the-cost-of-building-software-is-plummeting-to-zero
 title: The cost of building software is plummeting to zero
 date: 2025-01-09
 image: /blog/2025-01-09-the-cost-of-building-software-is-plummeting-to-zero
-tags: ['ai', 'software-development', 'fintech', 'data-infrastructure', 'open-source', 'snowflake', 'openbb', 'portfolio-optimization', 'future-of-software']
+tags:
+- ai
+- software-development
+- fintech
+- data-infrastructure
+- open-source
+- snowflake
+- openbb
+- portfolio-optimization
+- future-of-software
 description: AI is revolutionizing software development costs and shifting value creation in the financial industry. I talk about the growing importance of data infrastructure, the rise of customizable solutions, and how OpenBB Workspace enables firms to build specialized AI-powered financial tools.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-01-09-the-cost-of-building-software-is-plummeting-to-zero.png" />
@@ -10922,11 +11752,19 @@ slug: theres-a-zero-percent-chance-that-open-source-doesnt-win
 title: There's a zero percent chance that open source doesn't win
 date: 2025-01-16
 image: /blog/2025-01-16-theres-a-zero-percent-chance-that-open-source-doesnt-win
-tags: ['open-source', 'ai', 'software-development', 'future-of-tech', 'democratization', 'startup', 'innovation']
+tags:
+- open-source
+- ai
+- software-development
+- future-of-tech
+- democratization
+- startup
+- innovation
 description: AI is democratizing software development at an unprecedented pace, and it's creating a virtuous cycle that makes open source unstoppable. As development costs plummet and AI tools make codebases more accessible than ever, the traditional moats of proprietary software are evaporating. Here's why I believe that the future of software is inevitably open.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-01-16-theres-a-zero-percent-chance-that-open-source-doesnt-win.png"/>
@@ -11005,11 +11843,21 @@ slug: turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm
 title: Turn my blog feed into a QA dataset to fine-tune a LLM
 date: 2025-01-21
 image: /blog/2025-01-21-turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm
-tags: ['ai', 'ml', 'llm', 'dataset', 'hugging-face', 'ollama', 'llama', 'fine-tuning', 'python']
+tags:
+- ai
+- ml
+- llm
+- dataset
+- hugging-face
+- ollama
+- llama
+- fine-tuning
+- python
 description: This project converts blog feed content into a structured Question-Answer dataset using LLaMA 3.2 (via Ollama) for local processing. The generated dataset follows a conversational format and can be automatically pushed to Hugging Face.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-01-21-turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm.png"/>
@@ -11220,11 +12068,20 @@ slug: building-a-developer-friendly-interface-for-financial-analysts
 title: Building a developer friendly interface for financial analysts
 date: 2025-01-24
 image: /blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts
-tags: ['openbb', 'plg', 'pls', 'open-source', 'fintech', 'ux', 'sales', 'startup']
+tags:
+- openbb
+- plg
+- pls
+- open-source
+- fintech
+- ux
+- sales
+- startup
 description: In the financial software industry, there's a well-worn playbook - build proprietary software, deploy large sales teams, and leverage executive relationships. At OpenBB, we're taking a fundamentally different approach - creating open-source financial tools that users genuinely love to use.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts.png"/>
@@ -11320,11 +12177,20 @@ slug: what-it-means-to-have-skin-in-the-game
 title: What it means to have skin in the game
 date: 2025-01-30
 image: /blog/2025-01-30-what-it-means-to-have-skin-in-the-game
-tags: ['openbb', 'leadership', 'philosophy', 'accountability', 'commitment', 'startup', 'skin-in-the-game', 'personal-story']
+tags:
+- openbb
+- leadership
+- philosophy
+- accountability
+- commitment
+- startup
+- skin-in-the-game
+- personal-story
 description: From getting the OpenBB logo tattooed to honoring a promise of a Bali trip, this is a personal reflection on what it truly means to have "skin in the game". It's not about reckless commitment, but about standing fully behind your words and actions - a principle that's shaped both my personal life and my approach to building OpenBB.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-01-30-what-it-means-to-have-skin-in-the-game.png"/>
@@ -11388,11 +12254,21 @@ slug: 2025-02-18-long-live-long-context-with-gemini
 title: Long live long context with Gemini
 date: 2025-02-18
 image: /blog/2025-02-18-long-live-long-context-with-gemini
-tags: ['ai', 'llm', 'gemini', 'long-context', 'rag', 'streamlit', 'python', 'pdf-parsing', 'prompt-engineering']
+tags:
+- ai
+- llm
+- gemini
+- long-context
+- rag
+- streamlit
+- python
+- pdf-parsing
+- prompt-engineering
 description: A practical exploration of using Gemini's long context window capabilities to analyze multi-page documents, featuring a Streamlit app for testing and iterating prompts.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-02-18-long-live-long-context-with-gemini.png" />
@@ -11748,11 +12624,20 @@ slug: ui-layer-is-the-next-big-frontier
 title: UI layer is the next big frontier
 date: 2025-02-25
 image: /blog/2025-02-25-ui-layer-is-the-next-big-frontier
-tags: ['openbb', 'fintech', 'ui', 'ux', 'innovation', 'financial-software', 'data-visualization', 'future-of-finance']
+tags:
+- openbb
+- fintech
+- ui
+- ux
+- innovation
+- financial-software
+- data-visualization
+- future-of-finance
 description: A deep dive into why the UI layer represents the next major frontier in financial technology. While the industry has heavily invested in data, the user interface remains a critical yet overlooked bridge between raw information and actionable intelligence. This piece explores how OpenBB is leading the charge in revolutionizing how financial professionals interact with data.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-02-25-ui-layer-is-the-next-big-frontier.png" />
@@ -11871,11 +12756,20 @@ slug: 2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb
 title: How function calling and context-aware AI shapes OpenBB
 date: 2025-03-01
 image: /blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb
-tags: ['openbb', 'ai', 'llm', 'function-calling', 'agent', 'copilot', 'data-analytics', 'financial-analysis']
+tags:
+- openbb
+- ai
+- llm
+- function-calling
+- agent
+- copilot
+- data-analytics
+- financial-analysis
 description: Building on OpenBB's presentation at the Anote AI Day Summit, this post explores how intelligent function calling serves as the cornerstone of our AI-native workspace for data analytics.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb.png" />
@@ -12080,11 +12974,20 @@ slug: 2025-03-03-building-a-custom-widget-for-my-friends-newsletter
 title: Building a custom widget for my friends newsletter
 date: 2025-03-03
 image: /blog/2025-03-03-building-a-custom-widget-for-my-friends-newsletter
-tags: ['openbb', 'widget', 'automation', 'open-source', 'fintech', 'api', 'side-project', 'newsletter']
+tags:
+- openbb
+- widget
+- automation
+- open-source
+- fintech
+- api
+- side-project
+- newsletter
 description: How I built a custom OpenBB widget to save my friend hours of manual work on his newsletter with 190,000+ subscribers.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-03-03-building-a-custom-widget-for-my-friends-newsletter.png" />
@@ -12142,11 +13045,21 @@ slug: 2025-03-05-my-key-takeaways-from-institutional-investor-conference
 title: My key takeaways from Institutional Investor conference
 date: 2025-03-05
 image: /blog/2025-03-05-my-key-takeaways-from-institutional-investor-conference.jpg
-tags: ['openbb', 'financial-services', 'ai-adoption', 'data-privacy', 'enterprise-ai', 'build-vs-buy', 'open-source', 'finance', 'local-deployment']
+tags:
+- openbb
+- financial-services
+- ai-adoption
+- data-privacy
+- enterprise-ai
+- build-vs-buy
+- open-source
+- finance
+- local-deployment
 description: Key insights from financial services technology leaders on AI adoption, including build vs. buy strategies, data privacy concerns, technology adoption divides, and the challenges of moving from prototypes to production-ready solutions.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-03-05-my-key-takeaways-from-institutional-investor-conference.jpg" />
@@ -12226,11 +13139,19 @@ slug: 2025-03-07-proactive-agents-are-the-future-of-ai-in-finance
 title: Proactive Agents Are the Future of AI in Finance
 date: 2025-03-07
 image: /blog/2025-03-07-proactive-agents-are-the-future-of-ai-in-finance
-tags: ['openbb', 'financial-services', 'ai', 'investment', 'proactive-agents', 'agents', 'future']
+tags:
+- openbb
+- financial-services
+- ai
+- investment
+- proactive-agents
+- agents
+- future
 description: How AI is evolving from reactive to proactive in financial services, and why this shift will transform how investors discover opportunities and generate alpha.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2025-03-07-proactive-agents-are-the-future-of-ai-in-finance.png" />
@@ -12322,11 +13243,23 @@ slug: 2025-03-11-the-10-trillion-openbb-copilot-validation
 title: The $10 trillion OpenBB Copilot validation
 date: 2025-03-11
 image: /blog/2025-03-11-the-10-trillion-openbb-copilot-validation
-tags: ['openbb', 'blackrock', 'copilot', 'enterprise', 'agent', 'widgets', 'architecture', 'open-source', 'finance', 'portfolio', 'security']
-description: "At the recent AI Engineering Summit, BlackRock unveiled their Aladdin Copilot - a platform remarkably similar to what we've built at OpenBB, but with a key difference. While they've invested massive resources into building a closed system, we've created an open-source solution that achieves the same goals: multi-application support, seamless agent integration, explainable AI, and enterprise-grade security. Here's a deep dive into how the world's largest asset manager validated our approach to AI-powered financial workflows."
+tags:
+- openbb
+- blackrock
+- copilot
+- enterprise
+- agent
+- widgets
+- architecture
+- open-source
+- finance
+- portfolio
+- security
+description: 'At the recent AI Engineering Summit, BlackRock unveiled their Aladdin Copilot - a platform remarkably similar to what we''ve built at OpenBB, but with a key difference. While they''ve invested massive resources into building a closed system, we''ve created an open-source solution that achieves the same goals: multi-application support, seamless agent integration, explainable AI, and enterprise-grade security. Here''s a deep dive into how the world''s largest asset manager validated our approach to AI-powered financial workflows.'
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-03-11-the-10-trillion-openbb-copilot-validation.png" />
@@ -12466,11 +13399,21 @@ slug: 2025-03-18-my-first-half-marathon
 title: Doing my first Half Marathon
 date: 2025-03-18
 image: /blog/2025-03-18-my-first-half-marathon
-tags: ['running', 'half-marathon', 'nyc', 'charity', 'fitness', 'personal-story', 'fundraising', 'race-recap', 'endurance']
+tags:
+- running
+- half-marathon
+- nyc
+- charity
+- fitness
+- personal-story
+- fundraising
+- race-recap
+- endurance
 description: A personal journey through my first NYC Half Marathon, from fundraising $1,615 for cancer research to crossing the finish line in 1h45min, complete with training insights and my race day experience.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2025-03-18-my-first-half-marathon.JPG" />
@@ -12724,11 +13667,21 @@ slug: 2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow
 title: OpenBB enables streamlined Client Advisory AI workflow
 date: 2025-03-23
 image: /blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow
-tags: ['openbb', 'ai', 'llm', 'fintech', 'automation', 'workflows', 'client-advisory', 'investment-management', 'reporting']
+tags:
+- openbb
+- ai
+- llm
+- fintech
+- automation
+- workflows
+- client-advisory
+- investment-management
+- reporting
 description: In this blog post, I'll show you how an AI agent can transform your funds performance, macro data, news around your holding companies, and more into a draft investor letter that has the same writing style as your team.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow.png" />
@@ -12894,11 +13847,19 @@ slug: 2025-03-25-one-data-vendor-to-rule-them-all-really
 title: One data vendor to rule them all. Really?
 date: 2025-03-25
 image: /blog/2025-03-25-one-data-vendor-to-rule-them-all-really
-tags: ['openbb', 'financial-data', 'data-aggregation', 'investment-research', 'workflow-automation', 'data-vendors', 'alpha-generation']
+tags:
+- openbb
+- financial-data
+- data-aggregation
+- investment-research
+- workflow-automation
+- data-vendors
+- alpha-generation
 description: Exploring why relying on a single data vendor for financial research is unrealistic in today's complex market landscape, and how AI-driven platforms like OpenBB are transforming how professionals interact with diverse data sources to find alpha and gain competitive advantage.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2025-03-25-one-data-vendor-to-rule-them-all-really.png" />
@@ -13069,12 +14030,22 @@ slug: 2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero
 title: Building your own Crypto app from scratch - zero to hero
 date: 2025-03-30
 image: /blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero
-tags: ['openbb', 'crypto', 'fintech', 'app-building', 'tutorial', 'data-visualization', 'ai', 'workflows', 'api']
+tags:
+- openbb
+- crypto
+- fintech
+- app-building
+- tutorial
+- data-visualization
+- ai
+- workflows
+- api
 description: A comprehensive guide to building sophisticated crypto applications using OpenBB. Learn how to create custom dashboards, implement consistent styling, leverage widget specifications, build template workflows, and customize AI agents for your specific use case.
 hideSidebar: true
 unlisted: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero.png" />
@@ -13540,11 +14511,21 @@ slug: 2025-04-03-stop-building-ai-products-start-building-workflows
 title: Stop building AI products, start building workflows
 date: 2025-04-03
 image: /blog/2025-04-03-stop-building-ai-products-start-building-workflows
-tags: ['ai', 'product-strategy', 'business', 'startup', 'moat', 'workflows', 'openbb', 'fintech', 'vertical-ai']
+tags:
+- ai
+- product-strategy
+- business
+- startup
+- moat
+- workflows
+- openbb
+- fintech
+- vertical-ai
 description: The secret to building defensible AI companies isn't better AI - it's better workflows. An insider's perspective on why some AI companies thrive while others will become obsolete with each new model release.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2025-04-03-stop-building-ai-products-start-building-workflows.png" />
@@ -13771,11 +14752,21 @@ slug: 2025-04-11-10000-followers-later-heres-where-it-all-began
 title: 10,000 followers later, here’s where it all began
 date: 2025-04-11
 image: /blog/2025-04-11-10000-followers-later-heres-where-it-all-began
-tags: ['career', 'personal-story', 'linkedin', 'social-media', 'build-in-public', 'networking', 'side-projects', 'openbb', 'origin-story']
+tags:
+- career
+- personal-story
+- linkedin
+- social-media
+- build-in-public
+- networking
+- side-projects
+- openbb
+- origin-story
 description: A personal reflection on my 6-year journey to 10,000 LinkedIn followers and how sharing my work publicly led to unexpected opportunities and the creation of OpenBB.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2025-04-11-10000-followers-later-heres-where-it-all-began.png" />
@@ -13902,11 +14893,21 @@ slug: 2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflo
 title: Introducing OpenBB Apps, tailored by users for optimized workflows
 date: 2025-05-01
 image: /blog/2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows
-tags: ['openbb', 'fintech', 'apps', 'app-building', 'workflows', 'customization', 'financial-analysis', 'open-source', 'ai']
+tags:
+- openbb
+- fintech
+- apps
+- app-building
+- workflows
+- customization
+- financial-analysis
+- open-source
+- ai
 description: OpenBB Apps introduces a customizable platform where financial organizations can build tailored workflow solutions with dashboard templates, data widgets, and AI agents - putting firms in complete control of their data and tech stack.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows.png" />
@@ -13974,11 +14975,21 @@ slug: 2025-05-28-openbb-is-underrated
 title: OpenBB is underrated
 date: 2025-05-28
 image: /blog/2025-05-28-openbb-is-underrated
-tags: ['fintech', 'infrastructure', 'financial-analysis', 'open-source', 'openbb', 'modularity', 'workflows', 'post-terminalism', 'extensibility']
+tags:
+- fintech
+- infrastructure
+- financial-analysis
+- open-source
+- openbb
+- modularity
+- workflows
+- post-terminalism
+- extensibility
 description: OpenBB isn't just software - it's foundational infrastructure that lets firms shape their own financial workspace, moving beyond one-size-fits-all solutions toward modularity and extensibility.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2025-05-28-openbb-is-underrated.jpeg" />
@@ -14053,11 +15064,21 @@ slug: 2025-06-10-how-i-connected-figma-to-cursor-using-mcp
 title: How I connected Figma to Cursor using MCP
 date: 2025-06-10
 image: /blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp
-tags: ['figma', 'cursor', 'mcp', 'developer-tools', 'tutorial', 'integration', 'design-to-code', 'productivity', 'development-workflow']
+tags:
+- figma
+- cursor
+- mcp
+- developer-tools
+- tutorial
+- integration
+- design-to-code
+- productivity
+- development-workflow
 description: A step-by-step guide on how to connect Figma to Cursor using MCP (Model-Client-Protocol), enabling seamless design-to-code workflow and improving developer productivity through direct design system integration.
 hideSidebar: true
-
 ---
+
+
 
 import CodeBlock from '@theme/CodeBlock';
 

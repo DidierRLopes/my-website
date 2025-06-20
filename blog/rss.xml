@@ -3497,7 +3497,7 @@ My friends &amp; family are "protected" by an imaginary shield that I created in
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="native-ai-phone">Native AI-phone<a href="https://didierlopes.com/blog/rabbit-r1-there-is-hope#native-ai-phone" class="hash-link" aria-label="Direct link to Native AI-phone" title="Direct link to Native AI-phone">​</a></h3>
 <p><a href="https://us.nothing.tech/" target="_blank" rel="noopener noreferrer">Nothing</a> has one of the best consumer tech brands out there. If the Apple ecosystem wasn't as sticky as it is today, I would buy one. Both Nothing and Rabbit are very unique brands, and I think a partnership between them could be a game-changer.</p>
 <p>I'm imagining a Native AI-phone built on Android with rabbit's LAM. So, in simple terms, it would be like Nothing Phone (2) but it would have an r1 button that you can use to interact with it through voice instead of fingers. The challenge would be combining the LAM from rabbit r1 to all the apps that Nothing Phone (2) provides - but I believe in a future where applications will be built not only thinking about how humans will utilize them but also LLMs - at least <a href="https://github.com/OpenBB-finance/openbb-agents" target="_blank" rel="noopener noreferrer">we are doing that at OpenBB</a> with the <a href="https://github.com/OpenBB-finance/OpenBBTerminal" target="_blank" rel="noopener noreferrer">OpenBB Platform</a>.</p>]]></content:encoded>
-            <category>rabbit r1</category>
+            <category>rabbit-r1</category>
             <category>tech</category>
             <category>review</category>
             <category>ai</category>
@@ -3558,7 +3558,7 @@ My friends &amp; family are "protected" by an imaginary shield that I created in
             <category>moving</category>
             <category>london</category>
             <category>bay</category>
-            <category>US</category>
+            <category>us</category>
             <category>travel</category>
             <category>startup</category>
             <category>nyc</category>
@@ -3757,7 +3757,7 @@ My friends &amp; family are "protected" by an imaginary shield that I created in
             <category>moving</category>
             <category>london</category>
             <category>bay</category>
-            <category>US</category>
+            <category>us</category>
             <category>travel</category>
         </item>
         <item>
@@ -3823,7 +3823,7 @@ My friends &amp; family are "protected" by an imaginary shield that I created in
 <p>Check out our <a href="https://openbb.co/use-cases/ai" target="_blank" rel="noopener noreferrer">AI page</a> to learn more about these features and stay updated in the future.</p>]]></content:encoded>
             <category>openbb</category>
             <category>copilot</category>
-            <category>generative ai</category>
+            <category>generative-ai</category>
             <category>ai</category>
             <category>llm</category>
         </item>
@@ -4064,7 +4064,7 @@ My friends &amp; family are "protected" by an imaginary shield that I created in
             <category>slackgpt</category>
             <category>llm</category>
             <category>summarization</category>
-            <category>open source</category>
+            <category>open-source</category>
             <category>bot</category>
         </item>
         <item>
@@ -4528,7 +4528,7 @@ My friends &amp; family are "protected" by an imaginary shield that I created in
             <category>investment</category>
             <category>research</category>
             <category>infrastructure</category>
-            <category>OpenBB</category>
+            <category>openbb</category>
         </item>
         <item>
             <title><![CDATA[A $500k bet to build the best platform to do AI using financial data]]></title>
@@ -4566,11 +4566,11 @@ My friends &amp; family are "protected" by an imaginary shield that I created in
 <p>To have an agent execute this entire workflow in a 1/10th of the time that it would have taken an analyst to do.</p>
 <p>Check for yourself the example below,</p>
 <p><img decoding="async" loading="lazy" alt="image" src="https://didierlopes.com/assets/images/2023-10-14-a-500k-bet-to-build-the-best-platform-to-do-ai-using-financial-data_1-eec1e68977f1a17968efca698c525e55.png" width="2000" height="1129" class="img_ev3q"></p>]]></content:encoded>
-            <category>AI</category>
-            <category>Financial Data</category>
-            <category>OpenBB</category>
-            <category>Data Access</category>
-            <category>Agents</category>
+            <category>ai</category>
+            <category>financial-data</category>
+            <category>openbb</category>
+            <category>data-access</category>
+            <category>agents</category>
         </item>
         <item>
             <title><![CDATA[Work-life balance is bullsh*t]]></title>
@@ -4727,13 +4727,13 @@ Indent the json with 4 spaces.</p>
 <p><strong>And that’s it for today.</strong></p>
 <p>All of this code is open source and available on my GitHub, here: <a href="https://github.com/DidierRLopes/target-market-analysis/tree/main" target="_blank" rel="noopener noreferrer">https://github.com/DidierRLopes/target-market-analysis/tree/main</a></p>
 <p>I hope you find this insightful, I appreciate any feedback as always.</p>]]></content:encoded>
-            <category>Target Market Analysis</category>
-            <category>LLMs</category>
-            <category>OpenBB</category>
-            <category>BCG Matrix</category>
-            <category>GE McKinsey Matrix</category>
-            <category>Market Attractiveness</category>
-            <category>Competitive Advantage</category>
+            <category>target-market-analysis</category>
+            <category>llms</category>
+            <category>openbb</category>
+            <category>bcg-matrix</category>
+            <category>ge-mckinsey-matrix</category>
+            <category>market-attractiveness</category>
+            <category>competitive-advantage</category>
         </item>
         <item>
             <title><![CDATA[OpenBB 2 year anniversary]]></title>
@@ -4790,11 +4790,11 @@ Indent the json with 4 spaces.</p>
 <p>In fast-paced startups, I think a better sentence would be, “People overestimate what they can do in one week and underestimate what they can do in 1 year”.</p>
 <p>Looking forward to continue building the future of investment research, we’re just getting started.</p>
 <p>PS: On a personal level within those 2 years: I quit my full-time job to build OpenBB, got 2 dogs, got married and moved to the Bay Area. Life is great ❤️</p>]]></content:encoded>
-            <category>OpenBB</category>
-            <category>Anniversary</category>
-            <category>Achievements</category>
-            <category>Growth</category>
-            <category>Finance</category>
+            <category>openbb</category>
+            <category>anniversary</category>
+            <category>achievements</category>
+            <category>growth</category>
+            <category>finance</category>
         </item>
         <item>
             <title><![CDATA[How to handle equity top-ups at a seed stage startup]]></title>
@@ -4965,9 +4965,9 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p>So follow me if you want to learn more about what that process may look like.</p>]]></content:encoded>
             <category>startup</category>
             <category>equity</category>
-            <category>Silicon Valley</category>
+            <category>silicon-valley</category>
             <category>seed-stage</category>
-            <category>OpenBB</category>
+            <category>openbb</category>
         </item>
         <item>
             <title><![CDATA[Keep track of your startup metrics using a custom iOS widget]]></title>
@@ -5017,12 +5017,12 @@ The total number of shares is random and not representative of OpenBB.</p>
 </ul>
 <p>16/ Click outside the window, and you should be all set!</p>
 <p>Feel free to contribute to the repository with other examples / templates!</p>]]></content:encoded>
-            <category>iOS</category>
-            <category>Startup</category>
-            <category>Metrics</category>
-            <category>OpenBB</category>
-            <category>Scriptable</category>
-            <category>Open Source</category>
+            <category>ios</category>
+            <category>startup</category>
+            <category>metrics</category>
+            <category>openbb</category>
+            <category>scriptable</category>
+            <category>open-source</category>
         </item>
         <item>
             <title><![CDATA[How to Use OpenAI to Extract Insights from Team Survey]]></title>
@@ -5102,12 +5102,12 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p>And that’s it! You now have a complete automation pipeline from employee feedback to insights within seconds.</p>
 <p>I hope you enjoyed reading this post, and I would love to hear your feedback. Do you appreciate the level of technical detail I go into, or would you prefer less?</p>
 <p>Any comments are very helpful. Thank you!</p>]]></content:encoded>
-            <category>OpenAI</category>
-            <category>Team Survey</category>
-            <category>Insights</category>
-            <category>Automation</category>
-            <category>Slack</category>
-            <category>Airtable</category>
+            <category>openai</category>
+            <category>team-survey</category>
+            <category>insights</category>
+            <category>automation</category>
+            <category>slack</category>
+            <category>airtable</category>
         </item>
         <item>
             <title><![CDATA[Why the need for an open source investment research platform?]]></title>
@@ -5147,11 +5147,11 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p>We are close to 23,000 stars. If you haven’t already, starring our project would mean the world.</p>
 <p><img decoding="async" loading="lazy" alt="image" src="https://didierlopes.com/assets/images/2023-07-16-why-the-need-for-an-open-source-investment-research-platform_3-171a30c8b399bf39fac88ef73d35aeff.png" width="800" height="533" class="img_ev3q"></p>
 <p>Any feedback is welcome 🙏🏽</p>]]></content:encoded>
-            <category>Open Source</category>
-            <category>Investment Research</category>
-            <category>Data Licensing</category>
-            <category>Transparency</category>
-            <category>Community</category>
+            <category>open-source</category>
+            <category>investment-research</category>
+            <category>data-licensing</category>
+            <category>transparency</category>
+            <category>community</category>
         </item>
         <item>
             <title><![CDATA[From Open Source to Open Startup]]></title>
@@ -5277,11 +5277,11 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p><img decoding="async" loading="lazy" alt="image" src="https://didierlopes.com/assets/images/2023-06-29-employees-are-leaving-be-proactive-about-employee-feedback_3-99729e5e0cfbdae8c948577c18ee6428.png" width="777" height="348" class="img_ev3q"></p>
 <p>Even though our salaries don’t compete with the MAMAAs of this world, we believe that: our mission, our innovative products and unique culture are what makes us OpenBB. And why we can retain our talent.</p>
 <p>You can find our employee engagement index at: <a href="https://openbb.co/company/open/team" target="_blank" rel="noopener noreferrer">https://openbb.co/company/open/team</a></p>]]></content:encoded>
-            <category>employee engagement</category>
+            <category>employee-engagement</category>
             <category>feedback</category>
-            <category>work culture</category>
-            <category>remote work</category>
-            <category>team happiness</category>
+            <category>work-culture</category>
+            <category>remote-work</category>
+            <category>team-happiness</category>
         </item>
         <item>
             <title><![CDATA[Hybrid work sucks. It’s worse than remote and office.]]></title>
@@ -5338,11 +5338,11 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p>As an engineer, I wouldn’t be happy working in an office because I know I could contribute much more to the company by working from home. I’d be “okay” with doing hybrid work in order to continue working for the company, but I would probably start looking elsewhere due to all the aforementioned issues.</p>
 <p>As a leader, OpenBB has started as a remote company, and as a result, we have become highly efficient at working remotely, even when dealing with a 9-hour time difference. All team members understand that they need to make compromises with their working hours to accommodate the company’s needs. <em>So, it ultimately comes down to the type of team you are building and how committed they are to the mission, as well as how you can cultivate such a culture internally.</em></p>
 <p>If your team grew accustomed to working in an office and had to switch to remote due to COVID, and you are noticing a decrease in performance, it may be that your team was not prepared to work remotely. In that case, it makes sense to go back to the office. However, if your team grew while working remotely, and you are not satisfied with their performance, let me tell you that bringing the team back to the office is a half-baked solution. Instead, it would be better to investigate the issue and implement better processes or address underperforming individuals.</p>]]></content:encoded>
-            <category>remote work</category>
-            <category>office work</category>
-            <category>hybrid work</category>
+            <category>remote-work</category>
+            <category>office-work</category>
+            <category>hybrid-work</category>
             <category>productivity</category>
-            <category>work culture</category>
+            <category>work-culture</category>
         </item>
         <item>
             <title><![CDATA[Become an OpenBB Champion]]></title>
@@ -5382,11 +5382,11 @@ The total number of shares is random and not representative of OpenBB.</p>
 <div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
 <p>If you meet the requirements and are enthusiastic about becoming an <a href="https://openbb.co/blog?type=champions" target="_blank" rel="noopener noreferrer">OpenBB Champion</a>, we invite you to reach out to us at <a href="mailto:hello@openbb.finance" target="_blank" rel="noopener noreferrer">hello@openbb.finance</a>. Our team will coordinate a podcast session with you.</p>
 <p>We look forward to hearing from you.</p>]]></content:encoded>
-            <category>OpenBB</category>
-            <category>OpenBB Champion</category>
-            <category>Investment Research</category>
-            <category>Open Source</category>
-            <category>Community</category>
+            <category>openbb</category>
+            <category>openbb-champion</category>
+            <category>investment-research</category>
+            <category>open-source</category>
+            <category>community</category>
         </item>
         <item>
             <title><![CDATA[Streamline your OpenBB Terminal experience with OpenBB Hub]]></title>
@@ -5425,13 +5425,13 @@ The total number of shares is random and not representative of OpenBB.</p>
 <div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/_4dQs_q_Jtk?si=Wqu2vi2EWUww3gfK" width="800" height="400"></iframe></div>
 <br>
 <p>With the <a href="https://my.openbb.co/" target="_blank" rel="noopener noreferrer">OpenBB Hub</a>, you unlock a world of possibilities.</p>]]></content:encoded>
-            <category>OpenBB</category>
-            <category>OpenBB Hub</category>
-            <category>Terminal</category>
-            <category>API Key Management</category>
-            <category>Data Customization</category>
-            <category>Personalization</category>
-            <category>Script Management</category>
+            <category>openbb</category>
+            <category>openbb-hub</category>
+            <category>terminal</category>
+            <category>api-key-management</category>
+            <category>data-customization</category>
+            <category>personalization</category>
+            <category>script-management</category>
         </item>
         <item>
             <title><![CDATA[OpenBB Terminal 3.0 - a new interactive way to analyze data]]></title>
@@ -5471,12 +5471,12 @@ The total number of shares is random and not representative of OpenBB.</p>
 <div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/_4dQs_q_Jtk?si=1BRr1pF2SRrkC3lZ" width="800" height="400"></iframe></div>
 <br>
 <p>Welcome to a new era of data analysis with OpenBB Terminal. Get ready to explore, discover, and gain a competitive edge like never before.</p>]]></content:encoded>
-            <category>OpenBB</category>
-            <category>OpenBB Terminal</category>
-            <category>Interactive Charts</category>
-            <category>Interactive Tables</category>
-            <category>Data Analysis</category>
-            <category>Open Source</category>
+            <category>openbb</category>
+            <category>openbb-terminal</category>
+            <category>interactive-charts</category>
+            <category>interactive-tables</category>
+            <category>data-analysis</category>
+            <category>open-source</category>
         </item>
         <item>
             <title><![CDATA[Leaving London to live in San Francisco]]></title>
@@ -5596,12 +5596,12 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p>I’ve moved countries a few times within Europe, and those moves were much easier than moving to the USA.</p>
 <p>Nonetheless, I think you can get settled within 3 months of moving to the country. So far, we are really enjoying our experience and can’t wait to explore more of the area.</p>
 <p>If you are looking to do the same and want some feedback, feel free to reach out. It helped us a lot to have people who could help us with the move, so I’d love to be able to do the same for others.</p>]]></content:encoded>
-            <category>San Francisco</category>
-            <category>London</category>
-            <category>Relocation</category>
-            <category>Visa Process</category>
-            <category>Startup</category>
-            <category>OpenBB</category>
+            <category>san-francisco</category>
+            <category>london</category>
+            <category>relocation</category>
+            <category>visa-process</category>
+            <category>startup</category>
+            <category>openbb</category>
         </item>
         <item>
             <title><![CDATA[Fully free financial chatbot]]></title>
@@ -5633,17 +5633,17 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p>While others zig, we zag. Here’s the updated pricing:</p>
 <p><img decoding="async" loading="lazy" alt="image" src="https://didierlopes.com/assets/images/2023-05-09-fully-free-financial-chatbot_2-4da59bba4075e6a090ee6fc71f5329ad.png" width="1400" height="933" class="img_ev3q"></p>
 <p>Looking forward to feedback!</p>]]></content:encoded>
-            <category>OpenBB Bot</category>
-            <category>Financial Chatbot</category>
-            <category>Investment</category>
-            <category>Free</category>
-            <category>Discord</category>
-            <category>Telegram</category>
-            <category>Equity</category>
-            <category>Crypto</category>
-            <category>Options</category>
-            <category>Darkpool</category>
-            <category>Economy</category>
+            <category>openbb-bot</category>
+            <category>financial-chatbot</category>
+            <category>investment</category>
+            <category>free</category>
+            <category>discord</category>
+            <category>telegram</category>
+            <category>equity</category>
+            <category>crypto</category>
+            <category>options</category>
+            <category>darkpool</category>
+            <category>economy</category>
         </item>
         <item>
             <title><![CDATA[Free investment research ecosystem to consistently beat the market]]></title>
@@ -5700,12 +5700,12 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p>In case you missed the webinar, you can view it below so that you are up-to-date with all the exciting new features that the team has released.</p>
 <div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/_4dQs_q_Jtk?si=76h-YFtiqkATHisF" width="800" height="400"></iframe></div>
 <br>]]></content:encoded>
-            <category>OpenBB</category>
-            <category>Investment Research</category>
-            <category>OpenBB Terminal</category>
-            <category>OpenBB Bot</category>
-            <category>OpenBB SDK</category>
-            <category>OpenBB Hub</category>
+            <category>openbb</category>
+            <category>investment-research</category>
+            <category>openbb-terminal</category>
+            <category>openbb-bot</category>
+            <category>openbb-sdk</category>
+            <category>openbb-hub</category>
         </item>
         <item>
             <title><![CDATA[The role of AI and OpenBB in the future of investment research]]></title>
@@ -5746,10 +5746,10 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p>The proof-of-concept below in combination with the automated report generation should allow you to further understand the breakthrough that we may accomplish in the future.</p>
 <p><img decoding="async" loading="lazy" alt="image" src="https://didierlopes.com/assets/images/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research_2-cde46ee5a54956ea451c66fdabc3905f.png" width="1400" height="1204" class="img_ev3q"></p>
 <p>My prediction is that open source + AI will disrupt the financial sector in the upcoming years, and OpenBB will be leading that wave.</p>]]></content:encoded>
-            <category>OpenAI</category>
+            <category>openai</category>
             <category>future</category>
-            <category>ChatGPT</category>
-            <category>Discord</category>
+            <category>chatgpt</category>
+            <category>discord</category>
         </item>
         <item>
             <title><![CDATA[How I Used OpenAI API to improve our product documentation]]></title>
@@ -5921,10 +5921,10 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p>Try it out for free on <a href="https://openbb.co/discord" target="_blank" rel="noopener noreferrer">OpenBB Discord server</a> by using a command such as <code>/chart TSLA</code> and let me know what you think.</p>]]></content:encoded>
             <category>chatbots</category>
             <category>finance</category>
-            <category>AI</category>
-            <category>Discord</category>
-            <category>OpenBB</category>
-            <category>OptionsFamBot</category>
+            <category>ai</category>
+            <category>discord</category>
+            <category>openbb</category>
+            <category>optionsfambot</category>
         </item>
         <item>
             <title><![CDATA[Firing sucks. How to avoid doing so by hiring A players.]]></title>
@@ -6166,11 +6166,11 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p>In a more simplistic image, this is what the A method boils down too.</p>
 <p><img decoding="async" loading="lazy" alt="image" src="https://didierlopes.com/assets/images/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players_4-bbca655fbf48c43ba7e27cbd29c57104.png" width="978" height="818" class="img_ev3q"></p>
 <p>I really enjoyed reading this book and I am taking a lot of these learnings to improve the hiring processes at OpenBB.</p>]]></content:encoded>
-            <category>Hiring</category>
-            <category>Management</category>
-            <category>A Players</category>
-            <category>OpenBB</category>
-            <category>Career Advice</category>
+            <category>hiring</category>
+            <category>management</category>
+            <category>a-players</category>
+            <category>openbb</category>
+            <category>career-advice</category>
         </item>
         <item>
             <title><![CDATA[How ChatGPT allowed me to leverage Twitter API 10x faster]]></title>
@@ -6207,11 +6207,11 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p><img decoding="async" loading="lazy" alt="image" src="https://didierlopes.com/assets/images/2022-12-11-how-chatgpt-allowed-me-to-leverage-twitter-api-10x-faster_5-ce54ec3acb8a5d90a5b0006137db6405.png" width="1266" height="1696" class="img_ev3q"></p>
 <p>One thing that is for sure: ChatGPT is going to truly disrupt many industries. And I will be here for it.</p>
 <p>PS: The PR with this addition is in development <a href="https://github.com/OpenBB-finance/OpenBBTerminal/pull/3757" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content:encoded>
-            <category>ChatGPT</category>
-            <category>Twitter API</category>
-            <category>Tweepy</category>
-            <category>Python</category>
-            <category>Programming</category>
+            <category>chatgpt</category>
+            <category>twitter-api</category>
+            <category>tweepy</category>
+            <category>python</category>
+            <category>programming</category>
         </item>
         <item>
             <title><![CDATA[How I wrote a machine learning paper in 1 week that got accepted to International Conference in Machine Learning Applications]]></title>
@@ -6326,12 +6326,12 @@ The total number of shares is random and not representative of OpenBB.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="final-remarks">Final remarks<a href="https://didierlopes.com/blog/how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla#final-remarks" class="hash-link" aria-label="Direct link to Final remarks" title="Direct link to Final remarks">​</a></h2>
 <p>This was my first most technical blogpost where I went into details in how I wrote a ML paper that was accepted in a major conference in 1 week. Would love to know your thoughts on it.</p>
 <p>Feel free to check the full paper version here: <a href="https://ieeexplore.ieee.org/abstract/document/9680024" target="_blank" rel="noopener noreferrer">https://ieeexplore.ieee.org/abstract/document/9680024</a></p>]]></content:encoded>
-            <category>Machine Learning</category>
-            <category>Data Science</category>
-            <category>Academia</category>
-            <category>ICMLA</category>
-            <category>NURVV Run</category>
-            <category>Open Source</category>
+            <category>machine-learning</category>
+            <category>data-science</category>
+            <category>academia</category>
+            <category>icmla</category>
+            <category>nurvv-run</category>
+            <category>open-source</category>
         </item>
         <item>
             <title><![CDATA[The future of finance with open source and AI]]></title>
@@ -6379,10 +6379,10 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p><strong>My prediction is that open source + AI will disrupt the financial sector in the upcoming years.</strong></p>
 <p><a href="https://openbb.co/" target="_blank" rel="noopener noreferrer">OpenBB</a> will be leading that wave.</p>
 <p>Thanks for reading!</p>]]></content:encoded>
-            <category>Open Source</category>
-            <category>AI</category>
-            <category>Finance</category>
-            <category>Future</category>
+            <category>open-source</category>
+            <category>ai</category>
+            <category>finance</category>
+            <category>future</category>
         </item>
         <item>
             <title><![CDATA[Bloomberg Terminal is no more. OpenBB Terminal 2.0 has just been released.]]></title>
@@ -6590,10 +6590,10 @@ The total number of shares is random and not representative of OpenBB.</p>
 <li>Change the project visibility to public</li>
 <li>Keep developing in public</li>
 </ul>]]></content:encoded>
-            <category>Open Source</category>
-            <category>Community Building</category>
-            <category>Project Management</category>
-            <category>OpenBB Terminal</category>
+            <category>open-source</category>
+            <category>community-building</category>
+            <category>project-management</category>
+            <category>openbb-terminal</category>
         </item>
         <item>
             <title><![CDATA[How to learn 10x faster than average]]></title>
@@ -6751,10 +6751,10 @@ The total number of shares is random and not representative of OpenBB.</p>
 <div class="language-console codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-console codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">$ /exe due_diligence_stock.openbb -i AMT</span><br></span></code></pre></div></div>
 <p>Any feedback is welcome!</p>
 <p>And if you want to ask questions about the product before installing it, feel free to join us on Discord here: <a href="https://openbb.co/discord" target="_blank" rel="noopener noreferrer">https://openbb.co/discord</a></p>]]></content:encoded>
-            <category>OpenBB Terminal</category>
-            <category>Investment Research</category>
-            <category>Stocks</category>
-            <category>Due Diligence</category>
+            <category>openbb-terminal</category>
+            <category>investment-research</category>
+            <category>stocks</category>
+            <category>due-diligence</category>
         </item>
         <item>
             <title><![CDATA[Stop doing your CV in Word or LaTeX]]></title>
@@ -6790,11 +6790,11 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p><img decoding="async" loading="lazy" alt="image" src="https://didierlopes.com/assets/images/2022-10-15-stop-doing-your-cv-in-word-or-latex_3-3900f4021ddb0767f31c300fcfeb1963.png" width="1400" height="939" class="img_ev3q"></p>
 <p><strong>EDIT:</strong> The reader should be aware that nowadays a properly formatted resume is still critical when added to a job board. This is because automated resume readers expect a certain format in order to recommend candidates to companies and vice-versa.</p>
 <p>Hope you enjoyed this post. As always, any feedback welcome! 🙏</p>]]></content:encoded>
-            <category>GitHub</category>
-            <category>CV</category>
-            <category>Career</category>
-            <category>Open Source</category>
-            <category>Developer</category>
+            <category>github</category>
+            <category>cv</category>
+            <category>career</category>
+            <category>open-source</category>
+            <category>developer</category>
         </item>
         <item>
             <title><![CDATA[Why you should drop yfinance API and adopt OpenBB SDK]]></title>
@@ -6841,18 +6841,18 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p>As counter-intuitive as it sounds:</p>
 <p>The shutting down of yfinance API (which is one of the data sources that OpenBB SDK has access to) would be beneficial to OpenBB adoption. This is because users would need to migrate to OpenBB SDK as that’s the most mature and maintained open source financial API.</p>
 <p>If you have any questions, feel free to drop me a message!</p>]]></content:encoded>
-            <category>OpenBB SDK</category>
-            <category>yfinance API</category>
-            <category>Financial Data</category>
-            <category>APIs</category>
-            <category>Open Source</category>
+            <category>openbb-sdk</category>
+            <category>yfinance-api</category>
+            <category>financial-data</category>
+            <category>apis</category>
+            <category>open-source</category>
         </item>
         <item>
             <title><![CDATA[How I became CEO of OpenBB]]></title>
             <link>https://didierlopes.com/blog/how-i-became-ceo-of-openbb</link>
             <guid>https://didierlopes.com/blog/how-i-became-ceo-of-openbb</guid>
             <pubDate>Sun, 14 Aug 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[This post talks about my story of becoming the CEO of OpenBB, the company behind the fastest growing open source project in finance.]]></description>
+            <description><![CDATA[This post talks about my story of becoming the CEO of OpenBB, the company behind the fastest growing open source project in finance.]]></description>
             <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2022-08-14-how-i-became-ceo-of-openbb.png"></p>
 <br>
 <p>This post talks about my story of becoming the CEO of OpenBB, the company behind the fastest growing open source project in&nbsp;finance.</p>
@@ -6952,11 +6952,11 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p>And that is what we are doing at OpenBB to build a stronger community? Do you have any other tips/tricks? Feel free to share them!</p>
 <p>Hope you enjoyed this post and as always, am looking to hear feedback!</p>
 <p><em>PS: I’d like to take this chance to say that our OpenBB Bot launch will occur in the coming weeks, you won’t have to wait much longer 🦋</em></p>]]></content:encoded>
-            <category>Web3</category>
-            <category>Community</category>
-            <category>Decentralization</category>
-            <category>Blockchain</category>
-            <category>Smart Contracts</category>
+            <category>web3</category>
+            <category>community</category>
+            <category>decentralization</category>
+            <category>blockchain</category>
+            <category>smart-contracts</category>
         </item>
         <item>
             <title><![CDATA[Remote + Flexible work >> Salary]]></title>
@@ -7010,10 +7010,10 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p><img decoding="async" loading="lazy" alt="image" src="https://didierlopes.com/assets/images/2022-05-03-remote-flexible-work-salary_1-777830903762181c9617adbd7d469a14.png" width="732" height="549" class="img_ev3q"></p>
 <p>Ohhh, and we’re hiring!</p>
 <p>If you provide a referral to someone that ends up joining OpenBB, I will transfer you $100 as a token of appreciation 🦋</p>]]></content:encoded>
-            <category>Remote Work</category>
-            <category>Flexible Hours</category>
-            <category>Work Life Balance</category>
-            <category>Productivity</category>
+            <category>remote-work</category>
+            <category>flexible-hours</category>
+            <category>work-life-balance</category>
+            <category>productivity</category>
         </item>
         <item>
             <title><![CDATA[Looking for a new tattoo? OpenBB has you covered… literally.]]></title>
@@ -7098,10 +7098,10 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p><img decoding="async" loading="lazy" alt="image" src="https://didierlopes.com/assets/images/2022-04-09-how-i-created-the-best-discord-meme-bot_2-277c446b0a8596009b96d13c0e5319f4.png" width="1080" height="816" class="img_ev3q"></p>
 <p>As you can see, our Discord server just stepped up. <a href="https://openbb.co/discord" target="_blank" rel="noopener noreferrer">Join us</a> to try out the meme bot, build the future of investment research or just to say hi.</p>
 <p>We’ll be waiting for you. 🦋</p>]]></content:encoded>
-            <category>Discord</category>
-            <category>Meme Bot</category>
-            <category>Open Source</category>
-            <category>Community Building</category>
+            <category>discord</category>
+            <category>meme-bot</category>
+            <category>open-source</category>
+            <category>community-building</category>
         </item>
         <item>
             <title><![CDATA[Meet the most advanced investment research platform]]></title>
@@ -7133,10 +7133,10 @@ The total number of shares is random and not representative of OpenBB.</p>
 <br>
 <p>Reach out if you have any question to the team, there’s very little we can’t do!</p>
 <p>This is the way!</p>]]></content:encoded>
-            <category>Investment Research</category>
-            <category>Gamestonk Terminal</category>
-            <category>Automation</category>
-            <category>Routines</category>
+            <category>investment-research</category>
+            <category>gamestonk-terminal</category>
+            <category>automation</category>
+            <category>routines</category>
         </item>
         <item>
             <title><![CDATA[UX/UI is better than features]]></title>
@@ -7205,10 +7205,10 @@ The total number of shares is random and not representative of OpenBB.</p>
 <br>
 <p>Thanks for your read, and if you enjoy Gamestonk Terminal, please reach out to <a href="https://discord.gg/ptYabd8w" target="_blank" rel="noopener noreferrer">our discord</a> to say thank you, or ideally: for <strong>@terp340</strong> to change date format to dd/MM/YYYY — <strong>the only correct one</strong>!</p>
 <p>Happy 2022 with lots of love ❤️</p>]]></content:encoded>
-            <category>Gamestonk Terminal</category>
-            <category>UX/UI</category>
-            <category>Software Development</category>
-            <category>Teamwork</category>
+            <category>gamestonk-terminal</category>
+            <category>ux/ui</category>
+            <category>software-development</category>
+            <category>teamwork</category>
         </item>
         <item>
             <title><![CDATA[Sector and Industry Analysis — Gamestonk Terminal]]></title>
@@ -7261,11 +7261,11 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p><img decoding="async" loading="lazy" alt="image" src="https://didierlopes.com/assets/images/2021-12-02-sector-and-industry-analysis-gamestonk-terminal_7-68a282af0f56620147363d7628808ec4.png" width="2560" height="928" class="img_ev3q"></p>
 <p>Next time you know, it all starts with an e-mail. At Gamestonk Terminal we are on a role to have the best investment research terminal, and hope this story reflects it.</p>
 <p>Try it now, it’s free. ❤️</p>]]></content:encoded>
-            <category>Gamestonk Terminal</category>
-            <category>Sector Analysis</category>
-            <category>Industry Analysis</category>
-            <category>FinanceDatabase</category>
-            <category>Open Source</category>
+            <category>gamestonk-terminal</category>
+            <category>sector-analysis</category>
+            <category>industry-analysis</category>
+            <category>financedatabase</category>
+            <category>open-source</category>
         </item>
         <item>
             <title><![CDATA[Handing your twitter account to your most avid community member]]></title>
@@ -7311,10 +7311,10 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p>It made sense to bring this approach to <a href="https://twitter.com/gamestonkt" target="_blank" rel="noopener noreferrer">our Twitter</a> feed which has since transformed and now offers insights, educational nuggets, and data as well as presenting new features. The end result speaks for itself!</p>
 <p><img decoding="async" loading="lazy" alt="image" src="https://didierlopes.com/assets/images/2021-11-17-handing-your-twitter-account-to-your-most-avid-community-member_4-944b9db4ac2461bf3b2fee36ad746102.png" width="1192" height="1550" class="img_ev3q"></p>
 <p>On your end, what is your opinion? And why do you 100% agree that this was the best decision?</p>]]></content:encoded>
-            <category>Community Building</category>
-            <category>Twitter</category>
-            <category>Open Source</category>
-            <category>Gamestonk Terminal</category>
+            <category>community-building</category>
+            <category>twitter</category>
+            <category>open-source</category>
+            <category>gamestonk-terminal</category>
         </item>
         <item>
             <title><![CDATA[The Start of my Machine Learning journey]]></title>
@@ -7353,11 +7353,11 @@ The total number of shares is random and not representative of OpenBB.</p>
 <li><strong>Understanding Machine Learning: From Theory to Algorithms</strong> — Shai Ben-David and Shai Shalev-Shwartz</li>
 </ul>
 <p>Let me know if you think these are good books, or if there are others that you’d recommend.</p>]]></content:encoded>
-            <category>Machine Learning</category>
-            <category>Python</category>
-            <category>Data Science</category>
-            <category>Education</category>
-            <category>Self-Learning</category>
+            <category>machine-learning</category>
+            <category>python</category>
+            <category>data-science</category>
+            <category>education</category>
+            <category>self-learning</category>
         </item>
         <item>
             <title><![CDATA[An unusual journey learning about NNs for a PhD thesis]]></title>
@@ -7394,10 +7394,10 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p>I started this journey with my previous maths teacher and ended it with a close friend! Excited to see what other articles/publications we’ll be working on together in the future.</p>
 <p>PS: The ARIMA/ETS/MLP/RNN/LSTM models learned from this work, consisted the basis of the prediction menu on <a href="https://github.com/GamestonkTerminal/GamestonkTerminal" target="_blank" rel="noopener noreferrer">Gamestonk Terminal</a>.</p>
 <p>As always, feel free to provide feedback!</p>]]></content:encoded>
-            <category>PhD Thesis</category>
-            <category>Neural Networks</category>
-            <category>Python</category>
-            <category>Time Series Forecasting</category>
+            <category>phd-thesis</category>
+            <category>neural-networks</category>
+            <category>python</category>
+            <category>time-series-forecasting</category>
         </item>
         <item>
             <title><![CDATA[How I created a bot in python to participate in NFT giveaways]]></title>
@@ -7435,12 +7435,12 @@ The total number of shares is random and not representative of OpenBB.</p>
 <p>There’s actually 1 collection that I particularly like and believe has a lot of potential, it’s called <a href="https://opensea.io/collection/crypto-cartooneaters" target="_blank" rel="noopener noreferrer">CryptoCartoonEaters</a> and due to the uniqueness of each collectible (only 100 made), I really think it has a great potential. I acquired my favourite cartoon as a kid: Goku Eating a Burger.</p>
 <p><img decoding="async" loading="lazy" alt="image" src="https://didierlopes.com/assets/images/2021-09-30-how-i-created-a-bot-in-python-to-participate-in-nft-giveaways_2-1a1580bde12fd68272db4b416bdb7686.png" width="500" height="500" class="img_ev3q"></p>
 <p>Let me know if you find this article interesting, and if you used the bot as well!</p>]]></content:encoded>
-            <category>Python</category>
-            <category>Bot</category>
-            <category>NFT</category>
-            <category>Giveaways</category>
-            <category>Reddit</category>
-            <category>Automation</category>
+            <category>python</category>
+            <category>bot</category>
+            <category>nft</category>
+            <category>giveaways</category>
+            <category>reddit</category>
+            <category>automation</category>
         </item>
         <item>
             <title><![CDATA[Gamestonk Terminal — Can’t Stop, Won’t Stop]]></title>
@@ -7504,14 +7504,14 @@ The total number of shares is random and not representative of OpenBB.</p>
 </ul>
 <p>Much love!
 GST Team &amp; Community</p>]]></content:encoded>
-            <category>Gamestonk Terminal</category>
-            <category>Open Source</category>
-            <category>Docker</category>
-            <category>Jupyter Lab</category>
-            <category>Hugo Website</category>
-            <category>Python</category>
-            <category>Finance</category>
-            <category>Trading</category>
+            <category>gamestonk-terminal</category>
+            <category>open-source</category>
+            <category>docker</category>
+            <category>jupyter-lab</category>
+            <category>hugo-website</category>
+            <category>python</category>
+            <category>finance</category>
+            <category>trading</category>
         </item>
         <item>
             <title><![CDATA[Time-Series CrossValidation for NN]]></title>
@@ -7548,12 +7548,12 @@ GST Team &amp; Community</p>]]></content:encoded>
 <p><img decoding="async" loading="lazy" alt="image" src="https://didierlopes.com/assets/images/2021-09-04-time-series-crossvalidation-for-nn_8-5a2ee102a5d0e988a6aaf3dadc079741.png" width="1400" height="913" class="img_ev3q"></p>
 <p>This module has not only been used for my friends’ thesis but also for a Data Science company and <a href="https://didierlopes.com/blog/gamestonk-terminal-the-next-best-thing-after-bloomberg-terminal">Gamestonk Terminal</a>, that I know of :)</p>
 <p>You can check the stats of the module <a href="https://pypistats.org/packages/timeseries-cv" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content:encoded>
-            <category>Python</category>
-            <category>Data Science</category>
-            <category>Deep Learning</category>
-            <category>Time Series</category>
-            <category>Cross Validation</category>
-            <category>Neural Networks</category>
+            <category>python</category>
+            <category>data-science</category>
+            <category>deep-learning</category>
+            <category>time-series</category>
+            <category>cross-validation</category>
+            <category>neural-networks</category>
         </item>
         <item>
             <title><![CDATA[Ranking 99 Mind f*ck movies]]></title>
@@ -7579,11 +7579,11 @@ GST Team &amp; Community</p>]]></content:encoded>
 <p>The first movie of the list that none of us had already watched was the movie <a href="https://www.imdb.com/title/tt1255953/" target="_blank" rel="noopener noreferrer">Incendies</a>. After having watched this movie, I can already tell you that sorting out this list was worth it. Definitely mind blowing, and a great watch.</p>
 <p>As usual, you can find the source code on my github: <a href="https://github.com/DidierRLopes/SortMoviesPerRating" target="_blank" rel="noopener noreferrer">SortMoviesPerRating</a>.</p>
 <p>Hope you enjoyed this read!</p>]]></content:encoded>
-            <category>Movies</category>
-            <category>Thrillers</category>
-            <category>IMDbPy</category>
-            <category>Python</category>
-            <category>Sorting Algorithm</category>
+            <category>movies</category>
+            <category>thrillers</category>
+            <category>imdbpy</category>
+            <category>python</category>
+            <category>sorting-algorithm</category>
         </item>
         <item>
             <title><![CDATA[K-means algorithm to visit a new city]]></title>
@@ -7621,13 +7621,13 @@ GST Team &amp; Community</p>]]></content:encoded>
 <br>
 <p>This project was done for fun. However, I believe that by creating a tuple per location with coordinates and estimate of time taken on each attraction, something nice could come out of this.</p>
 <p>Hope you find this interesting. Let me know your thoughts.</p>]]></content:encoded>
-            <category>K-means</category>
-            <category>Algorithm</category>
-            <category>Travel</category>
-            <category>Efficiency</category>
-            <category>London</category>
-            <category>GPS</category>
-            <category>Clustering</category>
+            <category>k-means</category>
+            <category>algorithm</category>
+            <category>travel</category>
+            <category>efficiency</category>
+            <category>london</category>
+            <category>gps</category>
+            <category>clustering</category>
         </item>
         <item>
             <title><![CDATA[Minion Recipes Program]]></title>
@@ -7667,10 +7667,10 @@ GST Team &amp; Community</p>]]></content:encoded>
 <p><img decoding="async" loading="lazy" alt="image" src="https://didierlopes.com/assets/images/2021-07-23-minion-recipes-program_5-3aafd3913b38e5f01f2c91a4f46f29bb.png" width="1366" height="768" class="img_ev3q"></p>
 <p>The recipe database is handled in the most robust way: <strong>with plain text files</strong>, obviously.</p>
 <p>As always, hope you had a nice read.</p>]]></content:encoded>
-            <category>Python</category>
-            <category>Programming</category>
-            <category>Recipes</category>
-            <category>Software Development</category>
+            <category>python</category>
+            <category>programming</category>
+            <category>recipes</category>
+            <category>software-development</category>
         </item>
         <item>
             <title><![CDATA[Household bills Program]]></title>
@@ -7858,10 +7858,10 @@ This was important for both coding, and also database management.</p>
 <p><img decoding="async" loading="lazy" alt="hair_2" src="https://didierlopes.com/assets/images/2021-06-12-customizable-meme-filter_2-cc7395edac92f82ea904bf93c204ad97.png" width="1280" height="720" class="img_ev3q"></p>
 <p>Hope you have a nice read and enjoy the filter. You can find the code <a href="https://github.com/DidierRLopes/meme-filter" target="_blank" rel="noopener noreferrer">here</a>.</p>
 <p>Feel free to provide feedback, as always!</p>]]></content:encoded>
-            <category>Python</category>
-            <category>Meme Filter</category>
-            <category>Image Processing</category>
-            <category>Face Recognition</category>
+            <category>python</category>
+            <category>meme-filter</category>
+            <category>image-processing</category>
+            <category>face-recognition</category>
         </item>
         <item>
             <title><![CDATA[NeistPoint Project]]></title>
@@ -7896,12 +7896,12 @@ This was important for both coding, and also database management.</p>
 <p>Hope someone finds this tool interesting, and gets inspired to develop their own software to meet their own project requirements. In the meantime, feel free to check us one last time on <a href="https://neistclothing.com/" target="_blank" rel="noopener noreferrer">our website</a> or <a href="https://www.instagram.com/neistclothing/" target="_blank" rel="noopener noreferrer">instagram</a>. You may even spot me in some of the pictures!</p>
 <p>The repository for the code can be found here: <a href="https://github.com/DidierRLopes/NeistpointCLI" target="_blank" rel="noopener noreferrer">https://github.com/DidierRLopes/NeistpointCLI</a></p>
 <p>Thanks for reading, as always!</p>]]></content:encoded>
-            <category>NeistPoint</category>
-            <category>Clothing Brand</category>
-            <category>Sustainability</category>
-            <category>Project Management</category>
-            <category>C++</category>
-            <category>Stock Management</category>
+            <category>neistpoint</category>
+            <category>clothing-brand</category>
+            <category>sustainability</category>
+            <category>project-management</category>
+            <category>c++</category>
+            <category>stock-management</category>
         </item>
         <item>
             <title><![CDATA[Move over Bloomberg Terminal, here comes Gamestonk Terminal]]></title>
@@ -7939,11 +7939,11 @@ This was important for both coding, and also database management.</p>
 <p>Let’s try to reduce the gap between the amount of information that the Hedge Funds have access to in comparison with the usual retail trader.</p>
 <p>Bloomberg Terminal, we’re coming for you.</p>
 <p>Feel free to join our discord at <a href="https://discord.gg/Up2QGbMKHY" target="_blank" rel="noopener noreferrer">https://discord.gg/Up2QGbMKHY</a>.</p>]]></content:encoded>
-            <category>Gamestonk Terminal</category>
-            <category>Finance</category>
-            <category>Stock Market</category>
-            <category>Programming</category>
-            <category>Open Source</category>
+            <category>gamestonk-terminal</category>
+            <category>finance</category>
+            <category>stock-market</category>
+            <category>programming</category>
+            <category>open-source</category>
         </item>
         <item>
             <title><![CDATA[Momentum Football Bets]]></title>
@@ -7977,12 +7977,12 @@ This was important for both coding, and also database management.</p>
 <p><img decoding="async" loading="lazy" alt="image" src="https://didierlopes.com/assets/images/2021-04-07-momentum-football-bets_1-90f4cee807b670c1bd5084244deefdf4.png" width="388" height="424" class="img_ev3q"></p>
 <p>After this, we were quite excited to backtest the app. We filtered the next features with a big confidence bet score (to have less risk), and put 20 pounds on 3 different accumulators. <a href="https://www.youtube.com/watch?v=-DT7bX-B1Mg" target="_blank" rel="noopener noreferrer">And it’s gone.</a></p>
 <p>Hope you had a good read. Feedback is always appreciated.</p>]]></content:encoded>
-            <category>Football</category>
-            <category>Betting</category>
-            <category>Momentum</category>
-            <category>Web Scraping</category>
-            <category>Beautiful Soup</category>
-            <category>Python</category>
+            <category>football</category>
+            <category>betting</category>
+            <category>momentum</category>
+            <category>web-scraping</category>
+            <category>beautiful-soup</category>
+            <category>python</category>
         </item>
         <item>
             <title><![CDATA[Gamestonk Terminal - The next best thing after Bloomberg Terminal]]></title>
@@ -8035,11 +8035,11 @@ This was important for both coding, and also database management.</p>
 <p>This project will always remain open-source, and the idea is that it can grow substantially over-time so that more and more people start taking advantage of it.</p>
 <p>Feel free to contribute towards the project.</p>
 <p>Feedback is extremely welcome!</p>]]></content:encoded>
-            <category>Gamestonk Terminal</category>
-            <category>Finance</category>
-            <category>Stock Market</category>
-            <category>Programming</category>
-            <category>Open Source</category>
+            <category>gamestonk-terminal</category>
+            <category>finance</category>
+            <category>stock-market</category>
+            <category>programming</category>
+            <category>open-source</category>
         </item>
     </channel>
 </rss>

@@ -691,7 +691,7 @@
             "summary": "I can see a future where people use rabbit r1 for very particular use cases where phone is suboptimal. For instance, when multiple people want to interact with said phone (e.g. selecting music at a party without having to give phone away) and that is not ideal due to personal information on phone, or when the phone isn't ideal because it has too many distractions and user wants to focus on doing something (e.g. practicing a presentation using recording session and then asking for feedback).",
             "date_modified": "2024-04-28T00:00:00.000Z",
             "tags": [
-                "rabbit r1",
+                "rabbit-r1",
                 "tech",
                 "review",
                 "ai",
@@ -712,7 +712,7 @@
                 "moving",
                 "london",
                 "bay",
-                "US",
+                "us",
                 "travel",
                 "startup",
                 "nyc"
@@ -751,7 +751,7 @@
                 "moving",
                 "london",
                 "bay",
-                "US",
+                "us",
                 "travel"
             ]
         },
@@ -765,7 +765,7 @@
             "tags": [
                 "openbb",
                 "copilot",
-                "generative ai",
+                "generative-ai",
                 "ai",
                 "llm"
             ]
@@ -815,7 +815,7 @@
                 "slackgpt",
                 "llm",
                 "summarization",
-                "open source",
+                "open-source",
                 "bot"
             ]
         },
@@ -961,7 +961,7 @@
                 "investment",
                 "research",
                 "infrastructure",
-                "OpenBB"
+                "openbb"
             ]
         },
         {
@@ -972,11 +972,11 @@
             "summary": "This blog post discusses our $500k investment in building the best platform for AI using financial data. We focus on the rebranding of OpenBB SDK to OpenBB Platform, its features, and the potential payoff of this bet in 2024.",
             "date_modified": "2023-10-14T00:00:00.000Z",
             "tags": [
-                "AI",
-                "Financial Data",
-                "OpenBB",
-                "Data Access",
-                "Agents"
+                "ai",
+                "financial-data",
+                "openbb",
+                "data-access",
+                "agents"
             ]
         },
         {
@@ -1004,13 +1004,13 @@
             "summary": "This blog post provides a comprehensive guide on how to perform target market analysis for your company using LLMs. It includes a detailed explanation of the BCG Matrix and the GE McKinsey Matrix, and how these frameworks can be used to determine market attractiveness and competitive advantage.",
             "date_modified": "2023-09-10T00:00:00.000Z",
             "tags": [
-                "Target Market Analysis",
-                "LLMs",
-                "OpenBB",
-                "BCG Matrix",
-                "GE McKinsey Matrix",
-                "Market Attractiveness",
-                "Competitive Advantage"
+                "target-market-analysis",
+                "llms",
+                "openbb",
+                "bcg-matrix",
+                "ge-mckinsey-matrix",
+                "market-attractiveness",
+                "competitive-advantage"
             ]
         },
         {
@@ -1021,11 +1021,11 @@
             "summary": "Two years of OpenBB. A look back at our achievements and growth in the world of open-source finance.",
             "date_modified": "2023-08-20T00:00:00.000Z",
             "tags": [
-                "OpenBB",
-                "Anniversary",
-                "Achievements",
-                "Growth",
-                "Finance"
+                "openbb",
+                "anniversary",
+                "achievements",
+                "growth",
+                "finance"
             ]
         },
         {
@@ -1056,9 +1056,9 @@
             "tags": [
                 "startup",
                 "equity",
-                "Silicon Valley",
+                "silicon-valley",
                 "seed-stage",
-                "OpenBB"
+                "openbb"
             ]
         },
         {
@@ -1069,12 +1069,12 @@
             "summary": "Keep track of your startup metrics using a custom iOS widget. This blog post will guide you on how to build a custom iOS widget that displays your startup metrics at all times. The entire code is open source and requires minimal coding skills.",
             "date_modified": "2023-07-29T00:00:00.000Z",
             "tags": [
-                "iOS",
-                "Startup",
-                "Metrics",
-                "OpenBB",
-                "Scriptable",
-                "Open Source"
+                "ios",
+                "startup",
+                "metrics",
+                "openbb",
+                "scriptable",
+                "open-source"
             ]
         },
         {
@@ -1085,12 +1085,12 @@
             "summary": "This blog post discusses how to use OpenAI to extract insights from team survey data. It covers the motivation behind the project, the requirements, and the implementation process, including the use of the Slack API and Airtable API for automation.",
             "date_modified": "2023-07-21T00:00:00.000Z",
             "tags": [
-                "OpenAI",
-                "Team Survey",
-                "Insights",
-                "Automation",
-                "Slack",
-                "Airtable"
+                "openai",
+                "team-survey",
+                "insights",
+                "automation",
+                "slack",
+                "airtable"
             ]
         },
         {
@@ -1101,11 +1101,11 @@
             "summary": "OpenBB Terminal, an open-source investment research platform, is transforming the financial industry by addressing issues like data licensing, full-price bundle, lack of transparency and customization, and the need for a diverse community. This post explores why open source is crucial for us and the main problems in the space.",
             "date_modified": "2023-07-16T00:00:00.000Z",
             "tags": [
-                "Open Source",
-                "Investment Research",
-                "Data Licensing",
-                "Transparency",
-                "Community"
+                "open-source",
+                "investment-research",
+                "data-licensing",
+                "transparency",
+                "community"
             ]
         },
         {
@@ -1133,11 +1133,11 @@
             "summary": "Employees are leaving? Be proactive about employee feedback. This blogpost discusses the importance of employee feedback and how we at OpenBB are ensuring high employee engagement through a periodic feedback survey.",
             "date_modified": "2023-06-29T00:00:00.000Z",
             "tags": [
-                "employee engagement",
+                "employee-engagement",
                 "feedback",
-                "work culture",
-                "remote work",
-                "team happiness"
+                "work-culture",
+                "remote-work",
+                "team-happiness"
             ]
         },
         {
@@ -1148,11 +1148,11 @@
             "summary": "Hybrid work, a combination of remote and office work, is not as beneficial as it seems. This blog post discusses the pros and cons of remote and office work, and why hybrid work might not be the best solution.",
             "date_modified": "2023-06-12T00:00:00.000Z",
             "tags": [
-                "remote work",
-                "office work",
-                "hybrid work",
+                "remote-work",
+                "office-work",
+                "hybrid-work",
                 "productivity",
-                "work culture"
+                "work-culture"
             ]
         },
         {
@@ -1163,11 +1163,11 @@
             "summary": "Become an OpenBB Champion and join our passionate community. Share your experiences with our innovative products and help us democratize investment research through an open source approach.",
             "date_modified": "2023-06-10T00:00:00.000Z",
             "tags": [
-                "OpenBB",
-                "OpenBB Champion",
-                "Investment Research",
-                "Open Source",
-                "Community"
+                "openbb",
+                "openbb-champion",
+                "investment-research",
+                "open-source",
+                "community"
             ]
         },
         {
@@ -1178,13 +1178,13 @@
             "summary": "Streamline your OpenBB Terminal experience with OpenBB Hub. Learn about its key features, including API key management, data customization, personalization, and script management.",
             "date_modified": "2023-05-25T00:00:00.000Z",
             "tags": [
-                "OpenBB",
-                "OpenBB Hub",
-                "Terminal",
-                "API Key Management",
-                "Data Customization",
-                "Personalization",
-                "Script Management"
+                "openbb",
+                "openbb-hub",
+                "terminal",
+                "api-key-management",
+                "data-customization",
+                "personalization",
+                "script-management"
             ]
         },
         {
@@ -1195,12 +1195,12 @@
             "summary": "A game-changing update to OpenBB Terminal, introducing interactive charts and tables, empowering users with a new way to analyze data.",
             "date_modified": "2023-05-20T00:00:00.000Z",
             "tags": [
-                "OpenBB",
-                "OpenBB Terminal",
-                "Interactive Charts",
-                "Interactive Tables",
-                "Data Analysis",
-                "Open Source"
+                "openbb",
+                "openbb-terminal",
+                "interactive-charts",
+                "interactive-tables",
+                "data-analysis",
+                "open-source"
             ]
         },
         {
@@ -1211,12 +1211,12 @@
             "summary": "Leaving London to live in San Francisco. A personal journey of relocating and starting a tech company in the heart of Silicon Valley.",
             "date_modified": "2023-05-13T00:00:00.000Z",
             "tags": [
-                "San Francisco",
-                "London",
-                "Relocation",
-                "Visa Process",
-                "Startup",
-                "OpenBB"
+                "san-francisco",
+                "london",
+                "relocation",
+                "visa-process",
+                "startup",
+                "openbb"
             ]
         },
         {
@@ -1227,17 +1227,17 @@
             "summary": "The OpenBB Bot is a financial chatbot that allows you to access financial data from Discord or Telegram along with other users. From equity data to crypto, options, darkpool, economy and much more! Now available for free to registered users.",
             "date_modified": "2023-05-09T00:00:00.000Z",
             "tags": [
-                "OpenBB Bot",
-                "Financial Chatbot",
-                "Investment",
-                "Free",
-                "Discord",
-                "Telegram",
-                "Equity",
-                "Crypto",
-                "Options",
-                "Darkpool",
-                "Economy"
+                "openbb-bot",
+                "financial-chatbot",
+                "investment",
+                "free",
+                "discord",
+                "telegram",
+                "equity",
+                "crypto",
+                "options",
+                "darkpool",
+                "economy"
             ]
         },
         {
@@ -1248,12 +1248,12 @@
             "summary": "The OpenBB Hub is a comprehensive platform for managing all products, data, subscriptions, and content for users, aiming to empower investors globally with tools previously exclusive to institutions.",
             "date_modified": "2023-05-05T00:00:00.000Z",
             "tags": [
-                "OpenBB",
-                "Investment Research",
-                "OpenBB Terminal",
-                "OpenBB Bot",
-                "OpenBB SDK",
-                "OpenBB Hub"
+                "openbb",
+                "investment-research",
+                "openbb-terminal",
+                "openbb-bot",
+                "openbb-sdk",
+                "openbb-hub"
             ]
         },
         {
@@ -1264,10 +1264,10 @@
             "summary": "How OpenBB can lead the future of finance using AI on top of an open source investment research platform.",
             "date_modified": "2023-04-03T00:00:00.000Z",
             "tags": [
-                "OpenAI",
+                "openai",
                 "future",
-                "ChatGPT",
-                "Discord"
+                "chatgpt",
+                "discord"
             ]
         },
         {
@@ -1316,10 +1316,10 @@
             "tags": [
                 "chatbots",
                 "finance",
-                "AI",
-                "Discord",
-                "OpenBB",
-                "OptionsFamBot"
+                "ai",
+                "discord",
+                "openbb",
+                "optionsfambot"
             ]
         },
         {
@@ -1330,11 +1330,11 @@
             "summary": "Firing is tough. This blogpost discusses how to avoid it by hiring A players, improving the hiring process, and understanding the importance of a scorecard in recruitment.",
             "date_modified": "2023-01-02T00:00:00.000Z",
             "tags": [
-                "Hiring",
-                "Management",
-                "A Players",
-                "OpenBB",
-                "Career Advice"
+                "hiring",
+                "management",
+                "a-players",
+                "openbb",
+                "career-advice"
             ]
         },
         {
@@ -1345,11 +1345,11 @@
             "summary": "Leveraging the power of ChatGPT to interact with Twitter API for real-time financial news updates.",
             "date_modified": "2022-12-11T00:00:00.000Z",
             "tags": [
-                "ChatGPT",
-                "Twitter API",
-                "Tweepy",
-                "Python",
-                "Programming"
+                "chatgpt",
+                "twitter-api",
+                "tweepy",
+                "python",
+                "programming"
             ]
         },
         {
@@ -1360,12 +1360,12 @@
             "summary": "How I wrote a machine learning paper in 1 week that got accepted to ICMLA while working full time and raised $8.8 million for OpenBB Terminal.",
             "date_modified": "2022-12-07T00:00:00.000Z",
             "tags": [
-                "Machine Learning",
-                "Data Science",
-                "Academia",
-                "ICMLA",
-                "NURVV Run",
-                "Open Source"
+                "machine-learning",
+                "data-science",
+                "academia",
+                "icmla",
+                "nurvv-run",
+                "open-source"
             ]
         },
         {
@@ -1376,10 +1376,10 @@
             "summary": "The future of finance is being reshaped by open source and AI. This post discusses the potential of these technologies in disrupting the financial industry, the advantages of open source, and the role of AI in user interface.",
             "date_modified": "2022-12-04T00:00:00.000Z",
             "tags": [
-                "Open Source",
-                "AI",
-                "Finance",
-                "Future"
+                "open-source",
+                "ai",
+                "finance",
+                "future"
             ]
         },
         {
@@ -1445,10 +1445,10 @@
             "summary": "Growing an open source community from scratch is a challenging task. This blogpost shares insights and strategies on how to effectively build and manage an open source community, using the example of the OpenBB Terminal project.",
             "date_modified": "2022-11-10T00:00:00.000Z",
             "tags": [
-                "Open Source",
-                "Community Building",
-                "Project Management",
-                "OpenBB Terminal"
+                "open-source",
+                "community-building",
+                "project-management",
+                "openbb-terminal"
             ]
         },
         {
@@ -1491,10 +1491,10 @@
             "summary": "This blog post provides a detailed walkthrough on how to conduct due diligence on $AMT using the OpenBB Terminal, a free and open source platform for financial data analysis.",
             "date_modified": "2022-10-20T00:00:00.000Z",
             "tags": [
-                "OpenBB Terminal",
-                "Investment Research",
-                "Stocks",
-                "Due Diligence"
+                "openbb-terminal",
+                "investment-research",
+                "stocks",
+                "due-diligence"
             ]
         },
         {
@@ -1505,11 +1505,11 @@
             "summary": "The future of CVs for engineers and developers lies within GitHub. This post discusses why GitHub profiles are becoming the new CVs and how they can provide a more comprehensive view of a candidate's skills and contributions.",
             "date_modified": "2022-10-15T00:00:00.000Z",
             "tags": [
-                "GitHub",
-                "CV",
-                "Career",
-                "Open Source",
-                "Developer"
+                "github",
+                "cv",
+                "career",
+                "open-source",
+                "developer"
             ]
         },
         {
@@ -1520,11 +1520,11 @@
             "summary": "Why you should consider switching from yfinance API to OpenBB SDK for financial data retrieval. OpenBB SDK offers access to multiple data sources, potential for unlimited data, and incentives for data source partners.",
             "date_modified": "2022-10-01T00:00:00.000Z",
             "tags": [
-                "OpenBB SDK",
-                "yfinance API",
-                "Financial Data",
-                "APIs",
-                "Open Source"
+                "openbb-sdk",
+                "yfinance-api",
+                "financial-data",
+                "apis",
+                "open-source"
             ]
         },
         {
@@ -1532,7 +1532,7 @@
             "content_html": "<p align=\"center\"><img width=\"600\" src=\"https://didierlopes.com/blog/2022-08-14-how-i-became-ceo-of-openbb.png\"></p>\n<br>\n<p>This post talks about my story of becoming the CEO of OpenBB, the company behind the fastest growing open source project in&nbsp;finance.</p>\n<div style=\"border-top:1px solid #0088CC;margin:1.5em 0\"></div>\n<p>Both my parents are Portuguese and emigrated to Switzerland for better conditions. This is where my brother and I were born. We moved back to our small hometown in Portugal when I was 8 years old.</p>\n<p>When I was 21 years old I moved to London to pursue my MSc in control systems at the Imperial College. I also joined a semiconductor company as a Software Design Engineer.</p>\n<p><img decoding=\"async\" loading=\"lazy\" alt=\"ezgif com-optimize (5)\" src=\"https://didierlopes.com/assets/images/2022-08-14-how-i-became-ceo-of-openbb_1-aeff3d5143f47e8db2d08e5a61f3e091.png\" width=\"720\" height=\"720\" class=\"img_ev3q\"></p>\n<p>In my spare time I learned Python so I could become more proficient in machine learning and artificial intelligence. When my mathematics professor learned of my interest in Python he challenged me to write the <a href=\"https://github.com/DidierRLopes/UnivariateTimeSeriesForecast\" target=\"_blank\" rel=\"noopener noreferrer\">code behind his PhD thesis</a> on \"<em>Data Science in the Modeling and Forecasting of Financial Time Series: from Classic methodologies to Deep Learning</em>\" which combined open source, ML/AI and finance. This was when I first started to realize my passion for financial data.</p>\n<p><img decoding=\"async\" loading=\"lazy\" alt=\"image\" src=\"https://didierlopes.com/assets/images/2022-08-14-how-i-became-ceo-of-openbb_2-35866bcaf1fac017e73a719d0c71bd51.png\" width=\"1194\" height=\"744\" class=\"img_ev3q\"></p>\n<p>I was inspired by books like \"<em>Rich dad Poor dad</em>\" which allowed me to understand that the only way to build true generational wealth is through investing. Now that I started to accumulate more savings through my professional pursuits, and with my finance interest increasing from my thesis work, I wanted to invest my own capital.</p>\n<p>What I learned was that investing was a highly cumbersome process. Unlike coding where the tooling (e.g. VSCode) is optimized for efficiency and allows us to automate a lot of processes, investing was highly inefficient and impossible to automate.</p>\n<p>I was spending hours doing my own investment research (multiple tabs open researching several different sources on a ticker, screenshot the data to put on a document or share with friends, write my thoughts, and repeat), and this had to be done for every single ticker at different instances of time otherwise the data would become irrelevant.</p>\n<p>I learned from Reddit users how they gained insights and performed due diligence. I quickly realized their \"workflow\" was just as inefficient as mine. I concluded that the only aspect of research that should require user input is the interpretation. As far as I was concerned, all data gathering should be automated.</p>\n<p>I began investigating potential investment research tools that allowed automation and couldn't find any, not even the mythical $24k/year Bloomberg terminal. I looked for platforms on GitHub where I could build on top of with no success.</p>\n<p>During Covid Christmas break, the flight to visit my parents was cancelled, so I ended up staying at home and sketching/building what would become my own investment research platform. I noticed that there were hundreds of data providers offering free data tiers where the data provided didn't correlate with each other. If I wanted access to paid datasets or more requests per minute it would be as simple as to upgrade my API key to a paid plan.</p>\n<p><img decoding=\"async\" loading=\"lazy\" alt=\"image\" src=\"https://didierlopes.com/assets/images/2022-08-14-how-i-became-ceo-of-openbb_3-4769dddf5b09bb680f3733a080614f94.png\" width=\"838\" height=\"581\" class=\"img_ev3q\"></p>\n<p>Over the next two months I built a python based command line interface in my spare time for and released the first lines of code as Open Source under the name \"Gamestonk Terminal\" since I was an investor in Gamestop and Elon Musk had recently tweeted his now infamous <a href=\"https://twitter.com/elonmusk/status/1354174279894642703?s=20\" target=\"_blank\" rel=\"noopener noreferrer\">\"Gamestonk\" tweet</a>.</p>\n<p>The project went viral in a couple of minutes on <a href=\"https://www.reddit.com/r/Python/comments/m515yk/gamestonk_terminal_the_equivalent_to_an/\" target=\"_blank\" rel=\"noopener noreferrer\">Reddit</a> and <a href=\"https://news.ycombinator.com/item?id=26258773\" target=\"_blank\" rel=\"noopener noreferrer\">HackerNews</a>. In under 24h we had over 4,000 stars on <a href=\"https://github.com/OpenBB-finance/OpenBBTerminal\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>, and hundreds of messages requesting features, thanking me for the tool, or reporting bugs.</p>\n<p>The number of issues and feature requests was overwhelming for a single person working part-time, so I created a <a href=\"https://openbb.co/discord\" target=\"_blank\" rel=\"noopener noreferrer\">Discord group</a> and started building a community of users. Many of those same first users went on to become core maintainers of the project. The community started adding new data sources, new features and even new asset classes to the project - soon after we were supporting crypto, ETFs, options, forex, and macro economy.</p>\n<p>My goal was never to build a business/company with this product. My motivation was to create a better investment research platform that was unavailable until then. When we got approached by JJ (from OSS Capital), it was a no-brainer to create OpenBB, as this would allow me to accelerate the product vision and build the world's leading investment research platform.</p>",
             "url": "https://didierlopes.com/blog/how-i-became-ceo-of-openbb",
             "title": "How I became CEO of OpenBB",
-            "summary": "This post talks about my story of becoming the CEO of OpenBB, the company behind the fastest growing open source project in finance.",
+            "summary": "This post talks about my story of becoming the CEO of OpenBB, the company behind the fastest growing open source project in finance.",
             "date_modified": "2022-08-14T00:00:00.000Z",
             "tags": [
                 "openbb",
@@ -1554,11 +1554,11 @@
             "summary": "This blog post discusses the importance of strong communities in the Web 3.0 space, the role of decentralization, and how voting frameworks based on smart contracts can empower users.",
             "date_modified": "2022-06-28T00:00:00.000Z",
             "tags": [
-                "Web3",
-                "Community",
-                "Decentralization",
-                "Blockchain",
-                "Smart Contracts"
+                "web3",
+                "community",
+                "decentralization",
+                "blockchain",
+                "smart-contracts"
             ]
         },
         {
@@ -1569,10 +1569,10 @@
             "summary": "This blog post discusses the importance of remote and flexible work hours, and how it can significantly improve work-life balance and productivity.",
             "date_modified": "2022-05-03T00:00:00.000Z",
             "tags": [
-                "Remote Work",
-                "Flexible Hours",
-                "Work Life Balance",
-                "Productivity"
+                "remote-work",
+                "flexible-hours",
+                "work-life-balance",
+                "productivity"
             ]
         },
         {
@@ -1601,10 +1601,10 @@
             "summary": "In this blog post, I share my journey of creating a Discord meme bot, the role it played in building a vibrant community around our open source project, and how you can add your own memes to the bot.",
             "date_modified": "2022-04-09T00:00:00.000Z",
             "tags": [
-                "Discord",
-                "Meme Bot",
-                "Open Source",
-                "Community Building"
+                "discord",
+                "meme-bot",
+                "open-source",
+                "community-building"
             ]
         },
         {
@@ -1615,10 +1615,10 @@
             "summary": "Meet the most advanced investment research platform. This blog post introduces Gamestonk Terminal, an advanced investment research platform, and discusses its features and automation capabilities.",
             "date_modified": "2022-03-21T00:00:00.000Z",
             "tags": [
-                "Investment Research",
-                "Gamestonk Terminal",
-                "Automation",
-                "Routines"
+                "investment-research",
+                "gamestonk-terminal",
+                "automation",
+                "routines"
             ]
         },
         {
@@ -1629,10 +1629,10 @@
             "summary": "Gamestonk Terminal's UX/UI features and the teamwork behind their implementation.",
             "date_modified": "2022-01-06T00:00:00.000Z",
             "tags": [
-                "Gamestonk Terminal",
-                "UX/UI",
-                "Software Development",
-                "Teamwork"
+                "gamestonk-terminal",
+                "ux/ui",
+                "software-development",
+                "teamwork"
             ]
         },
         {
@@ -1643,11 +1643,11 @@
             "summary": "The development journey of a new Sector and Industry Analysis feature for Gamestonk Terminal, integrating the FinanceDatabase package.",
             "date_modified": "2021-12-02T00:00:00.000Z",
             "tags": [
-                "Gamestonk Terminal",
-                "Sector Analysis",
-                "Industry Analysis",
-                "FinanceDatabase",
-                "Open Source"
+                "gamestonk-terminal",
+                "sector-analysis",
+                "industry-analysis",
+                "financedatabase",
+                "open-source"
             ]
         },
         {
@@ -1658,10 +1658,10 @@
             "summary": "Handing over the Twitter account of Gamestonk Terminal to an active community member and the impact it had on the project's growth and engagement.",
             "date_modified": "2021-11-17T00:00:00.000Z",
             "tags": [
-                "Community Building",
-                "Twitter",
-                "Open Source",
-                "Gamestonk Terminal"
+                "community-building",
+                "twitter",
+                "open-source",
+                "gamestonk-terminal"
             ]
         },
         {
@@ -1672,11 +1672,11 @@
             "summary": "The start of my journey into the world of Machine Learning, from learning Python to understanding the underlying mathematics of ML algorithms.",
             "date_modified": "2021-11-07T00:00:00.000Z",
             "tags": [
-                "Machine Learning",
-                "Python",
-                "Data Science",
-                "Education",
-                "Self-Learning"
+                "machine-learning",
+                "python",
+                "data-science",
+                "education",
+                "self-learning"
             ]
         },
         {
@@ -1687,10 +1687,10 @@
             "summary": "An unusual journey of learning about Neural Networks for a PhD thesis. This blog post details the author's experience of assisting in the programming aspect of a PhD thesis, focusing on the study of various models and their forecasting performance.",
             "date_modified": "2021-10-22T00:00:00.000Z",
             "tags": [
-                "PhD Thesis",
-                "Neural Networks",
-                "Python",
-                "Time Series Forecasting"
+                "phd-thesis",
+                "neural-networks",
+                "python",
+                "time-series-forecasting"
             ]
         },
         {
@@ -1701,12 +1701,12 @@
             "summary": "In this blogpost, I share how I created a bot in Python to automate participation in NFT giveaways on Reddit. The bot simplifies tasks such as upvoting posts, commenting, and opening Opensea links to favourite artwork.",
             "date_modified": "2021-09-30T00:00:00.000Z",
             "tags": [
-                "Python",
-                "Bot",
-                "NFT",
-                "Giveaways",
-                "Reddit",
-                "Automation"
+                "python",
+                "bot",
+                "nft",
+                "giveaways",
+                "reddit",
+                "automation"
             ]
         },
         {
@@ -1717,14 +1717,14 @@
             "summary": "Gamestonk Terminal's latest updates including Docker integration, Jupyter Lab integration, a new Hugo website, and new features. A summary of the recent developments and future plans for the open-source financial tool.",
             "date_modified": "2021-09-16T00:00:00.000Z",
             "tags": [
-                "Gamestonk Terminal",
-                "Open Source",
-                "Docker",
-                "Jupyter Lab",
-                "Hugo Website",
-                "Python",
-                "Finance",
-                "Trading"
+                "gamestonk-terminal",
+                "open-source",
+                "docker",
+                "jupyter-lab",
+                "hugo-website",
+                "python",
+                "finance",
+                "trading"
             ]
         },
         {
@@ -1735,12 +1735,12 @@
             "summary": "This blog post discusses the creation of a Python module for splitting univariate time-series data using cross-validation techniques. The module is designed to prepare data for training, validation, and testing in a Deep Neural Network (DNN).",
             "date_modified": "2021-09-04T00:00:00.000Z",
             "tags": [
-                "Python",
-                "Data Science",
-                "Deep Learning",
-                "Time Series",
-                "Cross Validation",
-                "Neural Networks"
+                "python",
+                "data-science",
+                "deep-learning",
+                "time-series",
+                "cross-validation",
+                "neural-networks"
             ]
         },
         {
@@ -1751,11 +1751,11 @@
             "summary": "Ranking and sorting a list of 99 mind-bending thriller movies using IMDbPy API in Python.",
             "date_modified": "2021-08-15T00:00:00.000Z",
             "tags": [
-                "Movies",
-                "Thrillers",
-                "IMDbPy",
-                "Python",
-                "Sorting Algorithm"
+                "movies",
+                "thrillers",
+                "imdbpy",
+                "python",
+                "sorting-algorithm"
             ]
         },
         {
@@ -1766,13 +1766,13 @@
             "summary": "In this blogpost, I share how I used the K-means algorithm to plan a visit to London. The algorithm helps to decide which attractions to visit based on the number of days of the visit and the GPS coordinates of the attractions.",
             "date_modified": "2021-08-01T00:00:00.000Z",
             "tags": [
-                "K-means",
-                "Algorithm",
-                "Travel",
-                "Efficiency",
-                "London",
-                "GPS",
-                "Clustering"
+                "k-means",
+                "algorithm",
+                "travel",
+                "efficiency",
+                "london",
+                "gps",
+                "clustering"
             ]
         },
         {
@@ -1783,10 +1783,10 @@
             "summary": "In this blogpost, I share how I developed a program to help my mum manage her recipes. The program allows for adding, editing, and removing recipes, and even includes fun minion icons.",
             "date_modified": "2021-07-23T00:00:00.000Z",
             "tags": [
-                "Python",
-                "Programming",
-                "Recipes",
-                "Software Development"
+                "python",
+                "programming",
+                "recipes",
+                "software-development"
             ]
         },
         {
@@ -1833,10 +1833,10 @@
             "summary": "In this blogpost, I share my journey of creating a customizable meme filter using Python. This filter selects a random meme based on the number of people on the screen and assigns each person to a character in the meme.",
             "date_modified": "2021-06-12T00:00:00.000Z",
             "tags": [
-                "Python",
-                "Meme Filter",
-                "Image Processing",
-                "Face Recognition"
+                "python",
+                "meme-filter",
+                "image-processing",
+                "face-recognition"
             ]
         },
         {
@@ -1847,12 +1847,12 @@
             "summary": "In this blogpost, I share my journey of starting a sustainable clothing brand, managing the project, and developing a stock management tool in C++.",
             "date_modified": "2021-05-23T00:00:00.000Z",
             "tags": [
-                "NeistPoint",
-                "Clothing Brand",
-                "Sustainability",
-                "Project Management",
-                "C++",
-                "Stock Management"
+                "neistpoint",
+                "clothing-brand",
+                "sustainability",
+                "project-management",
+                "c++",
+                "stock-management"
             ]
         },
         {
@@ -1863,11 +1863,11 @@
             "summary": "In this blogpost, we introduce Gamestonk Terminal, an open-source project that aims to be a comprehensive tool for financial analysis and stock market research. It includes functionalities for discovering stocks, market sentiment analysis, fundamental and technical analysis, due diligence, prediction techniques, and more.",
             "date_modified": "2021-04-23T00:00:00.000Z",
             "tags": [
-                "Gamestonk Terminal",
-                "Finance",
-                "Stock Market",
-                "Programming",
-                "Open Source"
+                "gamestonk-terminal",
+                "finance",
+                "stock-market",
+                "programming",
+                "open-source"
             ]
         },
         {
@@ -1878,12 +1878,12 @@
             "summary": "In this blogpost, I share how I developed an automated task to estimate the momentum of football teams for betting purposes using Beautiful Soup and Python.",
             "date_modified": "2021-04-07T00:00:00.000Z",
             "tags": [
-                "Football",
-                "Betting",
-                "Momentum",
-                "Web Scraping",
-                "Beautiful Soup",
-                "Python"
+                "football",
+                "betting",
+                "momentum",
+                "web-scraping",
+                "beautiful-soup",
+                "python"
             ]
         },
         {
@@ -1894,11 +1894,11 @@
             "summary": "In this blogpost, I introduce Gamestonk Terminal, an open-source project that aims to be a comprehensive tool for financial analysis and stock market research. It includes functionalities for discovering stocks, market sentiment analysis, fundamental and technical analysis, due diligence, prediction techniques, and more.",
             "date_modified": "2021-03-14T00:00:00.000Z",
             "tags": [
-                "Gamestonk Terminal",
-                "Finance",
-                "Stock Market",
-                "Programming",
-                "Open Source"
+                "gamestonk-terminal",
+                "finance",
+                "stock-market",
+                "programming",
+                "open-source"
             ]
         }
     ]

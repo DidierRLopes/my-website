@@ -2,7 +2,7 @@ import { type FC, useRef, useEffect, useState } from 'react';
 import * as d3 from 'd3';
 import type { EnrichedBlogItem } from '../../types/blog';
 import { trackEvent } from '../../lib/analytics';
-import { interpolateRgb } from 'd3';
+import { interpolateRgb, quadtree } from 'd3';
 
 interface GraphNode extends d3.SimulationNodeDatum {
   id: string;
@@ -43,16 +43,17 @@ function calculateRadius(wordCount: number, minWc: number, maxWc: number): numbe
 export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, searchQuery, showThoughts, showTopics }) => {
   const svgRef = useRef<SVGSVGElement | null>(null);
   const tooltipRef = useRef<HTMLDivElement | null>(null);
-  const tagsOverlayRef = useRef<HTMLDivElement | null>(null);
+  type KeywordDatum = { tag: string; x: number; y: number; cnt: number };
+  const keywordsGroupRef = useRef<SVGGElement | null>(null);
 
   const [nodes, setNodes] = useState<GraphNode[]>([]);
   const [links, setLinks] = useState<GraphLink[]>([]);
   
   const [nodeSelection, setNodeSelection] = useState<d3.Selection<d3.BaseType | SVGCircleElement, GraphNode, SVGGElement, unknown> | null>(null);
   const [linkSelection, setLinkSelection] = useState<d3.Selection<SVGLineElement, GraphLink, SVGGElement, unknown> | null>(null);
-  const [visibleTags, setVisibleTags] = useState<string[]>([]);
 
   let currentTransform = d3.zoomIdentity;
+  const computeTimerRef = useRef<number | null>(null);
 
   useEffect(() => {
     const limitedItems = items;
@@ -145,6 +146,9 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, search
         });
     }
 
+    const keywordsGroup = g.append('g');
+    keywordsGroupRef.current = keywordsGroup.node();
+    
     setNodeSelection(node);
     setLinkSelection(link);
     
@@ -177,15 +181,28 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, search
       .on('zoom', (event) => {
         currentTransform = event.transform;
         g.attr('transform', event.transform);
+        if (computeTimerRef.current) window.clearTimeout(computeTimerRef.current);
+        computeTimerRef.current = window.setTimeout(() => {
+          computeAndRenderKeywords();
+          computeTimerRef.current = null;
+        }, 200);
       })
       .on('end', () => {
-        computeVisibleTags();
+        computeAndRenderKeywords();
       });
     
     svg.call(zoom);
 
+    // Disable default double-click zoom behaviour
+    svg.on('dblclick.zoom', null);
+
+    // Custom reset on double-click
+    svg.on('dblclick', () => {
+      svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+    });
+
     // initial keywords after first layout
-    computeVisibleTags();
+    computeAndRenderKeywords();
 
     // Stop simulation after 8 seconds to save CPU
     const timeoutId = window.setTimeout(() => {
@@ -203,30 +220,81 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, search
 
   }, [nodes, links, width, height, currentTransform, showThoughts]);
 
-  const computeVisibleTags = () => {
-    const count: Record<string, number> = {};
-    for (const n of nodes) {
-      const [tx, ty] = currentTransform.apply([n.x ?? 0, n.y ?? 0]);
-      if (tx >= 0 && tx <= width && ty >= 0 && ty <= height) {
-        for (const t of n.tags) {
-          count[t] = (count[t] || 0) + 1;
+  const computeAndRenderKeywords = () => {
+    const aggregator: Record<string, { cnt: number; sx: number; sy: number }> = {};
+    const qt = quadtree(nodes, d => d.x ?? 0, d => d.y ?? 0);
+    const R = MAX_RADIUS * currentTransform.k + 5;
+    qt.visit((node, x0, y0, x1, y1) => {
+      // Skip branches outside viewport
+      if (x1 < -R || x0 > width + R || y1 < -R || y0 > height + R) return true;
+      if (!node.length) {
+        const d = node.data as GraphNode;
+        if (d.x == null || d.y == null) return false;
+        const [tx, ty] = currentTransform.apply([d.x, d.y]);
+        if (tx >= -R && tx <= width + R && ty >= -R && ty <= height + R) {
+          for (const t of d.tags) {
+            if (!aggregator[t]) aggregator[t] = { cnt: 0, sx: 0, sy: 0 };
+            aggregator[t].cnt += 1;
+            aggregator[t].sx += tx;
+            aggregator[t].sy += ty;
+          }
         }
       }
-    }
-    const sorted = Object.entries(count)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 6)
-      .map((d) => d[0]);
-    setVisibleTags(sorted);
-    if (sorted.length) trackEvent('zoom_keywords', sorted.join(','));
+      return false;
+    });
+    const data = Object.entries(aggregator)
+      .sort((a, b) => b[1].cnt - a[1].cnt)
+      .slice(0, 8)
+      .map(([tag, info]) => ({
+        tag,
+        x: info.sx / info.cnt,
+        y: info.sy / info.cnt,
+        cnt: info.cnt,
+      }));
+
+    const fontScale = d3
+      .scaleLinear()
+      .domain([1, data[0]?.cnt || 1])
+      .range([10, 24]);
+
+    if (!keywordsGroupRef.current) return;
+    const kGroupSel = d3.select<SVGGElement, unknown>(keywordsGroupRef.current);
+
+    const texts = kGroupSel
+      .selectAll<SVGTextElement, KeywordDatum>('text')
+      .data(data, d => d.tag);
+
+    const textsEnter = texts.enter().append('text')
+      .attr('fill', '#E2E8F0')
+      .attr('text-anchor', 'middle')
+      .attr('alignment-baseline', 'middle')
+      .style('pointer-events', 'none')
+      .style('opacity', 0)
+      .text(d => d.tag);
+
+    textsEnter.merge(texts as unknown as d3.Selection<SVGTextElement, KeywordDatum, SVGGElement, unknown>)
+      .transition()
+      .duration(200)
+      .style('opacity', 1)
+      .attr('x', d => d.x)
+      .attr('y', d => d.y)
+      .style('font-size', d => `${fontScale(d.cnt)}px`);
+
+    texts.exit()
+      .transition()
+      .duration(150)
+      .style('opacity', 0)
+      .remove();
+
+    if (data.length) trackEvent('zoom_keywords', data.map((d) => d.tag).join(','));
   };
 
   // React to toggles
   useEffect(() => {
     if (nodeSelection) nodeSelection.style('display', showThoughts ? 'block' : 'none');
     if (linkSelection) linkSelection.style('display', showThoughts ? 'block' : 'none');
-    if (tagsOverlayRef.current) {
-      tagsOverlayRef.current.style.display = showTopics ? 'block' : 'none';
+    if (keywordsGroupRef.current) {
+      d3.select(keywordsGroupRef.current).style('display', showTopics ? 'block' : 'none');
     }
   }, [showThoughts, showTopics, nodeSelection, linkSelection]);
 

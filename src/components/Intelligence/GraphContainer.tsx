@@ -79,6 +79,18 @@ const GraphContainer = () => {
         return items;
     }, [data, selectedTags, dateRange]);
 
+    const searchedItems = useMemo(() => {
+        if (!searchQuery) return filteredItems;
+        return filteredItems.filter(item => 
+            item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.summary.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+    }, [filteredItems, searchQuery]);
+
+    const isFiltered = useMemo(() => {
+        return searchQuery.length > 0 || selectedTags.length > 0 || dateRange[0] !== null || dateRange[1] !== null;
+    }, [searchQuery, selectedTags, dateRange]);
+
     const canShowTopics = filteredItems.length >= 7;
 
     const isMobile = dimensions.width < 640;
@@ -98,7 +110,7 @@ const GraphContainer = () => {
     return (
         <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 1rem' }}>
             {isMobile ? (
-                <BlogListFallback items={filteredItems} />
+                <BlogListFallback items={searchedItems} />
             ) : (
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     <GraphControls 
@@ -111,16 +123,57 @@ const GraphContainer = () => {
                     />
                     <div id="intelligence-graph-container" ref={containerRef} 
                         style={{ width: dimensions.width, height: dimensions.height, border: '1px solid #333', borderRadius: '8px', position: 'relative' }}>
-                        <GraphCanvas 
-                            items={filteredItems} 
-                            width={dimensions.width} 
-                            height={dimensions.height}
-                            showThoughts={true}
-                            showTopics={showTopics && canShowTopics}
-                            searchQuery={searchQuery}
-                            colorMode={colorMode}
-                        />
+                        {searchedItems.length > 0 ? (
+                            <GraphCanvas 
+                                items={filteredItems} 
+                                width={dimensions.width} 
+                                height={dimensions.height}
+                                showThoughts={true}
+                                showTopics={showTopics && canShowTopics}
+                                searchQuery={searchQuery}
+                                colorMode={colorMode}
+                            />
+                        ) : (
+                            <div style={{
+                                width: '100%',
+                                height: '100%',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                color: colorMode === 'dark' ? '#A0AEC0' : '#4A5568',
+                                fontSize: '1.2rem',
+                            }}>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth={1.5}
+                                    stroke="currentColor"
+                                    style={{ width: '48px', height: '48px', marginBottom: '1rem', opacity: 0.8 }}
+                                >
+                                    <title>No brain activity</title>
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M3.75 12h3l2.25 6L12 6l2.25 6h3"
+                                    />
+                                </svg>
+                                No brain activity reported
+                            </div>
+                        )}
                     </div>
+                    <p style={{ 
+                        color: colorMode === 'dark' ? '#888888' : '#2c3e50', 
+                        fontSize: '0.8rem', 
+                        textAlign: 'center', 
+                        marginTop: '1rem', 
+                        fontStyle: 'italic',
+                        maxWidth: '600px'
+                    }}>
+                        This page serves as a visual "second brain," mapping relationships between blog posts.
+                        Nodes are posts, with metadata determining their size, color, and connections.
+                    </p>
                 </div>
             )}
         </div>

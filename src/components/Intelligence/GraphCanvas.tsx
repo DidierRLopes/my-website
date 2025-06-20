@@ -1,4 +1,4 @@
-import { type FC, useRef, useEffect, useState, useCallback } from 'react';
+import React, { type FC, useRef, useEffect, useState, useCallback } from 'react';
 import * as d3 from 'd3';
 import type { EnrichedBlogItem } from '../../types/blog';
 import { trackEvent } from '../../lib/analytics';
@@ -166,7 +166,7 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, showTh
           .force('center', d3.forceCenter(width / 2, height / 2))
           .force('x', d3.forceX(width / 2).strength(0.02))
           .force('y', d3.forceY(height / 2).strength(0.02))
-          .force('collide', d3.forceCollide().radius(d => (radiusScale(d.wordCount) / Math.sqrt(currentTransformRef.current.k)) + 2).strength(0.8));
+          .force('collide', d3.forceCollide().radius(d => (radiusScale((d as GraphNode).wordCount) / Math.sqrt(currentTransformRef.current.k)) + 2).strength(0.8));
         
         sim.on('tick', draw)
           .on('end', () => {
@@ -184,7 +184,7 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, showTh
   // Effect to handle canvas redraw when `showThoughts` changes
   useEffect(() => {
     draw();
-  }, [draw, showThoughts]);
+  }, [draw]);
   
   // Effect to toggle visibility of SVG keywords
   useEffect(() => {
@@ -193,100 +193,111 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, showTh
     }
   }, [showTopics]);
 
+  // Function to compute and render keywords
+  const computeAndRenderKeywords = useCallback(() => {
+    const quadtree = quadtreeRef.current;
+    const keywordsGroup = keywordsGroupRef.current;
+    if (!quadtree || !keywordsGroup) return;
+
+    const transform = currentTransformRef.current;
+    const aggregator: Record<string, { cnt: number; sx: number; sy: number }> = {};
+    
+    const [x0, y0] = transform.invert([0, 0]);
+    const [x1, y1] = transform.invert([width, height]);
+    
+    quadtree.visit((node, x_0, y_0, x_1, y_1) => {
+        if (node.length || x_1 < x0 || x_0 > x1 || y_1 < y0 || y_0 > y1) {
+          return false;
+        }
+        const d = node.data;
+        for (const t of d.tags) {
+            if (!aggregator[t]) aggregator[t] = { cnt: 0, sx: 0, sy: 0 };
+            aggregator[t].cnt += 1;
+            aggregator[t].sx += d.x ?? 0;
+            aggregator[t].sy += d.y ?? 0;
+        }
+        return false;
+    });
+
+    const data = Object.entries(aggregator)
+        .sort((a, b) => b[1].cnt - a[1].cnt)
+        .slice(0, 10)
+        .map(([tag, info]) => ({
+            tag,
+            x: info.sx / info.cnt,
+            y: info.sy / info.cnt,
+            cnt: info.cnt,
+        }));
+
+    const minMaxCount = d3.extent(data, d => d.cnt);
+    const fontScale = d3.scaleLog().domain([minMaxCount[0] ?? 1, minMaxCount[1] ?? 1]).range([12, 32]);
+    
+    type KeywordDatum = { tag: string; x: number; y: number; cnt: number };
+    const texts = d3.select(keywordsGroup)
+        .selectAll<SVGTextElement, KeywordDatum>('text')
+        .data(data, (d: KeywordDatum) => d.tag);
+
+    const renderedBBoxes: ({ x: number, y: number, width: number, height: number })[] = [];
+
+    const textsEnter = texts.enter().append('text')
+        .attr('fill', colorMode === 'dark' ? '#E2E8F0' : '#1A202C')
+        .attr('text-anchor', 'middle')
+        .attr('alignment-baseline', 'middle').style('pointer-events', 'none')
+        .style('opacity', 0).text(d => d.tag)
+      .merge(texts)
+        .style('font-size', d => `${fontScale(d.cnt) / transform.k}px`)
+        .attr('x', d => d.x).attr('y', d => d.y)
+        .style('opacity', function(d) {
+          const bbox = (this as SVGTextElement).getBBox();
+          const bufferedBBox = {
+            x: bbox.x - 5,
+            y: bbox.y - 5,
+            width: bbox.width + 10,
+            height: bbox.height + 10,
+          };
+
+          let collides = false;
+          for (const otherBBox of renderedBBoxes) {
+            if (
+              bufferedBBox.x < otherBBox.x + otherBBox.width &&
+              bufferedBBox.x + bufferedBBox.width > otherBBox.x &&
+              bufferedBBox.y < otherBBox.y + otherBBox.height &&
+              bufferedBBox.y + bufferedBBox.height > otherBBox.y
+            ) {
+              collides = true;
+              break;
+            }
+          }
+
+          if (collides) {
+            return 0;
+          }
+
+          renderedBBoxes.push(bufferedBBox);
+          return 0.85;
+        })
+        .transition()
+        .duration(400);
+
+    texts.exit().transition().duration(200).style('opacity', 0).remove();
+    if (data.length) trackEvent('zoom_keywords', data.map(d => d.tag).join(','));
+  }, [width, height, colorMode]);
+
+  // Effect to compute initial keywords after nodes are positioned
+  useEffect(() => {
+    if (nodes.length > 0) {
+      const timer = setTimeout(() => {
+        quadtreeRef.current = d3.quadtree(nodes, d => d.x ?? 0, d => d.y ?? 0);
+        computeAndRenderKeywords();
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [nodes, computeAndRenderKeywords]);
+
   // Main effect for setting up D3 zoom and interactions
   useEffect(() => {
     const svgElement = svgRef.current;
     if (!svgElement) return;
-
-    type KeywordDatum = { tag: string; x: number; y: number; cnt: number };
-
-    const computeAndRenderKeywords = () => {
-      const quadtree = quadtreeRef.current;
-      const keywordsGroup = keywordsGroupRef.current;
-      if (!quadtree || !keywordsGroup) return;
-
-      const transform = currentTransformRef.current;
-      const aggregator: Record<string, { cnt: number; sx: number; sy: number }> = {};
-      
-      const [x0, y0] = transform.invert([0, 0]);
-      const [x1, y1] = transform.invert([width, height]);
-      
-      quadtree.visit((node, x_0, y_0, x_1, y_1) => {
-          if (node.length || x_1 < x0 || x_0 > x1 || y_1 < y0 || y_0 > y1) {
-            return false;
-          }
-          const d = node.data;
-          for (const t of d.tags) {
-              if (!aggregator[t]) aggregator[t] = { cnt: 0, sx: 0, sy: 0 };
-              aggregator[t].cnt += 1;
-              aggregator[t].sx += d.x ?? 0;
-              aggregator[t].sy += d.y ?? 0;
-          }
-          return false;
-      });
-
-      const data = Object.entries(aggregator)
-          .sort((a, b) => b[1].cnt - a[1].cnt)
-          .slice(0, 10)
-          .map(([tag, info]) => ({
-              tag,
-              x: info.sx / info.cnt,
-              y: info.sy / info.cnt,
-              cnt: info.cnt,
-          }));
-
-      const minMaxCount = d3.extent(data, d => d.cnt);
-      const fontScale = d3.scaleLog().domain([minMaxCount[0] ?? 1, minMaxCount[1] ?? 1]).range([12, 32]);
-      
-      const texts = d3.select(keywordsGroup)
-          .selectAll<SVGTextElement, KeywordDatum>('text')
-          .data(data, (d: KeywordDatum) => d.tag);
-
-      const renderedBBoxes: DOMRect[] = [];
-
-      const textsEnter = texts.enter().append('text')
-          .attr('fill', colorMode === 'dark' ? '#E2E8F0' : '#1A202C')
-          .attr('text-anchor', 'middle')
-          .attr('alignment-baseline', 'middle').style('pointer-events', 'none')
-          .style('opacity', 0).text(d => d.tag)
-        .merge(texts)
-          .style('font-size', d => `${fontScale(d.cnt) / transform.k}px`)
-          .attr('x', d => d.x).attr('y', d => d.y)
-          .style('opacity', function(d) {
-            const bbox = (this as SVGTextElement).getBBox();
-            const bufferedBBox = {
-              x: bbox.x - 5,
-              y: bbox.y - 5,
-              width: bbox.width + 10,
-              height: bbox.height + 10,
-            };
-
-            let collides = false;
-            for (const otherBBox of renderedBBoxes) {
-              if (
-                bufferedBBox.x < otherBBox.x + otherBBox.width &&
-                bufferedBBox.x + bufferedBBox.width > otherBBox.x &&
-                bufferedBBox.y < otherBBox.y + otherBBox.height &&
-                bufferedBBox.y + bufferedBBox.height > otherBBox.y
-              ) {
-                collides = true;
-                break;
-              }
-            }
-
-            if (collides) {
-              return 0;
-            } else {
-              renderedBBoxes.push(bufferedBBox);
-              return 0.85;
-            }
-          })
-          .transition()
-          .duration(400);
-
-      texts.exit().transition().duration(200).style('opacity', 0).remove();
-      if (data.length) trackEvent('zoom_keywords', data.map(d => d.tag).join(','));
-    };
 
     const zoom = d3.zoom<SVGSVGElement, unknown>()
       .scaleExtent([0.1, 20])
@@ -303,7 +314,7 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, showTh
       
     const svgSelection = d3.select(svgElement).call(zoom);
 
-    svgSelection.on('click', (event) => {
+    const handleClick = (event: MouseEvent) => {
         const quadtree = quadtreeRef.current;
         if (!quadtree) return;
         const transform = currentTransformRef.current;
@@ -314,39 +325,47 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, showTh
             trackEvent('node_click', found.title);
             window.open(found.url, '_blank');
         }
-    });
+    }
 
-    svgSelection.on('mousemove', (event) => {
+    const handleMouseMove = (event: MouseEvent) => {
         const quadtree = quadtreeRef.current;
         const tooltip = tooltipRef.current;
         if (!quadtree || !tooltip) return;
         
         const [mx, my] = d3.pointer(event);
-        const { x, y } = currentTransformRef.current.invert([mx, my]);
+        const [x, y] = currentTransformRef.current.invert([mx, my]);
         const found = quadtree.find(x, y, 10 / currentTransformRef.current.k);
         const tooltipSelection = d3.select(tooltip);
 
         if (found) {
+            const titleStyle = `font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; margin-bottom: 4px;`;
             tooltipSelection
               .style('display', 'block')
               .style('left', `${mx + 12}px`)
               .style('top', `${my + 12}px`)
-              .html(`<strong>${found.title}</strong><br/><span style="font-size:0.8rem;">${found.summary.slice(0,150)}...</span>`);
+              .html(`<div style="${titleStyle}">${found.title}</div><span style="font-size:0.8rem;">${found.summary.slice(0,150)}...</span>`);
         } else {
             tooltipSelection.style('display', 'none');
         }
-    });
+    }
 
-    svgSelection.on('dblclick.zoom', null);
-    svgSelection.on('dblclick', () => {
+    const handleDblClick = () => {
         svgSelection.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
-    });
+    }
+
+    svgSelection.on('click', handleClick);
+    svgSelection.on('mousemove', handleMouseMove);
+    svgSelection.on('dblclick.zoom', null);
+    svgSelection.on('dblclick', handleDblClick);
     
     return () => {
+      svgSelection.on('click', null);
+      svgSelection.on('mousemove', null);
+      svgSelection.on('dblclick', null);
       if (computeTimerRef.current) clearTimeout(computeTimerRef.current);
     }
 
-  }, [width, height, draw, colorMode]);
+  }, [draw, computeAndRenderKeywords]);
 
   useEffect(() => {
     if (searchQuery.trim().length > 0) {
@@ -377,6 +396,7 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, showTh
         height={height}
         style={{ position: 'absolute', top: 0, left: 0, zIndex: 1, pointerEvents: 'all' }}
       >
+        <title>Blog Post Relationship Graph</title>
         <g ref={keywordsGroupRef} />
       </svg>
       <div
@@ -384,8 +404,8 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, showTh
         style={{
           position: 'absolute',
           pointerEvents: 'none',
-          background: 'rgba(26,32,44,0.85)',
-          color: '#E2E8F0',
+          background: colorMode === 'dark' ? 'rgba(26,32,44,0.85)' : 'rgba(248, 249, 250, 0.9)',
+          color: colorMode === 'dark' ? '#E2E8F0' : '#1a1a1a',
           padding: '0.5rem 0.75rem',
           borderRadius: '8px',
           boxShadow: '0 4px 10px rgba(0,0,0,0.3)',
@@ -393,7 +413,8 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, showTh
           fontSize: '0.85rem',
           display: 'none',
           zIndex: 50,
-          maxWidth: '260px',
+          width: '240px',
+          border: `1px solid ${colorMode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'}`,
         }}
       />
     </>

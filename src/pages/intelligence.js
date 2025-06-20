@@ -24,9 +24,6 @@ function IntelligencePage() {
         <div style={{ maxWidth: '90%', margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
                 <h1>Intelligence</h1>
-                <p style={{ fontSize: '1.2rem', lineHeight: '1.6' }}>
-                    This page serves as a visual "second brain" by showcasing a graph map that dynamically visualizes relationships between blog posts. Each blog post is represented as a node, with metadata determining its size, color, and connectivity.
-                </p>
             </div>
             <BrowserOnly fallback={<div>Loading graph...</div>}>
                 {() => {

@@ -317,7 +317,7 @@ slug: my-journey-of-memorising-a-deck-of-52-shuffled-cards
 title: My journey of memorising a deck of 52 shuffled cards
 date: 2021-06-26
 image: /blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards.png
-tags: ['Memory Training', 'PAO System', 'Memory Palace', 'Card Memorisation']
+tags: ['memory-training', 'pao-system', 'memory-palace', 'card-memorization', 'learning-techniques', 'cognitive-skills', 'mnemonics', 'personal-challenge', 'mind-hacking']
 description: In this blogpost, I share my journey of memorising a deck of 52 shuffled cards using the PAO system and Memory Palace technique.
 ---
 
@@ -333,33 +333,33 @@ In this blogpost, I share my journey of memorising a deck of 52 shuffled cards u
 
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-A few years back, I wanted to read a book about memory and found the best-selling book **“Moonwalking with Einstein: The Art and Science of Remembering Everything”** an ideal choice. I won’t go into too much detail about the book which is a great read, if you don’t trust me, trust Bill Gates, who called the book “_absolutely phenomenal_”. But let me give you a brief sequence of events from the author and journalist of the book, Joshua Foer:
+A few years back, I wanted to read a book about memory and found the best-selling book **“Moonwalking with Einstein: The Art and Science of Remembering Everything”** an ideal choice. I won't go into too much detail about the book which is a great read, if you don't trust me, trust Bill Gates, who called the book "_absolutely phenomenal_"". But let me give you a brief sequence of events from the author and journalist of the book, Joshua Foer:
 
 - It starts by observing the extraordinary accomplishments of mental athletes at a memory championship.
-- Foer meets Tony Buzan, the trim 67-year-old English self-help guru who founded the [World Memory Championships](http://www.worldmemorychampionships.com/) in 1991 and who insists the brain is “like a muscle”: exercise it and it gets stronger.
+- Foer meets Tony Buzan, the trim 67-year-old English self-help guru who founded the [World Memory Championships](http://www.worldmemorychampionships.com/) in 1991 and who insists the brain is "like a muscle": exercise it and it gets stronger.
 - Foer learns the art of memory training.
 - He practices his memory muscles for 1 year with help of a shambling 24-year-old from Oxford who becomes his mentor.
-- He then finds himself in the finals of the US Memory Championships, alongside ‘mental athletes’ who could memorise the precise order of ten shuffled decks of cards in under an hour.
+- He then finds himself in the finals of the US Memory Championships, alongside 'mental athletes' who could memorise the precise order of ten shuffled decks of cards in under an hour.
 
-If you’re interested, here’s a [nice review](https://www.theguardian.com/science/2012/nov/21/moonwalking-einstein-joshua-foer-review) on the book.
+If you're interested, here's a [nice review](https://www.theguardian.com/science/2012/nov/21/moonwalking-einstein-joshua-foer-review) on the book.
 
 ## My thoughts after reading book
 
-After finishing this book, more than anything I was curious. Unlike Joshua Foer, I didn’t want to dedicate a full year to the cause, but I still wanted to give it a go so I could look back and think: “Here’s something pretty useless for the day-to-day. Yet, how cool is that I can memorise 52 random cards?”.
+After finishing this book, more than anything I was curious. Unlike Joshua Foer, I didn't want to dedicate a full year to the cause, but I still wanted to give it a go so I could look back and think: "Here's something pretty useless for the day-to-day. Yet, how cool is that I can memorise 52 random cards?"".
 
 ![image](/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards_1.png)
 
-For people who know me, they know how much I hate to leave things unfinished. Whether that’s a task that I set myself, or ‘just’ not leaving any pizza leftover. Therefore, I knew that if I really wanted to do this, I’d have to set aside time for it, and so I did. The text under is my journey to memorise a shuffled deck of 52 cards.
+For people who know me, they know how much I hate to leave things unfinished. Whether that's a task that I set myself, or 'just' not leaving any pizza leftover. Therefore, I knew that if I really wanted to do this, I'd have to set aside time for it, and so I did. The text under is my journey to memorise a shuffled deck of 52 cards.
 
 ## Technique (PAO + Memory Palace)
 
-The mnemonic “**Memory Palace**” technique that I was about to use was referred to on the aforementioned book. The ancient mnemonic technique was first practiced by Simonides of Ceos over 2,500 years ago. When googling the term, the definition is:
+The mnemonic "**Memory Palace**" technique that I was about to use was referred to on the aforementioned book. The ancient mnemonic technique was first practiced by Simonides of Ceos over 2,500 years ago. When googling the term, the definition is:
 
 _A Memory Palace is an imaginary location in your mind where you can store mnemonic images. The most common type of memory palace involves making a journey through a place you know well, like a building or town. Along that journey there are specific locations that you always visit in the same order._
 
 The mnemonic images would be conceived using the famous PAO system. This term means:
 
-_The Person-Action-Object System (or “PAO” System) is a popular method for memorising long random numbers and decks of playing cards. … Some people assign arbitrary images to the numbers without any phonetic conversion. The digits are usually chunked in 2 or 3 digits and then placed into loci in a Memory Palace._
+_The Person-Action-Object System (or "PAO" System) is a popular method for memorising long random numbers and decks of playing cards. … Some people assign arbitrary images to the numbers without any phonetic conversion. The digits are usually chunked in 2 or 3 digits and then placed into loci in a Memory Palace._
 
 The idea is to take advantage of what we humans are best at, photographic memory.
 
@@ -367,12 +367,12 @@ The idea is to take advantage of what we humans are best at, photographic memory
 
 ### 1. Create your own personal PAO system.
 
-For each card of the deck you have to have an associated _Person_, _Action_ and _Object_. It’s useful to have the least possible rules, and have these intersecting simultaneous cards, so that there’s less to memorise. Here’s how I did it:
+For each card of the deck you have to have an associated _Person_, _Action_ and _Object_. It's useful to have the least possible rules, and have these intersecting simultaneous cards, so that there's less to memorise. Here's how I did it:
 
 - Define a **category** for each **suit** (e.g. Hearts represents friends)
 - Define **something** for each **type**.
-    - From 1 to 10 I’ve defined the starting letter of the person (e.g. Card 7 represents a person with name starting with letter K or C).
-    - For the court (Queen, Jack, King) I’ve defined them as a powerful male/female. (e.g. King is the GOAT of the category).
+    - From 1 to 10 I've defined the starting letter of the person (e.g. Card 7 represents a person with name starting with letter K or C).
+    - For the court (Queen, Jack, King) I've defined them as a powerful male/female. (e.g. King is the GOAT of the category).
 
 Below you can see what the table looks like:
 
@@ -380,11 +380,11 @@ Below you can see what the table looks like:
 
 **Note:** The Person is the main existing link, hence it needs to be something that you think of immediately when the category and the type of the card is known.
 
-I had to change my cards several times as some of the PAO’s I had weren’t memorable enough, either because the name was too common, or because I didn’t relate that much to this person.
+I had to change my cards several times as some of the PAO's I had weren't memorable enough, either because the name was too common, or because I didn't relate that much to this person.
 
-### 2. Memorise each card with it’s PAO system
+### 2. Memorise each card with it's PAO system
 
-Once the table above is filled in, the next step is to associate each card with it’s **Person-Action-Object**. I find that as long as you can remember the person name of the card by doing the cross between category and type, the action-object comes easily.
+Once the table above is filled in, the next step is to associate each card with it's **Person-Action-Object**. I find that as long as you can remember the person name of the card by doing the cross between category and type, the action-object comes easily.
 
 For instance:
 
@@ -392,7 +392,7 @@ For instance:
 
 **Jack ♦: Einstein — Writing Equations — Blackboard**
 
-- When I see a **Diamond**, I know we are in the **Celebrities** category. Since this is a **Jack** I know it’s an **important person**. I’ve selected Musk to be my GOAT, so this has to be **Einstein**. The **writing equations** and **blackboard** comes trivially when thinking about Einstein.
+- When I see a **Diamond**, I know we are in the **Celebrities** category. Since this is a **Jack** I know it's an **important person**. I've selected Musk to be my GOAT, so this has to be **Einstein**. The **writing equations** and **blackboard** comes trivially when thinking about Einstein.
 
 **8 ♣: Floyd Mayweather — Skipping — Rope**
 
@@ -402,7 +402,7 @@ For instance:
 
 - If I see a **Spade**, I know we are in the **Cartoon** category. Since this is a King I know that this character is the **GOAT**. Which immediately triggers my brain to Goku, since it used to be my favourite cartoon as a kid. Trivially, comes the powering up as action, and the blonde hair as object.
 
-In order to remember all the cards, my trick was to have a deck of cards where on the back of each card I wrote its own PAO. So that if I didn’t remember, instead of looking at the table, I could look at the back of the card. However, I find it important to sometimes not quit trying to remember immediately, as when you initially struggle to remember a card, when you eventually do, your brain retains this information so much better.
+In order to remember all the cards, my trick was to have a deck of cards where on the back of each card I wrote its own PAO. So that if I didn't remember, instead of looking at the table, I could look at the back of the card. However, I find it important to sometimes not quit trying to remember immediately, as when you initially struggle to remember a card, when you eventually do, your brain retains this information so much better.
 
 **Note: At this step you may realise that you keep forgetting the same PAO card. I recommend you going back to step 1 and re-defining it.** Once I did this to the cards I kept forgetting, I was in a much better position.
 
@@ -410,7 +410,7 @@ In order to remember all the cards, my trick was to have a deck of cards where o
 
 This is the easiest step. I used the house I grew up in in Portugal, and decided to place 4 PAO instruments (i.e. 12 cards) per house division. Meaning that by the time I was in the first room upstairs, I was already 36 cards down the deck.
 
-Since I’m not living in Portugal, let me show you what I mean by using a picture of my current living room in London. The spots I would select in here would have been: 1. Top of table with candles; 2. Top of side table; 3. Inside my gecko’s vivarium; 4. As a program on the TV.
+Since I'm not living in Portugal, let me show you what I mean by using a picture of my current living room in London. The spots I would select in here would have been: 1. Top of table with candles; 2. Top of side table; 3. Inside my gecko's vivarium; 4. As a program on the TV.
 
 ![image](/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards_4.png)
 
@@ -420,7 +420,7 @@ Since I’m not living in Portugal, let me show you what I mean by using a pictu
 
 This is where the creativity comes in. **When picking 3 cards from the deck, you picture the Person of the 1st card, the Action of the 2nd one, and the Object of the 3rd one.**
 
-Let’s imagine we’ve got the cards aforementioned.
+Let's imagine we've got the cards aforementioned.
 
 **- Card 1: Jack ♦**
   * Einstein — Writing Equations — Blackboard
@@ -435,33 +435,33 @@ In my brain, this would lead to
 
 ![image](/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards_5.png)
 
-**Note: At this point you may realise that some combos of cards don’t work well together. **If this is bad enough to not make you remember the 3 card PAO, I recommend updating your PAO system to something that’s easier to generalise.
+**Note: At this point you may realise that some combos of cards don't work well together. **If this is bad enough to not make you remember the 3 card PAO, I recommend updating your PAO system to something that's easier to generalise.
 
 ### 5. Place each 3 cards PAO onto the memory palace
 
-For instance, if I were to place the **Einstein Skipping with Blonde Hair** on the **3rd spot of my living room (my gecko’s vivarium)**, in my head, I would picture something like this:
+For instance, if I were to place the **Einstein Skipping with Blonde Hair** on the **3rd spot of my living room (my gecko's vivarium)**, in my head, I would picture something like this:
 
 ![image](/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards_6.png)
 
-**Note: I recommend trying to have the 3 card PAO interacting with the environment to improve memory.** In this case, I would have thought about the Blonde Skipping Einstein having to do skipping so fast that the gecko coudn’t come close because the rope was going too fast. The more original/different, the more chances you have to remember this scenario.
+**Note: I recommend trying to have the 3 card PAO interacting with the environment to improve memory.** In this case, I would have thought about the Blonde Skipping Einstein having to do skipping so fast that the gecko coudn't come close because the rope was going too fast. The more original/different, the more chances you have to remember this scenario.
 
 ### 6. Re-iterate the memory palace with new 3 card PAO every time
 
-Instead of memorising a new 3 card PAO in a memory palace location and then moving on, I always go back to the start and think about all the previous 3 card PAO’s from start. This will ensure you don’t forget the oldest 3 card PAO. In fact, it will make it so that the oldest 3 card PAO are repeated more times than the newer ones, so it’s all balanced out.
+Instead of memorising a new 3 card PAO in a memory palace location and then moving on, I always go back to the start and think about all the previous 3 card PAO's from start. This will ensure you don't forget the oldest 3 card PAO. In fact, it will make it so that the oldest 3 card PAO are repeated more times than the newer ones, so it's all balanced out.
 
 ### 7. Practice and Practice
 
 I found out that after memorising my PAO system (which took a long time) and the memory palace, it was fairly easy to memorise the shuffled 52 deck of cards. However, it was taking me way too long to memorise it AND say it out loud.
 
-Once I started practicing more and more time started decreasing. The last time I tried, I managed to do it under 10 minutes, which is not great but I’ll take it. As I mentioned, I just wanted to be able to do it, I didn’t care much about the time.
+Once I started practicing more and more time started decreasing. The last time I tried, I managed to do it under 10 minutes, which is not great but I'll take it. As I mentioned, I just wanted to be able to do it, I didn't care much about the time.
 
-Also, I still needed to think about the category + type of the card every-time, I think the time to memorise the deck of cards decreases exponentially once you actually associate each card image to it’s PAO. But for that you need to practice more, which for me was getting boring.
+Also, I still needed to think about the category + type of the card every-time, I think the time to memorise the deck of cards decreases exponentially once you actually associate each card image to it's PAO. But for that you need to practice more, which for me was getting boring.
 
 ...
 
 This is a different post than the ones I usually do, but I find it extremely interesting. Hence why I was keen on sharing it.
 
-Let me know if you’ve heard about it, or want to give this a go.
+Let me know if you've heard about it, or want to give this a go.
 
 Thanks for reading!
 
@@ -473,7 +473,7 @@ slug: household-bills-program
 title: Household bills Program
 date: 2021-07-17
 image: /blog/2021-07-17-household-bills-program.png
-tags: ['Java', 'Programming', 'GUI', 'Software Development', 'Side Project']
+tags: ['side-project', 'java', 'programming', 'gui', 'origin-story', 'learning-to-code', 'software-development']
 description: In this blogpost, I share my journey of creating a program to split household bills. This was my first side project where I used Java to create a GUI application.
 ---
 
@@ -493,19 +493,19 @@ The open source code is available [here](https://github.com/DidierRLopes/Househo
 
 **My first side project.**
 
-Before University, I spent most of my spare time playing counter-strike (my steam account had **more than 1000 hours played**, that’s more than 41 entire days playing in a row). I was a decent player I’d say, you can see a compilation of “almosts” I’ve done [here](https://www.youtube.com/watch?v=ocsJzNJJB50).
+Before University, I spent most of my spare time playing counter-strike (my steam account had **more than 1000 hours played**, that's more than 41 entire days playing in a row). I was a decent player I'd say, you can see a compilation of "almosts" I've done [here](https://www.youtube.com/watch?v=ocsJzNJJB50).
 
-However, I knew this wasn’t the way. I realised that if I used the amount of time I was spending on online games for learning, I would have a much bigger satisfaction return. And, in the long term, my life would be better.
+However, I knew this wasn't the way. I realised that if I used the amount of time I was spending on online games for learning, I would have a much bigger satisfaction return. And, in the long term, my life would be better.
 
-**So I started studying hard.** I started valuing my time more, and declined most of the parties I was invited to because I was busy working late hours. Don’t get me wrong, I’m an easy person. I like to think I make friends easily. However, I just had different priorities, and partying just wasn’t one of them. As my parents say: _“Everything has its own time”_.
+**So I started studying hard.** I started valuing my time more, and declined most of the parties I was invited to because I was busy working late hours. Don't get me wrong, I'm an easy person. I like to think I make friends easily. However, I just had different priorities, and partying just wasn't one of them. As my parents say: _"Everything has its own time"_.
 
-In my 2nd year of University, I was getting really good grades, which means that I started having discussions with the other best students in the course. **That’s how I met one of the smartest people I know to this day**. This guy was a proper hands-on person, he didn’t study half the time I did, but he was always busy with something.
+In my 2nd year of University, I was getting really good grades, which means that I started having discussions with the other best students in the course. **That's how I met one of the smartest people I know to this day**. This guy was a proper hands-on person, he didn't study half the time I did, but he was always busy with something.
 
-He had a band, developed his own personalised guitar pedals and amplifiers, and developed some apps for fun. He did this all while having excellent results at University, which is insane. That’s when I realised that he was not only giving more priority to these hobbies in relation to partying or meeting people, **BUT also in relation to doing courseworks or studying for exams**. He’d never fail a coursework/exam, but that further study could have bumped a grade from 17 to a 19 out of 20.
+He had a band, developed his own personalised guitar pedals and amplifiers, and developed some apps for fun. He did this all while having excellent results at University, which is insane. That's when I realised that he was not only giving more priority to these hobbies in relation to partying or meeting people, **BUT also in relation to doing courseworks or studying for exams**. He'd never fail a coursework/exam, but that further study could have bumped a grade from 17 to a 19 out of 20.
 
 One day, we were meant to meet at his place to work on a coursework together, and he shown me an app that he had developed for him and his girlfriend. The app was a simple command line interface that was able to split their usual household bills (rent, water bill, food shop, cat food, etc). **I found that fascinating.**
 
-I told him I would create one for myself. Since I had read about how to use Java to make a pretty GUI, I thought why not give this a go (although I had no idea about OOP). In addition, I didn’t want my program to look the same as his, so I thought my version could be as if it was an upgrade.
+I told him I would create one for myself. Since I had read about how to use Java to make a pretty GUI, I thought why not give this a go (although I had no idea about OOP). In addition, I didn't want my program to look the same as his, so I thought my version could be as if it was an upgrade.
 
 ...
 
@@ -523,9 +523,9 @@ The planning steps were:
 
 **4. Work out the math associated with the splitting and giving**
 
-The development process was to **“divide to conquer”**. I split the tasks into several sub-tasks, and after every new little code change I was testing the code to make sure that nothing was broken. I re-iterate through design and code several times, until I was happy with my solution. Then I did some clean-up/improvements, such as: Adding pictures of the users, Login password, Frenchies as icons.
+The development process was to **"divide to conquer"**. I split the tasks into several sub-tasks, and after every new little code change I was testing the code to make sure that nothing was broken. I re-iterate through design and code several times, until I was happy with my solution. Then I did some clean-up/improvements, such as: Adding pictures of the users, Login password, Frenchies as icons.
 
-**On a funny side note:** As I didn’t know how to work with DBs at that time, I used text files to save and load all the information. Meaning that if my brother ever opened one of those text files (which weren’t properly hidden…), I could have passed from him owing me 100 euros to me owing him 10 million. The software was on his laptop, and I had an hardcoded password, so in theory he couldn’t manually add any bill without my presence — I guess that was enough for him to think that the product was bullet-proof.
+**On a funny side note:** As I didn't know how to work with DBs at that time, I used text files to save and load all the information. Meaning that if my brother ever opened one of those text files (which weren't properly hidden...), I could have passed from him owing me 100 euros to me owing him 10 million. The software was on his laptop, and I had an hardcoded password, so in theory he couldn't manually add any bill without my presence -- I guess that was enough for him to think that the product was bullet-proof.
 
 See images below of the program:
 
@@ -545,7 +545,7 @@ See images below of the program:
 
 You can find more information about this on my GitHub, [here](https://github.com/DidierRLopes/HouseholdBills).
 
-**The program ended up being used for more than 3 years.** Since I lived with other people other than my brother, I had to update the name/image on the program to represent that. Since I was new to coding, I didn’t think about the future. Therefore, when that time came, I had to manually replace the names one by one in the code. I also had friends requesting to use the program, which lead to me adapting this to their names/figures.
+**The program ended up being used for more than 3 years.** Since I lived with other people other than my brother, I had to update the name/image on the program to represent that. Since I was new to coding, I didn't think about the future. Therefore, when that time came, I had to manually replace the names one by one in the code. I also had friends requesting to use the program, which lead to me adapting this to their names/figures.
 
 It was a fun project and I definitely learned loads from it. The most important thing was that I was able to do whatever **I wanted software-wise as long as I dedicated enough time for it.**
 
@@ -1549,7 +1549,7 @@ slug: looking-for-a-new-tattoo-openbb-has-you-covered-literally
 title: Looking for a new tattoo? OpenBB has you covered… literally.
 date: 2022-04-21
 image: /blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally.png
-tags: ['OpenBB', 'Marketing', 'Tattoo', 'Brand Awareness']
+tags: ['openbb', 'marketing', 'branding', 'brand-awareness', 'tattoo', 'guerilla-marketing', 'startup-culture', 'founder-story']
 description: Exploring unconventional ways to increase brand visibility, OpenBB's co-founder gets a tattoo of the company logo. This blog post discusses the thought process behind this unique marketing strategy.
 ---
 
@@ -1565,29 +1565,29 @@ Exploring unconventional ways to increase brand visibility, OpenBB's co-founder 
 
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-When [OpenBB Terminal](https://github.com/OpenBB-finance/OpenBBTerminal) started last year, I went from having your typical career as a Software Engineer to becoming a co-founder & CEO of a C-Corporation overnight. One thing that I’ve really learnt from this change, is I can no longer code for 12–16 hours a day straight as my role now involves so much more than this… and most interestingly, one of those things is marketing.
+When [OpenBB Terminal](https://github.com/OpenBB-finance/OpenBBTerminal) started last year, I went from having your typical career as a Software Engineer to becoming a co-founder & CEO of a C-Corporation overnight. One thing that I've really learnt from this change, is I can no longer code for 12–16 hours a day straight as my role now involves so much more than this… and most interestingly, one of those things is marketing.
 
 During Easter in Lisbon, I was thinking about how to increase the visability of [OpenBB](https://openbb.co/). _An investment research platform for everyone, anywhere_. Seems self-explanatory and something most of us would relate to, but the problem is reaching a bigger audience.
 
 Due to [our $8.5M funding](https://openbb.co/blog/gme-didnt-take-me-to-the-moon-but-gamestonk-terminal-did) we have money in the bank, which means we can afford to do some ads campaigns. However, I very much dislike the traditional type of ads, whether that is with Google, Instagram, Twitter or YouTube. Particularly YouTube ones, when I see an ad there I immediately think less of the product being advertised due to how intrusive these are.
 
-That’s why I started thinking of ways to share our OpenBB brand in a non-intrusive way. In fact, I went one step further and started thinking when I personally would welcome ads.
+That's why I started thinking of ways to share our OpenBB brand in a non-intrusive way. In fact, I went one step further and started thinking when I personally would welcome ads.
 
-Funnily enough, the first thing that came to my mind was when I go to the bathroom without my phone. Although there’s no ads on the back of shampoos/shower gel/soap/spray, I would very much welcome them.
+Funnily enough, the first thing that came to my mind was when I go to the bathroom without my phone. Although there's no ads on the back of shampoos/shower gel/soap/spray, I would very much welcome them.
 
 ![image](/blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally_1.png)
 
-It’s not like knowing the %s of ingredients that makes up cleaning products has a lot of use cases…
+It's not like knowing the %s of ingredients that makes up cleaning products has a lot of use cases…
 
-This brought me to the conclusion that I would only welcome ads if I was bored and didn’t have anything keeping me “too busy”. This immediately made me think of London underground ads (the most effective type of DOOH imho). I always read those ads. The main reason being that I don’t have WiFi underground and the noise is too loud to listen to a podcast. Hence, I imagined the underground looking like:
+This brought me to the conclusion that I would only welcome ads if I was bored and didn't have anything keeping me "too busy". This immediately made me think of London underground ads (the most effective type of DOOH imho). I always read those ads. The main reason being that I don't have WiFi underground and the noise is too loud to listen to a podcast. Hence, I imagined the underground looking like:
 
 ![image](/blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally_2.png)
 
 When I checked for the prices, I was looking at a marketing campaign for a couple of days in a couple of stations costing over 5 digits, which is quite expensive for the short time-span.
 
-Therefore, I started to think of cheaper alternatives that yielded a better ROI. The next thing that passed through my mind was wearing OpenBB swag (yet to be revealed, [subscribe to our newsletter](https://openbb.co/newsletter) to know more). However, I feel like nowadays everyone has a t-shirt with a different logo and these aren’t as noticeable as before — at least that’s my perspective.
+Therefore, I started to think of cheaper alternatives that yielded a better ROI. The next thing that passed through my mind was wearing OpenBB swag (yet to be revealed, [subscribe to our newsletter](https://openbb.co/newsletter) to know more). However, I feel like nowadays everyone has a t-shirt with a different logo and these aren't as noticeable as before — at least that's my perspective.
 
-This lead me to think: **What about a tattoo?** It’s a similar concept than OpenBB clothes but more powerful. In addition, when wearing OpenBB clothes with a visible tattoo, this will create a “curiosity” effect since the symbol is repeated (clothes and tattoo). In addition, I’ve not come across anyone using their body to express their brand.
+This lead me to think: **What about a tattoo?** It's a similar concept than OpenBB clothes but more powerful. In addition, when wearing OpenBB clothes with a visible tattoo, this will create a "curiosity" effect since the symbol is repeated (clothes and tattoo). In addition, I've not come across anyone using their body to express their brand.
 
 Later that day I booked a tattoo slot, paid 100 euros, and got the OpenBB logo on the back of my arm as shown below,
 
@@ -1597,7 +1597,7 @@ I will let you know on my socials how many people ask about this tattoo over the
 
 And if you like [our logo](https://www.openbb.design/9242dc28c/p/809a44-logo) and [our values](https://www.openbb.design/9242dc28c/p/91bbcc-our-values), OpenBB will pay you for the tattoo.
 
-**One things for sure, now I can definitely put the gym membership as a company expense since I’m a walking billboard 😄**
+**One things for sure, now I can definitely put the gym membership as a company expense since I'm a walking billboard 😄**
 
 The first walking/running/coding/eating/drinking OpenBB billboard.
 
@@ -1797,7 +1797,7 @@ slug: how-i-became-ceo-of-openbb
 title: How I became CEO of OpenBB
 date: 2022-08-14
 image: /blog/2022-08-14-how-i-became-ceo-of-openbb.png
-tags: ['python', 'publishing', 'package', 'pypi']
+tags: ['openbb', 'ceo', 'founder-story', 'origin-story', 'startup', 'open-source', 'career-path', 'entrepreneurship', 'side-project']
 description: This post talks about my story of becoming the CEO of OpenBB, the company behind the fastest growing open source project in finance.
 ---
 
@@ -2174,7 +2174,7 @@ slug: how-to-convert-a-twitter-thread-into-a-linkedin-carousel-in-seconds
 title: Twitter thread to LinkedIn carousel in python
 date: 2022-10-23
 image: /blog/2022-10-23-how-to-convert-a-twitter-thread-into-a-linkedin-carousel-in-seconds.png
-tags: ['Python', 'LinkedIn', 'Twitter', 'Carousel', 'Content Creation']
+tags: ['python', 'linkedin', 'twitter', 'carousel', 'content-creation', 'automation', 'api', 'side-project']
 ---
 
 <p align="center">
@@ -2195,7 +2195,7 @@ As content creators, it would be good if the same content could be utilised acro
 
 I noticed recently that LinkedIn carousels have been picking a lot of traction, and given I have some nice Twitter threads ([example](https://twitter.com/didier_lopes/status/1570731358204600323?s=20&t=SAO9fD7FR7jeTE-6kem6Mg)) I thought that it would be great if I could convert them into a LinkedIn carousel.
 
-So, I looked for free tools and didn’t find anything good enough. I ended up using [canvas](https://canvas.apps.chrome/) to re-create the thread — which you can find [here](https://www.linkedin.com/posts/didier-lopes_due-diligence-on-amt-using-openbb-terminal-activity-6977569279395176448-TFMn?utm_source=share&utm_medium=member_desktop). It worked well, but it was time consuming and for most cases, I don’t want to be messing around with the design side of things.
+So, I looked for free tools and didn't find anything good enough. I ended up using [canvas](https://canvas.apps.chrome/) to re-create the thread — which you can find [here](https://www.linkedin.com/posts/didier-lopes_due-diligence-on-amt-using-openbb-terminal-activity-6977569279395176448-TFMn?utm_source=share&utm_medium=member_desktop). It worked well, but it was time consuming and for most cases, I don't want to be messing around with the design side of things.
 
 ![image](/blog/2022-10-23-how-to-convert-a-twitter-thread-into-a-linkedin-carousel-in-seconds_1.png)
 
@@ -2205,7 +2205,7 @@ And as usual, I open sourced it: https://github.com/DidierRLopes/thread-to-carou
 
 This tool is far from perfect, and a lot can be improved on the design side of things to: Recognize emojis; Highlight mentions; Change the size of the box based on the text; Better text placement when images attached; Better URL link display.
 
-The goal for me wasn’t to build a perfect tool, but something easy enough that did the job. And, as the project is open source, I expect to have users contributing to the script so that it can be improved over time.
+The goal for me wasn't to build a perfect tool, but something easy enough that did the job. And, as the project is open source, I expect to have users contributing to the script so that it can be improved over time.
 
 Today I run it using:
 
@@ -2408,7 +2408,7 @@ slug: 5-steps-i-used-to-change-my-job-title-in-less-than-1-year
 title: 5 steps I used to change my job title in less than 1 year
 date: 2022-11-14
 image: /blog/2022-11-14-5-steps-i-used-to-change-my-job-title-in-less-than-1-year.png
-tags: ['career', 'job change', 'sensor fusion engineer', 'roadmap', 'hard work']
+tags: ['career-path', 'career-growth', 'job-title', 'promotion', 'skill-development', 'self-improvement', 'personal-story', 'hard-work', 'engineering']
 description: This blog post outlines the five steps I took to change my job title from an Embedded Firmware Engineer to a Sensor Fusion Engineer in less than a year. It provides a roadmap for others who may be looking to make a similar career transition.
 ---
 
@@ -2424,7 +2424,7 @@ This blog post outlines the five steps I took to change my job title from an Emb
 
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-In March 2020, I joined a startup as an Embedded Firmware Engineer. The startup’s product focuses on smart running insoles with lightweight trackers that fit any running shoes.
+In March 2020, I joined a startup as an Embedded Firmware Engineer. The startup's product focuses on smart running insoles with lightweight trackers that fit any running shoes.
 
 The company was small, and the firmware team was myself and 2 Senior Embedded Firmware Engineers.
 
@@ -2440,7 +2440,7 @@ This is very important, as your manager can keep this in the back of their mind 
 
 ## Define a roadmap
 
-I asked my manager: “_What do I need to do to be recognized as a Sensor Fusion Engineer_”.
+I asked my manager: "What do I need to do to be recognized as a Sensor Fusion Engineer".
 
 Knowing about the matter is not enough, you want to have the credentials so that you can jump faster in your career.
 
@@ -2466,11 +2466,11 @@ This also allowed myself to look back and realize my own progress. I would spend
 
 ## Prove yourself
 
-Don’t miss an opportunity to prove yourself.
+Don't miss an opportunity to prove yourself.
 
 This is the most critical point, you need to prove that you are capable of delivering by actually demonstrating a real example.
 
-This is the egg or chicken first problem. When you don’t have the initial experience, your company won’t trust you to apply your knowledge. But if your company doesn’t give you the chance you will never get the experience.
+This is the egg or chicken first problem. When you don't have the initial experience, your company won't trust you to apply your knowledge. But if your company doesn't give you the chance you will never get the experience.
 
 In our case, users started getting weird jumps in altitude reported by the trackers. And we needed to figure out the issue fast as this was increasing the churn. I immediately knew I was able to solve this, and knew I had to grab this opportunity.
 
@@ -2482,11 +2482,11 @@ I proceeded to implement a Kalman Filter solution to consider GPS readings as we
 
 In the daily standup the next day, I had accomplished most of my tasks for the sprint and asked the product owner if I could take a shot at fixing the altitude issue. He was a bit hesitant, but I had a notebook ready to show the problem recreated and my proposed solution in Python.
 
-He accepted and gave me the next 3 days to work on it and to present results on Monday. I didn’t sleep until that Monday. Implementing from Python to C++ was the easy part. The hard part was debugging + optimizing the weights of the Kalman Filter.
+He accepted and gave me the next 3 days to work on it and to present results on Monday. I didn't sleep until that Monday. Implementing from Python to C++ was the easy part. The hard part was debugging + optimizing the weights of the Kalman Filter.
 
 I was touching the code. Performing an over the air upgrade. Going outside for a run in a track with a bridge where I knew the altitude. Analyzing results at home. Iterate.
 
-Monday arrived and I presented results, and they looked so much better. The proposed solution was accepted. Our INS algorithm hadn’t changed in a long time, so a lot of testing was needed.
+Monday arrived and I presented results, and they looked so much better. The proposed solution was accepted. Our INS algorithm hadn't changed in a long time, so a lot of testing was needed.
 
 After that, the company accepted to offer me the title of Sensor Fusion engineer. Without a pay rise, but that was fine as for me it was about speeding up my career.
 
@@ -2496,9 +2496,9 @@ After that, the company accepted to offer me the title of Sensor Fusion engineer
 - Define roadmap
 - Work towards that roadmap
 - Frequently revise roadmap
-- Don’t miss an opportunity to prove yourself
+- Don't miss an opportunity to prove yourself
 
-**Note:** If the company doesn’t give you a chance to prove yourself, you should interview for that position with other companies. And if another company offers you that job, you will have the leverage that another company perceives you as that.
+**Note:** If the company doesn't give you a chance to prove yourself, you should interview for that position with other companies. And if another company offers you that job, you will have the leverage that another company perceives you as that.
 
 I like [this video](https://youtube.com/shorts/x71Rm0MWVHY?si=BvtmjrE31d6U1bpV) about understanding your market value. And I think it can be extended in terms of your skillset if you want to change your role.
 
@@ -2512,7 +2512,7 @@ slug: sweepstake-world-cup-2022-for-your-startup-team
 title: Sweepstake World Cup 2022 for your startup team
 date: 2022-11-26
 image: /blog/2022-11-26-sweepstake-world-cup-2022-for-your-startup-team.png
-tags: ['World Cup 2022', 'Startup Team', 'Sweepstake', 'Team Building', 'Slack Bot']
+tags: ['team-building', 'startup-culture', 'world-cup', 'sweepstake', 'slack-bot', 'python', 'side-project']
 description: In this blogpost, we share how we organized a World Cup 2022 sweepstake for our startup team as a team building activity, and how we built a slack bot to facilitate discussions around the event.
 ---
 
@@ -2544,13 +2544,13 @@ This allowed us to spin the wheel of team members and then spin wheel of countri
 
 ...
 
-The best part about the sweepstake for me, is that the team members that don’t usually interact with each other on a day to day basis have the opportunity to talk amongst themselves for this.
+The best part about the sweepstake for me, is that the team members that don't usually interact with each other on a day to day basis have the opportunity to talk amongst themselves for this.
 
 So, to encourage these team interactions, the first step was to create a slack channel #worldcup-2022 that we could use to discuss each game.
 
-**But that isn’t enough**, because sometimes you require a trigger to start a discussion about the results and the next fixtures.
+**But that isn't enough**, because sometimes you require a trigger to start a discussion about the results and the next fixtures.
 
-I looked for a slack bot that achieved this, but **I didn’t find one**.
+I looked for a slack bot that achieved this, but **I didn't find one**.
 
 So I built one using Python which you can find [here](https://github.com/DidierRLopes/worldcup2022-sweepstake-slackbot).
 
@@ -2558,7 +2558,7 @@ This is the notification that the #worldcup-2022 receives everyday after all the
 
 ![image](/blog/2022-11-26-sweepstake-world-cup-2022-for-your-startup-team_2.png)
 
-The outcome has been great so far! Our team engagement is even higher than usual and we see team members that don’t work directly with each other having the opportunity to get to know others better.
+The outcome has been great so far! Our team engagement is even higher than usual and we see team members that don't work directly with each other having the opportunity to get to know others better.
 
 If you want to do the same for your team, follow the instructions highlighted [here](https://github.com/DidierRLopes/worldcup2022-sweepstake-slackbot).
 
@@ -2572,7 +2572,7 @@ slug: bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released
 title: Bloomberg Terminal is no more. OpenBB Terminal 2.0 has just been released.
 date: 2022-11-29
 image: /blog/2022-11-29-bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released.png
-tags: ['OpenBB Terminal 2.0', 'Investment Research', 'Financial Data', 'AI', 'ML', 'SDK']
+tags: ['openbb', 'product-launch', 'investment-research', 'sdk', 'api', 'ai', 'ml', 'open-source', 'fintech']
 description: OpenBB Terminal 2.0 has been released. This blog post discusses the new features and improvements, including the release of OpenBB SDK, a state-of-the-art AI/ML toolkit for the financial industry, and the vision for a community-driven investment research platform.
 ---
 
@@ -2594,16 +2594,16 @@ Almost 2 years ago, I started building my own investment research platform. 2 mo
 
 Since then, we surpassed [17,800 stars on Github](https://github.com/OpenBB-finance/OpenBBTerminal). Raised $ 8.8 million in our seed round. Build a very competitive team and our OpenBB brand is now recognized by most in the financial space. You can read more about our story [here](https://openbb.co/blog/gme-didnt-take-me-to-the-moon-but-gamestonk-terminal-did).
 
-**Our mission to democratize investment research has not changed.** Over the past few months we have been heads down and building and today I’m excited to share with you the announcement of OpenBB Terminal 2.0.
+**Our mission to democratize investment research has not changed.** Over the past few months we have been heads down and building and today I'm excited to share with you the announcement of OpenBB Terminal 2.0.
 
 The headline is:
 
-> _OpenBB Terminal 2.0 is more than an application, it’s a platform._
+> _OpenBB Terminal 2.0 is more than an application, it's a platform._
 
 <br />
 
 A summary:
-- We are releasing OpenBB SDK which allows developers to use a single API to access the world’s raw financial data in order to build their own products / dashboards.
+- We are releasing OpenBB SDK which allows developers to use a single API to access the world's raw financial data in order to build their own products / dashboards.
 
 The SDK will allow users to create report templates in a matter of minutes and run them for custom tickers at any time in a matter of seconds; Instead of spending hours and starting a report from scratch every single time. We envision a world where the community can share these and help each other at becoming better investors.
 
@@ -3442,7 +3442,7 @@ slug: how-to-get-hired-by-an-exciting-tech-startup-in-2023
 title: How to get hired by an exciting tech startup in 2023
 date: 2023-01-22
 image: /blog/2023-01-22-how-to-get-hired-by-an-exciting-tech-startup-in-2023.png
-tags: ['Career Advice', 'Tech Startups', 'Open Source', 'Job Hunting', 'Software Engineering']
+tags: ['career-advice', 'tech-startups', 'open-source', 'job-hunting', 'hiring', 'recruiting', 'software-engineering', 'personal-branding']
 description: The future is a strange place. We’re not entirely sure what it will look like, but we do know that it will be shaped by the choices we make today. And while I can’t tell you exactly how to get a job in 2023, I can help you set yourself up for success by showing you some of the best ways to build your career today.
 ---
 
@@ -3533,7 +3533,7 @@ slug: how-i-used-openai-api-to-improve-our-product-documentation
 title: How I Used OpenAI API to improve our product documentation
 date: 2023-04-01
 image: /blog/2023-04-01-how-i-used-openai-api-to-improve-our-product-documentation.png
-tags: ['OpenAI', 'API', 'Product Documentation', 'ChatGPT', 'Discord', 'OpenBB Bot']
+tags: ['openai', 'api', 'chatgpt', 'llm', 'documentation', 'automation', 'openbb-bot', 'discord']
 description: In this blog post, I share how I used the OpenAI API to improve our product documentation. I used ChatGPT to generate more detailed descriptions for our OpenBB Bot Discord commands, making them more understandable for new users.
 ---
 
@@ -4605,7 +4605,7 @@ slug: from-open-source-to-open-startup
 title: From Open Source to Open Startup
 date: 2023-07-06
 image: /blog/2023-07-06-from-open-source-to-open-startup.png
-tags: ['open-source', 'open-startup', 'transparency', 'financial world', 'OpenBB']
+tags: ['open-source', 'open-startup', 'transparency', 'openbb', 'startup-culture', 'business-metrics', 'community']
 description: From Open Source to Open Startup. A journey of OpenBB towards transparency in the financial world.
 ---
 
@@ -4621,11 +4621,11 @@ From Open Source to Open Startup: A journey of OpenBB towards transparency in th
 
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-Being open source isn’t enough, at OpenBB we want to accelerate the transparency in the financial world.
+Being open source isn't enough, at OpenBB we want to accelerate the transparency in the financial world.
 
-I want to start this blogpost by introducing the concept of an open startup. As this phrase can often be interpreted differently, here’s the standard definition that ChatGPT gave me:
+I want to start this blogpost by introducing the concept of an open startup. As this phrase can often be interpreted differently, here's the standard definition that ChatGPT gave me:
 
-> _“An open startup is a company that practices open innovation and transparent communication with its stakeholders, including customers, employees, and investors. This means that the company is willing to share information about its products, services, and business operations with the public and is open to input and feedback from all stakeholders._
+> _"An open startup is a company that practices open innovation and transparent communication with its stakeholders, including customers, employees, and investors. This means that the company is willing to share information about its products, services, and business operations with the public and is open to input and feedback from all stakeholders._
 
 <br />
 
@@ -4633,13 +4633,13 @@ I want to start this blogpost by introducing the concept of an open startup. As 
 
 ## Why now?
 
-I’ve been learning about the open startup movement for a while now and I always knew that I wanted OpenBB to follow this trend. At the end of the day, I want us to accelerate the openness and transparency in the financial world.
+I've been learning about the open startup movement for a while now and I always knew that I wanted OpenBB to follow this trend. At the end of the day, I want us to accelerate the openness and transparency in the financial world.
 
-But until recently, this wasn’t one of our top priorities. This all changed when the cryptocurrency exchange FTX collapsed. This was a house of cards and they stood for everything but transparency — not only with their users but also with their shareholders and team alike!
+But until recently, this wasn't one of our top priorities. This all changed when the cryptocurrency exchange FTX collapsed. This was a house of cards and they stood for everything but transparency — not only with their users but also with their shareholders and team alike!
 
 John J. Ray III who has spent a career tackling large corporate failures involving allegations of criminal activity (like Enron), was appointed CEO of FTX to deal with the bankruptcy, and this is one of his quotes to the US congress:
 
-> _“Never in my career have I seen such an utter failure of corporate controls at every level of an organization, from the lack of financial statements to a complete failure of any internal controls or governance whatsoever”_
+> _"Never in my career have I seen such an utter failure of corporate controls at every level of an organization, from the lack of financial statements to a complete failure of any internal controls or governance whatsoever"_
 
 <br />
 
@@ -4653,9 +4653,9 @@ Transparency across team, shareholders, users and new hires is key. Everyone can
 
 ### Accountability
 
-Everyone will know how we’re doing, for better or worse. This will make us feel responsible to show accurate sustainable growth as this information becomes public. Since everyone has equity in the company, this will be our own skin in the game.
+Everyone will know how we're doing, for better or worse. This will make us feel responsible to show accurate sustainable growth as this information becomes public. Since everyone has equity in the company, this will be our own skin in the game.
 
-When people ask, “How is OpenBB going?”, this can be answered with a single link to our open page.
+When people ask, "How is OpenBB going?" this can be answered with a single link to our open page.
 
 ### Community building
 
@@ -4671,7 +4671,7 @@ In addition, we want to become leaders of open culture in the financial world, w
 
 ### Fundraising
 
-Since starting OpenBB, I’ve met well over 50 different investors, even without actively fundraising. Whilst this is a great way to start relationships, it’s not sustainable as it takes valuable time away from talking with users/customers (and let’s be honest, even developing :slight_smile:). So by having an open page, we will be able to discuss our growth async and more efficiently. And then, when we are actively fundraising, we can focus on the details.
+Since starting OpenBB, I've met well over 50 different investors, even without actively fundraising. Whilst this is a great way to start relationships, it's not sustainable as it takes valuable time away from talking with users/customers (and let's be honest, even developing :slight_smile:). So by having an open page, we will be able to discuss our growth async and more efficiently. And then, when we are actively fundraising, we can focus on the details.
 
 ## How will it be done?
 
@@ -4697,9 +4697,9 @@ Stars, forks, merged pull-requests, closed issues, contributors. Keep up-to-date
 
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-For all the metrics that are open source, there will be an ⓘ in the top right to share information on why this chart was made open source and why it’s important to us.
+For all the metrics that are open source, there will be an ⓘ in the top right to share information on why this chart was made open source and why it's important to us.
 
-Once a metric is open, we do not intend to close it ever again, that is why all the metrics we are making public have gone through a thorough reasoning process and there’s enough contextual information to understand its meaning.
+Once a metric is open, we do not intend to close it ever again, that is why all the metrics we are making public have gone through a thorough reasoning process and there's enough contextual information to understand its meaning.
 
 If you can think of a metric that you would like to see on our open page, please feel free to DM me.
 
@@ -5262,7 +5262,7 @@ slug: how-to-handle-equity-top-ups-at-a-seed-stage-startup
 title: How to handle equity top-ups at a seed stage startup
 date: 2023-08-09
 image: /blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup.png
-tags: ['equity', 'startups', 'seed stage', 'equity top-ups', 'employee compensation']
+tags: ['startups', 'seed-stage', 'equity', 'compensation', 'employee-retention', 'vesting', 'management', 'human-resources']
 description: In this post, we discuss how to handle equity top-ups at a seed stage startup, providing a step-by-step guide on the implementation process and including links to relevant spreadsheets.
 ---
 
@@ -5329,7 +5329,7 @@ Now, let’s discuss the decisions we need to make for the second option grant:
 
 - 2nd option grant VCD: We want to start it ASAP, to retain employee — for instance **March 2023**
 - 2nd option grant shares: **around 1,500**
-- 2nd option grant schedule: **1/48 per month finishing on 30 March 2027**. Note that we removed the cliff since we know the value the employee brings and that “protection”/”retainer” can be removed.
+- 2nd option grant schedule: **1/48 per month finishing on 30 March 2027**. Note that we removed the cliff since we know the value the employee brings and that "protection"/"retainer" can be removed.
 
 By utilizing maths, we can create the following equation:
 
@@ -5385,7 +5385,7 @@ The spreadsheet below demonstrates what an employee vesting schedule looks like,
 
 When looking at the total top-up shares in **H67**, that value will no longer match the total top-up shares that we wanted to grant to the employee and that we decided at the beginning in **B6**. This is because we rounded the value and thus impacted the number of shares necessary to achieve that.
 
-The amount of shares needed to update the recommendation in **B16** to the rounded version in **B19** is displayed as an “error” in **B21**.
+The amount of shares needed to update the recommendation in **B16** to the rounded version in **B19** is displayed as an "error" in **B21**.
 
 7. In order to fix that, we simply need to update B6 with the sum of B6 and the error value from B21.
 
@@ -5719,7 +5719,7 @@ slug: work-life-balance-is-bullsh-t
 title: Work-life balance is bullsh*t
 date: 2023-09-16
 image: /blog/2023-09-16-work-life-balance-is-bullsh-t.png
-tags: ['work-life balance', 'success', 'career', 'hard work']
+tags: ['work-life-balance', 'success', 'career', 'hard-work', 'startup-culture', 'philosophy', 'hustle-culture']
 description: This blog post challenges the concept of work-life balance, arguing that success often requires sacrifices in personal time and relationships. It suggests that true balance comes from finding joy in your work and surrounding yourself with like-minded individuals.
 ---
 
@@ -5740,7 +5740,7 @@ For successful individuals, achieving a work-life balance is a luxury often asso
 
 Let me explain.
 
-There must be a clear inverse correlation between success (let’s say measured by wealth) and the size of your circle of friends.
+There must be a clear inverse correlation between success (let's say measured by wealth) and the size of your circle of friends.
 
 **If you want to be at the top of a field, you must work hard.**
 
@@ -5748,7 +5748,7 @@ End.
 
 Regardless of what BS people say about work-life balance.
 
-You may be lucky — right place right time kind of thing. But by default, you need to work hard to expand your luck’s surface.
+You may be lucky — right place right time kind of thing. But by default, you need to work hard to expand your luck's surface.
 
 And that means that you need to spend your personal time working harder, to be above average.
 
@@ -5756,14 +5756,14 @@ Since time is limited you need to sacrifice time spent outside working hours, ot
 
 People will soon realize that in order to optimize for a successful career, cutting time spent with friends is a necessary evil.
 
-Plus, as you become older you’ll prioritize physical health (which impacts your longevity + performance) and your relationship with your partner (which provides the most significant ROI in terms of happiness).
+Plus, as you become older you'll prioritize physical health (which impacts your longevity + performance) and your relationship with your partner (which provides the most significant ROI in terms of happiness).
 
 So, I suggest 2 things:
 
-- Work on a problem and in a space that you truly enjoy so you don’t consider it work
+- Work on a problem and in a space that you truly enjoy so you don't consider it work
 - Build with people who share the same values as you so you consider them friends Once that happens, work-life balance means nothing.
 
-What’s your take?
+What's your take?
 
 
 ---
@@ -6041,7 +6041,7 @@ slug: openbb-bot-our-new-addition-to-the-openbb-open-source-family
 title: OpenBB Bot - our new addition to the OpenBB open source family
 date: 2023-11-21
 image: /blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family.png
-tags: ['openbb', 'bot', 'open source', 'discord', 'monetization']
+tags: ['openbb', 'openbb-bot', 'open-source', 'discord', 'telegram', 'chatbots', 'monetization', 'business-strategy', 'product-story']
 description: The OpenBB Bot architecture is now open source. Check out our Discord Bot architecture now on GitHub.
 ---
 
@@ -6063,9 +6063,9 @@ The open source code is available [here](https://github.com/OpenBB-finance/openb
 
 When the OpenBB Terminal first went viral, users were writing online that one of the things missing from our product was a chat feature like other investment platforms provide.
 
-However, we didn’t understand why the chatting experience needed to be centralized in the application where users research their financial data. Plus, with the ever-growing userbase of apps like Discord, Telegram, Slack, and others, combined with their capabilities to build apps on top, we thought we could do more.
+However, we didn't understand why the chatting experience needed to be centralized in the application where users research their financial data. Plus, with the ever-growing userbase of apps like Discord, Telegram, Slack, and others, combined with their capabilities to build apps on top, we thought we could do more.
 
-We believe in a future where you can query financial data right from where you are. Meaning you can chat with colleagues, from any of the apps you’re already using.
+We believe in a future where you can query financial data right from where you are. Meaning you can chat with colleagues, from any of the apps you're already using.
 
 This is when we partnered with OptionsFamBot (the biggest Discord financial bot that was present in 15k+ servers, reaching 1 M+ users) to build the OpenBB Bot.
 
@@ -6077,9 +6077,9 @@ To provide OpenBB Bot users with access to 100+ financial commands (including ex
 
 This was relatively expensive, but we considered it a marketing cost since we expected exponential user growth. We expected that since the Bot could be deployed in any server in a few seconds, more users would be exposed to the Bot, bringing the Bot to other servers, and so on...
 
-**However, that didn’t happen.**
+**However, that didn't happen.**
 
-In September 2022, Discord changed its command syntax to force commands to start with “/” and the user drop was noticeable.
+In September 2022, Discord changed its command syntax to force commands to start with "/" and the user drop was noticeable.
 
 <p align="center">
     <img width="600" src="/blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family_1.png"/>
@@ -6109,7 +6109,7 @@ Or so we thought. But our growth never achieved the numbers we had initially est
     <img width="600" src="/blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family_3.png"/>
 </p>
 
-Our conclusion is that the market for financial chatbots is much smaller than what we had originally forecasted. This also meant that our goal with the OpenBB Bot as a marketing tool wasn’t returning the ROI that we were expecting.
+Our conclusion is that the market for financial chatbots is much smaller than what we had originally forecasted. This also meant that our goal with the OpenBB Bot as a marketing tool wasn't returning the ROI that we were expecting.
 
 So in May 2023 we went pretty much all-in on considering the OpenBB Bot as a marketing expense, and removed the individual paid tier. You can see that announcement [here](https://openbb.co/blog/openbb-bot-free-for-individuals).
 
@@ -6131,17 +6131,17 @@ So we decided to open source the architecture behind the OpenBB Bot.
 
 When talking with Roberto Talamas (check out his [OpenBB champion story](https://openbb.co/blog/openbb-champions-roberto-talamas)), he mentioned that he was building his own financial chatbot for his fund from scratch.
 
-That was the trigger we needed to open source our architecture, so the “Robertos” of the world wouldn’t have to start building their chatbot from scratch, but could piggyback on our architecture, which just works (it has never been down since launch and processed over 2.75 M Discord requests).
+That was the trigger we needed to open source our architecture, so the "Robertos" of the world wouldn't have to start building their chatbot from scratch, but could piggyback on our architecture, which just works (it has never been down since launch and processed over 2.75 M Discord requests).
 
 Since we failed to monetize the Bot, and our adoption trajectory never grew past our expectations, open-sourcing the architecture behind the OpenBB Bot made a ton of sense.
 
-This architecture utilizes data from the OpenBB platform (check out last week’s [beta announcement](https://openbb.co/blog/celebrating-the-openbb-platform-v4-beta)) which means that developers can simultaneously get familiar with our platform while seeing how easy it is to pull financial data from OpenBB - effectively growing OpenBB’s ecosystem.
+This architecture utilizes data from the OpenBB platform (check out last week's [beta announcement](https://openbb.co/blog/celebrating-the-openbb-platform-v4-beta)) which means that developers can simultaneously get familiar with our platform while seeing how easy it is to pull financial data from OpenBB - effectively growing OpenBB's ecosystem.
 
 <p align="center">
     <img width="600" src="/blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family_6.png"/>
 </p>
 
-I’m looking forward to seeing what products are built around the OpenBB Bot in the future.
+I'm looking forward to seeing what products are built around the OpenBB Bot in the future.
 
 You can check the repository [here](https://github.com/OpenBB-finance/openbb-bot).
 
@@ -6400,7 +6400,7 @@ slug: creating-an-ai-powered-financial-analyst
 title: Creating an AI-powered financial analyst
 date: 2023-12-27
 image: /blog/2023-12-27-creating-an-ai-powered-financial-analyst.png
-tags: ['ai', 'llm', 'agents', 'tools', 'function calling', 'openbb']
+tags: ['openbb', 'ai', 'llm', 'agents', 'copilot', 'function-calling', 'pydantic', 'langchain']
 description: Our Platform aims to empower the OpenBB Copilot, an AI-powered financial analyst, to perform tasks ranging from knowledge retrieval to fully autonomous analysis. The architecture involves task decomposition, tool retrieval, and subtask agents, showcasing impressive results in both deterministic and non-deterministic workflows. Read on to explore its capabilities and don't forget to watch the demos.
 ---
 
@@ -6442,7 +6442,7 @@ When discussing what tasks we wanted our AI-powered Financial Analyst to be able
 
 1. **Knowledge retrieval**: The agent can answer general financial queries without external resources. (eg. ChatGPT "as-is"). Here, the agent relies solely on its training data to answer questions.
 
-2. **Data retrieval**: The agent can answer queries using information inserted into the context (usually as part of a separate data retrieval process that isn’t controlled by the model, such as using [similarity search](https://en.wikipedia.org/wiki/Similarity_search) across a knowledge database using the user’s query).
+2. **Data retrieval**: The agent can answer queries using information inserted into the context (usually as part of a separate data retrieval process that isn't controlled by the model, such as using [similarity search](https://en.wikipedia.org/wiki/Similarity_search) across a knowledge database using the user's query).
 
 3. **Autonomous data retrieval**: The agent can answer queries by dynamically retrieving data not currently present in the context or the training data via function calling.
 
@@ -6464,13 +6464,13 @@ Our goal is to enable OpenBB Copilot to perform all of the above. I presented a 
 
 ## Two types of prompts
 
-Rather than first building an AI-powered financial analyst for the sake of it, we instead started from what we wanted to achieve. We came up with two distinct prompts and our goal was for the agent to be able to successfully perform both of these, but utilizing the same underlying “agentic” architecture.
+Rather than first building an AI-powered financial analyst for the sake of it, we instead started from what we wanted to achieve. We came up with two distinct prompts and our goal was for the agent to be able to successfully perform both of these, but utilizing the same underlying "agentic" architecture.
 
 <p align="center">
     <img width="600" src="/blog/2023-12-27-creating-an-ai-powered-financial-analyst_1.png"/>
 </p>
 
-- **Prompt A (on the left)** - requires linear reasoning (where future answers depend on previous answers). This kind of prompt is generally deterministic, which allows us to access (and verify) the agent’s answers immediately because we can check the underlying facts and data. It also involves a few complex operations across multiple steps, such as extracting a list of tickers from an endpoint and iterating through that list using a different endpoint. Then based on those outputs, a reasoning can be made and a final answer is given.
+- **Prompt A (on the left)** - requires linear reasoning (where future answers depend on previous answers). This kind of prompt is generally deterministic, which allows us to access (and verify) the agent's answers immediately because we can check the underlying facts and data. It also involves a few complex operations across multiple steps, such as extracting a list of tickers from an endpoint and iterating through that list using a different endpoint. Then based on those outputs, a reasoning can be made and a final answer is given.
 
 - **Prompt B (on the right)** - requires independent reasoning (fetching and combining different pieces of independent information). This prompt is typically less deterministic and allows us to leverage LLMs to provide alpha by uncovering insights that would be hard for a human to discover (or, at the very least, discover at scale). Instead of telling the agent what to do explicitly, we instead pose a question and expect the agent to execute an analysis and perform reasoning, without specific guidance or guardrails.
 
@@ -6494,15 +6494,15 @@ Crucially, we use Pydantic for all of our endpoints. This ensures that we have b
 
 ### OpenBB Tools
 
-From having 100+ different data endpoints that you can access using Python, we created “tools” that an agent “understands” and can use. This is extremely important since this collection of tools will give real-time data to the agent based on the prompt asked.
+From having 100+ different data endpoints that you can access using Python, we created "tools" that an agent "understands" and can use. This is extremely important since this collection of tools will give real-time data to the agent based on the prompt asked.
 
 <p align="center">
     <img width="600" src="/blog/2023-12-27-creating-an-ai-powered-financial-analyst_4.png"/>
 </p>
 
-Since the OpenBB Platform has high-quality documentation, we use each function’s docstring as well as the output field names (with some basic preprocessing). This tweak allows the agent to know where to get the market cap information from, even if it’s within a differently-named endpoint (for example the `equity.fundamentals.overview` endpoint).
+Since the OpenBB Platform has high-quality documentation, we use each function's docstring as well as the output field names (with some basic preprocessing). This tweak allows the agent to know where to get the market cap information from, even if it's within a differently-named endpoint (for example the `equity.fundamentals.overview` endpoint).
 
-Each of these tool descriptions is converted into embeddings that can be retrieved later on based on the query the user provides. This allows our agent to pick the right tools for the job - i.e. if I want to have access to Apple’s market cap, I want to get the tool `equity.fundamentals.overview` because I know that by providing the symbol `AAPL` I can get the market cap value.
+Each of these tool descriptions is converted into embeddings that can be retrieved later on based on the query the user provides. This allows our agent to pick the right tools for the job - i.e. if I want to have access to Apple's market cap, I want to get the tool `equity.fundamentals.overview` because I know that by providing the symbol `AAPL` I can get the market cap value.
 
 <p align="center">
     <img width="600" src="/blog/2023-12-27-creating-an-ai-powered-financial-analyst_5.png"/>
@@ -6520,15 +6520,15 @@ This is the overall architecture that our agent will follow, and below we will t
 
 ### Task Decomposition
 
-First of all, we don’t want to tackle the user query in one go. This is because LLMs have limited context. Plus, we want the agent to retrieve all the necessary tools to answer the query. But the vector’s store similarity search doesn’t work with one prompt that needs multiple different tools. Additionally, similar to human analysts, breaking a larger question up into smaller manageable subquestions leads to better analysis and results.
+First of all, we don't want to tackle the user query in one go. This is because LLMs have limited context. Plus, we want the agent to retrieve all the necessary tools to answer the query. But the vector's store similarity search doesn't work with one prompt that needs multiple different tools. Additionally, similar to human analysts, breaking a larger question up into smaller manageable subquestions leads to better analysis and results.
 
-So, we break the user’s main query into:
+So, we break the user's main query into:
 
 - **List of simpler tasks**: self-explanatory
 
 - **List of tasks dependency**: does the current subtask need a prior subtask to tackle the current subtask?
 
-- **List of “tool search” keywords associated with each subtask**: instead of using the subtask question itself to directly retrieve the correct selection of tools using the embeddings in the vector store, empirically we found that if the LLM could select the most important keywords associated with the task using keyword search. This ended up resulting in a big jump in retrieval performance. This is expected since we are effectively reducing the noise. E.g. “What are Tesla peers” → “peers”.
+- **List of "tool search" keywords associated with each subtask**: instead of using the subtask question itself to directly retrieve the correct selection of tools using the embeddings in the vector store, empirically we found that if the LLM could select the most important keywords associated with the task using keyword search. This ended up resulting in a big jump in retrieval performance. This is expected since we are effectively reducing the noise. E.g. "What are Tesla peers" → "peers".
 
 This is the system message we are utilizing:
 
@@ -6584,7 +6584,7 @@ We then combine the entire context from subquestions and outputs to be given to 
     <img width="600" src="/blog/2023-12-27-creating-an-ai-powered-financial-analyst_14.png"/>
 </p>
 
-Finally, we give the final agent the main prompt and the list of tasks from task decomposition and that’s it!
+Finally, we give the final agent the main prompt and the list of tasks from task decomposition and that's it!
 
 <p align="center">
     <img width="600" src="/blog/2023-12-27-creating-an-ai-powered-financial-analyst_15.png"/>
@@ -6610,7 +6610,7 @@ Since this is a deterministic workflow, we can look at the raw data to check whe
 
 ### Prompt B
 
-_“Perform a fundamentals financial analysis of AMZN using the most recently available data. What do you find that’s interesting?”_
+_"Perform a fundamentals financial analysis of AMZN using the most recently available data. What do you find that's interesting?"_
 
 The output can be seen here:
 
@@ -6993,7 +6993,7 @@ slug: 12-things-i-learned-in-2023
 title: 12 things I learned in 2023
 date: 2024-01-22
 image: /blog/2024-01-22-12-things-i-learned-in-2023.png
-tags: ['learning', 'experience', 'growth']
+tags: ['learnings', 'reflection', 'leadership', 'startup', 'growth', 'product-management', 'user-experience', 'decision-making', 'life-lessons']
 description: The 12 things I learned in 2023
 ---
 
@@ -7033,25 +7033,25 @@ I keep seeing tweets about UI improvements on a website and/or product. I love t
 
 While UI is critical to attract users, UX is king to retain them.
 
-It’s like dating - the looks is in the UI and the personality is the UX.
+It's like dating - the looks is in the UI and the personality is the UX.
 
 While they may be perceived as their own separate bubble, they are not. Someone with an amazing personality (UX) will appear as more beautiful (UI).
 
 ### 5. If in presence of a 2-way door decision, you should decide fast.
 
-Being fast to decide to do A instead of B in a 2-way door decision is ideal because even if that wasn’t the correct decision, adapting after will still be better than being stuck at the decision stage.
+Being fast to decide to do A instead of B in a 2-way door decision is ideal because even if that wasn't the correct decision, adapting after will still be better than being stuck at the decision stage.
 
-Plus, you’ll be surprised by how many time you actually get it right given the level of context and knowledge you have in the space.
+Plus, you'll be surprised by how many time you actually get it right given the level of context and knowledge you have in the space.
 
 Knowing what is a 1 and a 2-way door decision, separates great from poor leaders.
 
 I like [this video](https://tiktok.com/@evancarmichael/video/7317081673865235717) from Jeff Bezzos talking about this.
 
-### 6. There’s a ton of data in intuition and common sense.
+### 6. There's a ton of data in intuition and common sense.
 
 As a leader, most of the times you have to make decisions with no hard data evidence. And by hard data I mean a spreadsheet with numbers or a powerpoint with charts.
 
-However, you do have that data. It’s just not in a clean format and lives on your head.
+However, you do have that data. It's just not in a clean format and lives on your head.
 
 This data has been aggregating by spending more time thinking about the problem you are solving than anyone else, by talking with customers, by talking with partners, and everything in between.
 
@@ -7079,15 +7079,15 @@ It sets the precedent that average work is not enough to work at your company, a
 
 Took me some time to understand this, but I have no doubts about this now.
 
-This is why the sentence of “A good product with great distribution will almost always beat a great product with poor distribution.”
+This is why the sentence of "A good product with great distribution will almost always beat a great product with poor distribution."
 
 ### 11. Leave your comfort zone.
 
-I'm really shy on stage and this year I've presented a few times. And I’ve impressed myself, while I'm far from good I've come a long way.
+I'm really shy on stage and this year I've presented a few times. And I've impressed myself, while I'm far from good I've come a long way.
 
 When i started learning english my goal was to be able to make people laugh in english, that took a while.
 
-I've now been able to make people laugh whilst on stage and I didn't expect that I’d be able to do this anytime soon.
+I've now been able to make people laugh whilst on stage and I didn't expect that I'd be able to do this anytime soon.
 
 ### 12. Tell your loved ones how much they mean to you.
 
@@ -7516,7 +7516,7 @@ slug: moving-countries-and-starting-a-company-aint-so-different
 title: Moving countries and starting a company ain't so different
 date: 2024-03-24
 image: /blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack.png
-tags: ['learning', 'experience', 'growth', 'moving', 'london', 'bay', 'US', 'travel', 'startup', 'nyc']
+tags: ['startup', 'founder-story', 'relocation', 'personal-growth', 'career-path', 'risk-taking', 'ambition', 'resilience', 'life-lessons']
 description: I have started a company. I have moved countries. It turns out that there's a lot in common between these.
 ---
 
@@ -7542,7 +7542,7 @@ Logically speaking, this move didn't make any sense. No one really told me that 
 
 I believe this isn't so different from creating a startup. This blog post will explain what they have in common and why I did it.
 
-## Creating a startup / Deciding to leave your country
+## Creating a startup / Deciding to leave your country
 
 [Elad Gil](http://eladgil.com/) wrote a really good [article](https://blog.eladgil.com/p/startups-are-an-act-of-desperation) on how creating a startup is an act of desperation. I believe that post could be equally applicable to moving countries, so I will list the same points used by Elad in the context of moving countries and provide examples. Most of the time, the person moving countries has a mix of the below bullet points.
 
@@ -7576,9 +7576,9 @@ This is what the "American dream" is all about. People moved to the US to do som
 
 The equivalent to this is when someone returns to their home country after several years outside with more wealth and/or experience.
 
-## Growing a startup / Living abroad
+## Growing a startup / Living abroad
 
-### Mission and Vision
+### Mission and Vision
 
 When creating a company, you must have a clear mission and vision. This allows you to create a community/team that will be with you for the long run. Similarly, when moving countries, it's essential to have a well-defined goal. This doesn't mean that the goal cannot change; after all, companies pivot. However, you need to have a strategy that you follow until you don't.
 
@@ -7594,11 +7594,11 @@ Building a successful startup requires networking, forming strategic partnership
 
 Building a startup and moving countries demands unwavering resilience and persistence in facing challenges. Startups encounter setbacks, pivots, and failures, but successful entrepreneurs persist and learn from their experiences. Similarly, moving countries can bring unexpected hurdles, such as language barriers, difficulties making friends, challenges adapting to a new culture, or not finding a routine. Embracing these challenges with determination and adaptability paves the way for growth and achievement.
 
-### Learning and Growth
+### Learning and Growth
 
 Startups and moving countries are transformative experiences that offer immense personal and professional growth opportunities. Entrepreneurs continuously learn from their successes and failures in the startup world, refining their strategies and acquiring new skills. Likewise, moving countries provides a unique chance to learn about different cultures, broaden perspectives, and develop resilience, patience, and empathy. Both experiences foster personal development and shape individuals into more well-rounded and adaptable individuals.
 
-## Why did I do it?
+## Why did I do it?
 
 The reason why I started OpenBB and also moved country is a combination of 2 factors:
 
@@ -7608,7 +7608,7 @@ On a startup level, I have experienced the need for an open-source investment re
 
 Growing up as an engineer fascinated by tech and innovation, the US has always been home to the biggest companies and hottest products. I've always been attracted to Silicon Valley, but before OpenBB, I never had the chance to. The first job I applied to after finishing university was Waymo in CA, but they didn't sponsor VISAs for that role.
 
-### Desperation to do something big or important. 
+### Desperation to do something big or important.
 
 On a startup level, I want to work on something bigger than myself. I want to solve a problem that no one has solved before and build something useful for millions of people that can withstand time.
 
@@ -8090,7 +8090,7 @@ slug: why-chat-only-AI-Financial-Assistants-are-not-the-future
 title: Why chat-only AI financial assistants are not the future
 date: 2024-06-15
 image: /blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future.png
-tags: ['finance', 'ai', 'openbb', 'chat', 'finance assistant', 'chatgpt', 'perplexity', 'investment research']
+tags: ['openbb', 'ai', 'fintech', 'workspaces', 'investment-research', 'chatbots', 'ui', 'ux', 'collaboration']
 description: Financial assistants structured like ChatGPT are great for quick searches but fall short for comprehensive investment research. 
 ---
 
@@ -8106,7 +8106,7 @@ Financial assistants structured like ChatGPT are great for quick searches but fa
 
 This is a spicy take but bear with me.
 
-The more I think about “ChatGPT for Finance” products, the more I think this is not the answer.
+The more I think about "ChatGPT for Finance" products, the more I think this is not the answer.
 
 They are extremely good knowledge retrieval engines because you can ask what you want to know and get the answer immediately.
 
@@ -8114,7 +8114,7 @@ My problem with their approach is what happens after.
 
 However, very little thought is given to the real-world investment workflow. That's why I strongly believe that a chat-only financial platform will never be successful on its own.
 
-Sure, they can win in the categories of “search” or “screening”, but they won’t be able to compete in the category of “investment research platform”.
+Sure, they can win in the categories of "search" or "screening", but they won't be able to compete in the category of "investment research platform".
 
 To do that, they would need to evolve.
 
@@ -8122,7 +8122,7 @@ Let me explain why and how OpenBB differs from them.
 
 ## 1-Dimensional vs N-Dimensional
 
-Financial assistants are, in general, 1-dimensional. By that, I mean that all you have on a screen is a “dashboard” with an unlimited y-axis (1 single dimension).
+Financial assistants are, in general, 1-dimensional. By that, I mean that all you have on a screen is a "dashboard" with an unlimited y-axis (1 single dimension).
 
 <p align="center">
     <img width="600" src="/blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future_1.png"/>
@@ -8134,7 +8134,7 @@ But for the long term? Not so much. If the user wants to find specific informati
 
 When financial assistants allow multiple conversations, then we start having 2 dimensions, where each conversation introduces a new axis.
 
-The problem with this approach is that you can’t easily find data within one of those past conversations since the assistant focuses on answering your question and not on data retrieval from the previous outputs.
+The problem with this approach is that you can't easily find data within one of those past conversations since the assistant focuses on answering your question and not on data retrieval from the previous outputs.
 
 ## Our 3-dimensional solution on Terminal Pro
 
@@ -8146,7 +8146,7 @@ How do we handle those issues? We have 3 dimensions.
 
 Our Terminal Pro has a Copilot on the side, similar to other financial assistants.
 
-However, its big advantage is that when you want to save Copilot’s output for later, you can convert it into a text widget. And when you do so, you can place it wherever you want in this space — with the axis being infinite vertical scroll, tabs, dashboards, and folders.
+However, its big advantage is that when you want to save Copilot's output for later, you can convert it into a text widget. And when you do so, you can place it wherever you want in this space — with the axis being infinite vertical scroll, tabs, dashboards, and folders.
 
 <video controls>
     <source
@@ -8160,23 +8160,23 @@ Again, financial assistants are optimized for search rather than information sto
 
 This means that, by nature, chat-only financial assistants assume that their output will not matter in the future, so they answer your queries similarly to how a text conversation works. It's literally called ChatGPT for that reason.
 
-However, that’s not ideal for investment research.
+However, that's not ideal for investment research.
 
-If analysts and researchers need to access these financial assistants' output at some point in the future, they won’t be able to do it quickly. Instead, they’ll have to go through a long chat history.
+If analysts and researchers need to access these financial assistants' output at some point in the future, they won't be able to do it quickly. Instead, they'll have to go through a long chat history.
 
-This is why, in our Terminal Pro, we allow users to create a markdown-based text widget from the Copilot’s output, as shown above, so that you can have that information quickly accessible, but also editable.
+This is why, in our Terminal Pro, we allow users to create a markdown-based text widget from the Copilot's output, as shown above, so that you can have that information quickly accessible, but also editable.
 
-## There’s no simple way to know where the data comes from
+## There's no simple way to know where the data comes from
 
-Financial assistants are great, and they are improving every day. But if there’s something I’ve learned from talking with financial firms for over three years, it's that this is a very slow-moving industry, and adopting new technologies takes time.
+Financial assistants are great, and they are improving every day. But if there's something I've learned from talking with financial firms for over three years, it's that this is a very slow-moving industry, and adopting new technologies takes time.
 
-But with AI, it seems different. It’s so revolutionary that people are willing to incorporate it into their workflow faster because they immediately understand the benefits it can bring to their business.
+But with AI, it seems different. It's so revolutionary that people are willing to incorporate it into their workflow faster because they immediately understand the benefits it can bring to their business.
 
-However, hallucinations are still a big problem — so it’s essential for these firms to be able to verify the raw data and sources.
+However, hallucinations are still a big problem — so it's essential for these firms to be able to verify the raw data and sources.
 
 The current level of AI is equivalent to having a smart intern that you would need to double-check their work or trust but verify.
 
-This is why our Copilot always answers based on data that is readily available on the dashboard — and (due to our “Bring Your Own Data” technology) that data can be brought by your firm rather than being limited to what we offer out of the box.
+This is why our Copilot always answers based on data that is readily available on the dashboard — and (due to our "Bring Your Own Data" technology) that data can be brought by your firm rather than being limited to what we offer out of the box.
 
 <p align="center">
     <img width="600" src="/blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future_3.png"/>
@@ -8192,9 +8192,9 @@ The interesting thing is that investment research starts as an individual proces
 
 So, financial assistants have a challenging task: multiple people on a team should be able to access all the conversations without being able to interact with these chats.
 
-But what if you go through a colleague’s chat where they were asking questions about a company’s earnings, and you want to do a follow-up question?
+But what if you go through a colleague's chat where they were asking questions about a company's earnings, and you want to do a follow-up question?
 
-That’s a complex problem.
+That's a complex problem.
 
 At OpenBB, we are in a very good position to solve this for our users.
 
@@ -8225,7 +8225,7 @@ slug: my-first-hand-experience-on-ai-impacting-education-through-perplexity-curs
 title: My first-hand experience on AI impacting education through Perplexity, Cursor and ChatGPT
 date: 2024-06-30
 image: /blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt.png
-tags: ['education', 'ai', 'perplexity', 'chatgpt', 'cursor', 'students', 'big data', 'analytics', 'supervised learning', 'machine learning']
+tags: ['ai', 'education', 'teaching', 'llm', 'chatgpt', 'perplexity', 'cursor', 'supervised-learning', 'edtech']
 description: AI will change education forever. Here's how I leveraged Perplexity, Cursor and ChatGPT to teach Supervised Learning and assess coursework.
 ---
 
@@ -8258,7 +8258,7 @@ And of course - there was no AI. At least not in the sense that we speak about t
 
 This time was different - I had the flexibility to choose what I was going to cover about Supervised Learning.
 
-I’ve never worked as a Data Scientist per se, but have been passionate about data for a while and spent a lot of time reading books and learning about the topic. In my previous company, I started playing with IMU data in my spare time which lead me to publish a paper at ICMLA where I used [Support Vector Machine (SVM) for Step Detection using Nurvv trackers](https://ieeexplore.ieee.org/document/9680024) and even open sourced the code [here](https://github.com/DidierRLopes/step-detection-ML/tree/main).
+I've never worked as a Data Scientist per se, but have been passionate about data for a while and spent a lot of time reading books and learning about the topic. In my previous company, I started playing with IMU data in my spare time which lead me to publish a paper at ICMLA where I used [Support Vector Machine (SVM) for Step Detection using Nurvv trackers](https://ieeexplore.ieee.org/document/9680024) and even open sourced the code [here](https://github.com/DidierRLopes/step-detection-ML/tree/main).
 
 <p align="center">
     <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_svm_paper.png"/>
@@ -8270,14 +8270,14 @@ But so the question is:
 
 _"Where do I start?"_
 
-My first intuition was to gather some of my favorite books and courses on the topic and understand how they presented the overall subject. I wouldn’t have the same time, so I would need to touch on most topics briefly - enough for students to know about it and explore further if curious.
+My first intuition was to gather some of my favorite books and courses on the topic and understand how they presented the overall subject. I wouldn't have the same time, so I would need to touch on most topics briefly - enough for students to know about it and explore further if curious.
 
 However, given my time constraints with running OpenBB, I would have had a hard time since I would need to:
 
 1. Consume the content of these books and courses
 2. Mix and match them
 3. Cut to fit the time constraints
-4. Produce a final syllabus that I’m confident about
+4. Produce a final syllabus that I'm confident about
 
 <br />
 
@@ -8287,7 +8287,7 @@ Except that **IT WAS**.
 
 ### Perplexity enters the chat
 
-Since Perplexity’s main value proposition is being better at Google than Google - I popped the following prompt into it.
+Since Perplexity's main value proposition is being better at Google than Google - I popped the following prompt into it.
 
 <p align="center">
     <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_perplexity.png"/>
@@ -8305,15 +8305,15 @@ Was it a perfect starting point?
 
 Yes.
 
-I didn’t literally copy-paste it. I took the parts I liked, re-iterated on the ones I didn't until I eventually did. Plus, use my experience to prioritize parts that I felt should be more relevant vs others.
+I didn't literally copy-paste it. I took the parts I liked, re-iterated on the ones I didn't until I eventually did. Plus, use my experience to prioritize parts that I felt should be more relevant vs others.
 
 Were there some hallucinations?
 
-Yes, it’s not a silver bullet.
+Yes, it's not a silver bullet.
 
 But it saved me DAYS of work.
 
-I was dreading having to write the syllabus and like this, it was actually fun. It was fun because I felt like Perplexity was acting as my assistant and I was engaging in a conversation of what should be contained within the course and what shouldn’t.
+I was dreading having to write the syllabus and like this, it was actually fun. It was fun because I felt like Perplexity was acting as my assistant and I was engaging in a conversation of what should be contained within the course and what shouldn't.
 
 After having all the content ready, I asked my wife to help me with some images to make it easier for students to understand concepts.
 
@@ -8321,7 +8321,7 @@ After having all the content ready, I asked my wife to help me with some images 
     <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_assets.png"/>
 </p>
 
-I was happy with the results - but wanted a second opinion. So I asked a friend of mine who’s been a DS for over 6 years what his thoughts were on the materials I worked on - and he was impressed about the speed.
+I was happy with the results - but wanted a second opinion. So I asked a friend of mine who's been a DS for over 6 years what his thoughts were on the materials I worked on - and he was impressed about the speed.
 
 <p align="center">
     <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_ai_friend_message.jpeg"/>
@@ -8387,17 +8387,17 @@ There were 10 groups in total. So 10 notebooks that I had to look into, explorin
 
 ### Cursor helping with grading
 
-I opened [cursor](https://www.cursor.com/) (which is basically VSCode + ChatGPT) and probably the software I’ve recommended the most to developers in 2024.
+I opened [cursor](https://www.cursor.com/) (which is basically VSCode + ChatGPT) and probably the software I've recommended the most to developers in 2024.
 
 And opened my first notebook.
 
 Then I thought, what if I had GPT-4o on my side - helping me to assess this coursework.
 
-It didn’t need to be perfect because I was doing it myself, but it could help me understand if there was any critical thing that I missed OR if it completely had a different grade than the one I was going to provide - which would enable me to spend more time on that criteria and iterate.
+It didn't need to be perfect because I was doing it myself, but it could help me understand if there was any critical thing that I missed OR if it completely had a different grade than the one I was going to provide - which would enable me to spend more time on that criteria and iterate.
 
 It gave me confidence that I was being fair to the students.
 
-And made me realize how hard it is for professors when they have 100s of students and have a subjective answer to grade. It’s impossible to get it right. They try their best, but as soon as the answer is not binary (0 or 1), they are doomed to fail.
+And made me realize how hard it is for professors when they have 100s of students and have a subjective answer to grade. It's impossible to get it right. They try their best, but as soon as the answer is not binary (0 or 1), they are doomed to fail.
 
 So how did I do it?
 
@@ -8411,7 +8411,7 @@ This is what my setup looked like
 
 Having the code on the left side and the copilot on the right side that I could use to chat really enabled me to grade more confidently.
 
-Here’s an example of a section of a response I got to one of the student’s notebooks
+Here's an example of a section of a response I got to one of the student's notebooks
 
 <p align="center">
     <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_cursor_output.png"/>
@@ -8427,23 +8427,23 @@ Note: the model was able to interpret comments written in Portuguese which is an
 
 ## Democratizing access to tutors
 
-While I was working on my prompts to get some feedback from AI in terms of student’s coursework I realized that I only need $20/mo to access them.
+While I was working on my prompts to get some feedback from AI in terms of student's coursework I realized that I only need $20/mo to access them.
 
 But then I realized - so do the students.
 
 This means that the students have no reason to NOT run their entire coursework by a LLM that can act as a critic of their work.
 
-They can keep iterating until the model doesn’t find anything - hence making students feel more confident about the work they are putting forward.
+They can keep iterating until the model doesn't find anything - hence making students feel more confident about the work they are putting forward.
 
-My initial thought was: “this feels like cheating” (right after the - “I wish I had this a few years ago”).
+My initial thought was: "this feels like cheating" (right after the - "I wish I had this a few years ago").
 
-But it actually isn’t.
+But it actually isn't.
 
 Tutors have existed for a long time.
 
-Students pay tutors to spend time with them to learn outside of classes - whether it’s explaining the theory or helping with coursework.
+Students pay tutors to spend time with them to learn outside of classes - whether it's explaining the theory or helping with coursework.
 
-However, tutors are a vitamin and not a painkiller (they are a nice-to-have and not a must-have). And because they aren’t a requirement, it’s not a typical choice among lower-income families.
+However, tutors are a vitamin and not a painkiller (they are a nice-to-have and not a must-have). And because they aren't a requirement, it's not a typical choice among lower-income families.
 
 On the other hand, kids from wealthy families often have multiple tutors. Not for students who are almost failing their class, but who want to bump their grades from A- to an A+.
 
@@ -8489,7 +8489,7 @@ slug: inspired-by-bia-how-her-fight-against-cancer-changed-my-life
 title: Inspired by Bia - How her fight against cancer changed my life
 date: 2024-08-01
 image: /blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.JPG
-tags: ['cancer', 'development', 'disease', 'charity', 'personal']
+tags: ['personal-story', 'grief', 'motivation', 'cancer-awareness', 'charity', 'fundraising', 'life-lessons', 'resilience', 'inspiration']
 description: In a time when we talk about going to Mars and having AGI, cancer is still taking lives every day.
 ---
 
@@ -8507,9 +8507,9 @@ This cause could not have been a personal one, but it is.
 
 As a young kid from a small town in Portugal, people who die from cancer are on TV and I don't know them personally.
  
-My friends & family are “protected” by an imaginary shield that I created in my head.
+My friends & family are "protected" by an imaginary shield that I created in my head.
 
-Until they aren’t.
+Until they aren't.
 
 Let me go back down memory lane and talk about Beatriz.
 
@@ -8587,7 +8587,7 @@ At the graduation she wrote me a message. She didn't have strength in her hand t
     <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_4.JPG"/>
 </p>
 
-The translation doesn’t make it justice, but it reads as:
+The translation doesn't make it justice, but it reads as:
 
 <blockquote>
     <p>Didier</p>
@@ -8633,7 +8633,7 @@ I went from spending most of my time as a gamer and doing just enough to have go
     <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_5.jpeg"/>
 </p>
 
-I have a tattoo that says “All her would-haves are our opportunities" (which is from Anne Frank's house in Amsterdam) to remind me that every day I have opportunities that she didn't get to experience.
+I have a tattoo that says "All her would-haves are our opportunities" (which is from Anne Frank's house in Amsterdam) to remind me that every day I have opportunities that she didn't get to experience.
 
 But I hope that in some way, shape or form, she is.
 
@@ -8641,7 +8641,7 @@ And that I make her proud.
 
 Stories like this are not as uncommon as you may think they are.
 
-It took me over 10 years to talk about how cancer took my best friend’s life away.
+It took me over 10 years to talk about how cancer took my best friend's life away.
 
 Imagine the number of people who never write about how it impacted their lives.
 
@@ -8676,7 +8676,7 @@ slug: why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare
 title: Why AI Will Replace Jobs in Finance and How You Should Prepare
 date: 2024-08-06
 image: /blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare.png
-tags: ['artificial intelligence', 'finance', 'career development', 'technology', 'future of work']
+tags: ['ai', 'finance', 'fintech', 'future-of-work', 'career-advice', 'automation', 'reskilling', 'analyst']
 description: As AI continues to advance, many jobs in finance are at risk. Learn why this shift is happening and how to prepare for the future.
 ---
 
@@ -8698,11 +8698,11 @@ This is the current state of Quant/Finance/Investing conferences in 2024
     <img width="600" src="/blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare_1.png"/>
 </p>
 
-I’ve heard panels defending both sides: Yes and No.
+I've heard panels defending both sides: Yes and No.
 
-I think that people who say “No” don’t understand how AI fundamentally works, and most people who say “Yes” are understating the impact it will have.
+I think that people who say "No" don't understand how AI fundamentally works, and most people who say "Yes" are understating the impact it will have.
 
-Personally, a much better question is “When will AI replace financial analysts?” or “How can I prepare for the shift?”.
+Personally, a much better question is "When will AI replace financial analysts?" or "How can I prepare for the shift?"
 
 ## History
 
@@ -8720,7 +8720,7 @@ Some tooling (read: AI) can help humans do their job, but it still needs to be s
 
 But with enough time (for the automotive industry that was 100 years), AI will take over.
 
-This is what Tesla’s Giga Berlin factory looks like today.
+This is what Tesla's Giga Berlin factory looks like today.
 
 <div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
     <iframe
@@ -8732,33 +8732,33 @@ This is what Tesla’s Giga Berlin factory looks like today.
 
 ## When will AI replace financial analysts?
 
-Bill Gates famously said: “Most people overestimate what they can achieve in a year and underestimate what they can achieve in ten years”.
+Bill Gates famously said: "Most people overestimate what they can achieve in a year and underestimate what they can achieve in ten years".
 
-I’ve found this to be mostly true for everything tech.
+I've found this to be mostly true for everything tech.
 
 EXCEPT AI.
 
-This is why I’m so bullish on the category as a whole.
+This is why I'm so bullish on the category as a whole.
 
-I subscribe to a few newsletters that share daily AI updates, and it’s crazy that every single day there’s something big happening. Either a new model is released and open source, a new framework to do RAG or fine-tune, a new company announces they are working on foundational models, a new paper that pushes the field forward, or a new investment from a big corporation.
+I subscribe to a few newsletters that share daily AI updates, and it's crazy that every single day there's something big happening. Either a new model is released and open source, a new framework to do RAG or fine-tune, a new company announces they are working on foundational models, a new paper that pushes the field forward, or a new investment from a big corporation.
 
-I mean, even enterprises are rushing to jump into the AI train. Either releasing AI features to millions of users before proper testing (e.g. Gemini overview on Google and the whole Reddit answers), adding AI where it isn’t really necessary (e.g. Meta AI on WhatsApp), exploring new monetization opportunities (e.g. Amazon Bedrock for fine-tuning) or risking on their values to not be left behind (e.g. Apple partnering with OpenAI — risking the security brand they worked so hard for).
+I mean, even enterprises are rushing to jump into the AI train. Either releasing AI features to millions of users before proper testing (e.g. Gemini overview on Google and the whole Reddit answers), adding AI where it isn't really necessary (e.g. Meta AI on WhatsApp), exploring new monetization opportunities (e.g. Amazon Bedrock for fine-tuning) or risking on their values to not be left behind (e.g. Apple partnering with OpenAI — risking the security brand they worked so hard for).
 
 So, I think this will happen soon.
 
-And it’s with that in mind that we have been building OpenBB.
+And it's with that in mind that we have been building OpenBB.
 
 ## How can I prepare for the shift?
 
-I think that the most important question that financial analysts should ask themselves is not ‘**when**’ but ‘**what can I do to prepare myself for when AI starts taking over**’.
+I think that the most important question that financial analysts should ask themselves is not '**when**' but '**what can I do to prepare myself for when AI starts taking over**'.
 
-There’s going to be multiple stages before AI fully takes over. Here’s how I envision it playing out:
+There's going to be multiple stages before AI fully takes over. Here's how I envision it playing out:
 
 <p align="center">
     <img width="600" src="/blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare_2.png"/>
 </p>
 
-(For what it’s worth, I think this is equivalent to what will happen to developers in general).
+(For what it's worth, I think this is equivalent to what will happen to developers in general).
 
 ### Short term
 
@@ -8766,19 +8766,19 @@ We are starting to enter this timeline.
 
 A timeline where analysts will use AI to augment their output.
 
-A good analyst using AI will be able to perform at a better level than a great analyst who doesn’t use AI.
+A good analyst using AI will be able to perform at a better level than a great analyst who doesn't use AI.
 
-Interestingly, a mediocre analyst will be able to increase their output but nowhere as much as a good or great analyst. This is because the AI usage will supervised and still “driven” by the analyst (through prompts). So mediocre analysts will not benefit as much because they will either trust too much the AI (without being able to discern its validity), not use the best prompts because they don’t know what to use the AI for, or not use the output because they won’t comprehend the insights that the AI is generating.
+Interestingly, a mediocre analyst will be able to increase their output but nowhere as much as a good or great analyst. This is because the AI usage will supervised and still "driven" by the analyst (through prompts). So mediocre analysts will not benefit as much because they will either trust too much the AI (without being able to discern its validity), not use the best prompts because they don't know what to use the AI for, or not use the output because they won't comprehend the insights that the AI is generating.
 
-During this period, the gap between mediocre and great analysts will be at an all-time high. This will expose more who is pushing their weight and who isn’t.
+During this period, the gap between mediocre and great analysts will be at an all-time high. This will expose more who is pushing their weight and who isn't.
 
-Another thing is that firms that will be hiring high-talented juniors/interns will start adding AI experience as a requirement (e.g. OpenBB experience) since they understand that they will have a higher leverage and their output will be much better. Potentially even replacing a current analyst with many years of experience that doesn’t leverage AI in the day-to-day.
+Another thing is that firms that will be hiring high-talented juniors/interns will start adding AI experience as a requirement (e.g. OpenBB experience) since they understand that they will have a higher leverage and their output will be much better. Potentially even replacing a current analyst with many years of experience that doesn't leverage AI in the day-to-day.
 
 I think there are 2 reasons for this:
 
 1. **AI will allow financial analysts to have much broader mandates** as they will be able to automate the process of research and screen the best companies. Instead of analyzing 20 companies per quarter, they will do 500.
 
-2. **AI will be able to extract trends and patterns that humans simply can’t due to the amount of data necessary to process**. The amount of data that financial firms use to invest is constantly on the rise, that’s where they get their alpha from. Given that an analyst has a limited amount of resources, they will either have to narrow down the companies in their mandate or process less data for each.
+2. **AI will be able to extract trends and patterns that humans simply can't due to the amount of data necessary to process**. The amount of data that financial firms use to invest is constantly on the rise, that's where they get their alpha from. Given that an analyst has a limited amount of resources, they will either have to narrow down the companies in their mandate or process less data for each.
 
 ### Long term
 
@@ -8788,15 +8788,15 @@ This is the equivalent of self-driving cars becoming fully autonomous.
 
 The gap between mediocre and great analysts will narrow over time because AI is doing all the heavy work.
 
-At that time, it will be very hard to distinguish the competency of mediocre and great analysts — the main indicator will be how they interpret/understand the AI model, i.e. how they can explain what led to the AI “deciding” to invest in companies based on hundreds of different datasets.
+At that time, it will be very hard to distinguish the competency of mediocre and great analysts — the main indicator will be how they interpret/understand the AI model, i.e. how they can explain what led to the AI "deciding" to invest in companies based on hundreds of different datasets.
 
 This is why we spend hours obsessing over the UX of the [OpenBB Terminal Pro](https://openbb.co/products/pro). We want to make sure analysts know at all times what the AI Copilot is doing and thinking. Because interpretability will be a big topic in the future.
 
-It’s important to note that the best analysts will be the ones who have their jobs more secure over time. That is because provided the AI is taking the reigns, when it fully takes the reigns, the output of all analysts will be more or less the same. However, in the period before, the great analyst will have an edge because their skill is still in use and so the leverage lever is bigger.
+It's important to note that the best analysts will be the ones who have their jobs more secure over time. That is because provided the AI is taking the reigns, when it fully takes the reigns, the output of all analysts will be more or less the same. However, in the period before, the great analyst will have an edge because their skill is still in use and so the leverage lever is bigger.
 
 I think that when AI fully takes over analysts' jobs, the best ones will move towards opening their investment firms and focus on the human part of the job: communication.
 
-Communicating to their investors why they made their decisions, e.g. “We have access to this dataset which others don’t, and our AI model correlated that data with x, y, and z which enabled us to invest ahead of the rest of the market”. This is the “interpretability” of the AI that I mentioned earlier.
+Communicating to their investors why they made their decisions, e.g. "We have access to this dataset which others don't, and our AI model correlated that data with x, y, and z which enabled us to invest ahead of the rest of the market". This is the "interpretability" of the AI that I mentioned earlier.
 
 ## What can you do?
 
@@ -8806,7 +8806,7 @@ But you should do so with AI in mind.
 
 Experiment with products out there that leverage AI to make you more efficient (you can try OpenBB for free at pro.openbb.co). You will soon realize that your output can compete with someone who is neglecting AI in their day-to-day.
 
-Being a top financial analyst is still something you should strive for since these are going to be the last to be replaced. And when they are, you will still have an edge because your role is likely to evolve into a communication/management role that explains what the AI is doing to investors. And that would be much easier if you’re a top analyst in the first place - because you would understand the insights extracted from an AI copilot.
+Being a top financial analyst is still something you should strive for since these are going to be the last to be replaced. And when they are, you will still have an edge because your role is likely to evolve into a communication/management role that explains what the AI is doing to investors. And that would be much easier if you're a top analyst in the first place - because you would understand the insights extracted from an AI copilot.
 
 What is your opinion on this topic?
 
@@ -8818,7 +8818,7 @@ slug: what-i-learned-in-3-years-at-openb
 title: What I learned in 3 Years at OpenBB
 date: 2024-08-20
 image: /blog/2024-08-20-what-i-learned-in-3-years-at-openb.jpeg
-tags: ['career development', 'technology', 'OpenBB', 'learning', 'leadership']
+tags: ['openbb', 'founder-story', 'startup', 'leadership', 'learnings', 'reflection', 'career-growth', 'milestones', 'life-lessons']
 description: The OpenBB journey started officially 3 years ago. So I want to celebrate it by sharing 36 lessons I learned over the past 36 months as a founder and CEO of a fintech company.
 
 ---
@@ -8939,7 +8939,7 @@ Personally, during that timeline:
 
 We are more locked in than ever before.
 
-Can’t wait for the next 3 years. 🥂
+Can't wait for the next 3 years. 🥂
 
 ---
 
@@ -8948,7 +8948,7 @@ slug: why-i-love-boxing
 title: Why I love boxing
 date: 2024-09-09
 image: /blog/2024-09-09-why-i-love-boxing.jpeg
-tags: ['boxing', 'startups', 'learning', 'growth']
+tags: ['boxing', 'startup', 'personal-growth', 'learning', 'resilience', 'comfort-zone', 'mindset', 'philosophy', 'life-lessons']
 description: Exploring the parallels between boxing and startup life, and how both push me beyond my comfort zone to foster personal growth, resilience, and continuous learning.
 hideSidebar: true
 
@@ -8964,7 +8964,7 @@ Exploring the parallels between boxing and startup life, and how both push me be
 
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-Recently, I finished reading “The Art of Learning” - a really good book that I’ve recommend to everyone (btw, [here](https://x.com/didier_lopes/status/1742748040220328189?s=20) is a page of all the books I’ve read in the past few years).
+Recently, I finished reading "The Art of Learning" - a really good book that I've recommend to everyone (btw, [here](https://x.com/didier_lopes/status/1742748040220328189?s=20) is a page of all the books I've read in the past few years).
 
 In it, the author Josh Waitzkin, reflects on his journey from chess champion to martial arts practicioner - and how anyone can master the art of learning.
 
@@ -8974,27 +8974,27 @@ In it, the author Josh Waitzkin, reflects on his journey from chess champion to 
 
 It made me wonder, why at 29 years old did I decide to step into a ring with boxers who have been fighting for 10+ years? 🥊
 
-As my friend Max says, “You don’t play boxing”. So why am I doing it?
+As my friend Max says, "You don't play boxing". So why am I doing it?
 
-Similar to setting up a startup, this isn’t something that’s easy to explain. The most rationale thing to do would be to go for a run outside or just go to the gym.
+Similar to setting up a startup, this isn't something that's easy to explain. The most rationale thing to do would be to go for a run outside or just go to the gym.
 
 Yet, I hop in a ring to fight.
 
 Why?
 
-For starters, there’s something thrilling about stepping into the ring and knowing that you are going to get punched.
+For starters, there's something thrilling about stepping into the ring and knowing that you are going to get punched.
 
-You need to get comfortable with something that - by definition - it’s uncomfortable.
+You need to get comfortable with something that - by definition - it's uncomfortable.
 
 ## Boxing is the physical to what startups are for the mind
 
-Think about it. Most activities that people do in their spare time have a “controlled” level of intensity. You get progressively more tired but “know” it’s coming - e.g. gym, swimming, tennis, running, etc.
+Think about it. Most activities that people do in their spare time have a "controlled" level of intensity. You get progressively more tired but "know" it's coming - e.g. gym, swimming, tennis, running, etc.
 
 Contact sports are in general like this too, although every now and then you can get injured. Although this rate is small, and sports in general equip athletes to be protected against injuries.
 
-Boxing (and martial arts) don’t work this way. You step in the ring and within the first few seconds, you may get a hook that gives you a bruise next to your eye or a uppercut that makes you stop breathing for a few seconds.
+Boxing (and martial arts) don't work this way. You step in the ring and within the first few seconds, you may get a hook that gives you a bruise next to your eye or a uppercut that makes you stop breathing for a few seconds.
 
-My point is that with boxing, you don’t know when you are going to get hurt, but you learn to be comfortable with it and over time your body gets used to that level of pain - so it will take even more to make you uncomfortable.
+My point is that with boxing, you don't know when you are going to get hurt, but you learn to be comfortable with it and over time your body gets used to that level of pain - so it will take even more to make you uncomfortable.
 
 <p align="center">
     <img width="600" src="/blog/2024-09-09-why-i-love-boxing_2.png"/>
@@ -9002,9 +9002,9 @@ My point is that with boxing, you don’t know when you are going to get hurt, b
 
 ## First sparring session
 
-I still remember my first sparring session, I got hit on the nose and had tears coming out of my eyes from it. My nose hurt for 3 days in a row. It doesn’t matter how many times the coach told me to keep my hands up, nothing taught me quicker than that cross on my nose.
+I still remember my first sparring session, I got hit on the nose and had tears coming out of my eyes from it. My nose hurt for 3 days in a row. It doesn't matter how many times the coach told me to keep my hands up, nothing taught me quicker than that cross on my nose.
 
-For the remainder of the fight, I was mostly protecting myself and keeping my distance. I was “humbled” by the other fighter, and was pushed to outside my comfort zone.
+For the remainder of the fight, I was mostly protecting myself and keeping my distance. I was "humbled" by the other fighter, and was pushed to outside my comfort zone.
 
 This is not so much different from startup life where mentally you have to be in uncomfortable places - for me this is the equivalent to speaking on a stage. For an introvert like myself, that was something that was hard to overcome. Although I am still not comfortable on a stage, I am much more comfortable than I used to be.
 
@@ -9015,13 +9015,13 @@ This is not so much different from startup life where mentally you have to be in
 
 ## Next sparring sessions
 
-Currently when I step in a ring I have mixed feelings, I’m somewhat anxious but also excited about it.
+Currently when I step in a ring I have mixed feelings, I'm somewhat anxious but also excited about it.
 
-It’s weird.
+It's weird.
 
-I mean, I know full well that I’m going against folks who’ve been in a ring since they were young - and I also know full well that I’m going to get hit much more than I will hit.
+I mean, I know full well that I'm going against folks who've been in a ring since they were young - and I also know full well that I'm going to get hit much more than I will hit.
 
-**However**, there’s something exciting (poetic maybe?) about knowing that each time I step into the ring again, I will be able to land more punches, avoid more hits and be better mentally.
+**However**, there's something exciting (poetic maybe?) about knowing that each time I step into the ring again, I will be able to land more punches, avoid more hits and be better mentally.
 
 Learning is the nature of the game.
 
@@ -9038,13 +9038,13 @@ This is the same for startups. I like what Bezos has to say on the topic, about 
 
 I think ultimately, the reason why I love boxing is the same as why I love startups.
 
-Startups push me everyday to be the best that I can be in so many different areas, there isn’t a role that - for me - is as stimulating mentally as being a startup founder.
+Startups push me everyday to be the best that I can be in so many different areas, there isn't a role that - for me - is as stimulating mentally as being a startup founder.
 
 There are 100 different initiatives ongoing at all times, you have a team of composed of human beings (by nature, highly complex with different backgrounds and life experiences), you have startups trying to disrupt your business, you have well established incumbents, etc..
 
 Boxing is the same... but at the physical level.
 
-I step in the ring and need to be the best I can in multiple verticals - it isn’t enough to be the best in one.
+I step in the ring and need to be the best I can in multiple verticals - it isn't enough to be the best in one.
 
 I need to have a faster reaction to avoid punches, be light on my feet to surprise an opponent, land the combos where I put most of my energy in, trade-off balance between combos and stamina, and obviously all the mental side that comes from it too - which turns out is quite a lot.
 
@@ -9062,7 +9062,7 @@ slug: chatgpt-and-the-future-of-ai-in-finance
 title: ChatGPT and The Future of AI in Finance
 date: 2024-09-21
 image: /blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance.jpg
-tags: ['finance', 'ai', 'agents', 'chatgpt', 'quant', 'cornell', 'twosigma', 'blackrock', 'citadel']
+tags: ['ai', 'fintech', 'llm', 'agents', 'hallucinations', 'fine-tuning', 'data-security', 'openbb', 'thought-leadership']
 description: I took the stage at the Cornell Quant Conference alongside Yu Yu (BlackRock) Tony Berkman (Two Sigma), and Samson Qian (Citadel), to discuss ChatGPT & The Future of AI in Finance.
 hideSidebar: true
 
@@ -9078,7 +9078,7 @@ I took the stage at the Cornell Quant Conference alongside Yu Yu (BlackRock) Ton
 
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-Last week, I participated in a panel at the Cornell Financial Engineering Manhattan Conference. The topic of the panel was ‘ChatGPT & The Future of AI in Finance.’
+Last week, I participated in a panel at the Cornell Financial Engineering Manhattan Conference. The topic of the panel was 'ChatGPT & The Future of AI in Finance.'
 
 The other panelists were:
 
@@ -9101,19 +9101,19 @@ I will organize the following sections based on the topics discussed at the even
 
 When talking about the topic of hallucinations, I have a [quote](https://x.com/didier_lopes/status/1675630822093918209) that I love from Marc Andreesen:
 
-> “Hallucination is what we call when we don't like it. Creativity is what we call it when we do like it.”
+> "Hallucination is what we call when we don't like it. Creativity is what we call it when we do like it."
 
 ### Confident hallucinations
 
 The fundamental issue with hallucinations is the fact that the model hallucinates with confidence.
 
-Imagine asking two different friends: “Do you know where location X is?”
+Imagine asking two different friends: "Do you know where location X is?"
 
-**Friend A**: It’s there.
+**Friend A**: It's there.
 
-**Friend B**: Hmm, I’m not really sure. If I had to guess, I’d say there, but I’m not 100% certain.
+**Friend B**: Hmm, I'm not really sure. If I had to guess, I'd say there, but I'm not 100% certain.
 
-If both gave wrong directions, you would consider **Friend A** a liar, but not Friend B. This is because **Friend B** lacked confidence in their answer, they were trying to help but highlighted that they weren’t sure about it.
+If both gave wrong directions, you would consider **Friend A** a liar, but not Friend B. This is because **Friend B** lacked confidence in their answer, they were trying to help but highlighted that they weren't sure about it.
 
 The problem with current LLMs is that they are, for the most part, like **Friend A**. They say wrong things with certainty.
 
@@ -9143,7 +9143,7 @@ This is how it looks.
 
 While I've heard a few vendors promising 100% accuracy, this is simply not true.
 
-We are at a stage where technology is not even yet at the ‘trust but verify’ level.
+We are at a stage where technology is not even yet at the 'trust but verify' level.
 
 So instead of hallucinating with confidence, when data is unavailable, we prompt the model to return that there was no real-time information accessible to answer the query.
 
@@ -9155,7 +9155,7 @@ So instead of hallucinating with confidence, when data is unavailable, we prompt
 
 One thing we found that significantly reduces hallucinations is enabling our agent, OpenBB Copilot, to have access to all the API backends that users have through OpenBB or those they've added themselves.
 
-Here’s the sequence of actions that happen:
+Here's the sequence of actions that happen:
 
 1. The user asks the OpenBB Copilot a question.
 2. The prompt is converted into embeddings.
@@ -9186,7 +9186,7 @@ In order to reduce the number of hallucinations, there are two things that can b
 
 For instance, if a user utilizes the following prompt on the OpenBB Copilot:
 
->_Using the earnings transcript, create a table with columns: financial metric, value, sentence in the earnings where it was extracted from. Double check whether the information you are using is correct._
+>_Using the earnings transcript, create a table with columns: financial metric, value, sentence in the earnings where it was extracted from. Double check whether the information you are using is correct._
 
 <br />
 
@@ -9200,11 +9200,11 @@ See example below,
 
 #### Add deterministic processes to check for hallucinations
 
-For example, let’s say the user prompt involves a data retrieval task.
+For example, let's say the user prompt involves a data retrieval task.
 
 We can run a deterministic process to check whether the retrieved values exist or not. Sure this won't be 100% accurate because the numbers could be flagged by referring to another thing, BUT it's all about improving the overall accuracy of Copilot.
 
-Ultimately, whatever can be done to improve the Copilot’s accuracy should be done.
+Ultimately, whatever can be done to improve the Copilot's accuracy should be done.
 
 ## 2. Agents are the future
 
@@ -9234,9 +9234,9 @@ And apparently, [so does Sequoia](https://finance.yahoo.com/news/sequoia-sees-bi
     <img width="300" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_7.png"/>
 </p>
 
-### The “Strawberry” issue will be solved
+### The "Strawberry" issue will be solved
 
-A panelist commented on stage that LLMs can’t even count how many R's are in the word "Strawberry".
+A panelist commented on stage that LLMs can't even count how many R's are in the word "Strawberry".
 
 This [tweet](https://x.com/MwangoCapital/status/1828857579860095428) offers a good explanation of why this happens — it turns out it's due to the tokenizer, and it can be solved. In fact, it's solved by simply ensuring that the model takes each letter as a token. See below,
 
@@ -9254,7 +9254,7 @@ Interestingly, a few days ago, [OpenAI announced OpenAI o1](https://openai.com/o
 
 It takes in a prompt from the user and decomposes it in natural steps to solve it. Then at each step, it takes the output of the model from the previous step and predicts the next token. It turns out that this improves accuracy substantially.
 
-However, it still doesn’t have access to external data. And that is why I call it a "wannabe agent".
+However, it still doesn't have access to external data. And that is why I call it a "wannabe agent".
 
 I love how Jeremiah put it in this [tweet](https://x.com/jlowin/status/1834722014839418962):
 
@@ -9288,7 +9288,7 @@ I had been using OpenAI's GPT-4 for coding for several months. After trying Anth
     <img width="400" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_10.png"/>
 </p>
 
-The market share for the best LLM will be gigantic. That’s why [OpenAI is looking to raise at a $150 billion valuation](https://www.bloomberg.com/news/articles/2024-09-11/openai-fundraising-set-to-vault-startup-s-value-to-150-billion). While the valuation reflects the market size, the amount that will be raised represents the capital needed to reach that valuation. This is why only a few players will be able to compete at that level.
+The market share for the best LLM will be gigantic. That's why [OpenAI is looking to raise at a $150 billion valuation](https://www.bloomberg.com/news/articles/2024-09-11/openai-fundraising-set-to-vault-startup's-value-to-150-billion). While the valuation reflects the market size, the amount that will be raised represents the capital needed to reach that valuation. This is why only a few players will be able to compete at that level.
 
 In an "agentic future", I believe the best LLM will serve as the core "brain" - the main LLM that routes all prompts and decides what happens next.
 
@@ -9296,7 +9296,7 @@ And who wouldn't want the smartest model controlling the actions with a list of 
 
 I know I would.
 
-That's also why, when discussing OpenBB Copilot, we don’t rely on a single foundational model. Instead, we use the models that are best suited for each specific task.
+That's also why, when discussing OpenBB Copilot, we don't rely on a single foundational model. Instead, we use the models that are best suited for each specific task.
 
 For instance, OpenAI o1 can be the brains, but when a user uses @web it triggers the Perplexity model, and when they upload an image, we have Anthropic's Haiku. Or maybe if they want to do intraday trading, we use Llama 3.1 through Groq for fast inference.
 
@@ -9304,7 +9304,7 @@ You get the idea.
 
 ## 3. When does it make sense to fine-tune
 
-A good comment was made on the panel: "_it’s expensive to spend time fine-tuning a new model, just for that entire work to be 'eradicated' by a new model that has a higher performance in that specific domain than the model has been fine-tuned_".
+A good comment was made on the panel: "_it's expensive to spend time fine-tuning a new model, just for that entire work to be 'eradicated' by a new model that has a higher performance in that specific domain than the model has been fine-tuned_".
 
 In my opinion, this happens because the timing isn't right yet. We are still unlocking remarkable achievements through each new model release. Although there is a massive bump in terms of capability between these releases, I wouldn't recommend that a firm fine-tune its own models at this stage.
 
@@ -9328,13 +9328,13 @@ Their main concern was ensuring that no data was being shared with third-party v
 
 Crypto enthusiasts often say, "Not your keys, not your coins" to emphasize the importance of storing assets in a cold wallet rather than leaving them on an exchange that might implode (looking at you, FTX). The same principle applies here: "Not your weights, not your data".
 
-When you send information to a large foundation model provider like OpenAI, your data enters their ecosystem, and you have to trust they’ll honor the terms of your contract.
+When you send information to a large foundation model provider like OpenAI, your data enters their ecosystem, and you have to trust they'll honor the terms of your contract.
 
 A more secure approach is to host an open-source model locally within your firm, ensuring that sensitive data remains entirely within your infrastructure and network.
 
-Although open-source models aren’t yet as powerful as closed-source ones, they are catching up quickly. If you think that GPT-4o can already do a lot for you, think about how at some point there will be an open-source model that is GPT-4o equivalent. Sure, at that time closed-source models will be better, but the question is: How much better?
+Although open-source models aren't yet as powerful as closed-source ones, they are catching up quickly. If you think that GPT-4o can already do a lot for you, think about how at some point there will be an open-source model that is GPT-4o equivalent. Sure, at that time closed-source models will be better, but the question is: How much better?
 
-Or better, the question is: **"How much are you willing to sacrifice in terms of data security for performance?”**.
+Or better, the question is: **"How much are you willing to sacrifice in terms of data security for performance?"**.
 
 At OpenBB, we take this very seriously and have taken measures to allow enterprise customers to fully control their data.
 
@@ -9404,7 +9404,7 @@ slug: openbb-mobile-app-coming-soon
 title: OpenBB Mobile App - Coming soon
 date: 2024-10-05
 image: /blog/2024-10-05-openbb-mobile-app-coming-soon.png
-tags: ['openbb', 'mobile', 'pwa', 'web-development', 'ux', 'engineering']
+tags: ['openbb', 'mobile-app', 'pwa', 'web-development', 'ux', 'engineering', 'startup-culture', 'rapid-prototyping']
 description: How we built a mobile app, in 1 evening, with 1 engineer.
 hideSidebar: true
 
@@ -9420,17 +9420,17 @@ How we built a mobile app, in 1 evening, with 1 engineer.
 
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-Let’s start with a bit of background to this story. 📖
+Let's start with a bit of background to this story. 📖
 
 Back in September 2021, our first full-time team member was [Jose Donato](https://x.com/josedonato__?utm_source=didierlopes.beehiiv.com&utm_medium=referral&utm_campaign=openbb-mobile-app-coming-soon). He started full-time, even before I did (due to my 3 months notice period in Europe, yikes).
 
-We met through Reddit, only to discover that we are both Portuguese and our hometowns aren’t far from each other.
+We met through Reddit, only to discover that we are both Portuguese and our hometowns aren't far from each other.
 
-I’ve learned more from him about web development than from any YouTube, tutorial or book - combined.
+I've learned more from him about web development than from any YouTube, tutorial or book - combined.
 
 One of the topics he was very passionate about, was the concept of Progressive Web Apps (PWAs). So much so, that he talked about it in his thesis ([2.2 native applications](https://jose-donato.deno.dev/master_thesis.pdf?utm_source=didierlopes.beehiiv.com&utm_medium=referral&utm_campaign=openbb-mobile-app-coming-soon)).
 
-I had never heard of it before, but the concept intrigued me. Why wouldn’t more companies do that?
+I had never heard of it before, but the concept intrigued me. Why wouldn't more companies do that?
 
 Jose is currently writing a post about it, you can subscribe to the [company newsletter](https://openbb.co/newsletter?utm_source=didierlopes.beehiiv.com&utm_medium=referral&utm_campaign=openbb-mobile-app-coming-soon) to keep an eye out for it.
 
@@ -9458,7 +9458,7 @@ And so over 2 weeks, he spent no more than 3h polishing the mobile version.
 
 On the 23rd of September, I pinged [Rita Soares](https://www.linkedin.com/in/ana-rita-soares-48b247152/?utm_source=didierlopes.beehiiv.com&utm_medium=referral&utm_campaign=openbb-mobile-app-coming-soon) - our lead UI/UX.
 
-I had been thinking about mobile user experience and wasn’t happy that we just adapted the interface to work with mobile. But, mobile represents a completely different paradigm on how we use a product. The screen space, the speed at which you can type, not necessarily used for work, more distractions, etc…
+I had been thinking about mobile user experience and wasn't happy that we just adapted the interface to work with mobile. But, mobile represents a completely different paradigm on how we use a product. The screen space, the speed at which you can type, not necessarily used for work, more distractions, etc...
 
 So, I asked Rita to create a few mobile mockups for me - the idea was to improve the UX to make the copilot shine. I.e. more front and center and have the data visualization pushed more to the background.
 
@@ -9496,7 +9496,7 @@ To which he replied:
     <img width="900" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_8.png"/>
 </p>
 
-I was right, it didn’t take him 30s. But it didn’t take him much longer (15 minutes).
+I was right, it didn't take him 30s. But it didn't take him much longer (15 minutes).
 
 <p align="center">
     <img width="900" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_9.png"/>
@@ -9520,7 +9520,7 @@ With 1 person.
 
 ### Conclusion
 
-I could tell you that this doesn’t happen often, but it does.
+I could tell you that this doesn't happen often, but it does.
 
 Small, highly motivated teams (or individuals like Jose) with a strong initiative and a drive to make a difference, can have a tremendous impact on the company.
 
@@ -9918,7 +9918,7 @@ slug: today-i-saw-a-glimpse-of-the-future
 title: Today I saw a glimpse of the future
 date: 2024-12-18
 image: /blog/2024-12-18-today-i-saw-a-glimpse-of-the-future.jpeg
-tags: ['openbb', 'ai', 'interface', 'crypto', 'open source', 'customization']
+tags: ['openbb', 'ai', 'fintech', 'crypto', 'data-aggregation', 'customization', 'open-source', 'future-of-finance']
 description: My friend Matt, from VanEck, built a backend with data from Coingecko, Velodata, Artemis, CCdata, Glassnode, MSTR Tracker, Telegram and Google - all in OpenBB.
 hideSidebar: true
 
@@ -9963,7 +9963,7 @@ slug: why-ai-analysts-need-human-like-workspaces-not-just-chat-interfaces
 title: Why AI analysts need human-like workspaces, not just chat interfaces
 date: 2024-12-20
 image: /blog/2024-12-20-why-ai-analysts-need-human-like-workspaces-not-just-chat-interfaces.jpeg
-tags: ['openbb', 'ai', 'analyst', 'agent', 'workspace', 'vision']
+tags: ['openbb', 'ai', 'analyst', 'agent', 'workspace', 'fintech', 'user-interface', 'future-of-ai']
 description: Why I believe AI agents need the same comprehensive workspace tools as human analysts, moving beyond simple chat interfaces to enable true financial research and analytics.
 hideSidebar: true
 
@@ -10027,7 +10027,7 @@ slug: openbb-and-our-global-reach-since-leaving-beta
 title: OpenBB and our global reach since leaving beta
 date: 2024-12-22
 image: /blog/2024-12-22-openbb-and-our-global-reach-since-leaving-beta.jpeg
-tags: ['openbb', 'global audience', 'reach', 'internationalization', 'languages', 'pwa']
+tags: ['openbb', 'fintech', 'growth', 'global-audience', 'internationalization', 'accessibility', 'translation', 'languages']
 description: This is how OpenBB is reaching users worldwide with Chrome's translation features, making financial analytics accessible in multiple languages and expanding our presence across 84% of countries since launch.
 hideSidebar: true
 
@@ -10075,7 +10075,7 @@ slug: ai-chatbots-wont-revolutionize-finance-but-intelligent-workspaces-will
 title: AI chatbots won't revolutionize finance, but intelligent workspaces will
 date: 2024-12-27
 image: /blog/2024-12-27-ai-chatbots-wont-revolutionize-finance-but-intelligent-workspaces-will
-tags: ['openbb', 'artificial intelligence', 'chatgpt', 'financial analytics', 'future of finance']
+tags: ['openbb', 'ai', 'fintech', 'workspaces', 'future-of-finance', 'financial-analytics', 'chatbots', 'ui', 'ux']
 description: Beyond the AI hype - why the future of financial analysis isn't about chatbots, but about intelligent workspaces that combine your data, tools, and AI exactly when you need them.
 hideSidebar: true
 
@@ -10168,7 +10168,7 @@ slug: building-an-ai-agent-from-scratch-that-can-post-on-bluesky
 title: Building an AI agent from scratch that can post on bluesky
 date: 2025-01-04
 image: /blog/2025-01-04-building-an-ai-agent-from-scratch-that-can-post-on-bluesky
-tags: ['openbb', 'artificial intelligence', 'ai', 'agent', 'open source', 'ollama', 'llama', 'telegram', 'bluesky', 'xai', 'grok', 'perplexity']
+tags: ['ai', 'agent', 'python', 'open-source', 'llm', 'ollama', 'telegram', 'bluesky', 'api']
 description: A practical guide to building an AI agent that processes Telegram messages through a local LLM, gathers context from various sources (OpenBB, Perplexity, Grok), and automatically posts content to Bluesky.
 hideSidebar: true
 
@@ -10688,7 +10688,7 @@ slug: tracking-my-writing-progress-through-an-open-source-blog-tracker-generator
 title: Tracking my writing progress through an open source blog tracker generator
 date: 2025-01-07
 image: /blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator
-tags: ['writing', 'productivity', 'open source', 'svg', 'visualization', 'blog', 'tracking', 'metrics']
+tags: ['writing', 'productivity', 'open-source', 'svg', 'visualization', 'blog', 'tracking', 'metrics']
 description: Learn how I built an open-source tool that generates beautiful SVG visualizations of your blog post history, supporting both JSON and ATOM XML feeds. Perfect for keeping yourself accountable and monitoring your writing progress over time.
 hideSidebar: true
 
@@ -10854,7 +10854,7 @@ slug: the-cost-of-building-software-is-plummeting-to-zero
 title: The cost of building software is plummeting to zero
 date: 2025-01-09
 image: /blog/2025-01-09-the-cost-of-building-software-is-plummeting-to-zero
-tags: ['ai', 'software development', 'fintech', 'data infrastructure', 'open source', 'snowflake', 'openbb', 'portfolio optimization']
+tags: ['ai', 'software-development', 'fintech', 'data-infrastructure', 'open-source', 'snowflake', 'openbb', 'portfolio-optimization', 'future-of-software']
 description: AI is revolutionizing software development costs and shifting value creation in the financial industry. I talk about the growing importance of data infrastructure, the rise of customizable solutions, and how OpenBB Workspace enables firms to build specialized AI-powered financial tools.
 hideSidebar: true
 
@@ -10900,7 +10900,7 @@ Using OpenBB Workspace, he built a sophisticated portfolio optimization system t
 
 This isn't just a tool - it's a glimpse into how OpenBB Workspace can transform entire departments within investment firms.
 
-This 6-minute demo of OpenBB Workspace is one of the most compelling I’ve seen.
+This 6-minute demo of OpenBB Workspace is one of the most compelling I've seen.
 
 <div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
     <iframe
@@ -11005,7 +11005,7 @@ slug: turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm
 title: Turn my blog feed into a QA dataset to fine-tune a LLM
 date: 2025-01-21
 image: /blog/2025-01-21-turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm
-tags: ['artificial intelligence', 'machine learning', 'llm', 'dataset', 'hugging face', 'ollama', 'llama', 'fine-tuning', 'qa', 'blog']
+tags: ['ai', 'ml', 'llm', 'dataset', 'hugging-face', 'ollama', 'llama', 'fine-tuning', 'python']
 description: This project converts blog feed content into a structured Question-Answer dataset using LLaMA 3.2 (via Ollama) for local processing. The generated dataset follows a conversational format and can be automatically pushed to Hugging Face.
 hideSidebar: true
 
@@ -11320,7 +11320,7 @@ slug: what-it-means-to-have-skin-in-the-game
 title: What it means to have skin in the game
 date: 2025-01-30
 image: /blog/2025-01-30-what-it-means-to-have-skin-in-the-game
-tags: ['openbb', 'leadership', 'accountability', 'commitment', 'startup']
+tags: ['openbb', 'leadership', 'philosophy', 'accountability', 'commitment', 'startup', 'skin-in-the-game', 'personal-story']
 description: From getting the OpenBB logo tattooed to honoring a promise of a Bali trip, this is a personal reflection on what it truly means to have "skin in the game". It's not about reckless commitment, but about standing fully behind your words and actions - a principle that's shaped both my personal life and my approach to building OpenBB.
 hideSidebar: true
 
@@ -11342,19 +11342,19 @@ I just finished reading Nassim Taleb's "Skin in the Game," and it hit home in a 
     <img width="600" src="/blog/2025-01-30-what-it-means-to-have-skin-in-the-game_1.png"/>
 </p>
 
-The idea of having real stakes in your decisions isn’t new to me – it’s something I’ve lived by for as long as I can remember. Taleb’s writing puts it into words beautifully, but for me, this has always been a way of life.
+The idea of having real stakes in your decisions isn't new to me – it's something I've lived by for as long as I can remember. Taleb's writing puts it into words beautifully, but for me, this has always been a way of life.
 
-I believe in going all-in on what matters. In fact, I’m so committed to this philosophy that I have OpenBB logo tattooed on my body.
+I believe in going all-in on what matters. In fact, I'm so committed to this philosophy that I have OpenBB logo tattooed on my body.
 
 <p align="center">
     <img width="600" src="/blog/2025-01-30-what-it-means-to-have-skin-in-the-game.png"/>
 </p>
 
-It’s not about showing off or trying to prove something. It’s a reminder that when I’m in, I’m all the way in. No half measures, no excuses. This isn’t about taking wild risks for the sake of it – it’s about standing behind what you believe in, fully and without hesitation.
+It's not about showing off or trying to prove something. It's a reminder that when I'm in, I'm all the way in. No half measures, no excuses. This isn't about taking wild risks for the sake of it – it's about standing behind what you believe in, fully and without hesitation.
 
 This mindset started when I was young, mostly from my dad.
 
-I learned that our word has to mean something. Promises weren’t just things I would say, they were real commitments that I always followed through.
+I learned that our word has to mean something. Promises weren't just things I would say, they were real commitments that I always followed through.
 
 I remember when we were kids I told one of my friends jokingly "if you do x, I will give you 2 euros" and he did it and we laughed. The day after I brought him 2 euros to school and he had forgotten about it.
 
@@ -11364,17 +11364,17 @@ More recently, I promised my friends that if the open source project I had start
     <img width="600" src="/blog/2025-01-30-what-it-means-to-have-skin-in-the-game_2.JPG"/>
 </p>
 
-That wasn’t just talk. It was a real promise, tied to real accountability.
+That wasn't just talk. It was a real promise, tied to real accountability.
 
-The way I see it, taking risks and owning the results – good or bad – is what separates people who truly stand for something from those who just talk about it. When you’re all in, you can’t hide. If things go wrong, you take the hit. If they go right, you’ve earned it. Either way, you’re accountable.
+The way I see it, taking risks and owning the results – good or bad – is what separates people who truly stand for something from those who just talk about it. When you're all in, you can't hide. If things go wrong, you take the hit. If they go right, you've earned it. Either way, you're accountable.
 
 This idea of skin in the game just makes so much sense to me, why wouldn't you?
 
-It’s about showing up fully in everything you do, whether it’s work, relationships, or personal goals. And it’s about being honest with yourself and others when things don’t go as planned.
+It's about showing up fully in everything you do, whether it's work, relationships, or personal goals. And it's about being honest with yourself and others when things don't go as planned.
 
-Trust is built by following through, especially when it’s hard. When people know you’ll keep your word, even when it’s inconvenient, you build something way more valuable than a quick win: you build real trust. And that trust isn’t just given; it’s earned through consistency and integrity.
+Trust is built by following through, especially when it's hard. When people know you'll keep your word, even when it's inconvenient, you build something way more valuable than a quick win: you build real trust. And that trust isn't just given; it's earned through consistency and integrity.
 
-These days, it feels like too many people are afraid to commit. They hedge their bets, avoid risks, and try to keep their options open. But I’ve found that being all-in – really having skin in the game – is the best way to live life.
+These days, it feels like too many people are afraid to commit. They hedge their bets, avoid risks, and try to keep their options open. But I've found that being all-in – really having skin in the game – is the best way to live life.
 
 You can also see this by the fact that I am pretty much an open book - either sharing what I'm thinking through blogs like this or sharing all my code on GitHub.
 
@@ -11388,7 +11388,7 @@ slug: 2025-02-18-long-live-long-context-with-gemini
 title: Long live long context with Gemini
 date: 2025-02-18
 image: /blog/2025-02-18-long-live-long-context-with-gemini
-tags: ['long context window', 'gemini', 'streamlit', 'rag', 'pdf parsing', 'analyst']
+tags: ['ai', 'llm', 'gemini', 'long-context', 'rag', 'streamlit', 'python', 'pdf-parsing', 'prompt-engineering']
 description: A practical exploration of using Gemini's long context window capabilities to analyze multi-page documents, featuring a Streamlit app for testing and iterating prompts.
 hideSidebar: true
 
@@ -11748,7 +11748,7 @@ slug: ui-layer-is-the-next-big-frontier
 title: UI layer is the next big frontier
 date: 2025-02-25
 image: /blog/2025-02-25-ui-layer-is-the-next-big-frontier
-tags: ['openbb', 'fintech', 'ui', 'innovation', 'financial-software']
+tags: ['openbb', 'fintech', 'ui', 'ux', 'innovation', 'financial-software', 'data-visualization', 'future-of-finance']
 description: A deep dive into why the UI layer represents the next major frontier in financial technology. While the industry has heavily invested in data, the user interface remains a critical yet overlooked bridge between raw information and actionable intelligence. This piece explores how OpenBB is leading the charge in revolutionizing how financial professionals interact with data.
 hideSidebar: true
 
@@ -11808,9 +11808,9 @@ Intelligence - how insights are generated, refined, and acted upon—is where th
 
 ## Why the UI layer has been overlooked
 
-Building a beloved financial desktop application isn’t just about better charts or a sleeker interface. It requires a fundamental rethink of how users interact with their data.
+Building a beloved financial desktop application isn't just about better charts or a sleeker interface. It requires a fundamental rethink of how users interact with their data.
 
-The industry’s reliance on fragmented workflows has meant that firms have learned to tolerate inefficiencies, simply because “it works.”
+The industry's reliance on fragmented workflows has meant that firms have learned to tolerate inefficiencies, simply because "it works."
 
 <p align="center">
     <img width="600" src="/blog/2025-02-25-ui-layer-is-the-next-big-frontier_2.png" />
@@ -11822,19 +11822,19 @@ The industry’s reliance on fragmented workflows has meant that firms have lear
 
 ## The OpenBB approach: a different path
 
-We aren’t competing with data vendors.
+We aren't competing with data vendors.
 
-Instead, we’re offering something that no one else has attempted: a flexible, modular workspace where firms can build on top of their own data. Imagine a world where research is seamless, where AI is not just bolted on but deeply embedded into workflows, and where analysts spend more time uncovering insights rather than wrangling data.
+Instead, we're offering something that no one else has attempted: a flexible, modular workspace where firms can build on top of their own data. Imagine a world where research is seamless, where AI is not just bolted on but deeply embedded into workflows, and where analysts spend more time uncovering insights rather than wrangling data.
 
 Data providers are starting to recognize this shift, but innovation on their platforms is slow.
 
 Meanwhile, AI is accelerating workflows at a pace that demands a new approach.
 
-AI chatbots alone aren’t enough; without a stronger visualization and interaction layer, they remain a novelty rather than a necessity.
+AI chatbots alone aren't enough; without a stronger visualization and interaction layer, they remain a novelty rather than a necessity.
 
 With OpenBB, we are deliberately avoiding the data layer because we believe intelligence — the ability to derive value from data—is the future. Firms want more control over their data and the ability to leverage it without leakage.
 
-That’s why the biggest demand we’ve seen is for on-prem deployments, ensuring security while unlocking intelligence.
+That's why the biggest demand we've seen is for on-prem deployments, ensuring security while unlocking intelligence.
 
 ## Timing matters: why now?
 
@@ -11848,15 +11848,15 @@ That’s why the biggest demand we’ve seen is for on-prem deployments, ensurin
 
 The cost of compute has dropped, making powerful AI-driven applications more feasible.
 
-The best products emerge at the intersection of technical and domain expertise, and that’s exactly where OpenBB sits—with deep engineering talent combined with financial knowledge.
+The best products emerge at the intersection of technical and domain expertise, and that's exactly where OpenBB sits—with deep engineering talent combined with financial knowledge.
 
 One of our clients recently put it best:
 
-> _“OpenBB is the bridge infrastructure between my data and my intelligence.”_
+> _"OpenBB is the bridge infrastructure between my data and my intelligence."_
 
 <br />
 
-That’s the mission.
+That's the mission.
 
 Not just another financial tool, but a true workspace for the next generation of research and analytics.
 
@@ -11871,7 +11871,7 @@ slug: 2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb
 title: How function calling and context-aware AI shapes OpenBB
 date: 2025-03-01
 image: /blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb
-tags: ['AI', 'function calling', 'data analytics', 'openbb', 'financial analysis', 'agent', 'copilot']
+tags: ['openbb', 'ai', 'llm', 'function-calling', 'agent', 'copilot', 'data-analytics', 'financial-analysis']
 description: Building on OpenBB's presentation at the Anote AI Day Summit, this post explores how intelligent function calling serves as the cornerstone of our AI-native workspace for data analytics.
 hideSidebar: true
 
@@ -12080,7 +12080,7 @@ slug: 2025-03-03-building-a-custom-widget-for-my-friends-newsletter
 title: Building a custom widget for my friends newsletter
 date: 2025-03-03
 image: /blog/2025-03-03-building-a-custom-widget-for-my-friends-newsletter
-tags: ['openbb', 'financial-services', 'widget', 'automation', 'open-source']
+tags: ['openbb', 'widget', 'automation', 'open-source', 'fintech', 'api', 'side-project', 'newsletter']
 description: How I built a custom OpenBB widget to save my friend hours of manual work on his newsletter with 190,000+ subscribers.
 hideSidebar: true
 
@@ -12466,7 +12466,7 @@ slug: 2025-03-18-my-first-half-marathon
 title: Doing my first Half Marathon
 date: 2025-03-18
 image: /blog/2025-03-18-my-first-half-marathon
-tags: ['running', 'half-marathon', 'nyc', 'charity', 'fitness', 'personal']
+tags: ['running', 'half-marathon', 'nyc', 'charity', 'fitness', 'personal-story', 'fundraising', 'race-recap', 'endurance']
 description: A personal journey through my first NYC Half Marathon, from fundraising $1,615 for cancer research to crossing the finish line in 1h45min, complete with training insights and my race day experience.
 hideSidebar: true
 
@@ -12724,8 +12724,8 @@ slug: 2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow
 title: OpenBB enables streamlined Client Advisory AI workflow
 date: 2025-03-23
 image: /blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow
-tags: ['AI', 'investment', 'client advisory', 'automation', 'LLM', 'openbb']
-description: In this blog post, I’ll show you how an AI agent can transform your funds performance, macro data, news around your holding companies, and more into a draft investor letter that has the same writing style as your team.
+tags: ['openbb', 'ai', 'llm', 'fintech', 'automation', 'workflows', 'client-advisory', 'investment-management', 'reporting']
+description: In this blog post, I'll show you how an AI agent can transform your funds performance, macro data, news around your holding companies, and more into a draft investor letter that has the same writing style as your team.
 hideSidebar: true
 
 ---
@@ -12734,7 +12734,7 @@ hideSidebar: true
     <img width="600" src="/blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow.png" />
 </p>
 
-In this blog post, I’ll show you how an AI agent can transform your funds performance, macro data, news around your holding companies, and more into a draft investor letter that has the same writing style as your team.
+In this blog post, I'll show you how an AI agent can transform your funds performance, macro data, news around your holding companies, and more into a draft investor letter that has the same writing style as your team.
 
 <!-- truncate -->
 
@@ -12769,10 +12769,10 @@ So in this step, the important aspect is identifying what makes your ~10-page in
 - How does the analyst write the intro?
 - How do they wrap up the letter? Does it change based on the overall flow?
 - What are the sections of the document (e.g., performance review, outlook)?
-- What is the analyst’s tone of voice in general? Does it change based on the performance review?
+- What is the analyst's tone of voice in general? Does it change based on the performance review?
 - How much detail does it go into regarding the major holdings?
 - Do they talk about positions that were exited and why? What about new ones?
-…
+...
 
 Ultimately, the model needs to understand what makes your investor letter unique.
 
@@ -12784,11 +12784,11 @@ Ultimately, the model needs to understand what makes your investor letter unique
 
 At this point, it already knows what makes your investor letter unique. However, it still does not know what makes the analyst write certain comments vs others. Where do these come from?
 
-For that, we are picking the concept of “supervised learning” from machine learning, where a model is trained based on the input and output to understand the trends between the two.
+For that, we are picking the concept of "supervised learning" from machine learning, where a model is trained based on the input and output to understand the trends between the two.
 
 In this case:
 
-- The model is the LLM of your choice (e.g., local LLM so data doesn’t leave your machine)
+- The model is the LLM of your choice (e.g., local LLM so data doesn't leave your machine)
 - The input is the factsheet data
 - The output is the investor letter
 
@@ -12810,7 +12810,7 @@ It allows you to understand which factsheet data tables impact which section of 
 
 **Tips & tricks:**
 
-1. Feed the model with multiple different “Factsheet → Investor letter” examples so it’s easier for it to capture edge cases. Example: The last quarter of the year might have a different section to wrap up the year
+1. Feed the model with multiple different "Factsheet → Investor letter" examples so it's easier for it to capture edge cases. Example: The last quarter of the year might have a different section to wrap up the year
 
 2. Do not use examples that had a different writing style than what you're trying to achieve as that can impact the results. Example: an example from 7 years ago might no longer be relevant due to overall style changes
 
@@ -12832,11 +12832,11 @@ However, we still need to provide the model with:
 - Latest factsheet data
 - Any additional context to be included in the letter (e.g., tickers of interest for this quarter, macro, ..)
 
-That’s where the OpenBB workspace is crucial.
+That's where the OpenBB workspace is crucial.
 
 ### Step 5: Connect this custom agent to the OpenBB workspace
 
-It doesn’t matter how good this pipeline is if your team does not have a good interface to interact with it easily—feed it the data it requires, review its output, iterate, etc.
+It doesn't matter how good this pipeline is if your team does not have a good interface to interact with it easily—feed it the data it requires, review its output, iterate, etc.
 
 By connecting this custom agent to the OpenBB workspace, your firm can access it directly from there and combine it with the other features OpenBB offers.
 
@@ -12847,7 +12847,7 @@ By connecting this custom agent to the OpenBB workspace, your firm can access it
 Those features include:
 
 - Being able to drag and drop to the workspace the latest factsheet data and any additional context that the model will require
-- Interact with the model directly on OpenBB’s interface
+- Interact with the model directly on OpenBB's interface
 - Review the generated draft directly and ask for quick edits or adjustments
 - Convert that draft into a widget on the workspace
 - Share this initial draft version with your team for feedback
@@ -12858,7 +12858,7 @@ Those features include:
 
 Our unique solution consists of an AI-ready interface where firms can seamlessly integrate their own data and AI agents. This means that these agents are accessible right where your analysts perform their analysis and research, eliminating the need to switch between platforms or learn new tools. This approach allows portfolio managers and analysts to leverage AI to complement their existing processes, rather than relying on generic solutions.
 
-OpenBB also stands out because it’s built on an open-source foundation, unlike anything else in the market, translating into unparalleled transparency, flexibility, and the ability to adapt to your unique needs.
+OpenBB also stands out because it's built on an open-source foundation, unlike anything else in the market, translating into unparalleled transparency, flexibility, and the ability to adapt to your unique needs.
 
 Additionally, our flexible on-prem deployment option means that firms can run open-weight AI models locally and that data never leaves their environment, ensuring privacy and compliance.
 
@@ -12874,7 +12874,7 @@ While the results can make it look simple, in reality, this is how the pipeline 
 
 The impact of this workflow on our clients' operations has been transformative. Analysts now have first drafts ready within minutes of receiving factsheet data, giving them more time to focus on analysis and personalization. The consistency in communications has improved, while the accuracy of data and insights remains impeccable.
 
-### Increase your team’s throughput and efficiency with AI
+### Increase your team's throughput and efficiency with AI
 
 Imagine you have an AI partner that thinks like your team, writes like your team, and helps maintain the high standards your investors expect. A partner that's always available, consistently accurate, and infinitely scalable.
 
@@ -12884,7 +12884,7 @@ Whether you manage multiple funds, communicate in different languages, or simply
 
 Interested in seeing how this could work for your firm?
 
-Let's discuss how we can customize this solution for your organization’s unique needs and communication style. Contact me at didier.lopes@openbb.finance.
+Let's discuss how we can customize this solution for your organization's unique needs and communication style. Contact me at didier.lopes@openbb.finance.
 
 
 ---
@@ -13069,7 +13069,7 @@ slug: 2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero
 title: Building your own Crypto app from scratch - zero to hero
 date: 2025-03-30
 image: /blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero
-tags: ['openbb', 'crypto', 'dashboard', 'tutorial', 'data visualization', 'AI', 'workflows']
+tags: ['openbb', 'crypto', 'fintech', 'app-building', 'tutorial', 'data-visualization', 'ai', 'workflows', 'api']
 description: A comprehensive guide to building sophisticated crypto applications using OpenBB. Learn how to create custom dashboards, implement consistent styling, leverage widget specifications, build template workflows, and customize AI agents for your specific use case.
 hideSidebar: true
 unlisted: true
@@ -13540,7 +13540,7 @@ slug: 2025-04-03-stop-building-ai-products-start-building-workflows
 title: Stop building AI products, start building workflows
 date: 2025-04-03
 image: /blog/2025-04-03-stop-building-ai-products-start-building-workflows
-tags: ['AI', 'product strategy', 'business', 'openai', 'workflows', 'openbb']
+tags: ['ai', 'product-strategy', 'business', 'startup', 'moat', 'workflows', 'openbb', 'fintech', 'vertical-ai']
 description: The secret to building defensible AI companies isn't better AI - it's better workflows. An insider's perspective on why some AI companies thrive while others will become obsolete with each new model release.
 hideSidebar: true
 
@@ -13568,7 +13568,7 @@ Being a wrapper around an LLM just means that your product is not the LLM—but 
 
 If you're building a general-purpose AI model to be used on any user data, and your pitch is: our model is better at retrieval than any other AI lab.
 
-Then you’ve already lost.
+Then you've already lost.
 
 The funny thing is, the companies that fall into this trap will say:
 
@@ -13628,13 +13628,13 @@ And so today, although OpenAI and others have web search, Perplexity is consider
 
 Ultimately, I think their moat is a combination of being first to market (on search), having a strong brand, and—more importantly—flawless execution by Aravind.
 
-One of the things I never understood was why they didn’t push more on the Enterprise AI angle. After all, they have the best demo there is:
+One of the things I never understood was why they didn't push more on the Enterprise AI angle. After all, they have the best demo there is:
 
-> _“If we can give you an answer based on a personal blog post written 17 years ago by a professor of history from Portugal, do you really think we can’t get your ‘extract the company’s last twelve months’ revenue’?”_
+> _"If we can give you an answer based on a personal blog post written 17 years ago by a professor of history from Portugal, do you really think we can't get your 'extract the company's last twelve months' revenue'?"_
 
 <br />
 
-But they announced crossing $100M ARR, so they’re doing pretty well.
+But they announced crossing $100M ARR, so they're doing pretty well.
 
 ## Where does the highest value lie?
 
@@ -13661,11 +13661,11 @@ Note that this has nothing to do with AI, but with the data itself.
 
 AI is just the delivery mechanism for that data. Not an API call, not a dashboard with the data, not a notification... a box that expects natural language and returns the data.
 
-If the answer is no, then you don’t have a moat here.
+If the answer is no, then you don't have a moat here.
 
 **BUT.**
 
-If you were thinking, _“But my application connects with data from FactSet, S&P, ...”_
+If you were thinking, _"But my application connects with data from FactSet, S&P, ..."_
 
 Then your moat is not the data itself, but the **workflow**—which takes me to the next moat discussion.
 
@@ -13675,27 +13675,27 @@ Here, the question is: what types of workflows do you allow users to get done on
 
 The definition of a _workflow_ is: a sequence of steps or tasks that are carried out to complete a specific process or achieve a particular goal.
 
-There’s no mention of AI anywhere in that definition. AI is a tool that can help get a workflow done, but it isn’t required.
+There's no mention of AI anywhere in that definition. AI is a tool that can help get a workflow done, but it isn't required.
 
 What _is_ required is understanding users—and understanding what they want to get done.
 
 So there's a _lot_ of value in going narrow and nailing the workflow for a specific type of user.
 
-_"But if you go narrow in a vertical, can’t you be disrupted more easily?"_ — you ask.
+_"But if you go narrow in a vertical, can't you be disrupted more easily?"_ — you ask.
 
 Yes and no.
 
-- **YES**, if OpenAI ultimately wanted to go after that market, it could. But OpenAI won’t care. Not necessarily because the market isn’t big, but because they’re pursuing one that’s even bigger.
+- **YES**, if OpenAI ultimately wanted to go after that market, it could. But OpenAI won't care. Not necessarily because the market isn't big, but because they're pursuing one that's even bigger.
 
-- **NO**, because the more vertical and narrow you go, the fewer experts there are, the stronger the word-of-mouth is, and the lower the competition. And once you’re in—you have first-mover advantage.
+- **NO**, because the more vertical and narrow you go, the fewer experts there are, the stronger the word-of-mouth is, and the lower the competition. And once you're in—you have first-mover advantage.
 
 ## Examples
 
 Cursor and Windsurf are amazing products because they _nail the workflow_ of developers.
 
-It’s not just about the AI model being used—but _when_ and _how_ it's used.
+It's not just about the AI model being used—but _when_ and _how_ it's used.
 
-It’s about being in a full IDE that users are already familiar with, and plugging in the AI at the exact moments a user needs it.
+It's about being in a full IDE that users are already familiar with, and plugging in the AI at the exact moments a user needs it.
 
 They understood the pain of developers—and used AI to alleviate that pain.
 
@@ -13707,35 +13707,35 @@ They get better.
 
 Because the developers behind the product understand how to use these better models to remove _even more_ friction for their users.
 
-Another thing worth saying here—I don’t actually believe in users selecting different models.
+Another thing worth saying here—I don't actually believe in users selecting different models.
 
-It sounds good in theory, but in practice, it doesn’t really work.
+It sounds good in theory, but in practice, it doesn't really work.
 
-I don’t care what model Cursor is using—I care about getting my workflow done.
+I don't care what model Cursor is using—I care about getting my workflow done.
 
-As a developer, I have _zero_ loyalty to my tools. I’ll use whatever gets the job done faster and more efficiently.
+As a developer, I have _zero_ loyalty to my tools. I'll use whatever gets the job done faster and more efficiently.
 
 I mean—how many people actually switch models manually on Cursor? I think not many, and definitely not frequently.
 
-I, for one, use Claude because it’s the best for coding right now. But if I’m asking an implementation question, then I’ll click on the “Claude Thinking” model.
+I, for one, use Claude because it's the best for coding right now. But if I'm asking an implementation question, then I'll click on the "Claude Thinking" model.
 
-Do I _want_ to click on “Thinking model”? Not really. But Cursor doesn’t yet understand my intent to get all the “firepower” I can for this answer—so for now, this will do.
+Do I _want_ to click on "Thinking model"? Not really. But Cursor doesn't yet understand my intent to get all the "firepower" I can for this answer—so for now, this will do.
 
-Even better—do I _really_ care that it’s Claude? Nope. If it turns out Gemini 2.5 is the best at coding, I’ll happily switch and never look back.
+Even better—do I _really_ care that it's Claude? Nope. If it turns out Gemini 2.5 is the best at coding, I'll happily switch and never look back.
 
 ## OpenBB
 
 Ok, so where do we fit?
 
-We’re very much in the category of **Workflows** - similar to Cursor.
+We're very much in the category of **Workflows** - similar to Cursor.
 
-The difference is: we didn’t have a VSCode that we could fork and build on top of.
+The difference is: we didn't have a VSCode that we could fork and build on top of.
 
 The best financial terminals used in the space — Bloomberg, FactSet, CapIQ — are all closed-source.
 
 So we had to build **OpenBB Workspace** from scratch over three years to match the capability and quality that financial professionals expect.
 
-And now, we’re adding AI where it makes sense.
+And now, we're adding AI where it makes sense.
 
 Some of these workflows that can be done on OpenBB include:
 
@@ -13749,19 +13749,19 @@ Some of these workflows that can be done on OpenBB include:
 
 <br />
 
-And we’re adding more fast.
+And we're adding more fast.
 
 Now that we have a UI that meets industry standards, we can double down on **workflows that delight customers**.
 
-And we’ll keep expanding how many workflows can be done on OpenBB—ultimately with the goal of making OpenBB the **central interface** used within a firm, built on top of their own data.
+And we'll keep expanding how many workflows can be done on OpenBB—ultimately with the goal of making OpenBB the **central interface** used within a firm, built on top of their own data.
 
-Here’s an example of an application built on OpenBB in just a couple of days by one of our engineers, for a workshop we’re putting together with risk managers:
+Here's an example of an application built on OpenBB in just a couple of days by one of our engineers, for a workshop we're putting together with risk managers:
 
 <p align="center">
     <img width="900" src="/blog/2025-04-03-stop-building-ai-products-start-building-workflows_1.jpeg" />
 </p>
 
-This highlights not only what we’ve built, but also how quickly we can delight customers on top of our product.
+This highlights not only what we've built, but also how quickly we can delight customers on top of our product.
 
 
 ---
@@ -13771,7 +13771,7 @@ slug: 2025-04-11-10000-followers-later-heres-where-it-all-began
 title: 10,000 followers later, here’s where it all began
 date: 2025-04-11
 image: /blog/2025-04-11-10000-followers-later-heres-where-it-all-began
-tags: ['career', 'social media', 'linkedin', 'build in public']
+tags: ['career', 'personal-story', 'linkedin', 'social-media', 'build-in-public', 'networking', 'side-projects', 'openbb', 'origin-story']
 description: A personal reflection on my 6-year journey to 10,000 LinkedIn followers and how sharing my work publicly led to unexpected opportunities and the creation of OpenBB.
 hideSidebar: true
 
@@ -13902,7 +13902,7 @@ slug: 2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflo
 title: Introducing OpenBB Apps, tailored by users for optimized workflows
 date: 2025-05-01
 image: /blog/2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows
-tags: ['fintech', 'ai', 'workflows', 'financial analysis', 'open source', 'openbb']
+tags: ['openbb', 'fintech', 'apps', 'app-building', 'workflows', 'customization', 'financial-analysis', 'open-source', 'ai']
 description: OpenBB Apps introduces a customizable platform where financial organizations can build tailored workflow solutions with dashboard templates, data widgets, and AI agents - putting firms in complete control of their data and tech stack.
 hideSidebar: true
 

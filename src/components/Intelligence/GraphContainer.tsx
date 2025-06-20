@@ -72,6 +72,13 @@ const GraphContainer = () => {
     }, [dateFilteredItems, selectedTags]);
 
     const availableTags = useMemo(() => {
+        const tagFrequencies: Record<string, number> = {};
+        for (const item of dateFilteredItems) {
+            for (const tag of item.tags) {
+                tagFrequencies[tag] = (tagFrequencies[tag] || 0) + 1;
+            }
+        }
+
         const itemsToSourceTagsFrom = selectedTags.length > 0 ? filteredItems : dateFilteredItems;
         const tags = new Set<string>();
         for (const item of itemsToSourceTagsFrom) {
@@ -79,7 +86,15 @@ const GraphContainer = () => {
                 tags.add(tag);
             }
         }
-        return Array.from(tags).sort();
+        
+        return Array.from(tags).sort((a, b) => {
+            const freqA = tagFrequencies[a] || 0;
+            const freqB = tagFrequencies[b] || 0;
+            if (freqB !== freqA) {
+                return freqB - freqA;
+            }
+            return a.localeCompare(b);
+        });
     }, [filteredItems, dateFilteredItems, selectedTags.length]);
 
     const searchedItems = useMemo(() => {

@@ -24,7 +24,8 @@ const GraphContainer = () => {
     const [rawSearch, setRawSearch] = useState('');
     const searchQuery = useDebounce(rawSearch, 300);
     const [selectedTags, setSelectedTags] = useState<string[]>([]);
-    const [showTopics, setShowTopics] = useState(true);
+    const [showClusters, setShowClusters] = useState(true);
+    const [showNodes, setShowNodes] = useState(false);
     const [dateRange, setDateRange] = useState<[Date | null, Date | null]>([null, null]);
     const mountTimeRef = useRef(Date.now());
     const { colorMode } = useColorMode();
@@ -91,7 +92,7 @@ const GraphContainer = () => {
         return searchQuery.length > 0 || selectedTags.length > 0 || dateRange[0] !== null || dateRange[1] !== null;
     }, [searchQuery, selectedTags, dateRange]);
 
-    const canShowTopics = filteredItems.length >= 7;
+    const canShowClusters = filteredItems.length >= 7;
 
     const isMobile = dimensions.width < 640;
 
@@ -118,8 +119,10 @@ const GraphContainer = () => {
                         onSearch={setRawSearch}
                         onTagFilterChange={setSelectedTags}
                         onDateRangeChange={setDateRange}
-                        showTopics={showTopics}
-                        onToggleTopics={() => setShowTopics((v) => !v)}
+                        showClusters={showClusters}
+                        onToggleClusters={() => setShowClusters((v) => !v)}
+                        showNodes={showNodes}
+                        onToggleNodes={() => setShowNodes((v) => !v)}
                     />
                     <div id="intelligence-graph-container" ref={containerRef} 
                         style={{ width: dimensions.width, height: dimensions.height, border: '1px solid #333', borderRadius: '8px', position: 'relative' }}>
@@ -129,7 +132,8 @@ const GraphContainer = () => {
                                 width={dimensions.width} 
                                 height={dimensions.height}
                                 showThoughts={true}
-                                showTopics={showTopics && canShowTopics}
+                                showClusters={showClusters && canShowClusters}
+                                showNodes={showNodes}
                                 searchQuery={searchQuery}
                                 colorMode={colorMode}
                             />
@@ -171,7 +175,7 @@ const GraphContainer = () => {
                         fontStyle: 'italic',
                         maxWidth: '600px'
                     }}>
-                        This page serves as a visual "second brain," mapping relationships between blog posts.
+                        This page serves as a visual "second brain" mapping relationships between blog posts.
                         Nodes are posts, with metadata determining their size, color, and connections.
                     </p>
                 </div>

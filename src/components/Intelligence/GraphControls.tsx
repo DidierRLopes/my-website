@@ -13,8 +13,10 @@ interface GraphControlsProps {
   onSearch: (query: string) => void;
   onTagFilterChange: (tags: string[]) => void;
   onDateRangeChange: (range: [Date | null, Date | null]) => void;
-  showTopics: boolean;
-  onToggleTopics: () => void;
+  showClusters: boolean;
+  onToggleClusters: () => void;
+  showNodes: boolean;
+  onToggleNodes: () => void;
 }
 
 export const GraphControls: FC<GraphControlsProps> = ({
@@ -22,8 +24,10 @@ export const GraphControls: FC<GraphControlsProps> = ({
   onSearch,
   onTagFilterChange,
   onDateRangeChange,
-  showTopics,
-  onToggleTopics,
+  showClusters,
+  onToggleClusters,
+  showNodes,
+  onToggleNodes,
 }) => {
   const [startDate, setStartDate] = useState<string>('');
   const [endDate, setEndDate] = useState<string>('');
@@ -61,16 +65,16 @@ export const GraphControls: FC<GraphControlsProps> = ({
       padding: '0.5rem',
       borderRadius: '4px',
     },
-    pillButton: {
+    pillButton: (isActive: boolean) => ({
       padding: '0.5rem 1rem',
-      border: `1px solid ${showTopics ? '#66CCFF' : '#4A5568'}`,
-      backgroundColor: showTopics ? '#66CCFF' : 'transparent',
-      color: showTopics ? '#1A202C' : (isDarkTheme ? '#E2E8F0' : '#A0AEC0'),
+      border: `1px solid ${isActive ? '#66CCFF' : '#4A5568'}`,
+      backgroundColor: isActive ? '#66CCFF' : 'transparent',
+      color: isActive ? '#1A202C' : (isDarkTheme ? '#E2E8F0' : '#A0AEC0'),
       borderRadius: '9999px',
       cursor: 'pointer',
       fontWeight: 'bold',
-      transition: 'all 0.2s ease-in-out',
-    },
+      transition: 'background-color 0.2s ease-in-out, border-color 0.2s ease-in-out',
+    }),
     searchInput: {
       padding: '0.5rem',
       flexGrow: 1,
@@ -83,10 +87,16 @@ export const GraphControls: FC<GraphControlsProps> = ({
       container: (base) => ({ ...base, position: 'relative', zIndex: 10 }),
       control: (base) => ({ ...base, backgroundColor: isDarkTheme ? '#2D3748' : '#F7FAFC', borderColor: isDarkTheme ? '#4A5568' : '#E2E8F0' }),
       input: (base) => ({...base, color: isDarkTheme ? '#E2E8F0' : '#1A202C'}),
-      menu: (base) => ({ ...base, backgroundColor: '#2D3748' }),
-      multiValue: (base) => ({ ...base, backgroundColor: '#4A5568' }),
-      multiValueLabel: (base) => ({ ...base, color: 'white' }),
-      option: (base, { isFocused }) => ({ ...base, backgroundColor: isFocused ? '#4A5568' : '#2D3748' }),
+      menu: (base) => ({ ...base, backgroundColor: isDarkTheme ? '#2D3748' : '#F7FAFC' }),
+      multiValue: (base) => ({ ...base, backgroundColor: isDarkTheme ? '#4A5568' : '#E2E8F0' }),
+      multiValueLabel: (base) => ({ ...base, color: isDarkTheme ? 'white' : '#1A202C' }),
+      option: (base, { isFocused }) => ({
+        ...base,
+        backgroundColor: isFocused
+          ? (isDarkTheme ? '#4A5568' : '#E2E8F0')
+          : (isDarkTheme ? '#2D3748' : '#F7FAFC'),
+        color: isDarkTheme ? '#E2E8F0' : '#1A202C',
+      }),
     }
   };
     
@@ -109,10 +119,17 @@ export const GraphControls: FC<GraphControlsProps> = ({
       <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
         <button
           type="button"
-          onClick={onToggleTopics}
-          style={styles.pillButton}
+          onClick={onToggleClusters}
+          style={styles.pillButton(showClusters)}
         >
-          Topics
+          Clusters
+        </button>
+        <button
+          type="button"
+          onClick={onToggleNodes}
+          style={styles.pillButton(showNodes)}
+        >
+          Nodes
         </button>
         <input
           type="search"

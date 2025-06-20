@@ -5,6 +5,7 @@ import { GraphControls } from './GraphControls';
 import type { EnrichedBlogItem } from '../../types/blog';
 import BlogListFallback from './BlogListFallback';
 import { trackEvent } from '../../lib/analytics';
+import { useColorMode } from '@docusaurus/theme-common';
 
 // simple debounce hook
 function useDebounce<T>(value: T, delay = 250) {
@@ -19,20 +20,21 @@ function useDebounce<T>(value: T, delay = 250) {
 const GraphContainer = () => {
     const { data, loading, error } = useBlogFeed();
     const containerRef = useRef<HTMLDivElement>(null);
-    const [dimensions, setDimensions] = useState({ width: 400, height: 400 });
+    const [dimensions, setDimensions] = useState({ width: 600, height: 420 });
     const [rawSearch, setRawSearch] = useState('');
     const searchQuery = useDebounce(rawSearch, 300);
     const [selectedTags, setSelectedTags] = useState<string[]>([]);
-    const [showThoughts, setShowThoughts] = useState(true);
     const [showTopics, setShowTopics] = useState(true);
+    const [dateRange, setDateRange] = useState<[Date | null, Date | null]>([null, null]);
     const mountTimeRef = useRef(Date.now());
+    const { colorMode } = useColorMode();
 
     useEffect(() => {
         function update() {
-            const graphWidth = Math.max((window.innerWidth - 48) * 0.5, 300); // half viewport, min 300
+            const containerWidth = Math.min(window.innerWidth * 0.8, 800);
             setDimensions({
-                width: graphWidth,
-                height: graphWidth, // square
+                width: containerWidth,
+                height: containerWidth * 0.7, // 30% smaller height
             });
         }
         update();
@@ -59,11 +61,25 @@ const GraphContainer = () => {
 
     const filteredItems = useMemo(() => {
         let items = data;
+
+        // Tag filter
         if (selectedTags.length > 0) {
             items = items.filter(item => selectedTags.every(tag => item.tags.includes(tag)));
         }
+
+        // Date range filter
+        const [startDate, endDate] = dateRange;
+        if (startDate) {
+            items = items.filter(item => new Date(item.date_modified) >= startDate);
+        }
+        if (endDate) {
+            items = items.filter(item => new Date(item.date_modified) <= endDate);
+        }
+
         return items;
-    }, [data, selectedTags]);
+    }, [data, selectedTags, dateRange]);
+
+    const canShowTopics = filteredItems.length >= 7;
 
     const isMobile = dimensions.width < 640;
 
@@ -80,32 +96,29 @@ const GraphContainer = () => {
     }
 
     return (
-        <div>
+        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 1rem' }}>
             {isMobile ? (
                 <BlogListFallback items={filteredItems} />
             ) : (
-                <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <GraphControls 
+                        allTags={allTags}
+                        onSearch={setRawSearch}
+                        onTagFilterChange={setSelectedTags}
+                        onDateRangeChange={setDateRange}
+                        showTopics={showTopics}
+                        onToggleTopics={() => setShowTopics((v) => !v)}
+                    />
                     <div id="intelligence-graph-container" ref={containerRef} 
                         style={{ width: dimensions.width, height: dimensions.height, border: '1px solid #333', borderRadius: '8px', position: 'relative' }}>
                         <GraphCanvas 
                             items={filteredItems} 
                             width={dimensions.width} 
                             height={dimensions.height}
+                            showThoughts={true}
+                            showTopics={showTopics && canShowTopics}
                             searchQuery={searchQuery}
-                            showThoughts={showThoughts}
-                            showTopics={showTopics}
-                        />
-                    </div>
-                    <div style={{ flex: 1, minWidth: 250 }}>
-                        <GraphControls 
-                            allTags={allTags}
-                            onSearch={setRawSearch}
-                            onTagFilterChange={setSelectedTags}
-                            onDateRangeChange={() => {}} // Placeholder
-                            showThoughts={showThoughts}
-                            showTopics={showTopics}
-                            onToggleThoughts={() => setShowThoughts((v) => !v)}
-                            onToggleTopics={() => setShowTopics((v) => !v)}
+                            colorMode={colorMode}
                         />
                     </div>
                 </div>

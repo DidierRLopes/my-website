@@ -94,6 +94,11 @@ const config = {
         },
         items: [
           {
+            type: 'html',
+            position: 'left',
+            value: '<div class="navbar__items--left-wrapper">',
+          },
+          {
             position: 'left',
             label: 'Books',
             to: '/books/to-read',
@@ -109,10 +114,16 @@ const config = {
             to: '/resume/experience',
           },
           {
-            to: '/blog',
-            label: 'Blog',
+            type: 'html',
             position: 'left',
-            className: 'navbar-blog-link-center',
+            value: '</div>',
+          },
+          {
+            type: 'html',
+            position: 'left',
+            className: 'navbar__center-wrapper',
+            value:
+              '<div class="navbar__items--center"><a href="/blog" class="navbar__item navbar__link">Blog</a><a href="/intelligence" class="navbar__item navbar__link">Intelligence</a></div>',
           },
           {
             position: 'right',
@@ -162,6 +173,8 @@ const config = {
         ],
       },
     }),
+
+  clientModules: [require.resolve('./src/js/navbar-active-links.js')],
 
   plugins: [
     [

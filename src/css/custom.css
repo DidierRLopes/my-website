@@ -805,8 +805,46 @@ article header h1 {
 
 @media screen and (min-width: 997px) {
   .navbar-blog-link-center {
+  }
+  .navbar__items--left {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
+  .navbar__items--left-wrapper {
+    display: flex;
+    gap: 1rem;
+  }
+  .navbar__center-wrapper {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
   }
+  .navbar__items--center {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.navbar__items--left {
+  flex: 1 0 0;
+}
+
+.navbar__inner {
+  position: relative;
+}
+
+.navbar__items--left .navbar__item.navbar-center-item {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navbar__items--left .navbar__item.navbar-center-item:nth-child(4) {
+  transform: translate(calc(-50% - 4rem), -50%);
+}
+
+.navbar__items--left .navbar__item.navbar-center-item:nth-child(5) {
+  transform: translate(calc(-50% + 4rem), -50%);
 }

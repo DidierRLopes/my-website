@@ -304,7 +304,9 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, showTh
     const FONT_SIZE = 10;
     const fontSize = FONT_SIZE / transform.k;
     
-    if (transform.k < 1.2) {
+    const showAllTitles = data.length <= 10; // New logic: show every title if ≤10 nodes visible
+
+    if (!showAllTitles && transform.k < 1.2) {
       d3.select(titlesGroup).selectAll('g').remove();
       return;
     }
@@ -390,7 +392,12 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, showTh
 
       text.attr('transform', `translate(0, ${yOffset})`);
 
-      // 3. Collision Detection
+      // 3. Collision Detection (skip if <=10 visible nodes)
+      if (showAllTitles) {
+        nodesToShow.add(d.id);
+        return; // no collision check
+      }
+
       if (renderedBBoxes.length >= maxTitles) return;
       if (typeof d.x === 'undefined' || typeof d.y === 'undefined') return;
 

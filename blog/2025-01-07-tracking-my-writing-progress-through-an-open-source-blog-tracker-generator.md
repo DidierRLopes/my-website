@@ -130,7 +130,7 @@ Example: <a href="https://simonwillison.net/tags/datasette.atom" target="_blank"
 
 That's it.
 
-The SVG will be available here: [./output/blog-history.svg](./output/blog-history.svg).
+The SVG will be available here: [./output/blog-history.svg](https://github.com/DidierRLopes/blog-history-generator/blob/main/output/blog-history.svg).
 
 <p align="center">
     <img width="900" src="/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_6.png"/>

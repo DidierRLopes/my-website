@@ -112,6 +112,11 @@ const config = {
             to: '/blog',
             label: 'Blog',
             position: 'left',
+          },
+          {
+            to: '/intelligence',
+            label: 'Intelligence',
+            position: 'left',
             className: 'navbar-blog-link-center',
           },
           {

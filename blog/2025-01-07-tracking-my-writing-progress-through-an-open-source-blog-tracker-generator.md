@@ -3,7 +3,7 @@ slug: tracking-my-writing-progress-through-an-open-source-blog-tracker-generator
 title: Tracking my writing progress through an open source blog tracker generator
 date: 2025-01-07
 image: /blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator
-tags: ['writing', 'productivity', 'open source', 'svg', 'visualization', 'blog', 'tracking', 'metrics']
+tags: ['writing', 'productivity', 'open-source', 'svg', 'visualization', 'blog', 'tracking', 'metrics']
 description: Learn how I built an open-source tool that generates beautiful SVG visualizations of your blog post history, supporting both JSON and ATOM XML feeds. Perfect for keeping yourself accountable and monitoring your writing progress over time.
 hideSidebar: true
 

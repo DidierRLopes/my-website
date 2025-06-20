@@ -3,7 +3,7 @@ slug: 2025-02-18-long-live-long-context-with-gemini
 title: Long live long context with Gemini
 date: 2025-02-18
 image: /blog/2025-02-18-long-live-long-context-with-gemini
-tags: ['long context window', 'gemini', 'streamlit', 'rag', 'pdf parsing', 'analyst']
+tags: ['ai', 'llm', 'gemini', 'long-context', 'rag', 'streamlit', 'python', 'pdf-parsing', 'prompt-engineering']
 description: A practical exploration of using Gemini's long context window capabilities to analyze multi-page documents, featuring a Streamlit app for testing and iterating prompts.
 hideSidebar: true
 

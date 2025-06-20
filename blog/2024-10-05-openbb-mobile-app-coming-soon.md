@@ -3,7 +3,7 @@ slug: openbb-mobile-app-coming-soon
 title: OpenBB Mobile App - Coming soon
 date: 2024-10-05
 image: /blog/2024-10-05-openbb-mobile-app-coming-soon.png
-tags: ['openbb', 'mobile', 'pwa', 'web-development', 'ux', 'engineering']
+tags: ['openbb', 'mobile-app', 'pwa', 'web-development', 'ux', 'engineering', 'startup-culture', 'rapid-prototyping']
 description: How we built a mobile app, in 1 evening, with 1 engineer.
 hideSidebar: true
 
@@ -19,17 +19,17 @@ How we built a mobile app, in 1 evening, with 1 engineer.
 
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-Let’s start with a bit of background to this story. 📖
+Let's start with a bit of background to this story. 📖
 
 Back in September 2021, our first full-time team member was [Jose Donato](https://x.com/josedonato__?utm_source=didierlopes.beehiiv.com&utm_medium=referral&utm_campaign=openbb-mobile-app-coming-soon). He started full-time, even before I did (due to my 3 months notice period in Europe, yikes).
 
-We met through Reddit, only to discover that we are both Portuguese and our hometowns aren’t far from each other.
+We met through Reddit, only to discover that we are both Portuguese and our hometowns aren't far from each other.
 
-I’ve learned more from him about web development than from any YouTube, tutorial or book - combined.
+I've learned more from him about web development than from any YouTube, tutorial or book - combined.
 
 One of the topics he was very passionate about, was the concept of Progressive Web Apps (PWAs). So much so, that he talked about it in his thesis ([2.2 native applications](https://jose-donato.deno.dev/master_thesis.pdf?utm_source=didierlopes.beehiiv.com&utm_medium=referral&utm_campaign=openbb-mobile-app-coming-soon)).
 
-I had never heard of it before, but the concept intrigued me. Why wouldn’t more companies do that?
+I had never heard of it before, but the concept intrigued me. Why wouldn't more companies do that?
 
 Jose is currently writing a post about it, you can subscribe to the [company newsletter](https://openbb.co/newsletter?utm_source=didierlopes.beehiiv.com&utm_medium=referral&utm_campaign=openbb-mobile-app-coming-soon) to keep an eye out for it.
 
@@ -57,7 +57,7 @@ And so over 2 weeks, he spent no more than 3h polishing the mobile version.
 
 On the 23rd of September, I pinged [Rita Soares](https://www.linkedin.com/in/ana-rita-soares-48b247152/?utm_source=didierlopes.beehiiv.com&utm_medium=referral&utm_campaign=openbb-mobile-app-coming-soon) - our lead UI/UX.
 
-I had been thinking about mobile user experience and wasn’t happy that we just adapted the interface to work with mobile. But, mobile represents a completely different paradigm on how we use a product. The screen space, the speed at which you can type, not necessarily used for work, more distractions, etc…
+I had been thinking about mobile user experience and wasn't happy that we just adapted the interface to work with mobile. But, mobile represents a completely different paradigm on how we use a product. The screen space, the speed at which you can type, not necessarily used for work, more distractions, etc...
 
 So, I asked Rita to create a few mobile mockups for me - the idea was to improve the UX to make the copilot shine. I.e. more front and center and have the data visualization pushed more to the background.
 
@@ -95,7 +95,7 @@ To which he replied:
     <img width="900" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_8.png"/>
 </p>
 
-I was right, it didn’t take him 30s. But it didn’t take him much longer (15 minutes).
+I was right, it didn't take him 30s. But it didn't take him much longer (15 minutes).
 
 <p align="center">
     <img width="900" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_9.png"/>
@@ -119,7 +119,7 @@ With 1 person.
 
 ### Conclusion
 
-I could tell you that this doesn’t happen often, but it does.
+I could tell you that this doesn't happen often, but it does.
 
 Small, highly motivated teams (or individuals like Jose) with a strong initiative and a drive to make a difference, can have a tremendous impact on the company.
 

@@ -3,7 +3,7 @@ slug: 12-things-i-learned-in-2023
 title: 12 things I learned in 2023
 date: 2024-01-22
 image: /blog/2024-01-22-12-things-i-learned-in-2023.png
-tags: ['learning', 'experience', 'growth']
+tags: ['learnings', 'reflection', 'leadership', 'startup', 'growth', 'product-management', 'user-experience', 'decision-making', 'life-lessons']
 description: The 12 things I learned in 2023
 ---
 
@@ -43,25 +43,25 @@ I keep seeing tweets about UI improvements on a website and/or product. I love t
 
 While UI is critical to attract users, UX is king to retain them.
 
-It’s like dating - the looks is in the UI and the personality is the UX.
+It's like dating - the looks is in the UI and the personality is the UX.
 
 While they may be perceived as their own separate bubble, they are not. Someone with an amazing personality (UX) will appear as more beautiful (UI).
 
 ### 5. If in presence of a 2-way door decision, you should decide fast.
 
-Being fast to decide to do A instead of B in a 2-way door decision is ideal because even if that wasn’t the correct decision, adapting after will still be better than being stuck at the decision stage.
+Being fast to decide to do A instead of B in a 2-way door decision is ideal because even if that wasn't the correct decision, adapting after will still be better than being stuck at the decision stage.
 
-Plus, you’ll be surprised by how many time you actually get it right given the level of context and knowledge you have in the space.
+Plus, you'll be surprised by how many time you actually get it right given the level of context and knowledge you have in the space.
 
 Knowing what is a 1 and a 2-way door decision, separates great from poor leaders.
 
 I like [this video](https://tiktok.com/@evancarmichael/video/7317081673865235717) from Jeff Bezzos talking about this.
 
-### 6. There’s a ton of data in intuition and common sense.
+### 6. There's a ton of data in intuition and common sense.
 
 As a leader, most of the times you have to make decisions with no hard data evidence. And by hard data I mean a spreadsheet with numbers or a powerpoint with charts.
 
-However, you do have that data. It’s just not in a clean format and lives on your head.
+However, you do have that data. It's just not in a clean format and lives on your head.
 
 This data has been aggregating by spending more time thinking about the problem you are solving than anyone else, by talking with customers, by talking with partners, and everything in between.
 
@@ -89,15 +89,15 @@ It sets the precedent that average work is not enough to work at your company, a
 
 Took me some time to understand this, but I have no doubts about this now.
 
-This is why the sentence of “A good product with great distribution will almost always beat a great product with poor distribution.”
+This is why the sentence of "A good product with great distribution will almost always beat a great product with poor distribution."
 
 ### 11. Leave your comfort zone.
 
-I'm really shy on stage and this year I've presented a few times. And I’ve impressed myself, while I'm far from good I've come a long way.
+I'm really shy on stage and this year I've presented a few times. And I've impressed myself, while I'm far from good I've come a long way.
 
 When i started learning english my goal was to be able to make people laugh in english, that took a while.
 
-I've now been able to make people laugh whilst on stage and I didn't expect that I’d be able to do this anytime soon.
+I've now been able to make people laugh whilst on stage and I didn't expect that I'd be able to do this anytime soon.
 
 ### 12. Tell your loved ones how much they mean to you.
 

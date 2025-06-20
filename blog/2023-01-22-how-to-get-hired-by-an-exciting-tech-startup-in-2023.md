@@ -3,7 +3,7 @@ slug: how-to-get-hired-by-an-exciting-tech-startup-in-2023
 title: How to get hired by an exciting tech startup in 2023
 date: 2023-01-22
 image: /blog/2023-01-22-how-to-get-hired-by-an-exciting-tech-startup-in-2023.png
-tags: ['Career Advice', 'Tech Startups', 'Open Source', 'Job Hunting', 'Software Engineering']
+tags: ['career-advice', 'tech-startups', 'open-source', 'job-hunting', 'hiring', 'recruiting', 'software-engineering', 'personal-branding']
 description: The future is a strange place. We’re not entirely sure what it will look like, but we do know that it will be shaped by the choices we make today. And while I can’t tell you exactly how to get a job in 2023, I can help you set yourself up for success by showing you some of the best ways to build your career today.
 ---
 

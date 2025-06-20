@@ -3,7 +3,7 @@ slug: how-i-used-openai-api-to-improve-our-product-documentation
 title: How I Used OpenAI API to improve our product documentation
 date: 2023-04-01
 image: /blog/2023-04-01-how-i-used-openai-api-to-improve-our-product-documentation.png
-tags: ['OpenAI', 'API', 'Product Documentation', 'ChatGPT', 'Discord', 'OpenBB Bot']
+tags: ['openai', 'api', 'chatgpt', 'llm', 'documentation', 'automation', 'openbb-bot', 'discord']
 description: In this blog post, I share how I used the OpenAI API to improve our product documentation. I used ChatGPT to generate more detailed descriptions for our OpenBB Bot Discord commands, making them more understandable for new users.
 ---
 

@@ -3,7 +3,7 @@ slug: how-to-handle-equity-top-ups-at-a-seed-stage-startup
 title: How to handle equity top-ups at a seed stage startup
 date: 2023-08-09
 image: /blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup.png
-tags: ['equity', 'startups', 'seed stage', 'equity top-ups', 'employee compensation']
+tags: ['startups', 'seed-stage', 'equity', 'compensation', 'employee-retention', 'vesting', 'management', 'human-resources']
 description: In this post, we discuss how to handle equity top-ups at a seed stage startup, providing a step-by-step guide on the implementation process and including links to relevant spreadsheets.
 ---
 
@@ -70,7 +70,7 @@ Now, let’s discuss the decisions we need to make for the second option grant:
 
 - 2nd option grant VCD: We want to start it ASAP, to retain employee — for instance **March 2023**
 - 2nd option grant shares: **around 1,500**
-- 2nd option grant schedule: **1/48 per month finishing on 30 March 2027**. Note that we removed the cliff since we know the value the employee brings and that “protection”/”retainer” can be removed.
+- 2nd option grant schedule: **1/48 per month finishing on 30 March 2027**. Note that we removed the cliff since we know the value the employee brings and that "protection"/"retainer" can be removed.
 
 By utilizing maths, we can create the following equation:
 
@@ -126,7 +126,7 @@ The spreadsheet below demonstrates what an employee vesting schedule looks like,
 
 When looking at the total top-up shares in **H67**, that value will no longer match the total top-up shares that we wanted to grant to the employee and that we decided at the beginning in **B6**. This is because we rounded the value and thus impacted the number of shares necessary to achieve that.
 
-The amount of shares needed to update the recommendation in **B16** to the rounded version in **B19** is displayed as an “error” in **B21**.
+The amount of shares needed to update the recommendation in **B16** to the rounded version in **B19** is displayed as an "error" in **B21**.
 
 7. In order to fix that, we simply need to update B6 with the sum of B6 and the error value from B21.
 

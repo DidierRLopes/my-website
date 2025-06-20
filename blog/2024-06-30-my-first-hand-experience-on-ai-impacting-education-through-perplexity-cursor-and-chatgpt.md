@@ -3,7 +3,7 @@ slug: my-first-hand-experience-on-ai-impacting-education-through-perplexity-curs
 title: My first-hand experience on AI impacting education through Perplexity, Cursor and ChatGPT
 date: 2024-06-30
 image: /blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt.png
-tags: ['education', 'ai', 'perplexity', 'chatgpt', 'cursor', 'students', 'big data', 'analytics', 'supervised learning', 'machine learning']
+tags: ['ai', 'education', 'teaching', 'llm', 'chatgpt', 'perplexity', 'cursor', 'supervised-learning', 'edtech']
 description: AI will change education forever. Here's how I leveraged Perplexity, Cursor and ChatGPT to teach Supervised Learning and assess coursework.
 ---
 
@@ -36,7 +36,7 @@ And of course - there was no AI. At least not in the sense that we speak about t
 
 This time was different - I had the flexibility to choose what I was going to cover about Supervised Learning.
 
-I’ve never worked as a Data Scientist per se, but have been passionate about data for a while and spent a lot of time reading books and learning about the topic. In my previous company, I started playing with IMU data in my spare time which lead me to publish a paper at ICMLA where I used [Support Vector Machine (SVM) for Step Detection using Nurvv trackers](https://ieeexplore.ieee.org/document/9680024) and even open sourced the code [here](https://github.com/DidierRLopes/step-detection-ML/tree/main).
+I've never worked as a Data Scientist per se, but have been passionate about data for a while and spent a lot of time reading books and learning about the topic. In my previous company, I started playing with IMU data in my spare time which lead me to publish a paper at ICMLA where I used [Support Vector Machine (SVM) for Step Detection using Nurvv trackers](https://ieeexplore.ieee.org/document/9680024) and even open sourced the code [here](https://github.com/DidierRLopes/step-detection-ML/tree/main).
 
 <p align="center">
     <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_svm_paper.png"/>
@@ -48,14 +48,14 @@ But so the question is:
 
 _"Where do I start?"_
 
-My first intuition was to gather some of my favorite books and courses on the topic and understand how they presented the overall subject. I wouldn’t have the same time, so I would need to touch on most topics briefly - enough for students to know about it and explore further if curious.
+My first intuition was to gather some of my favorite books and courses on the topic and understand how they presented the overall subject. I wouldn't have the same time, so I would need to touch on most topics briefly - enough for students to know about it and explore further if curious.
 
 However, given my time constraints with running OpenBB, I would have had a hard time since I would need to:
 
 1. Consume the content of these books and courses
 2. Mix and match them
 3. Cut to fit the time constraints
-4. Produce a final syllabus that I’m confident about
+4. Produce a final syllabus that I'm confident about
 
 <br />
 
@@ -65,7 +65,7 @@ Except that **IT WAS**.
 
 ### Perplexity enters the chat
 
-Since Perplexity’s main value proposition is being better at Google than Google - I popped the following prompt into it.
+Since Perplexity's main value proposition is being better at Google than Google - I popped the following prompt into it.
 
 <p align="center">
     <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_perplexity.png"/>
@@ -83,15 +83,15 @@ Was it a perfect starting point?
 
 Yes.
 
-I didn’t literally copy-paste it. I took the parts I liked, re-iterated on the ones I didn't until I eventually did. Plus, use my experience to prioritize parts that I felt should be more relevant vs others.
+I didn't literally copy-paste it. I took the parts I liked, re-iterated on the ones I didn't until I eventually did. Plus, use my experience to prioritize parts that I felt should be more relevant vs others.
 
 Were there some hallucinations?
 
-Yes, it’s not a silver bullet.
+Yes, it's not a silver bullet.
 
 But it saved me DAYS of work.
 
-I was dreading having to write the syllabus and like this, it was actually fun. It was fun because I felt like Perplexity was acting as my assistant and I was engaging in a conversation of what should be contained within the course and what shouldn’t.
+I was dreading having to write the syllabus and like this, it was actually fun. It was fun because I felt like Perplexity was acting as my assistant and I was engaging in a conversation of what should be contained within the course and what shouldn't.
 
 After having all the content ready, I asked my wife to help me with some images to make it easier for students to understand concepts.
 
@@ -99,7 +99,7 @@ After having all the content ready, I asked my wife to help me with some images 
     <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_assets.png"/>
 </p>
 
-I was happy with the results - but wanted a second opinion. So I asked a friend of mine who’s been a DS for over 6 years what his thoughts were on the materials I worked on - and he was impressed about the speed.
+I was happy with the results - but wanted a second opinion. So I asked a friend of mine who's been a DS for over 6 years what his thoughts were on the materials I worked on - and he was impressed about the speed.
 
 <p align="center">
     <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_ai_friend_message.jpeg"/>
@@ -165,17 +165,17 @@ There were 10 groups in total. So 10 notebooks that I had to look into, explorin
 
 ### Cursor helping with grading
 
-I opened [cursor](https://www.cursor.com/) (which is basically VSCode + ChatGPT) and probably the software I’ve recommended the most to developers in 2024.
+I opened [cursor](https://www.cursor.com/) (which is basically VSCode + ChatGPT) and probably the software I've recommended the most to developers in 2024.
 
 And opened my first notebook.
 
 Then I thought, what if I had GPT-4o on my side - helping me to assess this coursework.
 
-It didn’t need to be perfect because I was doing it myself, but it could help me understand if there was any critical thing that I missed OR if it completely had a different grade than the one I was going to provide - which would enable me to spend more time on that criteria and iterate.
+It didn't need to be perfect because I was doing it myself, but it could help me understand if there was any critical thing that I missed OR if it completely had a different grade than the one I was going to provide - which would enable me to spend more time on that criteria and iterate.
 
 It gave me confidence that I was being fair to the students.
 
-And made me realize how hard it is for professors when they have 100s of students and have a subjective answer to grade. It’s impossible to get it right. They try their best, but as soon as the answer is not binary (0 or 1), they are doomed to fail.
+And made me realize how hard it is for professors when they have 100s of students and have a subjective answer to grade. It's impossible to get it right. They try their best, but as soon as the answer is not binary (0 or 1), they are doomed to fail.
 
 So how did I do it?
 
@@ -189,7 +189,7 @@ This is what my setup looked like
 
 Having the code on the left side and the copilot on the right side that I could use to chat really enabled me to grade more confidently.
 
-Here’s an example of a section of a response I got to one of the student’s notebooks
+Here's an example of a section of a response I got to one of the student's notebooks
 
 <p align="center">
     <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_cursor_output.png"/>
@@ -205,23 +205,23 @@ Note: the model was able to interpret comments written in Portuguese which is an
 
 ## Democratizing access to tutors
 
-While I was working on my prompts to get some feedback from AI in terms of student’s coursework I realized that I only need $20/mo to access them.
+While I was working on my prompts to get some feedback from AI in terms of student's coursework I realized that I only need $20/mo to access them.
 
 But then I realized - so do the students.
 
 This means that the students have no reason to NOT run their entire coursework by a LLM that can act as a critic of their work.
 
-They can keep iterating until the model doesn’t find anything - hence making students feel more confident about the work they are putting forward.
+They can keep iterating until the model doesn't find anything - hence making students feel more confident about the work they are putting forward.
 
-My initial thought was: “this feels like cheating” (right after the - “I wish I had this a few years ago”).
+My initial thought was: "this feels like cheating" (right after the - "I wish I had this a few years ago").
 
-But it actually isn’t.
+But it actually isn't.
 
 Tutors have existed for a long time.
 
-Students pay tutors to spend time with them to learn outside of classes - whether it’s explaining the theory or helping with coursework.
+Students pay tutors to spend time with them to learn outside of classes - whether it's explaining the theory or helping with coursework.
 
-However, tutors are a vitamin and not a painkiller (they are a nice-to-have and not a must-have). And because they aren’t a requirement, it’s not a typical choice among lower-income families.
+However, tutors are a vitamin and not a painkiller (they are a nice-to-have and not a must-have). And because they aren't a requirement, it's not a typical choice among lower-income families.
 
 On the other hand, kids from wealthy families often have multiple tutors. Not for students who are almost failing their class, but who want to bump their grades from A- to an A+.
 

@@ -3,7 +3,7 @@ slug: what-i-learned-in-3-years-at-openb
 title: What I learned in 3 Years at OpenBB
 date: 2024-08-20
 image: /blog/2024-08-20-what-i-learned-in-3-years-at-openb.jpeg
-tags: ['career development', 'technology', 'OpenBB', 'learning', 'leadership']
+tags: ['openbb', 'founder-story', 'startup', 'leadership', 'learnings', 'reflection', 'career-growth', 'milestones', 'life-lessons']
 description: The OpenBB journey started officially 3 years ago. So I want to celebrate it by sharing 36 lessons I learned over the past 36 months as a founder and CEO of a fintech company.
 
 ---
@@ -124,4 +124,4 @@ Personally, during that timeline:
 
 We are more locked in than ever before.
 
-Can’t wait for the next 3 years. 🥂
+Can't wait for the next 3 years. 🥂

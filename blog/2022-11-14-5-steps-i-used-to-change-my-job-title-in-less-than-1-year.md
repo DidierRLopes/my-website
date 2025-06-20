@@ -3,7 +3,7 @@ slug: 5-steps-i-used-to-change-my-job-title-in-less-than-1-year
 title: 5 steps I used to change my job title in less than 1 year
 date: 2022-11-14
 image: /blog/2022-11-14-5-steps-i-used-to-change-my-job-title-in-less-than-1-year.png
-tags: ['career', 'job change', 'sensor fusion engineer', 'roadmap', 'hard work']
+tags: ['career-path', 'career-growth', 'job-title', 'promotion', 'skill-development', 'self-improvement', 'personal-story', 'hard-work', 'engineering']
 description: This blog post outlines the five steps I took to change my job title from an Embedded Firmware Engineer to a Sensor Fusion Engineer in less than a year. It provides a roadmap for others who may be looking to make a similar career transition.
 ---
 
@@ -19,7 +19,7 @@ This blog post outlines the five steps I took to change my job title from an Emb
 
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-In March 2020, I joined a startup as an Embedded Firmware Engineer. The startup’s product focuses on smart running insoles with lightweight trackers that fit any running shoes.
+In March 2020, I joined a startup as an Embedded Firmware Engineer. The startup's product focuses on smart running insoles with lightweight trackers that fit any running shoes.
 
 The company was small, and the firmware team was myself and 2 Senior Embedded Firmware Engineers.
 
@@ -35,7 +35,7 @@ This is very important, as your manager can keep this in the back of their mind 
 
 ## Define a roadmap
 
-I asked my manager: “_What do I need to do to be recognized as a Sensor Fusion Engineer_”.
+I asked my manager: "What do I need to do to be recognized as a Sensor Fusion Engineer".
 
 Knowing about the matter is not enough, you want to have the credentials so that you can jump faster in your career.
 
@@ -61,11 +61,11 @@ This also allowed myself to look back and realize my own progress. I would spend
 
 ## Prove yourself
 
-Don’t miss an opportunity to prove yourself.
+Don't miss an opportunity to prove yourself.
 
 This is the most critical point, you need to prove that you are capable of delivering by actually demonstrating a real example.
 
-This is the egg or chicken first problem. When you don’t have the initial experience, your company won’t trust you to apply your knowledge. But if your company doesn’t give you the chance you will never get the experience.
+This is the egg or chicken first problem. When you don't have the initial experience, your company won't trust you to apply your knowledge. But if your company doesn't give you the chance you will never get the experience.
 
 In our case, users started getting weird jumps in altitude reported by the trackers. And we needed to figure out the issue fast as this was increasing the churn. I immediately knew I was able to solve this, and knew I had to grab this opportunity.
 
@@ -77,11 +77,11 @@ I proceeded to implement a Kalman Filter solution to consider GPS readings as we
 
 In the daily standup the next day, I had accomplished most of my tasks for the sprint and asked the product owner if I could take a shot at fixing the altitude issue. He was a bit hesitant, but I had a notebook ready to show the problem recreated and my proposed solution in Python.
 
-He accepted and gave me the next 3 days to work on it and to present results on Monday. I didn’t sleep until that Monday. Implementing from Python to C++ was the easy part. The hard part was debugging + optimizing the weights of the Kalman Filter.
+He accepted and gave me the next 3 days to work on it and to present results on Monday. I didn't sleep until that Monday. Implementing from Python to C++ was the easy part. The hard part was debugging + optimizing the weights of the Kalman Filter.
 
 I was touching the code. Performing an over the air upgrade. Going outside for a run in a track with a bridge where I knew the altitude. Analyzing results at home. Iterate.
 
-Monday arrived and I presented results, and they looked so much better. The proposed solution was accepted. Our INS algorithm hadn’t changed in a long time, so a lot of testing was needed.
+Monday arrived and I presented results, and they looked so much better. The proposed solution was accepted. Our INS algorithm hadn't changed in a long time, so a lot of testing was needed.
 
 After that, the company accepted to offer me the title of Sensor Fusion engineer. Without a pay rise, but that was fine as for me it was about speeding up my career.
 
@@ -91,9 +91,9 @@ After that, the company accepted to offer me the title of Sensor Fusion engineer
 - Define roadmap
 - Work towards that roadmap
 - Frequently revise roadmap
-- Don’t miss an opportunity to prove yourself
+- Don't miss an opportunity to prove yourself
 
-**Note:** If the company doesn’t give you a chance to prove yourself, you should interview for that position with other companies. And if another company offers you that job, you will have the leverage that another company perceives you as that.
+**Note:** If the company doesn't give you a chance to prove yourself, you should interview for that position with other companies. And if another company offers you that job, you will have the leverage that another company perceives you as that.
 
 I like [this video](https://youtube.com/shorts/x71Rm0MWVHY?si=BvtmjrE31d6U1bpV) about understanding your market value. And I think it can be extended in terms of your skillset if you want to change your role.
 

@@ -3,7 +3,7 @@ slug: 2025-03-03-building-a-custom-widget-for-my-friends-newsletter
 title: Building a custom widget for my friends newsletter
 date: 2025-03-03
 image: /blog/2025-03-03-building-a-custom-widget-for-my-friends-newsletter
-tags: ['openbb', 'financial-services', 'widget', 'automation', 'open-source']
+tags: ['openbb', 'widget', 'automation', 'open-source', 'fintech', 'api', 'side-project', 'newsletter']
 description: How I built a custom OpenBB widget to save my friend hours of manual work on his newsletter with 190,000+ subscribers.
 hideSidebar: true
 

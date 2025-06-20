@@ -3,7 +3,7 @@ slug: why-chat-only-AI-Financial-Assistants-are-not-the-future
 title: Why chat-only AI financial assistants are not the future
 date: 2024-06-15
 image: /blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future.png
-tags: ['finance', 'ai', 'openbb', 'chat', 'finance assistant', 'chatgpt', 'perplexity', 'investment research']
+tags: ['openbb', 'ai', 'fintech', 'workspaces', 'investment-research', 'chatbots', 'ui', 'ux', 'collaboration']
 description: Financial assistants structured like ChatGPT are great for quick searches but fall short for comprehensive investment research. 
 ---
 
@@ -19,7 +19,7 @@ Financial assistants structured like ChatGPT are great for quick searches but fa
 
 This is a spicy take but bear with me.
 
-The more I think about “ChatGPT for Finance” products, the more I think this is not the answer.
+The more I think about "ChatGPT for Finance" products, the more I think this is not the answer.
 
 They are extremely good knowledge retrieval engines because you can ask what you want to know and get the answer immediately.
 
@@ -27,7 +27,7 @@ My problem with their approach is what happens after.
 
 However, very little thought is given to the real-world investment workflow. That's why I strongly believe that a chat-only financial platform will never be successful on its own.
 
-Sure, they can win in the categories of “search” or “screening”, but they won’t be able to compete in the category of “investment research platform”.
+Sure, they can win in the categories of "search" or "screening", but they won't be able to compete in the category of "investment research platform".
 
 To do that, they would need to evolve.
 
@@ -35,7 +35,7 @@ Let me explain why and how OpenBB differs from them.
 
 ## 1-Dimensional vs N-Dimensional
 
-Financial assistants are, in general, 1-dimensional. By that, I mean that all you have on a screen is a “dashboard” with an unlimited y-axis (1 single dimension).
+Financial assistants are, in general, 1-dimensional. By that, I mean that all you have on a screen is a "dashboard" with an unlimited y-axis (1 single dimension).
 
 <p align="center">
     <img width="600" src="/blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future_1.png"/>
@@ -47,7 +47,7 @@ But for the long term? Not so much. If the user wants to find specific informati
 
 When financial assistants allow multiple conversations, then we start having 2 dimensions, where each conversation introduces a new axis.
 
-The problem with this approach is that you can’t easily find data within one of those past conversations since the assistant focuses on answering your question and not on data retrieval from the previous outputs.
+The problem with this approach is that you can't easily find data within one of those past conversations since the assistant focuses on answering your question and not on data retrieval from the previous outputs.
 
 ## Our 3-dimensional solution on Terminal Pro
 
@@ -59,7 +59,7 @@ How do we handle those issues? We have 3 dimensions.
 
 Our Terminal Pro has a Copilot on the side, similar to other financial assistants.
 
-However, its big advantage is that when you want to save Copilot’s output for later, you can convert it into a text widget. And when you do so, you can place it wherever you want in this space — with the axis being infinite vertical scroll, tabs, dashboards, and folders.
+However, its big advantage is that when you want to save Copilot's output for later, you can convert it into a text widget. And when you do so, you can place it wherever you want in this space — with the axis being infinite vertical scroll, tabs, dashboards, and folders.
 
 <video controls>
     <source
@@ -73,23 +73,23 @@ Again, financial assistants are optimized for search rather than information sto
 
 This means that, by nature, chat-only financial assistants assume that their output will not matter in the future, so they answer your queries similarly to how a text conversation works. It's literally called ChatGPT for that reason.
 
-However, that’s not ideal for investment research.
+However, that's not ideal for investment research.
 
-If analysts and researchers need to access these financial assistants' output at some point in the future, they won’t be able to do it quickly. Instead, they’ll have to go through a long chat history.
+If analysts and researchers need to access these financial assistants' output at some point in the future, they won't be able to do it quickly. Instead, they'll have to go through a long chat history.
 
-This is why, in our Terminal Pro, we allow users to create a markdown-based text widget from the Copilot’s output, as shown above, so that you can have that information quickly accessible, but also editable.
+This is why, in our Terminal Pro, we allow users to create a markdown-based text widget from the Copilot's output, as shown above, so that you can have that information quickly accessible, but also editable.
 
-## There’s no simple way to know where the data comes from
+## There's no simple way to know where the data comes from
 
-Financial assistants are great, and they are improving every day. But if there’s something I’ve learned from talking with financial firms for over three years, it's that this is a very slow-moving industry, and adopting new technologies takes time.
+Financial assistants are great, and they are improving every day. But if there's something I've learned from talking with financial firms for over three years, it's that this is a very slow-moving industry, and adopting new technologies takes time.
 
-But with AI, it seems different. It’s so revolutionary that people are willing to incorporate it into their workflow faster because they immediately understand the benefits it can bring to their business.
+But with AI, it seems different. It's so revolutionary that people are willing to incorporate it into their workflow faster because they immediately understand the benefits it can bring to their business.
 
-However, hallucinations are still a big problem — so it’s essential for these firms to be able to verify the raw data and sources.
+However, hallucinations are still a big problem — so it's essential for these firms to be able to verify the raw data and sources.
 
 The current level of AI is equivalent to having a smart intern that you would need to double-check their work or trust but verify.
 
-This is why our Copilot always answers based on data that is readily available on the dashboard — and (due to our “Bring Your Own Data” technology) that data can be brought by your firm rather than being limited to what we offer out of the box.
+This is why our Copilot always answers based on data that is readily available on the dashboard — and (due to our "Bring Your Own Data" technology) that data can be brought by your firm rather than being limited to what we offer out of the box.
 
 <p align="center">
     <img width="600" src="/blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future_3.png"/>
@@ -105,9 +105,9 @@ The interesting thing is that investment research starts as an individual proces
 
 So, financial assistants have a challenging task: multiple people on a team should be able to access all the conversations without being able to interact with these chats.
 
-But what if you go through a colleague’s chat where they were asking questions about a company’s earnings, and you want to do a follow-up question?
+But what if you go through a colleague's chat where they were asking questions about a company's earnings, and you want to do a follow-up question?
 
-That’s a complex problem.
+That's a complex problem.
 
 At OpenBB, we are in a very good position to solve this for our users.
 

@@ -3,7 +3,7 @@ slug: bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released
 title: Bloomberg Terminal is no more. OpenBB Terminal 2.0 has just been released.
 date: 2022-11-29
 image: /blog/2022-11-29-bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released.png
-tags: ['OpenBB Terminal 2.0', 'Investment Research', 'Financial Data', 'AI', 'ML', 'SDK']
+tags: ['openbb', 'product-launch', 'investment-research', 'sdk', 'api', 'ai', 'ml', 'open-source', 'fintech']
 description: OpenBB Terminal 2.0 has been released. This blog post discusses the new features and improvements, including the release of OpenBB SDK, a state-of-the-art AI/ML toolkit for the financial industry, and the vision for a community-driven investment research platform.
 ---
 
@@ -25,16 +25,16 @@ Almost 2 years ago, I started building my own investment research platform. 2 mo
 
 Since then, we surpassed [17,800 stars on Github](https://github.com/OpenBB-finance/OpenBBTerminal). Raised $ 8.8 million in our seed round. Build a very competitive team and our OpenBB brand is now recognized by most in the financial space. You can read more about our story [here](https://openbb.co/blog/gme-didnt-take-me-to-the-moon-but-gamestonk-terminal-did).
 
-**Our mission to democratize investment research has not changed.** Over the past few months we have been heads down and building and today I’m excited to share with you the announcement of OpenBB Terminal 2.0.
+**Our mission to democratize investment research has not changed.** Over the past few months we have been heads down and building and today I'm excited to share with you the announcement of OpenBB Terminal 2.0.
 
 The headline is:
 
-> _OpenBB Terminal 2.0 is more than an application, it’s a platform._
+> _OpenBB Terminal 2.0 is more than an application, it's a platform._
 
 <br />
 
 A summary:
-- We are releasing OpenBB SDK which allows developers to use a single API to access the world’s raw financial data in order to build their own products / dashboards.
+- We are releasing OpenBB SDK which allows developers to use a single API to access the world's raw financial data in order to build their own products / dashboards.
 
 The SDK will allow users to create report templates in a matter of minutes and run them for custom tickers at any time in a matter of seconds; Instead of spending hours and starting a report from scratch every single time. We envision a world where the community can share these and help each other at becoming better investors.
 

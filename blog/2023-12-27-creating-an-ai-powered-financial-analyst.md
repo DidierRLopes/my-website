@@ -3,7 +3,7 @@ slug: creating-an-ai-powered-financial-analyst
 title: Creating an AI-powered financial analyst
 date: 2023-12-27
 image: /blog/2023-12-27-creating-an-ai-powered-financial-analyst.png
-tags: ['ai', 'llm', 'agents', 'tools', 'function calling', 'openbb']
+tags: ['openbb', 'ai', 'llm', 'agents', 'copilot', 'function-calling', 'pydantic', 'langchain']
 description: Our Platform aims to empower the OpenBB Copilot, an AI-powered financial analyst, to perform tasks ranging from knowledge retrieval to fully autonomous analysis. The architecture involves task decomposition, tool retrieval, and subtask agents, showcasing impressive results in both deterministic and non-deterministic workflows. Read on to explore its capabilities and don't forget to watch the demos.
 ---
 
@@ -45,7 +45,7 @@ When discussing what tasks we wanted our AI-powered Financial Analyst to be able
 
 1. **Knowledge retrieval**: The agent can answer general financial queries without external resources. (eg. ChatGPT "as-is"). Here, the agent relies solely on its training data to answer questions.
 
-2. **Data retrieval**: The agent can answer queries using information inserted into the context (usually as part of a separate data retrieval process that isn’t controlled by the model, such as using [similarity search](https://en.wikipedia.org/wiki/Similarity_search) across a knowledge database using the user’s query).
+2. **Data retrieval**: The agent can answer queries using information inserted into the context (usually as part of a separate data retrieval process that isn't controlled by the model, such as using [similarity search](https://en.wikipedia.org/wiki/Similarity_search) across a knowledge database using the user's query).
 
 3. **Autonomous data retrieval**: The agent can answer queries by dynamically retrieving data not currently present in the context or the training data via function calling.
 
@@ -67,13 +67,13 @@ Our goal is to enable OpenBB Copilot to perform all of the above. I presented a 
 
 ## Two types of prompts
 
-Rather than first building an AI-powered financial analyst for the sake of it, we instead started from what we wanted to achieve. We came up with two distinct prompts and our goal was for the agent to be able to successfully perform both of these, but utilizing the same underlying “agentic” architecture.
+Rather than first building an AI-powered financial analyst for the sake of it, we instead started from what we wanted to achieve. We came up with two distinct prompts and our goal was for the agent to be able to successfully perform both of these, but utilizing the same underlying "agentic" architecture.
 
 <p align="center">
     <img width="600" src="/blog/2023-12-27-creating-an-ai-powered-financial-analyst_1.png"/>
 </p>
 
-- **Prompt A (on the left)** - requires linear reasoning (where future answers depend on previous answers). This kind of prompt is generally deterministic, which allows us to access (and verify) the agent’s answers immediately because we can check the underlying facts and data. It also involves a few complex operations across multiple steps, such as extracting a list of tickers from an endpoint and iterating through that list using a different endpoint. Then based on those outputs, a reasoning can be made and a final answer is given.
+- **Prompt A (on the left)** - requires linear reasoning (where future answers depend on previous answers). This kind of prompt is generally deterministic, which allows us to access (and verify) the agent's answers immediately because we can check the underlying facts and data. It also involves a few complex operations across multiple steps, such as extracting a list of tickers from an endpoint and iterating through that list using a different endpoint. Then based on those outputs, a reasoning can be made and a final answer is given.
 
 - **Prompt B (on the right)** - requires independent reasoning (fetching and combining different pieces of independent information). This prompt is typically less deterministic and allows us to leverage LLMs to provide alpha by uncovering insights that would be hard for a human to discover (or, at the very least, discover at scale). Instead of telling the agent what to do explicitly, we instead pose a question and expect the agent to execute an analysis and perform reasoning, without specific guidance or guardrails.
 
@@ -97,15 +97,15 @@ Crucially, we use Pydantic for all of our endpoints. This ensures that we have b
 
 ### OpenBB Tools
 
-From having 100+ different data endpoints that you can access using Python, we created “tools” that an agent “understands” and can use. This is extremely important since this collection of tools will give real-time data to the agent based on the prompt asked.
+From having 100+ different data endpoints that you can access using Python, we created "tools" that an agent "understands" and can use. This is extremely important since this collection of tools will give real-time data to the agent based on the prompt asked.
 
 <p align="center">
     <img width="600" src="/blog/2023-12-27-creating-an-ai-powered-financial-analyst_4.png"/>
 </p>
 
-Since the OpenBB Platform has high-quality documentation, we use each function’s docstring as well as the output field names (with some basic preprocessing). This tweak allows the agent to know where to get the market cap information from, even if it’s within a differently-named endpoint (for example the `equity.fundamentals.overview` endpoint).
+Since the OpenBB Platform has high-quality documentation, we use each function's docstring as well as the output field names (with some basic preprocessing). This tweak allows the agent to know where to get the market cap information from, even if it's within a differently-named endpoint (for example the `equity.fundamentals.overview` endpoint).
 
-Each of these tool descriptions is converted into embeddings that can be retrieved later on based on the query the user provides. This allows our agent to pick the right tools for the job - i.e. if I want to have access to Apple’s market cap, I want to get the tool `equity.fundamentals.overview` because I know that by providing the symbol `AAPL` I can get the market cap value.
+Each of these tool descriptions is converted into embeddings that can be retrieved later on based on the query the user provides. This allows our agent to pick the right tools for the job - i.e. if I want to have access to Apple's market cap, I want to get the tool `equity.fundamentals.overview` because I know that by providing the symbol `AAPL` I can get the market cap value.
 
 <p align="center">
     <img width="600" src="/blog/2023-12-27-creating-an-ai-powered-financial-analyst_5.png"/>
@@ -123,15 +123,15 @@ This is the overall architecture that our agent will follow, and below we will t
 
 ### Task Decomposition
 
-First of all, we don’t want to tackle the user query in one go. This is because LLMs have limited context. Plus, we want the agent to retrieve all the necessary tools to answer the query. But the vector’s store similarity search doesn’t work with one prompt that needs multiple different tools. Additionally, similar to human analysts, breaking a larger question up into smaller manageable subquestions leads to better analysis and results.
+First of all, we don't want to tackle the user query in one go. This is because LLMs have limited context. Plus, we want the agent to retrieve all the necessary tools to answer the query. But the vector's store similarity search doesn't work with one prompt that needs multiple different tools. Additionally, similar to human analysts, breaking a larger question up into smaller manageable subquestions leads to better analysis and results.
 
-So, we break the user’s main query into:
+So, we break the user's main query into:
 
 - **List of simpler tasks**: self-explanatory
 
 - **List of tasks dependency**: does the current subtask need a prior subtask to tackle the current subtask?
 
-- **List of “tool search” keywords associated with each subtask**: instead of using the subtask question itself to directly retrieve the correct selection of tools using the embeddings in the vector store, empirically we found that if the LLM could select the most important keywords associated with the task using keyword search. This ended up resulting in a big jump in retrieval performance. This is expected since we are effectively reducing the noise. E.g. “What are Tesla peers” → “peers”.
+- **List of "tool search" keywords associated with each subtask**: instead of using the subtask question itself to directly retrieve the correct selection of tools using the embeddings in the vector store, empirically we found that if the LLM could select the most important keywords associated with the task using keyword search. This ended up resulting in a big jump in retrieval performance. This is expected since we are effectively reducing the noise. E.g. "What are Tesla peers" → "peers".
 
 This is the system message we are utilizing:
 
@@ -187,7 +187,7 @@ We then combine the entire context from subquestions and outputs to be given to 
     <img width="600" src="/blog/2023-12-27-creating-an-ai-powered-financial-analyst_14.png"/>
 </p>
 
-Finally, we give the final agent the main prompt and the list of tasks from task decomposition and that’s it!
+Finally, we give the final agent the main prompt and the list of tasks from task decomposition and that's it!
 
 <p align="center">
     <img width="600" src="/blog/2023-12-27-creating-an-ai-powered-financial-analyst_15.png"/>
@@ -213,7 +213,7 @@ Since this is a deterministic workflow, we can look at the raw data to check whe
 
 ### Prompt B
 
-_“Perform a fundamentals financial analysis of AMZN using the most recently available data. What do you find that’s interesting?”_
+_"Perform a fundamentals financial analysis of AMZN using the most recently available data. What do you find that's interesting?"_
 
 The output can be seen here:
 

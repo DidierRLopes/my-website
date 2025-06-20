@@ -3,7 +3,7 @@ slug: how-to-convert-a-twitter-thread-into-a-linkedin-carousel-in-seconds
 title: Twitter thread to LinkedIn carousel in python
 date: 2022-10-23
 image: /blog/2022-10-23-how-to-convert-a-twitter-thread-into-a-linkedin-carousel-in-seconds.png
-tags: ['Python', 'LinkedIn', 'Twitter', 'Carousel', 'Content Creation']
+tags: ['python', 'linkedin', 'twitter', 'carousel', 'content-creation', 'automation', 'api', 'side-project']
 ---
 
 <p align="center">
@@ -24,7 +24,7 @@ As content creators, it would be good if the same content could be utilised acro
 
 I noticed recently that LinkedIn carousels have been picking a lot of traction, and given I have some nice Twitter threads ([example](https://twitter.com/didier_lopes/status/1570731358204600323?s=20&t=SAO9fD7FR7jeTE-6kem6Mg)) I thought that it would be great if I could convert them into a LinkedIn carousel.
 
-So, I looked for free tools and didn’t find anything good enough. I ended up using [canvas](https://canvas.apps.chrome/) to re-create the thread — which you can find [here](https://www.linkedin.com/posts/didier-lopes_due-diligence-on-amt-using-openbb-terminal-activity-6977569279395176448-TFMn?utm_source=share&utm_medium=member_desktop). It worked well, but it was time consuming and for most cases, I don’t want to be messing around with the design side of things.
+So, I looked for free tools and didn't find anything good enough. I ended up using [canvas](https://canvas.apps.chrome/) to re-create the thread — which you can find [here](https://www.linkedin.com/posts/didier-lopes_due-diligence-on-amt-using-openbb-terminal-activity-6977569279395176448-TFMn?utm_source=share&utm_medium=member_desktop). It worked well, but it was time consuming and for most cases, I don't want to be messing around with the design side of things.
 
 ![image](/blog/2022-10-23-how-to-convert-a-twitter-thread-into-a-linkedin-carousel-in-seconds_1.png)
 
@@ -34,7 +34,7 @@ And as usual, I open sourced it: https://github.com/DidierRLopes/thread-to-carou
 
 This tool is far from perfect, and a lot can be improved on the design side of things to: Recognize emojis; Highlight mentions; Change the size of the box based on the text; Better text placement when images attached; Better URL link display.
 
-The goal for me wasn’t to build a perfect tool, but something easy enough that did the job. And, as the project is open source, I expect to have users contributing to the script so that it can be improved over time.
+The goal for me wasn't to build a perfect tool, but something easy enough that did the job. And, as the project is open source, I expect to have users contributing to the script so that it can be improved over time.
 
 Today I run it using:
 

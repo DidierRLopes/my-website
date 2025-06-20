@@ -3,7 +3,7 @@ slug: ui-layer-is-the-next-big-frontier
 title: UI layer is the next big frontier
 date: 2025-02-25
 image: /blog/2025-02-25-ui-layer-is-the-next-big-frontier
-tags: ['openbb', 'fintech', 'ui', 'innovation', 'financial-software']
+tags: ['openbb', 'fintech', 'ui', 'ux', 'innovation', 'financial-software', 'data-visualization', 'future-of-finance']
 description: A deep dive into why the UI layer represents the next major frontier in financial technology. While the industry has heavily invested in data, the user interface remains a critical yet overlooked bridge between raw information and actionable intelligence. This piece explores how OpenBB is leading the charge in revolutionizing how financial professionals interact with data.
 hideSidebar: true
 
@@ -63,9 +63,9 @@ Intelligence - how insights are generated, refined, and acted upon—is where th
 
 ## Why the UI layer has been overlooked
 
-Building a beloved financial desktop application isn’t just about better charts or a sleeker interface. It requires a fundamental rethink of how users interact with their data.
+Building a beloved financial desktop application isn't just about better charts or a sleeker interface. It requires a fundamental rethink of how users interact with their data.
 
-The industry’s reliance on fragmented workflows has meant that firms have learned to tolerate inefficiencies, simply because “it works.”
+The industry's reliance on fragmented workflows has meant that firms have learned to tolerate inefficiencies, simply because "it works."
 
 <p align="center">
     <img width="600" src="/blog/2025-02-25-ui-layer-is-the-next-big-frontier_2.png" />
@@ -77,19 +77,19 @@ The industry’s reliance on fragmented workflows has meant that firms have lear
 
 ## The OpenBB approach: a different path
 
-We aren’t competing with data vendors.
+We aren't competing with data vendors.
 
-Instead, we’re offering something that no one else has attempted: a flexible, modular workspace where firms can build on top of their own data. Imagine a world where research is seamless, where AI is not just bolted on but deeply embedded into workflows, and where analysts spend more time uncovering insights rather than wrangling data.
+Instead, we're offering something that no one else has attempted: a flexible, modular workspace where firms can build on top of their own data. Imagine a world where research is seamless, where AI is not just bolted on but deeply embedded into workflows, and where analysts spend more time uncovering insights rather than wrangling data.
 
 Data providers are starting to recognize this shift, but innovation on their platforms is slow.
 
 Meanwhile, AI is accelerating workflows at a pace that demands a new approach.
 
-AI chatbots alone aren’t enough; without a stronger visualization and interaction layer, they remain a novelty rather than a necessity.
+AI chatbots alone aren't enough; without a stronger visualization and interaction layer, they remain a novelty rather than a necessity.
 
 With OpenBB, we are deliberately avoiding the data layer because we believe intelligence — the ability to derive value from data—is the future. Firms want more control over their data and the ability to leverage it without leakage.
 
-That’s why the biggest demand we’ve seen is for on-prem deployments, ensuring security while unlocking intelligence.
+That's why the biggest demand we've seen is for on-prem deployments, ensuring security while unlocking intelligence.
 
 ## Timing matters: why now?
 
@@ -103,15 +103,15 @@ That’s why the biggest demand we’ve seen is for on-prem deployments, ensurin
 
 The cost of compute has dropped, making powerful AI-driven applications more feasible.
 
-The best products emerge at the intersection of technical and domain expertise, and that’s exactly where OpenBB sits—with deep engineering talent combined with financial knowledge.
+The best products emerge at the intersection of technical and domain expertise, and that's exactly where OpenBB sits—with deep engineering talent combined with financial knowledge.
 
 One of our clients recently put it best:
 
-> _“OpenBB is the bridge infrastructure between my data and my intelligence.”_
+> _"OpenBB is the bridge infrastructure between my data and my intelligence."_
 
 <br />
 
-That’s the mission.
+That's the mission.
 
 Not just another financial tool, but a true workspace for the next generation of research and analytics.
 

@@ -3,7 +3,7 @@ slug: 2025-04-03-stop-building-ai-products-start-building-workflows
 title: Stop building AI products, start building workflows
 date: 2025-04-03
 image: /blog/2025-04-03-stop-building-ai-products-start-building-workflows
-tags: ['AI', 'product strategy', 'business', 'openai', 'workflows', 'openbb']
+tags: ['ai', 'product-strategy', 'business', 'startup', 'moat', 'workflows', 'openbb', 'fintech', 'vertical-ai']
 description: The secret to building defensible AI companies isn't better AI - it's better workflows. An insider's perspective on why some AI companies thrive while others will become obsolete with each new model release.
 hideSidebar: true
 
@@ -31,7 +31,7 @@ Being a wrapper around an LLM just means that your product is not the LLM—but 
 
 If you're building a general-purpose AI model to be used on any user data, and your pitch is: our model is better at retrieval than any other AI lab.
 
-Then you’ve already lost.
+Then you've already lost.
 
 The funny thing is, the companies that fall into this trap will say:
 
@@ -91,13 +91,13 @@ And so today, although OpenAI and others have web search, Perplexity is consider
 
 Ultimately, I think their moat is a combination of being first to market (on search), having a strong brand, and—more importantly—flawless execution by Aravind.
 
-One of the things I never understood was why they didn’t push more on the Enterprise AI angle. After all, they have the best demo there is:
+One of the things I never understood was why they didn't push more on the Enterprise AI angle. After all, they have the best demo there is:
 
-> _“If we can give you an answer based on a personal blog post written 17 years ago by a professor of history from Portugal, do you really think we can’t get your ‘extract the company’s last twelve months’ revenue’?”_
+> _"If we can give you an answer based on a personal blog post written 17 years ago by a professor of history from Portugal, do you really think we can't get your 'extract the company's last twelve months' revenue'?"_
 
 <br />
 
-But they announced crossing $100M ARR, so they’re doing pretty well.
+But they announced crossing $100M ARR, so they're doing pretty well.
 
 ## Where does the highest value lie?
 
@@ -124,11 +124,11 @@ Note that this has nothing to do with AI, but with the data itself.
 
 AI is just the delivery mechanism for that data. Not an API call, not a dashboard with the data, not a notification... a box that expects natural language and returns the data.
 
-If the answer is no, then you don’t have a moat here.
+If the answer is no, then you don't have a moat here.
 
 **BUT.**
 
-If you were thinking, _“But my application connects with data from FactSet, S&P, ...”_
+If you were thinking, _"But my application connects with data from FactSet, S&P, ..."_
 
 Then your moat is not the data itself, but the **workflow**—which takes me to the next moat discussion.
 
@@ -138,27 +138,27 @@ Here, the question is: what types of workflows do you allow users to get done on
 
 The definition of a _workflow_ is: a sequence of steps or tasks that are carried out to complete a specific process or achieve a particular goal.
 
-There’s no mention of AI anywhere in that definition. AI is a tool that can help get a workflow done, but it isn’t required.
+There's no mention of AI anywhere in that definition. AI is a tool that can help get a workflow done, but it isn't required.
 
 What _is_ required is understanding users—and understanding what they want to get done.
 
 So there's a _lot_ of value in going narrow and nailing the workflow for a specific type of user.
 
-_"But if you go narrow in a vertical, can’t you be disrupted more easily?"_ — you ask.
+_"But if you go narrow in a vertical, can't you be disrupted more easily?"_ — you ask.
 
 Yes and no.
 
-- **YES**, if OpenAI ultimately wanted to go after that market, it could. But OpenAI won’t care. Not necessarily because the market isn’t big, but because they’re pursuing one that’s even bigger.
+- **YES**, if OpenAI ultimately wanted to go after that market, it could. But OpenAI won't care. Not necessarily because the market isn't big, but because they're pursuing one that's even bigger.
 
-- **NO**, because the more vertical and narrow you go, the fewer experts there are, the stronger the word-of-mouth is, and the lower the competition. And once you’re in—you have first-mover advantage.
+- **NO**, because the more vertical and narrow you go, the fewer experts there are, the stronger the word-of-mouth is, and the lower the competition. And once you're in—you have first-mover advantage.
 
 ## Examples
 
 Cursor and Windsurf are amazing products because they _nail the workflow_ of developers.
 
-It’s not just about the AI model being used—but _when_ and _how_ it's used.
+It's not just about the AI model being used—but _when_ and _how_ it's used.
 
-It’s about being in a full IDE that users are already familiar with, and plugging in the AI at the exact moments a user needs it.
+It's about being in a full IDE that users are already familiar with, and plugging in the AI at the exact moments a user needs it.
 
 They understood the pain of developers—and used AI to alleviate that pain.
 
@@ -170,35 +170,35 @@ They get better.
 
 Because the developers behind the product understand how to use these better models to remove _even more_ friction for their users.
 
-Another thing worth saying here—I don’t actually believe in users selecting different models.
+Another thing worth saying here—I don't actually believe in users selecting different models.
 
-It sounds good in theory, but in practice, it doesn’t really work.
+It sounds good in theory, but in practice, it doesn't really work.
 
-I don’t care what model Cursor is using—I care about getting my workflow done.
+I don't care what model Cursor is using—I care about getting my workflow done.
 
-As a developer, I have _zero_ loyalty to my tools. I’ll use whatever gets the job done faster and more efficiently.
+As a developer, I have _zero_ loyalty to my tools. I'll use whatever gets the job done faster and more efficiently.
 
 I mean—how many people actually switch models manually on Cursor? I think not many, and definitely not frequently.
 
-I, for one, use Claude because it’s the best for coding right now. But if I’m asking an implementation question, then I’ll click on the “Claude Thinking” model.
+I, for one, use Claude because it's the best for coding right now. But if I'm asking an implementation question, then I'll click on the "Claude Thinking" model.
 
-Do I _want_ to click on “Thinking model”? Not really. But Cursor doesn’t yet understand my intent to get all the “firepower” I can for this answer—so for now, this will do.
+Do I _want_ to click on "Thinking model"? Not really. But Cursor doesn't yet understand my intent to get all the "firepower" I can for this answer—so for now, this will do.
 
-Even better—do I _really_ care that it’s Claude? Nope. If it turns out Gemini 2.5 is the best at coding, I’ll happily switch and never look back.
+Even better—do I _really_ care that it's Claude? Nope. If it turns out Gemini 2.5 is the best at coding, I'll happily switch and never look back.
 
 ## OpenBB
 
 Ok, so where do we fit?
 
-We’re very much in the category of **Workflows** - similar to Cursor.
+We're very much in the category of **Workflows** - similar to Cursor.
 
-The difference is: we didn’t have a VSCode that we could fork and build on top of.
+The difference is: we didn't have a VSCode that we could fork and build on top of.
 
 The best financial terminals used in the space — Bloomberg, FactSet, CapIQ — are all closed-source.
 
 So we had to build **OpenBB Workspace** from scratch over three years to match the capability and quality that financial professionals expect.
 
-And now, we’re adding AI where it makes sense.
+And now, we're adding AI where it makes sense.
 
 Some of these workflows that can be done on OpenBB include:
 
@@ -212,16 +212,16 @@ Some of these workflows that can be done on OpenBB include:
 
 <br />
 
-And we’re adding more fast.
+And we're adding more fast.
 
 Now that we have a UI that meets industry standards, we can double down on **workflows that delight customers**.
 
-And we’ll keep expanding how many workflows can be done on OpenBB—ultimately with the goal of making OpenBB the **central interface** used within a firm, built on top of their own data.
+And we'll keep expanding how many workflows can be done on OpenBB—ultimately with the goal of making OpenBB the **central interface** used within a firm, built on top of their own data.
 
-Here’s an example of an application built on OpenBB in just a couple of days by one of our engineers, for a workshop we’re putting together with risk managers:
+Here's an example of an application built on OpenBB in just a couple of days by one of our engineers, for a workshop we're putting together with risk managers:
 
 <p align="center">
     <img width="900" src="/blog/2025-04-03-stop-building-ai-products-start-building-workflows_1.jpeg" />
 </p>
 
-This highlights not only what we’ve built, but also how quickly we can delight customers on top of our product.
+This highlights not only what we've built, but also how quickly we can delight customers on top of our product.

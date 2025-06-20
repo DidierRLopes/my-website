@@ -3,7 +3,7 @@ slug: chatgpt-and-the-future-of-ai-in-finance
 title: ChatGPT and The Future of AI in Finance
 date: 2024-09-21
 image: /blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance.jpg
-tags: ['finance', 'ai', 'agents', 'chatgpt', 'quant', 'cornell', 'twosigma', 'blackrock', 'citadel']
+tags: ['ai', 'fintech', 'llm', 'agents', 'hallucinations', 'fine-tuning', 'data-security', 'openbb', 'thought-leadership']
 description: I took the stage at the Cornell Quant Conference alongside Yu Yu (BlackRock) Tony Berkman (Two Sigma), and Samson Qian (Citadel), to discuss ChatGPT & The Future of AI in Finance.
 hideSidebar: true
 
@@ -19,7 +19,7 @@ I took the stage at the Cornell Quant Conference alongside Yu Yu (BlackRock) Ton
 
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-Last week, I participated in a panel at the Cornell Financial Engineering Manhattan Conference. The topic of the panel was ‘ChatGPT & The Future of AI in Finance.’
+Last week, I participated in a panel at the Cornell Financial Engineering Manhattan Conference. The topic of the panel was 'ChatGPT & The Future of AI in Finance.'
 
 The other panelists were:
 
@@ -42,19 +42,19 @@ I will organize the following sections based on the topics discussed at the even
 
 When talking about the topic of hallucinations, I have a [quote](https://x.com/didier_lopes/status/1675630822093918209) that I love from Marc Andreesen:
 
-> “Hallucination is what we call when we don't like it. Creativity is what we call it when we do like it.”
+> "Hallucination is what we call when we don't like it. Creativity is what we call it when we do like it."
 
 ### Confident hallucinations
 
 The fundamental issue with hallucinations is the fact that the model hallucinates with confidence.
 
-Imagine asking two different friends: “Do you know where location X is?”
+Imagine asking two different friends: "Do you know where location X is?"
 
-**Friend A**: It’s there.
+**Friend A**: It's there.
 
-**Friend B**: Hmm, I’m not really sure. If I had to guess, I’d say there, but I’m not 100% certain.
+**Friend B**: Hmm, I'm not really sure. If I had to guess, I'd say there, but I'm not 100% certain.
 
-If both gave wrong directions, you would consider **Friend A** a liar, but not Friend B. This is because **Friend B** lacked confidence in their answer, they were trying to help but highlighted that they weren’t sure about it.
+If both gave wrong directions, you would consider **Friend A** a liar, but not Friend B. This is because **Friend B** lacked confidence in their answer, they were trying to help but highlighted that they weren't sure about it.
 
 The problem with current LLMs is that they are, for the most part, like **Friend A**. They say wrong things with certainty.
 
@@ -84,7 +84,7 @@ This is how it looks.
 
 While I've heard a few vendors promising 100% accuracy, this is simply not true.
 
-We are at a stage where technology is not even yet at the ‘trust but verify’ level.
+We are at a stage where technology is not even yet at the 'trust but verify' level.
 
 So instead of hallucinating with confidence, when data is unavailable, we prompt the model to return that there was no real-time information accessible to answer the query.
 
@@ -96,7 +96,7 @@ So instead of hallucinating with confidence, when data is unavailable, we prompt
 
 One thing we found that significantly reduces hallucinations is enabling our agent, OpenBB Copilot, to have access to all the API backends that users have through OpenBB or those they've added themselves.
 
-Here’s the sequence of actions that happen:
+Here's the sequence of actions that happen:
 
 1. The user asks the OpenBB Copilot a question.
 2. The prompt is converted into embeddings.
@@ -127,7 +127,7 @@ In order to reduce the number of hallucinations, there are two things that can b
 
 For instance, if a user utilizes the following prompt on the OpenBB Copilot:
 
->_Using the earnings transcript, create a table with columns: financial metric, value, sentence in the earnings where it was extracted from. Double check whether the information you are using is correct._
+>_Using the earnings transcript, create a table with columns: financial metric, value, sentence in the earnings where it was extracted from. Double check whether the information you are using is correct._
 
 <br />
 
@@ -141,11 +141,11 @@ See example below,
 
 #### Add deterministic processes to check for hallucinations
 
-For example, let’s say the user prompt involves a data retrieval task.
+For example, let's say the user prompt involves a data retrieval task.
 
 We can run a deterministic process to check whether the retrieved values exist or not. Sure this won't be 100% accurate because the numbers could be flagged by referring to another thing, BUT it's all about improving the overall accuracy of Copilot.
 
-Ultimately, whatever can be done to improve the Copilot’s accuracy should be done.
+Ultimately, whatever can be done to improve the Copilot's accuracy should be done.
 
 ## 2. Agents are the future
 
@@ -175,9 +175,9 @@ And apparently, [so does Sequoia](https://finance.yahoo.com/news/sequoia-sees-bi
     <img width="300" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_7.png"/>
 </p>
 
-### The “Strawberry” issue will be solved
+### The "Strawberry" issue will be solved
 
-A panelist commented on stage that LLMs can’t even count how many R's are in the word "Strawberry".
+A panelist commented on stage that LLMs can't even count how many R's are in the word "Strawberry".
 
 This [tweet](https://x.com/MwangoCapital/status/1828857579860095428) offers a good explanation of why this happens — it turns out it's due to the tokenizer, and it can be solved. In fact, it's solved by simply ensuring that the model takes each letter as a token. See below,
 
@@ -195,7 +195,7 @@ Interestingly, a few days ago, [OpenAI announced OpenAI o1](https://openai.com/o
 
 It takes in a prompt from the user and decomposes it in natural steps to solve it. Then at each step, it takes the output of the model from the previous step and predicts the next token. It turns out that this improves accuracy substantially.
 
-However, it still doesn’t have access to external data. And that is why I call it a "wannabe agent".
+However, it still doesn't have access to external data. And that is why I call it a "wannabe agent".
 
 I love how Jeremiah put it in this [tweet](https://x.com/jlowin/status/1834722014839418962):
 
@@ -229,7 +229,7 @@ I had been using OpenAI's GPT-4 for coding for several months. After trying Anth
     <img width="400" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_10.png"/>
 </p>
 
-The market share for the best LLM will be gigantic. That’s why [OpenAI is looking to raise at a $150 billion valuation](https://www.bloomberg.com/news/articles/2024-09-11/openai-fundraising-set-to-vault-startup-s-value-to-150-billion). While the valuation reflects the market size, the amount that will be raised represents the capital needed to reach that valuation. This is why only a few players will be able to compete at that level.
+The market share for the best LLM will be gigantic. That's why [OpenAI is looking to raise at a $150 billion valuation](https://www.bloomberg.com/news/articles/2024-09-11/openai-fundraising-set-to-vault-startup's-value-to-150-billion). While the valuation reflects the market size, the amount that will be raised represents the capital needed to reach that valuation. This is why only a few players will be able to compete at that level.
 
 In an "agentic future", I believe the best LLM will serve as the core "brain" - the main LLM that routes all prompts and decides what happens next.
 
@@ -237,7 +237,7 @@ And who wouldn't want the smartest model controlling the actions with a list of 
 
 I know I would.
 
-That's also why, when discussing OpenBB Copilot, we don’t rely on a single foundational model. Instead, we use the models that are best suited for each specific task.
+That's also why, when discussing OpenBB Copilot, we don't rely on a single foundational model. Instead, we use the models that are best suited for each specific task.
 
 For instance, OpenAI o1 can be the brains, but when a user uses @web it triggers the Perplexity model, and when they upload an image, we have Anthropic's Haiku. Or maybe if they want to do intraday trading, we use Llama 3.1 through Groq for fast inference.
 
@@ -245,7 +245,7 @@ You get the idea.
 
 ## 3. When does it make sense to fine-tune
 
-A good comment was made on the panel: "_it’s expensive to spend time fine-tuning a new model, just for that entire work to be 'eradicated' by a new model that has a higher performance in that specific domain than the model has been fine-tuned_".
+A good comment was made on the panel: "_it's expensive to spend time fine-tuning a new model, just for that entire work to be 'eradicated' by a new model that has a higher performance in that specific domain than the model has been fine-tuned_".
 
 In my opinion, this happens because the timing isn't right yet. We are still unlocking remarkable achievements through each new model release. Although there is a massive bump in terms of capability between these releases, I wouldn't recommend that a firm fine-tune its own models at this stage.
 
@@ -269,13 +269,13 @@ Their main concern was ensuring that no data was being shared with third-party v
 
 Crypto enthusiasts often say, "Not your keys, not your coins" to emphasize the importance of storing assets in a cold wallet rather than leaving them on an exchange that might implode (looking at you, FTX). The same principle applies here: "Not your weights, not your data".
 
-When you send information to a large foundation model provider like OpenAI, your data enters their ecosystem, and you have to trust they’ll honor the terms of your contract.
+When you send information to a large foundation model provider like OpenAI, your data enters their ecosystem, and you have to trust they'll honor the terms of your contract.
 
 A more secure approach is to host an open-source model locally within your firm, ensuring that sensitive data remains entirely within your infrastructure and network.
 
-Although open-source models aren’t yet as powerful as closed-source ones, they are catching up quickly. If you think that GPT-4o can already do a lot for you, think about how at some point there will be an open-source model that is GPT-4o equivalent. Sure, at that time closed-source models will be better, but the question is: How much better?
+Although open-source models aren't yet as powerful as closed-source ones, they are catching up quickly. If you think that GPT-4o can already do a lot for you, think about how at some point there will be an open-source model that is GPT-4o equivalent. Sure, at that time closed-source models will be better, but the question is: How much better?
 
-Or better, the question is: **"How much are you willing to sacrifice in terms of data security for performance?”**.
+Or better, the question is: **"How much are you willing to sacrifice in terms of data security for performance?"**.
 
 At OpenBB, we take this very seriously and have taken measures to allow enterprise customers to fully control their data.
 

@@ -3,7 +3,7 @@ slug: moving-countries-and-starting-a-company-aint-so-different
 title: Moving countries and starting a company ain't so different
 date: 2024-03-24
 image: /blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack.png
-tags: ['learning', 'experience', 'growth', 'moving', 'london', 'bay', 'US', 'travel', 'startup', 'nyc']
+tags: ['startup', 'founder-story', 'relocation', 'personal-growth', 'career-path', 'risk-taking', 'ambition', 'resilience', 'life-lessons']
 description: I have started a company. I have moved countries. It turns out that there's a lot in common between these.
 ---
 
@@ -29,7 +29,7 @@ Logically speaking, this move didn't make any sense. No one really told me that 
 
 I believe this isn't so different from creating a startup. This blog post will explain what they have in common and why I did it.
 
-## Creating a startup / Deciding to leave your country
+## Creating a startup / Deciding to leave your country
 
 [Elad Gil](http://eladgil.com/) wrote a really good [article](https://blog.eladgil.com/p/startups-are-an-act-of-desperation) on how creating a startup is an act of desperation. I believe that post could be equally applicable to moving countries, so I will list the same points used by Elad in the context of moving countries and provide examples. Most of the time, the person moving countries has a mix of the below bullet points.
 
@@ -63,9 +63,9 @@ This is what the "American dream" is all about. People moved to the US to do som
 
 The equivalent to this is when someone returns to their home country after several years outside with more wealth and/or experience.
 
-## Growing a startup / Living abroad
+## Growing a startup / Living abroad
 
-### Mission and Vision
+### Mission and Vision
 
 When creating a company, you must have a clear mission and vision. This allows you to create a community/team that will be with you for the long run. Similarly, when moving countries, it's essential to have a well-defined goal. This doesn't mean that the goal cannot change; after all, companies pivot. However, you need to have a strategy that you follow until you don't.
 
@@ -81,11 +81,11 @@ Building a successful startup requires networking, forming strategic partnership
 
 Building a startup and moving countries demands unwavering resilience and persistence in facing challenges. Startups encounter setbacks, pivots, and failures, but successful entrepreneurs persist and learn from their experiences. Similarly, moving countries can bring unexpected hurdles, such as language barriers, difficulties making friends, challenges adapting to a new culture, or not finding a routine. Embracing these challenges with determination and adaptability paves the way for growth and achievement.
 
-### Learning and Growth
+### Learning and Growth
 
 Startups and moving countries are transformative experiences that offer immense personal and professional growth opportunities. Entrepreneurs continuously learn from their successes and failures in the startup world, refining their strategies and acquiring new skills. Likewise, moving countries provides a unique chance to learn about different cultures, broaden perspectives, and develop resilience, patience, and empathy. Both experiences foster personal development and shape individuals into more well-rounded and adaptable individuals.
 
-## Why did I do it?
+## Why did I do it?
 
 The reason why I started OpenBB and also moved country is a combination of 2 factors:
 
@@ -95,7 +95,7 @@ On a startup level, I have experienced the need for an open-source investment re
 
 Growing up as an engineer fascinated by tech and innovation, the US has always been home to the biggest companies and hottest products. I've always been attracted to Silicon Valley, but before OpenBB, I never had the chance to. The first job I applied to after finishing university was Waymo in CA, but they didn't sponsor VISAs for that role.
 
-### Desperation to do something big or important. 
+### Desperation to do something big or important.
 
 On a startup level, I want to work on something bigger than myself. I want to solve a problem that no one has solved before and build something useful for millions of people that can withstand time.
 

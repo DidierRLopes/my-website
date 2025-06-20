@@ -3,7 +3,7 @@ slug: from-open-source-to-open-startup
 title: From Open Source to Open Startup
 date: 2023-07-06
 image: /blog/2023-07-06-from-open-source-to-open-startup.png
-tags: ['open-source', 'open-startup', 'transparency', 'financial world', 'OpenBB']
+tags: ['open-source', 'open-startup', 'transparency', 'openbb', 'startup-culture', 'business-metrics', 'community']
 description: From Open Source to Open Startup. A journey of OpenBB towards transparency in the financial world.
 ---
 
@@ -19,11 +19,11 @@ From Open Source to Open Startup: A journey of OpenBB towards transparency in th
 
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-Being open source isn’t enough, at OpenBB we want to accelerate the transparency in the financial world.
+Being open source isn't enough, at OpenBB we want to accelerate the transparency in the financial world.
 
-I want to start this blogpost by introducing the concept of an open startup. As this phrase can often be interpreted differently, here’s the standard definition that ChatGPT gave me:
+I want to start this blogpost by introducing the concept of an open startup. As this phrase can often be interpreted differently, here's the standard definition that ChatGPT gave me:
 
-> _“An open startup is a company that practices open innovation and transparent communication with its stakeholders, including customers, employees, and investors. This means that the company is willing to share information about its products, services, and business operations with the public and is open to input and feedback from all stakeholders._
+> _"An open startup is a company that practices open innovation and transparent communication with its stakeholders, including customers, employees, and investors. This means that the company is willing to share information about its products, services, and business operations with the public and is open to input and feedback from all stakeholders._
 
 <br />
 
@@ -31,13 +31,13 @@ I want to start this blogpost by introducing the concept of an open startup. As 
 
 ## Why now?
 
-I’ve been learning about the open startup movement for a while now and I always knew that I wanted OpenBB to follow this trend. At the end of the day, I want us to accelerate the openness and transparency in the financial world.
+I've been learning about the open startup movement for a while now and I always knew that I wanted OpenBB to follow this trend. At the end of the day, I want us to accelerate the openness and transparency in the financial world.
 
-But until recently, this wasn’t one of our top priorities. This all changed when the cryptocurrency exchange FTX collapsed. This was a house of cards and they stood for everything but transparency — not only with their users but also with their shareholders and team alike!
+But until recently, this wasn't one of our top priorities. This all changed when the cryptocurrency exchange FTX collapsed. This was a house of cards and they stood for everything but transparency — not only with their users but also with their shareholders and team alike!
 
 John J. Ray III who has spent a career tackling large corporate failures involving allegations of criminal activity (like Enron), was appointed CEO of FTX to deal with the bankruptcy, and this is one of his quotes to the US congress:
 
-> _“Never in my career have I seen such an utter failure of corporate controls at every level of an organization, from the lack of financial statements to a complete failure of any internal controls or governance whatsoever”_
+> _"Never in my career have I seen such an utter failure of corporate controls at every level of an organization, from the lack of financial statements to a complete failure of any internal controls or governance whatsoever"_
 
 <br />
 
@@ -51,9 +51,9 @@ Transparency across team, shareholders, users and new hires is key. Everyone can
 
 ### Accountability
 
-Everyone will know how we’re doing, for better or worse. This will make us feel responsible to show accurate sustainable growth as this information becomes public. Since everyone has equity in the company, this will be our own skin in the game.
+Everyone will know how we're doing, for better or worse. This will make us feel responsible to show accurate sustainable growth as this information becomes public. Since everyone has equity in the company, this will be our own skin in the game.
 
-When people ask, “How is OpenBB going?”, this can be answered with a single link to our open page.
+When people ask, "How is OpenBB going?" this can be answered with a single link to our open page.
 
 ### Community building
 
@@ -69,7 +69,7 @@ In addition, we want to become leaders of open culture in the financial world, w
 
 ### Fundraising
 
-Since starting OpenBB, I’ve met well over 50 different investors, even without actively fundraising. Whilst this is a great way to start relationships, it’s not sustainable as it takes valuable time away from talking with users/customers (and let’s be honest, even developing :slight_smile:). So by having an open page, we will be able to discuss our growth async and more efficiently. And then, when we are actively fundraising, we can focus on the details.
+Since starting OpenBB, I've met well over 50 different investors, even without actively fundraising. Whilst this is a great way to start relationships, it's not sustainable as it takes valuable time away from talking with users/customers (and let's be honest, even developing :slight_smile:). So by having an open page, we will be able to discuss our growth async and more efficiently. And then, when we are actively fundraising, we can focus on the details.
 
 ## How will it be done?
 
@@ -95,8 +95,8 @@ Stars, forks, merged pull-requests, closed issues, contributors. Keep up-to-date
 
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-For all the metrics that are open source, there will be an ⓘ in the top right to share information on why this chart was made open source and why it’s important to us.
+For all the metrics that are open source, there will be an ⓘ in the top right to share information on why this chart was made open source and why it's important to us.
 
-Once a metric is open, we do not intend to close it ever again, that is why all the metrics we are making public have gone through a thorough reasoning process and there’s enough contextual information to understand its meaning.
+Once a metric is open, we do not intend to close it ever again, that is why all the metrics we are making public have gone through a thorough reasoning process and there's enough contextual information to understand its meaning.
 
 If you can think of a metric that you would like to see on our open page, please feel free to DM me.

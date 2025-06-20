@@ -3,7 +3,7 @@ slug: inspired-by-bia-how-her-fight-against-cancer-changed-my-life
 title: Inspired by Bia - How her fight against cancer changed my life
 date: 2024-08-01
 image: /blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.JPG
-tags: ['cancer', 'development', 'disease', 'charity', 'personal']
+tags: ['personal-story', 'grief', 'motivation', 'cancer-awareness', 'charity', 'fundraising', 'life-lessons', 'resilience', 'inspiration']
 description: In a time when we talk about going to Mars and having AGI, cancer is still taking lives every day.
 ---
 
@@ -21,9 +21,9 @@ This cause could not have been a personal one, but it is.
 
 As a young kid from a small town in Portugal, people who die from cancer are on TV and I don't know them personally.
  
-My friends & family are “protected” by an imaginary shield that I created in my head.
+My friends & family are "protected" by an imaginary shield that I created in my head.
 
-Until they aren’t.
+Until they aren't.
 
 Let me go back down memory lane and talk about Beatriz.
 
@@ -101,7 +101,7 @@ At the graduation she wrote me a message. She didn't have strength in her hand t
     <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_4.JPG"/>
 </p>
 
-The translation doesn’t make it justice, but it reads as:
+The translation doesn't make it justice, but it reads as:
 
 <blockquote>
     <p>Didier</p>
@@ -147,7 +147,7 @@ I went from spending most of my time as a gamer and doing just enough to have go
     <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_5.jpeg"/>
 </p>
 
-I have a tattoo that says “All her would-haves are our opportunities" (which is from Anne Frank's house in Amsterdam) to remind me that every day I have opportunities that she didn't get to experience.
+I have a tattoo that says "All her would-haves are our opportunities" (which is from Anne Frank's house in Amsterdam) to remind me that every day I have opportunities that she didn't get to experience.
 
 But I hope that in some way, shape or form, she is.
 
@@ -155,7 +155,7 @@ And that I make her proud.
 
 Stories like this are not as uncommon as you may think they are.
 
-It took me over 10 years to talk about how cancer took my best friend’s life away.
+It took me over 10 years to talk about how cancer took my best friend's life away.
 
 Imagine the number of people who never write about how it impacted their lives.
 

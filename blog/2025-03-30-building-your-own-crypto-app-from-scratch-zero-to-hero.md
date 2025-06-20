@@ -3,7 +3,7 @@ slug: 2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero
 title: Building your own Crypto app from scratch - zero to hero
 date: 2025-03-30
 image: /blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero
-tags: ['openbb', 'crypto', 'dashboard', 'tutorial', 'data visualization', 'AI', 'workflows']
+tags: ['openbb', 'crypto', 'fintech', 'app-building', 'tutorial', 'data-visualization', 'ai', 'workflows', 'api']
 description: A comprehensive guide to building sophisticated crypto applications using OpenBB. Learn how to create custom dashboards, implement consistent styling, leverage widget specifications, build template workflows, and customize AI agents for your specific use case.
 hideSidebar: true
 unlisted: true

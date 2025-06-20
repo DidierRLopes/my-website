@@ -3,7 +3,7 @@ slug: the-cost-of-building-software-is-plummeting-to-zero
 title: The cost of building software is plummeting to zero
 date: 2025-01-09
 image: /blog/2025-01-09-the-cost-of-building-software-is-plummeting-to-zero
-tags: ['ai', 'software development', 'fintech', 'data infrastructure', 'open source', 'snowflake', 'openbb', 'portfolio optimization']
+tags: ['ai', 'software-development', 'fintech', 'data-infrastructure', 'open-source', 'snowflake', 'openbb', 'portfolio-optimization', 'future-of-software']
 description: AI is revolutionizing software development costs and shifting value creation in the financial industry. I talk about the growing importance of data infrastructure, the rise of customizable solutions, and how OpenBB Workspace enables firms to build specialized AI-powered financial tools.
 hideSidebar: true
 
@@ -49,7 +49,7 @@ Using OpenBB Workspace, he built a sophisticated portfolio optimization system t
 
 This isn't just a tool - it's a glimpse into how OpenBB Workspace can transform entire departments within investment firms.
 
-This 6-minute demo of OpenBB Workspace is one of the most compelling I’ve seen.
+This 6-minute demo of OpenBB Workspace is one of the most compelling I've seen.
 
 <div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
     <iframe

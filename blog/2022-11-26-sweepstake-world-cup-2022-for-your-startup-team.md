@@ -3,7 +3,7 @@ slug: sweepstake-world-cup-2022-for-your-startup-team
 title: Sweepstake World Cup 2022 for your startup team
 date: 2022-11-26
 image: /blog/2022-11-26-sweepstake-world-cup-2022-for-your-startup-team.png
-tags: ['World Cup 2022', 'Startup Team', 'Sweepstake', 'Team Building', 'Slack Bot']
+tags: ['team-building', 'startup-culture', 'world-cup', 'sweepstake', 'slack-bot', 'python', 'side-project']
 description: In this blogpost, we share how we organized a World Cup 2022 sweepstake for our startup team as a team building activity, and how we built a slack bot to facilitate discussions around the event.
 ---
 
@@ -35,13 +35,13 @@ This allowed us to spin the wheel of team members and then spin wheel of countri
 
 ...
 
-The best part about the sweepstake for me, is that the team members that don’t usually interact with each other on a day to day basis have the opportunity to talk amongst themselves for this.
+The best part about the sweepstake for me, is that the team members that don't usually interact with each other on a day to day basis have the opportunity to talk amongst themselves for this.
 
 So, to encourage these team interactions, the first step was to create a slack channel #worldcup-2022 that we could use to discuss each game.
 
-**But that isn’t enough**, because sometimes you require a trigger to start a discussion about the results and the next fixtures.
+**But that isn't enough**, because sometimes you require a trigger to start a discussion about the results and the next fixtures.
 
-I looked for a slack bot that achieved this, but **I didn’t find one**.
+I looked for a slack bot that achieved this, but **I didn't find one**.
 
 So I built one using Python which you can find [here](https://github.com/DidierRLopes/worldcup2022-sweepstake-slackbot).
 
@@ -49,7 +49,7 @@ This is the notification that the #worldcup-2022 receives everyday after all the
 
 ![image](/blog/2022-11-26-sweepstake-world-cup-2022-for-your-startup-team_2.png)
 
-The outcome has been great so far! Our team engagement is even higher than usual and we see team members that don’t work directly with each other having the opportunity to get to know others better.
+The outcome has been great so far! Our team engagement is even higher than usual and we see team members that don't work directly with each other having the opportunity to get to know others better.
 
 If you want to do the same for your team, follow the instructions highlighted [here](https://github.com/DidierRLopes/worldcup2022-sweepstake-slackbot).
 

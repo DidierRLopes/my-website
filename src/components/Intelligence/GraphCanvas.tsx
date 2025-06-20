@@ -240,13 +240,20 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, showTh
     const renderedBBoxes: ({ x: number, y: number, width: number, height: number })[] = [];
 
     const textsEnter = texts.enter().append('text')
-        .attr('fill', colorMode === 'dark' ? '#E2E8F0' : '#1A202C')
         .attr('text-anchor', 'middle')
         .attr('alignment-baseline', 'middle').style('pointer-events', 'none')
-        .style('opacity', 0).text(d => d.tag)
-      .merge(texts)
+        .style('opacity', 0).text(d => d.tag);
+      
+    const merged = textsEnter.merge(texts);
+
+    merged
+        .attr('fill', colorMode === 'dark' ? '#E2E8F0' : '#1A202C')
         .style('font-size', d => `${fontScale(d.cnt) / transform.k}px`)
-        .attr('x', d => d.x).attr('y', d => d.y)
+        .attr('x', d => d.x).attr('y', d => d.y);
+
+    merged
+        .transition()
+        .duration(400)
         .style('opacity', function(d) {
           const bbox = (this as SVGTextElement).getBBox();
           const bufferedBBox = {
@@ -275,9 +282,7 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, showTh
 
           renderedBBoxes.push(bufferedBBox);
           return 0.85;
-        })
-        .transition()
-        .duration(400);
+        });
 
     texts.exit().transition().duration(200).style('opacity', 0).remove();
     if (data.length) trackEvent('zoom_keywords', data.map(d => d.tag).join(','));

@@ -3,10 +3,19 @@ slug: streamline-your-openbb-terminal-experience-with-openbb-hub
 title: Streamline your OpenBB Terminal experience with OpenBB Hub
 date: 2023-05-25
 image: /blog/2023-05-25-streamline-your-openbb-terminal-experience-with-openbb-hub.png
-tags: ['OpenBB', 'OpenBB Hub', 'Terminal', 'API Key Management', 'Data Customization', 'Personalization', 'Script Management']
+tags:
+- openbb
+- openbb-hub
+- terminal
+- api-key-management
+- data-customization
+- personalization
+- script-management
 description: Streamline your OpenBB Terminal experience with OpenBB Hub. Learn about its key features, including API key management, data customization, personalization, and script management.
-
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-05-25-streamline-your-openbb-terminal-experience-with-openbb-hub.png"/>

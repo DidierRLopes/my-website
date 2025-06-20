@@ -3,11 +3,20 @@ slug: building-a-developer-friendly-interface-for-financial-analysts
 title: Building a developer friendly interface for financial analysts
 date: 2025-01-24
 image: /blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts
-tags: ['openbb', 'plg', 'pls', 'open-source', 'fintech', 'ux', 'sales', 'startup']
+tags:
+- openbb
+- plg
+- pls
+- open-source
+- fintech
+- ux
+- sales
+- startup
 description: In the financial software industry, there's a well-worn playbook - build proprietary software, deploy large sales teams, and leverage executive relationships. At OpenBB, we're taking a fundamentally different approach - creating open-source financial tools that users genuinely love to use.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts.png"/>

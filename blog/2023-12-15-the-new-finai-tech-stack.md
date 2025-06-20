@@ -3,9 +3,19 @@ slug: the-new-finai-tech-stack
 title: The new FinAI Tech Stack
 date: 2023-12-15
 image: /blog/2023-12-15-the-new-finai-tech-stack.png
-tags: ['openbb', 'finance', 'ai', 'agents', 'langchain', 'llamaindex', 'mindsdb', 'nixtla']
+tags:
+- openbb
+- finance
+- ai
+- agents
+- langchain
+- llamaindex
+- mindsdb
+- nixtla
 description: This blog post delves into how our collaboration with MindsDB, Nixtla, LlamaIndex, and Langchain is revolutionizing the financial world. Read on to learn all about the event "The New FinAI Tech Stack" held last week in SF, California.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-12-15-the-new-finai-tech-stack.png"/>

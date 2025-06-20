@@ -3,11 +3,21 @@ slug: 2025-05-28-openbb-is-underrated
 title: OpenBB is underrated
 date: 2025-05-28
 image: /blog/2025-05-28-openbb-is-underrated
-tags: ['fintech', 'infrastructure', 'financial-analysis', 'open-source', 'openbb', 'modularity', 'workflows', 'post-terminalism', 'extensibility']
+tags:
+- fintech
+- infrastructure
+- financial-analysis
+- open-source
+- openbb
+- modularity
+- workflows
+- post-terminalism
+- extensibility
 description: OpenBB isn't just software - it's foundational infrastructure that lets firms shape their own financial workspace, moving beyond one-size-fits-all solutions toward modularity and extensibility.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2025-05-28-openbb-is-underrated.jpeg" />

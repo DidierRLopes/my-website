@@ -3,9 +3,20 @@ slug: moving-countries-and-starting-a-company-aint-so-different
 title: Moving countries and starting a company ain't so different
 date: 2024-03-24
 image: /blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack.png
-tags: ['startup', 'founder-story', 'relocation', 'personal-growth', 'career-path', 'risk-taking', 'ambition', 'resilience', 'life-lessons']
+tags:
+- startup
+- founder-story
+- relocation
+- personal-growth
+- career-path
+- risk-taking
+- ambition
+- resilience
+- life-lessons
 description: I have started a company. I have moved countries. It turns out that there's a lot in common between these.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack.png"/>

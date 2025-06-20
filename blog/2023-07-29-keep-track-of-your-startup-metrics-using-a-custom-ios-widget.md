@@ -3,9 +3,18 @@ slug: keep-track-of-your-startup-metrics-using-a-custom-ios-widget
 title: Keep track of your startup metrics using a custom iOS widget
 date: 2023-07-29
 image: /blog/2023-07-29-keep-track-of-your-startup-metrics-using-a-custom-ios-widget.png
-tags: ['iOS', 'Startup', 'Metrics', 'OpenBB', 'Scriptable', 'Open Source']
+tags:
+- ios
+- startup
+- metrics
+- openbb
+- scriptable
+- open-source
 description: Keep track of your startup metrics using a custom iOS widget. This blog post will guide you on how to build a custom iOS widget that displays your startup metrics at all times. The entire code is open source and requires minimal coding skills.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-07-29-keep-track-of-your-startup-metrics-using-a-custom-ios-widget.png"/>

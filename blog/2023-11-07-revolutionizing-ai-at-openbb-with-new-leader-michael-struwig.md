@@ -3,9 +3,16 @@ slug: revolutionizing-ai-at-openbb-with-new-leader-michael-struwig
 title: Revolutionizing AI at OpenBB with new leader, Michael Struwig
 date: 2023-11-07
 image: /blog/2023-11-07-revolutionizing-ai-at-openbb-with-new-leader-michael-struwig.png
-tags: ['ai', 'openbb', 'startup', 'finance', 'hiring']
+tags:
+- ai
+- openbb
+- startup
+- finance
+- hiring
 description: With the launch of the OpenBB Terminal Pro approaching, we're excited to announce the hiring of Michael Struwig, a Ph.D. with expertise in AI and quantitative finance. Michael will help us to further our AI capabilities, reinforcing our commitment to innovation in the open-source finance space.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-11-07-revolutionizing-ai-at-openbb-with-new-leader-michael-struwig.png"/>

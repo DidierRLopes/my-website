@@ -3,9 +3,16 @@ slug: the-role-of-ai-and-openbb-in-the-future-of-investment-research
 title: The role of AI and OpenBB in the future of investment research
 date: 2023-04-03
 image: /blog/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research.png
-tags: ['OpenAI', 'future', 'ChatGPT', 'Discord']
+tags:
+- openai
+- future
+- chatgpt
+- discord
 description: How OpenBB can lead the future of finance using AI on top of an open source investment research platform.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research.png"/>

@@ -3,9 +3,20 @@ slug: openbb-bot-our-new-addition-to-the-openbb-open-source-family
 title: OpenBB Bot - our new addition to the OpenBB open source family
 date: 2023-11-21
 image: /blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family.png
-tags: ['openbb', 'openbb-bot', 'open-source', 'discord', 'telegram', 'chatbots', 'monetization', 'business-strategy', 'product-story']
+tags:
+- openbb
+- openbb-bot
+- open-source
+- discord
+- telegram
+- chatbots
+- monetization
+- business-strategy
+- product-story
 description: The OpenBB Bot architecture is now open source. Check out our Discord Bot architecture now on GitHub.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family.png"/>

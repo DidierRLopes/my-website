@@ -3,9 +3,15 @@ slug: introducing-the-openbb-add-in-for-excel
 title: Introducing the OpenBB Add-in for Excel
 date: 2024-01-17
 image: /blog/2024-01-17-introducing-the-openbb-add-in-for-excel.png
-tags: ['excel', 'launch', 'openbb', 'announcement']
+tags:
+- excel
+- launch
+- openbb
+- announcement
 description: We acknowledged the enduring centrality of Excel in the financial sector, so we're now making data from the Terminal Pro readily available in Excel. We're also excitedly working to integrate the "Bring Your Own Data" feature into our Excel Add-in, a move we foresee as a transformative step in the financial data industry.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-01-17-introducing-the-openbb-add-in-for-excel.png"/>

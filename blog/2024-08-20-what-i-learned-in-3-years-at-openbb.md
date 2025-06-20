@@ -3,10 +3,20 @@ slug: what-i-learned-in-3-years-at-openb
 title: What I learned in 3 Years at OpenBB
 date: 2024-08-20
 image: /blog/2024-08-20-what-i-learned-in-3-years-at-openb.jpeg
-tags: ['openbb', 'founder-story', 'startup', 'leadership', 'learnings', 'reflection', 'career-growth', 'milestones', 'life-lessons']
+tags:
+- openbb
+- founder-story
+- startup
+- leadership
+- learnings
+- reflection
+- career-growth
+- milestones
+- life-lessons
 description: The OpenBB journey started officially 3 years ago. So I want to celebrate it by sharing 36 lessons I learned over the past 36 months as a founder and CEO of a fintech company.
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-08-20-what-i-learned-in-3-years-at-openb.jpeg"/>

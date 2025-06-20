@@ -3,9 +3,16 @@ slug: how-i-would-do-due-diligence-on-amt-using-openbb-terminal
 title: How I would do due diligence on $AMT using OpenBB Terminal
 date: 2022-10-20
 image: /blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal.png
-tags: ['OpenBB Terminal', 'Investment Research', 'Stocks', 'Due Diligence']
+tags:
+- openbb-terminal
+- investment-research
+- stocks
+- due-diligence
 description: This blog post provides a detailed walkthrough on how to conduct due diligence on $AMT using the OpenBB Terminal, a free and open source platform for financial data analysis.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal.png"/>

@@ -3,11 +3,21 @@ slug: chatgpt-and-the-future-of-ai-in-finance
 title: ChatGPT and The Future of AI in Finance
 date: 2024-09-21
 image: /blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance.jpg
-tags: ['ai', 'fintech', 'llm', 'agents', 'hallucinations', 'fine-tuning', 'data-security', 'openbb', 'thought-leadership']
+tags:
+- ai
+- fintech
+- llm
+- agents
+- hallucinations
+- fine-tuning
+- data-security
+- openbb
+- thought-leadership
 description: I took the stage at the Cornell Quant Conference alongside Yu Yu (BlackRock) Tony Berkman (Two Sigma), and Samson Qian (Citadel), to discuss ChatGPT & The Future of AI in Finance.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance.jpg"/>

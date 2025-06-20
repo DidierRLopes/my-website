@@ -3,9 +3,14 @@ slug: 29-years-old-and-sitting-on-the-top-of-giants
 title: 29 years old and sitting on the top of giants
 date: 2024-06-05
 image: /blog/2024-06-05-29-years-old-and-sitting-on-the-top-of-giants.png
-tags: ['birthday', 'dad', 'family']
+tags:
+- birthday
+- dad
+- family
 description: Yesterday was my 29th birthday, and I was reflecting on my life and on how sitting on the top of giants isn’t given enough credit. My giants are my parents.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-06-05-29-years-old-and-sitting-on-the-top-of-giants.png"/>

@@ -3,9 +3,17 @@ slug: a-500k-bet-to-build-the-best-platform-to-do-ai-using-financial-data
 title: A $500k bet to build the best platform to do AI using financial data
 date: 2023-10-14
 image: /blog/2023-10-14-a-500k-bet-to-build-the-best-platform-to-do-ai-using-financial-data.png
-tags: ['AI', 'Financial Data', 'OpenBB', 'Data Access', 'Agents']
+tags:
+- ai
+- financial-data
+- openbb
+- data-access
+- agents
 description: This blog post discusses our $500k investment in building the best platform for AI using financial data. We focus on the rebranding of OpenBB SDK to OpenBB Platform, its features, and the potential payoff of this bet in 2024.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-10-14-a-500k-bet-to-build-the-best-platform-to-do-ai-using-financial-data.png"/>

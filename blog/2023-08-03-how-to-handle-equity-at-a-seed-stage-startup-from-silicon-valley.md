@@ -3,9 +3,17 @@ slug: how-to-handle-equity-at-a-seed-stage-startup-from-silicon-valley
 title: How to handle equity at a seed-stage startup from Silicon Valley
 date: 2023-08-03
 image: /blog/2023-08-03-how-to-handle-equity-at-a-seed-stage-startup-from-silicon-valley.png
-tags: ['startup', 'equity', 'Silicon Valley', 'seed-stage', 'OpenBB']
+tags:
+- startup
+- equity
+- silicon-valley
+- seed-stage
+- openbb
 description: A step-by-step guide on how to handle equity at a seed-stage startup, using a fictional example from OpenBB.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-08-03-how-to-handle-equity-at-a-seed-stage-startup-from-silicon-valley.png"/>

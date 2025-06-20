@@ -3,11 +3,20 @@ slug: why-we-got-rid-of-pips-at-openbb
 title: Why we got rid of PIPs at OpenBB
 date: 2024-11-09
 image: /blog/2024-11-09-why-we-got-rid-of-pips-at-openbb.png
-tags: ['openbb', 'management', 'leadership', 'talent', 'hiring', 'performance', 'company-culture', 'startups']
+tags:
+- openbb
+- management
+- leadership
+- talent
+- hiring
+- performance
+- company-culture
+- startups
 description: My thoughts on how removing PIPs can increase the company talent level
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-11-09-why-we-got-rid-of-pips-at-openbb.png"/>

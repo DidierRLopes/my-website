@@ -3,9 +3,20 @@ slug: my-journey-of-memorising-a-deck-of-52-shuffled-cards
 title: My journey of memorising a deck of 52 shuffled cards
 date: 2021-06-26
 image: /blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards.png
-tags: ['memory-training', 'pao-system', 'memory-palace', 'card-memorization', 'learning-techniques', 'cognitive-skills', 'mnemonics', 'personal-challenge', 'mind-hacking']
+tags:
+- memory-training
+- pao-system
+- memory-palace
+- card-memorization
+- learning-techniques
+- cognitive-skills
+- mnemonics
+- personal-challenge
+- mind-hacking
 description: In this blogpost, I share my journey of memorising a deck of 52 shuffled cards using the PAO system and Memory Palace technique.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards.png"/>

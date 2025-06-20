@@ -3,9 +3,14 @@ slug: building-my-personal-website-in-docusaurus
 title: Building my personal website in Docusaurus
 date: 2024-01-08
 image: /blog/2024-01-08-building-my-personal-website-in-docusaurus.png
-tags: ['docusaurus', 'website', 'blog']
+tags:
+- docusaurus
+- website
+- blog
 description: How I'm using Docusaurus to build my own personal website.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-01-08-building-my-personal-website-in-docusaurus.png"/>

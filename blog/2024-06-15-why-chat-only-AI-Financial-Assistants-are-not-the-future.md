@@ -3,9 +3,20 @@ slug: why-chat-only-AI-Financial-Assistants-are-not-the-future
 title: Why chat-only AI financial assistants are not the future
 date: 2024-06-15
 image: /blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future.png
-tags: ['openbb', 'ai', 'fintech', 'workspaces', 'investment-research', 'chatbots', 'ui', 'ux', 'collaboration']
-description: Financial assistants structured like ChatGPT are great for quick searches but fall short for comprehensive investment research. 
+tags:
+- openbb
+- ai
+- fintech
+- workspaces
+- investment-research
+- chatbots
+- ui
+- ux
+- collaboration
+description: Financial assistants structured like ChatGPT are great for quick searches but fall short for comprehensive investment research.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-06-15-why-chat-only-AI-Financial-Assistants-are-not-the-future.png"/>

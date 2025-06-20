@@ -3,9 +3,16 @@ slug: the-future-of-finance-with-open-source-and-ai
 title: The future of finance with open source and AI
 date: 2022-12-04
 image: /blog/2022-12-04-the-future-of-finance-with-open-source-and-ai.png
-tags: ['Open Source', 'AI', 'Finance', 'Future']
+tags:
+- open-source
+- ai
+- finance
+- future
 description: The future of finance is being reshaped by open source and AI. This post discusses the potential of these technologies in disrupting the financial industry, the advantages of open source, and the role of AI in user interface.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-12-04-the-future-of-finance-with-open-source-and-ai.png"/>

@@ -3,8 +3,17 @@ slug: free-investment-research-ecosystem-to-consistently-beat-the-market
 title: Free investment research ecosystem to consistently beat the market
 date: 2023-05-05
 image: /blog/2023-05-05-free-investment-research-ecosystem-to-consistently-beat-the-market.png
-tags: ['OpenBB', 'Investment Research', 'OpenBB Terminal', 'OpenBB Bot', 'OpenBB SDK', 'OpenBB Hub']
+tags:
+- openbb
+- investment-research
+- openbb-terminal
+- openbb-bot
+- openbb-sdk
+- openbb-hub
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-05-05-free-investment-research-ecosystem-to-consistently-beat-the-market.png"/>

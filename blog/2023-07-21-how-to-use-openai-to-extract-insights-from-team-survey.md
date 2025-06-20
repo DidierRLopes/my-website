@@ -3,9 +3,18 @@ slug: how-to-use-openai-to-extract-insights-from-team-survey
 title: How to Use OpenAI to Extract Insights from Team Survey
 date: 2023-07-21
 image: /blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey.png
-tags: ['OpenAI', 'Team Survey', 'Insights', 'Automation', 'Slack', 'Airtable']
+tags:
+- openai
+- team-survey
+- insights
+- automation
+- slack
+- airtable
 description: This blog post discusses how to use OpenAI to extract insights from team survey data. It covers the motivation behind the project, the requirements, and the implementation process, including the use of the Slack API and Airtable API for automation.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey.png"/>

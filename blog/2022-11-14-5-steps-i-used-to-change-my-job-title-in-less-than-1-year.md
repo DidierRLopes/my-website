@@ -3,9 +3,20 @@ slug: 5-steps-i-used-to-change-my-job-title-in-less-than-1-year
 title: 5 steps I used to change my job title in less than 1 year
 date: 2022-11-14
 image: /blog/2022-11-14-5-steps-i-used-to-change-my-job-title-in-less-than-1-year.png
-tags: ['career-path', 'career-growth', 'job-title', 'promotion', 'skill-development', 'self-improvement', 'personal-story', 'hard-work', 'engineering']
+tags:
+- career-path
+- career-growth
+- job-title
+- promotion
+- skill-development
+- self-improvement
+- personal-story
+- hard-work
+- engineering
 description: This blog post outlines the five steps I took to change my job title from an Embedded Firmware Engineer to a Sensor Fusion Engineer in less than a year. It provides a roadmap for others who may be looking to make a similar career transition.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-11-14-5-steps-i-used-to-change-my-job-title-in-less-than-1-year_1.png"/>

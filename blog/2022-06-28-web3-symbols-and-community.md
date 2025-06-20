@@ -3,9 +3,17 @@ slug: web3-symbols-and-community
 title: Web3, symbols and community
 date: 2022-06-28
 image: /blog/2022-06-28-web3-symbols-and-community.png
-tags: ['Web3', 'Community', 'Decentralization', 'Blockchain', 'Smart Contracts']
+tags:
+- web3
+- community
+- decentralization
+- blockchain
+- smart-contracts
 description: This blog post discusses the importance of strong communities in the Web 3.0 space, the role of decentralization, and how voting frameworks based on smart contracts can empower users.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-06-28-web3-symbols-and-community.png"/>

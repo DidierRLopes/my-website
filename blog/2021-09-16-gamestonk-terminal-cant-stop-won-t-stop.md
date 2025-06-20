@@ -3,9 +3,20 @@ slug: gamestonk-terminal-cant-stop-won-t-stop
 title: Gamestonk Terminal — Can’t Stop, Won’t Stop
 date: 2021-09-16
 image: /blog/2021-09-16-gamestonk-terminal-cant-stop-won-t-stop.png
-tags: ['Gamestonk Terminal', 'Open Source', 'Docker', 'Jupyter Lab', 'Hugo Website', 'Python', 'Finance', 'Trading']
+tags:
+- gamestonk-terminal
+- open-source
+- docker
+- jupyter-lab
+- hugo-website
+- python
+- finance
+- trading
 description: Gamestonk Terminal's latest updates including Docker integration, Jupyter Lab integration, a new Hugo website, and new features. A summary of the recent developments and future plans for the open-source financial tool.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-09-16-gamestonk-terminal-cant-stop-won-t-stop_1.png"/>

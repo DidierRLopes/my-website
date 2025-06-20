@@ -3,9 +3,16 @@ slug: gamestonk-terminal-ux-features
 title: UX/UI is better than features
 date: 2022-01-06
 image: /blog/2022-01-06-gamestonk-terminal-ux-features.png
-tags: ['Gamestonk Terminal', 'UX/UI', 'Software Development', 'Teamwork']
+tags:
+- gamestonk-terminal
+- ux/ui
+- software-development
+- teamwork
 description: Gamestonk Terminal's UX/UI features and the teamwork behind their implementation.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-01-06-gamestonk-terminal-ux-features.png"/>

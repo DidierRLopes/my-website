@@ -3,9 +3,18 @@ slug: work-life-balance-is-bullsh-t
 title: Work-life balance is bullsh*t
 date: 2023-09-16
 image: /blog/2023-09-16-work-life-balance-is-bullsh-t.png
-tags: ['work-life-balance', 'success', 'career', 'hard-work', 'startup-culture', 'philosophy', 'hustle-culture']
+tags:
+- work-life-balance
+- success
+- career
+- hard-work
+- startup-culture
+- philosophy
+- hustle-culture
 description: This blog post challenges the concept of work-life balance, arguing that success often requires sacrifices in personal time and relationships. It suggests that true balance comes from finding joy in your work and surrounding yourself with like-minded individuals.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-09-16-work-life-balance-is-bullsh-t.png"/>

@@ -3,9 +3,16 @@ slug: handing-your-twitter-account-to-your-most-avid-community-member
 title: Handing your twitter account to your most avid community member
 date: 2021-11-17
 image: /blog/2021-11-17-handing-your-twitter-account-to-your-most-avid-community-member.png
-tags: ['Community Building', 'Twitter', 'Open Source', 'Gamestonk Terminal']
+tags:
+- community-building
+- twitter
+- open-source
+- gamestonk-terminal
 description: Handing over the Twitter account of Gamestonk Terminal to an active community member and the impact it had on the project's growth and engagement.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-11-17-handing-your-twitter-account-to-your-most-avid-community-member.png"/>

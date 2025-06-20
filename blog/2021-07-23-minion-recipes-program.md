@@ -3,9 +3,16 @@ slug: minion-recipes-program
 title: Minion Recipes Program
 date: 2021-07-23
 image: /blog/2021-07-23-minion-recipes-program.png
-tags: ['Python', 'Programming', 'Recipes', 'Software Development']
+tags:
+- python
+- programming
+- recipes
+- software-development
 description: In this blogpost, I share how I developed a program to help my mum manage her recipes. The program allows for adding, editing, and removing recipes, and even includes fun minion icons.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-07-23-minion-recipes-program.png"/>

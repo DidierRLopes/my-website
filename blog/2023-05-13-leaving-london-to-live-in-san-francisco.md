@@ -3,9 +3,18 @@ slug: leaving-london-to-live-in-san-francisco
 title: Leaving London to live in San Francisco
 date: 2023-05-13
 image: /blog/2023-05-13-leaving-london-to-live-in-san-francisco.png
-tags: ['San Francisco', 'London', 'Relocation', 'Visa Process', 'Startup', 'OpenBB']
+tags:
+- san-francisco
+- london
+- relocation
+- visa-process
+- startup
+- openbb
 description: Leaving London to live in San Francisco. A personal journey of relocating and starting a tech company in the heart of Silicon Valley.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-05-13-leaving-london-to-live-in-san-francisco.png"/>

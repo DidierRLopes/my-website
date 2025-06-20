@@ -3,9 +3,17 @@ slug: why-you-should-drop-yfinance-api-and-adopt-openbb-sdk
 title: Why you should drop yfinance API and adopt OpenBB SDK
 date: 2022-10-01
 image: /blog/2022-10-01-why-you-should-drop-yfinance-api-and-adopt-openbb-sdk.png
-tags: ['OpenBB SDK', 'yfinance API', 'Financial Data', 'APIs', 'Open Source']
+tags:
+- openbb-sdk
+- yfinance-api
+- financial-data
+- apis
+- open-source
 description: Why you should consider switching from yfinance API to OpenBB SDK for financial data retrieval. OpenBB SDK offers access to multiple data sources, potential for unlimited data, and incentives for data source partners.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-10-01-why-you-should-drop-yfinance-api-and-adopt-openbb-sdk.png"/>

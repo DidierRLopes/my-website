@@ -3,11 +3,21 @@ slug: why-i-love-boxing
 title: Why I love boxing
 date: 2024-09-09
 image: /blog/2024-09-09-why-i-love-boxing.jpeg
-tags: ['boxing', 'startup', 'personal-growth', 'learning', 'resilience', 'comfort-zone', 'mindset', 'philosophy', 'life-lessons']
+tags:
+- boxing
+- startup
+- personal-growth
+- learning
+- resilience
+- comfort-zone
+- mindset
+- philosophy
+- life-lessons
 description: Exploring the parallels between boxing and startup life, and how both push me beyond my comfort zone to foster personal growth, resilience, and continuous learning.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="300" src="/blog/2024-09-09-why-i-love-boxing.jpeg"/>

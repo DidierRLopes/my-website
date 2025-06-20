@@ -3,9 +3,17 @@ slug: the-start-of-my-machine-learning-journey
 title: The Start of my Machine Learning journey
 date: 2021-11-07
 image: /blog/2021-11-07-the-start-of-my-machine-learning-journey.png
-tags: ['Machine Learning', 'Python', 'Data Science', 'Education', 'Self-Learning']
+tags:
+- machine-learning
+- python
+- data-science
+- education
+- self-learning
 description: The start of my journey into the world of Machine Learning, from learning Python to understanding the underlying mathematics of ML algorithms.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-11-07-the-start-of-my-machine-learning-journey.png"/>

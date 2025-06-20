@@ -3,9 +3,17 @@ slug: openbb-2-year-anniversary
 title: OpenBB 2 year anniversary
 date: 2023-08-20
 image: /blog/2023-08-20-openbb-2-year-anniversary.png
-tags: ['OpenBB', 'Anniversary', 'Achievements', 'Growth', 'Finance']
+tags:
+- openbb
+- anniversary
+- achievements
+- growth
+- finance
 description: Two years of OpenBB. A look back at our achievements and growth in the world of open-source finance.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-08-20-openbb-2-year-anniversary.png"/>

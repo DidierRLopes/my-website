@@ -3,11 +3,21 @@ slug: 2025-04-03-stop-building-ai-products-start-building-workflows
 title: Stop building AI products, start building workflows
 date: 2025-04-03
 image: /blog/2025-04-03-stop-building-ai-products-start-building-workflows
-tags: ['ai', 'product-strategy', 'business', 'startup', 'moat', 'workflows', 'openbb', 'fintech', 'vertical-ai']
+tags:
+- ai
+- product-strategy
+- business
+- startup
+- moat
+- workflows
+- openbb
+- fintech
+- vertical-ai
 description: The secret to building defensible AI companies isn't better AI - it's better workflows. An insider's perspective on why some AI companies thrive while others will become obsolete with each new model release.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2025-04-03-stop-building-ai-products-start-building-workflows.png" />

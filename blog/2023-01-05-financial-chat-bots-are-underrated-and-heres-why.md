@@ -3,9 +3,18 @@ slug: financial-chat-bots-are-underrated-and-heres-why
 title: Financial chat bots are underrated, and here’s why.
 date: 2023-01-05
 image: /blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why.png
-tags: ['chatbots', 'finance', 'AI', 'Discord', 'OpenBB', 'OptionsFamBot']
+tags:
+- chatbots
+- finance
+- ai
+- discord
+- openbb
+- optionsfambot
 description: In this blog post, we discuss the underrated potential of financial chat bots, our collaboration with OptionsFamBot, and why chat bots are becoming increasingly popular.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why.png"/>

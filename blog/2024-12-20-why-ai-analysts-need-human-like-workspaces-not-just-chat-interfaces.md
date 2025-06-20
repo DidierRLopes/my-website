@@ -3,11 +3,20 @@ slug: why-ai-analysts-need-human-like-workspaces-not-just-chat-interfaces
 title: Why AI analysts need human-like workspaces, not just chat interfaces
 date: 2024-12-20
 image: /blog/2024-12-20-why-ai-analysts-need-human-like-workspaces-not-just-chat-interfaces.jpeg
-tags: ['openbb', 'ai', 'analyst', 'agent', 'workspace', 'fintech', 'user-interface', 'future-of-ai']
+tags:
+- openbb
+- ai
+- analyst
+- agent
+- workspace
+- fintech
+- user-interface
+- future-of-ai
 description: Why I believe AI agents need the same comprehensive workspace tools as human analysts, moving beyond simple chat interfaces to enable true financial research and analytics.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-12-20-why-ai-analysts-need-human-like-workspaces-not-just-chat-interfaces.jpeg"/>

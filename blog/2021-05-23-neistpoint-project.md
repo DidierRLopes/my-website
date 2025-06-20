@@ -3,9 +3,18 @@ slug: neistpoint-project
 title: NeistPoint Project
 date: 2021-05-23
 image: /blog/2021-05-23-neistpoint-project.png
-tags: ['NeistPoint', 'Clothing Brand', 'Sustainability', 'Project Management', 'C++', 'Stock Management']
+tags:
+- neistpoint
+- clothing-brand
+- sustainability
+- project-management
+- c++
+- stock-management
 description: In this blogpost, I share my journey of starting a sustainable clothing brand, managing the project, and developing a stock management tool in C++.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-05-23-neistpoint-project.png"/>

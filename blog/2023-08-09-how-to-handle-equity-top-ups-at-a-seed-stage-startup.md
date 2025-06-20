@@ -3,9 +3,19 @@ slug: how-to-handle-equity-top-ups-at-a-seed-stage-startup
 title: How to handle equity top-ups at a seed stage startup
 date: 2023-08-09
 image: /blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup.png
-tags: ['startups', 'seed-stage', 'equity', 'compensation', 'employee-retention', 'vesting', 'management', 'human-resources']
+tags:
+- startups
+- seed-stage
+- equity
+- compensation
+- employee-retention
+- vesting
+- management
+- human-resources
 description: In this post, we discuss how to handle equity top-ups at a seed stage startup, providing a step-by-step guide on the implementation process and including links to relevant spreadsheets.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup.png"/>

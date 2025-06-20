@@ -3,9 +3,18 @@ slug: household-bills-program
 title: Household bills Program
 date: 2021-07-17
 image: /blog/2021-07-17-household-bills-program.png
-tags: ['side-project', 'java', 'programming', 'gui', 'origin-story', 'learning-to-code', 'software-development']
+tags:
+- side-project
+- java
+- programming
+- gui
+- origin-story
+- learning-to-code
+- software-development
 description: In this blogpost, I share my journey of creating a program to split household bills. This was my first side project where I used Java to create a GUI application.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-07-17-household-bills-program.png"/>

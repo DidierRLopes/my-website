@@ -3,11 +3,20 @@ slug: openbb-mobile-app-coming-soon
 title: OpenBB Mobile App - Coming soon
 date: 2024-10-05
 image: /blog/2024-10-05-openbb-mobile-app-coming-soon.png
-tags: ['openbb', 'mobile-app', 'pwa', 'web-development', 'ux', 'engineering', 'startup-culture', 'rapid-prototyping']
+tags:
+- openbb
+- mobile-app
+- pwa
+- web-development
+- ux
+- engineering
+- startup-culture
+- rapid-prototyping
 description: How we built a mobile app, in 1 evening, with 1 engineer.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-10-05-openbb-mobile-app-coming-soon.png"/>

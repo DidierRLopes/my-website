@@ -3,9 +3,19 @@ slug: looking-for-a-new-tattoo-openbb-has-you-covered-literally
 title: Looking for a new tattoo? OpenBB has you covered… literally.
 date: 2022-04-21
 image: /blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally.png
-tags: ['openbb', 'marketing', 'branding', 'brand-awareness', 'tattoo', 'guerilla-marketing', 'startup-culture', 'founder-story']
+tags:
+- openbb
+- marketing
+- branding
+- brand-awareness
+- tattoo
+- guerilla-marketing
+- startup-culture
+- founder-story
 description: Exploring unconventional ways to increase brand visibility, OpenBB's co-founder gets a tattoo of the company logo. This blog post discusses the thought process behind this unique marketing strategy.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally.png"/>

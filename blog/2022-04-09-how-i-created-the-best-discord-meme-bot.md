@@ -3,9 +3,16 @@ slug: how-i-created-the-best-discord-meme-bot
 title: How I created the best discord meme bot
 date: 2022-04-09
 image: /blog/2022-04-09-how-i-created-the-best-discord-meme-bot.png
-tags: ['Discord', 'Meme Bot', 'Open Source', 'Community Building']
+tags:
+- discord
+- meme-bot
+- open-source
+- community-building
 description: In this blog post, I share my journey of creating a Discord meme bot, the role it played in building a vibrant community around our open source project, and how you can add your own memes to the bot.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-04-09-how-i-created-the-best-discord-meme-bot.png"/>

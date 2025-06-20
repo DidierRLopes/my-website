@@ -3,9 +3,20 @@ slug: moving-from-london-to-the-bay-area-and-what-changed
 title: Moving from London to the Bay Area and what changed
 date: 2024-03-02
 image: /blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed.png
-tags: ['learning', 'experience', 'growth', 'moving', 'london', 'bay', 'US', 'travel']
+tags:
+- learning
+- experience
+- growth
+- moving
+- london
+- bay
+- us
+- travel
 description: Moving from London to the Bay Area and what changed
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed.png"/>

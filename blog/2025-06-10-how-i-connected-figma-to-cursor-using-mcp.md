@@ -3,11 +3,21 @@ slug: 2025-06-10-how-i-connected-figma-to-cursor-using-mcp
 title: How I connected Figma to Cursor using MCP
 date: 2025-06-10
 image: /blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp
-tags: ['figma', 'cursor', 'mcp', 'developer-tools', 'tutorial', 'integration', 'design-to-code', 'productivity', 'development-workflow']
+tags:
+- figma
+- cursor
+- mcp
+- developer-tools
+- tutorial
+- integration
+- design-to-code
+- productivity
+- development-workflow
 description: A step-by-step guide on how to connect Figma to Cursor using MCP (Model-Client-Protocol), enabling seamless design-to-code workflow and improving developer productivity through direct design system integration.
 hideSidebar: true
-
 ---
+
+
 
 import CodeBlock from '@theme/CodeBlock';
 

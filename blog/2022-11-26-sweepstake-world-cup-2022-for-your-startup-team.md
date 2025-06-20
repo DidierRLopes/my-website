@@ -3,9 +3,18 @@ slug: sweepstake-world-cup-2022-for-your-startup-team
 title: Sweepstake World Cup 2022 for your startup team
 date: 2022-11-26
 image: /blog/2022-11-26-sweepstake-world-cup-2022-for-your-startup-team.png
-tags: ['team-building', 'startup-culture', 'world-cup', 'sweepstake', 'slack-bot', 'python', 'side-project']
+tags:
+- team-building
+- startup-culture
+- world-cup
+- sweepstake
+- slack-bot
+- python
+- side-project
 description: In this blogpost, we share how we organized a World Cup 2022 sweepstake for our startup team as a team building activity, and how we built a slack bot to facilitate discussions around the event.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-11-26-sweepstake-world-cup-2022-for-your-startup-team.png"/>

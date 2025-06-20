@@ -3,8 +3,18 @@ slug: how-to-convert-a-twitter-thread-into-a-linkedin-carousel-in-seconds
 title: Twitter thread to LinkedIn carousel in python
 date: 2022-10-23
 image: /blog/2022-10-23-how-to-convert-a-twitter-thread-into-a-linkedin-carousel-in-seconds.png
-tags: ['python', 'linkedin', 'twitter', 'carousel', 'content-creation', 'automation', 'api', 'side-project']
+tags:
+- python
+- linkedin
+- twitter
+- carousel
+- content-creation
+- automation
+- api
+- side-project
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-10-23-how-to-convert-a-twitter-thread-into-a-linkedin-carousel-in-seconds.png"/>

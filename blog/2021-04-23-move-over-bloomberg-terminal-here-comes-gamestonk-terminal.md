@@ -3,9 +3,17 @@ slug: move-over-bloomberg-terminal-here-comes-gamestonk-terminal
 title: Move over Bloomberg Terminal, here comes Gamestonk Terminal
 date: 2021-04-23
 image: /blog/2021-04-23-move-over-bloomberg-terminal-here-comes-gamestonk-terminal.png
-tags: ['Gamestonk Terminal', 'Finance', 'Stock Market', 'Programming', 'Open Source']
+tags:
+- gamestonk-terminal
+- finance
+- stock-market
+- programming
+- open-source
 description: In this blogpost, we introduce Gamestonk Terminal, an open-source project that aims to be a comprehensive tool for financial analysis and stock market research. It includes functionalities for discovering stocks, market sentiment analysis, fundamental and technical analysis, due diligence, prediction techniques, and more.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-04-23-move-over-bloomberg-terminal-here-comes-gamestonk-terminal.png"/>

@@ -3,8 +3,15 @@ slug: an-unusual-journey-learning-about-nns-for-a-phd-thesis
 title: An unusual journey learning about NNs for a PhD thesis
 date: 2021-10-22
 image: /blog/2021-10-22-an-unusual-journey-learning-about-nns-for-a-phd-thesis.png
-tags: ['PhD Thesis', 'Neural Networks', 'Python', 'Time Series Forecasting']
+tags:
+- phd-thesis
+- neural-networks
+- python
+- time-series-forecasting
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-10-22-an-unusual-journey-learning-about-nns-for-a-phd-thesis.png"/>

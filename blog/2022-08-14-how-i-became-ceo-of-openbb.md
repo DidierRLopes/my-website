@@ -3,9 +3,20 @@ slug: how-i-became-ceo-of-openbb
 title: How I became CEO of OpenBB
 date: 2022-08-14
 image: /blog/2022-08-14-how-i-became-ceo-of-openbb.png
-tags: ['openbb', 'ceo', 'founder-story', 'origin-story', 'startup', 'open-source', 'career-path', 'entrepreneurship', 'side-project']
-description: This post talks about my story of becoming the CEO of OpenBB, the company behind the fastest growing open source project in finance.
+tags:
+- openbb
+- ceo
+- founder-story
+- origin-story
+- startup
+- open-source
+- career-path
+- entrepreneurship
+- side-project
+description: This post talks about my story of becoming the CEO of OpenBB, the company behind the fastest growing open source project in finance.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-08-14-how-i-became-ceo-of-openbb.png"/>

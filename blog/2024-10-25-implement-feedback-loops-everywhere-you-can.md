@@ -3,11 +3,19 @@ slug: implement-feedback-loops-everywhere-you-can
 title: Implement feedback loops EVERYWHERE you can
 date: 2024-10-25
 image: /blog/2024-10-25-implement-feedback-loops-everywhere-you-can.jpeg
-tags: ['openbb', 'management', 'leadership', 'feedback', 'transparency', 'culture', 'remote-work']
+tags:
+- openbb
+- management
+- leadership
+- feedback
+- transparency
+- culture
+- remote-work
 description: Maximizing team transparency through focused feedback sessions.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-10-25-implement-feedback-loops-everywhere-you-can.jpeg"/>

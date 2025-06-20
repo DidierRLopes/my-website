@@ -3,9 +3,16 @@ slug: customizable-meme-filter
 title: Customizable Meme Filter
 date: 2021-06-12
 image: /blog/2021-06-12-customizable-meme-filter.png
-tags: ['Python', 'Meme Filter', 'Image Processing', 'Face Recognition']
+tags:
+- python
+- meme-filter
+- image-processing
+- face-recognition
 description: In this blogpost, I share my journey of creating a customizable meme filter using Python. This filter selects a random meme based on the number of people on the screen and assigns each person to a character in the meme.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-06-12-customizable-meme-filter.png"/>

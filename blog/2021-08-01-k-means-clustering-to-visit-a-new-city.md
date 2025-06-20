@@ -3,9 +3,19 @@ slug: k-means-clustering-to-visit-a-new-city
 title: K-means algorithm to visit a new city
 date: 2021-08-01
 image: /blog/2021-08-01-k-means-clustering-to-visit-a-new-city.png
-tags: ['K-means', 'Algorithm', 'Travel', 'Efficiency', 'London', 'GPS', 'Clustering']
+tags:
+- k-means
+- algorithm
+- travel
+- efficiency
+- london
+- gps
+- clustering
 description: In this blogpost, I share how I used the K-means algorithm to plan a visit to London. The algorithm helps to decide which attractions to visit based on the number of days of the visit and the GPS coordinates of the attractions.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-08-01-k-means-clustering-to-visit-a-new-city.png"/>

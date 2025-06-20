@@ -3,9 +3,19 @@ slug: why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare
 title: Why AI Will Replace Jobs in Finance and How You Should Prepare
 date: 2024-08-06
 image: /blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare.png
-tags: ['ai', 'finance', 'fintech', 'future-of-work', 'career-advice', 'automation', 'reskilling', 'analyst']
+tags:
+- ai
+- finance
+- fintech
+- future-of-work
+- career-advice
+- automation
+- reskilling
+- analyst
 description: As AI continues to advance, many jobs in finance are at risk. Learn why this shift is happening and how to prepare for the future.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare.png"/>

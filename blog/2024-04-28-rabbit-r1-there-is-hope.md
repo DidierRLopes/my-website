@@ -3,9 +3,17 @@ slug: rabbit-r1-there-is-hope
 title: rabbit r1, there is hope
 date: 2024-04-28
 image: /blog/2024-04-28-rabbit-r1-there-is-hope.png
-tags: ['rabbit r1', 'tech', 'review', 'ai', 'gadget']
+tags:
+- rabbit-r1
+- tech
+- review
+- ai
+- gadget
 description: I can see a future where people use rabbit r1 for very particular use cases where phone is suboptimal. For instance, when multiple people want to interact with said phone (e.g. selecting music at a party without having to give phone away) and that is not ideal due to personal information on phone, or when the phone isn't ideal because it has too many distractions and user wants to focus on doing something (e.g. practicing a presentation using recording session and then asking for feedback).
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-04-28-rabbit-r1-there-is-hope.png"/>

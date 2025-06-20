@@ -3,9 +3,20 @@ slug: inspired-by-bia-how-her-fight-against-cancer-changed-my-life
 title: Inspired by Bia - How her fight against cancer changed my life
 date: 2024-08-01
 image: /blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.JPG
-tags: ['personal-story', 'grief', 'motivation', 'cancer-awareness', 'charity', 'fundraising', 'life-lessons', 'resilience', 'inspiration']
+tags:
+- personal-story
+- grief
+- motivation
+- cancer-awareness
+- charity
+- fundraising
+- life-lessons
+- resilience
+- inspiration
 description: In a time when we talk about going to Mars and having AGI, cancer is still taking lives every day.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.JPG"/>

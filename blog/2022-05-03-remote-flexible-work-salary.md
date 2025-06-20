@@ -3,9 +3,16 @@ slug: remote-flexible-work-salary
 title: Remote + Flexible work >> Salary
 date: 2022-05-03
 image: /blog/2022-05-03-remote-flexible-work-salary.png
-tags: ['Remote Work', 'Flexible Hours', 'Work Life Balance', 'Productivity']
+tags:
+- remote-work
+- flexible-hours
+- work-life-balance
+- productivity
 description: This blog post discusses the importance of remote and flexible work hours, and how it can significantly improve work-life balance and productivity.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-05-03-remote-flexible-work-salary.png"/>

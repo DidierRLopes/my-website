@@ -3,9 +3,17 @@ slug: become-an-openbb-champion
 title: Become an OpenBB Champion
 date: 2023-06-10
 image: /blog/2023-06-10-become-an-openbb-champion.png
-tags: ['OpenBB', 'OpenBB Champion', 'Investment Research', 'Open Source', 'Community']
+tags:
+- openbb
+- openbb-champion
+- investment-research
+- open-source
+- community
 description: Become an OpenBB Champion and join our passionate community. Share your experiences with our innovative products and help us democratize investment research through an open source approach.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-06-10-become-an-openbb-champion.png"/>

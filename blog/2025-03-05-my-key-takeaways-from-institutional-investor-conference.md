@@ -3,11 +3,21 @@ slug: 2025-03-05-my-key-takeaways-from-institutional-investor-conference
 title: My key takeaways from Institutional Investor conference
 date: 2025-03-05
 image: /blog/2025-03-05-my-key-takeaways-from-institutional-investor-conference.jpg
-tags: ['openbb', 'financial-services', 'ai-adoption', 'data-privacy', 'enterprise-ai', 'build-vs-buy', 'open-source', 'finance', 'local-deployment']
+tags:
+- openbb
+- financial-services
+- ai-adoption
+- data-privacy
+- enterprise-ai
+- build-vs-buy
+- open-source
+- finance
+- local-deployment
 description: Key insights from financial services technology leaders on AI adoption, including build vs. buy strategies, data privacy concerns, technology adoption divides, and the challenges of moving from prototypes to production-ready solutions.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-03-05-my-key-takeaways-from-institutional-investor-conference.jpg" />

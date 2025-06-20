@@ -3,9 +3,22 @@ slug: goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack
 title: Goh Analyst - The AI-powered financial analyst who lives on Slack
 date: 2024-03-26
 image: /blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack.png
-tags: ['learning', 'experience', 'growth', 'moving', 'london', 'bay', 'US', 'travel', 'startup', 'nyc']
+tags:
+- learning
+- experience
+- growth
+- moving
+- london
+- bay
+- us
+- travel
+- startup
+- nyc
 description: How I built a financial analyst that lives on Slack and has access to OpenBB.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-03-28-goh-analyst-the-ai-powered-financial-analyst-who-lives-on-slack_1.png"/>

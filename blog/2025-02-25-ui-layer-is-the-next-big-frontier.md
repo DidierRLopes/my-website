@@ -3,11 +3,20 @@ slug: ui-layer-is-the-next-big-frontier
 title: UI layer is the next big frontier
 date: 2025-02-25
 image: /blog/2025-02-25-ui-layer-is-the-next-big-frontier
-tags: ['openbb', 'fintech', 'ui', 'ux', 'innovation', 'financial-software', 'data-visualization', 'future-of-finance']
+tags:
+- openbb
+- fintech
+- ui
+- ux
+- innovation
+- financial-software
+- data-visualization
+- future-of-finance
 description: A deep dive into why the UI layer represents the next major frontier in financial technology. While the industry has heavily invested in data, the user interface remains a critical yet overlooked bridge between raw information and actionable intelligence. This piece explores how OpenBB is leading the charge in revolutionizing how financial professionals interact with data.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-02-25-ui-layer-is-the-next-big-frontier.png" />

@@ -3,9 +3,18 @@ slug: from-open-source-to-open-startup
 title: From Open Source to Open Startup
 date: 2023-07-06
 image: /blog/2023-07-06-from-open-source-to-open-startup.png
-tags: ['open-source', 'open-startup', 'transparency', 'openbb', 'startup-culture', 'business-metrics', 'community']
+tags:
+- open-source
+- open-startup
+- transparency
+- openbb
+- startup-culture
+- business-metrics
+- community
 description: From Open Source to Open Startup. A journey of OpenBB towards transparency in the financial world.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-07-06-from-open-source-to-open-startup.png"/>

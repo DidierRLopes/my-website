@@ -3,11 +3,19 @@ slug: theres-a-zero-percent-chance-that-open-source-doesnt-win
 title: There's a zero percent chance that open source doesn't win
 date: 2025-01-16
 image: /blog/2025-01-16-theres-a-zero-percent-chance-that-open-source-doesnt-win
-tags: ['open-source', 'ai', 'software-development', 'future-of-tech', 'democratization', 'startup', 'innovation']
+tags:
+- open-source
+- ai
+- software-development
+- future-of-tech
+- democratization
+- startup
+- innovation
 description: AI is democratizing software development at an unprecedented pace, and it's creating a virtuous cycle that makes open source unstoppable. As development costs plummet and AI tools make codebases more accessible than ever, the traditional moats of proprietary software are evaporating. Here's why I believe that the future of software is inevitably open.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-01-16-theres-a-zero-percent-chance-that-open-source-doesnt-win.png"/>

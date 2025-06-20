@@ -3,9 +3,17 @@ slug: sector-and-industry-analysis-gamestonk-terminal
 title: Sector and Industry Analysis — Gamestonk Terminal
 date: 2021-12-02
 image: /blog/2021-12-02-sector-and-industry-analysis-gamestonk-terminal.png
-tags: ['Gamestonk Terminal', 'Sector Analysis', 'Industry Analysis', 'FinanceDatabase', 'Open Source']
+tags:
+- gamestonk-terminal
+- sector-analysis
+- industry-analysis
+- financedatabase
+- open-source
 description: The development journey of a new Sector and Industry Analysis feature for Gamestonk Terminal, integrating the FinanceDatabase package.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-12-02-sector-and-industry-analysis-gamestonk-terminal.png"/>

@@ -3,11 +3,20 @@ slug: 2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb
 title: How function calling and context-aware AI shapes OpenBB
 date: 2025-03-01
 image: /blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb
-tags: ['openbb', 'ai', 'llm', 'function-calling', 'agent', 'copilot', 'data-analytics', 'financial-analysis']
+tags:
+- openbb
+- ai
+- llm
+- function-calling
+- agent
+- copilot
+- data-analytics
+- financial-analysis
 description: Building on OpenBB's presentation at the Anote AI Day Summit, this post explores how intelligent function calling serves as the cornerstone of our AI-native workspace for data analytics.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb.png" />

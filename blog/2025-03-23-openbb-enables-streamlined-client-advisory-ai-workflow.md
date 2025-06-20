@@ -3,11 +3,21 @@ slug: 2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow
 title: OpenBB enables streamlined Client Advisory AI workflow
 date: 2025-03-23
 image: /blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow
-tags: ['openbb', 'ai', 'llm', 'fintech', 'automation', 'workflows', 'client-advisory', 'investment-management', 'reporting']
+tags:
+- openbb
+- ai
+- llm
+- fintech
+- automation
+- workflows
+- client-advisory
+- investment-management
+- reporting
 description: In this blog post, I'll show you how an AI agent can transform your funds performance, macro data, news around your holding companies, and more into a draft investor letter that has the same writing style as your team.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow.png" />

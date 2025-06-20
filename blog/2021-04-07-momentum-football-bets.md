@@ -3,9 +3,18 @@ slug: momentum-football-bets
 title: Momentum Football Bets
 date: 2021-04-07
 image: /blog/2021-04-07-momentum-football-bets.png
-tags: ['Football', 'Betting', 'Momentum', 'Web Scraping', 'Beautiful Soup', 'Python']
+tags:
+- football
+- betting
+- momentum
+- web-scraping
+- beautiful-soup
+- python
 description: In this blogpost, I share how I developed an automated task to estimate the momentum of football teams for betting purposes using Beautiful Soup and Python.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2021-04-07-momentum-football-bets.png"/>

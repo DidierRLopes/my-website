@@ -3,9 +3,20 @@ slug: my-first-hand-experience-on-ai-impacting-education-through-perplexity-curs
 title: My first-hand experience on AI impacting education through Perplexity, Cursor and ChatGPT
 date: 2024-06-30
 image: /blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt.png
-tags: ['ai', 'education', 'teaching', 'llm', 'chatgpt', 'perplexity', 'cursor', 'supervised-learning', 'edtech']
+tags:
+- ai
+- education
+- teaching
+- llm
+- chatgpt
+- perplexity
+- cursor
+- supervised-learning
+- edtech
 description: AI will change education forever. Here's how I leveraged Perplexity, Cursor and ChatGPT to teach Supervised Learning and assess coursework.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt.png"/>

@@ -3,11 +3,21 @@ slug: turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm
 title: Turn my blog feed into a QA dataset to fine-tune a LLM
 date: 2025-01-21
 image: /blog/2025-01-21-turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm
-tags: ['ai', 'ml', 'llm', 'dataset', 'hugging-face', 'ollama', 'llama', 'fine-tuning', 'python']
+tags:
+- ai
+- ml
+- llm
+- dataset
+- hugging-face
+- ollama
+- llama
+- fine-tuning
+- python
 description: This project converts blog feed content into a structured Question-Answer dataset using LLaMA 3.2 (via Ollama) for local processing. The generated dataset follows a conversational format and can be automatically pushed to Hugging Face.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-01-21-turn-my-blog-feed-into-a-qa-dataset-to-fine-tune-a-llm.png"/>

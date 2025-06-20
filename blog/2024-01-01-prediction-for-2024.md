@@ -3,9 +3,19 @@ slug: prediction-for-2024
 title: Prediction for 2024
 date: 2024-01-01
 image: /blog/2024-01-01-prediction-for-2024.png
-tags: ['openbb', 'finance', 'ai', 'agents', 'copilot', 'llm', 'pro', 'fine-tune']
+tags:
+- openbb
+- finance
+- ai
+- agents
+- copilot
+- llm
+- pro
+- fine-tune
 description: Companies will own multiple fine-tuned LLMs/SLMs for specific tasks.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-01-01-prediction-for-2024.png"/>

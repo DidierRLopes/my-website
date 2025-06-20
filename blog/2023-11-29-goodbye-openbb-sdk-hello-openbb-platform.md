@@ -3,9 +3,16 @@ slug: goodbye-openbb-sdk-hello-openbb-platform
 title: Goodbye OpenBB SDK. Hello OpenBB Platform
 date: 2023-11-29
 image: /blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform.png
-tags: ['openbb', 'platform', 'sdk', 'core', 'extensions']
+tags:
+- openbb
+- platform
+- sdk
+- core
+- extensions
 description: Today, we are thrilled to announce the new OpenBB SDK, a game-changing platform that is now divided into the robustness of OpenBB Core and the limitless potential of OpenBB extensions.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform.png"/>

@@ -3,9 +3,18 @@ slug: how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla
 title: How I wrote a machine learning paper in 1 week that got accepted to International Conference in Machine Learning Applications
 date: 2022-12-07
 image: /blog/2022-12-07-how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla.png
-tags: ['Machine Learning', 'Data Science', 'Academia', 'ICMLA', 'NURVV Run', 'Open Source']
+tags:
+- machine-learning
+- data-science
+- academia
+- icmla
+- nurvv-run
+- open-source
 description: How I wrote a machine learning paper in 1 week that got accepted to ICMLA while working full time and raised $8.8 million for OpenBB Terminal.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-12-07-how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla.png"/>

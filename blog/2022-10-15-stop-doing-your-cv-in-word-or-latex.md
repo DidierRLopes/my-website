@@ -3,9 +3,17 @@ slug: stop-doing-your-cv-in-word-or-latex
 title: Stop doing your CV in Word or LaTeX
 date: 2022-10-15
 image: /blog/2022-10-15-stop-doing-your-cv-in-word-or-latex.png
-tags: ['GitHub', 'CV', 'Career', 'Open Source', 'Developer']
+tags:
+- github
+- cv
+- career
+- open-source
+- developer
 description: The future of CVs for engineers and developers lies within GitHub. This post discusses why GitHub profiles are becoming the new CVs and how they can provide a more comprehensive view of a candidate's skills and contributions.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-10-15-stop-doing-your-cv-in-word-or-latex.png"/>

@@ -3,11 +3,21 @@ slug: 2025-03-18-my-first-half-marathon
 title: Doing my first Half Marathon
 date: 2025-03-18
 image: /blog/2025-03-18-my-first-half-marathon
-tags: ['running', 'half-marathon', 'nyc', 'charity', 'fitness', 'personal-story', 'fundraising', 'race-recap', 'endurance']
+tags:
+- running
+- half-marathon
+- nyc
+- charity
+- fitness
+- personal-story
+- fundraising
+- race-recap
+- endurance
 description: A personal journey through my first NYC Half Marathon, from fundraising $1,615 for cancer research to crossing the finish line in 1h45min, complete with training insights and my race day experience.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2025-03-18-my-first-half-marathon.JPG" />

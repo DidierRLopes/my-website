@@ -3,9 +3,20 @@ slug: bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released
 title: Bloomberg Terminal is no more. OpenBB Terminal 2.0 has just been released.
 date: 2022-11-29
 image: /blog/2022-11-29-bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released.png
-tags: ['openbb', 'product-launch', 'investment-research', 'sdk', 'api', 'ai', 'ml', 'open-source', 'fintech']
+tags:
+- openbb
+- product-launch
+- investment-research
+- sdk
+- api
+- ai
+- ml
+- open-source
+- fintech
 description: OpenBB Terminal 2.0 has been released. This blog post discusses the new features and improvements, including the release of OpenBB SDK, a state-of-the-art AI/ML toolkit for the financial industry, and the vision for a community-driven investment research platform.
 ---
+
+
 
 <p align="center">
     <img width="600" src="/blog/2022-11-29-bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released.png"/>

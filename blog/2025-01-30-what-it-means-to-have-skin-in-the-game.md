@@ -3,11 +3,20 @@ slug: what-it-means-to-have-skin-in-the-game
 title: What it means to have skin in the game
 date: 2025-01-30
 image: /blog/2025-01-30-what-it-means-to-have-skin-in-the-game
-tags: ['openbb', 'leadership', 'philosophy', 'accountability', 'commitment', 'startup', 'skin-in-the-game', 'personal-story']
+tags:
+- openbb
+- leadership
+- philosophy
+- accountability
+- commitment
+- startup
+- skin-in-the-game
+- personal-story
 description: From getting the OpenBB logo tattooed to honoring a promise of a Bali trip, this is a personal reflection on what it truly means to have "skin in the game". It's not about reckless commitment, but about standing fully behind your words and actions - a principle that's shaped both my personal life and my approach to building OpenBB.
 hideSidebar: true
-
 ---
+
+
 
 <p align="center">
     <img width="900" src="/blog/2025-01-30-what-it-means-to-have-skin-in-the-game.png"/>

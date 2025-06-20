@@ -3,9 +3,18 @@ slug: slack-gpt-summarizing-messages
 title: SlackGPT - Your Slack bot that summarizes unread messages
 date: 2024-01-15
 image: /blog/2024-01-15-slack-gpt-summarizing-messages.png
-tags: ['slack', 'slackgpt', 'llm', 'summarization', 'open source', 'bot']
+tags:
+- slack
+- slackgpt
+- llm
+- summarization
+- open-source
+- bot
 description: The SlackGPT is a Slack bot that summarizes conversations and sends you a summary per channel.
 ---
+
+
+
 
 <p align="center">
     <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages.png"/>

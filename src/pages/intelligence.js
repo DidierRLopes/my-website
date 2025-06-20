@@ -35,9 +35,25 @@ function IntelligencePage() {
             </div>
         </div>
         <div className="intelligence-page-mobile">
-            <div style={{ textAlign: 'center', padding: '2rem' }}>
-                <h1>Intelligence</h1>
-                <p>This page is best viewed on a desktop device.</p>
+            <div style={{ textAlign: 'center', padding: '2rem', position: 'relative' }}>
+                <img src="/img/second_brain.png" alt="Second Brain" style={{ width: '100%', filter: 'blur(2px)' }} />
+                <div style={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    color: 'var(--text-primary)',
+                    fontSize: 'var(--ds-font-size-xl)',
+                    fontWeight: '500',
+                    fontFamily: 'var(--ds-font-primary)',
+                    textTransform: 'uppercase',
+                    letterSpacing: 'var(--ds-letter-spacing)',
+                    padding: '0.5rem 1rem',
+                    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                    borderRadius: '4px'
+                }}>
+                    Visualize my second brain on desktop
+                </div>
             </div>
         </div>
       </main>

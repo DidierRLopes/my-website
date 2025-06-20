@@ -848,4 +848,8 @@ article header h1 {
   .intelligence-page-mobile {
     display: block;
   }
+
+  .navbar__inner .navbar__item.navbar-newsletter-link {
+    display: none !important;
+  }
 }

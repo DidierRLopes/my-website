@@ -136,7 +136,7 @@ const config = {
             to: '/newsletter',
             target: '_blank',
             rel: 'noopener noreferrer',
-            className: 'navbar-item-external',
+            className: 'navbar-item-external navbar-newsletter-link',
           },
         ],
       },

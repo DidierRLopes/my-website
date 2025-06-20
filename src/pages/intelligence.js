@@ -21,16 +21,24 @@ function IntelligencePage() {
         />
       </Head>
       <main style={{ padding: '2rem' }}>
-        <div style={{ maxWidth: '90%', margin: '0 auto' }}>
-            <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                <h1>Intelligence</h1>
+        <div className="intelligence-page-desktop">
+            <div style={{ maxWidth: '90%', margin: '0 auto' }}>
+                <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+                    <h1>Intelligence</h1>
+                </div>
+                <BrowserOnly fallback={<div>Loading graph...</div>}>
+                    {() => {
+                        const GraphContainer = require('../components/Intelligence/GraphContainer').default;
+                        return <GraphContainer />;
+                    }}
+                </BrowserOnly>
             </div>
-            <BrowserOnly fallback={<div>Loading graph...</div>}>
-                {() => {
-                    const GraphContainer = require('../components/Intelligence/GraphContainer').default;
-                    return <GraphContainer />;
-                }}
-            </BrowserOnly>
+        </div>
+        <div className="intelligence-page-mobile">
+            <div style={{ textAlign: 'center', padding: '2rem' }}>
+                <h1>Intelligence</h1>
+                <p>This page is best viewed on a desktop device.</p>
+            </div>
         </div>
       </main>
     </Layout>

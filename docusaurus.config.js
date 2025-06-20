@@ -119,11 +119,16 @@ const config = {
             value: '</div>',
           },
           {
-            type: 'html',
             position: 'left',
-            className: 'navbar__center-wrapper',
-            value:
-              '<div class="navbar__items--center"><a href="/blog" class="navbar__item navbar__link">Blog</a><a href="/intelligence" class="navbar__item navbar__link">Intelligence</a></div>',
+            label: 'Blog',
+            to: '/blog',
+            className: 'navbar__center-item',
+          },
+          {
+            position: 'left',
+            label: 'Intelligence',
+            to: '/intelligence',
+            className: 'navbar__center-item',
           },
           {
             position: 'right',

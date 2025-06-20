@@ -2,7 +2,8 @@
 
 This my open source website: https://didierlopes.com/
 
-<img width="1284" alt="Screenshot 2025-01-04 at 1 33 51 PM" src="https://github.com/user-attachments/assets/f1f669f5-558c-4a73-a9a0-17a90b4c528a" />
+![CleanShot 2025-06-20 at 02 29 53@2x](https://github.com/user-attachments/assets/4a91ab46-1d62-443e-adb3-e021a46ad4e4)
+
 
 ---
 

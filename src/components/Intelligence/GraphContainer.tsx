@@ -50,25 +50,8 @@ const GraphContainer = () => {
         };
     }, []);
 
-    const allTags = useMemo(() => {
-        const tags = new Set<string>();
-        for (const item of data) {
-            for (const tag of item.tags) {
-                tags.add(tag);
-            }
-        }
-        return Array.from(tags).sort();
-    }, [data]);
-
-    const filteredItems = useMemo(() => {
+    const dateFilteredItems = useMemo(() => {
         let items = data;
-
-        // Tag filter
-        if (selectedTags.length > 0) {
-            items = items.filter(item => selectedTags.every(tag => item.tags.includes(tag)));
-        }
-
-        // Date range filter
         const [startDate, endDate] = dateRange;
         if (startDate) {
             items = items.filter(item => new Date(item.date_modified) >= startDate);
@@ -76,9 +59,28 @@ const GraphContainer = () => {
         if (endDate) {
             items = items.filter(item => new Date(item.date_modified) <= endDate);
         }
-
         return items;
-    }, [data, selectedTags, dateRange]);
+    }, [data, dateRange]);
+
+    const filteredItems = useMemo(() => {
+        if (selectedTags.length === 0) {
+            return dateFilteredItems;
+        }
+        return dateFilteredItems.filter(item => 
+            selectedTags.every(tag => item.tags.includes(tag))
+        );
+    }, [dateFilteredItems, selectedTags]);
+
+    const availableTags = useMemo(() => {
+        const itemsToSourceTagsFrom = selectedTags.length > 0 ? filteredItems : dateFilteredItems;
+        const tags = new Set<string>();
+        for (const item of itemsToSourceTagsFrom) {
+            for (const tag of item.tags) {
+                tags.add(tag);
+            }
+        }
+        return Array.from(tags).sort();
+    }, [filteredItems, dateFilteredItems, selectedTags.length]);
 
     const searchedItems = useMemo(() => {
         if (!searchQuery) return filteredItems;
@@ -115,7 +117,7 @@ const GraphContainer = () => {
             ) : (
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     <GraphControls 
-                        allTags={allTags}
+                        allTags={availableTags}
                         onSearch={setRawSearch}
                         onTagFilterChange={setSelectedTags}
                         onDateRangeChange={setDateRange}
@@ -126,6 +128,22 @@ const GraphContainer = () => {
                     />
                     <div id="intelligence-graph-container" ref={containerRef} 
                         style={{ width: dimensions.width, height: dimensions.height, border: '1px solid #333', borderRadius: '8px', position: 'relative' }}>
+                        <div style={{
+                            position: 'absolute',
+                            top: '0.75rem',
+                            left: '0.75rem',
+                            zIndex: 2,
+                            color: colorMode === 'dark' ? '#CBD5E0' : '#4A5568',
+                            fontSize: '12px',
+                            fontFamily: "'IBM Plex Mono', 'Courier New', monospace",
+                            backgroundColor: colorMode === 'dark' ? 'rgba(26, 32, 44, 0.8)' : 'rgba(255, 255, 255, 0.8)',
+                            padding: '0.25rem 0.5rem',
+                            borderRadius: '4px',
+                            backdropFilter: 'blur(4px)',
+                            border: `1px solid ${colorMode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'}`,
+                        }}>
+                            {searchedItems.length} {searchedItems.length === 1 ? 'node' : 'nodes'} found
+                        </div>
                         {searchedItems.length > 0 ? (
                             <GraphCanvas 
                                 items={filteredItems} 

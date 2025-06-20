@@ -566,7 +566,6 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, showTh
         height={height}
         style={{ position: 'absolute', top: 0, left: 0, zIndex: 1, pointerEvents: 'all' }}
       >
-        <title>Blog Post Relationship Graph</title>
         <g ref={keywordsGroupRef} />
         <g ref={nodeLabelsGroupRef} />
       </svg>

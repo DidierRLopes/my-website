@@ -109,9 +109,10 @@ const config = {
             to: '/resume/experience',
           },
           {
-            position: 'right',
             to: '/blog',
             label: 'Blog',
+            position: 'left',
+            className: 'navbar-blog-link-center',
           },
           {
             position: 'right',

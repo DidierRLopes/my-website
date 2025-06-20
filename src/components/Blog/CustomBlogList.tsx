@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import type { ChangeEvent } from 'react';
+import type { ChangeEvent, KeyboardEvent } from 'react';
 import Link from '@docusaurus/Link';
 import { useHistory, useLocation } from '@docusaurus/router';
 import styles from './CustomBlogList.module.css';
@@ -75,11 +75,11 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
   // Handle input changes to extract tags and update text search
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
-    const tagRegex = /tag:"([^"]+)"/g;
+    const tagRegex = /tag:(\S+)\s/g;
     const newTags: string[] = [];
 
     const remainingText = value.replace(tagRegex, (match, tag) => {
-      if (!selectedTags.includes(tag)) {
+      if (tag && !selectedTags.includes(tag)) {
         newTags.push(tag);
       }
       return ''; // Remove the tag from the input string
@@ -90,6 +90,28 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
     }
 
     setSearchInput(remainingText);
+  };
+
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const { value } = e.currentTarget;
+      const tagRegex = /tag:(\S+)/g;
+      const newTags: string[] = [];
+
+      const remainingText = value.replace(tagRegex, (match, tag) => {
+        if (tag && !selectedTags.includes(tag)) {
+          newTags.push(tag);
+        }
+        return '';
+      });
+
+      if (newTags.length > 0) {
+        setSelectedTags(currentTags => [...new Set([...currentTags, ...newTags])]);
+      }
+
+      setSearchInput(remainingText);
+    }
   };
   
   // Get all unique tags for autocomplete (or other UI features)
@@ -155,10 +177,11 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
           <div className={styles.searchInputContainer}>
             <input
               type="text"
-              placeholder='> Search posts... (use tag:"tagname" to filter by tags)'
+              placeholder='> Search posts... (use tag:name to filter)'
               className={`${styles.searchInput} ${selectedTags.length > 0 ? styles.searchInputActive : ''}`}
               value={searchInput}
               onChange={handleInputChange}
+              onKeyDown={handleKeyDown}
             />
             { (searchInput || selectedTags.length > 0) && (
               <button 

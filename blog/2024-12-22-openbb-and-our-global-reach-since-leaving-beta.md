@@ -2,7 +2,7 @@
 slug: openbb-and-our-global-reach-since-leaving-beta
 title: OpenBB and our global reach since leaving beta
 date: 2024-12-22
-image: /blog/2024-12-22-openbb-and-our-global-reach-since-leaving-beta
+image: /blog/2024-12-22-openbb-and-our-global-reach-since-leaving-beta.jpeg
 tags: ['openbb', 'global audience', 'reach', 'internationalization', 'languages', 'pwa']
 description: This is how OpenBB is reaching users worldwide with Chrome's translation features, making financial analytics accessible in multiple languages and expanding our presence across 84% of countries since launch.
 hideSidebar: true

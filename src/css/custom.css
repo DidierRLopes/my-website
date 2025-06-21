@@ -903,3 +903,39 @@ article header h1 {
   top: 30px;
   left: -35px;
 }
+
+[data-theme='dark'] .thought-bubble {
+  background-color: var(--ds-white);
+  color: var(--ds-black);
+  border-color: var(--ds-black);
+}
+
+[data-theme='dark'] .thought-bubble::before,
+[data-theme='dark'] .thought-bubble::after {
+  background-color: var(--ds-white);
+  border-color: var(--ds-black);
+}
+
+[data-theme='light'] .thought-bubble--indexing {
+  background-color: var(--ds-blue-light);
+  color: var(--ds-white);
+  border-color: var(--ds-blue-dark);
+}
+
+[data-theme='light'] .thought-bubble--indexing::before,
+[data-theme='light'] .thought-bubble--indexing::after {
+  background-color: var(--ds-blue-light);
+  border-color: var(--ds-blue-dark);
+}
+
+[data-theme='dark'] .thought-bubble--indexing {
+  background-color: #FFFF00;
+  color: var(--ds-black);
+  border-color: #FFFF00;
+}
+
+[data-theme='dark'] .thought-bubble--indexing::before,
+[data-theme='dark'] .thought-bubble--indexing::after {
+  background-color: #FFFF00;
+  border-color: #FFFF00;
+}

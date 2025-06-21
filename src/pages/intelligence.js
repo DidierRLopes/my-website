@@ -22,7 +22,7 @@ function IntelligencePage() {
       </Head>
       <main style={{ padding: '2rem' }}>
         <div className="intelligence-page-desktop">
-            <div style={{ maxWidth: '90%', margin: '0 auto' }}>
+            <div style={{ width: '60%', margin: '0 auto' }}>
                 <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
                     <h1>Intelligence</h1>
                 </div>

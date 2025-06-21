@@ -26,7 +26,7 @@ const Source: React.FC<SourceProps> = ({ url, title, thumbnail }) => {
     const containerStyle: React.CSSProperties = {
         position: 'absolute',
         right: '20px',
-        top: '0px',
+        top: '-22px',
         width: '60px',
         height: '60px',
     };

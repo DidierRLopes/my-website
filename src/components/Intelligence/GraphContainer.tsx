@@ -20,7 +20,6 @@ function useDebounce<T>(value: T, delay = 250) {
 const GraphContainer = () => {
     const { data, loading, error } = useBlogFeed();
     const containerRef = useRef<HTMLDivElement>(null);
-    const [dimensions, setDimensions] = useState({ width: 600, height: 420 });
     const [rawSearch, setRawSearch] = useState('');
     const searchQuery = useDebounce(rawSearch, 300);
     const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -30,18 +29,7 @@ const GraphContainer = () => {
     const mountTimeRef = useRef(Date.now());
     const { colorMode } = useColorMode();
 
-    useEffect(() => {
-        function update() {
-            const containerWidth = Math.min(window.innerWidth * 0.8, 800);
-            setDimensions({
-                width: containerWidth,
-                height: containerWidth * 0.7, // 30% smaller height
-            });
-        }
-        update();
-        window.addEventListener('resize', update);
-        return () => window.removeEventListener('resize', update);
-    }, []);
+    const dimensions = { width: '100%', height: '500px' };
 
     useEffect(() => {
         return () => {
@@ -111,7 +99,18 @@ const GraphContainer = () => {
 
     const canShowClusters = filteredItems.length >= 7;
 
-    const isMobile = dimensions.width < 640;
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            if (containerRef.current) {
+                setIsMobile(containerRef.current.offsetWidth < 640);
+            }
+        };
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     if (loading) {
         return <div style={{ textAlign: 'center', padding: '4rem' }}>Loading brain...</div>;
@@ -126,7 +125,7 @@ const GraphContainer = () => {
     }
 
     return (
-        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 1rem' }}>
+        <div style={{ width: '100%' }}>
             {isMobile ? (
                 <BlogListFallback items={searchedItems} />
             ) : (
@@ -162,8 +161,8 @@ const GraphContainer = () => {
                         {searchedItems.length > 0 ? (
                             <GraphCanvas 
                                 items={filteredItems} 
-                                width={dimensions.width} 
-                                height={dimensions.height}
+                                width={containerRef.current?.offsetWidth || 0}
+                                height={containerRef.current?.offsetHeight || 0}
                                 showThoughts={true}
                                 showClusters={showClusters && canShowClusters}
                                 showNodes={showNodes}

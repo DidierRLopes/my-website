@@ -590,7 +590,7 @@ const ChatInterface = () => {
                         bottom: 'calc(100% - 15px)',
                         left: '10px',
                         height: '130px',
-                        opacity: !indexingResult ? 1 : 0,
+                        opacity: !indexing && !indexingResult ? 1 : 0,
                         transition: 'opacity 0.5s ease-in-out',
                         pointerEvents: 'none',
                         zIndex: 1,
@@ -601,10 +601,34 @@ const ChatInterface = () => {
                     style={{
                         bottom: 'calc(100% + 75px)',
                         left: '110px',
-                        opacity: !indexingResult ? 1 : 0,
+                        opacity: !indexing && !indexingResult ? 1 : 0,
                     }}
                 >
                     where my embeddings at?
+                </div>
+                <img
+                    src="/img/goku_indexing_embeddings.webp"
+                    alt="Goku indexing"
+                    style={{
+                        position: 'absolute',
+                        bottom: 'calc(100% - 15px)',
+                        left: '10px',
+                        height: '130px',
+                        opacity: indexing ? 1 : 0,
+                        transition: 'opacity 0.5s ease-in-out',
+                        pointerEvents: 'none',
+                        zIndex: 1,
+                    }}
+                />
+                <div
+                    className="thought-bubble thought-bubble--indexing"
+                    style={{
+                        bottom: 'calc(100% + 75px)',
+                        left: '110px',
+                        opacity: indexing ? 1 : 0,
+                    }}
+                >
+                    SOMETHING IS HAPPENING!
                 </div>
                 <img
                     src="/img/goku_has_embeddings.webp"
@@ -614,7 +638,7 @@ const ChatInterface = () => {
                         bottom: 'calc(100% - 15px)',
                         left: '10px',
                         height: '130px',
-                        opacity: indexingResult ? 1 : 0,
+                        opacity: !indexing && indexingResult ? 1 : 0,
                         transition: 'opacity 0.5s ease-in-out',
                         pointerEvents: 'none',
                         zIndex: 1,
@@ -625,7 +649,7 @@ const ChatInterface = () => {
                     style={{
                         bottom: 'calc(100% + 75px)',
                         left: '110px',
-                        opacity: indexingResult ? 1 : 0,
+                        opacity: !indexing && indexingResult ? 1 : 0,
                     }}
                 >
                     i'm smort now

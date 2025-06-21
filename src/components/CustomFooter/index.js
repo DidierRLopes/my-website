@@ -1,6 +1,7 @@
 import React from 'react';
 import { useThemeConfig } from '@docusaurus/theme-common';
 import TickerTape from '../TickerTape';
+import PolymarketTape from '../PolymarketTape';
 
 // Suppress TradingView cross-origin errors during development across the whole site
 if (typeof window !== 'undefined') {
@@ -25,6 +26,7 @@ if (typeof window !== 'undefined') {
 export default function CustomFooter() {
   return (
     <div className="mt-4">
+      <PolymarketTape />
       <TickerTape />
       <footer className="bg-[#f8f9fa] dark:bg-[#000] text-[var(--ifm-footer-color)] pb-8">
         <div className="container container-fluid">

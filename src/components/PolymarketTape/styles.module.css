@@ -1,0 +1,91 @@
+.tapeContainer {
+  width: 100%;
+  overflow: hidden;
+  padding: 0.5rem 0;
+}
+
+.tape {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 80s linear infinite;
+}
+
+.tapeContainer:hover .tape {
+  animation-play-state: paused;
+}
+
+.tapeItem {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  color: var(--ifm-font-color-base);
+  text-decoration: none !important;
+  height: 2.5rem;
+  transition: background-color 0.2s ease;
+  border-right: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.tapeItem:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
+}
+
+:global([data-theme='dark']) .tapeItem:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.marketImage {
+  height: 1.75rem;
+  width: 1.75rem;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.title {
+  font-weight: 500;
+  margin-right: 0.75rem;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+.gaugeContainer {
+  margin-left: auto;
+  flex-shrink: 0;
+  transform: translateY(-4px);
+}
+
+.gaugeSvg {
+  display: block;
+}
+
+.gaugeBg, .gaugeFg {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.gaugeBg {
+  stroke: var(--ifm-color-emphasis-200);
+}
+
+.gaugeFg {
+  transition: stroke-dashoffset 0.3s ease-in-out, stroke 0.3s ease-in-out;
+}
+
+.gaugeText {
+  text-anchor: middle;
+  font-size: 24px;
+  font-weight: 800;
+  fill: var(--ifm-font-color-base);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+} 

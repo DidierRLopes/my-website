@@ -585,6 +585,16 @@ const ChatInterface = () => {
                         zIndex: 1,
                     }}
                 />
+                <div
+                    className="speech-bubble"
+                    style={{
+                        bottom: 'calc(100% + 20px)',
+                        left: '60px',
+                        opacity: !indexingResult ? 1 : 0,
+                    }}
+                >
+                    where my embeddings at?
+                </div>
                 <img
                     src="/img/goku_has_embeddings.webp"
                     alt="Goku has embeddings"
@@ -599,6 +609,16 @@ const ChatInterface = () => {
                         zIndex: 1,
                     }}
                 />
+                <div
+                    className="speech-bubble"
+                    style={{
+                        bottom: 'calc(100% + 20px)',
+                        left: '60px',
+                        opacity: indexingResult ? 1 : 0,
+                    }}
+                >
+                    i'm smort now
+                </div>
                 <Clock color={aiTextColor} />
                 <Terminal history={history} onSendMessage={handleSendMessage} isLoading={isLoading} aiTextColor={aiTextColor} />
             </div>

@@ -853,3 +853,35 @@ article header h1 {
     display: none !important;
   }
 }
+
+.speech-bubble {
+  position: absolute;
+  background: var(--background-secondary);
+  border: 2px solid var(--text-primary);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  padding: 8px 15px;
+  font-family: var(--ds-font-primary);
+  color: var(--text-primary);
+  font-size: 14px;
+  width: max-content;
+  white-space: nowrap;
+  text-align: center;
+  z-index: 2;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+  transform: rotate(-2deg);
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 12px solid transparent;
+  border-right-color: var(--text-primary);
+  border-left: 0;
+  margin-top: -6px;
+  margin-left: -14px;
+}

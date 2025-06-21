@@ -163,7 +163,7 @@ export const Terminal = ({ history, onSendMessage, isLoading, aiTextColor }: Ter
 
     React.useEffect(() => {
         if (!isLoading) {
-            inputRef.current?.focus();
+            inputRef.current?.focus({ preventScroll: true });
         }
     }, [isLoading]);
 

@@ -812,23 +812,30 @@ article header h1 {
 }
 
 @media screen and (min-width: 997px) {
-  .navbar__items--left {
+  .navbar__items--left-wrapper {
     flex: 1;
+    display: flex;
   }
 
   .navbar__center-item {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
   }
 
-  .navbar__center-item[href='/blog'] {
-    transform: translateX(calc(-100% - 1rem)) translateY(-50%);
+  .navbar__center-right-item[href='/intelligence'] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(60px), -50%);
   }
-
-  .navbar__center-item[href='/intelligence'] {
-    transform: translateX(1rem) translateY(-50%);
+  
+  .navbar__center-right-item[href='/chat'] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(60px + 120px), -50%);
   }
 }
 

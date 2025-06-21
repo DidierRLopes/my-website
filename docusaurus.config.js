@@ -125,10 +125,14 @@ const config = {
             className: 'navbar__center-item',
           },
           {
-            position: 'left',
+            position: 'right',
             label: 'Intelligence',
             to: '/intelligence',
-            className: 'navbar__center-item',
+          },
+          {
+            position: 'right',
+            label: 'Chat',
+            to: '/chat',
           },
           {
             position: 'right',

@@ -201,7 +201,7 @@ const ChatPage = () => {
   return (
     <Layout title="Chat">
       <main style={{ padding: '2rem' }}>
-        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <div style={{ textAlign: 'center' }}>
           <h1>Chat</h1>
         </div>
 
@@ -227,6 +227,258 @@ const ChatPage = () => {
       </main>
     </Layout>
   );
+};
+
+const CopyIcon = ({ color = 'currentColor', size = 16 }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <title>Copy to clipboard</title>
+        <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+    </svg>
+);
+
+const CheckIcon = ({ color = 'currentColor', size = 16 }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <title>Copied</title>
+        <polyline points="20 6 9 17 4 12" />
+    </svg>
+);
+
+const CommandSnippet = ({ command }: { command: string }) => {
+    const { colorMode } = useColorMode();
+    const isDark = colorMode === 'dark';
+    const [copied, setCopied] = React.useState(false);
+
+    const handleCopy = () => {
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(command);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        }
+    };
+
+    const wrapperStyle = {
+        backgroundColor: isDark ? 'rgba(0, 0, 0, 0.3)' : 'rgba(0, 0, 0, 0.05)',
+        padding: '1rem',
+        borderRadius: '8px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        marginTop: '1rem',
+        fontFamily: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+        color: isDark ? '#E0E0E0' : '#111',
+        border: `1px solid ${isDark ? '#555' : '#DDD'}`,
+        position: 'relative' as const,
+    };
+
+    const codeStyle = {
+        color: isDark ? '#82dffc' : '#005cc5',
+        fontWeight: 'bold' as const,
+        fontSize: '1.05em',
+        whiteSpace: 'pre-wrap' as const,
+        wordBreak: 'break-all' as const,
+    };
+    
+    return (
+        <div style={wrapperStyle}>
+            <code style={codeStyle}>$ {command}</code>
+            <StyledButton 
+                onClick={handleCopy} 
+                disabled={copied}
+                style={{ padding: '8px 10px', lineHeight: 0 }}
+            >
+                {copied ? <CheckIcon color="#28a745" /> : <CopyIcon color={isDark ? '#EEE' : '#333'} />}
+            </StyledButton>
+        </div>
+    );
+};
+
+const GokuStates = ({ indexing, indexingResult }) => {
+    return (
+        <>
+            <img
+                src="/img/goku_waiting_for_embeds.webp"
+                alt="Goku waiting for embeddings"
+                style={{
+                    position: 'absolute',
+                    bottom: 'calc(100% - 15px)',
+                    left: '10px',
+                    height: '130px',
+                    opacity: !indexing && !indexingResult ? 1 : 0,
+                    transition: 'opacity 0.5s ease-in-out',
+                    pointerEvents: 'none',
+                    zIndex: 1,
+                }}
+            />
+            <div
+                className="thought-bubble"
+                style={{
+                    bottom: 'calc(100% + 75px)',
+                    left: '110px',
+                    opacity: !indexing && !indexingResult ? 1 : 0,
+                }}
+            >
+                where my embeddings at?
+            </div>
+            <img
+                src="/img/goku_indexing_embeddings.webp"
+                alt="Goku indexing"
+                style={{
+                    position: 'absolute',
+                    bottom: 'calc(100% - 15px)',
+                    left: '10px',
+                    height: '130px',
+                    opacity: indexing ? 1 : 0,
+                    transition: 'opacity 0.5s ease-in-out',
+                    pointerEvents: 'none',
+                    zIndex: 1,
+                }}
+            />
+            <div
+                className="thought-bubble thought-bubble--indexing"
+                style={{
+                    bottom: 'calc(100% + 75px)',
+                    left: '110px',
+                    opacity: indexing ? 1 : 0,
+                }}
+            >
+                SOMETHING IS HAPPENING!
+            </div>
+            <img
+                src="/img/goku_has_embeddings.webp"
+                alt="Goku has embeddings"
+                style={{
+                    position: 'absolute',
+                    bottom: 'calc(100% - 15px)',
+                    left: '10px',
+                    height: '130px',
+                    opacity: !indexing && indexingResult ? 1 : 0,
+                    transition: 'opacity 0.5s ease-in-out',
+                    pointerEvents: 'none',
+                    zIndex: 1,
+                }}
+            />
+            <div
+                className="thought-bubble"
+                style={{
+                    bottom: 'calc(100% + 75px)',
+                    left: '110px',
+                    opacity: !indexing && indexingResult ? 1 : 0,
+                }}
+            >
+                i'm smort now
+            </div>
+        </>
+    );
+};
+
+const OllamaSetupInstructions = () => {
+    const { colorMode } = useColorMode();
+    const isDark = colorMode === 'dark';
+
+    const panelStyle = {
+        border: `2px solid ${isDark ? '#444' : '#CCC'}`,
+        borderRadius: '8px',
+        padding: '1.5rem',
+        margin: '0.5rem',
+        flex: 1,
+        textAlign: 'center' as const,
+        backgroundColor: isDark ? '#1C1C1C' : '#F9F9F9',
+        display: 'flex',
+        flexDirection: 'column' as const,
+        justifyContent: 'space-between'
+    };
+    
+    const codeStyle = {
+        backgroundColor: isDark ? '#333' : '#EEE',
+        padding: '0.5rem 1rem',
+        borderRadius: '5px',
+        display: 'inline-block',
+        marginTop: '1rem',
+        fontFamily: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+        color: isDark ? '#E0E0E0' : '#111',
+        border: `1px solid ${isDark ? '#444' : '#DDD'}`
+    };
+
+    return (
+        <div style={{ width: '80%', marginTop: '4rem' }}>
+            <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Get Started</h2>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'stretch', gap: '1rem' }}>
+                <div style={panelStyle}>
+                    <div>
+                        <img
+                            src="/img/ollama.svg"
+                            alt="Ollama Logo"
+                            style={{
+                                height: '40px',
+                                marginBottom: '1rem',
+                                filter: isDark ? 'invert(1)' : 'none',
+                            }}
+                        />
+                        <h3>Step 1: Download Ollama</h3>
+                        <p>Get Ollama for your OS to run models locally.</p>
+                    </div>
+                    <a href="https://ollama.com/" target="_blank" rel="noopener noreferrer">
+                        <StyledButton onClick={() => {}} disabled={false}>Download from Ollama.com</StyledButton>
+                    </a>
+                </div>
+                <div style={panelStyle}>
+                    <div>
+                        <h3>Step 2: Pull a Model</h3>
+                        <p>Open your terminal and run this command to get the chat model.</p>
+                    </div>
+                    <CommandSnippet command="ollama pull llama3.1:8b" />
+                </div>
+                <div style={panelStyle}>
+                    <div>
+                        <h3>Step 3: Pull Embeddings</h3>
+                        <p>For the AI to understand my blog posts, run this command.</p>
+                    </div>
+                    <CommandSnippet command="ollama pull mxbai-embed-large" />
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const HowItWorks = () => {
+    const audioRef = React.useRef<HTMLAudioElement>(null);
+    const [wavSupport, setWavSupport] = React.useState<string>('');
+
+    React.useEffect(() => {
+        if (audioRef.current) {
+            const result = audioRef.current.canPlayType('audio/wav');
+            if (result === 'probably') {
+                setWavSupport('Your browser fully supports .wav files.');
+            } else if (result === 'maybe') {
+                setWavSupport('Your browser may be able to play .wav files.');
+            } else {
+                setWavSupport('Your browser does not support .wav files.');
+            }
+        }
+    }, []);
+
+    return (
+        <div style={{ width: '80%', marginTop: '4rem', textAlign: 'center' }}>
+            <h2>How It Works</h2>
+            <p style={{ margin: '1rem auto', maxWidth: '80ch' }}>When you ask a question, it's converted into an embedding and compared against a vector store of my blog posts. The most relevant post is injected as context for the AI to answer your question. This is a technique called Retrieval-Augmented Generation (RAG).</p>
+            <ThemedImage
+              alt="Sequence diagram showing the RAG process"
+              sources={{
+                light: '/img/lifeline_sequence_diagram_light.png',
+                dark: '/img/lifeline_sequence_diagram_dark.png',
+              }}
+              style={{ width: '100%', marginTop: '1rem', border: '1px solid #444', borderRadius: '8px' }}
+            />
+            <h3 style={{ marginTop: '2rem', marginBottom: '1rem' }}>Listen to an explanation</h3>
+            <audio ref={audioRef} controls style={{ width: '100%' }}>
+                <source src="/audio/ollama_notebooklm.wav" type="audio/wav" />
+                <track kind="captions" />
+                Your browser does not support the audio element.
+            </audio>
+            {wavSupport && <p style={{ fontSize: '0.8em', marginTop: '0.5rem' }}>{wavSupport}</p>}
+        </div>
+    );
 };
 
 const ChatInterface = () => {
@@ -527,13 +779,6 @@ const ChatInterface = () => {
 
     return (
         <CenteredContainer>
-            <div style={{ maxWidth: '600px', marginBottom: '2rem' }}>
-                <p style={{ textAlign: 'center' }}>
-                    This page allows you to chat with a local AI model running on your machine using Ollama.
-                    Please ensure Ollama is running and you have a model (and embedings) available.
-                </p>
-            </div>
-
             <div style={{ marginBottom: '2rem', width: '60%'}}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
                     <div>
@@ -607,81 +852,21 @@ const ChatInterface = () => {
             </div>
 
             <div style={{ position: 'relative', width: '60%', marginTop: '4rem' }}>
-                <img
-                    src="/img/goku_waiting_for_embeds.webp"
-                    alt="Goku waiting for embeddings"
-                    style={{
-                        position: 'absolute',
-                        bottom: 'calc(100% - 15px)',
-                        left: '10px',
-                        height: '130px',
-                        opacity: !indexing && !indexingResult ? 1 : 0,
-                        transition: 'opacity 0.5s ease-in-out',
-                        pointerEvents: 'none',
-                        zIndex: 1,
-                    }}
-                />
-                <div
-                    className="thought-bubble"
-                    style={{
-                        bottom: 'calc(100% + 75px)',
-                        left: '110px',
-                        opacity: !indexing && !indexingResult ? 1 : 0,
-                    }}
-                >
-                    where my embeddings at?
-                </div>
-                <img
-                    src="/img/goku_indexing_embeddings.webp"
-                    alt="Goku indexing"
-                    style={{
-                        position: 'absolute',
-                        bottom: 'calc(100% - 15px)',
-                        left: '10px',
-                        height: '130px',
-                        opacity: indexing ? 1 : 0,
-                        transition: 'opacity 0.5s ease-in-out',
-                        pointerEvents: 'none',
-                        zIndex: 1,
-                    }}
-                />
-                <div
-                    className="thought-bubble thought-bubble--indexing"
-                    style={{
-                        bottom: 'calc(100% + 75px)',
-                        left: '110px',
-                        opacity: indexing ? 1 : 0,
-                    }}
-                >
-                    SOMETHING IS HAPPENING!
-                </div>
-                <img
-                    src="/img/goku_has_embeddings.webp"
-                    alt="Goku has embeddings"
-                    style={{
-                        position: 'absolute',
-                        bottom: 'calc(100% - 15px)',
-                        left: '10px',
-                        height: '130px',
-                        opacity: !indexing && indexingResult ? 1 : 0,
-                        transition: 'opacity 0.5s ease-in-out',
-                        pointerEvents: 'none',
-                        zIndex: 1,
-                    }}
-                />
-                <div
-                    className="thought-bubble"
-                    style={{
-                        bottom: 'calc(100% + 75px)',
-                        left: '110px',
-                        opacity: !indexing && indexingResult ? 1 : 0,
-                    }}
-                >
-                    i'm smort now
-                </div>
+                <GokuStates indexing={indexing} indexingResult={!!indexingResult} />
                 <Clock color={aiTextColor} />
                 <Terminal history={history} onSendMessage={handleSendMessage} isLoading={isLoading} aiTextColor={aiTextColor} />
             </div>
+
+            <div style={{ width: '60%', marginTop: '2rem', textAlign: 'center', color: isDark ? '#AAA' : '#555', fontSize: '0.9em' }}>
+                <p>
+                    This page allows you to chat with a local AI model running on your machine using Ollama.
+                    <br />
+                    Please ensure Ollama is running and you have a model (and embeddings) available.
+                </p>
+            </div>
+
+            <OllamaSetupInstructions />
+            <HowItWorks />
         </CenteredContainer>
     );
 };

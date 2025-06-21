@@ -466,24 +466,37 @@ const ImageModal = ({ isOpen, onClose, sources, alt }: {
     if (!isOpen) return null;
 
     return (
-        <div style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.75)',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            zIndex: 1000,
-            backdropFilter: 'blur(5px)',
-        }}>
-            <div style={{
-                position: 'relative',
-                maxWidth: '90vw',
-                maxHeight: '90vh',
+        <div
+            onClick={onClose}
+            onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    onClose();
+                }
+            }}
+            role="button"
+            tabIndex={0}
+            style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                zIndex: 1000,
+                backdropFilter: 'blur(5px)',
             }}>
+            <div
+                onClick={(e) => e.stopPropagation()}
+                onKeyDown={(e) => e.stopPropagation()}
+                role="presentation"
+                style={{
+                    position: 'relative',
+                    maxWidth: '90vw',
+                    maxHeight: '90vh',
+                }}>
                 <button
                     onClick={onClose}
                     type="button"
@@ -599,6 +612,8 @@ const ChatInterface = () => {
     const [availableEmbeddingModels, setAvailableEmbeddingModels] = React.useState<string[]>([]);
     const [history, setHistory] = React.useState<Message[]>([]);
     const [isLoading, setIsLoading] = React.useState(false);
+    const [isClearing, setIsClearing] = React.useState(false);
+    const [hasBeenCleared, setHasBeenCleared] = React.useState(false);
     const [ollamaStatus, setOllamaStatus] = React.useState<'online' | 'offline' | 'pending'>('pending');
     
     const [indexing, setIndexing] = React.useState(false);
@@ -723,6 +738,15 @@ const ChatInterface = () => {
             setIndexing(false);
             setCurrentlyIndexing('');
         }
+    };
+
+    const handleClearHistory = () => {
+        setIsClearing(true);
+        setHasBeenCleared(true);
+        setTimeout(() => {
+            setHistory([]);
+            setIsClearing(false);
+        }, 1500); // Animation duration
     };
 
     const handleUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -960,7 +984,15 @@ const ChatInterface = () => {
             <div style={{ position: 'relative', width: '60%', marginTop: '4rem' }}>
                 <GokuStates indexing={indexing} indexingResult={!!indexingResult} />
                 <Clock color={aiTextColor} />
-                <Terminal history={history} onSendMessage={handleSendMessage} isLoading={isLoading} aiTextColor={aiTextColor} />
+                <Terminal 
+                    history={history} 
+                    onSendMessage={handleSendMessage} 
+                    isLoading={isLoading} 
+                    aiTextColor={aiTextColor} 
+                    onClearHistory={handleClearHistory}
+                    isClearing={isClearing}
+                    hasBeenCleared={hasBeenCleared}
+                />
             </div>
 
             <div style={{ width: '60%', marginTop: '2rem', textAlign: 'center', color: isDark ? '#AAA' : '#555', fontSize: '0.9em' }}>

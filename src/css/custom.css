@@ -941,7 +941,8 @@ article header h1 {
   border-color: #FFFF00;
 }
 
-[data-theme='dark'] .thought-bubble--indexing::before {
+[data-theme='dark'] .thought-bubble--indexing::before,
+[data-theme='dark'] .thought-bubble--indexing::after {
   background-color: #FFFF00;
   border-color: #FFFF00;
 }

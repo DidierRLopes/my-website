@@ -854,13 +854,21 @@ article header h1 {
   }
 }
 
+@font-face {
+  font-family: 'Anime Ace BB';
+  src: url('/fonts/anime_ace_bb/animeace2bb_tt/animeace2_reg.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .thought-bubble {
   position: absolute;
   background: var(--background-secondary);
   border: 2px solid var(--text-primary);
   border-radius: 50%;
   padding: 10px 15px;
-  font-family: var(--ds-font-primary);
+  font-family: 'Anime Ace BB', 'Comic Sans MS', cursive;
   color: var(--text-primary);
   font-size: 14px;
   width: max-content;

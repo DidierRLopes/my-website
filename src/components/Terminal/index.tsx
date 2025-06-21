@@ -140,7 +140,7 @@ export const Terminal = ({ history, onSendMessage, isLoading, aiTextColor }: Ter
     };
 
     const [input, setInput] = React.useState('');
-    const endOfMessagesRef = React.useRef<HTMLDivElement>(null);
+    const contentRef = React.useRef<HTMLDivElement>(null);
     const inputRef = React.useRef<HTMLInputElement>(null);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -157,9 +157,12 @@ export const Terminal = ({ history, onSendMessage, isLoading, aiTextColor }: Ter
         }
     };
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     React.useEffect(() => {
-        endOfMessagesRef.current?.scrollIntoView({ behavior: 'smooth' });
-    });
+        if (contentRef.current) {
+            contentRef.current.scrollTo({ top: contentRef.current.scrollHeight, behavior: 'smooth' });
+        }
+    }, [history]);
 
     React.useEffect(() => {
         if (!isLoading) {
@@ -210,7 +213,7 @@ export const Terminal = ({ history, onSendMessage, isLoading, aiTextColor }: Ter
                 `}
             </style>
             <div id="terminal-container" style={terminalStyle}>
-                <div style={contentStyle}>
+                <div style={contentStyle} ref={contentRef}>
                     {history.map((line, index) => {
                         const key = `${line.sender}-${line.text.slice(0, 20)}-${index}`;
                         if (line.sender === 'ai') {
@@ -247,7 +250,6 @@ export const Terminal = ({ history, onSendMessage, isLoading, aiTextColor }: Ter
                             />
                         </div>
                     )}
-                    <div ref={endOfMessagesRef} />
                 </div>
             </div>
         </>

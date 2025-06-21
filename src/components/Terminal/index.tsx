@@ -214,12 +214,13 @@ export const Terminal = ({ history, onSendMessage, isLoading, aiTextColor }: Ter
                     {history.map((line, index) => {
                         const key = `${line.sender}-${line.text.slice(0, 20)}-${index}`;
                         if (line.sender === 'ai') {
+                            const isLarge = line.text.split('\n').length >= 3;
                             return (
                                 <div key={key} style={{ position: 'relative', marginBottom: '1em' }}>
                                     <div style={getSenderStyle(line.sender)}>
                                         {line.text}
                                     </div>
-                                    {line.source && <Source {...line.source} />}
+                                    {line.source && <Source {...line.source} isLarge={isLarge} />}
                                 </div>
                             );
                         }

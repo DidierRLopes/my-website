@@ -5,9 +5,10 @@ type SourceProps = {
     url: string;
     title: string;
     thumbnail: string;
+    isLarge?: boolean;
 };
 
-const Source: React.FC<SourceProps> = ({ url, title, thumbnail }) => {
+const Source: React.FC<SourceProps> = ({ url, title, thumbnail, isLarge = false }) => {
     const [isHovered, setIsHovered] = useState(false);
     const [tooltipPosition, setTooltipPosition] = useState({ top: 0, left: 0 });
     const thumbnailRef = useRef<HTMLAnchorElement>(null);
@@ -26,9 +27,10 @@ const Source: React.FC<SourceProps> = ({ url, title, thumbnail }) => {
     const containerStyle: React.CSSProperties = {
         position: 'absolute',
         right: '20px',
-        top: '-22px',
-        width: '60px',
-        height: '60px',
+        top: isLarge ? '-42px' : '-22px',
+        width: isLarge ? '120px' : '60px',
+        height: isLarge ? '120px' : '60px',
+        transition: 'width 0.3s ease, height 0.3s ease, top 0.3s ease',
     };
 
     const thumbnailStyle: React.CSSProperties = {

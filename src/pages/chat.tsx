@@ -570,7 +570,35 @@ const ChatInterface = () => {
                 )}
             </div>
 
-            <div style={{ position: 'relative', width: '60%', marginTop: '2rem' }}>
+            <div style={{ position: 'relative', width: '60%', marginTop: '4rem' }}>
+                <img
+                    src="/img/goku_waiting_for_embeds.webp"
+                    alt="Goku waiting for embeddings"
+                    style={{
+                        position: 'absolute',
+                        bottom: 'calc(100% - 15px)',
+                        left: '10px',
+                        height: '65px',
+                        opacity: !indexingResult ? 1 : 0,
+                        transition: 'opacity 0.5s ease-in-out',
+                        pointerEvents: 'none',
+                        zIndex: 1,
+                    }}
+                />
+                <img
+                    src="/img/goku_has_embeddings.webp"
+                    alt="Goku has embeddings"
+                    style={{
+                        position: 'absolute',
+                        bottom: 'calc(100% - 15px)',
+                        left: '10px',
+                        height: '65px',
+                        opacity: indexingResult ? 1 : 0,
+                        transition: 'opacity 0.5s ease-in-out',
+                        pointerEvents: 'none',
+                        zIndex: 1,
+                    }}
+                />
                 <Clock color={aiTextColor} />
                 <Terminal history={history} onSendMessage={handleSendMessage} isLoading={isLoading} aiTextColor={aiTextColor} />
             </div>

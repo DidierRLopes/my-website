@@ -3,6 +3,8 @@ import Layout from '@theme/Layout';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import Terminal, { type Message } from '../components/Terminal';
 import { useColorMode } from '@docusaurus/theme-common';
+import ThemedImage from '@theme/ThemedImage';
+import '../../src/css/custom.css';
 
 const CenteredContainer: React.FC<{children: React.ReactNode}> = ({ children }) => (
     <div style={{
@@ -198,7 +200,31 @@ const RAG_SYSTEM_PROMPT = 'When you answer a question that has used context from
 const ChatPage = () => {
   return (
     <Layout title="Chat">
-        <BrowserOnly>{() => <ChatInterface />}</BrowserOnly>
+      <main style={{ padding: '2rem' }}>
+        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <h1>Chat</h1>
+        </div>
+
+        <div className="intelligence-page-desktop">
+          <BrowserOnly>{() => <ChatInterface />}</BrowserOnly>
+        </div>
+
+        <div className="intelligence-page-mobile">
+          <div style={{ textAlign: 'center', padding: '2rem', position: 'relative' }}>
+            <ThemedImage
+              alt="Chat with AI on Desktop"
+              sources={{
+                light: '/img/chat_terminal_mobile_light.png',
+                dark: '/img/chat_terminal_mobile_dark.png',
+              }}
+              style={{ width: '100%', filter: 'blur(2px)' }}
+            />
+            <div className="intelligence-bubble">
+              Chat with my AI on Desktop
+            </div>
+          </div>
+        </div>
+      </main>
     </Layout>
   );
 };
@@ -501,7 +527,6 @@ const ChatInterface = () => {
 
     return (
         <CenteredContainer>
-            <h1 style={{ marginBottom: '2rem' }}>Chat</h1>
             <div style={{ maxWidth: '600px', marginBottom: '2rem' }}>
                 <p style={{ textAlign: 'center' }}>
                     This page allows you to chat with a local AI model running on your machine using Ollama.

@@ -2,6 +2,8 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import ThemedImage from '@theme/ThemedImage';
+import '../../src/css/custom.css';
 
 function IntelligencePage() {
   return (
@@ -21,11 +23,11 @@ function IntelligencePage() {
         />
       </Head>
       <main style={{ padding: '2rem' }}>
+        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+            <h1>Second brain</h1>
+        </div>
         <div className="intelligence-page-desktop">
             <div style={{ width: '60%', margin: '0 auto' }}>
-                <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                    <h1>Second brain</h1>
-                </div>
                 <BrowserOnly fallback={<div>Loading graph...</div>}>
                     {() => {
                         const GraphContainer = require('../components/Intelligence/GraphContainer').default;
@@ -36,22 +38,15 @@ function IntelligencePage() {
         </div>
         <div className="intelligence-page-mobile">
             <div style={{ textAlign: 'center', padding: '2rem', position: 'relative' }}>
-                <img src="/img/second_brain.png" alt="Second Brain" style={{ width: '100%', filter: 'blur(2px)' }} />
-                <div style={{
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    color: 'var(--text-primary)',
-                    fontSize: 'var(--ds-font-size-xl)',
-                    fontWeight: '500',
-                    fontFamily: 'var(--ds-font-primary)',
-                    textTransform: 'uppercase',
-                    letterSpacing: 'var(--ds-letter-spacing)',
-                    padding: '0.5rem 1rem',
-                    backgroundColor: 'rgba(0, 0, 0, 0.4)',
-                    borderRadius: '4px'
-                }}>
+            <ThemedImage
+                alt="Second Brain"
+                sources={{
+                    light: '/img/intelligence_graph_mobile_light.png',
+                    dark: '/img/intelligence_graph_mobile_dark.png',
+                }}
+                style={{ width: '100%', filter: 'blur(2px)' }}
+                />
+                <div className="intelligence-bubble">
                     Visualize my second brain on desktop
                 </div>
             </div>

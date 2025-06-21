@@ -24,7 +24,7 @@ function IntelligencePage() {
         <div className="intelligence-page-desktop">
             <div style={{ width: '60%', margin: '0 auto' }}>
                 <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                    <h1>Intelligence</h1>
+                    <h1>Second brain</h1>
                 </div>
                 <BrowserOnly fallback={<div>Loading graph...</div>}>
                     {() => {

@@ -133,13 +133,13 @@ const IndexingProgress = ({ title, progress, isDark }) => {
                 overflow: 'hidden',
                 maxWidth: 'calc(100% - 20px)'
             }}>
-                {title ? `Indexing: ${title}` : 'Starting...'}
+                {title || 'Starting...'}
             </span>
         </div>
     );
 };
 
-const StyledButton = ({ onClick, disabled, children }) => {
+const StyledButton = ({ onClick, disabled, children, style: propStyle = {} }) => {
     const { colorMode } = useColorMode();
     const isDark = colorMode === 'dark';
 
@@ -153,6 +153,7 @@ const StyledButton = ({ onClick, disabled, children }) => {
         borderRadius: '5px',
         cursor: disabled ? 'not-allowed' : 'pointer',
         transition: 'background-color 0.2s, color 0.2s, border-color 0.2s',
+        ...propStyle
     };
 
     return (
@@ -540,34 +541,44 @@ const ChatInterface = () => {
                     </div>
                 </div>
 
-                <div style={{marginTop: '1rem', display: 'flex', alignItems: 'center' }}>
-                    <label htmlFor="ollama-embedding-model" style={{ minWidth: '110px' }}>Embeddings: </label>
-                    <select
-                        id="ollama-embedding-model"
-                        value={embeddingModel}
-                        onChange={(e) => setEmbeddingModel(e.target.value)}
-                        style={{ width: '250px', marginLeft: '8px' }}
-                        disabled={ollamaStatus !== 'online' || availableEmbeddingModels.length === 0 || indexing}
-                    >
-                        {availableEmbeddingModels.map((m) => (
-                            <option key={m} value={m}>{m}</option>
-                        ))}
-                    </select>
+                <div style={{ marginTop: '1rem', display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+                        <label htmlFor="ollama-embedding-model">Embeddings: </label>
+                        <select
+                            id="ollama-embedding-model"
+                            value={embeddingModel}
+                            onChange={(e) => setEmbeddingModel(e.target.value)}
+                            style={{ width: '250px', marginLeft: '8px' }}
+                            disabled={ollamaStatus !== 'online' || availableEmbeddingModels.length === 0 || indexing}
+                        >
+                            {availableEmbeddingModels.map((m) => (
+                                <option key={m} value={m}>{m}</option>
+                            ))}
+                        </select>
+                    </div>
+                    
+                    <div style={{ marginTop: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+                        <StyledButton 
+                            onClick={handleIndexBlog} 
+                            disabled={indexing || ollamaStatus !== 'online'}
+                            style={{ visibility: indexing ? 'hidden' : 'visible' }}
+                        >
+                            Index my blog
+                        </StyledButton>
+                        
+                        {indexing ? (
+                            <div style={{ width: '50%', marginLeft: '1rem' }}>
+                                <IndexingProgress title={currentlyIndexing} progress={progress} isDark={isDark} />
+                            </div>
+                        ) : (
+                            indexingResult && (
+                                <span style={{ fontSize: '0.8em', color: isDark ? '#AAA' : '#555', marginLeft: '1rem' }}>
+                                    {indexingResult.count} posts indexed at {indexingResult.timestamp?.toLocaleTimeString()}
+                                </span>
+                            )
+                        )}
+                    </div>
                 </div>
-                
-                <div style={{ marginTop: '1rem' }}>
-                    <StyledButton onClick={handleIndexBlog} disabled={indexing || ollamaStatus !== 'online'}>
-                        Index my blog
-                    </StyledButton>
-                    {indexingResult && !indexing && (
-                        <span style={{ fontSize: '0.8em', color: isDark ? '#AAA' : '#555', marginLeft: '1rem' }}>
-                            {indexingResult.count} posts indexed at {indexingResult.timestamp?.toLocaleTimeString()}
-                        </span>
-                    )}
-                </div>
-                {indexing && (
-                    <IndexingProgress title={currentlyIndexing} progress={progress} isDark={isDark} />
-                )}
             </div>
 
             <div style={{ position: 'relative', width: '60%', marginTop: '4rem' }}>
@@ -578,7 +589,7 @@ const ChatInterface = () => {
                         position: 'absolute',
                         bottom: 'calc(100% - 15px)',
                         left: '10px',
-                        height: '65px',
+                        height: '130px',
                         opacity: !indexingResult ? 1 : 0,
                         transition: 'opacity 0.5s ease-in-out',
                         pointerEvents: 'none',
@@ -586,10 +597,10 @@ const ChatInterface = () => {
                     }}
                 />
                 <div
-                    className="speech-bubble"
+                    className="thought-bubble"
                     style={{
-                        bottom: 'calc(100% + 20px)',
-                        left: '60px',
+                        bottom: 'calc(100% + 75px)',
+                        left: '110px',
                         opacity: !indexingResult ? 1 : 0,
                     }}
                 >
@@ -602,7 +613,7 @@ const ChatInterface = () => {
                         position: 'absolute',
                         bottom: 'calc(100% - 15px)',
                         left: '10px',
-                        height: '65px',
+                        height: '130px',
                         opacity: indexingResult ? 1 : 0,
                         transition: 'opacity 0.5s ease-in-out',
                         pointerEvents: 'none',
@@ -610,10 +621,10 @@ const ChatInterface = () => {
                     }}
                 />
                 <div
-                    className="speech-bubble"
+                    className="thought-bubble"
                     style={{
-                        bottom: 'calc(100% + 20px)',
-                        left: '60px',
+                        bottom: 'calc(100% + 75px)',
+                        left: '110px',
                         opacity: indexingResult ? 1 : 0,
                     }}
                 >

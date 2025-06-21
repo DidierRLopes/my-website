@@ -854,12 +854,12 @@ article header h1 {
   }
 }
 
-.speech-bubble {
+.thought-bubble {
   position: absolute;
   background: var(--background-secondary);
   border: 2px solid var(--text-primary);
-  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  padding: 8px 15px;
+  border-radius: 50%;
+  padding: 10px 15px;
   font-family: var(--ds-font-primary);
   color: var(--text-primary);
   font-size: 14px;
@@ -869,19 +869,29 @@ article header h1 {
   z-index: 2;
   transition: opacity 0.5s ease-in-out;
   pointer-events: none;
-  transform: rotate(-2deg);
+  transform: rotate(-4deg);
 }
 
-.speech-bubble::after {
+.thought-bubble::before,
+.thought-bubble::after {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 0;
-  width: 0;
-  height: 0;
-  border: 12px solid transparent;
-  border-right-color: var(--text-primary);
-  border-left: 0;
-  margin-top: -6px;
-  margin-left: -14px;
+  background: var(--background-secondary);
+  border: 2px solid var(--text-primary);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.thought-bubble::before {
+  width: 15px;
+  height: 15px;
+  top: 20px;
+  left: -20px;
+}
+
+.thought-bubble::after {
+  width: 10px;
+  height: 10px;
+  top: 30px;
+  left: -35px;
 }

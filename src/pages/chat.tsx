@@ -378,7 +378,7 @@ const ChatInterface = () => {
                 console.log('Best match found:', bestMatch);
 
                 // 3. Augment the prompt with the context
-                if (bestMatch && bestMatch.score > 0.5 && bestMatch.url) { // Similarity threshold
+                if (bestMatch && bestMatch.score > 0.6 && bestMatch.url) { // Similarity threshold
                     finalPrompt = `Based on the following context, please answer the user's question.\n\nContext:\n---\n${bestMatch.content}\n---\n\nQuestion:\n${message}`;
                     systemPrompt = `${GENERAL_SYSTEM_PROMPT} ${RAG_SYSTEM_PROMPT.replace('blog_url', bestMatch.url)}`;
                 }
@@ -390,8 +390,16 @@ const ChatInterface = () => {
             }
         }
 
+        const conversationHistory = history
+            .filter(h => (h.sender === 'user' || h.sender === 'ai'))
+            .map(h => ({
+                role: h.sender === 'ai' ? 'assistant' : 'user' as const,
+                content: h.text.trim(),
+            }));
+
         const messages = [
             { role: 'system', content: systemPrompt },
+            ...conversationHistory,
             { role: 'user', content: finalPrompt }
         ];
 
@@ -434,7 +442,11 @@ const ChatInterface = () => {
                 setHistory(prev => {
                     if (prev.length > 0 && prev[prev.length - 1].sender === 'ai') {
                         const lastMessage = prev[prev.length - 1];
-                        if (bestMatch && bestMatch.score > 0.5 && bestMatch.url && bestMatch.title && bestMatch.thumbnail) {
+                        
+                        const aiResponseText = lastMessage.text.toLowerCase();
+                        const confidenceToAnswer = !aiResponseText.includes("haven't written about that topic yet");
+
+                        if (bestMatch && bestMatch.score > 0.6 && bestMatch.url && bestMatch.title && bestMatch.thumbnail && confidenceToAnswer) {
                             sourceForMessage = {
                                 url: bestMatch.url,
                                 title: bestMatch.title,

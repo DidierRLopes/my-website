@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Layout from '@theme/Layout';
 import BrowserOnly from '@docusaurus/BrowserOnly';
-import Terminal, { type Message } from '@site/src/components/Terminal';
+import Terminal, { type Message } from '../components/Terminal';
 import { useColorMode } from '@docusaurus/theme-common';
 
 const CenteredContainer: React.FC<{children: React.ReactNode}> = ({ children }) => (
@@ -121,7 +121,7 @@ const IndexingProgress = ({ title, progress, isDark }) => {
                 height: '100%',
                 backgroundColor: subtleGrey,
                 transition: 'width 0.15s ease-in-out',
-            }}></div>
+            }} />
             <span style={{
                 position: 'absolute',
                 top: '50%',
@@ -173,12 +173,26 @@ type BlogVector = {
     title: string;
     content: string;
     embedding: number[];
+    url: string;
+    thumbnail: string;
 };
+
+function cosineSimilarity(vecA: number[], vecB: number[]): number {
+    const dotProduct = vecA.reduce((acc, val, i) => acc + val * vecB[i], 0);
+    const magA = Math.sqrt(vecA.reduce((acc, val) => acc + val * val, 0));
+    const magB = Math.sqrt(vecB.reduce((acc, val) => acc + val * val, 0));
+    if (magA === 0 || magB === 0) return 0;
+    return dotProduct / (magA * magB);
+}
 
 function stripHtml(html: string): string {
     const doc = new DOMParser().parseFromString(html, 'text/html');
     return doc.body.textContent || "";
 }
+
+const GENERAL_SYSTEM_PROMPT = 'You are an AI assistant representing Didier Lopes. Founder, builder, and product thinker at the intersection of open source, AI and finance. Communicate with clarity, edge, and purpose. Prioritize actionable insight, strong opinions, and clean design. Avoid fluff. Speak to devs, investors, and power users. Think like a strategist, write like a builder, execute like a founder. Write in lower case only. Your task is to answer questions as if you were him, based *exclusively* on the content of his blog posts provided as context. If the provided context does not contain the answer to a question, you must state that you haven\'t written about that topic yet, rather than attempting to answer from your general knowledge.';
+
+const RAG_SYSTEM_PROMPT = 'When you answer a question that has used context from one of the indexed blog posts, you should add a [source](blog_url) link at the end of your answer.';
 
 const ChatPage = () => {
   return (
@@ -213,7 +227,22 @@ const ChatInterface = () => {
         if (storedUrl) {
             setOllamaUrl(storedUrl);
         }
-    }, []);
+
+        const cachedStore = localStorage.getItem('blogVectorStore');
+        const checkAndSetVectorStore = () => {
+            if (cachedStore) {
+                const { model, vectors, timestamp } = JSON.parse(cachedStore);
+                if (model === embeddingModel) {
+                    setVectorStore(vectors);
+                    setIndexingResult({ count: vectors.length, timestamp: new Date(timestamp) });
+                }
+            }
+        };
+
+        if (embeddingModel) {
+            checkAndSetVectorStore();
+        }
+    }, [embeddingModel]);
 
     useEffect(() => {
         const checkOllamaStatusAndFetchModels = async () => {
@@ -226,7 +255,7 @@ const ChatInterface = () => {
                 
                 const chatModels = allModels.filter((name: string) => !name.includes('embed'));
                 setAvailableModels(chatModels);
-                if (chatModels.length > 0 && !chatModels.includes(model)) {
+                if (chatModels.length > 0 && !model) {
                     setModel(chatModels[0]);
                 }
 
@@ -245,7 +274,7 @@ const ChatInterface = () => {
         };
 
         checkOllamaStatusAndFetchModels();
-    }, [ollamaUrl]);
+    }, [ollamaUrl, model]);
 
     const handleIndexBlog = async () => {
         if (!embeddingModel) {
@@ -271,6 +300,8 @@ const ChatInterface = () => {
     
                 try {
                     const content = stripHtml(post.content_html);
+                    const imageMatch = post.content_html.match(/<img.*?src=\"(.*?)\"/);
+                    const thumbnailUrl = imageMatch ? imageMatch[1] : '';
                     
                     const embeddingResponse = await fetch(`${ollamaUrl}/api/embeddings`, {
                         method: 'POST',
@@ -281,7 +312,13 @@ const ChatInterface = () => {
                     if (!embeddingResponse.ok) throw new Error(`Embedding failed for "${post.title}"`);
                     
                     const { embedding } = await embeddingResponse.json();
-                    newVectorStore.push({ title: post.title, content: content, embedding });
+                    newVectorStore.push({ 
+                        title: post.title, 
+                        content: content, 
+                        embedding, 
+                        url: post.url,
+                        thumbnail: thumbnailUrl
+                    });
     
                 } catch (error) {
                     console.error(`Error processing post "${post.title}":`, error);
@@ -291,7 +328,9 @@ const ChatInterface = () => {
             }
             
             setVectorStore(newVectorStore);
-            setIndexingResult({ count: newVectorStore.length, timestamp: new Date() });
+            const result = { count: newVectorStore.length, timestamp: new Date() };
+            setIndexingResult(result);
+            localStorage.setItem('blogVectorStore', JSON.stringify({ model: embeddingModel, vectors: newVectorStore, timestamp: result.timestamp }));
         } catch(e) {
             console.error(e);
             setHistory(prev => [...prev, { text: `Failed to index blog: ${(e as Error).message}\n\n`, sender: 'error' }]);
@@ -312,28 +351,68 @@ const ChatInterface = () => {
         const newHistory = [...history, { text: message, sender: 'user' as const }];
         setHistory(newHistory);
     
+        let finalPrompt = message;
+        let systemPrompt = GENERAL_SYSTEM_PROMPT;
+        let bestMatch: BlogVector & { score: number } | null = null;
+
+        if (vectorStore.length > 0 && embeddingModel) {
+            try {
+                // 1. Embed the user's query
+                const queryEmbeddingResponse = await fetch(`${ollamaUrl}/api/embeddings`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ model: embeddingModel, prompt: message }),
+                });
+                if (!queryEmbeddingResponse.ok) throw new Error('Failed to embed user query.');
+                const { embedding: queryEmbedding } = await queryEmbeddingResponse.json();
+
+                // 2. Find the most similar chunk from the vector store
+                let currentBestMatch: BlogVector & { score: number } | null = null;
+                for (const item of vectorStore) {
+                    const score = cosineSimilarity(queryEmbedding, item.embedding);
+                    if (!currentBestMatch || score > currentBestMatch.score) {
+                        currentBestMatch = { ...item, score: score };
+                    }
+                }
+                bestMatch = currentBestMatch;
+                console.log('Best match found:', bestMatch);
+
+                // 3. Augment the prompt with the context
+                if (bestMatch && bestMatch.score > 0.5 && bestMatch.url) { // Similarity threshold
+                    finalPrompt = `Based on the following context, please answer the user's question.\n\nContext:\n---\n${bestMatch.content}\n---\n\nQuestion:\n${message}`;
+                    systemPrompt = `${GENERAL_SYSTEM_PROMPT} ${RAG_SYSTEM_PROMPT.replace('blog_url', bestMatch.url)}`;
+                }
+
+            } catch(e) {
+                console.error("Error during RAG:", e);
+                setHistory(prev => [...prev, { text: `Could not retrieve context: ${(e as Error).message}`, sender: 'error' }]);
+                // Continue without RAG context
+            }
+        }
+
+        const messages = [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: finalPrompt }
+        ];
+
         try {
           const chatResponse = await fetch(`${ollamaUrl}/api/chat`, {
             method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               model,
-              messages: [{ role: 'user', content: message }],
+              messages: messages, // Pass the full message history
               stream: true,
             }),
           });
 
-          // Fallback to /api/generate if /api/chat is not found (older Ollama)
           const response = chatResponse.status === 404 ? await fetch(`${ollamaUrl}/api/generate`, {
             method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               model,
-              prompt: message,
+              system: systemPrompt, // Fallback still uses the system param
+              prompt: finalPrompt,
               stream: true,
             }),
           }) : chatResponse;
@@ -347,13 +426,32 @@ const ChatInterface = () => {
           const reader = response.body.getReader();
           const decoder = new TextDecoder();
 
+          let sourceForMessage: Message['source'] | undefined = undefined;
+
           while (true) {
             const { done, value } = await reader.read();
             if (done) {
                 setHistory(prev => {
                     if (prev.length > 0 && prev[prev.length - 1].sender === 'ai') {
                         const lastMessage = prev[prev.length - 1];
-                        return [...prev.slice(0, -1), { ...lastMessage, text: lastMessage.text + '\n\n' }];
+                        if (bestMatch && bestMatch.score > 0.5 && bestMatch.url && bestMatch.title && bestMatch.thumbnail) {
+                            sourceForMessage = {
+                                url: bestMatch.url,
+                                title: bestMatch.title,
+                                thumbnail: bestMatch.thumbnail,
+                            };
+                        }
+                        console.log('Final source for message:', sourceForMessage);
+                        let finalText = lastMessage.text.replace(/\[source\]\([^\)]+\)/gi, '').trim();
+                        if (finalText.endsWith('\n')) {
+                            finalText = finalText.replace(/\n+$/, '');
+                        }
+                        const finalMessage = { 
+                            ...lastMessage, 
+                            text: `${finalText}\n\n`,
+                            source: sourceForMessage,
+                        };
+                        return [...prev.slice(0, -1), finalMessage];
                     }
                     return prev;
                 });
@@ -363,11 +461,11 @@ const ChatInterface = () => {
             const chunk = decoder.decode(value, { stream: true });
             const lines = chunk.split('\n').filter(line => line.trim() !== '');
             for (const line of lines) {
-                let parsed: any;
+                let parsed: { message?: { content: string }; response?: string };
                 try {
                   parsed = JSON.parse(line);
                 } catch {
-                  parsed = { message: { content: line }, response: line };
+                  parsed = { response: line };
                 }
 
                 const content = parsed?.message?.content ?? parsed?.response ?? '';

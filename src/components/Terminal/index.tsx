@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useColorMode } from '@docusaurus/theme-common';
+import Source from './Source';
 
 const getWeatherIcon = (forecast: string): string => {
     const lowerCaseForecast = forecast.toLowerCase();
@@ -79,6 +80,11 @@ const Clock = () => {
 export type Message = {
     text: string;
     sender: 'user' | 'ai' | 'error';
+    source?: {
+        url: string;
+        title: string;
+        thumbnail: string;
+    }
 };
 
 interface TerminalProps {
@@ -153,7 +159,7 @@ export const Terminal = ({ history, onSendMessage, isLoading, aiTextColor }: Ter
 
     React.useEffect(() => {
         endOfMessagesRef.current?.scrollIntoView({ behavior: 'smooth' });
-    }, [history]);
+    });
 
     React.useEffect(() => {
         if (!isLoading) {
@@ -205,11 +211,24 @@ export const Terminal = ({ history, onSendMessage, isLoading, aiTextColor }: Ter
             </style>
             <div id="terminal-container" style={terminalStyle}>
                 <div style={contentStyle}>
-                    {history.map((line, index) => (
-                        <div key={`${line.sender}-${line.text}-${index}`} style={getSenderStyle(line.sender)}>
-                            {line.sender === 'user' ? `> ${line.text}` : line.text}
-                        </div>
-                    ))}
+                    {history.map((line, index) => {
+                        const key = `${line.sender}-${line.text.slice(0, 20)}-${index}`;
+                        if (line.sender === 'ai') {
+                            return (
+                                <div key={key} style={{ position: 'relative', marginBottom: '1em' }}>
+                                    <div style={getSenderStyle(line.sender)}>
+                                        {line.text}
+                                    </div>
+                                    {line.source && <Source {...line.source} />}
+                                </div>
+                            );
+                        }
+                        return (
+                            <div key={key} style={getSenderStyle(line.sender)}>
+                                {line.sender === 'user' ? `> ${line.text}` : line.text}
+                            </div>
+                        );
+                    })}
                     {!isLoading && (
                         <div style={inputLineStyle}>
                             <span style={promptStyle}>&gt;</span>

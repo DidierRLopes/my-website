@@ -5,6 +5,7 @@ import Terminal, { type Message } from '../components/Terminal';
 import { useColorMode } from '@docusaurus/theme-common';
 import ThemedImage from '@theme/ThemedImage';
 import '../../src/css/custom.css';
+import ExternalLinkIcon from '../components/ExternalLinkIcon';
 
 const CenteredContainer: React.FC<{children: React.ReactNode}> = ({ children }) => (
     <div style={{
@@ -247,34 +248,18 @@ const CheckIcon = ({ color = 'currentColor', size = 16 }) => (
 const CommandSnippet = ({ command }: { command: string }) => {
     const { colorMode } = useColorMode();
     const isDark = colorMode === 'dark';
-    const [copied, setCopied] = React.useState(false);
-
-    const handleCopy = () => {
-        if (navigator.clipboard) {
-            navigator.clipboard.writeText(command);
-            setCopied(true);
-            setTimeout(() => setCopied(false), 2000);
-        }
-    };
 
     const wrapperStyle = {
-        backgroundColor: isDark ? 'rgba(0, 0, 0, 0.3)' : 'rgba(0, 0, 0, 0.05)',
-        padding: '1rem',
-        borderRadius: '8px',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-between',
-        marginTop: '1rem',
+        marginTop: '0.5rem',
         fontFamily: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
-        color: isDark ? '#E0E0E0' : '#111',
-        border: `1px solid ${isDark ? '#555' : '#DDD'}`,
-        position: 'relative' as const,
     };
 
     const codeStyle = {
         color: isDark ? '#82dffc' : '#005cc5',
         fontWeight: 'bold' as const,
-        fontSize: '1.05em',
+        fontSize: '0.85em',
         whiteSpace: 'pre-wrap' as const,
         wordBreak: 'break-all' as const,
     };
@@ -282,13 +267,6 @@ const CommandSnippet = ({ command }: { command: string }) => {
     return (
         <div style={wrapperStyle}>
             <code style={codeStyle}>$ {command}</code>
-            <StyledButton 
-                onClick={handleCopy} 
-                disabled={copied}
-                style={{ padding: '8px 10px', lineHeight: 0 }}
-            >
-                {copied ? <CheckIcon color="#28a745" /> : <CopyIcon color={isDark ? '#EEE' : '#333'} />}
-            </StyledButton>
         </div>
     );
 };
@@ -382,13 +360,17 @@ const OllamaSetupInstructions = () => {
         padding: '1.5rem',
         margin: '0.5rem',
         flex: 1,
-        textAlign: 'center' as const,
+        textAlign: 'left' as const,
         backgroundColor: isDark ? '#1C1C1C' : '#F9F9F9',
         display: 'flex',
         flexDirection: 'column' as const,
         justifyContent: 'space-between'
     };
     
+    const headingStyle = {
+        color: isDark ? 'white' : 'inherit'
+    };
+
     const codeStyle = {
         backgroundColor: isDark ? '#333' : '#EEE',
         padding: '0.5rem 1rem',
@@ -402,40 +384,148 @@ const OllamaSetupInstructions = () => {
 
     return (
         <div style={{ width: '80%', marginTop: '4rem' }}>
-            <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Get Started</h2>
+            <div style={{ 
+                display: 'flex', 
+                flexDirection: 'column',
+                alignItems: 'center', 
+                justifyContent: 'center', 
+                marginBottom: '2rem',
+                gap: '1rem'
+            }}>
+                <img
+                    src="/img/ollama.svg"
+                    alt="Ollama Logo"
+                    style={{
+                        height: '50px',
+                        filter: isDark ? 'invert(1)' : 'none',
+                    }}
+                />
+                <h2>Get Started with Ollama</h2>
+            </div>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'stretch', gap: '1rem' }}>
                 <div style={panelStyle}>
                     <div>
-                        <img
-                            src="/img/ollama.svg"
-                            alt="Ollama Logo"
-                            style={{
-                                height: '40px',
-                                marginBottom: '1rem',
-                                filter: isDark ? 'invert(1)' : 'none',
-                            }}
-                        />
-                        <h3>Step 1: Download Ollama</h3>
-                        <p>Get Ollama for your OS to run models locally.</p>
+                        <div style={{ marginBottom: '1rem' }}>
+                            <h3 style={headingStyle}>Step 1: Install Ollama</h3>
+                        </div>
+                        <p style={{ marginBottom: '1rem' }}>Download Ollama so you can run models (and embeddings) locally (and securely).</p>
                     </div>
-                    <a href="https://ollama.com/" target="_blank" rel="noopener noreferrer">
-                        <StyledButton onClick={() => {}} disabled={false}>Download from Ollama.com</StyledButton>
+                    <a
+                        href="https://ollama.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            textDecoration: 'underline',
+                            color: isDark ? '#93c5fd' : '#1e40af',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '4px'
+                        }}>
+                        Go to ollama.com
+                        <ExternalLinkIcon />
                     </a>
                 </div>
                 <div style={panelStyle}>
                     <div>
-                        <h3>Step 2: Pull a Model</h3>
-                        <p>Open your terminal and run this command to get the chat model.</p>
+                        <div style={{ marginBottom: '1rem' }}>
+                            <h3 style={headingStyle}>Step 2: Chat Model</h3>
+                        </div>
+                        <p style={{ marginBottom: '1rem' }}>Open your terminal and run this command to get the chat model of your choice.</p>
                     </div>
-                    <CommandSnippet command="ollama pull llama3.1:8b" />
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <p style={{ margin: 0, display: 'flex', alignItems: 'center', height: '100%' }}>e.g.</p>
+                        <CommandSnippet command="ollama pull llama3.2:3b" />
+                    </div>
                 </div>
                 <div style={panelStyle}>
                     <div>
-                        <h3>Step 3: Pull Embeddings</h3>
-                        <p>For the AI to understand my blog posts, run this command.</p>
+                        <div style={{ marginBottom: '1rem' }}>
+                            <h3 style={headingStyle}>Step 3: Embedding Model</h3>
+                        </div>
+                        <p style={{ marginBottom: '1rem' }}>For the AI to access my posts as context, we need an embedding model.</p>
                     </div>
-                    <CommandSnippet command="ollama pull mxbai-embed-large" />
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <p style={{ margin: 0, display: 'flex', alignItems: 'center', height: '100%' }}>e.g.</p>
+                        <CommandSnippet command="ollama pull nomic-embed-text" />
+                    </div>
                 </div>
+            </div>
+        </div>
+    );
+};
+
+const ImageModal = ({ isOpen, onClose, sources, alt }: { 
+    isOpen: boolean;
+    onClose: () => void;
+    sources: { light: string; dark: string };
+    alt: string;
+}) => {
+    const { colorMode } = useColorMode();
+    const isDark = colorMode === 'dark';
+
+    if (!isOpen) return null;
+
+    return (
+        <div style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.75)',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            zIndex: 1000,
+            backdropFilter: 'blur(5px)',
+        }}>
+            <div style={{
+                position: 'relative',
+                maxWidth: '90vw',
+                maxHeight: '90vh',
+            }}>
+                <button
+                    onClick={onClose}
+                    type="button"
+                    style={{
+                        position: 'absolute',
+                        top: '20px',
+                        right: '20px',
+                        background: 'none',
+                        border: 'none',
+                        color: isDark ? 'white' : 'black',
+                        fontSize: '24px',
+                        cursor: 'pointer',
+                        padding: 0,
+                        lineHeight: '24px',
+                        height: '24px',
+                        width: '24px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 1001,
+                        transition: 'transform 0.2s ease-in-out',
+                    }}
+                    onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = 'scale(1.2)';
+                    }}
+                    onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = 'scale(1)';
+                    }}
+                >
+                    ✕
+                </button>
+                <ThemedImage
+                    alt={alt}
+                    sources={sources}
+                    style={{
+                        maxWidth: '100%',
+                        maxHeight: '90vh',
+                        objectFit: 'contain',
+                        border: `1px solid ${isDark ? '#444' : '#CCC'}`,
+                        borderRadius: '8px',
+                    }}
+                />
             </div>
         </div>
     );
@@ -443,40 +533,56 @@ const OllamaSetupInstructions = () => {
 
 const HowItWorks = () => {
     const audioRef = React.useRef<HTMLAudioElement>(null);
-    const [wavSupport, setWavSupport] = React.useState<string>('');
-
-    React.useEffect(() => {
-        if (audioRef.current) {
-            const result = audioRef.current.canPlayType('audio/wav');
-            if (result === 'probably') {
-                setWavSupport('Your browser fully supports .wav files.');
-            } else if (result === 'maybe') {
-                setWavSupport('Your browser may be able to play .wav files.');
-            } else {
-                setWavSupport('Your browser does not support .wav files.');
-            }
-        }
-    }, []);
+    const [isModalOpen, setIsModalOpen] = React.useState(false);
+    const [imageScale, setImageScale] = React.useState(1);
 
     return (
         <div style={{ width: '80%', marginTop: '4rem', textAlign: 'center' }}>
             <h2>How It Works</h2>
-            <p style={{ margin: '1rem auto', maxWidth: '80ch' }}>When you ask a question, it's converted into an embedding and compared against a vector store of my blog posts. The most relevant post is injected as context for the AI to answer your question. This is a technique called Retrieval-Augmented Generation (RAG).</p>
-            <ThemedImage
-              alt="Sequence diagram showing the RAG process"
-              sources={{
-                light: '/img/lifeline_sequence_diagram_light.png',
-                dark: '/img/lifeline_sequence_diagram_dark.png',
-              }}
-              style={{ width: '100%', marginTop: '1rem', border: '1px solid #444', borderRadius: '8px' }}
+            <p style={{ margin: '1rem auto', maxWidth: '100ch' }}>This is your typical RAG setup. <br /><br />When you ask a question, it's converted into an embedding and compared against a vector store of chunks from my blog posts. The most relevant chunks (in this embedding space) are injected as context (as text) for the AI to answer your question.</p>
+            <div 
+                onClick={() => setIsModalOpen(true)}
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        setIsModalOpen(true);
+                    }
+                }}
+                role="button"
+                tabIndex={0}
+                style={{ cursor: 'pointer' }}
+            >
+                <ThemedImage
+                    alt="Sequence diagram showing the RAG process"
+                    sources={{
+                        light: '/img/lifeline_sequence_diagram_light.png',
+                        dark: '/img/lifeline_sequence_diagram_dark.png',
+                    }}
+                    style={{ 
+                        width: '80%', 
+                        marginTop: '1rem', 
+                        border: '1px solid #444', 
+                        borderRadius: '8px',
+                        transform: `scale(${imageScale})`,
+                        transition: 'transform 0.2s ease-in-out'
+                    }}
+                />
+            </div>
+            <ImageModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                sources={{
+                    light: '/img/lifeline_sequence_diagram_light.png',
+                    dark: '/img/lifeline_sequence_diagram_dark.png',
+                }}
+                alt="Sequence diagram showing the RAG process"
             />
-            <h3 style={{ marginTop: '2rem', marginBottom: '1rem' }}>Listen to an explanation</h3>
-            <audio ref={audioRef} controls style={{ width: '100%' }}>
-                <source src="/audio/ollama_notebooklm.wav" type="audio/wav" />
-                <track kind="captions" />
-                Your browser does not support the audio element.
-            </audio>
-            {wavSupport && <p style={{ fontSize: '0.8em', marginTop: '0.5rem' }}>{wavSupport}</p>}
+            <p style={{ margin: '1rem auto', maxWidth: '100ch' }}>If this is still confusing, I created a small podcast on notebookLM that explains what is going on.</p>
+            <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                <audio ref={audioRef} controls style={{ width: '50%' }}>
+                    <source src="/audio/ollama_notebooklm.wav" type="audio/wav" />
+                    <track kind="captions" />
+                </audio>
+            </div>
         </div>
     );
 };
@@ -866,6 +972,16 @@ const ChatInterface = () => {
             </div>
 
             <OllamaSetupInstructions />
+            <p style={{ 
+                textAlign: 'center',
+                margin: '1rem 0.5rem',
+                fontSize: '0.9em',
+                color: isDark ? '#AAA' : '#555'
+            }}>
+                Run Ollama app in the background. By default, it utilizes <a href="http://localhost:11434/" target="_blank" rel="noopener noreferrer" style={{ color: isDark ? '#93c5fd' : '#1e40af', textDecoration: 'underline' }}>http://localhost:11434/</a>
+                <br />
+                Visit that URL to confirm you get a <strong>"Ollama is running"</strong> message.
+            </p>
             <HowItWorks />
         </CenteredContainer>
     );

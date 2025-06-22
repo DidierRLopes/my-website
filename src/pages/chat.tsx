@@ -381,6 +381,61 @@ const OllamaSetupInstructions = () => {
         color: isDark ? '#E0E0E0' : '#111',
         border: `1px solid ${isDark ? '#444' : '#DDD'}`
     };
+    
+    type Tab = 'mac' | 'windows' | 'linux';
+
+    const detectOS = (): Tab => {
+        if (typeof navigator !== 'undefined') {
+            const platform = navigator.platform?.toLowerCase() || '';
+            const ua = navigator.userAgent?.toLowerCase() || '';
+            if (platform.includes('mac') || ua.includes('mac')) return 'mac';
+            if (platform.includes('win') || ua.includes('win')) return 'windows';
+            if (platform.includes('linux') || ua.includes('linux')) return 'linux';
+        }
+        return 'mac'; // default
+    };
+
+    const [activeTab, setActiveTab] = React.useState<Tab>(detectOS);
+
+    const tabStyle = (tab: Tab): React.CSSProperties => ({
+        padding: '0.25rem 0.5rem',
+        border: 'none',
+        borderBottom: `2px solid ${activeTab === tab ? (isDark ? '#93c5fd' : '#1e40af') : 'transparent'}`,
+        backgroundColor: 'transparent',
+        color: isDark ? '#EEE' : '#333',
+        cursor: 'pointer',
+        fontSize: '0.9em',
+        fontWeight: activeTab === tab ? 'bold' : 'normal',
+        transition: 'border-color 0.2s',
+    });
+    
+    const renderInstructions = () => {
+        switch (activeTab) {
+            case 'mac':
+                return (
+                    <div>
+                        <p style={{ margin: '0.5rem 0' }}>Run in Terminal then restart Ollama:</p>
+                        <CommandSnippet command='launchctl setenv OLLAMA_ORIGINS "https://didierlopes.com"' />
+                    </div>
+                );
+            case 'windows':
+                return (
+                    <div>
+                        <p style={{ margin: '0.5rem 0' }}>Run in PowerShell (Admin) then restart Ollama:</p>
+                        <CommandSnippet command='setx OLLAMA_ORIGINS "https://didierlopes.com" /m' />
+                    </div>
+                );
+            case 'linux':
+                return (
+                    <div>
+                        <p style={{ margin: '0.5rem 0' }}>Add this to your systemd unit, then restart the service:</p>
+                        <CommandSnippet command="sudo systemctl edit ollama.service" />
+                        <pre style={{ background: isDark ? '#111' : '#EEE', padding: '0.5rem', borderRadius: '4px', marginTop: '0.5rem', fontSize: '0.85em' }}>[Service]<br/>Environment="OLLAMA_ORIGINS=https://didierlopes.com"</pre>
+                        <CommandSnippet command="sudo systemctl restart ollama" />
+                    </div>
+                );
+        }
+    };
 
     return (
         <div style={{ width: '80%', marginTop: '4rem' }}>
@@ -450,6 +505,38 @@ const OllamaSetupInstructions = () => {
                     </div>
                 </div>
             </div>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'stretch', gap: '1rem', marginTop: '1rem' }}>
+                <div style={{...panelStyle, justifyContent: 'flex-start'}}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+                        <h3 style={headingStyle}>Step 4: Enable CORS</h3>
+                        <div style={{ display: 'flex', gap: '0.5rem' }}>
+                            <button type='button' onClick={() => setActiveTab('mac')} style={tabStyle('mac')}>macOS</button>
+                            <button type='button' onClick={() => setActiveTab('windows')} style={tabStyle('windows')}>Windows</button>
+                            <button type='button' onClick={() => setActiveTab('linux')} style={tabStyle('linux')}>Linux</button>
+                        </div>
+                    </div>
+                    <p style={{ marginTop: '1rem', marginBottom: '1rem' }}>
+                        By default, browsers block web pages from calling local servers for security reasons. <br />You must explicitly tell Ollama to allow requests from{' '}
+                          <strong style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '4px'
+                        }}>
+                          https://didierlopes.com
+                          </strong>.
+                    </p>
+                    {renderInstructions()}
+                </div>
+            </div>
+            <p style={{ 
+                textAlign: 'center',
+                margin: '1.5rem 0.5rem 0 0.5rem',
+                fontSize: '0.9em',
+                color: isDark ? '#AAA' : '#555'
+            }}>
+                Run the Ollama app in the background, if it was running kill it first so the CORS settings take effect.<br />By default, it uses <a href="http://localhost:11434/" target="_blank" rel="noopener noreferrer" style={{ color: isDark ? '#93c5fd' : '#1e40af', textDecoration: 'underline' }}>http://localhost:11434/</a>.
+                Check the URL to confirm you get an <strong>"Ollama is running"</strong> message.
+            </p>
         </div>
     );
 };
@@ -1004,16 +1091,6 @@ const ChatInterface = () => {
             </div>
 
             <OllamaSetupInstructions />
-            <p style={{ 
-                textAlign: 'center',
-                margin: '1rem 0.5rem',
-                fontSize: '0.9em',
-                color: isDark ? '#AAA' : '#555'
-            }}>
-                Run Ollama app in the background. By default, it utilizes <a href="http://localhost:11434/" target="_blank" rel="noopener noreferrer" style={{ color: isDark ? '#93c5fd' : '#1e40af', textDecoration: 'underline' }}>http://localhost:11434/</a>
-                <br />
-                Visit that URL to confirm you get a <strong>"Ollama is running"</strong> message.
-            </p>
             <HowItWorks />
         </CenteredContainer>
     );

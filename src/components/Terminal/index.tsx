@@ -319,7 +319,7 @@ export const Terminal = ({ history, onSendMessage, isLoading, aiTextColor, onCle
                     isDark ? (
                         <>
                             <div className="portal-gun-animation">
-                                <PortalGunIcon />
+                                <PortalGunIcon size={80} />
                             </div>
                             {portalVisible && (
                                 <div className="portal-animation">
@@ -329,7 +329,7 @@ export const Terminal = ({ history, onSendMessage, isLoading, aiTextColor, onCle
                         </>
                     ) : (
                         <div className="wiping-eraser">
-                            <RubberIcon />
+                            <RubberIcon size={40}/>
                         </div>
                     )
                 )}

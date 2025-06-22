@@ -289,9 +289,9 @@ export const Terminal = ({ history, onSendMessage, isLoading, aiTextColor, onCle
                     .portal-animation {
                         position: absolute;
                         top: 50%;
-                        left: calc(50% - 30px);
+                        left: calc(50% - 180px);
                         z-index: 9;
-                        animation: portal-effect 1.3s ease-in-out forwards 0.2s; /* Delay start slightly */
+                        animation: portal-effect 1.3s ease-in-out; /* Delay start slightly */
                     }
                     
                     .portal-animation img {

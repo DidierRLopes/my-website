@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import type { ChangeEvent, KeyboardEvent } from 'react';
 import Link from '@docusaurus/Link';
 import { useHistory, useLocation } from '@docusaurus/router';
@@ -28,51 +28,60 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
   const history = useHistory();
   const location = useLocation();
 
-  const [searchInput, setSearchInput] = useState(() => {
+  const [searchInput, setSearchInput] = useState('');
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [minReadingTime, setMinReadingTime] = useState<number | undefined>();
+
+  // Effect to set default reading time if not present
+  useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
-    return urlParams.get('search') || '';
-  });
-  const [selectedTags, setSelectedTags] = useState<string[]>(() => {
-    const urlParams = new URLSearchParams(location.search);
-    return urlParams.get('tags')?.split(',').filter(Boolean) || [];
-  });
+    if (!urlParams.has('readingTimeOverMin') && location.pathname.endsWith('/blog')) {
+      const newParams = new URLSearchParams(location.search);
+      newParams.set('readingTimeOverMin', '2');
+      history.replace(`${location.pathname}?${newParams.toString()}`);
+    }
+  }, [location.pathname, location.search, history]);
 
   // Sync state from URL search params
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
-    const searchParam = urlParams.get('search') || '';
-    const tagsParam = urlParams.get('tags')?.split(',').filter(Boolean) || [];
-
-    setSearchInput(searchParam);
-    setSelectedTags(tagsParam);
+    setSearchInput(urlParams.get('search') || '');
+    setSelectedTags(urlParams.get('tags')?.split(',').filter(Boolean) || []);
+    
+    const readingTimeParam = urlParams.get('readingTimeOverMin');
+    if (readingTimeParam) {
+      const time = Number.parseInt(readingTimeParam, 10);
+      setMinReadingTime(Number.isNaN(time) ? undefined : time);
+    } else {
+      setMinReadingTime(undefined);
+    }
   }, [location.search]);
 
-  // Update URL when search or tags change
-  useEffect(() => {
-    const urlParams = new URLSearchParams();
-    const textForUrl = searchInput.trim();
-    if (textForUrl) {
-      urlParams.set('search', textForUrl);
-    } else {
-      urlParams.delete('search');
+  // Function to update URL params
+  const updateUrlParams = useCallback((newParams: Record<string, string | string[] | undefined>) => {
+    const urlParams = new URLSearchParams(location.search);
+    for (const [key, value] of Object.entries(newParams)) {
+      if (value !== undefined && String(value).length > 0) {
+        if (Array.isArray(value)) {
+          urlParams.set(key, value.join(','));
+        } else {
+          urlParams.set(key, String(value));
+        }
+      } else {
+        urlParams.delete(key);
+      }
     }
-    
-    if (selectedTags.length > 0) {
-      urlParams.set('tags', selectedTags.join(','));
-    } else {
-      urlParams.delete('tags');
-    }
-    
-    const newSearch = urlParams.toString();
-    const newUrl = newSearch ? `${location.pathname}?${newSearch}` : location.pathname;
+    history.replace(`${location.pathname}?${urlParams.toString()}`);
+  }, [location.pathname, location.search, history]);
 
-    // Only replace history if the search string differs
-    if (newUrl !== location.pathname + location.search) {
-      history.replace(newUrl);
-    }
-  }, [searchInput, selectedTags, history, location.pathname, location.search]);
+  const handleSearchChange = (value: string) => {
+    updateUrlParams({ search: value });
+  };
+  
+  const handleReadingTimeChange = (value: number | undefined) => {
+    updateUrlParams({ readingTimeOverMin: value?.toString() });
+  };
 
-  // Handle input changes to extract tags and update text search
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     const tagRegex = /tag:(\S+)\s/g;
@@ -86,35 +95,19 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
     });
 
     if (newTags.length > 0) {
-      setSelectedTags(currentTags => [...new Set([...currentTags, ...newTags])]);
+      updateUrlParams({ tags: [...new Set([...selectedTags, ...newTags])] });
     }
 
-    setSearchInput(remainingText);
+    handleSearchChange(remainingText);
   };
 
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       e.preventDefault();
-      const { value } = e.currentTarget;
-      const tagRegex = /tag:(\S+)/g;
-      const newTags: string[] = [];
-
-      const remainingText = value.replace(tagRegex, (match, tag) => {
-        if (tag && !selectedTags.includes(tag)) {
-          newTags.push(tag);
-        }
-        return '';
-      });
-
-      if (newTags.length > 0) {
-        setSelectedTags(currentTags => [...new Set([...currentTags, ...newTags])]);
-      }
-
-      setSearchInput(remainingText);
+      handleInputChange(e as unknown as ChangeEvent<HTMLInputElement>); // Reuse logic
     }
   };
   
-  // Get all unique tags for autocomplete (or other UI features)
   const allTags = Array.from(
     new Set(
       posts.flatMap(post => 
@@ -123,14 +116,12 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
     )
   ).sort();
 
-  // Filter posts based on text search and selected tags
   const filteredPosts = posts.filter((post) => {
-    // Text search (title and description only)
     const textMatch = !searchInput || 
       post?.metadata?.title?.toLowerCase().includes(searchInput.toLowerCase()) ||
-      post?.metadata?.description?.toLowerCase().includes(searchInput.toLowerCase());
+      post?.metadata?.description?.toLowerCase().includes(searchInput.toLowerCase()) ||
+      post.metadata?.tags?.some((tag) => tag.label.toLowerCase().includes(searchInput.toLowerCase()));
     
-    // Tag filtering (must have ALL selected tags)
     const tagMatch = selectedTags.length === 0 || 
       selectedTags.every(selectedTag => 
         post?.metadata?.tags?.some(tag => 
@@ -138,25 +129,55 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
         )
       );
     
-    return textMatch && tagMatch;
+    const readingTimeMatch = minReadingTime === undefined || 
+      (post.metadata.readingTime && post.metadata.readingTime > minReadingTime);
+      
+    return textMatch && tagMatch && readingTimeMatch;
   });
 
-  // Tag manipulation functions
   const toggleTag = (tagLabel: string) => {
-    setSelectedTags(currentTags =>
-      currentTags.includes(tagLabel)
-        ? currentTags.filter(tag => tag !== tagLabel)
-        : [...currentTags, tagLabel]
-    );
+    const newTags = selectedTags.includes(tagLabel)
+      ? selectedTags.filter(tag => tag !== tagLabel)
+      : [...selectedTags, tagLabel];
+    updateUrlParams({ tags: newTags });
   };
 
   const removeTag = (tagLabel: string) => {
-    setSelectedTags(currentTags => currentTags.filter(tag => tag !== tagLabel));
+    const newTags = selectedTags.filter(tag => tag !== tagLabel);
+    updateUrlParams({ tags: newTags });
   };
 
   const clearAllFilters = () => {
-    setSearchInput('');
-    setSelectedTags([]);
+    // Setting params to undefined will clear them
+    updateUrlParams({ search: undefined, tags: undefined, readingTimeOverMin: '2' });
+  };
+
+  const handleReadingTimeKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    // Allow: backspace, delete, tab, escape, enter, arrows, home, end
+    if (
+      [
+        'Backspace',
+        'Delete',
+        'Tab',
+        'Escape',
+        'Enter',
+        'ArrowLeft',
+        'ArrowRight',
+        'Home',
+        'End',
+      ].includes(e.key) ||
+      // Allow: Ctrl/Cmd+A, Ctrl/Cmd+C, Ctrl/Cmd+X, Ctrl/Cmd+V
+      ((e.key === 'a' || e.key === 'c' || e.key === 'x' || e.key === 'v') && (e.ctrlKey === true || e.metaKey === true)) ||
+      // Allow: home, end, left, right, down, up
+      (e.keyCode >= 35 && e.keyCode <= 39)
+    ) {
+      // let it happen, don't do anything
+      return;
+    }
+    // Ensure that it is a number and stop the keypress
+    if (e.key < '0' || e.key > '9') {
+      e.preventDefault();
+    }
   };
 
   if (!posts || !Array.isArray(posts)) {
@@ -172,54 +193,70 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
   return (
     <div className={styles.terminal}>
       <div className={styles.searchContainer}>
-        {/* Enhanced Search Input */}
-        <div className={styles.searchWrapper}>
-          <div className={styles.searchInputContainer}>
-            <input
-              type="text"
-              placeholder='> Search posts... (use tag:name to filter)'
-              className={`${styles.searchInput} ${selectedTags.length > 0 ? styles.searchInputActive : ''}`}
-              value={searchInput}
-              onChange={handleInputChange}
-              onKeyDown={handleKeyDown}
-            />
-            { (searchInput || selectedTags.length > 0) && (
-              <button 
-                type="button"
-                onClick={clearAllFilters}
-                className={styles.clearSearchButton}
-                title="Clear all"
-              >
-                ×
-              </button>
+        <div className={styles.topBar}>
+          <div className={styles.searchWrapper}>
+            <div className={styles.searchInputContainer}>
+              <input
+                type="text"
+                placeholder='> Search posts... (use tag:name to filter)'
+                className={`${styles.searchInput} ${selectedTags.length > 0 ? styles.searchInputActive : ''}`}
+                value={searchInput}
+                onChange={handleInputChange}
+                onKeyDown={handleKeyDown}
+              />
+              { (searchInput || selectedTags.length > 0 || minReadingTime !== undefined) && (
+                <button 
+                  type="button"
+                  onClick={clearAllFilters}
+                  className={styles.clearSearchButton}
+                  title="Clear all"
+                >
+                  ×
+                </button>
+              )}
+            </div>
+            
+            {selectedTags.length > 0 && (
+              <div className={styles.activeFiltersDisplay}>
+                {selectedTags.map(tag => (
+                  <div
+                    key={tag}
+                    className={styles.activeFilterChip}
+                    role="button"
+                    tabIndex={0}
+                    onClick={() => toggleTag(tag)}
+                    onKeyPress={(e) => { if (e.key === 'Enter') toggleTag(tag); }}
+                  >
+                    <span>{tag}</span>
+                    <button 
+                      type="button"
+                      onClick={(e) => { e.stopPropagation(); removeTag(tag); }}
+                      className={styles.removeFilterButton}
+                      title={`Remove ${tag} filter`}
+                    >
+                      ×
+                    </button>
+                  </div>
+                ))}
+              </div>
             )}
           </div>
-          
-          {/* Visual representation of active filters */}
-          {selectedTags.length > 0 && (
-            <div className={styles.activeFiltersDisplay}>
-              {selectedTags.map(tag => (
-                <div
-                  key={tag}
-                  className={styles.activeFilterChip}
-                  role="button"
-                  tabIndex={0}
-                  onClick={() => toggleTag(tag)}
-                  onKeyPress={(e) => { if (e.key === 'Enter') toggleTag(tag); }}
-                >
-                  <span>{tag}</span>
-                  <button 
-                    type="button"
-                    onClick={(e) => { e.stopPropagation(); removeTag(tag); }}
-                    className={styles.removeFilterButton}
-                    title={`Remove ${tag} filter`}
-                  >
-                    ×
-                  </button>
-                </div>
-              ))}
+
+          <div className={styles.readingTimeFilter}>
+            <label htmlFor="reading-time" className="text-lg">≥</label>
+            <div className={styles.readingTimeInputWrapper}>
+              <input
+                type="number"
+                id="reading-time"
+                value={minReadingTime ?? ''}
+                onChange={(e) => handleReadingTimeChange(e.target.value ? Number.parseInt(e.target.value, 10) : undefined)}
+                onKeyDown={handleReadingTimeKeyDown}
+                min="0"
+                className={styles.readingTimeInput}
+              />
+              <span className={styles.readingTimeUnit}>min</span>
             </div>
-          )}
+          </div>
         </div>
       </div>
       {filteredPosts.length > 0 ? (

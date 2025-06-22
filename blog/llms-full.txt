@@ -14971,6 +14971,94 @@ If you'd like to discuss bringing OpenBB to your firm, ping me!
 ---
 
 ---
+slug: 2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators
+title: SEC filings to uncover and track financial and economic indicators
+date: 2025-05-22
+image: /blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators
+tags:
+  - sec-filings
+  - financial-indicators
+  - economic-indicators
+  - openbb
+  - data-analysis
+  - open-source
+  - investment-research
+  - market-trends
+  - dashboard
+description: This post explores how SEC filings can be used to uncover and track financial and economic indicators. It showcases an open-source OpenBB app that visualizes this data, providing valuable insights for investment research and market trend analysis.
+hideSidebar: true
+---
+
+<p align="center">
+    <img width="600" src="/blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators.jpeg" />
+</p>
+
+This post explores how SEC filings can be used to uncover and track financial and economic indicators. It showcases an open-source OpenBB app that visualizes this data, providing valuable insights for investment research and market trend analysis.
+
+<!-- truncate -->
+
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
+
+A few days ago, [Justin Lokos](https://www.linkedin.com/in/justinlokos/) shared a fascinating GitHub repository maintained by [John Friedman](https://www.linkedin.com/in/johngfriedman/) that really caught my attention.
+
+This repository analyzes SEC filings to uncover and track financial and economic indicators across a wide range of sectors.
+
+It can be found [here](https://github.com/john-friedman/datamule-indicators).
+
+It processes topic mentions from regulatory filings and turns them into standardized, sector-level metrics that are updated daily - making it a powerful tool for identifying trends across the economy.
+
+I found the data so compelling that I built and hosted an OpenBB app around it.
+
+<div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1em'}}>
+    <img width="500" src="/blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators_1.jpeg" />
+    <img width="500" src="/blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators_2.jpeg" />
+</div>
+<br />
+
+The app offers a wide range of indexes across key domains, including DEI and ESG in Governance; Tariffs and Supply Chain in Trade; Layoffs in Employment; Outsourcing and Supplier Concentration in Market Dynamics; Consumer Confidence in Consumer Sentiment; Space and Nuclear in Technology; Political Stability in International; IPO in Corporate Finance; Health Research, Health, and Pandemic in Health; various indexes in Resources such as Explosive Materials, Metals, Semiconductor Materials, Propellant Components, Raw Materials, Electronic Components, and Chemicals; and Military Equipment, Terrorism, and War in Military & Security
+
+And then I made it available to everyone.
+
+<p align="center">
+    <img width="300" src="/blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators_3.jpeg" />
+</p>
+
+In fact, I [shared this on LinkedIn](https://www.linkedin.com/posts/didier-lopes_a-few-days-ago-justin-lokos-shared-a-fascinating-activity-7332437330659549185-4jVk?utm_source=share&utm_medium=member_desktop&rcm=ACoAABub6aIBaA7HieEI5VizHglQPohLA_Wptag) and asked people interested on the app to comment and the post got close to 20k impressions.
+
+<p align="center">
+    <img width="400" src="/blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators_4.png" />
+</p>
+
+My friend [Caique](https://www.linkedin.com/in/ca%C3%ADque-cober-117bbb1ab/) does this often and has seen a lot of people asking for the apps from OpenBB.
+
+And here's the template DM I sent to 100+ people interested.
+
+> Hey,
+> <br />
+> Sending you a message based on your comment in the post!
+> <br />
+> 1. Go to https://pro.openbb.co/ and make sure that you have an account - it's free.
+> <br />
+> 2. Then go to this link: https://pro.openbb.co/app?modal=connect-backend&name=Datamule%20Indicator&url=https://openbb-datamule-indicators.fly.dev
+> <br />
+> That should populate a new backend on OpenBB where:
+> <br />
+> - Name: Datamule Indicator
+> - URL: https://openbb-datamule-indicators.fly.dev
+> <br />
+> 3. On the "Apps" tab, click on the "Financial and Economic Indicators" - that should open a dashboard with all the data in one place.
+> <br />
+> All the data should be ready to be interacted with OpenBB Copilot out-of-the-box.
+> <br />
+> If you have any questions ping me!
+
+<br />
+
+Also, if you want to see how I built this app - the full code is open source here: [https://github.com/DidierRLopes/openbb-datamule-indicators](https://github.com/DidierRLopes/openbb-datamule-indicators).
+
+---
+
+---
 slug: 2025-05-28-openbb-is-underrated
 title: OpenBB is underrated
 date: 2025-05-28
@@ -15055,6 +15143,83 @@ We see it as **the fall of the illusion that one-size-fits-all**.
 People don’t always appreciate what we’ve built - until they do. And when they see it - when they feel the control, the extensibility, the raw power, it’s hard to go back.
 
 The infrastructure is already here.
+
+
+---
+
+---
+slug: 2025-06-01-not-your-typical-data-vendor
+title: Not your typical data vendor
+date: 2025-06-01
+image: /blog/2025-06-01-not-your-typical-data-vendor
+tags:
+  - financial-data
+  - api
+  - developer-experience
+  - ai
+  - ai-agents
+  - openbb
+  - data-quality
+  - financial-datasets
+  - sec-filings
+description: This post explores Financial Datasets, a data vendor focused on top-tier developer experience and data quality, with an API built for AI agents.
+hideSidebar: true
+---
+
+<p align="center">
+    <img width="600" src="/blog/2025-06-01-not-your-typical-data-vendor.jpeg" />
+</p>
+
+This post explores Financial Datasets, a data vendor focused on top-tier developer experience and data quality, with an API built for AI agents.
+
+<!-- truncate -->
+
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
+
+There are hundreds, maybe even thousands, of financial data vendors out there.  
+  
+Each with its own flavor of data quality, coverage, automation, business model, developer experience, and pricing.  
+  
+But in such a crowded space, standing out means doing at least one thing 10x better than the rest.  
+  
+Financial Datasets does two:
+  
+1. **Best-in-class developer experience**.
+
+    The API is simple, clean, and fast—not just for humans, but purpose-built for AI agents. As the founder puts it: "Our API is designed for AI financial agents (...)"
+
+2. **Obsessive focus on data quality**.
+
+    The founder personally digs into SEC filings to understand discrepancies between their numbers and those from other vendors. That level of care isn't common. It shows.
+
+<br />
+
+Given all that (and the fact that I play football ⚽️ with the author), I decided to build an OpenBB app powered by this API so you can try it out yourself - and see what data is available.
+
+<div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1em'}}>
+    <img width="500" src="/blog/2025-06-01-not-your-typical-data-vendor_2.jpeg" />
+    <img width="500" src="/blog/2025-06-01-not-your-typical-data-vendor_3.jpeg" />
+</div>
+<br />
+
+Two steps:
+
+    1. Login into [https://pro.openbb.co](https://pro.openbb.co/)  
+    2. Add the app with this link: [https://pro.openbb.co/app?modal=connect-backend&name=Financial%20Datasets&url=https://financial-datasets-openbb.fly.dev](https://pro.openbb.co/app?modal=connect-backend&name=Financial%20Datasets&url=https://financial-datasets-openbb.fly.dev)
+
+<br />
+
+This is the app that you should expect:
+
+<p align="center">
+    <img width="300" src="/blog/2025-06-01-not-your-typical-data-vendor_1.jpeg" />
+</p>
+
+It will be limited to a few tickers that the creator has made accessible for free. 
+
+More information you can check it out at [https://www.financialdatasets.ai/](https://www.financialdatasets.ai/).
+
+Or if you have an API key, you can adapt the source code to support more tickers [here](https://github.com/virattt/openbb-financialdatasets-backend).
 
 
 ---
@@ -15201,6 +15366,91 @@ Note: I recommend to be explicit with the model to utilize MCP.
 That's it. I hope this is helpful.
 
 Happy hacking.
+
+
+---
+
+---
+slug: 2025-06-12-i-just-tested-dia-browser-and-i-have-thoughts
+title: I just tested Dia browser, and I have thoughts
+date: 2025-06-12
+image: /blog/2025-06-12-i-just-tested-dia-browser-and-i-have-thoughts
+tags:
+  - dia-browser
+  - arc-browser
+  - ai
+  - ai-assistant
+  - openbb
+  - tech
+description: Thoughts on Dia browser's AI integration, exploring its similarities with OpenBB Workspace and the role of AI assistants in finance tools.
+hideSidebar: true
+---
+
+<p align="center">
+    <img width="600" src="/blog/2025-06-12-i-just-tested-dia-browser-and-i-have-thoughts.png" />
+</p>
+
+Thoughts on Dia browser's AI integration, exploring its similarities with OpenBB Workspace and the role of AI assistants in finance tools.
+
+<!-- truncate -->
+
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
+
+So I just tested the Dia browser (available today for Arc users).
+
+I actually like the idea.
+
+<p align="center">
+    <img width="600" src="/blog/2025-06-12-i-just-tested-dia-browser-and-i-have-thoughts_1.jpeg" />
+</p>
+
+This is actually similar to the insight we had when we started incorporating AI natively to the OpenBB Workspace - that chatting interface is a path for human interact.
+
+But often it isn't.
+
+Often you want the human in the driving seat, and an AI assistant right there.
+
+It's about the context this AI assistant has access to and what it can do.
+
+It's about having AI having access to the same tools that you have, and allowing you to streamline your workflows.
+
+When putting OpenBB Workspace next to Dia it's easy to understand that the concept is similar.
+
+<p align="center">
+    <img width="600" src="/blog/2025-06-12-i-just-tested-dia-browser-and-i-have-thoughts_2.jpeg" />
+</p>
+
+The main difference, for me, is that our workspace provides a more tight-loop control over your data and interactions. Whereas Dia has a more open nature.
+
+This is a feature, not a bug. We want the AI agent to focus on data that firms want to give their users access to, and often that means that not all data is fair game.
+
+One of the things that I wish they would do (as a current Arc user) is bring the left sidebar back.
+
+<p align="center">
+    <img width="600" src="/blog/2025-06-12-i-just-tested-dia-browser-and-i-have-thoughts_3.jpeg" />
+</p>
+
+In a way, how we structure the workspace - which was actually inspired by Arc :)
+
+We've come full circle on this one.
+
+---
+
+## Slight note update
+
+Although I like the browser, I haven't adopted it yet.
+
+Why?
+
+Well Peer said it perfectly [here](https://x.com/peer_rich/status/1936419182423281699).
+
+<p align="center">
+    <img width="600" src="/blog/2025-06-12-i-just-tested-dia-browser-and-i-have-thoughts_4.png" />
+</p>
+
+It's about whether the company is still around in 1 year or not. Particularly as they are over 100 people and still hiring - without a proven business model, AFAIK?
+
+The irony here is that - had they open source Arc, then I would have trust them to use Dia because if the company ceased to exist, someone would be able to take over the project.
 
 
 ---
@@ -15414,3 +15664,224 @@ He'll just open Replit on his phone, ask the Agent to make the change, preview i
 I've been a fan of Amjad for a long time.
 
 But today I became a true fan of Replit.
+
+
+---
+
+---
+slug: 2025-06-25-humanoid-robots-are-a-waste-of-money
+title: Humanoid robots are a waste of money
+date: 2025-06-25
+image: /blog/2025-06-25-humanoid-robots-are-a-waste-of-money
+tags:
+  - robotics
+  - automation
+  - humanoid-robots
+  - ai
+  - future-of-tech
+  - tesla
+description: Why the obsession around humanoid robots?
+hideSidebar: true
+hide: true
+draft: true
+---
+
+<p align="center">
+    <img width="600" src="/blog/2025-06-25-humanoid-robots-are-a-waste-of-money.png" />
+</p>
+
+Why the obsession around humanoid robots?
+
+<!-- truncate -->
+
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
+
+I have a BSc. in Electrical and Computer Engineering and an MSc. in Control Systems. My O-1 Visa was obtained as an expert in automated systems. Robotics was one of the fields I studied - with projects ranging from a maze runner to a car wash station, warehouse storage optimization, and using Kuka robot arms for precision automation.
+
+So I don't say this lightly, especially as a techno-optimist who's constantly excited and curious about new breakthroughs.
+
+**But: Humanoid robots are a distraction.**
+
+The innovation that matters isn't our form - it's our intelligence.
+
+Our hands? A compromise.
+
+Our bodies? A constraint.
+
+We've just learned to live with them.
+
+**The magic of human capability lies in our minds, not the awkward mechanics we've evolved to navigate the world.**
+
+If we're designing automation from scratch, why copy the worst part of the package?
+
+Look at Waymo. If all you need is "take me to X", why build a steering wheel, pedals, or even a dashboard?So why the obsession with making robots look like us?
+
+A lot of it has nothing to do with performance - and everything to do with us.
+
+**Familiarity. Comfort.**
+
+<p align="center">
+    <img width="600" src="/blog/2025-06-25-humanoid-robots-are-a-waste-of-money_1.png" />
+    <em style={{fontSize: '0.9em'}}>Note: Waymo uses window wipers, not because it is required to function. But for familiarity.</em>
+</p>
+
+**Maybe even power.**
+
+The fantasy isn't that a humanoid robot does chores - it's that it lives among us, obeys us, and asks nothing back. That's Westworld territory.
+
+<p align="center">
+    <img width="600" src="/blog/2025-06-25-humanoid-robots-are-a-waste-of-money_2.png" />
+</p>
+
+And it raises questions less about engineering, and more about ethics.
+
+The same logic applies to home and industrial automation: the goal shouldn't be to replicate humans. It should be to outperform them.
+
+A humanoid robot that walks around your house to do dishes, fold laundry, and make your bed? That's a Jack-of-all-trades, master of none - expensive, slow, and space-hogging.
+
+Meanwhile, we could build five hyper-specialized machines, each optimized for one task, that outperform any humanoid in speed, precision, and efficiency.
+
+And in doing so, we'd probably **reinvent dishwashers, laundry machines, and home workflows entirely.**
+
+The Tesla factory doesn't rely on humanoid robots.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/blW-Fa4a10g?si=q7mXIbRsz5PGCD5n"
+        width="800"
+        height="400"
+    />
+</div>
+<br />
+
+It relies on arms, conveyors, and tightly choreographed systems. Humans are still there, but mostly when:
+
+- Accountability is needed for edge-case quality issues
+- The task is too small or uneconomical to automate yet
+- The task is ad-hoc or non-repeatable
+
+That's not a vote of confidence for humanlike form - it's a sign of where automation hasn't yet reached.
+
+_"But what if a humanoid could vacuum and mop?"_
+
+We already have robots that do that, because they're purpose-built. Not because they need knees.
+
+<p align="center">
+    <img width="600" src="/blog/2025-06-25-humanoid-robots-are-a-waste-of-money_3.png" />
+    <em style={{fontSize: '0.9em'}}>Note: People on X swear by [Matic Robot](https://maticrobots.com/).</em>
+</p>
+
+The future of automation isn't human-shaped.
+
+**It's task-shaped.**
+
+**Context-aware.**
+
+**Invisible.**
+
+General-purpose humanoid robots are a sci-fi fantasy chasing the wrong abstraction.
+
+If you want real-world impact, stop trying to clone us, and **start designing systems that reinvent jobs to be done**.
+
+
+---
+
+---
+slug: 2025-06-xx-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it
+title: We don't own data. But empower those who do or those who have it
+date: 2025-06-30
+image: /blog/2025-06-xx-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it
+tags:
+  - openbb
+  - data
+  - platform-strategy
+  - open-source
+  - ai-agents
+  - workspace
+  - fintech
+  - investment-research
+  - data-vendors
+description: OpenBB isn't a data distributor. We wrote an official statement about this, and I'm providing extra thoughts on the matter here.
+hideSidebar: true
+hide: true
+draft: true
+---
+
+<p align="center">
+    <img width="600" src="/blog/2025-06-xx-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it.png" />
+</p>
+
+OpenBB isn't a data distributor. We wrote an official statement about this, and I'm providing extra thoughts on the matter here.
+
+<!-- truncate -->
+
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
+
+Last October, we announced that OpenBB Workspace had officially left beta.
+
+**But a few months before that, we made a mistake.**
+
+While preparing for the announcement, we had several internal discussions about the best way to help users understand what we were building:
+
+> An open workspace where firms can bring their own data, customize their UI, and use AI agents out of the box - all running on their own premises, with no risk of data leakage.
+
+<br />
+
+To achieve this vision, OpenBB primarily serves two types of users:
+
+- **Developers (or "brave" analysts)**: These users are responsible for bringing data into the workspace. Their "Aha!" moment comes when they realize how quickly they can go from an empty workspace to a fully customized environment, using their own data, organized as they wish, with AI agent workflows layered on top.
+
+- **Analysts/CIOs**: These users conduct research and analytics within the workspace. They are the ones ultimately getting the job done in OpenBB. Our goal is for analysts and CIOs to actively want to use OpenBB, and to advocate internally for their dev teams to build apps on the workspace.
+
+For developers, the onboarding and data integration experience was clearly essential.
+
+But for analysts and CIOs, it was difficult to realize value at signup without any data or AI agents available. They would land in an empty product, an unhelpful first impression.
+
+To address this, we did two things:
+
+- We built the OpenBB Copilot (out-of-the-box AI agent with bring your own key capability).
+
+- Decided to strike a few commercial deals with data vendors, which allowed us to pre-load the workspace with ready-to-use apps, including datasets on equities, macro, options, and some crypto..
+
+Having OpenBB Copilot was fine as an example of an agent, particularly due to the bring-your-own-key capability. Individuals understood this was just an example, and that they could build their own.
+
+However, what we didn't realize was that adding more data was actually hurting our positioning. Users began reaching out with requests for fixed income datasets, complaints about our coverage, and concerns about how financials were reported, to name a few.
+
+But getting into the data business was never our intention.
+
+That's not what we've spent the last three years building.
+
+In fact, it's clearer than ever to us where the real opportunity lies:
+
+- To enable data vendors, without becoming one ourselves.
+- To amplify their datasets, not just through visualization or AI integration. But by unlocking alpha at the intersection of datasets from multiple vendors.
+
+We're now approached weekly by data vendors who want distribution and want their datasets featured on OpenBB.
+
+Why? Because their data is closer to value, closer to insights.
+
+So, going forward, OpenBB will include fewer out-of-the-box datasets.
+
+Our official company statement can be found [here](https://openbb.co/blog/openbb-isnt-a-data-distributor).
+
+But we're not leaving you empty-handed.
+
+We're continuing to add more apps to the [open-source platform](https://github.com/OpenBB-finance/OpenBB).
+
+<p align="center">
+    <img width="600" src="/blog/2025-06-xx-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it_1.png" />
+</p>
+
+Apps you can connect to the Workspace using your own credentials, so you can get started quickly and on your own terms.
+
+We also created a new [solutions page](https://openbb.co/blog/solutions), to show examples of apps that folks can build.
+
+<p align="center">
+    <img width="600" src="/blog/2025-06-xx-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it_2.png" />
+</p>
+
+Most of these are actually open source and you can find the link by clicking on one of the cards and on the GitHub logo.
+
+<p align="center">
+    <img width="600" src="/blog/2025-06-xx-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it_3.png" />
+</p>

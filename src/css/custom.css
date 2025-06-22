@@ -987,7 +987,24 @@ article header h1 {
 }
 
 [data-theme='dark'] .intelligence-bubble {
-  background-color: var(--ds-white);
-  color: var(--ds-black);
-  border-color: var(--ds-black);
+  background-color: rgba(30, 30, 30, 0.85);
+  border-color: #555;
+  color: #f0f0f0;
+}
+
+/* Responsive adjustments for thought and intelligence bubbles */
+@media screen and (max-width: 1200px) {
+  .thought-bubble {
+    font-size: 1.1em;
+    padding: 8px 12px;
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .intelligence-bubble {
+    font-size: 1em;
+    padding: 10px 15px;
+    max-width: 80%;
+  }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from '@docusaurus/router';
 import { useThemeConfig } from '@docusaurus/theme-common';
 import TickerTape from '../TickerTape';
 import PolymarketTape from '../PolymarketTape';
@@ -24,10 +25,21 @@ if (typeof window !== 'undefined') {
 }
 
 export default function CustomFooter() {
+  const location = useLocation();
+  const pagesToHideTapes = ['/intelligence', '/blog', '/chat'];
+
+  const shouldShowTapes = !pagesToHideTapes.some((page) =>
+    location.pathname.startsWith(page),
+  );
+
   return (
     <div className="mt-4">
-      <PolymarketTape />
-      <TickerTape />
+      {shouldShowTapes && (
+        <>
+          <PolymarketTape />
+          <TickerTape />
+        </>
+      )}
       <footer className="bg-[#f8f9fa] dark:bg-[#000] text-[var(--ifm-footer-color)] pb-8">
         <div className="container container-fluid">
           <div className="row flex justify-center items-center">

@@ -7,6 +7,7 @@ export interface BlogItem {
   date_published: string;
   date_modified: string;
   tags: string[];
+  image?: string;
 }
 
 export interface EnrichedBlogItem extends BlogItem {

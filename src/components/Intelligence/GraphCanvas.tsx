@@ -12,6 +12,7 @@ interface GraphNode extends d3.SimulationNodeDatum {
   wordCount: number;
   recencyRatio: number;
   tags: string[];
+  image?: string;
 }
 
 interface GraphLink extends d3.SimulationLinkDatum<GraphNode> {
@@ -60,6 +61,7 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, showTh
       wordCount: item.wordCount,
       recencyRatio: item.recencyRatio,
       tags: item.tags,
+      image: item.image,
       x: width / 2, // Start nodes in the center
       y: height / 2,
     }));
@@ -515,12 +517,26 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, showTh
         const tooltipSelection = d3.select(tooltip);
 
         if (found) {
-            const titleStyle = `font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; margin-bottom: 4px;`;
+            let imageTag = '';
+            if (found.image) {
+                const altText = found.title ? found.title : 'Blog post image';
+                imageTag = `<img src="${found.image}" alt="${altText}" style="width: 60px; height: 60px; object-fit: cover; border-radius: 4px;" />`;
+            }
+
+            const tooltipHtml = `
+                <div>
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                        ${imageTag}
+                        <div style="flex: 1; font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; white-space: normal; word-break: break-word;">${found.title}</div>
+                    </div>
+                    <span style="font-size:0.8rem; white-space: normal; word-break: break-word;">${found.summary.slice(0, 150)}...</span>
+                </div>
+            `;
             tooltipSelection
               .style('display', 'block')
               .style('left', `${mx + 12}px`)
               .style('top', `${my + 12}px`)
-              .html(`<div style="${titleStyle}">${found.title}</div><span style="font-size:0.8rem;">${found.summary.slice(0,150)}...</span>`);
+              .html(tooltipHtml);
         } else {
             tooltipSelection.style('display', 'none');
         }
@@ -590,7 +606,7 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, showTh
           fontSize: '0.85rem',
           display: 'none',
           zIndex: 50,
-          width: '240px',
+          width: '340px',
           border: `1px solid ${colorMode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'}`,
         }}
       />

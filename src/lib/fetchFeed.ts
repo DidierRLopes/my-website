@@ -11,6 +11,12 @@ function countWords(html: string): number {
   return trimmedText.split(/\s+/).length;
 }
 
+function extractImage(html: string): string | undefined {
+    const imgRegex = /<img[^>]+src="([^">]+)"/;
+    const match = html.match(imgRegex);
+    return match ? match[1] : undefined;
+}
+
 export function parseBlogItems(items: BlogItem[]): EnrichedBlogItem[] {
   if (!items || items.length === 0) {
     return [];
@@ -38,6 +44,7 @@ export function parseBlogItems(items: BlogItem[]): EnrichedBlogItem[] {
 
     return {
       ...item,
+      image: extractImage(item.content_html),
       wordCount: countWords(item.content_html),
       colorHue: colorHue,
       recencyRatio: dateRange > 0 ? (dateValue - minDate) / dateRange : 0,

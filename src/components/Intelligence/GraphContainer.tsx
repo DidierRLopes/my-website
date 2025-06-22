@@ -20,7 +20,6 @@ function useDebounce<T>(value: T, delay = 250) {
 const GraphContainer = () => {
     const { data, loading, error } = useBlogFeed();
     const containerRef = useRef<HTMLDivElement>(null);
-    const [dimensions, setDimensions] = useState({ width: 600, height: 420 });
     const [rawSearch, setRawSearch] = useState('');
     const searchQuery = useDebounce(rawSearch, 300);
     const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -30,18 +29,11 @@ const GraphContainer = () => {
     const mountTimeRef = useRef(Date.now());
     const { colorMode } = useColorMode();
 
-    useEffect(() => {
-        function update() {
-            const containerWidth = Math.min(window.innerWidth * 0.8, 800);
-            setDimensions({
-                width: containerWidth,
-                height: containerWidth * 0.7, // 30% smaller height
-            });
-        }
-        update();
-        window.addEventListener('resize', update);
-        return () => window.removeEventListener('resize', update);
-    }, []);
+    const borderColor = colorMode === 'dark' ? 'rgba(251, 191, 36, 0.4)' : 'rgba(0, 0, 0, 0.4)';
+    const borderWidth = '1px';
+    const cornerSize = '36px';
+
+    const dimensions = { width: '100%', height: '500px' };
 
     useEffect(() => {
         return () => {
@@ -111,7 +103,18 @@ const GraphContainer = () => {
 
     const canShowClusters = filteredItems.length >= 7;
 
-    const isMobile = dimensions.width < 640;
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            if (containerRef.current) {
+                setIsMobile(containerRef.current.offsetWidth < 640);
+            }
+        };
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     if (loading) {
         return <div style={{ textAlign: 'center', padding: '4rem' }}>Loading brain...</div>;
@@ -126,7 +129,7 @@ const GraphContainer = () => {
     }
 
     return (
-        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 1rem' }}>
+        <div style={{ width: '100%' }}>
             {isMobile ? (
                 <BlogListFallback items={searchedItems} />
             ) : (
@@ -142,7 +145,45 @@ const GraphContainer = () => {
                         onToggleNodes={() => setShowNodes((v) => !v)}
                     />
                     <div id="intelligence-graph-container" ref={containerRef} 
-                        style={{ width: dimensions.width, height: dimensions.height, border: '1px solid #333', borderRadius: '8px', position: 'relative' }}>
+                        style={{
+                            marginTop: '2rem',
+                            width: dimensions.width,
+                            height: dimensions.height,
+                            borderRadius: '8px',
+                            position: 'relative',
+                            backgroundImage: `radial-gradient(${colorMode === 'dark' ? 'rgba(251, 191, 36, 0.15)' : 'rgba(217, 119, 6, 0.15)'} 1px, transparent 1px)`,
+                            backgroundSize: '16px 16px',
+                        }}>
+                        <div style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            width: cornerSize,
+                            height: cornerSize,
+                            borderTop: `${borderWidth} solid ${borderColor}`,
+                            borderLeft: `${borderWidth} solid ${borderColor}`,
+                            zIndex: 1,
+                        }}/>
+                        <div style={{
+                            position: 'absolute',
+                            top: 0,
+                            right: 0,
+                            width: cornerSize,
+                            height: cornerSize,
+                            borderTop: `${borderWidth} solid ${borderColor}`,
+                            borderRight: `${borderWidth} solid ${borderColor}`,
+                            zIndex: 1,
+                        }}/>
+                        <div style={{
+                            position: 'absolute',
+                            bottom: 0,
+                            left: 0,
+                            width: cornerSize,
+                            height: cornerSize,
+                            borderBottom: `${borderWidth} solid ${borderColor}`,
+                            borderLeft: `${borderWidth} solid ${borderColor}`,
+                            zIndex: 1,
+                        }}/>
                         <div style={{
                             position: 'absolute',
                             top: '0.75rem',
@@ -162,8 +203,8 @@ const GraphContainer = () => {
                         {searchedItems.length > 0 ? (
                             <GraphCanvas 
                                 items={filteredItems} 
-                                width={dimensions.width} 
-                                height={dimensions.height}
+                                width={containerRef.current?.offsetWidth || 0}
+                                height={containerRef.current?.offsetHeight || 0}
                                 showThoughts={true}
                                 showClusters={showClusters && canShowClusters}
                                 showNodes={showNodes}
@@ -199,6 +240,17 @@ const GraphContainer = () => {
                                 No brain activity reported
                             </div>
                         )}
+                        <img 
+                            src={colorMode === 'dark' ? '/img/kaws.webp' : '/img/kawspeely.webp'}
+                            alt="Kaws"
+                            style={{
+                                position: 'absolute',
+                                bottom: '-50px',
+                                right: '-30px',
+                                height: '140px',
+                                zIndex: 10
+                            }}
+                        />
                     </div>
                     <p style={{ 
                         color: colorMode === 'dark' ? '#888888' : '#2c3e50', 

@@ -812,23 +812,30 @@ article header h1 {
 }
 
 @media screen and (min-width: 997px) {
-  .navbar__items--left {
+  .navbar__items--left-wrapper {
     flex: 1;
+    display: flex;
   }
 
   .navbar__center-item {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
   }
 
-  .navbar__center-item[href='/blog'] {
-    transform: translateX(calc(-100% - 1rem)) translateY(-50%);
+  .navbar__center-right-item[href='/intelligence'] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(60px), -50%);
   }
-
-  .navbar__center-item[href='/intelligence'] {
-    transform: translateX(1rem) translateY(-50%);
+  
+  .navbar__center-right-item[href='/chat'] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(60px + 120px), -50%);
   }
 }
 
@@ -852,4 +859,135 @@ article header h1 {
   .navbar__inner .navbar__item.navbar-newsletter-link {
     display: none !important;
   }
+}
+
+@font-face {
+  font-family: 'Anime Ace BB';
+  src: url('/fonts/anime_ace_bb/animeace2bb_tt/animeace2_reg.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.thought-bubble {
+  position: absolute;
+  background: var(--background-secondary);
+  border: 2px solid var(--text-primary);
+  border-radius: 50%;
+  padding: 10px 15px;
+  font-family: 'Anime Ace BB', 'Comic Sans MS', cursive;
+  color: var(--text-primary);
+  font-size: 14px;
+  width: max-content;
+  white-space: nowrap;
+  text-align: center;
+  z-index: 2;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+  transform: rotate(-4deg);
+}
+
+.thought-bubble::before,
+.thought-bubble::after {
+  content: '';
+  position: absolute;
+  background: var(--background-secondary);
+  border: 2px solid var(--text-primary);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.thought-bubble::before {
+  width: 15px;
+  height: 15px;
+  top: 20px;
+  left: -20px;
+}
+
+.thought-bubble::after {
+  width: 10px;
+  height: 10px;
+  top: 30px;
+  left: -35px;
+}
+
+[data-theme='dark'] .thought-bubble {
+  background-color: var(--ds-white);
+  color: var(--ds-black);
+  border-color: var(--ds-black);
+}
+
+[data-theme='dark'] .thought-bubble::before,
+[data-theme='dark'] .thought-bubble::after {
+  background-color: var(--ds-white);
+  border-color: var(--ds-black);
+}
+
+[data-theme='light'] .thought-bubble--indexing {
+  background-color: var(--ds-blue-light);
+  color: var(--ds-white);
+  border-color: var(--ds-blue-dark);
+}
+
+[data-theme='light'] .thought-bubble--indexing::before,
+[data-theme='light'] .thought-bubble--indexing::after {
+  background-color: var(--ds-blue-light);
+  border-color: var(--ds-blue-dark);
+}
+
+[data-theme='dark'] .thought-bubble--indexing {
+  background-color: #FFFF00;
+  color: var(--ds-black);
+  border-color: #FFFF00;
+}
+
+[data-theme='dark'] .thought-bubble--indexing::before,
+[data-theme='dark'] .thought-bubble--indexing::after {
+  background-color: #FFFF00;
+  border-color: #FFFF00;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-primary);
+  font-size: var(--ds-font-size-xl);
+  font-weight: 500;
+  font-family: var(--ds-font-primary);
+  text-transform: uppercase;
+  letter-spacing: var(--ds-letter-spacing);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+[data-theme='dark'] .overlay-text {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.intelligence-bubble {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-4deg);
+  background: var(--background-secondary);
+  border: 2px solid var(--text-primary);
+  border-radius: 25px;
+  padding: 1rem 1.5rem;
+  font-family: 'Anime Ace BB', 'Comic Sans MS', cursive;
+  color: var(--text-primary);
+  font-size: var(--ds-font-size-xl);
+  text-align: center;
+  z-index: 2;
+  max-width: 80%;
+  line-height: 1.3;
+}
+
+[data-theme='dark'] .intelligence-bubble {
+  background-color: var(--ds-white);
+  color: var(--ds-black);
+  border-color: var(--ds-black);
 }

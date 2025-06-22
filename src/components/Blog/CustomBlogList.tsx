@@ -4,6 +4,20 @@ import Link from '@docusaurus/Link';
 import { useHistory, useLocation } from '@docusaurus/router';
 import styles from './CustomBlogList.module.css';
 
+const formatDateForDisplay = (dateStr: string): string => {
+  if (!dateStr) return '';
+  // The date string from frontmatter 'YYYY-MM-DD' is parsed as midnight UTC.
+  // When converted to a local timezone, it might roll back to the previous day.
+  // To prevent this, we explicitly create a date and format it in UTC.
+  const date = new Date(dateStr);
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'UTC',
+  }).format(date);
+};
+
 interface BlogPost {
   id: string;
   metadata: {
@@ -264,7 +278,7 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
           {filteredPosts.map((post) => (
             <li className={styles.postItem} key={post.id}>
               <div className={styles.postContent}>
-                <div className={styles.postDate}>{post.metadata?.formattedDate}</div>
+                <div className={styles.postDate}>{formatDateForDisplay(post.metadata?.date)}</div>
                 
                 <div className={styles.metaContainer}>
                   <div className={styles.tagsContainer}>

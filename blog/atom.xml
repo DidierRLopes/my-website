@@ -2,12 +2,135 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://didierlopes.com/blog</id>
     <title>Didier Lopes Blog</title>
-    <updated>2025-06-10T00:00:00.000Z</updated>
+    <updated>2025-06-20T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://didierlopes.com/blog"/>
     <subtitle>Didier Lopes Blog</subtitle>
     <icon>https://didierlopes.com/img/favicon.ico</icon>
     <rights>Copyright © 2025 Didier Lopes.</rights>
+    <entry>
+        <title type="html"><![CDATA[I can't believe I recommended Replit instead of Cursor]]></title>
+        <id>https://didierlopes.com/blog/2025-06-20-i-cant-believe-i-recommended-replit-instead-of-cursor</id>
+        <link href="https://didierlopes.com/blog/2025-06-20-i-cant-believe-i-recommended-replit-instead-of-cursor"/>
+        <updated>2025-06-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Replit is the ultimate coding environment for non-coders]]></summary>
+        <content type="html"><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-06-15-my-feelings-about-ai-companions.png"></p>
+<p>Replit is the ultimate coding environment for non-coders.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>Replit is a monster brewing.</p>
+<p>It took me some time to realize this.</p>
+<p>Mostly because I don't use it myself and I don't personally know anyone who does.</p>
+<p>But last weekend, I ended up pitching it to a friend of mine so much that he ended up subscribing to it.</p>
+<p>Let me explain:</p>
+<ul>
+<li>Why I started pitching Cursor to my friend, but ended up pitching Replit instead</li>
+<li>How Replit can save him thousands of dollars a month</li>
+<li>Why I believe Replit is the future of software development</li>
+</ul>
+<p>The context: I have a friend who used to be an investment banker and has been working on a website for a paid community focused on stock recommendations.</p>
+<p>The features he needs:</p>
+<ul>
+<li>A marketing website for his personal brand</li>
+<li>Payment processing (via Stripe)</li>
+<li>A member-only area to access quarterly reports and financial data</li>
+<li>Newsletter subscriptions (via a third-party tool)</li>
+</ul>
+<p>Relatively simple.</p>
+<p>But he's never coded before, so building this isn't exactly straightforward.</p>
+<p>So he outsourced it.</p>
+<p>I started talking to him about how much I'm able to develop these days using AI, even with all the daily meetings I have, compared to what I was able to do before.</p>
+<p>When he came over to my place, I showed him how I use Cursor to code.</p>
+<p>He actually brought his laptop so I could walk him through it. So I downloaded Cursor for him.</p>
+<p>Downloading Cursor was the easy part. Over the next hour or so, I had to:</p>
+<ul>
+<li>Run git pull on his repo</li>
+<li>Explain what's stored locally vs in the cloud</li>
+<li>Explain branches</li>
+<li>Explain environment variables and API keys so the app could run</li>
+<li>Explain how the app deployment works</li>
+</ul>
+<p>Bear in mind: this was his first time touching a command line or using Git.</p>
+<p>I was able to run his code locally and use AI to make a few changes. But it's still quite far from being a "production-ready" setup.</p>
+<p>Sure, he could learn it - but it takes time. And every time there's a hiccup, it's much harder for him to debug, especially since it's all happening locally.</p>
+<p><strong>That's when Replit entered the room.</strong></p>
+<p>And it hit me.</p>
+<p>This is <strong>exactly</strong> the problem Replit is solving.</p>
+<p>For users who don't want to run anything locally. Who just want their code as close to production as possible. Who don't care about Git branches, they just want to preview changes and deploy with the least friction. Even on the go.</p>
+<p>It's not just about POCs. It's about apps where the stakes aren't super high, which, frankly, describes the vast majority of applications.</p>
+<p>Especially the ones non-developers want to build.</p>
+<p>In my opinion, <strong>Replit is the ultimate coding environment for non-coders</strong> - but one that still provides a full coding interface for when they do want to get their hands dirty (especially as AI continues to improve).</p>
+<p>Ultimately, I can see Replit Agent becoming Replit. Maybe even hiding the IDE entirely by default.</p>
+<p>And I believe this will happen because of the audience Replit is building for.</p>
+<p>Now, my friend is just waiting for his outsourced developer to finish the last sprint of work. After that, he's switching to Replit.</p>
+<p>It'll completely replace UpWork for him. He'll no longer be limited by someone else's availability or quality - only by his own time and how well the model performs.</p>
+<p>Instead of messaging a freelancer on UpWork, waiting hours for a response, checking the deployed version, asking for a minor tweak, waiting again, etc...</p>
+<p>He'll just open Replit on his phone, ask the Agent to make the change, preview it seconds later, ask for an adjustment, preview again - and deploy when ready. Even better now with a tighter <a href="https://x.com/Replit/status/1932463041930760580" target="_blank" rel="noopener noreferrer">design to production integration</a>.</p>
+<p>I've been a fan of Amjad for a long time.</p>
+<p>But today I became a true fan of Replit.</p>]]></content>
+        <category label="replit" term="replit"/>
+        <category label="cursor" term="cursor"/>
+        <category label="ai" term="ai"/>
+        <category label="development-environment" term="development-environment"/>
+        <category label="cloud-ide" term="cloud-ide"/>
+        <category label="no-code" term="no-code"/>
+        <category label="software-development" term="software-development"/>
+        <category label="entrepreneurship" term="entrepreneurship"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[My feelings about AI companions]]></title>
+        <id>https://didierlopes.com/blog/2025-06-15-my-feelings-about-ai-companions</id>
+        <link href="https://didierlopes.com/blog/2025-06-15-my-feelings-about-ai-companions"/>
+        <updated>2025-06-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[It's no longer a matter of IF, but a matter of WHEN. AI companions are coming.]]></summary>
+        <content type="html"><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-06-15-my-feelings-about-ai-companions.png"></p>
+<p>It's no longer a matter of IF, but a matter of WHEN. AI companions are coming.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>Lately, I've been thinking more and more about AI companions.</p>
+<p>Mass adoption will take time, but their emergence feels inevitable.</p>
+<p><a href="https://www.linkedin.com/in/dsiroker" target="_blank" rel="noopener noreferrer">Dan</a>'s tagline - "<em>everything you've seen, said, and heard</em>" - is actually a pretty accurate depiction of where we're headed.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-06-15-my-feelings-about-ai-companions_1.png"></p>
+<p>Does that excite me?</p>
+<p><strong>Yes</strong> and <strong>no</strong>.</p>
+<p>Yes, because at a fundamental level, humans are evolving.</p>
+<p>This is the next phase of our evolution - being enhanced by technology.</p>
+<p>We already are, with laptops, phones, and more.</p>
+<p>But this feels like a deeper shift.</p>
+<p>Now, we have technology capable of processing vast amounts of data and generating something meaningful from it:</p>
+<ul>
+<li>Summarizing meeting notes</li>
+<li>Chatting with me to help understand a topic I just heard in class</li>
+<li>Reviewing my sales pitch and offering ways I could have improved</li>
+</ul>
+<p>That part excites me: it will make life feel more fluid.</p>
+<p>Tasks that used to take hours will take minutes.</p>
+<p>Tasks that took minutes will take seconds.</p>
+<p>Even something as simple as finding the name of that cafe someone once recommended becomes instant.</p>
+<p><strong>But with that fluidity, we're losing randomness, spontaneity. The messiness that makes us human.</strong></p>
+<p>The fact that we're all just trying to figure things out.</p>
+<p><strong>What happens when you can't even choose between pizza or a burger because an algorithm tells you that eating chicken and rice will extend your life span by 5 minutes?</strong></p>
+<p>What happens when there's so much human data that everything becomes algorithmic?</p>
+<p>And instead of making irrational choices, the kind that make us human, you start choosing only what optimizes your body.</p>
+<p>At some point, it may start to feel like we're living in the movie "In Time", with a clock ticking down our remaining time on Earth.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-06-15-my-feelings-about-ai-companions_2.png"></p>
+<p>But it's not just that.</p>
+<p>Think about relationships.</p>
+<p>My parents met in school, in the same small town. They're still together.</p>
+<p>I met my wife on a dating app. I had access to a much larger pool of potential partners than my parents ever did. But I didn't have data convincing me she was "the one." We had a first dinner. I got to know her, from her.</p>
+<p>What happens when everyone has an AI companion, and you can access a trailer-like preview of someone you just met?</p>
+<p>What happens when an algorithm tells you that you and X are 99.999% likely to be soulmates and live happily ever after?</p>
+<p>Where's the thrill?</p>
+<p>When life becomes so deterministic that it feels like you're simply executing a prewritten script - just following your destiny.</p>
+<p>At least for now, it still feels like we're in control.</p>
+<p>Maybe one day, it won't.</p>]]></content>
+        <category label="ai" term="ai"/>
+        <category label="ai-companions" term="ai-companions"/>
+        <category label="future" term="future"/>
+        <category label="technology" term="technology"/>
+        <category label="humanity" term="humanity"/>
+        <category label="philosophy" term="philosophy"/>
+        <category label="relationships" term="relationships"/>
+        <category label="singularity" term="singularity"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[How I connected Figma to Cursor using MCP]]></title>
         <id>https://didierlopes.com/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp</id>

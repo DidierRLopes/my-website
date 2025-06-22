@@ -114,3 +114,5 @@
 - [2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows](https://didierlopes.com/blog/2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows)
 - [2025-05-28-openbb-is-underrated](https://didierlopes.com/blog/2025-05-28-openbb-is-underrated)
 - [2025-06-10-how-i-connected-figma-to-cursor-using-mcp](https://didierlopes.com/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp)
+- [2025-06-15-my-feelings-about-ai-companions](https://didierlopes.com/blog/2025-06-15-my-feelings-about-ai-companions)
+- [2025-06-20-i-cant-believe-i-recommended-replit-instead-of-cursor](https://didierlopes.com/blog/2025-06-20-i-cant-believe-i-recommended-replit-instead-of-cursor)

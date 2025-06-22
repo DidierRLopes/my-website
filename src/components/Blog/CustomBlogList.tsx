@@ -134,7 +134,7 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
       );
     
     const readingTimeMatch = minReadingTime === undefined || 
-      (post.metadata.readingTime && post.metadata.readingTime > minReadingTime);
+      (post.metadata.readingTime && post.metadata.readingTime > (minReadingTime-1));
       
     return textMatch && tagMatch && readingTimeMatch;
   });

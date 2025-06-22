@@ -46,16 +46,6 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [minReadingTime, setMinReadingTime] = useState<number | undefined>();
 
-  // Effect to set default reading time if not present
-  useEffect(() => {
-    const urlParams = new URLSearchParams(location.search);
-    if (!urlParams.has('readingTimeOverMin') && location.pathname.endsWith('/blog')) {
-      const newParams = new URLSearchParams(location.search);
-      newParams.set('readingTimeOverMin', '2');
-      history.replace(`${location.pathname}?${newParams.toString()}`);
-    }
-  }, [location.pathname, location.search, history]);
-
   // Sync state from URL search params
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
@@ -163,7 +153,7 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
 
   const clearAllFilters = () => {
     // Setting params to undefined will clear them
-    updateUrlParams({ search: undefined, tags: undefined, readingTimeOverMin: '2' });
+    updateUrlParams({ search: undefined, tags: undefined, readingTimeOverMin: undefined });
   };
 
   const handleReadingTimeKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {

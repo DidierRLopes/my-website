@@ -693,6 +693,7 @@ const ChatInterface = () => {
     const aiTextColor = isDark ? '#FFFF00' : 'blue';
 
     const [ollamaUrl, setOllamaUrl] = React.useState('http://localhost:11434');
+    const [inputUrl, setInputUrl] = React.useState('http://localhost:11434');
     const [model, setModel] = React.useState('llama3.1:8b');
     const [availableModels, setAvailableModels] = React.useState<string[]>([]);
     const [embeddingModel, setEmbeddingModel] = React.useState<string>('');
@@ -713,6 +714,7 @@ const ChatInterface = () => {
         const storedUrl = localStorage.getItem('ollamaUrl');
         if (storedUrl) {
             setOllamaUrl(storedUrl);
+            setInputUrl(storedUrl);
         }
 
         const cachedStore = localStorage.getItem('blogVectorStore');
@@ -730,6 +732,17 @@ const ChatInterface = () => {
             checkAndSetVectorStore();
         }
     }, [embeddingModel]);
+
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            if (inputUrl !== ollamaUrl) {
+                setOllamaUrl(inputUrl);
+                localStorage.setItem('ollamaUrl', inputUrl);
+            }
+        }, 500); // 500ms debounce
+
+        return () => clearTimeout(timeoutId);
+    }, [inputUrl, ollamaUrl]);
 
     useEffect(() => {
         const checkOllamaStatusAndFetchModels = async () => {
@@ -837,9 +850,7 @@ const ChatInterface = () => {
     };
 
     const handleUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const newUrl = e.target.value;
-        setOllamaUrl(newUrl);
-        localStorage.setItem('ollamaUrl', newUrl);
+        setInputUrl(e.target.value);
     };
 
     const handleSendMessage = async (message: string) => {
@@ -1006,10 +1017,9 @@ const ChatInterface = () => {
                         <input
                             id="ollama-url"
                             type="text"
-                            value={ollamaUrl}
+                            value={inputUrl}
                             onChange={handleUrlChange}
                             style={{ width: '250px', marginLeft: '8px' }}
-                            disabled={ollamaStatus === 'pending'}
                         />
                     </div>
                     <div>

@@ -17,8 +17,6 @@ description: A practical guide to building an AI agent that processes Telegram m
 hideSidebar: true
 ---
 
-
-
 <p align="center">
     <img width="900" src="/blog/2025-01-04-building-an-ai-agent-from-scratch-that-can-post-on-bluesky.png"/>
 </p>

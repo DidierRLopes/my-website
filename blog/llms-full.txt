@@ -10983,8 +10983,6 @@ description: A practical guide to building an AI agent that processes Telegram m
 hideSidebar: true
 ---
 
-
-
 <p align="center">
     <img width="900" src="/blog/2025-01-04-building-an-ai-agent-from-scratch-that-can-post-on-bluesky.png"/>
 </p>
@@ -16048,3 +16046,408 @@ Not for your company. Not for your personal brand. Build something that makes yo
 The web is waiting for your weird.
 
 Let's make it beautiful again.
+
+
+---
+
+---
+slug: 2025-07-xx-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen
+title: Finance's OceanGate moment - The AI adoption disaster waiting to happen
+date: 2025-07-30
+image: /blog/2025-07-xx-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen
+tags:
+  - ai
+  - finance
+  - risk-management
+  - data-security
+  - llm
+  - leadership
+  - strategy
+  - data-leakage
+description: The financial industry's rush to adopt AI without proper data security is creating an 'OceanGate moment' - a disaster waiting to happen. This post explores the risks of reckless AI implementation and charts a safer path forward through on-premise and local model deployment.
+hideSidebar: true
+hide: true
+draft: true
+---
+
+<p align="center">
+    <img width="600" src="/blog/2025-07-xx-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen.png" />
+</p>
+
+The financial industry's rush to adopt AI without proper data security is creating an 'OceanGate moment' - a disaster waiting to happen. This post explores the risks of reckless AI implementation and charts a safer path forward through on-premise and local model deployment.
+
+<!-- truncate -->
+
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
+
+The more I learn about how financial firms are adopting AI, the more convinced I become that we're heading toward an inevitable reckoning.
+
+There's a chilling scene in the OceanGate documentary trailer where Rob McCallum, a former advisor to OceanGate, observes:
+
+> "There was no way of knowing when Titan would fail. But it was a mathematical certainty that it would fail."
+
+<br />
+
+<p align="center">
+    <img width="600" src="/blog/2025-07-xx-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen_1.png" />
+</p>
+
+This wasn't about predicting the exact moment of catastrophe. It was about recognizing that the submarine's fundamental design flaws made disaster inevitable.
+
+This is precisely where we stand today with AI adoption in finance.
+
+## Three colliding forces
+
+### Leadership FOMO vs. Industry inertia
+
+The financial industry moves at glacial speed. Many investment firms today still operate without AI capabilities, lack dedicated AI engineers, or worse - have no coherent data strategy whatsoever.
+
+Yet these same leaders consume report after report showcasing dramatic efficiency gains at AI-forward companies.
+
+The result? FOMO is forcing an inherently cautious industry to abandon its natural risk-averse instincts.
+
+### The technology diffusion flip
+
+Andrej Karpathy made a crucial observation that explains why this situation is unprecedented:
+
+> "LLMs flip the direction of technology diffusion that is usually present in technology. [...] Typically it is the government and corporations that are the first users, because it's new and expensive, etc. And it only later diffuses to consumers."
+
+<br />
+
+Read his full analysis [here](https://x.com/karpathy/status/1909308143156240538).
+
+<p align="center">
+    <img width="400" src="/blog/2025-07-xx-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen_2.png" />
+</p>
+
+For the first time in corporate history, employees have access to transformative technology before their institutions can properly evaluate and control it.
+
+### The individual productivity arms race
+
+Employees and interns at these firms face an impossible situation. They watch peers in tech, consulting, and other industries leverage AI for 10x productivity gains while they're constrained by institutional caution.
+
+The social pressure is immense.
+
+The career advantages are obvious.
+
+When someone discovers they can draft reports in minutes instead of hours using ChatGPT, the secret spreads like wildfire. Soon, not using AI becomes a career-limiting move.
+
+## The inevitable escalation
+
+What starts as something innocent, such as using AI for basic chat queries, quickly escalates:
+
+- **Week 1**: "I'll just use it for brainstorming"
+- **Week 2**: "Let me upload this one document to help with my analysis"
+- **Week 3**: "If I can provide these few reports, then it will save me so much time!"  
+- **Week 4**: "F*** it, everyone's doing it. What's the worse that can happen?"
+<br />
+
+In a few months, you can have entire teams processing confidential client data through external AI services
+
+Each step feels reasonable in isolation.
+
+Collectively, they represent a massive compliance and security breach waiting to happen.
+
+Consider the recent case where [Samsung employees inadvertently leaked sensitive code by using ChatGPT for debugging](https://www.forbes.com/sites/siladityaray/2023/05/02/samsung-bans-chatgpt-and-other-chatbots-for-employees-after-sensitive-code-leak/).
+
+### The cost of inaction vs. reckless action
+
+**Traditional Approach Costs:**
+- substantial productivity disadvantage vs. AI-enabled competitors
+- Talent retention challenges as top performers seek AI-forward environments
+- Gradual market share erosion to more agile competitors
+<br />
+
+**Reckless AI Adoption Costs:**
+- Regulatory violations
+- Data breaches
+- Client trust erosion and potential lawsuits
+- Competitive intelligence leakage
+<br />
+
+Something has to give - and history suggests it won't be pretty when it does.
+
+## The path forward
+
+Fortunately, forward-thinking firms are already charting safer courses:
+
+- **Policies to not push any data outside their premises**: Implement strict data governance preventing any information from leaving company premises. This approach sacrifices efficiency gains for security but may prove insufficient as competitive pressures mount. (ok)
+- **Utilizing AI software on-premise**: Deploy enterprise AI software within company infrastructure, maintaining data control while enabling productivity gains. Solutions like Microsoft's enterprise ChatGPT or Google's Vertex AI offer this middle ground, and firms are in control with their relationship with the AI labs. (good)
+- **Running their own AI models locally**: Run proprietary AI models on company hardware, achieving complete data sovereignty while maintaining cutting-edge capabilities. (best)
+
+<br />
+
+The viability of running models locally has dramatically improved. While the performance gap between closed and open models remains significant, it's narrowing rapidly.
+
+Newest LLMs are no longer showing exponential improvements but incremental only. This means that the open weight models are catching up, and - likely - in a long enough time horizon the performance of closed and open models converges.
+
+## In practice
+
+We've implemented this philosophy in the [OpenBB Workspace](https://openbb.co/products/workspace).
+
+<p align="center">
+    <img width="900" src="/blog/2025-07-xx-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen_3.png" />
+</p>
+
+Our product enables complete on-premises deployment **with local model integration**, giving financial professionals AI-powered analysis without data sovereignty concerns.
+
+The question isn't whether AI will transform finance - it's whether your firm will control that transformation or become its victim.
+
+If you're ready to discuss how to implement AI safely and strategically within your organization, let's talk. Our product helps financial firms navigate this transition without compromising security, compliance, or competitive position.
+
+The mathematical certainty of failure only applies to those who don't listen to the cracks in the ship.
+
+<div style={{borderBottom: '1px solid #0088CC', margin: '1.5em 0'}} />
+
+I believe in this so much that I actually added a [Chat page](https://didierlopes.com/chat) to my personal website that allows users to run open-weight models on their machine, via Ollama, with access to data from my blogposts.
+
+<p align="center">
+    <img width="900" src="/blog/2025-07-xx-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen_4.png" />
+</p>
+
+
+---
+
+---
+slug: 2025-07-xx-is-prompt-engineering-dead-the-case-for-test-driven-ai-development
+title: Is Prompt Engineering dead? The case for Test-Driven AI Development
+date: 2025-07-30
+image: /blog/2025-07-xx-is-prompt-engineering-dead-the-case-for-test-driven-ai-development
+tags:
+  - ai
+  - prompt-engineering
+  - llm
+  - software-development
+  - automation
+  - agentic-ai
+  - self-improving-ai
+  - test-driven-development
+  - control-systems
+description: This post explores Test-Driven AI Development, where AI writes its own tests and prompts, potentially making manual prompt engineering obsolete. It covers how self-improving AI systems can be built and the implications of this paradigm shift.
+hideSidebar: true
+hide: true
+draft: true
+---
+
+<p align="center">
+    <img width="600" src="/blog/2025-07-xx-is-prompt-engineering-dead-the-case-for-test-driven-ai-development.png" />
+</p>
+
+This post explores Test-Driven AI Development, where AI writes its own tests and prompts, potentially making manual prompt engineering obsolete. It covers how self-improving AI systems can be built and the implications of this paradigm shift.
+
+<!-- truncate -->
+
+import CodeBlock from '@theme/CodeBlock';
+import Details from '@theme/Details';
+
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
+
+I learned about Test Driven Development (TDD) a few years ago while working as a Firmware Engineer. What I didn't expect was how this traditional methodology would evolve into something that could fundamentally change how we build AI systems, and potentially make prompt engineering obsolete.
+
+**The thesis:** If AI can write comprehensive tests from a PRD AND automatically generate prompts to pass those tests, then manual prompt engineering becomes as outdated as manually optimizing low-level assembly code.
+
+## Test Driven Development: A quick refresher
+
+Skip this if you're familiar with TDD.
+
+Test-driven development is a software development process where tests are written before the actual code. The core process, known as "Red-Green-Refactor" involves writing a failing test, writing the minimal code to pass it, and then refactoring the code.
+
+```python
+# Test first
+def test_discount():
+    assert calculate_discount(100, 0.1) == 90
+
+# Then minimal code
+def calculate_discount(price, rate):
+    return price * (1 - rate)
+```
+
+The traditional flow looks like this:
+
+```
+Mock data  ────>  Code  ────>  Output × Tests
+                   ↑              │
+          Refactor │              │
+                   └── Error ←────┘
+```
+
+The cycle continues: run the test, refactor the code, run the test again, until all tests pass.
+
+## TDD with AI: First evolution
+
+TDD with AI becomes much easier. The concept is the same, except the user isn't required to refactor the code manually or run the tests.
+
+```
+Mock data  ────>  Code  ────>  Output × Tests
+                   ↑              │
+              AI   │              │
+                   └── Error ←────┘
+```
+
+The process simplifies to: ask AI to run the tests and fix any errors until they pass.
+
+**Critical lesson learned:** You must explicitly tell the AI it cannot modify the tests. Otherwise, it takes the easy path and just changes failing tests to pass. (This literally happened to me! 🙃)
+
+## Prompt-Test Driven Development: The paradigm shift
+
+Sometimes you want to test the agentic capabilities of your model. Assuming the tools are implemented correctly, you're actually testing the instructions - i.e. the prompt.
+
+Prompt engineering is this whole new field that has emerged with LLMs. It is defined as: _"the practice of crafting specific and effective instructions, known as prompts, to guide generative AI models in producing desired outputs"_. Chip Huyen's [AI Engineering book](https://www.oreilly.com/library/view/ai-engineering/9781098166298/) has an entire section on the topic (I highly recommend).
+
+When testing prompts, the flow becomes:
+
+```
+Mock data  ────>  Prompt → LLM  ────>  Output × Tests
+                     ↑                    │
+           Improve   │                    │
+           Prompt    │                    │
+                     └──── Error ←────────┘
+```
+
+Your "tests" become example scenarios with expected AI behaviors:
+
+```
+Test: Customer asks "I want a refund"
+Expected: AI checks return policy first
+Current behavior: AI immediately offers refund
+
+Result: ❌ FAIL
+```
+
+Your "code" is now the prompt that instructs the AI how to behave. When tests fail, you improve the prompt instead of traditional code.
+
+## The breakthrough: Self-improving AI
+
+The same way we removed manual refactoring from traditional TDD, we can remove the human from prompt improvement:
+
+```
+Mock data  ──>  Prompt + LLM + Tools  ───>  Output × Tests
+                       ↑                           │
+                    AI │                           │
+                       └──── Error ←───────────────┘
+```
+
+Here's where it gets interesting: **the AI agent itself is a combination of Prompt + LLM + Tools**.
+
+When we use the same LLM to improve the prompt as the one our agent is built on, we create a self-reinforcing loop.
+
+<p align="center">
+    <img width="900" src="/blog/2025-07-xx-is-prompt-engineering-dead-the-case-for-test-driven-ai-development_1.png" />
+    <em style={{opacity: 0.9}}>Real example of me utilizing this for our production tests</em>
+</p>
+
+**Example in action:**
+
+```
+Test: Customer asks "I want a refund"
+
+Current Prompt: "You are a helpful customer service agent".
+Expected: AI checks return policy first
+Current behavior: AI immediately offers refund
+
+AI Self-Analysis:
+"I failed because I offered a refund without checking policy. 
+The prompt lacks specific instructions about policy verification."
+
+AI-Generated Improvement: 
+"You are a customer service agent. Always check the return 
+policy before processing refund requests. If eligible, explain 
+the process. If not, explain why and offer alternatives."
+
+Test Result: ✅ PASS
+```
+
+## The elegant insight: No external execution required
+
+The AI isn't even required to run tests using your framework. It can evaluate outcomes by examining the data directly.
+
+Since the AI helping you improve the prompt is the same as the one in production, it can "recreate" the output you would see just by looking at the code and data. No logs required, the model can predict its own behavior.
+
+When you show an AI:
+
+- Current prompt
+- Mock input data
+- Expected output
+
+The AI can immediately identify mismatches and generate improvements.
+
+**The feedback loop happens entirely within the AI's reasoning process**, making iteration nearly instantaneous.
+
+## The death of Prompt Engineering: Test Coverage as the new paradigm
+
+Here's the revolutionary implication: **if AI can generate both comprehensive test coverage from a PRD AND the prompts to pass those tests, then manual prompt engineering becomes obsolete**.
+
+Consider this progression:
+
+**Manual Prompt Engineering (Current State):**
+
+```
+Human writes requirements → Human crafts prompts → Test in production → Manual debugging
+```
+
+**Test-Driven AI Development (Future State):**
+
+```
+Human writes requirements → AI generates comprehensive tests → AI generates optimal prompts → Continuous self-improvement
+```
+
+With sufficient test coverage, prompts become an automatically generated implementation detail—like compiled machine code that you never need to see or manually optimize.
+
+**The new workflow**:
+
+1. Define behavioral requirements through examples
+2. AI generates exhaustive test scenarios covering edge cases
+3. AI automatically generates and refines prompts to pass all tests
+4. System continuously improves itself as new test cases are added
+
+<br />
+
+**Instead of asking "How do I prompt this AI?"** we ask **"How do I comprehensively test this behavior?"**
+
+## Moving toward singularity
+
+This is where we're approaching something unprecedented: AI that can fix itself, with humans only adding tests to guide its behavior.
+
+The key insight: instead of retraining models with new data (expensive, slow), we can improve behavior through prompt refinement (fast, cheap, immediate).
+
+The system can literally predict and fix its own behavior through disciplined self-reflection.
+
+**Prompt engineering doesn't disappear—it becomes automated.**
+
+## The control systems perspective
+
+This reminds me of my MSc in Control Systems, where we learned that systems have poles that can be on the negative side (stable) or positive side (unstable).
+
+The same principle applies here:
+
+- **Stable:** AI generates genuinely better prompts → improved performance → convergence  
+- **Unstable:** AI games the system → overfitting to tests → real-world failure
+
+<br />
+
+**Warning signs of instability:**
+
+- Prompts becoming absurdly specific to test cases
+- AI suggesting test modifications "for clarity"
+- Tests passing but real-world performance degrading
+<br />
+
+**Maintaining stability:**
+
+- Lock test cases as immutable
+- Monitor real-world performance alongside test performance
+- Explicitly forbid test modifications in improvement instructions
+
+<br />
+
+The incentive should always be to pass the tests AS THEY ARE.
+
+## The revolutionary potential
+
+This isn't just about better prompts—it's about creating AI systems that can debug their own reasoning processes in real-time.
+
+We're moving toward AI that doesn't just follow instructions, but improves the instructions themselves through disciplined self-reflection.
+
+Prompt engineering as we know it may be dead, which is scary because this is how we "control" AI.
+
+The question is: **are we ready to let AI systems write their own prompt**, or do we still need the illusion of control that manual prompting provides?

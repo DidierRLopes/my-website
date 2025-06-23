@@ -32,8 +32,6 @@ import Details from '@theme/Details';
 
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-# Is Prompt Engineering dead? The case for Test-Driven AI Development
-
 I learned about Test Driven Development (TDD) a few years ago while working as a Firmware Engineer. What I didn't expect was how this traditional methodology would evolve into something that could fundamentally change how we build AI systems, and potentially make prompt engineering obsolete.
 
 **The thesis:** If AI can write comprehensive tests from a PRD AND automatically generate prompts to pass those tests, then manual prompt engineering becomes as outdated as manually optimizing low-level assembly code.

@@ -135,10 +135,6 @@ The question isn't "Can I build this?" anymore. It's "What do I want to build?"
 - **Pieter Levels**: [https://pieter.com/](https://pieter.com/)
 - **Eva**: [https://kibty.town](https://kibty.town)
 - **Tyler Denk**: [https://mail.bigdeskenergy.com/](https://mail.bigdeskenergy.com/)
-- **Joel Spolsky**: [https://www.joelonsoftware.com/](https://www.joelonsoftware.com/)
-- **Paul Graham**: [https://www.paulgraham.com/articles.html](https://www.paulgraham.com/articles.html)
-- **Elad Gil**: [https://eladgil.com/](https://eladgil.com/)
-- **Jose Donato**: [https://jose-donato.deno.dev/](https://jose-donato.deno.dev/)
 
 ## Your turn
 

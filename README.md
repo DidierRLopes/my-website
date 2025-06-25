@@ -2,8 +2,10 @@
 
 This my open source website: https://didierlopes.com/
 
-![CleanShot 2025-06-20 at 02 29 53@2x](https://github.com/user-attachments/assets/4a91ab46-1d62-443e-adb3-e021a46ad4e4)
-
+<p float="left">
+  <img src="https://github.com/user-attachments/assets/e612733d-ce97-447c-80cf-8287a6203142" width="500" />
+  <img src="https://github.com/user-attachments/assets/03325f5b-a6d7-4270-8b95-6aa574534957" width="460" />
+</p>
 
 ---
 

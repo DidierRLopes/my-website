@@ -17,7 +17,7 @@ hideSidebar: true
 ---
 
 <p align="center">
-    <img width="600" src="/blog/2025-06-15-my-feelings-about-ai-companions.png" />
+    <img width="600" src="/blog/2025-06-20-i-cant-believe-i-recommended-replit-instead-of-cursor.png" />
 </p>
 
 Replit is the ultimate coding environment for non-coders.

@@ -1,8 +1,8 @@
 ---
-slug: 2025-07-xx-bring-back-your-corner-of-the-internet
+slug: 2025-07-02-bring-back-your-corner-of-the-internet
 title: Bring back your corner of the internet
-date: 2025-07-30
-image: /blog/2025-07-xx-bring-back-your-corner-of-the-internet
+date: 2025-07-02
+image: /blog/2025-07-02-bring-back-your-corner-of-the-internet
 tags:
   - personal-websites
   - blogging
@@ -13,12 +13,10 @@ tags:
   - web-design
 description: The web has become bland and uniform. It's time to bring back the weird, wonderful, and deeply personal websites that once made the internet magical. With AI, the limit aren't skills anymore but imagination.
 hideSidebar: true
-hide: true
-draft: true
 ---
 
 <p align="center">
-    <img width="600" src="/blog/2025-07-xx-bring-back-your-corner-of-the-internet.png" />
+    <img width="600" src="/blog/2025-07-02-bring-back-your-corner-of-the-internet.png" />
 </p>
 
 The web has become bland and uniform. It's time to bring back the weird, wonderful, and deeply personal websites that once made the internet magical. With AI, the limit aren't skills anymore but imagination.
@@ -78,8 +76,8 @@ Here's what I built:
 Transforms my blog posts into a living, breathing network. Imagine your thoughts as nodes in a graph—each post connected to related ideas, creating a visual "second brain" that you can explore and navigate.
 
 <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1em'}}>
-    <img width="500" src="/blog/2025-07-xx-bring-back-your-corner-of-the-internet_1.png" />
-    <img width="500" src="/blog/2025-07-xx-bring-back-your-corner-of-the-internet_2.png" />
+    <img width="500" src="/blog/2025-07-02-bring-back-your-corner-of-the-internet_1.png" />
+    <img width="500" src="/blog/2025-07-02-bring-back-your-corner-of-the-internet_2.png" />
 </div>
 
 <br />
@@ -91,8 +89,8 @@ Transforms my blog posts into a living, breathing network. Imagine your thoughts
 Lets visitors talk to an LLM that is running on their machine through Ollama, but has access to all my blogs through RAG. It's like having a conversation with my thoughts, even when I'm not there, and all the computation happens in the user machine.
 
 <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1em'}}>
-    <img width="500" src="/blog/2025-07-xx-bring-back-your-corner-of-the-internet_3.png" />
-    <img width="500" src="/blog/2025-07-xx-bring-back-your-corner-of-the-internet_4.png" />
+    <img width="500" src="/blog/2025-07-02-bring-back-your-corner-of-the-internet_3.png" />
+    <img width="500" src="/blog/2025-07-02-bring-back-your-corner-of-the-internet_4.png" />
 </div>
 
 <br />
@@ -116,7 +114,7 @@ AI can help you build the weird, wonderful website you've always imagined but ne
 I keep thinking about these viral tweets that perfectly capture the moment:
 
 <p align="center">
-    <img width="600" src="/blog/2025-07-xx-bring-back-your-corner-of-the-internet_5.png" />
+    <img width="600" src="/blog/2025-07-02-bring-back-your-corner-of-the-internet_5.png" />
 </p>
 
 The web became obsessed with conversion rates, SEO optimization, and uniform user experiences. We optimized the soul out of our digital spaces.

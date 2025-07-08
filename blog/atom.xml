@@ -2,12 +2,198 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://didierlopes.com/blog</id>
     <title>Didier Lopes Blog</title>
-    <updated>2025-06-20T00:00:00.000Z</updated>
+    <updated>2025-07-09T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://didierlopes.com/blog"/>
     <subtitle>Didier Lopes Blog</subtitle>
     <icon>https://didierlopes.com/img/favicon.ico</icon>
     <rights>Copyright © 2025 Didier Lopes.</rights>
+    <entry>
+        <title type="html"><![CDATA[Finance's OceanGate moment - The AI adoption disaster waiting to happen]]></title>
+        <id>https://didierlopes.com/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen</id>
+        <link href="https://didierlopes.com/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen"/>
+        <updated>2025-07-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The financial industry's rush to adopt AI without proper data security is creating an 'OceanGate moment' - a disaster waiting to happen. This post explores the risks of reckless AI implementation and charts a safer path forward through on-premise and local model deployment.]]></summary>
+        <content type="html"><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen.png"></p>
+<p>The financial industry's rush to adopt AI without proper data security is creating an 'OceanGate moment' - a disaster waiting to happen. This post explores the risks of reckless AI implementation and charts a safer path forward through on-premise and local model deployment.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>The more I learn about how financial firms are adopting AI, the more convinced I become that we're heading toward an inevitable reckoning.</p>
+<p>There's a chilling scene in the OceanGate documentary trailer where Rob McCallum, a former advisor to OceanGate, observes:</p>
+<blockquote>
+<p>"There was no way of knowing when Titan would fail. But it was a mathematical certainty that it would fail."</p>
+</blockquote>
+<br>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen_1.png"></p>
+<p>This wasn't about predicting the exact moment of catastrophe. It was about recognizing that the submarine's fundamental design flaws made disaster inevitable.</p>
+<p>This is precisely where we stand today with AI adoption in finance.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="three-colliding-forces">Three colliding forces<a href="https://didierlopes.com/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen#three-colliding-forces" class="hash-link" aria-label="Direct link to Three colliding forces" title="Direct link to Three colliding forces">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="leadership-fomo-vs-industry-inertia">Leadership FOMO vs. Industry inertia<a href="https://didierlopes.com/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen#leadership-fomo-vs-industry-inertia" class="hash-link" aria-label="Direct link to Leadership FOMO vs. Industry inertia" title="Direct link to Leadership FOMO vs. Industry inertia">​</a></h3>
+<p>The financial industry moves at glacial speed. Many investment firms today still operate without AI capabilities, lack dedicated AI engineers, or worse - have no coherent data strategy whatsoever.</p>
+<p>Yet these same leaders consume report after report showcasing dramatic efficiency gains at AI-forward companies.</p>
+<p>The result? FOMO is forcing an inherently cautious industry to abandon its natural risk-averse instincts.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="the-technology-diffusion-flip">The technology diffusion flip<a href="https://didierlopes.com/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen#the-technology-diffusion-flip" class="hash-link" aria-label="Direct link to The technology diffusion flip" title="Direct link to The technology diffusion flip">​</a></h3>
+<p>Andrej Karpathy made a crucial observation that explains why this situation is unprecedented:</p>
+<blockquote>
+<p>"LLMs flip the direction of technology diffusion that is usually present in technology. [...] Typically it is the government and corporations that are the first users, because it's new and expensive, etc. And it only later diffuses to consumers."</p>
+</blockquote>
+<br>
+<p>Read his full analysis <a href="https://x.com/karpathy/status/1909308143156240538" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p align="center"><img width="400" src="https://didierlopes.com/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen_2.png"></p>
+<p>For the first time in corporate history, employees have access to transformative technology before their institutions can properly evaluate and control it.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="the-individual-productivity-arms-race">The individual productivity arms race<a href="https://didierlopes.com/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen#the-individual-productivity-arms-race" class="hash-link" aria-label="Direct link to The individual productivity arms race" title="Direct link to The individual productivity arms race">​</a></h3>
+<p>Employees and interns at these firms face an impossible situation. They watch peers in tech, consulting, and other industries leverage AI for 10x productivity gains while they're constrained by institutional caution.</p>
+<p>The social pressure is immense.</p>
+<p>The career advantages are obvious.</p>
+<p>When someone discovers they can draft reports in minutes instead of hours using ChatGPT, the secret spreads like wildfire. Soon, not using AI becomes a career-limiting move.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-inevitable-escalation">The inevitable escalation<a href="https://didierlopes.com/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen#the-inevitable-escalation" class="hash-link" aria-label="Direct link to The inevitable escalation" title="Direct link to The inevitable escalation">​</a></h2>
+<p>What starts as something innocent, such as using AI for basic chat queries, quickly escalates:</p>
+<ul>
+<li><strong>Week 1</strong>: "I'll just use it for brainstorming"</li>
+<li><strong>Week 2</strong>: "Let me upload this one document to help with my analysis"</li>
+<li><strong>Week 3</strong>: "If I can provide these few reports, then it will save me so much time!"</li>
+<li><strong>Week 4</strong>: "F*** it, everyone's doing it. What's the worse that can happen?"</li>
+</ul>
+<br>
+<p>In a few months, you can have entire teams processing confidential client data through external AI services</p>
+<p>Each step feels reasonable in isolation.</p>
+<p>Collectively, they represent a massive compliance and security breach waiting to happen.</p>
+<p>Consider the recent case where <a href="https://www.forbes.com/sites/siladityaray/2023/05/02/samsung-bans-chatgpt-and-other-chatbots-for-employees-after-sensitive-code-leak/" target="_blank" rel="noopener noreferrer">Samsung employees inadvertently leaked sensitive code by using ChatGPT for debugging</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="the-cost-of-inaction-vs-reckless-action">The cost of inaction vs. reckless action<a href="https://didierlopes.com/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen#the-cost-of-inaction-vs-reckless-action" class="hash-link" aria-label="Direct link to The cost of inaction vs. reckless action" title="Direct link to The cost of inaction vs. reckless action">​</a></h3>
+<p><strong>Traditional Approach Costs:</strong></p>
+<ul>
+<li>substantial productivity disadvantage vs. AI-enabled competitors</li>
+<li>Talent retention challenges as top performers seek AI-forward environments</li>
+<li>Gradual market share erosion to more agile competitors</li>
+</ul>
+<br>
+<p><strong>Reckless AI Adoption Costs:</strong></p>
+<ul>
+<li>Regulatory violations</li>
+<li>Data breaches</li>
+<li>Client trust erosion and potential lawsuits</li>
+<li>Competitive intelligence leakage</li>
+</ul>
+<br>
+<p>Something has to give - and history suggests it won't be pretty when it does.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-path-forward">The path forward<a href="https://didierlopes.com/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen#the-path-forward" class="hash-link" aria-label="Direct link to The path forward" title="Direct link to The path forward">​</a></h2>
+<p>Fortunately, forward-thinking firms are already charting safer courses:</p>
+<ul>
+<li><strong>Policies to not push any data outside their premises</strong>: Implement strict data governance preventing any information from leaving company premises. This approach sacrifices efficiency gains for security but may prove insufficient as competitive pressures mount. (ok)</li>
+<li><strong>Utilizing AI software on-premise</strong>: Deploy enterprise AI software within company infrastructure, maintaining data control while enabling productivity gains. Solutions like Microsoft's enterprise ChatGPT or Google's Vertex AI offer this middle ground, and firms are in control with their relationship with the AI labs. (good)</li>
+<li><strong>Running their own AI models locally</strong>: Run proprietary AI models on company hardware, achieving complete data sovereignty while maintaining cutting-edge capabilities. (best)</li>
+</ul>
+<br>
+<p>The viability of running models locally has dramatically improved. While the performance gap between closed and open models remains significant, it's narrowing rapidly.</p>
+<p>Newest LLMs are no longer showing exponential improvements but incremental only. This means that the open weight models are catching up, and - likely - in a long enough time horizon the performance of closed and open models converges.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="in-practice">In practice<a href="https://didierlopes.com/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen#in-practice" class="hash-link" aria-label="Direct link to In practice" title="Direct link to In practice">​</a></h2>
+<p>We've implemented this philosophy in the <a href="https://openbb.co/products/workspace" target="_blank" rel="noopener noreferrer">OpenBB Workspace</a>.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen_3.png"></p>
+<p>Our product enables complete on-premises deployment <strong>with local model integration</strong>, giving financial professionals AI-powered analysis without data sovereignty concerns.</p>
+<p>The question isn't whether AI will transform finance - it's whether your firm will control that transformation or become its victim.</p>
+<p>If you're ready to discuss how to implement AI safely and strategically within your organization, let's talk. Our product helps financial firms navigate this transition without compromising security, compliance, or competitive position.</p>
+<p>The mathematical certainty of failure only applies to those who don't listen to the cracks in the ship.</p>
+<div style="border-bottom:1px solid #0088CC;margin:1.5em 0"></div>
+<p>I believe in this so much that I actually added a <a href="https://didierlopes.com/chat" target="_blank" rel="noopener noreferrer">Chat page</a> to my personal website that allows users to run open-weight models on their machine, via Ollama, with access to data from my blogposts.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen_4.png"></p>]]></content>
+        <category label="ai" term="ai"/>
+        <category label="finance" term="finance"/>
+        <category label="risk-management" term="risk-management"/>
+        <category label="data-security" term="data-security"/>
+        <category label="llm" term="llm"/>
+        <category label="leadership" term="leadership"/>
+        <category label="strategy" term="strategy"/>
+        <category label="data-leakage" term="data-leakage"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Bring back your corner of the internet]]></title>
+        <id>https://didierlopes.com/blog/2025-07-02-bring-back-your-corner-of-the-internet</id>
+        <link href="https://didierlopes.com/blog/2025-07-02-bring-back-your-corner-of-the-internet"/>
+        <updated>2025-07-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The web has become bland and uniform. It's time to bring back the weird, wonderful, and deeply personal websites that once made the internet magical. With AI, the limit aren't skills anymore but imagination.]]></summary>
+        <content type="html"><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-07-02-bring-back-your-corner-of-the-internet.png"></p>
+<p>The web has become bland and uniform. It's time to bring back the weird, wonderful, and deeply personal websites that once made the internet magical. With AI, the limit aren't skills anymore but imagination.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>Remember when visiting someone's website felt like stepping into their living room? When every click revealed another piece of their personality, quirky design choices, and unique way of seeing the world?</p>
+<p>Growing up, one of the things I loved about the internet was how radically different each website was from the others.</p>
+<p>And I don't mean company websites, but personal websites.</p>
+<p>Newsletter and blog platforms like Medium, Substack, and Beehiiv didn't exist at the time. People built their websites from scratch (HTML, CSS and some JavaScript). Every pixel was crafted to reflect their thoughts and personality.</p>
+<p>Picture this: neon green text on black backgrounds, animated GIFs that served no purpose other than joy, custom cursors, and background music that auto-played (yes, we actually did that).</p>
+<p>These weren't just websites. They were digital extensions of their creators.</p>
+<p>Since they had invested time and creativity in building these digital spaces, each site became a unique fingerprint.</p>
+<p>That felt magical.</p>
+<p>You weren't just reading a post from somebody. You were accessing their "corner of the internet". You were getting to know them.</p>
+<blockquote>
+<p>"Corners of the internet" refers to specific websites, online communities, or digital spaces that are unique, niche, or offer a particular kind of experience, often one that is more personal, quirky, or less mainstream than the larger, more popular parts of the internet.</p>
+</blockquote>
+<br>
+<p>But with the rise of platforms that promise better discoverability and easier publishing, something beautiful was lost. Every page now feels like it was stamped from the same template.</p>
+<p>Don't get me wrong, these tools have democratized publishing and helped millions of people share their ideas. But in gaining convenience, we've lost personality.</p>
+<p>I often find myself reading blogs through email newsletters because it's convenient. But I miss the anticipation of visiting a website that might surprise me, where the author's personality leaked through every design choice.</p>
+<p>The web used to be weird, wonderful, and deeply personal.</p>
+<p>Now it's efficient, discoverable, and... bland.</p>
+<p>But here's the thing: I think now is the perfect time to change that.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="my-experiment-building-weird-again">My experiment: Building weird again<a href="https://didierlopes.com/blog/2025-07-02-bring-back-your-corner-of-the-internet#my-experiment-building-weird-again" class="hash-link" aria-label="Direct link to My experiment: Building weird again" title="Direct link to My experiment: Building weird again">​</a></h2>
+<p>I wanted an excuse to test Claude Code but didn't want to experiment on our production codebase. So I used my personal website as a playground: the perfect place to get weird.</p>
+<p>There were two pages I'd been wanting to build for months, but work always got in the way. I thought, maybe AI could help me finally make them real.</p>
+<p>Spoiler alert: <strong>It worked beautifully</strong>.</p>
+<p>Within a few hours, I had not just functional pages, but pages with personality.</p>
+<p>Here's what I built:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="the-intelligence-page">The Intelligence Page<a href="https://didierlopes.com/blog/2025-07-02-bring-back-your-corner-of-the-internet#the-intelligence-page" class="hash-link" aria-label="Direct link to The Intelligence Page" title="Direct link to The Intelligence Page">​</a></h3>
+<p>Transforms my blog posts into a living, breathing network. Imagine your thoughts as nodes in a graph—each post connected to related ideas, creating a visual "second brain" that you can explore and navigate.</p>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1em"><img width="500" src="https://didierlopes.com/blog/2025-07-02-bring-back-your-corner-of-the-internet_1.png"><img width="500" src="https://didierlopes.com/blog/2025-07-02-bring-back-your-corner-of-the-internet_2.png"></div>
+<br>
+<ul>
+<li>But here's where it gets fun: I added Kawspeely (a Fortnite character I edited with GPT-4o) who points visitors to this graph of nodes (posts). In dark mode, it becomes Kaws Skeleton. Both wear red Crocs because... why not?</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="the-chat-page">The Chat Page<a href="https://didierlopes.com/blog/2025-07-02-bring-back-your-corner-of-the-internet#the-chat-page" class="hash-link" aria-label="Direct link to The Chat Page" title="Direct link to The Chat Page">​</a></h3>
+<p>Lets visitors talk to an LLM that is running on their machine through Ollama, but has access to all my blogs through RAG. It's like having a conversation with my thoughts, even when I'm not there, and all the computation happens in the user machine.</p>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1em"><img width="500" src="https://didierlopes.com/blog/2025-07-02-bring-back-your-corner-of-the-internet_3.png"><img width="500" src="https://didierlopes.com/blog/2025-07-02-bring-back-your-corner-of-the-internet_4.png"></div>
+<br>
+<ul>
+<li>The interface features a kid Goku animation that reacts to the indexing of the blogposts with manga-style effects.</li>
+<li>When you clear the chat, an eraser sweeps across the screen in light mode—or Rick's portal gun appears in dark mode.</li>
+<li>Podcast audio below explaining what is going on generated by NotebookLM.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-now-is-the-perfect-time">Why now is the perfect time<a href="https://didierlopes.com/blog/2025-07-02-bring-back-your-corner-of-the-internet#why-now-is-the-perfect-time" class="hash-link" aria-label="Direct link to Why now is the perfect time" title="Direct link to Why now is the perfect time">​</a></h2>
+<p>This experiment made me realize something profound: the barriers that once kept us from building beautiful, personal websites have disappeared.</p>
+<p>Remember when you needed to know HTML, CSS, JavaScript, server management, and deployment? When you had to hand-code every animation and debug browser compatibility issues for hours?</p>
+<p>Those days are over.</p>
+<p>With tools like Claude Code, Replit, Lovable, and Cursor, there's no excuse not to reclaim your corner of the internet.</p>
+<p>AI can help you build the weird, wonderful website you've always imagined but never had the technical skills to create.</p>
+<p>I keep thinking about these viral tweets that perfectly capture the moment:</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-07-02-bring-back-your-corner-of-the-internet_5.png"></p>
+<p>The web became obsessed with conversion rates, SEO optimization, and uniform user experiences. We optimized the soul out of our digital spaces.</p>
+<p>But now, with AI as our creative partner, we can build beautiful things again.</p>
+<p><strong>The ceiling isn't technical skill, it's imagination</strong>.</p>
+<p>The question isn't "Can I build this?" anymore. It's "What do I want to build?"</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="some-corner-of-the-internet-inspo">Some corner of the internet inspo<a href="https://didierlopes.com/blog/2025-07-02-bring-back-your-corner-of-the-internet#some-corner-of-the-internet-inspo" class="hash-link" aria-label="Direct link to Some corner of the internet inspo" title="Direct link to Some corner of the internet inspo">​</a></h2>
+<ul>
+<li><strong>Ryo Lu from Cursor</strong>: <a href="https://ryo.lu/" target="_blank" rel="noopener noreferrer">https://ryo.lu/</a></li>
+<li><strong>Pieter Levels</strong>: <a href="https://pieter.com/" target="_blank" rel="noopener noreferrer">https://pieter.com/</a></li>
+<li><strong>Eva</strong>: <a href="https://kibty.town/" target="_blank" rel="noopener noreferrer">https://kibty.town</a></li>
+<li><strong>Tyler Denk</strong>: <a href="https://mail.bigdeskenergy.com/" target="_blank" rel="noopener noreferrer">https://mail.bigdeskenergy.com/</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="your-turn">Your turn<a href="https://didierlopes.com/blog/2025-07-02-bring-back-your-corner-of-the-internet#your-turn" class="hash-link" aria-label="Direct link to Your turn" title="Direct link to Your turn">​</a></h2>
+<p>Here's my challenge to you: <strong>build something weird</strong>.</p>
+<p>Not for your company. Not for your personal brand. Build something that makes you smile when you look at it. Something that would make teenage-you proud.</p>
+<p><strong>Getting Started</strong>:</p>
+<ol>
+<li>Pick an AI coding tool (Claude Code, Cursor, Replit, Lovable)</li>
+<li>Start with one small, strange idea</li>
+<li>Don't worry about mobile responsiveness or SEO</li>
+<li>Add something that serves no purpose other than joy</li>
+<li>Deploy it and share it</li>
+</ol>
+<p>The web is waiting for your weird.</p>
+<p>Let's make it beautiful again.</p>]]></content>
+        <category label="personal-websites" term="personal-websites"/>
+        <category label="blogging" term="blogging"/>
+        <category label="internet-culture" term="internet-culture"/>
+        <category label="creativity" term="creativity"/>
+        <category label="ai" term="ai"/>
+        <category label="development" term="development"/>
+        <category label="web-design" term="web-design"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[I can't believe I recommended Replit instead of Cursor]]></title>
         <id>https://didierlopes.com/blog/2025-06-20-i-cant-believe-i-recommended-replit-instead-of-cursor</id>

@@ -124,3 +124,4 @@
 - [2025-07-02-bring-back-your-corner-of-the-internet](https://didierlopes.com/blog/2025-07-02-bring-back-your-corner-of-the-internet)
 - [2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen](https://didierlopes.com/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen)
 - [2025-07-xx-is-prompt-engineering-dead-the-case-for-test-driven-ai-development](https://didierlopes.com/blog/2025-07-xx-is-prompt-engineering-dead-the-case-for-test-driven-ai-development)
+- [2025-07-xx-vibe-coding](https://didierlopes.com/blog/2025-07-xx-vibe-coding)

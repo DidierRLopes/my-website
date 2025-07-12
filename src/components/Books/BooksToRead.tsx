@@ -458,7 +458,12 @@ const data = [
 		title: "The Experimentation Machine: Finding Product-Market Fit in the Age of AI",
 		author: "Jeffrey J Bussgang",
 		image: "/books/the-experimentation-machine-finding-product-market-fit-in-the-age-of-ai.jpg",
-	}
+	},
+	{
+		title: "The Lessons of History",
+		author: "Will Durant, Ariel Durant",
+		image: "/books/the-lessons-of-history.jpg",
+	},
 ];
 
 export default function BooksToRead() {

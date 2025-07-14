@@ -464,6 +464,11 @@ const data = [
 		author: "Will Durant, Ariel Durant",
 		image: "/books/the-lessons-of-history.jpg",
 	},
+	{
+		title: "Flow: The Psychology of Optimal Experience",
+		author: "Mihaly Csikszentmihalyi",
+		image: "/books/flow-the-psychology-of-optimal-experience.jpg",
+	},
 ];
 
 export default function BooksToRead() {

@@ -469,6 +469,11 @@ const data = [
 		author: "Mihaly Csikszentmihalyi",
 		image: "/books/flow-the-psychology-of-optimal-experience.jpg",
 	},
+	{
+		title: "Who Knew",
+		author: "Barry Diller",
+		image: "/books/who-knew.jpg",
+	}
 ];
 
 export default function BooksToRead() {

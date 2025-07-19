@@ -18,7 +18,7 @@ hideSidebar: true
 ---
 
 <p align="center">
-    <img width="600" src="/blog/2025-06-01-not-your-typical-data-vendor.jpeg" />
+    <img width="600" src="/blog/2025-06-01-not-your-typical-data-vendor.png" />
 </p>
 
 This post explores Financial Datasets, a data vendor focused on top-tier developer experience and data quality, with an API built for AI agents.

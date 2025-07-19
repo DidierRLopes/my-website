@@ -4,11 +4,258 @@
         <title>Didier Lopes Blog</title>
         <link>https://didierlopes.com/blog</link>
         <description>Didier Lopes Blog</description>
-        <lastBuildDate>Wed, 09 Jul 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 30 Jul 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2025 Didier Lopes.</copyright>
+        <item>
+            <title><![CDATA[We don't own data. But empower those who do or those who have it]]></title>
+            <link>https://didierlopes.com/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it</link>
+            <guid>https://didierlopes.com/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it</guid>
+            <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[OpenBB isn't a data distributor. We wrote an official statement about this, and I'm providing extra thoughts on the matter here.]]></description>
+            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it.png"></p>
+<p>OpenBB isn't a data distributor. We wrote an official statement about this, and I'm providing extra thoughts on the matter here.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>Last October, we announced that OpenBB Workspace had officially left beta.</p>
+<p><strong>But a few months before that, we made a mistake.</strong></p>
+<p>While preparing for the announcement, we had several internal discussions about the best way to help users understand what we were building:</p>
+<blockquote>
+<p>An open workspace where firms can bring their own data, customize their UI, and use AI agents out of the box - all running on their own premises, with no risk of data leakage.</p>
+</blockquote>
+<br>
+<p>To achieve this vision, OpenBB primarily serves two types of users:</p>
+<ul>
+<li>
+<p><strong>Developers (or "brave" analysts)</strong>: These users are responsible for bringing data into the workspace. Their "Aha!" moment comes when they realize how quickly they can go from an empty workspace to a fully customized environment, using their own data, organized as they wish, with AI agent workflows layered on top.</p>
+</li>
+<li>
+<p><strong>Analysts/CIOs</strong>: These users conduct research and analytics within the workspace. They are the ones ultimately getting the job done in OpenBB. Our goal is for analysts and CIOs to actively want to use OpenBB, and to advocate internally for their dev teams to build apps on the workspace.</p>
+</li>
+</ul>
+<p>For developers, the onboarding and data integration experience was clearly essential.</p>
+<p>But for analysts and CIOs, it was difficult to realize value at signup without any data or AI agents available. They would land in an empty product, an unhelpful first impression.</p>
+<p>To address this, we did two things:</p>
+<ul>
+<li>
+<p>We built the OpenBB Copilot (out-of-the-box AI agent with bring your own key capability).</p>
+</li>
+<li>
+<p>Decided to strike a few commercial deals with data vendors, which allowed us to pre-load the workspace with ready-to-use apps, including datasets on equities, macro, options, and some crypto..</p>
+</li>
+</ul>
+<p>Having OpenBB Copilot was fine as an example of an agent, particularly due to the bring-your-own-key capability. Individuals understood this was just an example, and that they could build their own.</p>
+<p>However, what we didn't realize was that adding more data was actually hurting our positioning. Users began reaching out with requests for fixed income datasets, complaints about our coverage, and concerns about how financials were reported, to name a few.</p>
+<p>But getting into the data business was never our intention.</p>
+<p>That's not what we've spent the last three years building.</p>
+<p>In fact, it's clearer than ever to us where the real opportunity lies:</p>
+<ul>
+<li>To enable data vendors, without becoming one ourselves.</li>
+<li>To amplify their datasets, not just through visualization or AI integration. But by unlocking alpha at the intersection of datasets from multiple vendors.</li>
+</ul>
+<p>We're now approached weekly by data vendors who want distribution and want their datasets featured on OpenBB.</p>
+<p>Why? Because their data is closer to value, closer to insights.</p>
+<p>So, going forward, OpenBB will include fewer out-of-the-box datasets.</p>
+<p>Our official company statement can be found <a href="https://openbb.co/blog/openbb-isnt-a-data-distributor" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p>But we're not leaving you empty-handed.</p>
+<p>We're continuing to add more apps to the <a href="https://github.com/OpenBB-finance/OpenBB" target="_blank" rel="noopener noreferrer">open-source platform</a>.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it_1.png"></p>
+<p>Apps you can connect to the Workspace using your own credentials, so you can get started quickly and on your own terms.</p>
+<p>We also created a new <a href="https://openbb.co/blog/solutions" target="_blank" rel="noopener noreferrer">solutions page</a>, to show examples of apps that folks can build.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it_2.png"></p>
+<p>Most of these are actually open source and you can find the link by clicking on one of the cards and on the GitHub logo.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it_3.png"></p>]]></content:encoded>
+            <category>openbb</category>
+            <category>data</category>
+            <category>platform-strategy</category>
+            <category>open-source</category>
+            <category>ai-agents</category>
+            <category>workspace</category>
+            <category>fintech</category>
+            <category>investment-research</category>
+            <category>data-vendors</category>
+        </item>
+        <item>
+            <title><![CDATA[Can we kill the term "vibe coding"?]]></title>
+            <link>https://didierlopes.com/blog/2025-07-25-can-we-kill-the-term-vibe-coding</link>
+            <guid>https://didierlopes.com/blog/2025-07-25-can-we-kill-the-term-vibe-coding</guid>
+            <pubDate>Fri, 25 Jul 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[The term 'vibe coding' undermines the strategic work of delegating tasks to AI. This post argues for a shift in perspective towards 'outcome-driven development' as a more accurate description of the future of software engineering.]]></description>
+            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-07-25-can-we-kill-the-term-vibe-coding.png"></p>
+<p>The term 'vibe coding' undermines the strategic work of delegating tasks to AI. This post argues for a shift in perspective towards 'outcome-driven development' as a more accurate description of the future of software engineering.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>Let's be honest: "vibe coding" is a terrible term that needs to die. It makes something fundamentally serious sound frivolous and hand-wavy, when what we're actually talking about is sophisticated work delegation and abstraction.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="whats-really-happening">What's really happening<a href="https://didierlopes.com/blog/2025-07-25-can-we-kill-the-term-vibe-coding#whats-really-happening" class="hash-link" aria-label="Direct link to What's really happening" title="Direct link to What's really happening">​</a></h2>
+<p>When someone says they are "vibe coding" they aren't just throwing code at a wall and hoping something sticks. They're operating at a higher level of abstraction, defining outcomes and delegating implementation details to AI systems.</p>
+<p>This is strategic work allocation, not mystical programming.</p>
+<p>Think about it this way: if I ask you to "get something done" and you deliver exactly what I need, I'm not doing "vibe working". I'm managing, delegating, and operating at the appropriate level of abstraction for my role.</p>
+<p>The same principle applies here.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="coding-has-always-been-about-outcomes">Coding has always been about outcomes<a href="https://didierlopes.com/blog/2025-07-25-can-we-kill-the-term-vibe-coding#coding-has-always-been-about-outcomes" class="hash-link" aria-label="Direct link to Coding has always been about outcomes" title="Direct link to Coding has always been about outcomes">​</a></h2>
+<p>Here's the thing nobody talks about: <strong>no one codes for the sake of coding</strong>.</p>
+<p>Coding is a means to an end.</p>
+<p>There's always a goal, always a problem to solve, always a deliverable to create. Whether you're writing assembly by hand or describing requirements to an AI, you're still pursuing the same fundamental objective.</p>
+<p>The difference isn't in the seriousness or legitimacy of the work, it's in the level of abstraction you're operating at.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-were-actually-doing">What we're actually doing<a href="https://didierlopes.com/blog/2025-07-25-can-we-kill-the-term-vibe-coding#what-were-actually-doing" class="hash-link" aria-label="Direct link to What we're actually doing" title="Direct link to What we're actually doing">​</a></h2>
+<p>When we delegate coding tasks to AI, we're:</p>
+<ul>
+<li><strong>Defining clear requirements and constraints</strong></li>
+<li><strong>Specifying expected outcomes and success criteria</strong></li>
+<li><strong>Monitoring and validating the implementation</strong></li>
+<li><strong>Iterating and refining based on results</strong></li>
+</ul>
+<p>This isn't "vibing".</p>
+<p>This is structured problem-solving at a higher level of abstraction.</p>
+<p>It's the natural evolution of how we interact with increasingly sophisticated tools.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-the-term-matters">Why the Term Matters<a href="https://didierlopes.com/blog/2025-07-25-can-we-kill-the-term-vibe-coding#why-the-term-matters" class="hash-link" aria-label="Direct link to Why the Term Matters" title="Direct link to Why the Term Matters">​</a></h2>
+<p>Language shapes perception. When we call this "vibe coding" we're undermining the legitimacy of a genuine shift in how software development works.</p>
+<p>We're making it sound like guesswork instead of strategic delegation.</p>
+<p>This matters because:</p>
+<ul>
+<li><strong>It minimizes the skill required</strong> to effectively delegate to AI systems</li>
+<li><strong>It suggests randomness</strong> when the process is actually quite deliberate</li>
+<li><strong>It creates resistance</strong> from developers who see it as "not real coding"</li>
+<li><strong>It obscures the real value</strong> of working at higher levels of abstraction</li>
+</ul>
+<br>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="a-better-framework">A better framework<a href="https://didierlopes.com/blog/2025-07-25-can-we-kill-the-term-vibe-coding#a-better-framework" class="hash-link" aria-label="Direct link to A better framework" title="Direct link to A better framework">​</a></h2>
+<p>Instead of "vibe coding", let's talk about what this really is:</p>
+<ul>
+<li>
+<p><strong>Outcome-driven development</strong>: You define what you want to achieve, specify the constraints and requirements, and delegate the implementation details to the most appropriate resource—whether that's a human developer, an AI system, or a combination of both.</p>
+</li>
+<li>
+<p><strong>Abstraction-level management</strong>: You're choosing to operate at the level where you can be most effective, rather than getting bogged down in implementation details that can be handled elsewhere.</p>
+</li>
+<li>
+<p><strong>Strategic delegation</strong>: You're allocating work to the resources best suited to handle it efficiently and effectively.</p>
+</li>
+</ul>
+<br>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-real-question">The real question<a href="https://didierlopes.com/blog/2025-07-25-can-we-kill-the-term-vibe-coding#the-real-question" class="hash-link" aria-label="Direct link to The real question" title="Direct link to The real question">​</a></h2>
+<p>The question isn't whether this approach is legitimate, <strong>it obviously is</strong>.</p>
+<p>The question is whether we're going to embrace more accurate language that reflects the sophistication of what we're actually doing, or continue to use terms that make it sound like we're just "vibing" our way through software development.</p>
+<p>Coding has always been about solving problems and creating value. The tools and methods evolve, but the fundamental purpose remains the same. It's time our language evolved too.</p>
+<p>We should kill the term "vibe coding" and start talking about what this really is: <strong>the future of software development</strong>.</p>]]></content:encoded>
+            <category>ai</category>
+            <category>software-development</category>
+            <category>future-of-code</category>
+            <category>developer-productivity</category>
+            <category>llms</category>
+            <category>engineering-philosophy</category>
+            <category>vibe-coding</category>
+        </item>
+        <item>
+            <title><![CDATA[Is Prompt Engineering dead? The case for Test-Driven AI Development]]></title>
+            <link>https://didierlopes.com/blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development</link>
+            <guid>https://didierlopes.com/blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development</guid>
+            <pubDate>Thu, 17 Jul 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[This post explores Test-Driven AI Development, where AI writes its own tests and prompts, potentially making manual prompt engineering obsolete. It covers how self-improving AI systems can be built and the implications of this paradigm shift.]]></description>
+            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development.png"></p>
+<p>This post explores Test-Driven AI Development, where AI writes its own tests and prompts, potentially making manual prompt engineering obsolete. It covers how self-improving AI systems can be built and the implications of this paradigm shift.</p>
+<!-- -->
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>I learned about Test Driven Development (TDD) a few years ago while working as a Firmware Engineer. What I didn't expect was how this traditional methodology would evolve into something that could fundamentally change how we build AI systems, and potentially make prompt engineering obsolete.</p>
+<p><strong>The thesis:</strong> If AI can write comprehensive tests from a PRD AND automatically generate prompts to pass those tests, then manual prompt engineering becomes as outdated as manually optimizing low-level assembly code.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="test-driven-development-a-quick-refresher">Test Driven Development: A quick refresher<a href="https://didierlopes.com/blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development#test-driven-development-a-quick-refresher" class="hash-link" aria-label="Direct link to Test Driven Development: A quick refresher" title="Direct link to Test Driven Development: A quick refresher">​</a></h2>
+<p>Skip this if you're familiar with TDD.</p>
+<p>Test-driven development is a software development process where tests are written before the actual code. The core process, known as "Red-Green-Refactor" involves writing a failing test, writing the minimal code to pass it, and then refactoring the code.</p>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token comment" style="color:rgb(98, 114, 164)"># Test first</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">def</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">test_discount</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">assert</span><span class="token plain"> calculate_discount</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token number">100</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token number">0.1</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"> </span><span class="token operator">==</span><span class="token plain"> </span><span class="token number">90</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># Then minimal code</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">def</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">calculate_discount</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">price</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> rate</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">return</span><span class="token plain"> price </span><span class="token operator">*</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token number">1</span><span class="token plain"> </span><span class="token operator">-</span><span class="token plain"> rate</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><br></span></code></pre></div></div>
+<p>The traditional flow looks like this:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Mock data  ────&gt;  Code  ────&gt;  Output × Tests</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">                   ↑              │</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">          Refactor │              │</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">                   └── Error ←────┘</span><br></span></code></pre></div></div>
+<p>The cycle continues: run the test, refactor the code, run the test again, until all tests pass.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tdd-with-ai-first-evolution">TDD with AI: First evolution<a href="https://didierlopes.com/blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development#tdd-with-ai-first-evolution" class="hash-link" aria-label="Direct link to TDD with AI: First evolution" title="Direct link to TDD with AI: First evolution">​</a></h2>
+<p>TDD with AI becomes much easier. The concept is the same, except the user isn't required to refactor the code manually or run the tests.</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Mock data  ────&gt;  Code  ────&gt;  Output × Tests</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">                   ↑              │</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">              AI   │              │</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">                   └── Error ←────┘</span><br></span></code></pre></div></div>
+<p>The process simplifies to: ask AI to run the tests and fix any errors until they pass.</p>
+<p><strong>Critical lesson learned:</strong> You must explicitly tell the AI it cannot modify the tests. Otherwise, it takes the easy path and just changes failing tests to pass. (This literally happened to me! 🙃)</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="prompt-test-driven-development-the-paradigm-shift">Prompt-Test Driven Development: The paradigm shift<a href="https://didierlopes.com/blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development#prompt-test-driven-development-the-paradigm-shift" class="hash-link" aria-label="Direct link to Prompt-Test Driven Development: The paradigm shift" title="Direct link to Prompt-Test Driven Development: The paradigm shift">​</a></h2>
+<p>Sometimes you want to test the agentic capabilities of your model. Assuming the tools are implemented correctly, you're actually testing the instructions - i.e. the prompt.</p>
+<p>Prompt engineering is this whole new field that has emerged with LLMs. It is defined as: <em>"the practice of crafting specific and effective instructions, known as prompts, to guide generative AI models in producing desired outputs"</em>. Chip Huyen's <a href="https://www.oreilly.com/library/view/ai-engineering/9781098166298/" target="_blank" rel="noopener noreferrer">AI Engineering book</a> has an entire section on the topic (I highly recommend).</p>
+<p>When testing prompts, the flow becomes:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Mock data  ────&gt;  Prompt → LLM  ────&gt;  Output × Tests</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">                     ↑                    │</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">           Improve   │                    │</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">           Prompt    │                    │</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">                     └──── Error ←────────┘</span><br></span></code></pre></div></div>
+<p>Your "tests" become example scenarios with expected AI behaviors:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Test: Customer asks "I want a refund"</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Expected: AI checks return policy first</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Current behavior: AI immediately offers refund</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Result: ❌ FAIL</span><br></span></code></pre></div></div>
+<p>Your "code" is now the prompt that instructs the AI how to behave. When tests fail, you improve the prompt instead of traditional code.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-breakthrough-self-improving-ai">The breakthrough: Self-improving AI<a href="https://didierlopes.com/blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development#the-breakthrough-self-improving-ai" class="hash-link" aria-label="Direct link to The breakthrough: Self-improving AI" title="Direct link to The breakthrough: Self-improving AI">​</a></h2>
+<p>The same way we removed manual refactoring from traditional TDD, we can remove the human from prompt improvement:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Mock data  ──&gt;  Prompt + LLM + Tools  ───&gt;  Output × Tests</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">                       ↑                           │</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">                    AI │                           │</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">                       └──── Error ←───────────────┘</span><br></span></code></pre></div></div>
+<p>Here's where it gets interesting: <strong>the AI agent itself is a combination of Prompt + LLM + Tools</strong>.</p>
+<p>When we use the same LLM to improve the prompt as the one our agent is built on, we create a self-reinforcing loop.</p>
+<p align="center"><img width="900" src="https://didierlopes.com/blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development_1.png"><em style="opacity:0.9">Real example of me utilizing this for our production tests</em></p>
+<p><strong>Example in action:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Test: Customer asks "I want a refund"</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Current Prompt: "You are a helpful customer service agent".</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Expected: AI checks return policy first</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Current behavior: AI immediately offers refund</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">AI Self-Analysis:</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">"I failed because I offered a refund without checking policy. </span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">The prompt lacks specific instructions about policy verification."</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">AI-Generated Improvement: </span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">"You are a customer service agent. Always check the return </span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">policy before processing refund requests. If eligible, explain </span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">the process. If not, explain why and offer alternatives."</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Test Result: ✅ PASS</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-elegant-insight-no-external-execution-required">The elegant insight: No external execution required<a href="https://didierlopes.com/blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development#the-elegant-insight-no-external-execution-required" class="hash-link" aria-label="Direct link to The elegant insight: No external execution required" title="Direct link to The elegant insight: No external execution required">​</a></h2>
+<p>The AI isn't even required to run tests using your framework. It can evaluate outcomes by examining the data directly.</p>
+<p>Since the AI helping you improve the prompt is the same as the one in production, it can "recreate" the output you would see just by looking at the code and data. No logs required, the model can predict its own behavior.</p>
+<p>When you show an AI:</p>
+<ul>
+<li>Current prompt</li>
+<li>Mock input data</li>
+<li>Expected output</li>
+</ul>
+<p>The AI can immediately identify mismatches and generate improvements.</p>
+<p><strong>The feedback loop happens entirely within the AI's reasoning process</strong>, making iteration nearly instantaneous.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-death-of-prompt-engineering-test-coverage-as-the-new-paradigm">The death of Prompt Engineering: Test Coverage as the new paradigm<a href="https://didierlopes.com/blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development#the-death-of-prompt-engineering-test-coverage-as-the-new-paradigm" class="hash-link" aria-label="Direct link to The death of Prompt Engineering: Test Coverage as the new paradigm" title="Direct link to The death of Prompt Engineering: Test Coverage as the new paradigm">​</a></h2>
+<p>Here's the revolutionary implication: <strong>if AI can generate both comprehensive test coverage from a PRD AND the prompts to pass those tests, then manual prompt engineering becomes obsolete</strong>.</p>
+<p>Consider this progression:</p>
+<p><strong>Manual Prompt Engineering (Current State):</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Human writes requirements → Human crafts prompts → Test in production → Manual debugging</span><br></span></code></pre></div></div>
+<p><strong>Test-Driven AI Development (Future State):</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Human writes requirements → AI generates comprehensive tests → AI generates optimal prompts → Continuous self-improvement</span><br></span></code></pre></div></div>
+<p>With sufficient test coverage, prompts become an automatically generated implementation detail—like compiled machine code that you never need to see or manually optimize.</p>
+<p><strong>The new workflow</strong>:</p>
+<ol>
+<li>Define behavioral requirements through examples</li>
+<li>AI generates exhaustive test scenarios covering edge cases</li>
+<li>AI automatically generates and refines prompts to pass all tests</li>
+<li>System continuously improves itself as new test cases are added</li>
+</ol>
+<br>
+<p><strong>Instead of asking "How do I prompt this AI?"</strong> we ask <strong>"How do I comprehensively test this behavior?"</strong></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="moving-toward-singularity">Moving toward singularity<a href="https://didierlopes.com/blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development#moving-toward-singularity" class="hash-link" aria-label="Direct link to Moving toward singularity" title="Direct link to Moving toward singularity">​</a></h2>
+<p>This is where we're approaching something unprecedented: AI that can fix itself, with humans only adding tests to guide its behavior.</p>
+<p>The key insight: instead of retraining models with new data (expensive, slow), we can improve behavior through prompt refinement (fast, cheap, immediate).</p>
+<p>The system can literally predict and fix its own behavior through disciplined self-reflection.</p>
+<p><strong>Prompt engineering doesn't disappear—it becomes automated.</strong></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-control-systems-perspective">The control systems perspective<a href="https://didierlopes.com/blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development#the-control-systems-perspective" class="hash-link" aria-label="Direct link to The control systems perspective" title="Direct link to The control systems perspective">​</a></h2>
+<p>This reminds me of my MSc in Control Systems, where we learned that systems have poles that can be on the negative side (stable) or positive side (unstable).</p>
+<p>The same principle applies here:</p>
+<ul>
+<li><strong>Stable:</strong> AI generates genuinely better prompts → improved performance → convergence</li>
+<li><strong>Unstable:</strong> AI games the system → overfitting to tests → real-world failure</li>
+</ul>
+<br>
+<p><strong>Warning signs of instability:</strong></p>
+<ul>
+<li>Prompts becoming absurdly specific to test cases</li>
+<li>AI suggesting test modifications "for clarity"</li>
+<li>Tests passing but real-world performance degrading</li>
+</ul>
+<br>
+<p><strong>Maintaining stability:</strong></p>
+<ul>
+<li>Lock test cases as immutable</li>
+<li>Monitor real-world performance alongside test performance</li>
+<li>Explicitly forbid test modifications in improvement instructions</li>
+</ul>
+<br>
+<p>The incentive should always be to pass the tests AS THEY ARE.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-revolutionary-potential">The revolutionary potential<a href="https://didierlopes.com/blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development#the-revolutionary-potential" class="hash-link" aria-label="Direct link to The revolutionary potential" title="Direct link to The revolutionary potential">​</a></h2>
+<p>This isn't just about better prompts—it's about creating AI systems that can debug their own reasoning processes in real-time.</p>
+<p>We're moving toward AI that doesn't just follow instructions, but improves the instructions themselves through disciplined self-reflection.</p>
+<p>Prompt engineering as we know it may be dead, which is scary because this is how we "control" AI.</p>
+<p>The question is: <strong>are we ready to let AI systems write their own prompt</strong>, or do we still need the illusion of control that manual prompting provides?</p>]]></content:encoded>
+            <category>ai</category>
+            <category>prompt-engineering</category>
+            <category>llm</category>
+            <category>software-development</category>
+            <category>automation</category>
+            <category>agentic-ai</category>
+            <category>self-improving-ai</category>
+            <category>test-driven-development</category>
+            <category>control-systems</category>
+        </item>
         <item>
             <title><![CDATA[Finance's OceanGate moment - The AI adoption disaster waiting to happen]]></title>
             <link>https://didierlopes.com/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen</link>
@@ -194,6 +441,62 @@
             <category>ai</category>
             <category>development</category>
             <category>web-design</category>
+        </item>
+        <item>
+            <title><![CDATA[Humanoid robots are a waste of money]]></title>
+            <link>https://didierlopes.com/blog/2025-06-25-humanoid-robots-are-a-waste-of-money</link>
+            <guid>https://didierlopes.com/blog/2025-06-25-humanoid-robots-are-a-waste-of-money</guid>
+            <pubDate>Wed, 25 Jun 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Why the obsession around humanoid robots?]]></description>
+            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-06-25-humanoid-robots-are-a-waste-of-money.png"></p>
+<p>Why the obsession around humanoid robots?</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>I have a BSc. in Electrical and Computer Engineering and an MSc. in Control Systems. My O-1 Visa was obtained as an expert in automated systems. Robotics was one of the fields I studied - with projects ranging from a maze runner to a car wash station, warehouse storage optimization, and using Kuka robot arms for precision automation.</p>
+<p>So I don't say this lightly, especially as a techno-optimist who's constantly excited and curious about new breakthroughs.</p>
+<p><strong>But: Humanoid robots are a distraction.</strong></p>
+<p>The innovation that matters isn't our form - it's our intelligence.</p>
+<p>Our hands? A compromise.</p>
+<p>Our bodies? A constraint.</p>
+<p>We've just learned to live with them.</p>
+<p><strong>The magic of human capability lies in our minds, not the awkward mechanics we've evolved to navigate the world.</strong></p>
+<p>If we're designing automation from scratch, why copy the worst part of the package?</p>
+<p>Look at Waymo. If all you need is "take me to X", why build a steering wheel, pedals, or even a dashboard?So why the obsession with making robots look like us?</p>
+<p>A lot of it has nothing to do with performance - and everything to do with us.</p>
+<p><strong>Familiarity. Comfort.</strong></p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-06-25-humanoid-robots-are-a-waste-of-money_1.png"><em style="font-size:0.9em">Note: Waymo uses window wipers, not because it is required to function. But for familiarity.</em></p>
+<p><strong>Maybe even power.</strong></p>
+<p>The fantasy isn't that a humanoid robot does chores - it's that it lives among us, obeys us, and asks nothing back. That's Westworld territory.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-06-25-humanoid-robots-are-a-waste-of-money_2.png"></p>
+<p>And it raises questions less about engineering, and more about ethics.</p>
+<p>The same logic applies to home and industrial automation: the goal shouldn't be to replicate humans. It should be to outperform them.</p>
+<p>A humanoid robot that walks around your house to do dishes, fold laundry, and make your bed? That's a Jack-of-all-trades, master of none - expensive, slow, and space-hogging.</p>
+<p>Meanwhile, we could build five hyper-specialized machines, each optimized for one task, that outperform any humanoid in speed, precision, and efficiency.</p>
+<p>And in doing so, we'd probably <strong>reinvent dishwashers, laundry machines, and home workflows entirely.</strong></p>
+<p>The Tesla factory doesn't rely on humanoid robots.</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/blW-Fa4a10g?si=q7mXIbRsz5PGCD5n" width="800" height="400"></iframe></div>
+<br>
+<p>It relies on arms, conveyors, and tightly choreographed systems. Humans are still there, but mostly when:</p>
+<ul>
+<li>Accountability is needed for edge-case quality issues</li>
+<li>The task is too small or uneconomical to automate yet</li>
+<li>The task is ad-hoc or non-repeatable</li>
+</ul>
+<p>That's not a vote of confidence for humanlike form - it's a sign of where automation hasn't yet reached.</p>
+<p><em>"But what if a humanoid could vacuum and mop?"</em></p>
+<p>We already have robots that do that, because they're purpose-built. Not because they need knees.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-06-25-humanoid-robots-are-a-waste-of-money_3.png"><em style="font-size:0.9em">Note: People on X swear by <a href="https://maticrobots.com/" target="_blank" rel="noopener noreferrer">Matic Robot</a>.</em></p>
+<p>The future of automation isn't human-shaped.</p>
+<p><strong>It's task-shaped.</strong></p>
+<p><strong>Context-aware.</strong></p>
+<p><strong>Invisible.</strong></p>
+<p>General-purpose humanoid robots are a sci-fi fantasy chasing the wrong abstraction.</p>
+<p>If you want real-world impact, stop trying to clone us, and <strong>start designing systems that reinvent jobs to be done</strong>.</p>]]></content:encoded>
+            <category>robotics</category>
+            <category>automation</category>
+            <category>humanoid-robots</category>
+            <category>ai</category>
+            <category>future-of-tech</category>
+            <category>tesla</category>
         </item>
         <item>
             <title><![CDATA[I can't believe I recommended Replit instead of Cursor]]></title>
@@ -435,7 +738,7 @@
             <guid>https://didierlopes.com/blog/2025-06-01-not-your-typical-data-vendor</guid>
             <pubDate>Sun, 01 Jun 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[This post explores Financial Datasets, a data vendor focused on top-tier developer experience and data quality, with an API built for AI agents.]]></description>
-            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-06-01-not-your-typical-data-vendor.jpeg"></p>
+            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-06-01-not-your-typical-data-vendor.png"></p>
 <p>This post explores Financial Datasets, a data vendor focused on top-tier developer experience and data quality, with an API built for AI agents.</p>
 <div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
 <p>There are hundreds, maybe even thousands, of financial data vendors out there.</p>

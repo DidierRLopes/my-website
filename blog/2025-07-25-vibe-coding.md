@@ -14,7 +14,6 @@ tags:
 description: The term 'vibe coding' undermines the strategic work of delegating tasks to AI. This post argues for a shift in perspective towards 'outcome-driven development' as a more accurate description of the future of software engineering.
 hideSidebar: true
 hide: true
-draft: true
 ---
 
 <p align="center">

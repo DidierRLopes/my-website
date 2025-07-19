@@ -13,7 +13,6 @@ tags:
 description: Why the obsession around humanoid robots?
 hideSidebar: true
 hide: true
-draft: true
 ---
 
 <p align="center">

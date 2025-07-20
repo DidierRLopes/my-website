@@ -414,23 +414,27 @@ const OllamaSetupInstructions = () => {
             case 'mac':
                 return (
                     <div>
-                        <p style={{ margin: '0.5rem 0' }}>Run in Terminal then restart Ollama:</p>
+                        <p style={{ margin: '0.5rem 0' }}>1. Run this command in your terminal:</p>
                         <CommandSnippet command='launchctl setenv OLLAMA_ORIGINS "https://didierlopes.com"' />
+                        <p style={{ margin: '1rem 0 0 0' }}>2. <strong>Quit and restart the Ollama application</strong> from the menu bar for the change to take effect.</p>
                     </div>
                 );
             case 'windows':
                 return (
                     <div>
-                        <p style={{ margin: '0.5rem 0' }}>Run in PowerShell (Admin) then restart Ollama:</p>
+                        <p style={{ margin: '0.5rem 0' }}>1. Run this command in PowerShell (as Administrator):</p>
                         <CommandSnippet command='setx OLLAMA_ORIGINS "https://didierlopes.com" /m' />
+                        <p style={{ margin: '1rem 0 0 0' }}>2. <strong>Quit and restart the Ollama application</strong> for the change to take effect.</p>
                     </div>
                 );
             case 'linux':
                 return (
                     <div>
-                        <p style={{ margin: '0.5rem 0' }}>Add this to your systemd unit, then restart the service:</p>
+                        <p style={{ margin: '0.5rem 0' }}>1. Add the environment variable to the systemd unit:</p>
                         <CommandSnippet command="sudo systemctl edit ollama.service" />
+                        <p style={{ margin: '0.5rem 0' }}>2. This will open an editor. Add the following lines, then save and close the file:</p>
                         <pre style={{ background: isDark ? '#111' : '#EEE', padding: '0.5rem', borderRadius: '4px', marginTop: '0.5rem', fontSize: '0.85em' }}>[Service]<br/>Environment="OLLAMA_ORIGINS=https://didierlopes.com"</pre>
+                        <p style={{ margin: '1rem 0 0 0' }}>3. Restart the Ollama service to apply the changes:</p>
                         <CommandSnippet command="sudo systemctl restart ollama" />
                     </div>
                 );
@@ -506,9 +510,9 @@ const OllamaSetupInstructions = () => {
                 </div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'stretch', gap: '1rem', marginTop: '1rem' }}>
-                <div style={{...panelStyle, justifyContent: 'flex-start'}}>
+                <div style={{...panelStyle, justifyContent: 'flex-start', flex: 1}}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-                        <h3 style={headingStyle}>Step 4: Enable CORS</h3>
+                        <h3 style={headingStyle}>Step 4: Configure Ollama</h3>
                         <div style={{ display: 'flex', gap: '0.5rem' }}>
                             <button type='button' onClick={() => setActiveTab('mac')} style={tabStyle('mac')}>macOS</button>
                             <button type='button' onClick={() => setActiveTab('windows')} style={tabStyle('windows')}>Windows</button>
@@ -516,27 +520,36 @@ const OllamaSetupInstructions = () => {
                         </div>
                     </div>
                     <p style={{ marginTop: '1rem', marginBottom: '1rem' }}>
-                        By default, browsers block web pages from calling local servers for security reasons. <br />You must explicitly tell Ollama to allow requests from{' '}
-                          <strong style={{
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: '4px'
-                        }}>
-                          https://didierlopes.com
-                          </strong>.
+                        To allow this website to connect to your local Ollama, you must configure CORS.
+                        This tells Ollama to accept requests from <strong>https://didierlopes.com</strong>.
                     </p>
                     {renderInstructions()}
+                    <p style={{ marginTop: '1rem', fontWeight: 'bold' }}>
+                        Important: After running the command, you must fully quit and restart the Ollama application for the setting to take effect.
+                    </p>
+                </div>
+                <div style={{...panelStyle, justifyContent: 'flex-start', flex: 1}}>
+                    <div>
+                        <h3 style={headingStyle}>Step 5: Create Secure Tunnel</h3>
+                    </div>
+                    <p style={{ marginTop: '1rem', marginBottom: '1rem' }}>
+                        To bridge the connection from the secure website (https) to your local server (http), you need a secure tunnel.
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                        <div>
+                            <p style={{ margin: '0.5rem 0' }}>1. Install <code>cloudflared</code> (if you don't have it):</p>
+                            <CommandSnippet command='brew install cloudflare/cloudflare/cloudflared' />
+                        </div>
+                        <div>
+                            <p style={{ margin: '0.5rem 0' }}>2. Run the tunnel to create a public https URL for your local server:</p>
+                            <CommandSnippet command='cloudflared tunnel --url http://localhost:11434' />
+                        </div>
+                        <div>
+                            <p style={{ margin: '0.5rem 0' }}>3. Cloudflare will give you a URL ending in <code>trycloudflare.com</code>. <strong>Copy this URL</strong> and paste it into the "Ollama URL" input field at the top of this page.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <p style={{ 
-                textAlign: 'center',
-                margin: '1.5rem 0.5rem 0 0.5rem',
-                fontSize: '0.9em',
-                color: isDark ? '#AAA' : '#555'
-            }}>
-                Run the Ollama app in the background, if it was running kill it first so the CORS settings take effect.<br />By default, it uses <a href="http://localhost:11434/" target="_blank" rel="noopener noreferrer" style={{ color: isDark ? '#93c5fd' : '#1e40af', textDecoration: 'underline' }}>http://localhost:11434/</a>.
-                Check the URL to confirm you get an <strong>"Ollama is running"</strong> message.
-            </p>
         </div>
     );
 };

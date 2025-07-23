@@ -370,17 +370,6 @@ const OllamaSetupInstructions = () => {
     const headingStyle = {
         color: isDark ? 'white' : 'inherit'
     };
-
-    const codeStyle = {
-        backgroundColor: isDark ? '#333' : '#EEE',
-        padding: '0.5rem 1rem',
-        borderRadius: '5px',
-        display: 'inline-block',
-        marginTop: '1rem',
-        fontFamily: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
-        color: isDark ? '#E0E0E0' : '#111',
-        border: `1px solid ${isDark ? '#444' : '#DDD'}`
-    };
     
     type Tab = 'mac' | 'windows' | 'linux';
 
@@ -409,7 +398,7 @@ const OllamaSetupInstructions = () => {
         transition: 'border-color 0.2s',
     });
     
-    const renderInstructions = () => {
+    const renderCorsInstructions = () => {
         switch (activeTab) {
             case 'mac':
                 return (
@@ -439,6 +428,31 @@ const OllamaSetupInstructions = () => {
                     </div>
                 );
         }
+    };
+
+    const renderTunnelInstructions = () => {
+        let installCommand = 'brew install cloudflare/cloudflare/cloudflared';
+        if (activeTab === 'windows') {
+            installCommand = 'winget install -e --id Cloudflare.cloudflared';
+        } else if (activeTab === 'linux') {
+            installCommand = '# See https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/';
+        }
+
+        return (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <div>
+                    <p style={{ margin: '0.5rem 0' }}>1. Install <code>cloudflared</code> (if you don't have it):</p>
+                    <CommandSnippet command={installCommand} />
+                </div>
+                <div>
+                    <p style={{ margin: '0.5rem 0' }}>2. Run the tunnel to create a public https URL for your local server:</p>
+                    <CommandSnippet command='cloudflared tunnel --url http://localhost:11434' />
+                </div>
+                <div>
+                    <p style={{ margin: '0.5rem 0' }}>3. Cloudflare will give you a URL ending in <code>trycloudflare.com</code>. <strong>Copy this URL</strong> and paste it into the "Ollama URL" input field at the top of this page.</p>
+                </div>
+            </div>
+        );
     };
 
     return (
@@ -523,31 +537,21 @@ const OllamaSetupInstructions = () => {
                         To allow this website to connect to your local Ollama, you must configure CORS.
                         This tells Ollama to accept requests from <strong>https://didierlopes.com</strong>.
                     </p>
-                    {renderInstructions()}
-                    <p style={{ marginTop: '1rem', fontWeight: 'bold' }}>
-                        Important: After running the command, you must fully quit and restart the Ollama application for the setting to take effect.
-                    </p>
+                    {renderCorsInstructions()}
                 </div>
                 <div style={{...panelStyle, justifyContent: 'flex-start', flex: 1}}>
-                    <div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
                         <h3 style={headingStyle}>Step 5: Create Secure Tunnel</h3>
+                        <div style={{ display: 'flex', gap: '0.5rem' }}>
+                            <button type='button' onClick={() => setActiveTab('mac')} style={tabStyle('mac')}>macOS</button>
+                            <button type='button' onClick={() => setActiveTab('windows')} style={tabStyle('windows')}>Windows</button>
+                            <button type='button' onClick={() => setActiveTab('linux')} style={tabStyle('linux')}>Linux</button>
+                        </div>
                     </div>
                     <p style={{ marginTop: '1rem', marginBottom: '1rem' }}>
                         To bridge the connection from the secure website (https) to your local server (http), you need a secure tunnel.
                     </p>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                        <div>
-                            <p style={{ margin: '0.5rem 0' }}>1. Install <code>cloudflared</code> (if you don't have it):</p>
-                            <CommandSnippet command='brew install cloudflare/cloudflare/cloudflared' />
-                        </div>
-                        <div>
-                            <p style={{ margin: '0.5rem 0' }}>2. Run the tunnel to create a public https URL for your local server:</p>
-                            <CommandSnippet command='cloudflared tunnel --url http://localhost:11434' />
-                        </div>
-                        <div>
-                            <p style={{ margin: '0.5rem 0' }}>3. Cloudflare will give you a URL ending in <code>trycloudflare.com</code>. <strong>Copy this URL</strong> and paste it into the "Ollama URL" input field at the top of this page.</p>
-                        </div>
-                    </div>
+                    {renderTunnelInstructions()}
                 </div>
             </div>
         </div>

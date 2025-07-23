@@ -450,11 +450,6 @@ const data = [
 		image: "/books/play-nice-but-win-a-ceos-journey-from-founder-to-leader.jpg",
 	},
 	{
-		title: "The Book of Why: The New Science of Cause and Effect",
-		author: "Judea Pearl, Dana Mackenzie",
-		image: "/books/the-book-of-why-the-new-science-of-cause-and-effect.jpg",
-	},
-	{
 		title: "The Experimentation Machine: Finding Product-Market Fit in the Age of AI",
 		author: "Jeffrey J Bussgang",
 		image: "/books/the-experimentation-machine-finding-product-market-fit-in-the-age-of-ai.jpg",

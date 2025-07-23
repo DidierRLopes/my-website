@@ -483,6 +483,11 @@ const data = [
 		title: "This is Marketing: You Can't Be Seen Until You Learn to See",
 		author: "Seth Godin",
 		image: "/books/this-is-marketing-you-can-t-be-seen-until-you-learn-to-see.jpg",
+	},
+	{
+		title: "The Book of Why: The New Science of Cause and Effect",
+		author: "Judea Pearl, Dana Mackenzie",
+		image: "/books/the-book-of-why-the-new-science-of-cause-and-effect.jpg",
 	}
 ];
 

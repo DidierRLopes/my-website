@@ -1,8 +1,8 @@
 ---
-slug: 2025-07-25-can-we-kill-the-term-vibe-coding
+slug: 2025-07-23-can-we-kill-the-term-vibe-coding
 title: Can we kill the term "vibe coding"?
-date: 2025-07-25
-image: /blog/2025-07-25-can-we-kill-the-term-vibe-coding
+date: 2025-07-23
+image: /blog/2025-07-23-can-we-kill-the-term-vibe-coding
 tags:
   - ai
   - software-development
@@ -17,7 +17,7 @@ hide: true
 ---
 
 <p align="center">
-    <img width="600" src="/blog/2025-07-25-can-we-kill-the-term-vibe-coding.png" />
+    <img width="600" src="/blog/2025-07-23-can-we-kill-the-term-vibe-coding.png" />
 </p>
 
 The term 'vibe coding' undermines the strategic work of delegating tasks to AI. This post argues for a shift in perspective towards 'outcome-driven development' as a more accurate description of the future of software engineering.

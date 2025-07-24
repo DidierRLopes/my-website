@@ -143,7 +143,7 @@ export default function Home() {
           property="og:description"
           content="Where you can find my posts, personal projects and everything in between."
         />
-        <meta property="og:image" content={`${siteUrl}/img/goku.png`} />
+        <meta property="og:image" content={`${siteUrl}/img/goku_pixel.png`} />
         <meta property="og:url" content="https://didierlopes.com" />
         
         {/* Add X-specific meta tags */}

@@ -83,12 +83,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/goku.png',
+      image: 'img/goku_pixel.png',
       navbar: {
         title: 'Didier Lopes',
         logo: {
-          alt: 'Goku NFT',
-          src: 'img/goku.png',
+          alt: 'Didier Lopes logo',
+          src: 'img/goku_pixel.png',
           href: '/',
           target: '_self',
         },

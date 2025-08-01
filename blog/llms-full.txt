@@ -16475,8 +16475,6 @@ The Model Context Protocol (MCP) is forcing financial services companies to make
 
 As MCP adoption accelerates across the industry, we're witnessing a critical bifurcation. Companies must decide whether they're going to be an MCP Client or an MCP Server, and this decision will fundamentally shape their business model, competitive positioning, and path to market dominance.
 
----
-
 ## The great divide: MCP Client vs MCP Server
 
 ### MCP Client: Building the Foundation
@@ -16512,8 +16510,6 @@ They focus on providing specialized capabilities, datasets, and domain expertise
 **The Server advantage**: Specialized servers can become indispensable by providing unique, high-quality data or capabilities that multiple clients depend on. Think market data feeds, compliance tools, or proprietary analytics engines.
 
 S&P Global, FactSet, and Snowflake dominate this domain - they're the engine room powering the financial ecosystem.
-
----
 
 ## The Strategic Implications
 
@@ -16557,8 +16553,6 @@ Choosing the server path means focusing on what you do best and offering superio
 
 **The monopoly advantage**: Large, established players have significant advantages in the server game. Their brand recognition, existing distribution channels, and resource advantages make it difficult for smaller players to compete on equal footing.
 
----
-
 ## Why you can’t play both sides
 
 Many financial companies are tempted to hedge their bets by building both client and server capabilities. For years, they have:
@@ -16586,8 +16580,6 @@ Clients may hesitate to depend on servers from companies that also compete with 
 **4. Innovation Bottlenecks**
 
 The rapid pace of AI advancement demands focus. Companies trying to innovate on both fronts often find themselves behind specialized competitors who can move faster and iterate more quickly.
-
----
 
 ## The moment of truth
 

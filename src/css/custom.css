@@ -183,6 +183,8 @@ h2[class^="anchor"], h2 {
   letter-spacing: var(--ds-letter-spacing);
   font-weight: 500;
   color: var(--text-primary);
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 h3[class^="anchor"], h3 {
@@ -192,6 +194,8 @@ h3[class^="anchor"], h3 {
   letter-spacing: var(--ds-letter-spacing);
   font-weight: 500;
   color: var(--text-secondary);
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 h4[class^="anchor"], h4 {
@@ -742,6 +746,46 @@ html[data-theme='dark'] .mission-button:hover {
 article header {
   /* Extra space between the header (title + meta) and the beginning of the post */
   margin-bottom: 2.5rem;
+}
+
+/* === Blog Post Content Heading Spacing === */
+/* Add more space above h2 and h3 headings in blog posts */
+.markdown h2,
+.markdown > h2,
+article[class*="blogPostPage"] .markdown h2,
+main[class*="docMainContainer"] .markdown h2 {
+  margin-top: 4rem !important;
+  margin-bottom: 1rem;
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+}
+
+.markdown h3,
+.markdown > h3,
+article[class*="blogPostPage"] .markdown h3,
+main[class*="docMainContainer"] .markdown h3 {
+  margin-top: 2.5rem !important;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+}
+
+/* First heading after divider should have less space */
+.markdown div[style*="border-top"] + h2,
+.markdown hr + h2 {
+  margin-top: 2rem !important;
+}
+
+/* Ensure first heading after truncate doesn't have extra space */
+.markdown > h2:first-child,
+.markdown > h3:first-child,
+.markdown hr + h2,
+.markdown hr + h3,
+.markdown div[style*="border-top"] + h2,
+.markdown div[style*="border-top"] + h3 {
+  margin-top: 0 !important;
 }
 
 /* Style the metadata container to be inline */

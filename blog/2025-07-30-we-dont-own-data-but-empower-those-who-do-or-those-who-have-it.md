@@ -15,6 +15,8 @@ tags:
   - data-vendors
 description: OpenBB isn't a data distributor. We wrote an official statement about this, and I'm providing extra thoughts on the matter here.
 hideSidebar: true
+draft: true
+hide: true
 ---
 
 <p align="center">

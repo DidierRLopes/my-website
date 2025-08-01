@@ -11,8 +11,9 @@ tags:
   - ai-agents
   - investing
 description: Explores the evolution of financial data from vendor silos to AI-native platforms, detailing how AI agents create actionable intelligence and positioning OpenBB as a leader in this new paradigm.
-draft: false
-hide: false
+hideSidebar: true
+draft: true
+hide: true
 ---
 
 <p align="center">

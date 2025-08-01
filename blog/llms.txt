@@ -126,3 +126,4 @@
 - [2025-07-23-can-we-kill-the-term-vibe-coding](https://didierlopes.com/blog/2025-07-23-can-we-kill-the-term-vibe-coding)
 - [2025-07-29-are-you-team-mcp-client-or-server](https://didierlopes.com/blog/2025-07-29-are-you-team-mcp-client-or-server)
 - [2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it](https://didierlopes.com/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it)
+- [2025-08-01-from-data-silos-to-ai-agents-financial-data-evolution](https://didierlopes.com/blog/2025-08-01-from-data-silos-to-ai-agents-financial-data-evolution)

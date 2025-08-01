@@ -4,11 +4,75 @@
         <title>Didier Lopes Blog</title>
         <link>https://didierlopes.com/blog</link>
         <description>Didier Lopes Blog</description>
-        <lastBuildDate>Tue, 29 Jul 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 01 Aug 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2025 Didier Lopes.</copyright>
+        <item>
+            <title><![CDATA[From data silos to AI agents - Financial data evolution]]></title>
+            <link>https://didierlopes.com/blog/2025-08-01-from-data-silos-to-ai-agents-financial-data-evolution</link>
+            <guid>https://didierlopes.com/blog/2025-08-01-from-data-silos-to-ai-agents-financial-data-evolution</guid>
+            <pubDate>Fri, 01 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Explores the evolution of financial data from vendor silos to AI-native platforms, detailing how AI agents create actionable intelligence and positioning OpenBB as a leader in this new paradigm.]]></description>
+            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-08-01-from-data-silos-to-ai-agents-financial-data-evolution.png"></p>
+<p>Explores the evolution of financial data from vendor silos to AI-native platforms, detailing how AI agents create actionable intelligence and positioning OpenBB as a leader in this new paradigm.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>Financial data has undergone three major phases.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="phase-1-vendor-controlled-silos-1990s-2010s">Phase 1: Vendor-controlled silos (1990s-2010s)<a href="https://didierlopes.com/blog/2025-08-01-from-data-silos-to-ai-agents-financial-data-evolution#phase-1-vendor-controlled-silos-1990s-2010s" class="hash-link" aria-label="Direct link to Phase 1: Vendor-controlled silos (1990s-2010s)" title="Direct link to Phase 1: Vendor-controlled silos (1990s-2010s)">​</a></h2>
+<p>In the past, getting basic earnings data meant memorizing arcane Bloomberg commands. One wrong character and you're out of luck.</p>
+<p>This was the fortress era.</p>
+<p>Data vendors owned the castle, controlled the moat, and if you wanted to play, you learned their commands and that was that.</p>
+<p>Bloomberg perfected this.</p>
+<p><strong>The deal</strong>: We'll give you comprehensive financial data, but you adapt to our interface, learn our commands, and pay our prices.</p>
+<p>It worked because data was genuinely scarce and expensive. Real-time feeds required satellites, massive infrastructure, and armies of people cleaning messy exchange data. Want global coverage? Pick a terminal and surrender.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="phase-2-client-controlled-marketplaces-2010s-2020s">Phase 2: Client-controlled marketplaces (2010s-2020s)<a href="https://didierlopes.com/blog/2025-08-01-from-data-silos-to-ai-agents-financial-data-evolution#phase-2-client-controlled-marketplaces-2010s-2020s" class="hash-link" aria-label="Direct link to Phase 2: Client-controlled marketplaces (2010s-2020s)" title="Direct link to Phase 2: Client-controlled marketplaces (2010s-2020s)">​</a></h2>
+<p>Then cloud platforms flipped the power dynamic overnight.</p>
+<p>Suddenly, Snowflake, AWS, and Azure weren't just storage - they were data liberation platforms.</p>
+<p>Instead of analysts adapting to vendor interfaces, they could demand: "<strong>Put your data where I can actually use it, or I'll find someone who will</strong>".</p>
+<p>This wasn't just convenience. Teams could now:</p>
+<ul>
+<li>Mix datasets like Lego blocks instead of being locked into one vendor's ecosystem</li>
+<li>Scale analysis without mysterious terminal limits</li>
+<li>Integrate everything into actual workflows instead of copy-pasting between systems</li>
+<li>Pay for what they used instead of flat-rate terminal fees</li>
+</ul>
+<p>Data vendors scrambled to adapt.</p>
+<p>Snowflake became the poster child - suddenly smaller firms could access the same alternative datasets as large financial firms, just by spinning up a cloud instance.</p>
+<p>But this revolution only solved half the puzzle: <strong>getting data where you want it</strong>.</p>
+<p>You still had to do fix for the intelligence part.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="phase-3-ai-native-workflows-and-intelligence-2020s-present">Phase 3: AI-native workflows and intelligence (2020s-Present)<a href="https://didierlopes.com/blog/2025-08-01-from-data-silos-to-ai-agents-financial-data-evolution#phase-3-ai-native-workflows-and-intelligence-2020s-present" class="hash-link" aria-label="Direct link to Phase 3: AI-native workflows and intelligence (2020s-Present)" title="Direct link to Phase 3: AI-native workflows and intelligence (2020s-Present)">​</a></h2>
+<p>Now we're talking about data that actively helps you make decisions.</p>
+<p>Instead of manually checking market data every morning, AI agents monitor unusual activity 24/7. When they spot something interesting - unusual trading volume, analyst downgrades, or earnings surprises - they don't just alert you. They research the company fundamentals, check recent news, analyze comparable situations, and deliver a complete hypothesis.</p>
+<p>This is happening right now through technologies like Model Context Protocol (MCP). We're moving from "<strong>data as a library</strong>" to "<strong>data as an analyst</strong>".</p>
+<p>The difference?</p>
+<p>In Phase 2, you pulled market data, analyzed it yourself, researched context separately, then made decisions. In Phase 3, <strong>data actively participates in generating insights</strong>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-this-matters-the-speed-of-insight">Why this matters: The speed of insight<a href="https://didierlopes.com/blog/2025-08-01-from-data-silos-to-ai-agents-financial-data-evolution#why-this-matters-the-speed-of-insight" class="hash-link" aria-label="Direct link to Why this matters: The speed of insight" title="Direct link to Why this matters: The speed of insight">​</a></h2>
+<p>Alpha is getting harder to find. Markets are more efficient, the low-hanging fruit is picked clean, and traditional advantages, better data, faster computers, are commoditized.</p>
+<p>What's left? <strong>Speed of insight</strong>.</p>
+<p>Firms that compress research cycles from weeks to hours, or hours to minutes, win. It's not about having more data - it's about connecting dots faster and acting on those connections.</p>
+<p>When everyone has similar information, competitive advantage goes to whoever can turn it into actionable intelligence first.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="openbb-built-for-the-ai-era">OpenBB: Built for the AI era<a href="https://didierlopes.com/blog/2025-08-01-from-data-silos-to-ai-agents-financial-data-evolution#openbb-built-for-the-ai-era" class="hash-link" aria-label="Direct link to OpenBB: Built for the AI era" title="Direct link to OpenBB: Built for the AI era">​</a></h2>
+<p>While traditional vendors bolt AI features onto 30-year-old terminal architectures, OpenBB started with a clean slate:</p>
+<blockquote>
+<p><em>"What if we built a financial data platform specifically for the AI era?"</em></p>
+</blockquote>
+<br>
+<p>The result:</p>
+<ul>
+<li><strong>No vendor lock-in</strong>: Connect to dozens of data vendors instead of being trapped in one ecosystem</li>
+<li><strong>AI-first architecture</strong>: Designed for intelligent agents, not just human eyeballs</li>
+<li><strong>Open ecosystem</strong>: Best innovations happen when smart people build on each other's work</li>
+</ul>
+<p><strong>OpenBB isn't replacing human analysts - it's amplifying human intelligence.</strong></p>
+<p>The terminal era trained us to adapt to machines. The intelligence era promises machines that adapt to us.</p>]]></content:encoded>
+            <category>financial-data</category>
+            <category>ai</category>
+            <category>data-evolution</category>
+            <category>openbb</category>
+            <category>ai-agents</category>
+            <category>investing</category>
+        </item>
         <item>
             <title><![CDATA[Are you team MCP Client or Server?]]></title>
             <link>https://didierlopes.com/blog/2025-07-29-are-you-team-mcp-client-or-server</link>

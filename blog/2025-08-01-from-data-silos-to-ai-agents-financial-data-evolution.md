@@ -106,3 +106,12 @@ The result:
 **OpenBB isn't replacing human analysts - it's amplifying human intelligence.**
 
 The terminal era trained us to adapt to machines. The intelligence era promises machines that adapt to us.
+
+Don't believe me?
+
+Check what users are building on OpenBB in our new solutions page: https://openbb.co/solutions.
+
+<p align="center">
+    <img width="600" src="/blog/
+    2025-08-01-from-data-silos-to-ai-agents-financial-data-evolution_1.png" />
+</p>

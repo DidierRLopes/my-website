@@ -4,14 +4,23 @@ title: OpenBB Workspace + MCP - The platform play I can’t stop thinking about
 date: 2025-08-01
 image: /blog/2025-08-xx-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about
 tags:
-  - todo
-description: TODO
+  - openbb
+  - mcp
+  - model-context-protocol
+  - platform-strategy
+  - ai-agents
+  - workspace
+  - integrations
+  - developer-tools
+  - fintech
+  - ai-infrastructure
+description: How a simple protocol could change the way firms build, integrate, and scale with OpenBB.
 hideSidebar: true
 draft: true
 hide: true
 ---
 
-desc
+How a simple protocol could change the way firms build, integrate, and scale with OpenBB.
 
 <!-- truncate -->
 

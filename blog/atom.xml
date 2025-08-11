@@ -2,12 +2,79 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://didierlopes.com/blog</id>
     <title>Didier Lopes Blog</title>
-    <updated>2025-07-29T00:00:00.000Z</updated>
+    <updated>2025-08-05T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://didierlopes.com/blog"/>
     <subtitle>Didier Lopes Blog</subtitle>
     <icon>https://didierlopes.com/img/favicon.ico</icon>
     <rights>Copyright © 2025 Didier Lopes.</rights>
+    <entry>
+        <title type="html"><![CDATA[What if... you could access an OpenBB widget on Excel?]]></title>
+        <id>https://didierlopes.com/blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel</id>
+        <link href="https://didierlopes.com/blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel"/>
+        <updated>2025-08-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This post introduces a new integration that allows users to embed dynamic OpenBB widgets directly into Excel.]]></summary>
+        <content type="html"><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel.png"></p>
+<p>This post introduces a new integration that allows users to embed dynamic OpenBB widgets directly into Excel.</p>
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>Some time ago I was asked if I thought Excel was going to survive.</p>
+<p>My answer was: “<strong>I wouldn’t bet against it</strong>”.</p>
+<p>Better than rowing against the tide is positioning yourself to be carried by it.</p>
+<p>We want OpenBB to sit at the core of an organization.</p>
+<p>Be what happens after the data team has been in charge.</p>
+<p>And that means we need to meet users where they are i.e., <strong>allow them to access their analytics &amp; insights from the OpenBB workspace in Excel</strong>.</p>
+<p>After adding an App to OpenBB, you can create a dashboard to fit your exact needs.</p>
+<p>A specific widget may look like this:</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_1.png"></p>
+<p>Where in red you have the parameters that can be modified on the frontend, and in green you have the data associated with it.</p>
+<p>Now, we've had an Excel Add-in for some time that allows users to retrieve data from OpenBB - what it did was basically route the request to our Excel Add-in.</p>
+<p>So you could do something like this:</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_2.png"></p>
+<p>This is great!</p>
+<p><strong>BUT</strong>.</p>
+<p><strong>What if we could do more?</strong></p>
+<p>What if we could bring the concept of a "Widget" to Excel?</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="openbb-widget-on-excel">OpenBB Widget on Excel<a href="https://didierlopes.com/blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel#openbb-widget-on-excel" class="hash-link" aria-label="Direct link to OpenBB Widget on Excel" title="Direct link to OpenBB Widget on Excel">​</a></h2>
+<p>I started toying with this idea on an evening, and later that night I shared a POC with the team.</p>
+<p>Raw &amp; unfiltered video below:</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/XNAVGyiYT8s?si=RPEe3VIkMbYYtd8g" width="800" height="400"></iframe></div>
+<br>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="implicit-vs-explicit">Implicit vs Explicit<a href="https://didierlopes.com/blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel#implicit-vs-explicit" class="hash-link" aria-label="Direct link to Implicit vs Explicit" title="Direct link to Implicit vs Explicit">​</a></h3>
+<p>Here’s what the POC entailed in a nutshell:</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_3.png"></p>
+<p>I created a distinction between "<strong>implicit</strong>" and "<strong>explicit</strong>".</p>
+<p>"<strong>Implicit</strong>" is what I shared at the start of this post, where the parameters are in the formula. This is great, but for someone who just copy-pastes the formula, they don’t have visibility into which parameters are actually returning the data they're looking at.</p>
+<p>This is where the "<strong>explicit</strong>" concept comes in, mimicking an OpenBB widget.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_4.png"></p>
+<p>So, when you copy-paste into Excel, this is what you get out-of-the-box.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_5.png"></p>
+<p>Notice the analogy with an OpenBB widget, users can modify parameters and have the latest data fetched automatically. All achieved programmatically.</p>
+<p><strong>But we didn’t stop here</strong>.</p>
+<p>The next question we asked ourselves was - if a user wants to visualize a particular OpenBB widget on Excel, why wouldn’t they be interested in visualizing an OpenBB App?</p>
+<p>So, we made it possible for a user to export a dashboard to Excel in 3 formats:</p>
+<ul>
+<li><strong>Static</strong> - where the data is what is available, your typical exporting</li>
+<li><strong>Dynamic</strong> - where it relies on the Excel Add-in for the formula<!-- -->
+<ul>
+<li><strong>Implicit</strong> - with parameters within the formula</li>
+<li><strong>Explicit</strong> - with parameters in the cells above</li>
+</ul>
+</li>
+</ul>
+<p>I’m genuinely excited about this one.</p>
+<p>If this sounds like something your firm would be interested in, feel free to reach out.</p>
+<p>With the platform’s integration with data sources like FRED, BLS, IMF, and more, there’s a lot of data that could be available in Excel out of the box. More on this coming soon.</p>
+<p>A few weeks later I added a Polymarket app to OpenBB and then showed that I had immediate access to it on Excel, check it out below:</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/Wfjpwgglw40?si=eo-Ll4nNrxIoGH7L" width="800" height="400"></iframe></div>
+<br>
+<p>Any feedback let me know!</p>]]></content>
+        <category label="openbb" term="openbb"/>
+        <category label="excel" term="excel"/>
+        <category label="integration" term="integration"/>
+        <category label="data-analytics" term="data-analytics"/>
+        <category label="investment-research" term="investment-research"/>
+        <category label="fintech" term="fintech"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Are you team MCP Client or Server?]]></title>
         <id>https://didierlopes.com/blog/2025-07-29-are-you-team-mcp-client-or-server</id>

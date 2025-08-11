@@ -16597,229 +16597,6 @@ The question is whether you'll be controlling the transformation as a Client or 
 ---
 
 ---
-slug: 2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it
-title: We don't own data. But empower those who do or those who have it
-date: 2025-07-30
-image: /blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it
-tags:
-  - openbb
-  - data
-  - platform-strategy
-  - open-source
-  - ai-agents
-  - workspace
-  - fintech
-  - investment-research
-  - data-vendors
-description: OpenBB isn't a data distributor. We wrote an official statement about this, and I'm providing extra thoughts on the matter here.
-hideSidebar: true
-draft: true
-hide: true
----
-
-<p align="center">
-    <img width="600" src="/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it.png" />
-</p>
-
-OpenBB isn't a data distributor. We wrote an official statement about this, and I'm providing extra thoughts on the matter here.
-
-<!-- truncate -->
-
-<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
-
-Last October, we announced that OpenBB Workspace had officially left beta.
-
-**But a few months before that, we made a mistake.**
-
-While preparing for the announcement, we had several internal discussions about the best way to help users understand what we were building:
-
-> An open workspace where firms can bring their own data, customize their UI, and use AI agents out of the box - all running on their own premises, with no risk of data leakage.
-
-<br />
-
-To achieve this vision, OpenBB primarily serves two types of users:
-
-- **Developers (or "brave" analysts)**: These users are responsible for bringing data into the workspace. Their "Aha!" moment comes when they realize how quickly they can go from an empty workspace to a fully customized environment, using their own data, organized as they wish, with AI agent workflows layered on top.
-
-- **Analysts/CIOs**: These users conduct research and analytics within the workspace. They are the ones ultimately getting the job done in OpenBB. Our goal is for analysts and CIOs to actively want to use OpenBB, and to advocate internally for their dev teams to build apps on the workspace.
-
-For developers, the onboarding and data integration experience was clearly essential.
-
-But for analysts and CIOs, it was difficult to realize value at signup without any data or AI agents available. They would land in an empty product, an unhelpful first impression.
-
-To address this, we did two things:
-
-- We built the OpenBB Copilot (out-of-the-box AI agent with bring your own key capability).
-
-- Decided to strike a few commercial deals with data vendors, which allowed us to pre-load the workspace with ready-to-use apps, including datasets on equities, macro, options, and some crypto..
-
-Having OpenBB Copilot was fine as an example of an agent, particularly due to the bring-your-own-key capability. Individuals understood this was just an example, and that they could build their own.
-
-However, what we didn't realize was that adding more data was actually hurting our positioning. Users began reaching out with requests for fixed income datasets, complaints about our coverage, and concerns about how financials were reported, to name a few.
-
-But getting into the data business was never our intention.
-
-That's not what we've spent the last three years building.
-
-In fact, it's clearer than ever to us where the real opportunity lies:
-
-- To enable data vendors, without becoming one ourselves.
-- To amplify their datasets, not just through visualization or AI integration. But by unlocking alpha at the intersection of datasets from multiple vendors.
-
-We're now approached weekly by data vendors who want distribution and want their datasets featured on OpenBB.
-
-Why? Because their data is closer to value, closer to insights.
-
-So, going forward, OpenBB will include fewer out-of-the-box datasets.
-
-Our official company statement can be found [here](https://openbb.co/blog/openbb-isnt-a-data-distributor).
-
-But we're not leaving you empty-handed.
-
-We're continuing to add more apps to the [open-source platform](https://github.com/OpenBB-finance/OpenBB).
-
-<p align="center">
-    <img width="600" src="/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it_1.png" />
-</p>
-
-Apps you can connect to the Workspace using your own credentials, so you can get started quickly and on your own terms.
-
-We also created a new [solutions page](https://openbb.co/blog/solutions), to show examples of apps that folks can build.
-
-<p align="center">
-    <img width="600" src="/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it_2.png" />
-</p>
-
-Most of these are actually open source and you can find the link by clicking on one of the cards and on the GitHub logo.
-
-<p align="center">
-    <img width="600" src="/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it_3.png" />
-</p>
-
----
-
----
-slug: 2025-08-01-from-data-silos-to-ai-agents-financial-data-evolution
-title: From data silos to AI agents - Financial data evolution
-date: 2025-08-01
-image: /blog/2025-08-01-from-data-silos-to-ai-agents-financial-data-evolution
-tags:
-  - financial-data
-  - ai
-  - data-evolution
-  - openbb
-  - ai-agents
-  - investing
-description: Explores the evolution of financial data from vendor silos to AI-native platforms, detailing how AI agents create actionable intelligence and positioning OpenBB as a leader in this new paradigm.
-hideSidebar: true
-draft: true
-hide: true
----
-
-<p align="center">
-    <img width="600" src="/blog/
-    2025-08-01-from-data-silos-to-ai-agents-financial-data-evolution.png" />
-</p>
-
-Explores the evolution of financial data from vendor silos to AI-native platforms, detailing how AI agents create actionable intelligence and positioning OpenBB as a leader in this new paradigm.
-
-<!-- truncate -->
-
-<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
-
-Financial data has undergone three major phases.
-
-## Phase 1: Vendor-controlled silos (1990s-2010s)
-
-In the past, getting basic earnings data meant memorizing arcane Bloomberg commands. One wrong character and you're out of luck.
-
-This was the fortress era.
-
-Data vendors owned the castle, controlled the moat, and if you wanted to play, you learned their commands and that was that.
-
-Bloomberg perfected this.
-
-**The deal**: We'll give you comprehensive financial data, but you adapt to our interface, learn our commands, and pay our prices.
-
-It worked because data was genuinely scarce and expensive. Real-time feeds required satellites, massive infrastructure, and armies of people cleaning messy exchange data. Want global coverage? Pick a terminal and surrender.
-
-## Phase 2: Client-controlled marketplaces (2010s-2020s)
-
-Then cloud platforms flipped the power dynamic overnight.
-
-Suddenly, Snowflake, AWS, and Azure weren't just storage - they were data liberation platforms.
-
-Instead of analysts adapting to vendor interfaces, they could demand: "**Put your data where I can actually use it, or I'll find someone who will**".
-
-This wasn't just convenience. Teams could now:
-
-- Mix datasets like Lego blocks instead of being locked into one vendor's ecosystem
-- Scale analysis without mysterious terminal limits
-- Integrate everything into actual workflows instead of copy-pasting between systems
-- Pay for what they used instead of flat-rate terminal fees
-
-Data vendors scrambled to adapt.
-
-Snowflake became the poster child - suddenly smaller firms could access the same alternative datasets as large financial firms, just by spinning up a cloud instance.
-
-But this revolution only solved half the puzzle: **getting data where you want it**.
-
-You still had to do fix for the intelligence part.
-
-## Phase 3: AI-native workflows and intelligence (2020s-Present)
-
-Now we're talking about data that actively helps you make decisions.
-
-Instead of manually checking market data every morning, AI agents monitor unusual activity 24/7. When they spot something interesting - unusual trading volume, analyst downgrades, or earnings surprises - they don't just alert you. They research the company fundamentals, check recent news, analyze comparable situations, and deliver a complete hypothesis.
-
-This is happening right now through technologies like Model Context Protocol (MCP). We're moving from "**data as a library**" to "**data as an analyst**".
-
-The difference?
-
-In Phase 2, you pulled market data, analyzed it yourself, researched context separately, then made decisions. In Phase 3, **data actively participates in generating insights**.
-
-## Why this matters: The speed of insight
-
-Alpha is getting harder to find. Markets are more efficient, the low-hanging fruit is picked clean, and traditional advantages, better data, faster computers, are commoditized.
-
-What's left? **Speed of insight**.
-
-Firms that compress research cycles from weeks to hours, or hours to minutes, win. It's not about having more data - it's about connecting dots faster and acting on those connections.
-
-When everyone has similar information, competitive advantage goes to whoever can turn it into actionable intelligence first.
-
-
-## OpenBB: Built for the AI era
-
-While traditional vendors bolt AI features onto 30-year-old terminal architectures, OpenBB started with a clean slate:
-
-> _"What if we built a financial data platform specifically for the AI era?"_
-
-<br />
-
-The result:
-
-- **No vendor lock-in**: Connect to dozens of data vendors instead of being trapped in one ecosystem
-- **AI-first architecture**: Designed for intelligent agents, not just human eyeballs
-- **Open ecosystem**: Best innovations happen when smart people build on each other's work
-
-**OpenBB isn't replacing human analysts - it's amplifying human intelligence.**
-
-The terminal era trained us to adapt to machines. The intelligence era promises machines that adapt to us.
-
-Don't believe me?
-
-Check what users are building on OpenBB in our new solutions page: https://openbb.co/solutions.
-
-<p align="center">
-    <img width="600" src="/blog/
-    2025-08-01-from-data-silos-to-ai-agents-financial-data-evolution_1.png" />
-</p>
-
-
----
-
----
 slug: 2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel
 title: What if... you could access an OpenBB widget on Excel?
 date: 2025-08-05
@@ -16961,3 +16738,376 @@ A few weeks later I added a Polymarket app to OpenBB and then showed that I had 
 <br />
 
 Any feedback let me know!
+
+
+---
+
+---
+slug: 2025-08-01-from-data-silos-to-ai-agents-financial-data-evolution
+title: From data silos to AI agents - Financial data evolution
+date: 2025-08-01
+image: /blog/2025-08-01-from-data-silos-to-ai-agents-financial-data-evolution
+tags:
+  - financial-data
+  - ai
+  - data-evolution
+  - openbb
+  - ai-agents
+  - investing
+description: Explores the evolution of financial data from vendor silos to AI-native platforms, detailing how AI agents create actionable intelligence and positioning OpenBB as a leader in this new paradigm.
+hideSidebar: true
+draft: true
+hide: true
+---
+
+<p align="center">
+    <img width="600" src="/blog/
+    2025-08-01-from-data-silos-to-ai-agents-financial-data-evolution.png" />
+</p>
+
+Explores the evolution of financial data from vendor silos to AI-native platforms, detailing how AI agents create actionable intelligence and positioning OpenBB as a leader in this new paradigm.
+
+<!-- truncate -->
+
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
+
+Financial data has undergone three major phases.
+
+## Phase 1: Vendor-controlled silos (1990s-2010s)
+
+In the past, getting basic earnings data meant memorizing arcane Bloomberg commands. One wrong character and you're out of luck.
+
+This was the fortress era.
+
+Data vendors owned the castle, controlled the moat, and if you wanted to play, you learned their commands and that was that.
+
+Bloomberg perfected this.
+
+**The deal**: We'll give you comprehensive financial data, but you adapt to our interface, learn our commands, and pay our prices.
+
+It worked because data was genuinely scarce and expensive. Real-time feeds required satellites, massive infrastructure, and armies of people cleaning messy exchange data. Want global coverage? Pick a terminal and surrender.
+
+## Phase 2: Client-controlled marketplaces (2010s-2020s)
+
+Then cloud platforms flipped the power dynamic overnight.
+
+Suddenly, Snowflake, AWS, and Azure weren't just storage - they were data liberation platforms.
+
+Instead of analysts adapting to vendor interfaces, they could demand: "**Put your data where I can actually use it, or I'll find someone who will**".
+
+This wasn't just convenience. Teams could now:
+
+- Mix datasets like Lego blocks instead of being locked into one vendor's ecosystem
+- Scale analysis without mysterious terminal limits
+- Integrate everything into actual workflows instead of copy-pasting between systems
+- Pay for what they used instead of flat-rate terminal fees
+
+Data vendors scrambled to adapt.
+
+Snowflake became the poster child - suddenly smaller firms could access the same alternative datasets as large financial firms, just by spinning up a cloud instance.
+
+But this revolution only solved half the puzzle: **getting data where you want it**.
+
+You still had to do fix for the intelligence part.
+
+## Phase 3: AI-native workflows and intelligence (2020s-Present)
+
+Now we're talking about data that actively helps you make decisions.
+
+Instead of manually checking market data every morning, AI agents monitor unusual activity 24/7. When they spot something interesting - unusual trading volume, analyst downgrades, or earnings surprises - they don't just alert you. They research the company fundamentals, check recent news, analyze comparable situations, and deliver a complete hypothesis.
+
+This is happening right now through technologies like Model Context Protocol (MCP). We're moving from "**data as a library**" to "**data as an analyst**".
+
+The difference?
+
+In Phase 2, you pulled market data, analyzed it yourself, researched context separately, then made decisions. In Phase 3, **data actively participates in generating insights**.
+
+## Why this matters: The speed of insight
+
+Alpha is getting harder to find. Markets are more efficient, the low-hanging fruit is picked clean, and traditional advantages, better data, faster computers, are commoditized.
+
+What's left? **Speed of insight**.
+
+Firms that compress research cycles from weeks to hours, or hours to minutes, win. It's not about having more data - it's about connecting dots faster and acting on those connections.
+
+When everyone has similar information, competitive advantage goes to whoever can turn it into actionable intelligence first.
+
+
+## OpenBB: Built for the AI era
+
+While traditional vendors bolt AI features onto 30-year-old terminal architectures, OpenBB started with a clean slate:
+
+> _"What if we built a financial data platform specifically for the AI era?"_
+
+<br />
+
+The result:
+
+- **No vendor lock-in**: Connect to dozens of data vendors instead of being trapped in one ecosystem
+- **AI-first architecture**: Designed for intelligent agents, not just human eyeballs
+- **Open ecosystem**: Best innovations happen when smart people build on each other's work
+
+**OpenBB isn't replacing human analysts - it's amplifying human intelligence.**
+
+The terminal era trained us to adapt to machines. The intelligence era promises machines that adapt to us.
+
+Don't believe me?
+
+Check what users are building on OpenBB in our new solutions page: https://openbb.co/solutions.
+
+<p align="center">
+    <img width="600" src="/blog/
+    2025-08-01-from-data-silos-to-ai-agents-financial-data-evolution_1.png" />
+</p>
+
+
+---
+
+---
+slug: 2025-08-xx-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about
+title: OpenBB Workspace + MCP - The platform play I can’t stop thinking about
+date: 2025-08-01
+image: /blog/2025-08-xx-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about
+tags:
+  - todo
+description: TODO
+hideSidebar: true
+draft: true
+hide: true
+---
+
+desc
+
+<!-- truncate -->
+
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
+
+When I first heard about the Model Context Protocol (MCP), I didn't get the hype.
+
+People on X were starting to buzz about it - but people hype everything that comes along, and most of those topics fade quickly.
+
+<p align="center">
+    <img width="600" src="/blog/2025-08-xx-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about_1.png" />
+</p>
+
+I kind of understood the idea, but I couldn't see what made it so special from an OpenAPI spec for LLMs.
+
+At the start of the year, I attended the AI Engineering Conference, where they had a workshop Saturday on MCP by Anthropic, that I attended with <a href="https://x.com/virattt" target="_blank">Virat</a>.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/kQmXtrmQ5Zg?si=BSIRbU3hpB3jCzeH"
+        width="600"
+        height="300"
+    />
+</div>
+
+<br />
+
+Even then I didn't fully get it.
+
+Virat, though, got it instantly. A few weeks later, he'd already built an <a href="https://docs.financialdatasets.ai/mcp-server" target="_blank">MCP server for financial datasets</a> - one of the very first for finance.
+
+## We'd been doing "MCP" all along
+
+Part of my early skepticism was because, in many ways, OpenBB had already solved this problem before MCP even had a name.
+
+We'd built our own protocol to integrate data into the Workspace so that it could be consumed by both humans (through visualization) and AI agents (through function calls). I even wrote about it <a href="https://didierlopes.com/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb" target="_blank">here</a>.
+
+We spent years making sure that any data feeding the Workspace was equally usable for the UI and for AI - effectively building MCP before MCP existed.
+
+So when MCP came along, I didn't feel the pull. We already had our own seamless protocol and didn't see why we needed someone else's.
+
+## The "Aha" moment: Tools without a UI
+
+Then things started to change.
+
+MCP topic started showing up on our client conversations. They weren't necessarily asking for MCP at first, but wanted to know what was our strategy towards it.
+
+At the same time, I was adding MCP Servers to my Claude Code, <a href="https://didierlopes.com/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp" target="_blank">such as the Figma one</a>. And that's when my perspective started to shift. There I was with all my data in Figma, and with a couple of clicks my agent in a completely different environment (the terminal) had access to it.
+
+It wasn't even just about the data but the tools. Ultimately, the context.
+
+That was it.
+
+The killer use case for OpenBB wasn't on the data side - we already handle that well with UI components.
+
+It's **tools that don't need to be visualized**, and can work with the data already in the Workspace.
+
+Think:
+
+- Writing an investment memo in OpenBB and sending it straight to Ghost (workflow suggested by <a href="https://www.linkedin.com/in/ca%C3%ADque-cober-117bbb1ab/" target="_blank">Caique</a>).
+- Using a memory server to remember user preferences across sessions.
+- Monte Carlo models
+- Code interpreter
+- Web search
+- …
+
+It's like a **universal adapter** for capabilities.
+
+Plug in the tool, and it just works inside the Workspace - for both humans and AI.
+
+And it's not just a handful of companies working on this.
+
+There are thousands nows.
+
+It's the differentiator between companies that innovate and the ones who don't (but will soon do).
+
+There are full-blown directories with MCP Server URLs that you can connect with a couple of clicks - e.g. smithery.ai with hundreds of MCP servers ready to connect (Derek has an <a href="https://youtu.be/ITRvaLmVAWM?si=jprbfEtMGeYU4hMO&t=241" target="_blank">awesome demo</a> on the topic).
+
+Each server is a potential new feature.
+
+- **Before**: every integration was a full-blown project.
+
+- **Now**: browse, connect, use. That easy.
+
+Even simple tools, like <a href="https://context7.com/" target="_blank">Context7</a>, can improve the user experience significantly.
+
+<p align="center">
+    <img width="800" src="/blog/2025-08-xx-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about_2.jpeg" />
+</p>
+
+That's when it became obvious - this wasn't just a nice-to-have, it was a platform play. 
+
+Our platform play.
+
+## How we decide what to build ourselves
+
+MCP won't replace what we build - it complements it.
+
+Obviously, when the data is meant to be rendered as a widget on OpenBB - we rely on our protocol. As the information in the protocol contains now just raw data but the way it's displayed on the workspace, the parameters, the apps, the prompts, …  
+
+However, when features relate mostly with the usage of an AI agent we will be more mindful about the features that we want to own.
+
+<p align="center">
+    <img width="800" src="/blog/2025-08-xx-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about_3.png" />
+</p>
+
+I foresee us owning the features when:
+
+**They rely deeply on Workspace data, e.g.**:
+
+- **Global Data** which gives the agent access to the full range of data widgets in the entire workspace product.
+- **Generative UI** which gives the agent access to the workspace dashboard and allows to add widgets into the dashboard based on the conversation or modify the dashboard
+
+**We need to control the full end-to-end experience, e.g.**:
+
+- **Web Search** where we want to be able to control the way the citations are highlighted so they work more natively on the product
+- **Code Interpreter** (coming soon) so that we optimize this virtual sandbox to create charts that can be created as interactive widgets to add to the workspace.
+
+Everything else?
+
+The MCP ecosystem can handle it - often better than we could build it ourselves.
+
+And even for some of these, users may still want to add their own web search or code interpreter.
+
+But ultimately, we are giving them that option.
+
+The way I see it, MCP turns OpenBB into the place to build financial applications - a permissioned, AI-ready infrastructure layer that can tap into an entire universe of tools without friction.
+
+A few months ago, I didn't see it.
+
+Now, I can't stop thinking about what we'll build next.
+
+
+---
+
+---
+slug: 2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it
+title: We don't own data. But empower those who do or those who have it
+date: 2025-07-30
+image: /blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it
+tags:
+  - openbb
+  - data
+  - platform-strategy
+  - open-source
+  - ai-agents
+  - workspace
+  - fintech
+  - investment-research
+  - data-vendors
+description: OpenBB isn't a data distributor. We wrote an official statement about this, and I'm providing extra thoughts on the matter here.
+hideSidebar: true
+draft: true
+hide: true
+---
+
+<p align="center">
+    <img width="600" src="/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it.png" />
+</p>
+
+OpenBB isn't a data distributor. We wrote an official statement about this, and I'm providing extra thoughts on the matter here.
+
+<!-- truncate -->
+
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
+
+Last October, we announced that OpenBB Workspace had officially left beta.
+
+**But a few months before that, we made a mistake.**
+
+While preparing for the announcement, we had several internal discussions about the best way to help users understand what we were building:
+
+> An open workspace where firms can bring their own data, customize their UI, and use AI agents out of the box - all running on their own premises, with no risk of data leakage.
+
+<br />
+
+To achieve this vision, OpenBB primarily serves two types of users:
+
+- **Developers (or "brave" analysts)**: These users are responsible for bringing data into the workspace. Their "Aha!" moment comes when they realize how quickly they can go from an empty workspace to a fully customized environment, using their own data, organized as they wish, with AI agent workflows layered on top.
+
+- **Analysts/CIOs**: These users conduct research and analytics within the workspace. They are the ones ultimately getting the job done in OpenBB. Our goal is for analysts and CIOs to actively want to use OpenBB, and to advocate internally for their dev teams to build apps on the workspace.
+
+For developers, the onboarding and data integration experience was clearly essential.
+
+But for analysts and CIOs, it was difficult to realize value at signup without any data or AI agents available. They would land in an empty product, an unhelpful first impression.
+
+To address this, we did two things:
+
+- We built the OpenBB Copilot (out-of-the-box AI agent with bring your own key capability).
+
+- Decided to strike a few commercial deals with data vendors, which allowed us to pre-load the workspace with ready-to-use apps, including datasets on equities, macro, options, and some crypto..
+
+Having OpenBB Copilot was fine as an example of an agent, particularly due to the bring-your-own-key capability. Individuals understood this was just an example, and that they could build their own.
+
+However, what we didn't realize was that adding more data was actually hurting our positioning. Users began reaching out with requests for fixed income datasets, complaints about our coverage, and concerns about how financials were reported, to name a few.
+
+But getting into the data business was never our intention.
+
+That's not what we've spent the last three years building.
+
+In fact, it's clearer than ever to us where the real opportunity lies:
+
+- To enable data vendors, without becoming one ourselves.
+- To amplify their datasets, not just through visualization or AI integration. But by unlocking alpha at the intersection of datasets from multiple vendors.
+
+We're now approached weekly by data vendors who want distribution and want their datasets featured on OpenBB.
+
+Why? Because their data is closer to value, closer to insights.
+
+So, going forward, OpenBB will include fewer out-of-the-box datasets.
+
+Our official company statement can be found [here](https://openbb.co/blog/openbb-isnt-a-data-distributor).
+
+But we're not leaving you empty-handed.
+
+We're continuing to add more apps to the [open-source platform](https://github.com/OpenBB-finance/OpenBB).
+
+<p align="center">
+    <img width="600" src="/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it_1.png" />
+</p>
+
+Apps you can connect to the Workspace using your own credentials, so you can get started quickly and on your own terms.
+
+We also created a new [solutions page](https://openbb.co/blog/solutions), to show examples of apps that folks can build.
+
+<p align="center">
+    <img width="600" src="/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it_2.png" />
+</p>
+
+Most of these are actually open source and you can find the link by clicking on one of the cards and on the GitHub logo.
+
+<p align="center">
+    <img width="600" src="/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it_3.png" />
+</p>

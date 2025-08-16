@@ -1,8 +1,8 @@
 ---
-slug: 2025-08-xx-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about
+slug: 2025-08-12-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about
 title: OpenBB Workspace + MCP - The platform play I can’t stop thinking about
-date: 2025-08-01
-image: /blog/2025-08-xx-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about
+date: 2025-08-12
+image: /blog/2025-08-12-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about
 tags:
   - openbb
   - mcp
@@ -31,7 +31,7 @@ When I first heard about the Model Context Protocol (MCP), I didn't get the hype
 People on X were starting to buzz about it - but people hype everything that comes along, and most of those topics fade quickly.
 
 <p align="center">
-    <img width="600" src="/blog/2025-08-xx-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about_1.png" />
+    <img width="600" src="/blog/2025-08-12-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about_1.png" />
 </p>
 
 I kind of understood the idea, but I couldn't see what made it so special from an OpenAPI spec for LLMs.
@@ -108,7 +108,7 @@ Each server is a potential new feature.
 Even simple tools, like <a href="https://context7.com/" target="_blank">Context7</a>, can improve the user experience significantly.
 
 <p align="center">
-    <img width="800" src="/blog/2025-08-xx-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about_2.jpeg" />
+    <img width="800" src="/blog/2025-08-12-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about_2.jpeg" />
 </p>
 
 That's when it became obvious - this wasn't just a nice-to-have, it was a platform play. 
@@ -124,7 +124,7 @@ Obviously, when the data is meant to be rendered as a widget on OpenBB - we rely
 However, when features relate mostly with the usage of an AI agent we will be more mindful about the features that we want to own.
 
 <p align="center">
-    <img width="800" src="/blog/2025-08-xx-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about_3.png" />
+    <img width="800" src="/blog/2025-08-12-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about_3.png" />
 </p>
 
 I foresee us owning the features when:

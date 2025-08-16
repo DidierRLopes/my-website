@@ -457,6 +457,11 @@ const data = [
 		title: "Who Knew",
 		author: "Barry Diller",
 		image: "/books/who-knew.jpg",
+	},
+	{
+		title: "White Collar Boxing: One Man's Journey from the Office to the Ring",
+		author: "John E. Oden",
+		image: "/books/white-collar-boxing-one-mans-journey-from-the-office-to-the-ring.jpg",
 	}
 ];
 

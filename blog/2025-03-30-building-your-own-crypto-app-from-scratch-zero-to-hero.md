@@ -18,8 +18,6 @@ hideSidebar: true
 unlisted: true
 ---
 
-
-
 <p align="center">
     <img width="600" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero.png" />
 </p>

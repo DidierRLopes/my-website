@@ -16,8 +16,6 @@ tags:
   - ai-infrastructure
 description: How a simple protocol could change the way firms build, integrate, and scale with OpenBB.
 hideSidebar: true
-draft: true
-hide: true
 ---
 
 How a simple protocol could change the way firms build, integrate, and scale with OpenBB.

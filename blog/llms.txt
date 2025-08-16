@@ -126,7 +126,7 @@
 - [2025-07-23-can-we-kill-the-term-vibe-coding](https://didierlopes.com/blog/2025-07-23-can-we-kill-the-term-vibe-coding)
 - [2025-07-29-are-you-team-mcp-client-or-server](https://didierlopes.com/blog/2025-07-29-are-you-team-mcp-client-or-server)
 - [2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel](https://didierlopes.com/blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel)
+- [2025-08-12-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about](https://didierlopes.com/blog/2025-08-12-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about)
 - [2025-08-xx-from-data-silos-to-ai-agents-financial-data-evolution](https://didierlopes.com/blog/2025-08-xx-from-data-silos-to-ai-agents-financial-data-evolution)
 - [2025-08-xx-generalist-vs-specialist-in-the-age-of-ai](https://didierlopes.com/blog/2025-08-xx-generalist-vs-specialist-in-the-age-of-ai)
-- [2025-08-xx-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about](https://didierlopes.com/blog/2025-08-xx-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about)
 - [2025-08-xx-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it](https://didierlopes.com/blog/2025-08-xx-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it)

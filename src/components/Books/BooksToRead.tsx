@@ -357,12 +357,6 @@ const data = [
 			"/books/the-jolt-effect-how-high-performers-overcome-customer-indecision.jpg",
 	},
 	{
-		title: "Zen and the Art of Motorcycle Maintenance: An Inquiry into Values",
-		author: "Robert M. Pirsig",
-		image:
-			"/books/zen-and-the-art-of-motorcycle-maintenance-an-inquiry-into-values.jpg",
-	},
-	{
 		title: "Why Machines Learn: The Elegant Math Behind Modern AI",
 		author: "Anil Ananthaswamy",
 		image: "/books/why-machines-learn-the-elegant-math-behind-modern-ai.jpg",
@@ -448,11 +442,6 @@ const data = [
 		title: "Play Nice But Win: A CEO's Journey from Founder to Leader",
 		author: "Michael Dell, James Kaplan",
 		image: "/books/play-nice-but-win-a-ceos-journey-from-founder-to-leader.jpg",
-	},
-	{
-		title: "The Experimentation Machine: Finding Product-Market Fit in the Age of AI",
-		author: "Jeffrey J Bussgang",
-		image: "/books/the-experimentation-machine-finding-product-market-fit-in-the-age-of-ai.jpg",
 	},
 	{
 		title: "The Lessons of History",

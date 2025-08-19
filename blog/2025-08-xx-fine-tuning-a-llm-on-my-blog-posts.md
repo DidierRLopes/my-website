@@ -4,7 +4,13 @@ title: Fine-tuning a LLM on my blog posts
 date: 2025-08-02
 image: /blog/2025-08-xx-fine-tuning-a-llm-on-my-blog-posts
 tags:
-  - todo
+  - ai
+  - machine-learning
+  - open-source
+  - tutorial
+  - apple-silicon
+  - llm
+  - fine-tuning
 description: Ever wondered what it would be like to have an AI that writes exactly in your style? I did. And in this post, I share what I did about it. This is a very practical guide on how to fine-tune an LLM using LoRA with MLX on Apple Silicon.
 hideSidebar: true
 draft: true

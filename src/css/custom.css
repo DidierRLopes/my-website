@@ -200,11 +200,13 @@ h3[class^="anchor"], h3 {
 
 h4[class^="anchor"], h4 {
   font-family: var(--ds-font-primary);
-  font-size: var(--ds-font-size-sm);
-  text-transform: uppercase;
-  letter-spacing: var(--ds-letter-spacing);
-  font-weight: 500;
-  color: var(--text-secondary);
+  font-size: var(--ds-font-size-md);
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 h5[class^="anchor"], h5 {
@@ -770,6 +772,19 @@ main[class*="docMainContainer"] .markdown h3 {
   font-size: 1.25rem !important;
   font-weight: 600 !important;
   color: var(--text-primary) !important;
+}
+
+.markdown h4,
+.markdown > h4,
+article[class*="blogPostPage"] .markdown h4,
+main[class*="docMainContainer"] .markdown h4 {
+  margin-top: 2rem !important;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+  text-transform: none !important;
+  letter-spacing: 0.02em !important;
 }
 
 /* First heading after divider should have less space */

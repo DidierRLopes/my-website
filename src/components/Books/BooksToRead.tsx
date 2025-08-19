@@ -462,6 +462,11 @@ const data = [
 		title: "White Collar Boxing: One Man's Journey from the Office to the Ring",
 		author: "John E. Oden",
 		image: "/books/white-collar-boxing-one-mans-journey-from-the-office-to-the-ring.jpg",
+	},
+	{
+		title: "Get Together: How to Build a Community With Your People",
+		author: "Bailey Richardson, Kevin Huynh, Kai Elmer Sotto",
+		image: "/books/get-together-how-to-build-a-community-with-your-people.jpg",
 	}
 ];
 

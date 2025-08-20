@@ -467,7 +467,12 @@ const data = [
 		title: "Get Together: How to Build a Community With Your People",
 		author: "Bailey Richardson, Kevin Huynh, Kai Elmer Sotto",
 		image: "/books/get-together-how-to-build-a-community-with-your-people.jpg",
-	}
+	},
+	{
+		title: "Endurance: Shackleton's Incredible Voyage",
+		author: "Alfred Lansing",
+		image: "/books/endurance-shackletons-incredible-voyage.jpg",
+	},
 ];
 
 export default function BooksToRead() {

@@ -499,6 +499,11 @@ const data = [
 		author: "Robert M. Pirsig",
 		image:
 			"/books/zen-and-the-art-of-motorcycle-maintenance-an-inquiry-into-values.jpg",
+	},
+	{
+		title: "Who Knew",
+		author: "Barry Diller",
+		image: "/books/who-knew.jpg",
 	}
 ];
 

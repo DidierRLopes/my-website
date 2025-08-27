@@ -155,15 +155,15 @@ export default function Home() {
         <meta name="twitter:image" content={`${siteUrl}/img/goku.png`} />
       </Head>
       <main>
-        <div className="w-full bg-blue-300 dark:bg-blue-900 py-3">
-          <div className="max-w-[880px] mx-auto px-4 flex items-center justify-center gap-4 flex-wrap">
+        <div className="w-full py-3 sm:py-4">
+          <div className="max-w-[880px] mx-auto px-4 flex items-center justify-center">
             <a
-              href="https://didierlopes.beehiiv.com/"
+              href="https://didierlopes.beehiiv.com/subscribe"
               target="_blank"
               rel="noreferrer"
-              className="mission-buttons"
+              className="pill-banner-link"
             >
-              I write about open source, AI and finance.
+              <span className="pill-banner-text">I write weekly about AI, open source, startups and finance</span>
             </a>
           </div>
         </div>

@@ -1,8 +1,8 @@
 ---
-slug: 2025-08-xx-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills
+slug: 2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills
 title: Can I create a 1 min Ad on my own with zero video editing skills?
-date: 2025-08-01
-image: /blog/2025-08-xx-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills
+date: 2025-08-23
+image: /blog/2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills
 tags:
   - ai-tools
   - video-generation
@@ -14,12 +14,10 @@ tags:
   - openbb
 description: A hands-on experiment using Google's Veo3 AI to create a professional 1-minute video ad with zero video editing experience. Covers the complete workflow from script writing using the Hero's Journey framework to JSON-structured prompting techniques that unlock better AI video generation results.
 hideSidebar: true
-draft: true
-hide: true
 ---
 
 <p align="center">
-    <img width="600" src="/blog/2025-08-xx-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills.png" />
+    <img width="600" src="/blog/2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills.png" />
 </p>
 
 A hands-on experiment using Google's Veo3 AI to create a professional 1-minute video ad with zero video editing experience. Covers the complete workflow from script writing using the Hero's Journey framework to JSON-structured prompting techniques that unlock better AI video generation results.
@@ -87,7 +85,7 @@ Then I tried to upgrade to Veo3 - but in the typical Google manner - I couldn’
 I didn’t have the right subscription so I signed up to “Google AI Ultra for Business” which costed $125/mo (with a 50% discount). The estimates is that this provides around 1250 clips, which is enough, because the quality of the model is extremely impressive and there are ways to squeeze performance out of it - through prompt engineering.
 
 <p align="center">
-    <img width="600" src="/blog/2025-08-xx-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills_1.png" />
+    <img width="600" src="/blog/2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills_1.png" />
 </p>
 
 Copy-pasting the scenes as I had them on a document produced very impressive results, but I felt like the results were very diverse among each run.
@@ -126,7 +124,7 @@ So I copied the text narrative of each of the scenes and converted these into JS
 This level of detail gave us precise control over every aspect of the scene, and then we just had to paste it to Flow and let the model cook 🧑‍🍳.
 
 <p align="center">
-    <img width="600" src="/blog/2025-08-xx-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills_2.png" />
+    <img width="600" src="/blog/2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills_2.png" />
 </p>
 
 That improved the quality and reproducibility significantly.
@@ -140,7 +138,7 @@ But I knew we could still get more out of it so I iterated on these prompts with
 - Keywords for style consistency
 
 <p align="center">
-    <img width="600" src="/blog/2025-08-xx-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills_3.png" />
+    <img width="600" src="/blog/2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills_3.png" />
 </p>
 
 This JSON structure forced me to think about every element, which was awesome.

@@ -155,6 +155,7 @@ export default function Home() {
         <meta name="twitter:image" content={`${siteUrl}/img/goku.png`} />
       </Head>
       <main>
+        {/*}
         <div className="w-full py-3 sm:py-4">
           <div className="max-w-[880px] mx-auto px-4 flex items-center justify-center">
             <a
@@ -164,6 +165,19 @@ export default function Home() {
               className="pill-banner-link"
             >
               <span className="pill-banner-text">I write weekly about AI, open source, startups and finance</span>
+            </a>
+          </div>
+        </div>
+        */}
+        <div className="w-full py-3 sm:py-4">
+          <div className="max-w-[880px] mx-auto px-4 flex items-center justify-center">
+            <a
+              href="https://youtu.be/QeYl2Gq7mAA?si=g08U_sWNM1YGoE79"
+              target="_blank"
+              rel="noreferrer"
+              className="pill-banner-link"
+            >
+              <span className="pill-banner-text">From an opportunity at Citadel to raising $8.9M - the OpenBB story</span>
             </a>
           </div>
         </div>

@@ -60,6 +60,104 @@
             <category>solutions</category>
         </item>
         <item>
+            <title><![CDATA[Can I create a 1 min Ad on my own with zero video editing skills?]]></title>
+            <link>https://didierlopes.com/blog/2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills</link>
+            <guid>https://didierlopes.com/blog/2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills</guid>
+            <pubDate>Sat, 23 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[A hands-on experiment using Google's Veo3 AI to create a professional 1-minute video ad with zero video editing experience. Covers the complete workflow from script writing using the Hero's Journey framework to JSON-structured prompting techniques that unlock better AI video generation results.]]></description>
+            <content:encoded><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills.png"></p>
+<p>A hands-on experiment using Google's Veo3 AI to create a professional 1-minute video ad with zero video editing experience. Covers the complete workflow from script writing using the Hero's Journey framework to JSON-structured prompting techniques that unlock better AI video generation results.</p>
+<!-- -->
+<div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
+<p>It all started with this Kalshi AI Ad that went viral.</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/mzXFURkcCt4?si=TyLHBw1QX8l2KFNA" width="800" height="400"></iframe></div>
+<br>
+<p>When I saw this AI-generated ad, my thought was: "<em>Wtf. There’s no way this was solely done using AI.</em>”</p>
+<p>Then I saw a lot of people on X sharing their Veo-3 AI-generated clips, and I was like: “<em>hmmm, maybe it is possible</em>”.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-script">The script<a href="https://didierlopes.com/blog/2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills#the-script" class="hash-link" aria-label="Direct link to The script" title="Direct link to The script">​</a></h2>
+<p>Between dog walks and daily routines, I found myself sketching out ideas for what would become an AI-generated video to announce OpenBB’s position as a counterpoint to legacy workspace infrastructure.</p>
+<p>This would be a cinematic short film about the transformation of financial infrastructure and the rise of OpenBB.</p>
+<p>I iterated on this script on my own in terms of what I wanted for it to happen at a very high level, in order to invoke emotion to the audience - in order to do that, I followed the typical Hero journey framework.</p>
+<p>Here’s a brief description of what I ended up with at a very high level.</p>
+<ul>
+<li>
+<p><strong>The ordinary world</strong>: The legacy financial office with tired analysts in gray suits. Repetitive, robotic work on outdated CRT terminals. This establishes the mundane, oppressive status quo.</p>
+</li>
+<li>
+<p><strong>The call to adventure (opening)</strong>: The young analyst pauses and closes their screen. The moment of questioning: "What if we started over?". The frosted-glass door labeled "UNLOCKED" literally represents the call.</p>
+</li>
+<li>
+<p><strong>Crossing the threshold (transition)</strong>: Walking through the "UNLOCKED" door. The flood of light as they enter the futuristic workspace. It symbolizes leaving the old world behind. Launching OpenBB is the point of no return.</p>
+</li>
+<li>
+<p><strong>Tests and allies</strong>: Other analysts join the journey (allies). Each person transforms into their unique self (rejecting uniformity). The collaborative work represents the tests - learning new ways to work. The AI agent becomes a supernatural aid/mentor figure.</p>
+</li>
+<li>
+<p><strong>The Ordeal (system collapse)</strong>: The legacy system crashes ("INTERNAL ERROR"). This is the death/destruction of the old world. The moment of greatest crisis for those still trapped.</p>
+</li>
+<li>
+<p><strong>The revelation/reward (digital dissolution)</strong>: The walls literally dissolve, revealing the truth. The massive Hub represents the reward/treasure. "This isn't an upgrade. This is a migration" - the wisdom gained.</p>
+</li>
+<li>
+<p><strong>The return</strong>: The black void and logo emergence. Sharing the message with the world: "WE DON'T SELL DATA. WE SELL FREEDOM.". "The financial industry isn't rebooting" - bringing this knowledge back to transform society.</p>
+</li>
+</ul>
+<p>Then I had ChatGPT help me decompose this into different scenes.</p>
+<p>Also bear in mind that these AI video models are trained to output 8s videos, so I wanted to try to have each scene not taking longer than that. At least the core of it - as it’s hard to preserve scene styles between 8s clip.</p>
+<p>Although the “extend” feature on Google’s Flow was better than what I hoped for. More on this later.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flow---veo3">Flow - Veo3<a href="https://didierlopes.com/blog/2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills#flow---veo3" class="hash-link" aria-label="Direct link to Flow - Veo3" title="Direct link to Flow - Veo3">​</a></h2>
+<p>I first went to Google AI Studio, to the Generate Media section and tried to paste one the scenes text I had.</p>
+<p>Although it was free, the output was pretty disappointing and that’s when I noticed that this was Veo2, and not Veo3 - the model that everyone was raving about on X.</p>
+<p>Then I tried to upgrade to Veo3 - but in the typical Google manner - I couldn’t. Ultimately I found it in Google DeepMind platform which pointed me to try it in Flow.</p>
+<p>I didn’t have the right subscription so I signed up to “Google AI Ultra for Business” which costed $125/mo (with a 50% discount). The estimates is that this provides around 1250 clips, which is enough, because the quality of the model is extremely impressive and there are ways to squeeze performance out of it - through prompt engineering.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills_1.png"></p>
+<p>Copy-pasting the scenes as I had them on a document produced very impressive results, but I felt like the results were very diverse among each run.</p>
+<p>I felt like it needed more structure. Then I saw several creators mentioned that these models performed significantly better with JSON-structured inputs rather than simple text prompts.</p>
+<p>So I copied the text narrative of each of the scenes and converted these into JSON.</p>
+<p><strong>Example:</strong></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">"scene and action"</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"A slow dolly shot glides across a rigid financial office. Identical gray cubicles house analysts in matching suits, typing robotically at CRT-style terminals with pixelated dashboards. Close-ups reveal tired faces, blinking cursors, and a mechanical monotony. Voiceover: 'For decades, the tools of finance have remained the same. Expensive. Opaque. Inflexible. You weren’t meant to build with them. You were meant to follow.'"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">"camera angle"</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"center-aligned symmetry with slow dolly pans"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">"lighting"</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"harsh fluorescent with blue-gray tint"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">"room"</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"legacy financial office"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">"ratio"</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"16:9"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">"character"</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"analysts in identical gray suits, robotic behavior"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">"voice"</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"calm and authoritative male voice"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">"furniture"</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token string" style="color:rgb(255, 121, 198)">"CRT monitors"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token string" style="color:rgb(255, 121, 198)">"repetitive gray cubicles"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token string" style="color:rgb(255, 121, 198)">"fluorescent ceiling lights"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">"action and motion"</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"minimal movement, robotic typing, blinking screens, fluorescent flickering"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">"keywords"</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token string" style="color:rgb(255, 121, 198)">"legacy finance"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token string" style="color:rgb(255, 121, 198)">"monotony"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token string" style="color:rgb(255, 121, 198)">"rigid systems"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token string" style="color:rgb(255, 121, 198)">"pixelated UI"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token string" style="color:rgb(255, 121, 198)">"inflexibility"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><br></span></code></pre></div></div>
+<p>This level of detail gave us precise control over every aspect of the scene, and then we just had to paste it to Flow and let the model cook 🧑‍🍳.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills_2.png"></p>
+<p>That improved the quality and reproducibility significantly.</p>
+<p>But I knew we could still get more out of it so I iterated on these prompts with ChatGPT so it would add more relevant keys: value pairs to this JSON, such as:</p>
+<ul>
+<li>Scene and action descriptions</li>
+<li>Camera angles and movement</li>
+<li>Lighting and color grading</li>
+<li>Character direction and emotion</li>
+<li>Environmental details</li>
+<li>Keywords for style consistency</li>
+</ul>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills_3.png"></p>
+<p>This JSON structure forced me to think about every element, which was awesome.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="iteration">Iteration<a href="https://didierlopes.com/blog/2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills#iteration" class="hash-link" aria-label="Direct link to Iteration" title="Direct link to Iteration">​</a></h2>
+<p>At this point I knew there was something here.</p>
+<p><strong>I was - once again - mind blown by AI and what it could enable.</strong></p>
+<p>There I was, never having done any video editing/film concept - being able to do something on my own in very very little time.</p>
+<p>This is the point at which I asked help.</p>
+<p>While I was good at the technical prompt crafting, my wife has an eye for what actually looks good on screen and so she did all the iteration after that initial work. Flow's feature allowing 4 variations per prompt was a game-changer here,  instead of generating one video and hoping for the best, she could compare options and identify what worked.</p>
+<p>But also the Extend feature of flow which allows a scene to be based on the past ones so characters/environments aren’t lost between clips. Particularly relevant as we wanted to follow the Hero journey and for that the audience needs to develop a relationship/affinity with the hero.</p>
+<p>Then our marketing, Rita, helped refine the copy to make it perfect- with OpenBB style all over it.</p>
+<p>And then my wife just helped stitching things together and having audio being synced with the video.</p>
+<p>To the final result, which you can see here:</p>
+<p><strong>VIDEO HERE</strong></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="final-thoughts">Final thoughts<a href="https://didierlopes.com/blog/2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills#final-thoughts" class="hash-link" aria-label="Direct link to Final thoughts" title="Direct link to Final thoughts">​</a></h2>
+<p>What started as a weekend curiosity turned into a legitimate short film.</p>
+<p>The tools are there, the quality is impressive, and the barrier to entry is lower than ever.</p>
+<p>But perhaps most importantly, AI video generation doesn't replace human creativity – it amplifies it.</p>
+<p>This represents more than just a technical experiment.</p>
+<p>It's LITERAL proof that individual creators can now produce content that would have required significant budgets and teams just a few years ago.</p>
+<p>We are definitely in a golden age. Enjoy.</p>]]></content:encoded>
+            <category>ai-tools</category>
+            <category>video-generation</category>
+            <category>content-creation</category>
+            <category>marketing</category>
+            <category>veo3</category>
+            <category>prompt-engineering</category>
+            <category>startup</category>
+            <category>openbb</category>
+        </item>
+        <item>
             <title><![CDATA[Using Claude Code in God Mode]]></title>
             <link>https://didierlopes.com/blog/2025-08-16-using-claude-code-in-god-mode</link>
             <guid>https://didierlopes.com/blog/2025-08-16-using-claude-code-in-god-mode</guid>

@@ -3,11 +3,11 @@ import React from 'react';
 interface Video {
   date: string;
   title: string;
-  embed: string;
+  embed?: string;
   description: string;
-  time: string;
-  image: string;
-  info: string;
+  time?: string;
+  image?: string;
+  info?: string;
   location: string;
 }
 
@@ -43,7 +43,7 @@ export default function VideosList({ videos }: VideosListProps) {
                   />
                 </div>
                 <div className="text-sm mb-4">
-                  <p><strong>{video.time}</strong> - {video.description}</p>
+                  <p><strong>{video.time}</strong> - <span dangerouslySetInnerHTML={{ __html: video.description }} /></p>
                 </div>
               </>
             )}
@@ -57,7 +57,7 @@ export default function VideosList({ videos }: VideosListProps) {
                   />
                 </div>
                 <div className="text-sm mb-4">
-                  <p>{video.description}</p>
+                  <p dangerouslySetInnerHTML={{ __html: video.description }} />
                 </div>
               </>
             )}

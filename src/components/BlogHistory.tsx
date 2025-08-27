@@ -121,20 +121,30 @@ export default function BlogHistory({ posts = [], isDesktop }: BlogHistoryProps)
 				const parser = new DOMParser();
 				const doc = parser.parseFromString(post.content_html, 'text/html');
 				
-				// Select all text nodes, excluding those within <code>, <pre>, and <img> tags
-				const textNodes = Array.from(doc.body.childNodes).filter(node => 
-					node.nodeType === Node.TEXT_NODE || 
-					(node.nodeType === Node.ELEMENT_NODE && 
-					!['CODE', 'PRE', 'IMG'].includes(node.nodeName))
-				);
+				// First, remove codeblocks from markdown-style ``` blocks
+				let htmlContent = post.content_html;
+				// Remove markdown code blocks (```...```)
+				htmlContent = htmlContent.replace(/```[\s\S]*?```/g, '');
+				// Remove inline code blocks (`...`)
+				htmlContent = htmlContent.replace(/`[^`]*`/g, '');
 				
-				// Calculate the total length of text content
-				const textContent = textNodes.reduce((text, node) => 
-					text + (node.textContent || ''), ''
-				);
+				// Re-parse the cleaned HTML
+				const cleanDoc = parser.parseFromString(htmlContent, 'text/html');
 				
-				// Store the size in KB
-				acc[`post${idx + 1}`] = textContent.length / 1024;
+				// Remove CodeBlock components and other code-related elements
+				const codeBlocks = cleanDoc.querySelectorAll('pre, code, .codeblock, [class*="CodeBlock"]');
+				codeBlocks.forEach(block => block.remove());
+				
+				// Remove img tags as well
+				const images = cleanDoc.querySelectorAll('img');
+				images.forEach(img => img.remove());
+				
+				// Get all text content from the cleaned document
+				const textContent = cleanDoc.body.textContent || cleanDoc.body.innerText || '';
+				
+				// Store the size in KB (word count approximation: divide by 5 for average word length)
+				const wordCount = textContent.trim().split(/\s+/).filter(word => word.length > 0).length;
+				acc[`post${idx + 1}`] = wordCount / 1000; // Convert to thousands of words for better scale
 				return acc;
 			},
 			{},
@@ -190,7 +200,7 @@ export default function BlogHistory({ posts = [], isDesktop }: BlogHistoryProps)
 					/>
 					<YAxis
 						label={{
-							value: "Words",
+							value: "Words (k)",
 							angle: -90,
 							position: "insideLeft",
 							offset: -1,

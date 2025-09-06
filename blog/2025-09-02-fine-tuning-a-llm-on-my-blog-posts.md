@@ -1,8 +1,8 @@
 ---
-slug: 2025-08-xx-fine-tuning-a-llm-on-my-blog-posts
+slug: 2025-09-02-fine-tuning-a-llm-on-my-blog-posts
 title: Fine-tuning a LLM on my blog posts
-date: 2025-08-02
-image: /blog/2025-08-xx-fine-tuning-a-llm-on-my-blog-posts
+date: 2025-09-02
+image: /blog/2025-09-02-fine-tuning-a-llm-on-my-blog-posts
 tags:
   - ai
   - machine-learning
@@ -13,13 +13,11 @@ tags:
   - fine-tuning
 description: Ever wondered what it would be like to have an AI that writes exactly in your style? I did. And in this post, I share what I did about it. This is a very practical guide on how to fine-tune an LLM using LoRA with MLX on Apple Silicon.
 hideSidebar: true
-draft: true
-hide: true
 ---
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-xx-fine-tuning-a-llm-on-my-blog-posts.png" />
+    2025-09-02-fine-tuning-a-llm-on-my-blog-posts.png" />
 </p>
 
 Ever wondered what it would be like to have an AI that writes exactly in your style? I did. And in this post, I share what I did about it. This is a very practical guide on how to fine-tune an LLM using LoRA with MLX on Apple Silicon.
@@ -35,7 +33,7 @@ At the start of the year I shared [this blogpost](https://didierlopes.com/blog/t
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-xx-fine-tuning-a-llm-on-my-blog-posts_1.png" />
+    2025-09-02-fine-tuning-a-llm-on-my-blog-posts_1.png" />
 </p>
 
 After sharing this, I spent time trying to fine-tune an LLM - but results were not great and combined with all things happening at OpenBB I didn't have time to dedicate a lot of time to this. :upside-down-hf-logo
@@ -91,7 +89,7 @@ Traditional fine-tuning updates all 3.8 billion parameters, requiring enormous c
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-xx-fine-tuning-a-llm-on-my-blog-posts_2.png" />
+    2025-09-02-fine-tuning-a-llm-on-my-blog-posts_2.png" />
 </p>
 
 Why this matters:
@@ -125,7 +123,7 @@ For the data we will be using a [Q&A dataset based on my blogposts](https://hugg
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-xx-fine-tuning-a-llm-on-my-blog-posts_3.png" />
+    2025-09-02-fine-tuning-a-llm-on-my-blog-posts_3.png" />
 </p>
 
 The dataset contains 91 blog posts transformed into conversational Q&A pairs - roughly 2,100 exchanges covering everything from OpenBB's journey to technical deep-dives on open source.
@@ -138,7 +136,7 @@ Phi-3-mini-4k-instruct has been trained with a specific chat template, and we ne
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-xx-fine-tuning-a-llm-on-my-blog-posts_4.png" />
+    2025-09-02-fine-tuning-a-llm-on-my-blog-posts_4.png" />
 </p>
 
 You can find that template in the model card on HF: [https://huggingface.co/microsoft/Phi-3-mini-4k-instruct](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct)
@@ -304,7 +302,7 @@ Although this happened when I was fine-tuning those 3.1M parameters 😭
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-xx-fine-tuning-a-llm-on-my-blog-posts_5.png" />
+    2025-09-02-fine-tuning-a-llm-on-my-blog-posts_5.png" />
 </p>
 
 ---
@@ -345,7 +343,7 @@ I actually started with 8 on this one, but results weren’t the best so I doubl
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-xx-fine-tuning-a-llm-on-my-blog-posts_6.png" />
+    2025-09-02-fine-tuning-a-llm-on-my-blog-posts_6.png" />
 </p>
 
 Note: The `AxB` multiplication that happens which results in the new `W` matrix adapter is normalized by `r`. This makes it so the update’s magnitude stays roughly stable regardless of rank, otherwise `r` would linearly increase variance of the update.
@@ -435,7 +433,7 @@ The training hyperparameters rationale:
 
 <p align="center">
     <img width="1000" src="/blog/
-    2025-08-xx-fine-tuning-a-llm-on-my-blog-posts_7.png" />
+    2025-09-02-fine-tuning-a-llm-on-my-blog-posts_7.png" />
 </p>
 
 Training isn't just about pressing "run" and waiting. It's an active process of monitoring, adjusting, and sometimes killing runs that aren't working.
@@ -770,7 +768,7 @@ EVALUATION PIPELINE COMPLETED!
 
 <p align="center">
     <img width="800" src="/blog/
-    2025-08-xx-fine-tuning-a-llm-on-my-blog-posts_8.png" />
+    2025-09-02-fine-tuning-a-llm-on-my-blog-posts_8.png" />
 </p>
 
 The evaluation results tell a compelling story about the effectiveness of our LoRA fine-tuning approach.
@@ -888,7 +886,7 @@ Finally, using the [script upload_model_to_hf.py](https://github.com/DidierRLope
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-xx-fine-tuning-a-llm-on-my-blog-posts_9.png" />
+    2025-09-02-fine-tuning-a-llm-on-my-blog-posts_9.png" />
 </p>
 
 <details summary="Uploading model to hugging face logs">
@@ -955,7 +953,7 @@ While LoRA adapters are excellent for experimentation and sharing, production de
 
 <p align="center">
     <img width="400" src="/blog/
-    2025-08-xx-fine-tuning-a-llm-on-my-blog-posts_10.png" />
+    2025-09-02-fine-tuning-a-llm-on-my-blog-posts_10.png" />
 </p>
 
 Fusion mathematically merges your LoRA adapter weights back into the base model. It is recommended to use the fused model when:

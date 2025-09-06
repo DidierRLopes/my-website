@@ -504,7 +504,12 @@ const data = [
 		title: "Who Knew",
 		author: "Barry Diller",
 		image: "/books/who-knew.jpg",
-	}
+	},
+	{
+		title: "Play Nice But Win: A CEO's Journey from Founder to Leader",
+		author: "Michael Dell, James Kaplan",
+		image: "/books/play-nice-but-win-a-ceos-journey-from-founder-to-leader.jpg",
+	},
 ];
 
 export default function BooksAlreadyRead() {

@@ -17349,7 +17349,13 @@ And then my wife just helped stitching things together and having audio being sy
 
 To the final result, which you can see here:
 
-**VIDEO HERE**
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/FWL0A3BdgcI?si=BqyWvMjFYJTA0uOq"
+        width="800"
+        height="400"
+    />
+</div>
 
 ## Final thoughts
 

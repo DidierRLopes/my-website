@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[50531],{5517:(e,t,i)=>{i.r(t),i.d(t,{default:()=>u});var s=i(96540);function u(){return(0,s.useEffect)(()=>{window.location.href="https://didierlopes.beehiiv.com/"},[]),null}}}]);

@@ -329,12 +329,6 @@ const data = [
 			"/books/creativity-inc-overcoming-the-unseen-forces-that-stand-in-the-way-of-true-inspiration.jpg",
 	},
 	{
-		title: "$100M Leads: How to Get Strangers to Want to Buy Your Stuff",
-		author: "Alex Hormozi",
-		image:
-			"/books/100m-leads-how-to-get-strangers-to-want-to-buy-your-stuff.jpg",
-	},
-	{
 		title: "On Writing: A Memoir of the Craft",
 		author: "Stephen King",
 		image: "/books/on-writing-a-memoir-of-the-craft.jpg",
@@ -396,13 +390,15 @@ const data = [
 			"/books/writing-that-works-how-to-communicate-effectively-in-business.jpg",
 	},
 	{
-		title: "American Kingpin: The Epic Hunt for the Criminal Mastermind Behind the Silk Road",
+		title:
+			"American Kingpin: The Epic Hunt for the Criminal Mastermind Behind the Silk Road",
 		author: "Nick Bilton",
 		image:
 			"/books/american-kingpin-the-epic-hunt-for-the-criminal-mastermind-behind-the-silk-road.jpg",
 	},
 	{
-		title: "Focus: The ASML way - Inside the power struggle over the most complex machine on earth",
+		title:
+			"Focus: The ASML way - Inside the power struggle over the most complex machine on earth",
 		author: "Marc Hijink",
 		image:
 			"/books/focus-the-asml-way-inside-the-power-struggle-over-the-most-complex-machine-on-earth.jpg",
@@ -416,17 +412,20 @@ const data = [
 	{
 		title: "The Art of Doing Science and Engineering: Learning to Learn",
 		author: "Richard W. Hamming",
-		image: "/books/the-art-of-doing-science-and-engineering-learning-to-learn.jpg",
+		image:
+			"/books/the-art-of-doing-science-and-engineering-learning-to-learn.jpg",
 	},
 	{
 		title: "Secrets of Sand Hill Road: Venture Capital and How to Get It",
 		author: "Scott Kupor, Eric Ries",
-		image: "/books/secrets-of-sand-hill-road-venture-capital-and-how-to-get-it.jpg",
+		image:
+			"/books/secrets-of-sand-hill-road-venture-capital-and-how-to-get-it.jpg",
 	},
 	{
 		title: "Venture Deals: Be Smarter Than Your Lawyer and Venture Capitalist",
 		author: "Brad Feld, Jason Mendelson",
-		image: "/books/venture-deals-be-smarter-than-your-lawyer-and-venture-capitalist.jpg",
+		image:
+			"/books/venture-deals-be-smarter-than-your-lawyer-and-venture-capitalist.jpg",
 	},
 	{
 		title: "Design Is Storytelling",
@@ -436,7 +435,8 @@ const data = [
 	{
 		title: "The Qualified Sales Leader: Proven Lessons from a Five Time CRO",
 		author: "John McMahon",
-		image: "/books/the-qualified-sales-leader-proven-lessons-from-a-five-time-cro.jpg",
+		image:
+			"/books/the-qualified-sales-leader-proven-lessons-from-a-five-time-cro.jpg",
 	},
 	{
 		title: "The Lessons of History",
@@ -451,7 +451,8 @@ const data = [
 	{
 		title: "White Collar Boxing: One Man's Journey from the Office to the Ring",
 		author: "John E. Oden",
-		image: "/books/white-collar-boxing-one-mans-journey-from-the-office-to-the-ring.jpg",
+		image:
+			"/books/white-collar-boxing-one-mans-journey-from-the-office-to-the-ring.jpg",
 	},
 	{
 		title: "Get Together: How to Build a Community With Your People",

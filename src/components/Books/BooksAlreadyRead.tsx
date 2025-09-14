@@ -458,9 +458,11 @@ const data = [
 			"/books/the-nvidia-way-jensen-huang-and-the-making-of-a-tech-giant.jpg",
 	},
 	{
-		title: "Founder vs Investor: The Honest Truth About Venture Capital from Startup to IPO",
+		title:
+			"Founder vs Investor: The Honest Truth About Venture Capital from Startup to IPO",
 		author: "Elizabeth Zalman, Jerry Neumann",
-		image: "/books/founder-vs-investor-the-honest-truth-about-venture-capital-from-startup-to-ipo.jpg",
+		image:
+			"/books/founder-vs-investor-the-honest-truth-about-venture-capital-from-startup-to-ipo.jpg",
 	},
 	{
 		title:
@@ -477,12 +479,14 @@ const data = [
 	{
 		title: "AI Engineering: Building Applications with Foundation Models",
 		author: "Chip Huyen",
-		image: "/books/ai-engineering-building-applications-with-foundation-models.jpg",
+		image:
+			"/books/ai-engineering-building-applications-with-foundation-models.jpg",
 	},
 	{
 		title: "This is Marketing: You Can't Be Seen Until You Learn to See",
 		author: "Seth Godin",
-		image: "/books/this-is-marketing-you-can-t-be-seen-until-you-learn-to-see.jpg",
+		image:
+			"/books/this-is-marketing-you-can-t-be-seen-until-you-learn-to-see.jpg",
 	},
 	{
 		title: "The Book of Why: The New Science of Cause and Effect",
@@ -490,9 +494,11 @@ const data = [
 		image: "/books/the-book-of-why-the-new-science-of-cause-and-effect.jpg",
 	},
 	{
-		title: "The Experimentation Machine: Finding Product-Market Fit in the Age of AI",
+		title:
+			"The Experimentation Machine: Finding Product-Market Fit in the Age of AI",
 		author: "Jeffrey J Bussgang",
-		image: "/books/the-experimentation-machine-finding-product-market-fit-in-the-age-of-ai.jpg",
+		image:
+			"/books/the-experimentation-machine-finding-product-market-fit-in-the-age-of-ai.jpg",
 	},
 	{
 		title: "Zen and the Art of Motorcycle Maintenance: An Inquiry into Values",
@@ -510,15 +516,45 @@ const data = [
 		author: "Michael Dell, James Kaplan",
 		image: "/books/play-nice-but-win-a-ceos-journey-from-founder-to-leader.jpg",
 	},
+	{
+		title: "$100M Leads: How to Get Strangers to Want to Buy Your Stuff",
+		author: "Alex Hormozi",
+		image:
+			"/books/100m-leads-how-to-get-strangers-to-want-to-buy-your-stuff.jpg",
+	},
 ];
 
 export default function BooksAlreadyRead() {
 	return (
 		<>
 			<p>
-				Most of the books I have read or listened to. 
+				Most of the books I have read or listened to.
 				<br />
-				Here's a thread with the ones I read in <a href="https://x.com/didier_lopes/status/1615510616025993217" target="_blank" rel="noopener noreferrer">2023</a>, in <a href="https://x.com/didier_lopes/status/1742748040220328189" target="_blank" rel="noopener noreferrer">2024</a> and in <a href="https://x.com/didier_lopes/status/1882635148694606134" target="_blank" rel="noopener noreferrer">2025</a>.
+				Here's a thread with the ones I read in{" "}
+				<a
+					href="https://x.com/didier_lopes/status/1615510616025993217"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					2023
+				</a>
+				, in{" "}
+				<a
+					href="https://x.com/didier_lopes/status/1742748040220328189"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					2024
+				</a>{" "}
+				and in{" "}
+				<a
+					href="https://x.com/didier_lopes/status/1882635148694606134"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					2025
+				</a>
+				.
 			</p>
 			<BooksList books={data} />
 		</>

@@ -2,12 +2,110 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://didierlopes.com/blog</id>
     <title>Didier Lopes Blog</title>
-    <updated>2025-09-06T00:00:00.000Z</updated>
+    <updated>2025-09-10T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://didierlopes.com/blog"/>
     <subtitle>Didier Lopes Blog</subtitle>
     <icon>https://didierlopes.com/img/favicon.ico</icon>
     <rights>Copyright © 2025 Didier Lopes.</rights>
+    <entry>
+        <title type="html"><![CDATA[How I built an MCP Server for developers building OpenBB apps]]></title>
+        <id>https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps</id>
+        <link href="https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps"/>
+        <updated>2025-09-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The hardest part of building an OpenBB app isn't writing Python, it's getting the widgets.json spec right. I built an MCP server to expose every piece of documentation as a structured, callable tool.]]></summary>
+        <content type="html"><![CDATA[<p>The hardest part of building an OpenBB app isn't writing Python, it's getting the <code>widgets.json</code> spec right, since this spec was invented by us.</p>
+<p>Every app requires developers to define widget types, inputs, and configuration options in exactly the right format. The documentation is strong, but it is long-form, which forces you to dig around for the parts you need. That slows down iteration, especially when you just want to get an idea live in OpenBB Workspace.</p>
+<p>AI feels like a natural solution here. For example, providing the documentation to a model like Claude Code and asking it to generate your <code>widgets.json</code> spec.</p>
+<p>If you ask Claude Code to read the docs from OpenBB, it <strong>kind of works</strong>. But it takes too much time (given the extensive documentation available), wastes a lot of tokens, and the model often gets confused. This is the same as using an MCP server like Context7, except that with Context7 the context is not really guaranteed to be up to date, so it is even worse.</p>
+<p>The alternative is to send the exact part of the page that the model requires, which actually works pretty well. But this is very time consuming for the developer. The problem is that when you are building a complex widget, you need context from a lot of different pages, which increases the risk of not sending the right context and the model hallucinating. So basically, it <strong>doesn't work either</strong>.</p>
+<p>BUT.</p>
+<p>What if, instead of stuffing all the docs into context, <strong>I built an MCP server</strong> where every piece of the documentation is exposed as a structured, callable tool?</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_1.png"></p>
+<p>I just had to try it.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-breaking-down-the-docs-into-building-blocks">1. Breaking down the docs into building blocks<a href="https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps#1-breaking-down-the-docs-into-building-blocks" class="hash-link" aria-label="Direct link to 1. Breaking down the docs into building blocks" title="Direct link to 1. Breaking down the docs into building blocks">​</a></h2>
+<p>I spent the weekend <a href="https://github.com/OpenBB-finance/openbb-docs/pull/104" target="_blank" rel="noopener noreferrer">refactoring OpenBB docs</a> into developer and analyst roles, so I understood very well the principal components that were relevant for developers.</p>
+<p>There are three natural categories of building blocks:</p>
+<ul>
+<li><strong>Widget types</strong>: Plotly charts, AgGrid tables, Markdown, HTML, Metrics, etc.</li>
+<li><strong>Parameters and controls</strong>: dropdowns, toggles, date pickers, text inputs, etc.</li>
+<li><strong>Configuration options</strong>: grid sizing, stale times, error handling, refetch intervals, etc.</li>
+</ul>
+<p>Instead of treating the docs as one big reference, I split them into these <strong>granular tools</strong>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-adding-an-ad-hoc-boilerplate-tool">2. Adding an ad-hoc boilerplate tool<a href="https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps#2-adding-an-ad-hoc-boilerplate-tool" class="hash-link" aria-label="Direct link to 2. Adding an ad-hoc boilerplate tool" title="Direct link to 2. Adding an ad-hoc boilerplate tool">​</a></h2>
+<p>On top of the building blocks, I added one special tool: <code>building_widgets_on_openbb</code>.</p>
+<p>This is an <strong>ad-hoc boilerplate reference</strong> that acts as a base. By requiring it to always be called first, I can guarantee that every widget starts from a solid baseline and everything else plugs into that baseline.</p>
+<p>I enforced this behavior with the following MCP tool description:</p>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token decorator annotation punctuation" style="color:rgb(248, 248, 242)">@mcp</span><span class="token decorator annotation punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token decorator annotation punctuation" style="color:rgb(248, 248, 242)">tool</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">def</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">building_widgets_on_openbb</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"> </span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token plain"> </span><span class="token builtin" style="color:rgb(189, 147, 249)">str</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token triple-quoted-string string" style="color:rgb(255, 121, 198)">"""Essential boilerplate code for building OpenBB Workspace widgets. </span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token triple-quoted-string string" style="color:rgb(255, 121, 198)">    This provides the foundational FastAPI setup, CORS configuration, widgets.json endpoints, </span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token triple-quoted-string string" style="color:rgb(255, 121, 198)">    and register_widget decorator pattern. ALWAYS call this first when creating OpenBB widgets </span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token triple-quoted-string string" style="color:rgb(255, 121, 198)">    to get the required boilerplate structure."""</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">return</span><span class="token plain"> </span><span class="token triple-quoted-string string" style="color:rgb(255, 121, 198)">"""# Essential Boilerplate Code for OpenBB Workspace Widgets</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token triple-quoted-string string" style="color:rgb(255, 121, 198)">...</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token triple-quoted-string string" style="color:rgb(255, 121, 198)">"""</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-using-fastmcp-to-turn-everything-into-tools">3. Using FastMCP to turn everything into tools<a href="https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps#3-using-fastmcp-to-turn-everything-into-tools" class="hash-link" aria-label="Direct link to 3. Using FastMCP to turn everything into tools" title="Direct link to 3. Using FastMCP to turn everything into tools">​</a></h2>
+<p>I used <strong>FastMCP</strong> to create a tool for each block. Every widget type, parameter, and configuration setting is its own MCP endpoint.</p>
+<p>So instead of asking the AI, "What's the JSON spec for a dropdown?" and hoping it parses the docs correctly, the AI can just call:</p>
+<ul>
+<li><code>widget_parameters_dropdown</code></li>
+<li><code>widget_types_plotly_charts</code></li>
+<li><code>widget_configuration_grid_size</code></li>
+</ul>
+<p>and immediately get valid JSON to work with.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-deploying-on-smitheryai-for-easy-access">4. Deploying on Smithery.ai for easy access<a href="https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps#4-deploying-on-smitheryai-for-easy-access" class="hash-link" aria-label="Direct link to 4. Deploying on Smithery.ai for easy access" title="Direct link to 4. Deploying on Smithery.ai for easy access">​</a></h2>
+<p>Finally, I deployed the server on Smithery.ai. That makes it discoverable, shareable, and instantly usable, with no local setup required. You can connect Claude Desktop, Cursor, or Smithery Playground to it in seconds.</p>
+<p>It became immediately available <a href="https://smithery.ai/server/@DidierRLopes/openbb-docs-mcp" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps.png"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-testing">5. Testing<a href="https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps#5-testing" class="hash-link" aria-label="Direct link to 5. Testing" title="Direct link to 5. Testing">​</a></h2>
+<p>But I didn't just deploy and hope for the best.</p>
+<p>Instead, I clicked on "Explore capabilities" on the <a href="https://smithery.ai/server/@DidierRLopes/openbb-docs-mcp" target="_blank" rel="noopener noreferrer">smithery.ai page</a> and asked it to create a complicated <code>widgets.json</code> spec for a specific widget request.</p>
+<p>It didn't work perfectly at first.</p>
+<p>But that's okay. I went back and improved the docs (and even realized that I needed the ad-hoc boilerplate tool).</p>
+<p>Eventually, it worked.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_2.png"></p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_3.png"></p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_4.png"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-use-it">How to use it<a href="https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps#how-to-use-it" class="hash-link" aria-label="Direct link to How to use it" title="Direct link to How to use it">​</a></h2>
+<p>Here's how you may use this OpenBB widgets.json spec MCP Server with Claude Code.</p>
+<ol>
+<li>Add this MCP Server to Claude Code (URL <a href="https://server.smithery.ai/@DidierRLopes/openbb-docs-mcp/mcp" target="_blank" rel="noopener noreferrer">here</a>)</li>
+</ol>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">claude mcp add --transport http openbb-docs-mcp https://server.smithery.ai/@DidierRLopes/openbb-docs-mcp/mcp</span><br></span></code></pre></div></div>
+<ol start="2">
+<li>Set up MCP Server and authenticate</li>
+</ol>
+<p>And ensure you see a "✅ connected"</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_5.png"></p>
+<ol start="3">
+<li>Then ask your prompt, and you need to confirm that CC can access these MCP tools.</li>
+</ol>
+<p>This is what you expect to see:</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_6.png"></p>
+<p>In the end, you should be able to get the correct <code>widgets.json</code> spec.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="monte-carlo-stock-simulation-widget">Monte Carlo stock simulation widget<a href="https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps#monte-carlo-stock-simulation-widget" class="hash-link" aria-label="Direct link to Monte Carlo stock simulation widget" title="Direct link to Monte Carlo stock simulation widget">​</a></h2>
+<p>In order to test this, I ask CC:</p>
+<p><em>Create an OpenBB widget that has 3 parameters (ticker str, start date and boolean). The data is meant to be a plotly chart, but also support raw data. And because it's a monte carlo simulation, can you add a run button to it?</em></p>
+<p>But essentially, it allowed me to connect this one-shot widget to the workspace:</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_7.png"></p>
+<p>Note the difficulty associated with building this widget from scratch:</p>
+<ul>
+<li>Requires adding the boilerplate code</li>
+<li>Requires a Plotly visualization with simulation paths plus percentile bands</li>
+<li>Adds 3 parameters: <code>ticker</code> (text), <code>start_date</code> (date), <code>use_volatility_adjustment</code> (boolean)</li>
+<li>Raw data mode returning pure simulation arrays</li>
+<li>A run button for manual execution</li>
+</ul>
+<p>This example shows the end-to-end workflow:</p>
+<p><strong>AI + MCP server → OpenBB widget in minutes.</strong></p>
+<p>One recommendation I have is to separate the data problem from the <code>widgets.json</code> specs. Make sure it works with mock data first, and once that is figured out, you just need to ensure you can push the correct data to it.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tldr">tl;dr<a href="https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps#tldr" class="hash-link" aria-label="Direct link to tl;dr" title="Direct link to tl;dr">​</a></h2>
+<p>AI as a search engine for docs is messy and inconsistent.</p>
+<p><strong>AI as a programmable assistant with tools is structured, accurate, and composable.</strong></p>
+<p>By exposing the docs as tools, you reduce hallucinations, improve accuracy, and make it much easier for developers to mix and match widget components when building new OpenBB apps.</p>
+<p>Happy hacking!</p>
+<p><strong>PS:</strong> We are actually working on introducing Widget Studio, which will greatly simplify the user experience of building custom widgets in the workspace, particularly when it comes to the UI.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_8.png"></p>]]></content>
+        <category label="openbb" term="openbb"/>
+        <category label="mcp" term="mcp"/>
+        <category label="ai" term="ai"/>
+        <category label="development" term="development"/>
+        <category label="tools" term="tools"/>
+        <category label="documentation" term="documentation"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Tracking your partner's health stats with Oura and AI]]></title>
         <id>https://didierlopes.com/blog/2025-09-06-tracking-your-partner-health-stats-with-oura-and-ai</id>

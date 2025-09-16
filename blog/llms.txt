@@ -135,3 +135,4 @@
 - [2025-08-xx-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it](https://didierlopes.com/blog/2025-08-xx-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it)
 - [2025-09-02-fine-tuning-a-llm-on-my-blog-posts](https://didierlopes.com/blog/2025-09-02-fine-tuning-a-llm-on-my-blog-posts)
 - [2025-09-06-tracking-your-partner-health-stats-with-oura-and-ai](https://didierlopes.com/blog/2025-09-06-tracking-your-partner-health-stats-with-oura-and-ai)
+- [2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps](https://didierlopes.com/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps)

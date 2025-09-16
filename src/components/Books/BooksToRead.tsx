@@ -464,6 +464,13 @@ const data = [
 		author: "Alfred Lansing",
 		image: "/books/endurance-shackletons-incredible-voyage.jpg",
 	},
+	{
+		title:
+			"Yield: How Google Bought, Built, and Bullied Its Way to Advertising Dominance",
+		author: "Ari Paparo",
+		image:
+			"/books/yield-how-google-bought-built-and-bullied-its-way-to-advertising-dominance.jpg",
+	},
 ];
 
 export default function BooksToRead() {

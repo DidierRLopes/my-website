@@ -121,10 +121,16 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
   ).sort();
 
   const filteredPosts = posts.filter((post) => {
-    const textMatch = !searchInput || 
-      post?.metadata?.title?.toLowerCase().includes(searchInput.toLowerCase()) ||
-      post?.metadata?.description?.toLowerCase().includes(searchInput.toLowerCase()) ||
-      post.metadata?.tags?.some((tag) => tag.label.toLowerCase().includes(searchInput.toLowerCase()));
+    const textMatch = !searchInput || (() => {
+      const searchTerms = searchInput.trim().toLowerCase().split(/\s+/);
+      const contentToSearch = [
+        post?.metadata?.title?.toLowerCase() || '',
+        post?.metadata?.description?.toLowerCase() || '',
+        ...(post.metadata?.tags?.map(tag => tag.label.toLowerCase()) || [])
+      ].join(' ');
+      
+      return searchTerms.every(term => contentToSearch.includes(term));
+    })();
     
     const tagMatch = selectedTags.length === 0 || 
       selectedTags.every(selectedTag => 

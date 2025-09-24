@@ -12248,7 +12248,7 @@ For the better, or the worst.
 ---
 
 ---
-slug: 2025-02-18-long-live-long-context-with-gemini
+slug: long-live-long-context-with-gemini
 title: Long live long context with Gemini
 date: 2025-02-18
 image: /blog/2025-02-18-long-live-long-context-with-gemini
@@ -12750,7 +12750,7 @@ The future of finance is being rewritten.
 ---
 
 ---
-slug: 2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb
+slug: how-function-calling-and-context-aware-ai-shapes-openbb
 title: How function calling and context-aware AI shapes OpenBB
 date: 2025-03-01
 image: /blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb
@@ -12968,7 +12968,7 @@ You can get started for free at [pro.openbb.co](http://pro.openbb.co).
 ---
 
 ---
-slug: 2025-03-03-building-a-custom-widget-for-my-friends-newsletter
+slug: building-a-custom-widget-for-my-friends-newsletter
 title: Building a custom widget for my friends newsletter
 date: 2025-03-03
 image: /blog/2025-03-03-building-a-custom-widget-for-my-friends-newsletter
@@ -13039,7 +13039,7 @@ PS: I have made this code [open source](https://github.com/DidierRLopes/opening-
 ---
 
 ---
-slug: 2025-03-05-my-key-takeaways-from-institutional-investor-conference
+slug: my-key-takeaways-from-institutional-investor-conference
 title: My key takeaways from Institutional Investor conference
 date: 2025-03-05
 image: /blog/2025-03-05-my-key-takeaways-from-institutional-investor-conference.jpg
@@ -13133,7 +13133,7 @@ If you want to chat, feel free to e-mail me at didier.lopes[at]openbb.finance.
 ---
 
 ---
-slug: 2025-03-07-proactive-agents-are-the-future-of-ai-in-finance
+slug: proactive-agents-are-the-future-of-ai-in-finance
 title: Proactive Agents Are the Future of AI in Finance
 date: 2025-03-07
 image: /blog/2025-03-07-proactive-agents-are-the-future-of-ai-in-finance
@@ -13237,7 +13237,7 @@ The future of finance isn't just about having better answers—it's about having
 ---
 
 ---
-slug: 2025-03-11-the-10-trillion-openbb-copilot-validation
+slug: the-10-trillion-openbb-copilot-validation
 title: The $10 trillion OpenBB Copilot validation
 date: 2025-03-11
 image: /blog/2025-03-11-the-10-trillion-openbb-copilot-validation
@@ -13393,7 +13393,7 @@ If you fall under that umbrella, reach out.
 ---
 
 ---
-slug: 2025-03-18-my-first-half-marathon
+slug: my-first-half-marathon
 title: Doing my first Half Marathon
 date: 2025-03-18
 image: /blog/2025-03-18-my-first-half-marathon
@@ -13661,7 +13661,7 @@ Some stats below for the curious,
 ---
 
 ---
-slug: 2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow
+slug: openbb-enables-streamlined-client-advisory-ai-workflow
 title: OpenBB enables streamlined Client Advisory AI workflow
 date: 2025-03-23
 image: /blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow
@@ -13841,7 +13841,7 @@ Let's discuss how we can customize this solution for your organization's unique 
 ---
 
 ---
-slug: 2025-03-25-one-data-vendor-to-rule-them-all-really
+slug: one-data-vendor-to-rule-them-all-really
 title: One data vendor to rule them all. Really?
 date: 2025-03-25
 image: /blog/2025-03-25-one-data-vendor-to-rule-them-all-really
@@ -14024,7 +14024,7 @@ If you're ready to transform how your team interacts with financial data, we'd l
 ---
 
 ---
-slug: 2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero
+slug: building-your-own-crypto-app-from-scratch-zero-to-hero
 title: Building your own Crypto app from scratch - zero to hero
 date: 2025-03-30
 image: /blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero
@@ -14503,7 +14503,7 @@ Sign up in here: tbd.
 ---
 
 ---
-slug: 2025-04-03-stop-building-ai-products-start-building-workflows
+slug: stop-building-ai-products-start-building-workflows
 title: Stop building AI products, start building workflows
 date: 2025-04-03
 image: /blog/2025-04-03-stop-building-ai-products-start-building-workflows
@@ -14744,7 +14744,7 @@ This highlights not only what we've built, but also how quickly we can delight c
 ---
 
 ---
-slug: 2025-04-11-10000-followers-later-heres-where-it-all-began
+slug: 10000-followers-later-heres-where-it-all-began
 title: 10,000 followers later, here’s where it all began
 date: 2025-04-11
 image: /blog/2025-04-11-10000-followers-later-heres-where-it-all-began
@@ -14885,7 +14885,7 @@ And what I’ll keep doing.
 ---
 
 ---
-slug: 2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows
+slug: introducing-openbb-apps-tailored-by-users-for-optimized-workflows
 title: Introducing OpenBB Apps, tailored by users for optimized workflows
 date: 2025-05-01
 image: /blog/2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows
@@ -14967,7 +14967,7 @@ If you'd like to discuss bringing OpenBB to your firm, ping me!
 ---
 
 ---
-slug: 2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators
+slug: sec-filings-to-uncover-and-track-financial-and-economic-indicators
 title: SEC filings to uncover and track financial and economic indicators
 date: 2025-05-22
 image: /blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators
@@ -15055,7 +15055,7 @@ Also, if you want to see how I built this app - the full code is open source her
 ---
 
 ---
-slug: 2025-05-28-openbb-is-underrated
+slug: openbb-is-underrated
 title: OpenBB is underrated
 date: 2025-05-28
 image: /blog/2025-05-28-openbb-is-underrated
@@ -15144,7 +15144,7 @@ The infrastructure is already here.
 ---
 
 ---
-slug: 2025-06-01-not-your-typical-data-vendor
+slug: not-your-typical-data-vendor
 title: Not your typical data vendor
 date: 2025-06-01
 image: /blog/2025-06-01-not-your-typical-data-vendor
@@ -15221,7 +15221,7 @@ Or if you have an API key, you can adapt the source code to support more tickers
 ---
 
 ---
-slug: 2025-06-10-how-i-connected-figma-to-cursor-using-mcp
+slug: how-i-connected-figma-to-cursor-using-mcp
 title: How I connected Figma to Cursor using MCP
 date: 2025-06-10
 image: /blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp
@@ -15367,7 +15367,7 @@ Happy hacking.
 ---
 
 ---
-slug: 2025-06-12-i-just-tested-dia-browser-and-i-have-thoughts
+slug: i-just-tested-dia-browser-and-i-have-thoughts
 title: I just tested Dia browser, and I have thoughts
 date: 2025-06-12
 image: /blog/2025-06-12-i-just-tested-dia-browser-and-i-have-thoughts
@@ -15452,7 +15452,7 @@ The irony here is that - had they open source Arc, then I would have trust them 
 ---
 
 ---
-slug: 2025-06-15-my-feelings-about-ai-companions
+slug: my-feelings-about-ai-companions
 title: My feelings about AI companions
 date: 2025-06-15
 image: /blog/2025-06-15-my-feelings-about-ai-companions
@@ -15555,7 +15555,7 @@ Maybe one day, it won't.
 ---
 
 ---
-slug: 2025-06-20-i-cant-believe-i-recommended-replit-instead-of-cursor
+slug: i-cant-believe-i-recommended-replit-instead-of-cursor
 title: I can't believe I recommended Replit instead of Cursor
 date: 2025-06-20
 image: /blog/2025-06-20-i-cant-believe-i-recommended-replit-instead-of-cursor
@@ -15665,7 +15665,7 @@ But today I became a true fan of Replit.
 ---
 
 ---
-slug: 2025-06-25-humanoid-robots-are-a-waste-of-money
+slug: humanoid-robots-are-a-waste-of-money
 title: Humanoid robots are a waste of money
 date: 2025-06-25
 image: /blog/2025-06-25-humanoid-robots-are-a-waste-of-money
@@ -15782,7 +15782,7 @@ If you want real-world impact, stop trying to clone us, and **start designing sy
 ---
 
 ---
-slug: 2025-07-02-bring-back-your-corner-of-the-internet
+slug: bring-back-your-corner-of-the-internet
 title: Bring back your corner of the internet
 date: 2025-07-02
 image: /blog/2025-07-02-bring-back-your-corner-of-the-internet
@@ -15937,7 +15937,7 @@ Let's make it beautiful again.
 ---
 
 ---
-slug: 2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen
+slug: finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen
 title: Finance's OceanGate moment - The AI adoption disaster waiting to happen
 date: 2025-07-09
 image: /blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen
@@ -16093,7 +16093,7 @@ I believe in this so much that I actually added a [Chat page](https://didierlope
 ---
 
 ---
-slug: 2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development
+slug: is-prompt-engineering-dead-the-case-for-test-driven-ai-development
 title: Is Prompt Engineering dead? The case for Test-Driven AI Development
 date: 2025-07-17
 image: /blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development
@@ -16337,7 +16337,7 @@ The question is: **are we ready to let AI systems write their own prompt**, or d
 ---
 
 ---
-slug: 2025-07-23-can-we-kill-the-term-vibe-coding
+slug: can-we-kill-the-term-vibe-coding
 title: Can we kill the term "vibe coding"?
 date: 2025-07-23
 image: /blog/2025-07-23-can-we-kill-the-term-vibe-coding
@@ -16442,7 +16442,7 @@ We should kill the term "vibe coding" and start talking about what this really i
 ---
 
 ---
-slug: 2025-07-29-are-you-team-mcp-client-or-server
+slug: are-you-team-mcp-client-or-server
 title: Are you team MCP Client or Server?
 date: 2025-07-29
 image: /blog/2025-07-29-are-you-team-mcp-client-or-server
@@ -16595,7 +16595,7 @@ The question is whether you'll be controlling the transformation as a Client or 
 ---
 
 ---
-slug: 2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel
+slug: what-if-you-could-access-an-openbb-widget-on-excel
 title: What if... you could access an OpenBB widget on Excel?
 date: 2025-08-05
 image: /blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel
@@ -16741,7 +16741,7 @@ Any feedback let me know!
 ---
 
 ---
-slug: 2025-08-12-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about
+slug: openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about
 title: OpenBB Workspace + MCP - The platform play I can’t stop thinking about
 date: 2025-08-12
 image: /blog/2025-08-12-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about
@@ -16897,7 +16897,7 @@ Now, I can't stop thinking about what we'll build next.
 ---
 
 ---
-slug: 2025-08-16-using-claude-code-in-god-mode
+slug: using-claude-code-in-god-mode
 title: Using Claude Code in God Mode
 date: 2025-08-16
 image: /blog/2025-08-16-using-claude-code-in-god-mode
@@ -17185,7 +17185,7 @@ While this allows me to be productive, it also gets the team to start petitions 
 ---
 
 ---
-slug: 2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills
+slug: can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills
 title: Can I create a 1 min Ad on my own with zero video editing skills?
 date: 2025-08-23
 image: /blog/2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills
@@ -17374,7 +17374,7 @@ We are definitely in a golden age. Enjoy.
 ---
 
 ---
-slug: 2025-08-25-top-10-openbb-apps
+slug: top-10-openbb-apps
 title: Top 10 OpenBB apps
 date: 2025-08-25
 image: /blog/2025-08-25-top-10-openbb-apps
@@ -17504,7 +17504,7 @@ If you need help to get started - reach out 🤝
 ---
 
 ---
-slug: 2025-08-29-from-data-silos-to-ai-agents-financial-data-evolution
+slug: from-data-silos-to-ai-agents-financial-data-evolution
 title: From data silos to AI agents - Financial data evolution
 date: 2025-08-29
 image: /blog/2025-08-29-from-data-silos-to-ai-agents-financial-data-evolution
@@ -17731,7 +17731,7 @@ I’m excited to see how these generalist/specialist type of roles evolve.
 ---
 
 ---
-slug: 2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it
+slug: we-dont-own-data-but-empower-those-who-do-or-those-who-have-it
 title: We don't own data. But empower those who do or those who have it
 date: 2025-07-30
 image: /blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it
@@ -17834,7 +17834,7 @@ Most of these are actually open source and you can find the link by clicking on 
 ---
 
 ---
-slug: 2025-09-02-fine-tuning-a-llm-on-my-blog-posts
+slug: fine-tuning-a-llm-on-my-blog-posts
 title: Fine-tuning a LLM on my blog posts
 date: 2025-09-02
 image: /blog/2025-09-02-fine-tuning-a-llm-on-my-blog-posts
@@ -19035,7 +19035,7 @@ I hope you find this helpful, all the code can be found here: https://github.com
 ---
 
 ---
-slug: 2025-09-06-tracking-your-partner-health-stats-with-oura-and-ai
+slug: tracking-your-partner-health-stats-with-oura-and-ai
 title: Tracking your partner's health stats with Oura and AI
 date: 2025-09-06
 image: /blog/2025-09-06-tracking-your-partner-health-stats-with-oura-and-ai
@@ -19206,7 +19206,7 @@ Imagine how much HFs would pay to get access to these health stats from high-lev
 ---
 
 ---
-slug: 2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps
+slug: how-i-built-an-mcp-server-for-developers-building-openbb-apps
 title: How I built an MCP Server for developers building OpenBB apps
 date: 2025-09-10
 image: /blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps

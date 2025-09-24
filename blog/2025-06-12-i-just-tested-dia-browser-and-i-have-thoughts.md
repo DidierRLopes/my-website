@@ -1,5 +1,5 @@
 ---
-slug: 2025-06-12-i-just-tested-dia-browser-and-i-have-thoughts
+slug: i-just-tested-dia-browser-and-i-have-thoughts
 title: I just tested Dia browser, and I have thoughts
 date: 2025-06-12
 image: /blog/2025-06-12-i-just-tested-dia-browser-and-i-have-thoughts

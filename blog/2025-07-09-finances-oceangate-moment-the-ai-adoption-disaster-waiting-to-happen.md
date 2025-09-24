@@ -1,5 +1,5 @@
 ---
-slug: 2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen
+slug: finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen
 title: Finance's OceanGate moment - The AI adoption disaster waiting to happen
 date: 2025-07-09
 image: /blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen

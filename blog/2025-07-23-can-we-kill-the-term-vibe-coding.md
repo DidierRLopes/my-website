@@ -1,5 +1,5 @@
 ---
-slug: 2025-07-23-can-we-kill-the-term-vibe-coding
+slug: can-we-kill-the-term-vibe-coding
 title: Can we kill the term "vibe coding"?
 date: 2025-07-23
 image: /blog/2025-07-23-can-we-kill-the-term-vibe-coding

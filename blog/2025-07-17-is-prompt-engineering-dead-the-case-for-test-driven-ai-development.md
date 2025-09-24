@@ -1,5 +1,5 @@
 ---
-slug: 2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development
+slug: is-prompt-engineering-dead-the-case-for-test-driven-ai-development
 title: Is Prompt Engineering dead? The case for Test-Driven AI Development
 date: 2025-07-17
 image: /blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development

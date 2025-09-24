@@ -1,5 +1,5 @@
 ---
-slug: 2025-06-15-my-feelings-about-ai-companions
+slug: my-feelings-about-ai-companions
 title: My feelings about AI companions
 date: 2025-06-15
 image: /blog/2025-06-15-my-feelings-about-ai-companions

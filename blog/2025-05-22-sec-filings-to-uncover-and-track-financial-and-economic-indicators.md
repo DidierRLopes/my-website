@@ -1,5 +1,5 @@
 ---
-slug: 2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators
+slug: sec-filings-to-uncover-and-track-financial-and-economic-indicators
 title: SEC filings to uncover and track financial and economic indicators
 date: 2025-05-22
 image: /blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators

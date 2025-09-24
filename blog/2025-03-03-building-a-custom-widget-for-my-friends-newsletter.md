@@ -1,5 +1,5 @@
 ---
-slug: 2025-03-03-building-a-custom-widget-for-my-friends-newsletter
+slug: building-a-custom-widget-for-my-friends-newsletter
 title: Building a custom widget for my friends newsletter
 date: 2025-03-03
 image: /blog/2025-03-03-building-a-custom-widget-for-my-friends-newsletter

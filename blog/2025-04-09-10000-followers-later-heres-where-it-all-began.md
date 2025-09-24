@@ -1,5 +1,5 @@
 ---
-slug: 2025-04-11-10000-followers-later-heres-where-it-all-began
+slug: 10000-followers-later-heres-where-it-all-began
 title: 10,000 followers later, here’s where it all began
 date: 2025-04-11
 image: /blog/2025-04-11-10000-followers-later-heres-where-it-all-began

@@ -1,5 +1,5 @@
 ---
-slug: 2025-06-25-humanoid-robots-are-a-waste-of-money
+slug: humanoid-robots-are-a-waste-of-money
 title: Humanoid robots are a waste of money
 date: 2025-06-25
 image: /blog/2025-06-25-humanoid-robots-are-a-waste-of-money

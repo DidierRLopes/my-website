@@ -1,5 +1,5 @@
 ---
-slug: 2025-02-18-long-live-long-context-with-gemini
+slug: long-live-long-context-with-gemini
 title: Long live long context with Gemini
 date: 2025-02-18
 image: /blog/2025-02-18-long-live-long-context-with-gemini

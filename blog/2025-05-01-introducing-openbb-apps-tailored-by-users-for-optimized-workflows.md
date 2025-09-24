@@ -1,5 +1,5 @@
 ---
-slug: 2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows
+slug: introducing-openbb-apps-tailored-by-users-for-optimized-workflows
 title: Introducing OpenBB Apps, tailored by users for optimized workflows
 date: 2025-05-01
 image: /blog/2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows

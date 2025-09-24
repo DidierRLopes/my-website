@@ -1,5 +1,5 @@
 ---
-slug: 2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills
+slug: can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills
 title: Can I create a 1 min Ad on my own with zero video editing skills?
 date: 2025-08-23
 image: /blog/2025-08-23-can-i-create-a-1-min-ad-on-my-own-with-zero-video-editing-skills

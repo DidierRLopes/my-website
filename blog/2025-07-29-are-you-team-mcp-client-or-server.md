@@ -1,5 +1,5 @@
 ---
-slug: 2025-07-29-are-you-team-mcp-client-or-server
+slug: are-you-team-mcp-client-or-server
 title: Are you team MCP Client or Server?
 date: 2025-07-29
 image: /blog/2025-07-29-are-you-team-mcp-client-or-server

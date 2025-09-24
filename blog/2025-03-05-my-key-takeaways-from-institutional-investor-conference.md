@@ -1,5 +1,5 @@
 ---
-slug: 2025-03-05-my-key-takeaways-from-institutional-investor-conference
+slug: my-key-takeaways-from-institutional-investor-conference
 title: My key takeaways from Institutional Investor conference
 date: 2025-03-05
 image: /blog/2025-03-05-my-key-takeaways-from-institutional-investor-conference.jpg

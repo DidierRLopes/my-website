@@ -1,5 +1,5 @@
 ---
-slug: 2025-03-07-proactive-agents-are-the-future-of-ai-in-finance
+slug: proactive-agents-are-the-future-of-ai-in-finance
 title: Proactive Agents Are the Future of AI in Finance
 date: 2025-03-07
 image: /blog/2025-03-07-proactive-agents-are-the-future-of-ai-in-finance

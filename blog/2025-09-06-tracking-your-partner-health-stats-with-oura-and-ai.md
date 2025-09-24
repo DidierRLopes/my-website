@@ -1,5 +1,5 @@
 ---
-slug: 2025-09-06-tracking-your-partner-health-stats-with-oura-and-ai
+slug: tracking-your-partner-health-stats-with-oura-and-ai
 title: Tracking your partner's health stats with Oura and AI
 date: 2025-09-06
 image: /blog/2025-09-06-tracking-your-partner-health-stats-with-oura-and-ai

@@ -1,5 +1,5 @@
 ---
-slug: 2025-08-16-using-claude-code-in-god-mode
+slug: using-claude-code-in-god-mode
 title: Using Claude Code in God Mode
 date: 2025-08-16
 image: /blog/2025-08-16-using-claude-code-in-god-mode

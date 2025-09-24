@@ -1,5 +1,5 @@
 ---
-slug: 2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps
+slug: how-i-built-an-mcp-server-for-developers-building-openbb-apps
 title: How I built an MCP Server for developers building OpenBB apps
 date: 2025-09-10
 image: /blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps

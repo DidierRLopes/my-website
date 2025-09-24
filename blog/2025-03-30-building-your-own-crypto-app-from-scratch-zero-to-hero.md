@@ -1,5 +1,5 @@
 ---
-slug: 2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero
+slug: building-your-own-crypto-app-from-scratch-zero-to-hero
 title: Building your own Crypto app from scratch - zero to hero
 date: 2025-03-30
 image: /blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero

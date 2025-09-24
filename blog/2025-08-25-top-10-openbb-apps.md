@@ -1,5 +1,5 @@
 ---
-slug: 2025-08-25-top-10-openbb-apps
+slug: top-10-openbb-apps
 title: Top 10 OpenBB apps
 date: 2025-08-25
 image: /blog/2025-08-25-top-10-openbb-apps

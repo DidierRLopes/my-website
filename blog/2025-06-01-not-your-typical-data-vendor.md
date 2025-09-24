@@ -1,5 +1,5 @@
 ---
-slug: 2025-06-01-not-your-typical-data-vendor
+slug: not-your-typical-data-vendor
 title: Not your typical data vendor
 date: 2025-06-01
 image: /blog/2025-06-01-not-your-typical-data-vendor

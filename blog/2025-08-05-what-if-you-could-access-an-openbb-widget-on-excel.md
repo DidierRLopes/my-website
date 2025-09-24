@@ -1,5 +1,5 @@
 ---
-slug: 2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel
+slug: what-if-you-could-access-an-openbb-widget-on-excel
 title: What if... you could access an OpenBB widget on Excel?
 date: 2025-08-05
 image: /blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel

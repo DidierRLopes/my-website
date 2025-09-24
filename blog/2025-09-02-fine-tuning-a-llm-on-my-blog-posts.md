@@ -1,5 +1,5 @@
 ---
-slug: 2025-09-02-fine-tuning-a-llm-on-my-blog-posts
+slug: fine-tuning-a-llm-on-my-blog-posts
 title: Fine-tuning a LLM on my blog posts
 date: 2025-09-02
 image: /blog/2025-09-02-fine-tuning-a-llm-on-my-blog-posts

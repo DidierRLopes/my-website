@@ -1,5 +1,5 @@
 ---
-slug: 2025-08-29-from-data-silos-to-ai-agents-financial-data-evolution
+slug: from-data-silos-to-ai-agents-financial-data-evolution
 title: From data silos to AI agents - Financial data evolution
 date: 2025-08-29
 image: /blog/2025-08-29-from-data-silos-to-ai-agents-financial-data-evolution

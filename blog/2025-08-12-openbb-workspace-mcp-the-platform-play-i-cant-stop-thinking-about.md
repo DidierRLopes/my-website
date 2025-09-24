@@ -1,5 +1,5 @@
 ---
-slug: 2025-08-12-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about
+slug: openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about
 title: OpenBB Workspace + MCP - The platform play I can’t stop thinking about
 date: 2025-08-12
 image: /blog/2025-08-12-openbb-workspace-mcp-the-platform-play-i-cant-stop-thinking-about

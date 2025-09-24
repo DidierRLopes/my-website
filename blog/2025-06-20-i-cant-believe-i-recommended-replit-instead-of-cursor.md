@@ -1,5 +1,5 @@
 ---
-slug: 2025-06-20-i-cant-believe-i-recommended-replit-instead-of-cursor
+slug: i-cant-believe-i-recommended-replit-instead-of-cursor
 title: I can't believe I recommended Replit instead of Cursor
 date: 2025-06-20
 image: /blog/2025-06-20-i-cant-believe-i-recommended-replit-instead-of-cursor

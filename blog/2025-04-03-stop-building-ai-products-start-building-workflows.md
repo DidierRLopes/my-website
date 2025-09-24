@@ -1,5 +1,5 @@
 ---
-slug: 2025-04-03-stop-building-ai-products-start-building-workflows
+slug: stop-building-ai-products-start-building-workflows
 title: Stop building AI products, start building workflows
 date: 2025-04-03
 image: /blog/2025-04-03-stop-building-ai-products-start-building-workflows

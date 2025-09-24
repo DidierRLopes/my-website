@@ -1,5 +1,5 @@
 ---
-slug: 2025-06-10-how-i-connected-figma-to-cursor-using-mcp
+slug: how-i-connected-figma-to-cursor-using-mcp
 title: How I connected Figma to Cursor using MCP
 date: 2025-06-10
 image: /blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp

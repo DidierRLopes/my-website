@@ -1,5 +1,5 @@
 ---
-slug: 2025-03-11-the-10-trillion-openbb-copilot-validation
+slug: the-10-trillion-openbb-copilot-validation
 title: The $10 trillion OpenBB Copilot validation
 date: 2025-03-11
 image: /blog/2025-03-11-the-10-trillion-openbb-copilot-validation

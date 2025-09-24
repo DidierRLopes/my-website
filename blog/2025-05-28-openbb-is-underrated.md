@@ -1,5 +1,5 @@
 ---
-slug: 2025-05-28-openbb-is-underrated
+slug: openbb-is-underrated
 title: OpenBB is underrated
 date: 2025-05-28
 image: /blog/2025-05-28-openbb-is-underrated

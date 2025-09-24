@@ -1,5 +1,5 @@
 ---
-slug: 2025-07-02-bring-back-your-corner-of-the-internet
+slug: bring-back-your-corner-of-the-internet
 title: Bring back your corner of the internet
 date: 2025-07-02
 image: /blog/2025-07-02-bring-back-your-corner-of-the-internet

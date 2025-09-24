@@ -1,5 +1,5 @@
 ---
-slug: 2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow
+slug: openbb-enables-streamlined-client-advisory-ai-workflow
 title: OpenBB enables streamlined Client Advisory AI workflow
 date: 2025-03-23
 image: /blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow

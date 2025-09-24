@@ -1,5 +1,5 @@
 ---
-slug: 2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb
+slug: how-function-calling-and-context-aware-ai-shapes-openbb
 title: How function calling and context-aware AI shapes OpenBB
 date: 2025-03-01
 image: /blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb

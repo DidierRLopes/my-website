@@ -1,5 +1,5 @@
 ---
-slug: 2025-03-25-one-data-vendor-to-rule-them-all-really
+slug: one-data-vendor-to-rule-them-all-really
 title: One data vendor to rule them all. Really?
 date: 2025-03-25
 image: /blog/2025-03-25-one-data-vendor-to-rule-them-all-really

@@ -1,5 +1,5 @@
 ---
-slug: 2025-03-18-my-first-half-marathon
+slug: my-first-half-marathon
 title: Doing my first Half Marathon
 date: 2025-03-18
 image: /blog/2025-03-18-my-first-half-marathon

@@ -1,5 +1,5 @@
 ---
-slug: 2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it
+slug: we-dont-own-data-but-empower-those-who-do-or-those-who-have-it
 title: We don't own data. But empower those who do or those who have it
 date: 2025-07-30
 image: /blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it

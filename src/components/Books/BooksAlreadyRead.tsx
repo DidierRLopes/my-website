@@ -522,6 +522,11 @@ const data = [
 		image:
 			"/books/100m-leads-how-to-get-strangers-to-want-to-buy-your-stuff.jpg",
 	},
+	{
+		title: "How Google Works",
+		author: "Eric Schmidt, Jonathan Rosenberg",
+		image: "/books/how-google-works.jpeg",
+	},
 ];
 
 export default function BooksAlreadyRead() {

@@ -9,11 +9,6 @@ const data = [
 			"/books/actionable-gamification-beyond-points-badges-and-leaderboards.jpeg",
 	},
 	{
-		title: "How Google Works",
-		author: "Eric Schmidt, Jonathan Rosenberg",
-		image: "/books/how-google-works.jpeg",
-	},
-	{
 		title:
 			"Story: Substance, Structure, Style, and the Principles of Screenwriting",
 		author: "Robert McKee",

@@ -3,8 +3,19 @@ import VideosList from "../General/VideosList";
 
 const data = [
 	{
-		title: "From Viral Reddit Tool to Enterprise AI: The OpenBB Story with Didier Lopes | S2E2",
-		description: "In this episode, Michael sits down with Didier Lopes, the founder of OpenBB, for a conversation that started five years ago during the meme stock boom. Michael reached out to Didier in 2021 after he shared his 'Gamestonk Terminal' on r/wallstreetbets. Michael reached out to Didier to ask if he was interested in a job on his team at Citadel but Didier had other ideas. That initial LinkedIn message from Michael ended up in the pitch deck that helped Didier raise nearly $9 million for his company and the rest is history.<br/><br/>Didier recounts his journey from being a software engineer who automated his personal investment research to becoming the creator of a massively popular open-source project. The Gamestonk Terminal went viral on WallStreetBets and Hacker News, gaining 4,000 GitHub stars in less than 24 hours by cleverly aggregating the free API tiers from hundreds of different data vendor and has evolved into what OpenBB is today.<br/><br/>Join us as we dive into the evolution of a viral tool into a sophisticated enterprise platform and explore the disruptive forces reshaping the financial data landscape.",
+		title: "Quant Dev & Applied AI",
+		description:
+			"Didier will demonstrate how firms can integrate MCP servers into their Workspace and gain full transparency into data and tool usage. But also by sharing how the MCP tools can be converted into visual widgets that analysts can interact with.<br/><br/>Future of Quant Development in the Age of AI & AI Agents panel.",
+		date: "2025-09-25",
+		location: "Guidepoint HQ",
+		image: "/media/fintech-dev-night.jpg",
+		info: "More information on the event can be found <a href='https://fintech-dev-night.com/quant-devnight-nyc/' target='_blank' rel='noopener noreferrer'>here</a>.",
+	},
+	{
+		title:
+			"From Viral Reddit Tool to Enterprise AI: The OpenBB Story with Didier Lopes | S2E2",
+		description:
+			"In this episode, Michael sits down with Didier Lopes, the founder of OpenBB, for a conversation that started five years ago during the meme stock boom. Michael reached out to Didier in 2021 after he shared his 'Gamestonk Terminal' on r/wallstreetbets. Michael reached out to Didier to ask if he was interested in a job on his team at Citadel but Didier had other ideas. That initial LinkedIn message from Michael ended up in the pitch deck that helped Didier raise nearly $9 million for his company and the rest is history.<br/><br/>Didier recounts his journey from being a software engineer who automated his personal investment research to becoming the creator of a massively popular open-source project. The Gamestonk Terminal went viral on WallStreetBets and Hacker News, gaining 4,000 GitHub stars in less than 24 hours by cleverly aggregating the free API tiers from hundreds of different data vendor and has evolved into what OpenBB is today.<br/><br/>Join us as we dive into the evolution of a viral tool into a sophisticated enterprise platform and explore the disruptive forces reshaping the financial data landscape.",
 		date: "2025-08-26",
 		location: "Hedgineer Podcast",
 		embed: "https://www.youtube.com/embed/QeYl2Gq7mAA?si=Lmv5UUB7LYheeQoc",
@@ -24,7 +35,8 @@ const data = [
 		description:
 			"With Didier Rodrigues Lopes, Founder & CEO @ OpenBB; Richard Peterson, CEO, MarketPsych (division of London Stock Exchange); Yosef Zweibach, Chief Operating Officer of Quantic, Walleye Capital; Chris White, CEO at ViableMkts & BondCliQ and moderated by Christina Qi, CEO Databento & Founder Domeyard LP, MIT Trustee.",
 		date: "2025-03-20",
-		location: "Columbia Mathematics of Finance - 2025 Future of Portfolio Management & Artificial Intelligence Conference",
+		location:
+			"Columbia Mathematics of Finance - 2025 Future of Portfolio Management & Artificial Intelligence Conference",
 		image: "/media/columbia-2025-march.jpg",
 		info: "More information on the event can be found <a href='https://www.rebellionresearch.com/columbia-mathematics-of-finance-mafn-2025-future-of-portfolio-management-lars-tyge-nielsen-memorial-conference' target='_blank' rel='noopener noreferrer'>here</a>.",
 	},
@@ -33,7 +45,8 @@ const data = [
 		description:
 			"Autonomous agents - AI programs that interact independently with multiple applications, LLMs or websites to complete an entire workflow – promise to be the next step in enhancing productivity in investment management. In response to an inflow into a mutual fund, for example, a group of agents might build a list of buy orders using the OMS, stage the orders to an EMS, review liquidity conditions to craft a trading strategy and send orders to the broker algorithms best suited to execute the orders, rather than requiring traders to interact with several applications. What are the challenges, risks and benefits of creating and deploying autonomous agents in the investment management enterprise?",
 		date: "2025-02-24",
-		location: "2025 Financial Technology Forum Winter Workshop & Automating Alpha (Ft. Lauderdale, FL)",
+		location:
+			"2025 Financial Technology Forum Winter Workshop & Automating Alpha (Ft. Lauderdale, FL)",
 		image: "/media/institutional-investor-conference-2025.jpg",
 		info: "More information on the event can be found <a href='https://event.institutionalinvestor.com/event/c16a1d32-6bae-42ac-b45d-f951f986fa39/summary' target='_blank' rel='noopener noreferrer'>here</a>.",
 	},
@@ -47,11 +60,13 @@ const data = [
 		info: "More information on the event can be found <a href='https://www.eaglealpha.com/2024/05/12/alt-data-conference-february-2025/' target='_blank' rel='noopener noreferrer'>here</a>.",
 	},
 	{
-		title: "PANEL DISCUSSION: The Opportunities And Nuances of Deploying Unstructured Data In Quant Trading Models",
+		title:
+			"PANEL DISCUSSION: The Opportunities And Nuances of Deploying Unstructured Data In Quant Trading Models",
 		description:
 			"Yu Yu - Director of Data Science at BlackRock, Tony Berkman - Managing Director at Two Sigma, Samson Qian - Citadel, Didier Rodrigues Lopes - Founder and CEO @ OpenBB",
 		date: "2024-09-14",
-		location: "Cornell Financial Engineering Manhattan - 2024 Future of Finance & AI Conference",
+		location:
+			"Cornell Financial Engineering Manhattan - 2024 Future of Finance & AI Conference",
 		image: "/media/chatgpt-the-future-of-ai-in-finance.jpg",
 		info: "A blogpost about the talk can be found <a href='https://didierlopes.com/blog/chatgpt-and-the-future-of-ai-in-finance' target='_blank' rel='noopener noreferrer'>here</a>. More information on the event can be found <a href='https://www.rebellionresearch.com/cornell-financial-engineering-manhattan-rebellion-research-2024-future-of-finance-conference' target='_blank' rel='noopener noreferrer'>here</a>.",
 	},

@@ -515,12 +515,14 @@ const data = [
 	},
 ];
 
+export const booksToReadCount = data.length;
+
 export default function BooksToRead() {
 	return (
 		<>
 			<p>
 				If there is a particular book that you think I should read, feel free to
-				recommend it.
+				recommend it. ({data.length})
 			</p>
 			<BooksList books={data.slice().reverse()} />
 		</>

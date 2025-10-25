@@ -536,11 +536,13 @@ const data = [
 	},
 ];
 
+export const booksAlreadyReadCount = data.length;
+
 export default function BooksAlreadyRead() {
 	return (
 		<>
 			<p>
-				Most of the books I have read or listened to.
+				Most of the books I have read or listened to ({data.length}).
 				<br />
 				Here's a thread with the ones I read in{" "}
 				<a

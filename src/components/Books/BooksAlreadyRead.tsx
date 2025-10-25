@@ -568,7 +568,7 @@ export default function BooksAlreadyRead() {
 				</a>
 				.
 			</p>
-			<BooksList books={data} />
+			<BooksList books={data.slice().reverse()} />
 		</>
 	);
 }

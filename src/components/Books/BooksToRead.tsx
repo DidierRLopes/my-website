@@ -471,6 +471,48 @@ const data = [
 		author: "John C. Bogle",
 		image: "/books/enough-true-measures-of-money-business-and-life.jpg",
 	},
+	{
+		title: "Open: An Autobiography",
+		author: "Andre Agassi",
+		image: "/books/open-an-autobiography.jpg",
+	},
+	{
+		title: "Made in Japan: Akio Morita and Sony",
+		author: "Akio Morita",
+		image: "/books/made-in-japan-akio-morita-and-sony.jpg",
+	},
+	{
+		title: "Sam Walton: Made in America",
+		author: "Sam Walton",
+		image: "/books/sam-walton-made-in-america.jpg",
+	},
+	{
+		title: "The Making of Prince of Persia: Journals 1985-1993",
+		author: "Jordan Mechner",
+		image: "/books/the-making-of-prince-of-persia.jpg",
+	},
+	{
+		title: "The Power of Regret: How Looking Backward Moves Us Forward",
+		author: "Daniel H. Pink",
+		image: "/books/the-power-of-regret-how-looking-backward-moves-us-forward.jpg",
+	},
+	{
+		title:
+			"Scale: The Universal Laws of Growth, Innovation, Sustainability, and the Pace of Life in Organisms, Cities, Economies, and Companies",
+		author: "Geoffrey West",
+		image: "/books/scale-the-universal-laws-of-growth-innovation-sustainability.jpg",
+	},
+	{
+		title: "Why Greatness Cannot Be Planned: The Myth of the Objective",
+		author: "Kenneth O. Stanley, Joel Lehman",
+		image:
+			"/books/why-greatness-cannot-be-planned-the-myth-of-the-objective.jpg",
+	},
+	{
+		title: "A Message to Garcia",
+		author: "Elbert Hubbard",
+		image: "/books/a-message-to-garcia.jpg",
+	},
 ];
 
 export default function BooksToRead() {
@@ -480,7 +522,7 @@ export default function BooksToRead() {
 				If there is a particular book that you think I should read, feel free to
 				recommend it.
 			</p>
-			<BooksList books={data} />
+			<BooksList books={data.slice().reverse()} />
 		</>
 	);
 }

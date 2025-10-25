@@ -466,6 +466,11 @@ const data = [
 		image:
 			"/books/yield-how-google-bought-built-and-bullied-its-way-to-advertising-dominance.jpg",
 	},
+	{
+		title: "Enough: True Measures of Money, Business, and Life",
+		author: "John C. Bogle",
+		image: "/books/enough-true-measures-of-money-business-and-life.jpg",
+	},
 ];
 
 export default function BooksToRead() {

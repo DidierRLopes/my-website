@@ -527,6 +527,13 @@ const data = [
 		author: "Eric Schmidt, Jonathan Rosenberg",
 		image: "/books/how-google-works.jpeg",
 	},
+	{
+		title:
+			"Yield: How Google Bought, Built, and Bullied Its Way to Advertising Dominance",
+		author: "Ari Paparo",
+		image:
+			"/books/yield-how-google-bought-built-and-bullied-its-way-to-advertising-dominance.jpg",
+	},
 ];
 
 export default function BooksAlreadyRead() {

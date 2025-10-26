@@ -494,13 +494,15 @@ const data = [
 	{
 		title: "The Power of Regret: How Looking Backward Moves Us Forward",
 		author: "Daniel H. Pink",
-		image: "/books/the-power-of-regret-how-looking-backward-moves-us-forward.jpg",
+		image:
+			"/books/the-power-of-regret-how-looking-backward-moves-us-forward.jpg",
 	},
 	{
 		title:
 			"Scale: The Universal Laws of Growth, Innovation, Sustainability, and the Pace of Life in Organisms, Cities, Economies, and Companies",
 		author: "Geoffrey West",
-		image: "/books/scale-the-universal-laws-of-growth-innovation-sustainability.jpg",
+		image:
+			"/books/scale-the-universal-laws-of-growth-innovation-sustainability.jpg",
 	},
 	{
 		title: "Why Greatness Cannot Be Planned: The Myth of the Objective",
@@ -513,6 +515,39 @@ const data = [
 		author: "Elbert Hubbard",
 		image: "/books/a-message-to-garcia.jpg",
 	},
+	{
+		title:
+			"The WEIRDest People in the World: How the West Became Psychologically Peculiar and Particularly Prosperous",
+		author: "Joseph Henrich",
+		image: "/books/the-weirdest-people-in-the-world.jpg",
+	},
+	{
+		title: "In The Plex: How Google Thinks, Works, and Shapes Our Lives",
+		author: "Steven Levy",
+		image: "/books/in-the-plex.jpg",
+	},
+	{
+		title: "Supremacy: AI, ChatGPT, and the Race that Will Change the World",
+		author: "Parmy Olson",
+		image: "/books/supremacy.jpg",
+	},
+	{
+		title:
+			"Genius Makers: The Mavericks Who Brought AI to Google, Facebook, and the World",
+		author: "Cade Metz",
+		image: "/books/genius-makers.jpg",
+	},
+	{
+		title: "Hard Drive: Bill Gates and the Making of the Microsoft Empire",
+		author: "James Wallace, Jim Erickson",
+		image: "/books/hard-drive.jpg",
+	},
+	{
+		title:
+			"In the Company of Giants: Candid Conversations with the Visionaries of the Digital World",
+		author: "Rama Dev Jager, Rafael Ortiz",
+		image: "/books/in-the-company-of-giants.jpg",
+	},
 ];
 
 export const booksToReadCount = data.length;
@@ -522,7 +557,7 @@ export default function BooksToRead() {
 		<>
 			<p>
 				If there is a particular book that you think I should read, feel free to
-				recommend it. ({data.length})
+				recommend it.
 			</p>
 			<BooksList books={data.slice().reverse()} />
 		</>

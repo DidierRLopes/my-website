@@ -542,7 +542,7 @@ export default function BooksAlreadyRead() {
 	return (
 		<>
 			<p>
-				Most of the books I have read or listened to ({data.length}).
+				Most of the books I have read or listened to.
 				<br />
 				Here's a thread with the ones I read in{" "}
 				<a

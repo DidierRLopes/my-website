@@ -33,11 +33,11 @@
   
   /* Typography */
   --ds-font-primary: 'IBM Plex Mono', 'Courier New', monospace;
-  --ds-font-size-xs: 10px;
-  --ds-font-size-sm: 12px;
-  --ds-font-size-md: 14px;
-  --ds-font-size-lg: 16px;
-  --ds-font-size-xl: 18px;
+  --ds-font-size-xs: 12px;
+  --ds-font-size-sm: 14px;
+  --ds-font-size-md: 16px;
+  --ds-font-size-lg: 18px;
+  --ds-font-size-xl: 20px;
   --ds-line-height: 1.4;
   --ds-letter-spacing: 0.1em;
   --ds-letter-spacing-normal: 0em;
@@ -1155,7 +1155,7 @@ article header h1 {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
@@ -1166,11 +1166,11 @@ article header h1 {
     rgba(147, 51, 234, 0.15) 100%);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(0, 0, 0, 0.18);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 
     0 8px 32px rgba(31, 38, 135, 0.15),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    inset 0 0 0 1px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -1180,12 +1180,12 @@ article header h1 {
   background: linear-gradient(135deg, 
     rgba(59, 130, 246, 0.25) 0%, 
     rgba(147, 51, 234, 0.25) 100%);
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(0, 0, 0, 0.3);
   box-shadow: 
     0 12px 40px rgba(31, 38, 135, 0.25),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    inset 0 0 0 1px rgba(0, 0, 0, 0.2);
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .pill-banner-link:hover .pill-banner-text {
@@ -1196,6 +1196,7 @@ article header h1 {
 
 /* Dark mode adjustments */
 [data-theme='dark'] .pill-banner-link {
+  color: white;
   background: linear-gradient(135deg, 
     rgba(96, 165, 250, 0.2) 0%, 
     rgba(167, 139, 250, 0.2) 100%);
@@ -1206,6 +1207,7 @@ article header h1 {
 }
 
 [data-theme='dark'] .pill-banner-link:hover {
+  color: white;
   background: linear-gradient(135deg, 
     rgba(96, 165, 250, 0.3) 0%, 
     rgba(167, 139, 250, 0.3) 100%);

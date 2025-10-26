@@ -36,11 +36,11 @@ module.exports = {
         "ds-mono": ["IBM Plex Mono", "Courier New", "monospace"],
       },
       fontSize: {
-        "ds-xs": "10px",
-        "ds-sm": "12px",
-        "ds-md": "14px",
-        "ds-lg": "16px",
-        "ds-xl": "18px",
+        "ds-xs": "12px",
+        "ds-sm": "14px",
+        "ds-md": "16px",
+        "ds-lg": "18px",
+        "ds-xl": "20px",
       },
       lineHeight: {
         "ds-tight": "1.4",

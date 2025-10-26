@@ -4,7 +4,7 @@ import ExperienceList from "../General/ExperienceList";
 const data = [
 	{
 		company: "OpenBB",
-		title: "Co-founder & CEO",
+		title: "Founder & CEO",
 		link: "https://openbb.co",
 		daterange: "September 2021 - Present",
 		summary: `

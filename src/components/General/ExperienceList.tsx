@@ -77,18 +77,56 @@ export default function ExperienceList({ experience }: ExperienceListProps) {
     );
   };
 
+  // Group experiences by company
+  const groupedExperiences = experience.reduce((acc, job) => {
+    const existingCompany = acc.find(group => group.company === job.company);
+    if (existingCompany) {
+      existingCompany.roles.push(job);
+    } else {
+      acc.push({
+        company: job.company,
+        link: job.link,
+        roles: [job]
+      });
+    }
+    return acc;
+  }, [] as { company: string; link: string; roles: Experience[] }[]);
+
   return (
     <div className="mx-auto mt-8">
-      {experience.map((job, index) => (
+      {groupedExperiences.map((companyGroup, index) => (
         <div key={index} className="mission-container">
           <div className="mission-description">
-            <div className='text-xs mb-2'>
-              {job.daterange}
-            </div>
-            <div className="text-base mb-4">
-              <strong>{job.title}</strong> @ <a href={job.link} rel="noopener noreferrer" target="_blank" className="text-mission-text-color hover:underline">{job.company}</a>
-            </div>
-            {renderSummary(job.summary)}
+            {companyGroup.roles.length === 1 ? (
+              // Single role at company - render as before
+              <>
+                <div className='text-xs mb-2'>
+                  {companyGroup.roles[0].daterange}
+                </div>
+                <div className="text-base mb-4">
+                  <strong>{companyGroup.roles[0].title}</strong> @ <a href={companyGroup.link} rel="noopener noreferrer" target="_blank" className="text-mission-text-color hover:underline">{companyGroup.company}</a>
+                </div>
+                {renderSummary(companyGroup.roles[0].summary)}
+              </>
+            ) : (
+              // Multiple roles at same company - group them
+              <>
+                <div className="text-base mb-4">
+                  <a href={companyGroup.link} rel="noopener noreferrer" target="_blank" className="text-mission-text-color hover:underline font-bold">{companyGroup.company}</a>
+                </div>
+                {companyGroup.roles.map((role, roleIndex) => (
+                  <div key={roleIndex} className={roleIndex > 0 ? "mt-6 pt-6 border-t border-gray-700 dark:border-gray-600" : ""}>
+                    <div className='text-xs mb-2'>
+                      {role.daterange}
+                    </div>
+                    <div className="text-base mb-4">
+                      <strong>{role.title}</strong>
+                    </div>
+                    {renderSummary(role.summary)}
+                  </div>
+                ))}
+              </>
+            )}
           </div>
         </div>
       ))}

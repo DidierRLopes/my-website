@@ -460,13 +460,6 @@ const data = [
 		image: "/books/endurance-shackletons-incredible-voyage.jpg",
 	},
 	{
-		title:
-			"Yield: How Google Bought, Built, and Bullied Its Way to Advertising Dominance",
-		author: "Ari Paparo",
-		image:
-			"/books/yield-how-google-bought-built-and-bullied-its-way-to-advertising-dominance.jpg",
-	},
-	{
 		title: "Enough: True Measures of Money, Business, and Life",
 		author: "John C. Bogle",
 		image: "/books/enough-true-measures-of-money-business-and-life.jpg",

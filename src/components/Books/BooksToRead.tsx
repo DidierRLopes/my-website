@@ -541,6 +541,29 @@ const data = [
 		author: "Rama Dev Jager, Rafael Ortiz",
 		image: "/books/in-the-company-of-giants.jpg",
 	},
+	{
+		title:
+			"Tao of Charlie Munger: A Compilation of Quotes from Berkshire Hathaway's Vice Chairman on Life, Business, and the Pursuit of Wealth",
+		author: "David Clark",
+		image: "/books/tao-of-charlie-munger.jpg",
+	},
+	{
+		title:
+			"Self-Esteem: A Proven Program of Cognitive Techniques for Assessing, Improving, and Maintaining Your Self-Esteem",
+		author: "Matthew McKay, Patrick Fanning",
+		image: "/books/self-esteem.jpg",
+	},
+	{
+		title: "From Third World to First: Singapore and the Asian Economic Boom",
+		author: "Lee Kuan Yew",
+		image: "/books/from-third-world-to-first.jpg",
+	},
+	{
+		title:
+			"How Economics Explains the World: A Short History of Humanity: A Brief and Powerful Economic History with Timeless Lessons, Learn How Markets Mold Society",
+		author: "Andrew Leigh",
+		image: "/books/how-economics-explains-the-world.jpg",
+	},
 ];
 
 export const booksToReadCount = data.length;

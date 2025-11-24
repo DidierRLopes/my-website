@@ -202,11 +202,6 @@ const data = [
 			"/books/radical-candor-fully-revised-updated-edition-be-a-kick-ass-boss-without-losing-your-humanity.jpeg",
 	},
 	{
-		title: "Shoe Dog: A Memoir by the Creator of Nike",
-		author: "Phil Knight",
-		image: "/books/shoe-dog-a-memoir-by-the-creator-of-nike.jpeg",
-	},
-	{
 		title: "Recruiting",
 		author: "Ryan Breslow",
 		image: "/books/recruiting.jpeg",

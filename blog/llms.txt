@@ -140,3 +140,4 @@
 - [2025-09-23-the-evolution-of-ai-agents-in-finance](https://didierlopes.com/blog/2025-09-23-the-evolution-of-ai-agents-in-finance)
 - [2025-10-08-the-hidden-incentive-war-behind-financial-terminals](https://didierlopes.com/blog/2025-10-08-the-hidden-incentive-war-behind-financial-terminals)
 - [2025-10-15-rethinking-the-financial-interface-in-the-age-of-data-and-intelligence-abundance](https://didierlopes.com/blog/2025-10-15-rethinking-the-financial-interface-in-the-age-of-data-and-intelligence-abundance)
+- [2025-11-29-why-generative-ai-isnt-uncovering-alpha-yet](https://didierlopes.com/blog/2025-11-29-why-generative-ai-isnt-uncovering-alpha-yet)

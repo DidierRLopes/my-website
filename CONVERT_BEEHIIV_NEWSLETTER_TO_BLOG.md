@@ -28,9 +28,11 @@ mcp__fetch__imageFetch --url <newsletter-url> --images '{"output": "file", "layo
 **Format:** `YYYY-MM-DD-slug-from-title.md`
 
 **Rules:**
-- Use the publication date from the newsletter (or current date if creating new)
+- **IMPORTANT:** Extract the publication date from https://didierlopes.beehiiv.com/ main page
+- Find the newsletter post by title and get its publication date
 - Create slug from title: lowercase, replace spaces with hyphens, remove special characters
-- Example: "The trampoline job: Optimize your career for growth" � `2025-09-19-the-trampoline-job-optimize-your-career-for-growth.md`
+- Example: "The trampoline job: Optimize your career for growth" → `2025-09-19-the-trampoline-job-optimize-your-career-for-growth.md`
+- Never use today's date - always use the actual publication date from Beehiiv
 
 ### 3. Create Front Matter
 
@@ -52,7 +54,7 @@ hideSidebar: true
 **Front Matter Rules:**
 - **slug**: Use title in kebab-case without the date prefix
 - **title**: Exact newsletter title, properly capitalized
-- **date**: Newsletter publication date in YYYY-MM-DD format
+- **date**: Newsletter publication date in YYYY-MM-DD format (extracted from Beehiiv main page, NOT today's date)
 - **image**: Points to the hero image path (without extension)
 - **tags**: Extract 3-6 relevant tags from content themes (lowercase)
 - **description**: Use newsletter subtitle or create compelling summary

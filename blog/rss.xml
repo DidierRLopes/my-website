@@ -4,19 +4,109 @@
         <title>Didier Lopes Blog</title>
         <link>https://didierlopes.com/blog</link>
         <description>Didier Lopes Blog</description>
-        <lastBuildDate>Sat, 29 Nov 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 25 Nov 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2025 Didier Lopes.</copyright>
         <item>
+            <title><![CDATA[The rise of forward-deployed engineering in finance]]></title>
+            <link>https://didierlopes.com/blog/the-rise-of-forward-deployed-engineering-in-finance</link>
+            <guid>https://didierlopes.com/blog/the-rise-of-forward-deployed-engineering-in-finance</guid>
+            <pubDate>Tue, 25 Nov 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[AI-native platforms promise to automate financial workflows, but enterprise wins aren't self-serve trials - they're proof-of-concepts plus forward-deployed engineers.]]></description>
+            <content:encoded><![CDATA[<p>A few weeks ago, we were at the HQ of one of our largest clients (close to 70bn AUM) for a week and although I had this post in draft for a couple of months, these words resonate even more with me now as we experienced this FDE work first-hand.</p>
+<p><img decoding="async" loading="lazy" alt="Team at client HQ" src="https://didierlopes.com/assets/images/2025-11-25-the-rise-of-forward-deployed-engineering-in-finance_1-b0b4d721df70d033f1d33fe5f60e538a.png" width="1920" height="1276" class="img_ev3q"></p>
+<p>Anyway, let's talk about FDE.</p>
+<p>Let me start by sharing an excerpt by Palantir's CTO on the origin of the name "<em>Forward Deployed Engineer</em>" and how it relates to how French restaurants works.</p>
+<blockquote>
+<p>In 2006, Alex Karp asked me if I knew why French restaurants were so good. I had no idea. He told me that at a French restaurant, the wait staff is actually part of the kitchen staff. They intimately understand the food, the methodology, and the technique. They are not merely carrying the food from the kitchen to the table, but are instead part of a subtle and complex system that affects kitchen operations. He wanted me to build that, but for engineering.</p>
+<br>
+<p>I did just that, and in 2007, I gave it the name "forward deployed engineering" (FDE) in homage to our customers. FDEs embed alongside our customers and work to ensure our software solves their problem and not some proxy for their problem. They're crazy enough to get on a last-minute plane to Iraq, they're smart enough to ship quality, same-day code, and their EQ is still high enough to talk to users (and maybe even enjoy it). Investors ridiculed us for creating a "services" role that would only serve to depress the margins of a software company. We didn't look like the other SaaS businesses, something they eventually realized was a feature, not a bug. Just like French restaurants don't blindly hand off food from an uninformed waiter to the diner, we didn't believe in throwing our software over the wall in the hopes the customer would divine the correct meaning from it. This approach built an engineering organization with unmatched creativity, responsiveness, and focus on the primacy of winning.</p>
+</blockquote>
+<br>
+<p><strong>Shyam Sankar (Palantir's CTO)</strong> - <a href="https://www.piratewires.com/p/primacy-of-winning-shyam-sankar-palantir" target="_blank" rel="noopener noreferrer">"The Primacy of Winning"</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-quiet-truth">The quiet truth<a href="https://didierlopes.com/blog/the-rise-of-forward-deployed-engineering-in-finance#the-quiet-truth" class="hash-link" aria-label="Direct link to The quiet truth" title="Direct link to The quiet truth">​</a></h2>
+<p>AI-native platforms promise to "automate financial workflows". But enterprise wins aren't self-serve trials, they're proof-of-concepts plus forward-deployed engineers.</p>
+<p>Engineers sitting inside client offices. Writing code on their networks. Building bespoke workflows that prove the platform works.</p>
+<p>For every "AI assistant for analysts", there are FDEs buried in a buy-side firm's infrastructure, understanding data pipelines, writing agentic workflows, fixing edge cases, etc… The companies landing the biggest customers aren't winning on product alone, they're winning on proximity.</p>
+<p>In finance, no abstraction replaces trust. This isn't a workaround. It's how intelligence software gets deployed in high-stakes domains.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-forward-deployment-works">Why forward deployment works<a href="https://didierlopes.com/blog/the-rise-of-forward-deployed-engineering-in-finance#why-forward-deployment-works" class="hash-link" aria-label="Direct link to Why forward deployment works" title="Direct link to Why forward deployment works">​</a></h2>
+<p>AI-native software isn't plug-and-play. Output quality depends on data specificity and governance. Every firm's architecture is different. Forward deployment brings engineering to the data.</p>
+<p>An embedded engineer does three things pure software can't:</p>
+<ol>
+<li>
+<p><strong>Translates domain into system.</strong> They learn how the firm defines "exposure" or "active position" and encode those meanings into their workflows.</p>
+</li>
+<li>
+<p><strong>Builds trust loops.</strong> Same Slack channels, real workflows, outputs validated against the firm's sources of truth.</p>
+</li>
+<li>
+<p><strong>Turns deployments into reusable abstractions.</strong> Each new workflow becomes productized logic that can be leveraged for the next client.</p>
+</li>
+</ol>
+<br>
+<p>Most AI companies say they're selling intelligence. They're selling trust. Clients ask what peers are doing. They want the playbook, not just the platform. An engineer inside the firm, fixing pipelines and aligning definitions, builds credibility no deck can.</p>
+<p>Trust compounds. Every successful deployment becomes a reference pattern the engineer can leverage for next client, obviously without sharing the actual workflow.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-palantir-playbook">The Palantir playbook<a href="https://didierlopes.com/blog/the-rise-of-forward-deployed-engineering-in-finance#the-palantir-playbook" class="hash-link" aria-label="Direct link to The Palantir playbook" title="Direct link to The Palantir playbook">​</a></h2>
+<p>The breakthrough wasn't "work closely with clients". It was turning embedded work into product leverage.</p>
+<p>Each deployment as live R&amp;D. Engineers discovered reusable patterns: data models, workflows, connectors, ontologies. Those patterns moved into the platform, so the next deployment started smarter.</p>
+<p>The self-scaling loop:</p>
+<ul>
+<li>Engineers deploy → deployment creates insight → insight becomes reusable → product gets stronger → next deployment accelerates</li>
+</ul>
+<br>
+<p>What looked like high-touch work was the most scalable form of enterprise learning. Agentic finance is doing this now. Teams embedding engineers aren't slowing product - they're accelerating it.</p>
+<p>This is the playbook for the agentic era: scale product by deploying where it's most complex. Learn fast, abstract faster.</p>
+<blockquote>
+<p>(…) Specifically, the firm [PLTR] provides a modern AI data platform (i.e., analytical tools, data infrastructure software, AI tooling) that helps government agencies and enterprises make data-driven decisions by detecting unusual or previously undetectable patterns in large complex datasets. Its AI data platform is differentiated by its Ontology, which presents data to users in their own everyday terms and represents decisions in an enterprise, thus becoming a powerful tool for AI-driven decision-making. On top of this, Palantir deploys an effective and super-efficient go-to-market approach that attracts customers and quickly converts them into paying customers of its complex products. (…)</p>
+</blockquote>
+<br>
+<p><strong>Loop Capital's report on February 19th, 2025:</strong> "Game-Changing Software Play Leading the Enterprise AI Revolution; Initiate Buy"</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-hybrid-flywheel">The hybrid flywheel<a href="https://didierlopes.com/blog/the-rise-of-forward-deployed-engineering-in-finance#the-hybrid-flywheel" class="hash-link" aria-label="Direct link to The hybrid flywheel" title="Direct link to The hybrid flywheel">​</a></h2>
+<p>PLG dominated the last decade because products were simple and users empowered to self-serve. AI-native finance breaks that logic, it's probabilistic, data-hungry, unpredictable in the wild.</p>
+<p>PLG still matters as half the story. Bottom-up motion builds credibility and reach. But PLG alone doesn't close institutional deals or integrate with legacy systems. In finance, analysts often lack the time or mandate to tinker.</p>
+<p>Forward deployment closes those gaps, but can't scale in isolation. Without strong product underneath, every engagement risks becoming bespoke.</p>
+<p>The future isn't product-led or sales-led. It's deployment-led growth, powered by a product that learns faster with every field engagement.</p>
+<p>Here's the loop:</p>
+<ul>
+<li>
+<p><strong>Open distribution</strong> → rapid experimentation. Free tiers, open examples, extensible interfaces.</p>
+</li>
+<li>
+<p><strong>FDEs</strong> → institutional activation. Embedded engineers integrate, secure, productionize.</p>
+</li>
+<li>
+<p><strong>Field learning</strong> → product leverage. With every integration there are new teachings, that are folded back so the next deployment is faster.</p>
+</li>
+<li>
+<p><strong>Faster deployments</strong> → broader adoption. As the product gets smarter, less custom work is needed. The loop accelerates.</p>
+</li>
+</ul>
+<br>
+<p><strong>Community fuels product. Product fuels deployment. Deployment fuels product again.</strong></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="one-motion">One motion<a href="https://didierlopes.com/blog/the-rise-of-forward-deployed-engineering-in-finance#one-motion" class="hash-link" aria-label="Direct link to One motion" title="Direct link to One motion">​</a></h2>
+<p>Bottom-up and top-down are converging.</p>
+<p>The open community and the forward-deployed engineer are two sides of one motion - one learns from scale, the other from proximity. Both feed the same outcome: a smarter, faster, more resilient product.</p>
+<p>The field becomes part of R&amp;D. Every deployed engineer is a node in the product feedback network. Every community user at the edge generates signal for where to go next.</p>
+<p>The AI platforms that win won't just have the best model or most data, they'll have mastered this hybrid motion of openness and proximity.</p>
+<p><strong>The companies that merge field intimacy with open distribution will own the next era of financial software.</strong></p>
+<p>Proximity drives trust. Openness drives scale.</p>
+<p>This is a great video from YC on FDEs:</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/Zyw-YA0k3xo" width="800" height="400"></iframe></div>]]></content:encoded>
+            <category>engineering</category>
+            <category>finance</category>
+            <category>ai</category>
+            <category>enterprise</category>
+            <category>palantir</category>
+        </item>
+        <item>
             <title><![CDATA[Why generative AI isn't uncovering alpha yet]]></title>
             <link>https://didierlopes.com/blog/why-generative-ai-isnt-uncovering-alpha-yet</link>
             <guid>https://didierlopes.com/blog/why-generative-ai-isnt-uncovering-alpha-yet</guid>
-            <pubDate>Sat, 29 Nov 2025 00:00:00 GMT</pubDate>
+            <pubDate>Tue, 28 Oct 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Ken Griffin says AI isn't delivering alpha for hedge funds. He's not wrong, but the problem isn't AI's capability - it's the lack of integrated workspaces.]]></description>
-            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Why generative AI isn&amp;#39;t uncovering alpha yet" src="https://didierlopes.com/assets/images/2025-11-29-why-generative-ai-isnt-uncovering-alpha-yet-338e8016b36ebd3e42e5ebca03d4b55e.png" width="800" height="600" class="img_ev3q"></p>
-<p>In the world of hedge funds, everyone's talking about AI. But recently, Ken Griffin, one of the industry's most respected voices, made a bold claim: generative AI isn't delivering alpha for hedge funds. Instead, it's mainly boosting workflows and productivity.</p>
+            <content:encoded><![CDATA[<p>In the world of hedge funds, everyone's talking about AI. But recently, Ken Griffin, one of the industry's most respected voices, made a bold claim: generative AI isn't delivering alpha for hedge funds. Instead, it's mainly boosting workflows and productivity.</p>
 <p>He's not entirely wrong but he's not telling the whole story either.</p>
 <p>Here's the thing: the problem isn't that AI lacks the capability to find alpha. The problem is that most firms aren't giving AI the environment it needs to succeed.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="breaking-down-griffins-argument">Breaking down Griffin's argument<a href="https://didierlopes.com/blog/why-generative-ai-isnt-uncovering-alpha-yet#breaking-down-griffins-argument" class="hash-link" aria-label="Direct link to Breaking down Griffin's argument" title="Direct link to Breaking down Griffin's argument">​</a></h2>
@@ -76,13 +166,13 @@
 </ol>
 <br>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="how-it-started">How it started<a href="https://didierlopes.com/blog/why-generative-ai-isnt-uncovering-alpha-yet#how-it-started" class="hash-link" aria-label="Direct link to How it started" title="Direct link to How it started">​</a></h3>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-11-29-why-generative-ai-isnt-uncovering-alpha-yet_1.png" alt="How it started - diagram showing traditional data flow"></p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-10-28-why-generative-ai-isnt-uncovering-alpha-yet_1.png" alt="How it started - diagram showing traditional data flow"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="how-its-going">How it's going<a href="https://didierlopes.com/blog/why-generative-ai-isnt-uncovering-alpha-yet#how-its-going" class="hash-link" aria-label="Direct link to How it's going" title="Direct link to How it's going">​</a></h3>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-11-29-why-generative-ai-isnt-uncovering-alpha-yet_2.png" alt="How it's going - current state of AI implementation"></p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-10-28-why-generative-ai-isnt-uncovering-alpha-yet_2.png" alt="How it's going - current state of AI implementation"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="the-future">The future<a href="https://didierlopes.com/blog/why-generative-ai-isnt-uncovering-alpha-yet#the-future" class="hash-link" aria-label="Direct link to The future" title="Direct link to The future">​</a></h3>
 <p>"<em>If a strategy with a proven positive alpha becomes public information, its profitability is eroded through market efficiency.</em>"</p>
 <p>Then, Data + Intelligence needs to happen within organization. And the foundational infra of each of these firms becomes the most important piece.</p>
-<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-11-29-why-generative-ai-isnt-uncovering-alpha-yet_3.png" alt="The future - integrated workspace vision"></p>]]></content:encoded>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-10-28-why-generative-ai-isnt-uncovering-alpha-yet_3.png" alt="The future - integrated workspace vision"></p>]]></content:encoded>
             <category>ai</category>
             <category>hedge-funds</category>
             <category>alpha</category>

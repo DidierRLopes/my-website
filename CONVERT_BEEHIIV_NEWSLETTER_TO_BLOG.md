@@ -94,7 +94,7 @@ hideSidebar: true
 **Content Conversion Rules:**
 
 1. **Opening Section**
-   - Add hero image immediately after front matter
+   - Do NOT add hero image in the content (it's handled automatically via the front matter `image` field)
    - Include newsletter subtitle as opening paragraph
    - Add `<!-- truncate -->` after intro paragraph for blog preview
 
@@ -132,11 +132,52 @@ hideSidebar: true
 6. **Emphasis**
    - Bold text: `**text**`
    - Italic text: `*text*`
-   - Important quotes: Use `**Quote text**` on separate line
+   
+7. **Quotes and Citations**
+   - Use blockquote syntax (`>`) for extended quotes
+   - For multi-paragraph quotes, use `> <br />` between paragraphs
+   - Add `<br />` after the quote block
+   - **IMPORTANT:** Extract the actual hyperlink from the Beehiiv newsletter, not guess or create new ones
+   - Include attribution with author name and link when available
+   
+   Example:
+   ```markdown
+   > First paragraph of the quote goes here.
+   >
+   > <br />
+   >
+   > Second paragraph of the quote continues here.
+   
+   <br />
+   
+   **Author Name** - ["Article Title"](https://actual-link-from-beehiiv.com)
+   ```
 
-7. **Code/Technical Content**
+8. **Code/Technical Content**
    - Wrap technical terms in backticks: \`term\`
    - Use code blocks for snippets
+
+9. **YouTube Videos**
+   - **IMPORTANT:** Extract the actual YouTube URL from the Beehiiv newsletter content
+   - Convert YouTube links to embedded iframe format
+   - Extract video ID from URL (e.g., `https://www.youtube.com/watch?v=VIDEO_ID` → `VIDEO_ID`)
+   - Use only the video ID in the embed URL, no additional parameters
+   - Use responsive embed with centered layout
+   
+   Example conversion:
+   - Original: `https://www.youtube.com/watch?v=Zyw-YA0k3xo`
+   - Embed format:
+   ```html
+   <div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+       <iframe
+           src="https://www.youtube.com/embed/Zyw-YA0k3xo"
+           width="800"
+           height="400"
+       />
+   </div>
+   ```
+   
+   **Note:** Always verify the video link exists in the original Beehiiv content - don't assume or guess video IDs
 
 ### 6. Content Cleanup
 

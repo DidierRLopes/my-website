@@ -14,8 +14,6 @@ description: Ken Griffin says AI isn't delivering alpha for hedge funds. He's no
 hideSidebar: true
 ---
 
-![Why generative AI isn't uncovering alpha yet](/blog/2025-10-28-why-generative-ai-isnt-uncovering-alpha-yet.png)
-
 In the world of hedge funds, everyone's talking about AI. But recently, Ken Griffin, one of the industry's most respected voices, made a bold claim: generative AI isn't delivering alpha for hedge funds. Instead, it's mainly boosting workflows and productivity.
 
 He's not entirely wrong but he's not telling the whole story either.

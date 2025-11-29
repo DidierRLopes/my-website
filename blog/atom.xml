@@ -2355,7 +2355,7 @@
         <link href="https://didierlopes.com/blog/sec-filings-to-uncover-and-track-financial-and-economic-indicators"/>
         <updated>2025-05-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[This post explores how SEC filings can be used to uncover and track financial and economic indicators. It showcases an open-source OpenBB app that visualizes this data, providing valuable insights for investment research and market trend analysis.]]></summary>
-        <content type="html"><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators.jpeg"></p>
+        <content type="html"><![CDATA[<p align="center"><img width="600" src="https://didierlopes.com/blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators.png"></p>
 <p>This post explores how SEC filings can be used to uncover and track financial and economic indicators. It showcases an open-source OpenBB app that visualizes this data, providing valuable insights for investment research and market trend analysis.</p>
 <div style="border-top:1px solid #0088CC;margin:1.5em 0"></div>
 <p>A few days ago, <a href="https://www.linkedin.com/in/justinlokos/" target="_blank" rel="noopener noreferrer">Justin Lokos</a> shared a fascinating GitHub repository maintained by <a href="https://www.linkedin.com/in/johngfriedman/" target="_blank" rel="noopener noreferrer">John Friedman</a> that really caught my attention.</p>

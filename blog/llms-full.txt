@@ -14986,7 +14986,7 @@ hideSidebar: true
 ---
 
 <p align="center">
-    <img width="600" src="/blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators.jpeg" />
+    <img width="600" src="/blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators.png" />
 </p>
 
 This post explores how SEC filings can be used to uncover and track financial and economic indicators. It showcases an open-source OpenBB app that visualizes this data, providing valuable insights for investment research and market trend analysis.

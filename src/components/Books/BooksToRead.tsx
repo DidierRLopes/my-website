@@ -559,6 +559,11 @@ const data = [
 		author: "Andrew Leigh",
 		image: "/books/how-economics-explains-the-world.jpg",
 	},
+	{
+		title: "The Fund: Ray Dalio, Bridgewater Associates, and the Unraveling of a Wall Street Legend",
+		author: "Rob Copeland",
+		image: "/books/the-fund-ray-dalio-bridgewater-associates-and-the-unraveling-of-a-wall-street-legend.jpg",
+	}
 ];
 
 export const booksToReadCount = data.length;

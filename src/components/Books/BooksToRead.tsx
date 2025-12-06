@@ -319,11 +319,6 @@ const data = [
 			"/books/creativity-inc-overcoming-the-unseen-forces-that-stand-in-the-way-of-true-inspiration.jpg",
 	},
 	{
-		title: "On Writing: A Memoir of the Craft",
-		author: "Stephen King",
-		image: "/books/on-writing-a-memoir-of-the-craft.jpg",
-	},
-	{
 		title: "Alchemy: The Surprising Power of Ideas That Don't Make Sense",
 		author: "Rory Sutherland",
 		image:

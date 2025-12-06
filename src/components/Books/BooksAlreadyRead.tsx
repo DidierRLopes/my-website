@@ -539,6 +539,11 @@ const data = [
 		author: "Phil Knight",
 		image: "/books/shoe-dog-a-memoir-by-the-creator-of-nike.jpeg",
 	},
+	{
+		title: "On Writing: A Memoir of the Craft",
+		author: "Stephen King",
+		image: "/books/on-writing-a-memoir-of-the-craft.jpg",
+	},
 ];
 
 export const booksAlreadyReadCount = data.length;

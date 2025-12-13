@@ -558,6 +558,11 @@ const data = [
 		title: "The Fund: Ray Dalio, Bridgewater Associates, and the Unraveling of a Wall Street Legend",
 		author: "Rob Copeland",
 		image: "/books/the-fund-ray-dalio-bridgewater-associates-and-the-unraveling-of-a-wall-street-legend.jpg",
+	},
+	{
+		title: "Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets",
+		author: "Nassim Nicholas Taleb",
+		image: "/books/fooled-by-randomness.jpg",
 	}
 ];
 

@@ -563,6 +563,11 @@ const data = [
 		title: "Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets",
 		author: "Nassim Nicholas Taleb",
 		image: "/books/fooled-by-randomness.jpg",
+	},
+	{
+		title: "Invention: A Life",
+		author: "James Dyson",
+		image: "/books/invention-a-life.jpg",
 	}
 ];
 

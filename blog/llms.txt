@@ -142,3 +142,7 @@
 - [2025-10-15-rethinking-the-financial-interface-in-the-age-of-data-and-intelligence-abundance](https://didierlopes.com/blog/2025-10-15-rethinking-the-financial-interface-in-the-age-of-data-and-intelligence-abundance)
 - [2025-10-28-why-generative-ai-isnt-uncovering-alpha-yet](https://didierlopes.com/blog/2025-10-28-why-generative-ai-isnt-uncovering-alpha-yet)
 - [2025-11-25-the-rise-of-forward-deployed-engineering-in-finance](https://didierlopes.com/blog/2025-11-25-the-rise-of-forward-deployed-engineering-in-finance)
+- [2025-12-02-introducing-osor-agent](https://didierlopes.com/blog/2025-12-02-introducing-osor-agent)
+- [2025-12-09-your-ai-team-isnt-doing-ai-theyre-rebuilding-infrastructure](https://didierlopes.com/blog/2025-12-09-your-ai-team-isnt-doing-ai-theyre-rebuilding-infrastructure)
+- [2025-12-17-the-bitter-lesson-of-context-metadata](https://didierlopes.com/blog/2025-12-17-the-bitter-lesson-of-context-metadata)
+- [2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips](https://didierlopes.com/blog/2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips)

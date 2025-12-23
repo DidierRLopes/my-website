@@ -744,6 +744,18 @@ html[data-theme='dark'] .mission-button:hover {
   font-weight: bold;
 }
 
+/* === Blog Post Performance Optimization === */
+/* Optimize paint by using content-visibility for long blog posts */
+article .markdown {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+/* Optimize image loading - use lazy loading hint for images below the fold */
+article .markdown img:not(:first-of-type) {
+  content-visibility: auto;
+}
+
 /* === Blog Post Header Spacing === */
 article header {
   /* Extra space between the header (title + meta) and the beginning of the post */

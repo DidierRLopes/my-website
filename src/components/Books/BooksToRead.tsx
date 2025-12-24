@@ -285,11 +285,6 @@ const data = [
 		image: "/books/the-art-of-war.jpg",
 	},
 	{
-		title: "Inspired: How to Create Tech Products Customers Love",
-		author: "Marty Cagan",
-		image: "/books/inspired-how-to-create-tech-products-customers-love.jpg",
-	},
-	{
 		title: "Make Time: How to Focus on What Matters Every Day",
 		author: "Jake Knapp, John Zeratsky",
 		image: "/books/make-time-how-to-focus-on-what-matters-every-day.jpg",
@@ -568,6 +563,31 @@ const data = [
 		title: "Invention: A Life",
 		author: "James Dyson",
 		image: "/books/invention-a-life.jpg",
+	},
+	{
+		title: "Outlive: The Science and Art of Longevity",
+		author: "Peter Attia, Bill Gifford",
+		image: "/books/outlive-the-science-and-art-of-longevity.jpg",
+	},
+	{
+		title: "Designing Your Life: How to Build a Well-Lived, Joyful Life",
+		author: "Bill Burnett, Dave Evans",
+		image: "/books/designing-your-life-how-to-build-a-well-lived-joyful-life.jpg",
+	},
+	{
+		title: "Pachinko",
+		author: "Min Jin Lee",
+		image: "/books/pachinko.jpg",
+	},
+	{
+		title: "Range: Why Generalists Triumph in a Specialized World",
+		author: "David Epstein",
+		image: "/books/range-why-generalists-triumph-in-a-specialized-world.jpg",
+	},
+	{
+		title: "Playing to Win: How Strategy Really Works",
+		author: "A.G. Lafley, Roger L. Martin",
+		image: "/books/playing-to-win-how-strategy-really-works.jpg",
 	}
 ];
 

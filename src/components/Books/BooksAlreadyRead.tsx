@@ -544,6 +544,18 @@ const data = [
 		author: "Stephen King",
 		image: "/books/on-writing-a-memoir-of-the-craft.jpg",
 	},
+	{
+		title: "The Art of Doing Science and Engineering: Learning to Learn",
+		author: "Richard W. Hamming",
+		image:
+			"/books/the-art-of-doing-science-and-engineering-learning-to-learn.jpg",
+	},
+	{
+		title: "Large Language Models The Hard Parts: Open source AI solutions for common pitfalls",
+		author: "Tharsis T. P. Souza & Jonathan K. Regenstein, Jr.",
+		image:
+			"/books/the-art-of-doing-science-and-engineering-learning-to-learn.jpg",
+	},
 ];
 
 export const booksAlreadyReadCount = data.length;

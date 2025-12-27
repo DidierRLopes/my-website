@@ -390,12 +390,6 @@ const data = [
 			"/books/the-minimalist-entrepreneur-how-great-founders-do-more-with-less.jpg",
 	},
 	{
-		title: "The Art of Doing Science and Engineering: Learning to Learn",
-		author: "Richard W. Hamming",
-		image:
-			"/books/the-art-of-doing-science-and-engineering-learning-to-learn.jpg",
-	},
-	{
 		title: "Secrets of Sand Hill Road: Venture Capital and How to Get It",
 		author: "Scott Kupor, Eric Ries",
 		image:

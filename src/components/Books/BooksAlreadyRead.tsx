@@ -554,7 +554,7 @@ const data = [
 		title: "Large Language Models The Hard Parts: Open source AI solutions for common pitfalls",
 		author: "Tharsis T. P. Souza & Jonathan K. Regenstein, Jr.",
 		image:
-			"/books/the-art-of-doing-science-and-engineering-learning-to-learn.jpg",
+			"/books/large-language-models-the-hard-parts-open-source-ai-solutions-for-common-pitfalls.jpg",
 	},
 ];
 

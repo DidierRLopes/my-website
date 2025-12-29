@@ -582,6 +582,11 @@ const data = [
 		title: "Playing to Win: How Strategy Really Works",
 		author: "A.G. Lafley, Roger L. Martin",
 		image: "/books/playing-to-win-how-strategy-really-works.jpg",
+	},
+	{
+		title: "The Goal: A Process of Ongoing Improvement",
+		author: " Eliyahu M Goldratt, Jeff Cox ",
+		image: "/books/the-goal-a-process-of-ongoing-improvement.jpg",
 	}
 ];
 

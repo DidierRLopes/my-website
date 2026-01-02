@@ -587,6 +587,16 @@ const data = [
 		title: "The Goal: A Process of Ongoing Improvement",
 		author: " Eliyahu M Goldratt, Jeff Cox ",
 		image: "/books/the-goal-a-process-of-ongoing-improvement.jpg",
+	},
+	{
+		title: "Conscious Business: How to Build Value Through Values",
+		author: "Fred Kofman",
+		image: "/books/conscious-business-how-to-build-value-through-values.jpg",
+	},
+	{
+		title: "The Effective Executive: The Definitive Guide to Getting the Right Things Done",
+		author: "Peter Drucker",
+		image: "/books/the-effective-executive-the-definitive-guide-to-getting-the-right-things-done.jpg",
 	}
 ];
 

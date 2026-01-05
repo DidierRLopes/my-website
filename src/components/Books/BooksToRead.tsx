@@ -597,6 +597,11 @@ const data = [
 		title: "The Effective Executive: The Definitive Guide to Getting the Right Things Done",
 		author: "Peter Drucker",
 		image: "/books/the-effective-executive-the-definitive-guide-to-getting-the-right-things-done.jpg",
+	},
+	{
+		title: "Steve Jobs",
+		author: "Walter Isaacson",
+		image: "/books/steve-jobs.jpg",
 	}
 ];
 

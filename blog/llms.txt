@@ -146,3 +146,6 @@
 - [2025-12-09-your-ai-team-isnt-doing-ai-theyre-rebuilding-infrastructure](https://didierlopes.com/blog/2025-12-09-your-ai-team-isnt-doing-ai-theyre-rebuilding-infrastructure)
 - [2025-12-17-the-bitter-lesson-of-context-metadata](https://didierlopes.com/blog/2025-12-17-the-bitter-lesson-of-context-metadata)
 - [2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips](https://didierlopes.com/blog/2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips)
+- [2025-12-30-podcast-takeover](https://didierlopes.com/blog/2025-12-30-podcast-takeover)
+- [2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code](https://didierlopes.com/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code)
+- [2026-01-12-joining-c-more-as-an-advisor](https://didierlopes.com/blog/2026-01-12-joining-c-more-as-an-advisor)

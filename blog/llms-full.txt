@@ -20873,3 +20873,690 @@ Here's one of the outputs: [https://x.com/didier_lopes/status/200274609040833363
 ## Open source code
 
 [GitHub - DidierRLopes/get-y2b-clips](https://github.com/DidierRLopes/get-y2b-clips): YouTube nuggets extraction via Claude Code Skill
+
+
+---
+
+---
+slug: podcast-takeover
+title: Podcast takeover
+date: 2025-12-30
+image: /blog/2025-12-30-podcast-takeover
+tags:
+- podcasts
+- learning
+- recommendations
+description: A list of my favorite podcasts from 2025.
+hideSidebar: true
+---
+
+A list of my favorite podcasts from 2025.
+
+<!-- truncate -->
+
+For the last couple of years I've been reading more and more books...
+
+<p align="center">
+    <img width="800" src="/blog/2025-12-30-podcast-takeover_1.png" alt="Books tracking screenshot" />
+</p>
+
+I keep track of my books read (and to read) in my website [here](/books/already-read).
+
+Recently though, I've spent a great deal of time listening to podcasts.
+
+I used to say I preferred books because they take months to produce, and by the time someone recommends one to me, there are thousands of reviews on it. So in a way, a book is not only carefully reviewed by the publisher but also vetted by thousands of readers.
+
+Another thing: most books I read, startup stories, founder biographies, culture, ways of living, are timeless. If I read them today or in 10 years, they're just as valuable. This is a feature. It's also why authors spend so much time writing them in the first place. They know the ideas will echo for years to come.
+
+Podcasts, on the other hand, are a thing of the moment. Hosts don't think as heavily about what they say, at least not to the extent authors do with a book.
+
+But with that comes a more unfiltered glimpse of personality. You also get nuggets of wisdom that are actually relevant *right now*, since most podcasts I listen to are about the current state of the world.
+
+Think of it as a simple 2x2: Is the topic timeless or timely? Has it already been deeply examined, or is it still unfolding? Books win for the former. Podcasts win for the latter.
+
+So there are merits in both, and as a result I've been enjoying spending a lot of time in podcasts.
+
+With that said, I've listened to over 20 different podcasts and while I don't religiously consume one in particular (ok, I do that with Acquired) - I tend to see them based on the episodes that get more traction on social media and my mood tbh.
+
+Here's my list of favorites (and a recommended episode on each), with some organization:
+
+## 1. Strategy, Business Models & Markets
+
+Company breakdowns, investing frameworks, market structure.
+
+### Acquired
+
+Long-form, documentary-style deep dives into iconic companies and business stories. Ben and David do real research, real narrative, and episodes that feel like MBA case studies but actually interesting.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/A0fvX-wV70Y"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+### Founders
+
+David Senra reads biographies of history's greatest founders and distills the lessons, patterns, and psychology behind how they built. It's basically getting the highlights of 50+ years of experience from people who've done impossible things - compressed into an episode you can listen to on a walk.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/aStHTTPxlis"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+### Invest Like the Best
+
+Patrick O'Shaughnessy interviews world-class investors across hedge funds, quants, PE, and more. Pure frameworks and mental models - no filler, no motivational fluff.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/g4zzkuFyI18"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+### In Good Company
+
+Hosted by Nicolai Tangen, CEO of the Norwegian Sovereign Wealth Fund (the largest investor on earth). Surprisingly candid conversations with practitioners from the financial world who almost never do long interviews.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/zRkNO9yNYoI"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+### Jordi Visser
+
+Jordi Visser (ex-CIO of Weiss Multi-Strategy) runs one of the few market podcasts that actually talks about the current markets. He blends macro, data, sentiment, and real trading intuition in a way that's easy to follow but still useful if you're deep in markets. Extremely high signal. And he uses OpenBB.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/3CvQ7YfOSQs"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+## 2. AI-Focused
+
+Deep AI conversations: safety, scaling laws, model design, applied AI strategy.
+
+### Dwarkesh Patel
+
+Dwarkesh is one of the clearest, most rigorous thinkers in AI today, and he interviews people operating at the absolute frontier. His conversations aren't surface-level - they cut into alignment, frontier model design, geopolitics, scientific breakthroughs, and the real engineering that actually moves the field forward.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/lXUZvyajciY"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+### No Priors
+
+Sarah Guo and Elad Gil talk to AI founders, researchers, and investors about the realities of building and scaling AI-native products. Practical, technical, and grounded.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/UIDMhKgpqkg"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+### Every
+
+A media outfit led by Dan Shipper (co-founder & CEO of Every). Every publishes a daily newsletter and runs the podcast AI & I, where Dan has in-depth conversations with builders, creators, and thinkers about how they use AI and tools to build, create, and organize. Worth tuning in for unfiltered takes on the future of work, AI culture, and creator workflows.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/7SPHYmlkGMY"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+### The Hedgineer Podcast
+
+Hosted by Michael Watson - former Citadel MD turned engineer-interpreter of markets and tech. The show dives into how hedge funds, prop-trading shops, and modern asset managers build with data, AI, and engineering - recent episodes explore alt-data, ML-driven research, and trading-infra design. Great if you want the engineering + quant lens on finance.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/VVBZjF1nM08"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+## 3. Technology & Engineering
+
+Software engineering, infrastructure, dev culture, technical founders.
+
+### Bg2 Pod
+
+Hosted by Brad Gerstner (founder & CEO of Altimeter) and Bill Gurley (legendary former Benchmark GP), BG2 is an "open-source" bi-weekly conversation on tech, markets, investing, and capitalism - basically two top-tier public markets/VC minds thinking out loud about how the world is changing.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/pE6sw_E9Gh0"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+### YCombinator
+
+Run by YC partners, this is YC pulling back the curtain: founder interviews, office hours, and very blunt advice on building, launching, and scaling startups. It's basically YC's playbook, but in audio form.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/Zyw-YA0k3xo"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+### The Pragmatic Engineer
+
+Hosted by Gergely Orosz - ex-Uber engineering leader and author of the #1 tech newsletter on Substack. It's deep dives into how software is actually built and run at big tech and high-growth startups: real org design, real incidents, real trade-offs from people who've been in the room.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/98o_L3jlixw"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+## 4. Builders, Operators & Product Thinking
+
+Founders, operators, product leaders — how things get built and scaled.
+
+### Sourcery
+
+Hosted by Molly O'Shea. The podcast interviews top investors, founders, and CEOs about how tech, markets and capital are evolving. It's smart, sharp, and gives insider-level POV on what's really happening in fintech, AI, and venture.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/sLlmQoCZe2A"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+### Uncapped with Jack Altman
+
+Hosted by Jack Altman (founder & former CEO of Lattice), Uncapped is a sharp read on venture-building, scaling, and fundraising. It's conversations with founders and investors he respects - covering what actually works (and what doesn't) when you scale a company or back one.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/mZUG0pr5hBo"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+### Lenny's Podcast
+
+While often positioned as a product/PM podcast, in 2025 Lenny has become a must-listen for builders. He's become the voice of fast-growing startups in my opinion.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/En5cSXgGvZM"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+### Cheeky Pint
+
+Hosted by John Collison (co-founder of Stripe), Cheeky Pint is basically "over a beer with builders and founders" - honest, wide-ranging, and often unexpectedly insightful. He sits down with people shaping tech, markets, and infrastructure and gets them to speak plainly about their work and worldview.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/GcqQ1ebBqkc"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+### Starter Story
+
+Founded by Pat Walls, Starter Story digs into how real-life entrepreneurs built their businesses from scratch - from niche SaaS to e-commerce. It's a no-fluff breakdown of what worked, what didn't, and exactly how people went from zero to a working business.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/WGVxAmmJUmY"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+### Library of Minds
+
+A fresh podcast from Delphi that sits down with top founders, investors, and thinkers to unpack how they build, make decisions, and see the future.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/RMOvO3tFntQ"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+## 5. Cultural & Intellectual Conversation
+
+Curiosity-driven conversations with thinkers, scientists, creators.
+
+### Lex Fridman Podcast
+
+Lex runs long-form conversations with people who are actually interesting. A few hours of open space where he lets the guest think out loud - CEOs, politicians, scientists, founders, whoever. The big episodes get all the views, but the best ones are the niche conversations where someone brilliant has room to explain how they see the world.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/oFtjKbXKqbg"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+### Joe Rogan
+
+Hosted by Joe Rogan, comedian and UFC commentator turned long-form interviewer. Unfiltered, unstructured conversations with scientists, fighters, authors, technologists, and random fascinating people.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/WfmrEa0L08E"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+## Not a Regular Podcast
+
+These are not a podcast, but a series of videos that I come back to over and over!
+
+### AI Engineer
+
+AI Engineer is a media + events brand for AI builders, run by Swyx. They organize things like the AI Engineer Code Summit and World's Fair and publish talks, workshops, and training sessions specifically for people building with modern AI tools.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/YpY83-kA7Bo"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+### Jason Liu
+
+Hosted by Jason Liu, AI researcher/engineer. Always brings strong guests from practitioners implementing real AI in fast growing startups. Big focus on RAG pipelines.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/DS4w1CMGJes"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+### Theo - t3.gg
+
+Hosted by Theo, ex-Twitch engineer with strong opinions on dev tooling and full-stack engineering. Lately doing a lot of videos on AI models with his latest product.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/39PdgOYjBMg"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+### TBPN
+
+TBPN (Technology Business Programming Network) is a daily live tech show hosted by John Coogan and Jordi Hays. It's basically SportsCenter for tech and AI - three hours a day of news, founder/VC interviews, and live reactions to what's happening in the industry.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/R5KbGwY-zf0"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+I compiled this collection in an open source repo, so I can keep expanding as I listen to different ones. But also their RSS feeds so you can add them to your RSS readers if interested.
+
+
+---
+
+---
+slug: building-a-pokemon-card-price-estimator-with-claude-code
+title: Building a Pokemon Card Price Estimator with Claude Code
+date: 2026-01-06
+image: /blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code
+tags:
+- pokemon
+- claude-code
+- ai
+- automation
+description: The Pokemon TCG market is inefficient. I built a tool to exploit it.
+hideSidebar: true
+---
+
+The Pokemon TCG market is inefficient. I built a tool to exploit it.
+
+<!-- truncate -->
+
+A few weeks ago, I saw this post on X.
+
+That post reminded me of my childhood, where I had a few sets of Pokemon cards. However, silly me, I sold all of those sets a few years ago when I was back home. I didn't even think that much about it to be honest.
+
+Then I talked about it with my wife, and she shared a Pokemon pop-up happening in NYC.
+
+When we were in Chelsea Market with friends visiting from out of town, we stopped by. I looked for a Kabuto card - specifically the Gen 1 version - but couldn't find it. So I grabbed the Gen 2 version instead, just in case.
+
+<p align="center">
+    <img width="600" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_1.png" alt="Kabuto card purchase" />
+</p>
+
+And then I bought a booster pack. You know, just in case.
+
+I got home and opened it. Eleven cards stared back at me. But I had no idea what any of them were worth.
+
+<p align="center">
+    <img width="600" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_2.png" alt="Booster pack cards" />
+</p>
+
+My first instinct was to take a photo and throw it at ChatGPT: "How much are these worth?"
+
+The results were... bad. The model would either not respond or confuse cards, miss some or even hallucinate prices.
+
+I was giving it way too much freedom. Without constraints, the model didn't know where to pull reliable information from. It would make up prices or reference outdated data or just plain ignore the card.
+
+But anyway, after a bit of chat it was enough for me to understand that what I got sucked. So I went into eBay to see if there were good cards for sale - you know, as a "store of value".
+
+And of course, pictures on eBay are diabolical.
+
+And maybe, just maybe, there were sellers that were as clueless as I was selling Pokemon cards back a few years.
+
+But I just didn't know how to value the cards from a picture. So I couldn't know if a set listed for $20 was worth $10 or $100.
+
+But I knew who could.
+
+The combined information from the web and a specific skillset - **ENTER CLAUDE SKILLS**.
+
+So I built a Claude Code skill that does exactly that.
+
+The full source code is available on [GitHub](https://github.com/DidierRLopes/pokemon-cards-value-scraper).
+
+## The workflow
+
+### Step 0: Find a set that you might be interested in
+
+<p align="center">
+    <img width="800" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_3.png" alt="eBay Pokemon card listing" />
+</p>
+
+### Step 1: Provide an Image
+
+Drop a photo of Pokemon cards - a binder page, a spread on a table, whatever.
+
+<p align="center">
+    <img width="600" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_4.png" alt="Test Pokemon cards input" />
+</p>
+
+### Step 2: Card Recognition
+
+Claude's vision model analyzes the image and extracts card details into a structured table:
+
+| # | Name | Set | Card # | Holo | Edition |
+|---|------|-----|--------|------|---------|
+| 1 | Alakazam | Base Set | 1/102 | Holo | Unlimited |
+| 2 | Blastoise | Base Set | 2/102 | Holo | Unlimited |
+| 3 | Charizard | Base Set | 4/102 | Holo | Unlimited |
+
+<br />
+
+The key here is providing clear guidelines about what to look for (set symbols, card numbers, holo patterns) and what to ignore (partially visible cards, reflections). Without these constraints, the model hallucinates. With them, it's remarkably accurate. And if in doubt, the model will ask to clarify.
+
+<p align="center">
+    <img width="800" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_5.png" alt="Card recognition in Claude Code" />
+</p>
+
+### Step 3: Human-in-the-Loop Confirmation
+
+Even if the model was confident on the cards, it can still misread card numbers or confuse similar-looking Pokemon. A quick sanity check saves headaches later.
+
+So this just allows you to iterate quickly. E.g. if you see that it got the wrong Pokemon, or that the card is not a Holo you can quickly rectify it here.
+
+Once this is confirmed we export this as a raw CSV file.
+
+### Step 4: Visual Verification Grid
+
+Here's where it gets interesting.
+
+Claude Code downloads the official card image for each identified card from [pokemontcg.io](https://pokemontcg.io/). To do this, we need to map set names to their API codes - "Base Set" → base1, "Twilight Masquerade" → sv6.
+
+I built a lookup table covering 100+ sets from 1999 to 2025.
+
+Then we use PIL (Pillow) to reconstruct the original layout - same rows, same columns. For instance `--layout 3,3,3` flag means 3 cards per row, 3 rows total.
+
+We added this script to this specific SKILLS folder.
+
+<p align="center">
+    <img width="800" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_6.png" alt="Visual verification script in Claude Code" />
+</p>
+
+I store images from each of the cards individually. But most importantly I reconstruct the layout so it's easy to compare with my eyes. Here's the resulting output:
+
+<p align="center">
+    <img width="800" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_7.png" alt="Reconstructed card layout for verification" />
+</p>
+
+As they match, I'm confident in the identification. If something's off, I go back and fix the table before wasting time on wrong price lookups.
+
+Why bother with this step? Two reasons:
+
+1. **Image quality varies wildly.** eBay photos are particularly bad - poor lighting, weird angles, reflections everywhere. The verification grid catches misidentifications before they become wrong prices.
+
+2. **Holos are hard.** Distinguishing between a regular card, a holo, and a reverse holo from a photo is genuinely difficult. The rainbow sheen doesn't always photograph well. Human verification catches these edge cases.
+
+<br />
+
+### Step 5: Price Estimation
+
+With double-verified card data, Claude Code fetches prices from [Pokellector.com](https://pokellector.com/), which aggregates six sources:
+
+- TCGPlayer
+- Troll & Toad
+- eBay
+- Stop2Shop
+- Collectors Cache
+- CoolStuffInc
+
+<br />
+
+We have another script file on our SKILLS folder that is responsible by this.
+
+Here's the catch: Pokellector is renders dynamically with JavaScript, so requests and BeautifulSoup alone didn't work. So I had to use Selenium with headless Chrome to:
+
+1. Search for a card
+2. Navigate to the best match
+3. Extract prices from all six sources
+4. Capture reference URLs
+
+<br />
+
+The result: a comprehensive price table with links to verify each price.
+
+<p align="center">
+    <img width="800" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_8.png" alt="Price estimation results" />
+</p>
+
+## The Takeaway
+
+Throwing an image at a model and asking "what's this worth?" gives you unreliable results. But breaking the problem into discrete steps, adding human verification at key points, and constraining the model's data sources transforms it into something genuinely useful.
+
+Ultimately, it boils down to "do you have this skillset?".
+
+And now you add skills easily to your agents.
+
+## What's Next
+
+A few ideas of what could be done:
+
+- **eBay URL scraping:** Instead of manually saving photos, provide an eBay listing URL. The tool would scrape the images, run the identification workflow, and tell you if the listing is underpriced.
+
+- **Interface:** Right now this runs as a Claude Code skill. A dedicated website with lower latency and a cleaner UX would make it more accessible.
+
+- **Batch processing:** For larger collections, process multiple binder pages in sequence and aggregate the results.
+
+- **Condition grading:** Card condition dramatically affects value. Integrating some form of condition assessment (even a rough one) would improve accuracy.
+
+
+---
+
+---
+slug: joining-c-more-as-an-advisor
+title: Joining C-MORE as an advisor
+date: 2026-01-12
+image: /blog/2026-01-12-joining-c-more-as-an-advisor
+tags:
+- advisory
+- esg
+- sustainability
+- ai
+- openbb
+description: I dedicate all my time to OpenBB. But when Carolina and Oscar showed me what they were building at C-MORE - verified ESG data meets AI - formalizing it as an advisor role was the obvious next step.
+hideSidebar: true
+---
+
+I dedicate all my time to OpenBB. But when Carolina and Oscar showed me what they were building at [C-MORE](https://cmore-sustainability.com/) - verified ESG data meets AI - and we started collaborating informally, formalizing it as an advisor role was the obvious next step.
+
+<!-- truncate -->
+
+## Background
+
+I've been hands-on with AI and machine learning since 2016, when I first applied Neural Networks to control systems in university. Since then, I've stayed close to the intersection of data, AI, and finance - implementing LSTM networks for financial time series forecasting ([open-sourced here](/blog/an-unusual-journey-learning-about-nns-for-a-phd-thesis)), and more recently fine-tuning small language models running locally ([detailed here](/blog/fine-tuning-a-llm-on-my-blog-posts)).
+
+At OpenBB, we've built an AI agent that helps analysts interact with any data in the workspace. I've learned firsthand what it takes to make AI systems trustworthy: clean data, traceable reasoning, and evidence-based outputs.
+
+Last year, I met Carolina and Oscar from C-MORE. Carolina is pursuing a PhD in Sustainability, Oscar brings deep Corporate Finance experience, and together they weren't just running a profitable, fast-growing company - they were getting their hands dirty with AI to out-innovate their competition.
+
+We connected immediately. We're from Portugal and Spain, share similar values about building, and think long-term. And Carina, their co-founder, is actually from my hometown in Portugal (my quarterly reminder of how small the world is).
+
+We started collaborating informally. We held discussions regarding approaches for parsing complex documents with Gemini's long-context models. We talked through their AI strategy. The conversations kept getting deeper.
+
+Eventually, they asked to formalize the relationship. For me, it was a no-brainer - we were already working together, just without the paperwork.
+
+## Why C-MORE
+
+C-MORE is building one of the most advanced platforms in the world for operational risk and sustainability management.
+
+They automate ESG data collection, cleaning, and analysis - transforming how companies understand and improve their environmental and social performance. Their software is already trusted by 100+ clients across finance, real estate, energy, and supply chain management.
+
+But here's what matters: their data is verified by SGS, ensuring audit-ready quality. In a space where data integrity is everything, this is a massive differentiator.
+
+C-MORE's mission is to use automation and intelligence to create a more efficient, transparent, and sustainable future. And I'm a believer in the team executing on it.
+
+## Strong foundation
+
+If there's one thing I've learned building AI systems, it's this: data is everything. Specifically, data that's clean, structured, and verified - exactly what C-MORE has spent years building.
+
+Their data pipelines and collection processes are second to none. Over the past months, I've been helping the team think through their AI strategy - shaping how they approach evidence-based, traceable ESG answers.
+
+## Why now
+
+The timing couldn't be better.
+
+Regulatory frameworks like CSRD, CSDDD, and the EU Taxonomy are making ESG transparency mandatory. Investors are demanding verifiable data. Companies are under pressure to prove, not just promise, their impact, and to do so without exposing themselves to financial or reputational risk.
+
+Most ESG and operational-risk workflows today remain manual, fragmented, and costly - trapped in spreadsheets and endless verification loops.
+
+C-MORE changes that.
+
+Their platform doesn't just automate ESG reporting; it provides a secure data foundation that helps organizations protect and preserve their value. By centralizing and validating ESG and risk data, C-MORE enables firms to anticipate exposure before it becomes a headline.
+
+And they're moving fast.
+
+## How this ties to OpenBB
+
+This is directly relevant.
+
+Once you have high-quality data and a reliable AI layer, the next challenge is delivery - how you make it accessible, useful, and intuitive for end users.
+
+Advising C-MORE gives me insight into how enterprise data vendors think about that last mile. We already have community members building apps in the OpenBB workspace and sharing them, but I see an opportunity at the enterprise level: enabling vendors to take our interface and own it with their branding.
+
+We already have the enterprise features - user access controls, role-based permissions, app management, shared dashboards. And we let users connect data to AI agents in an AI-first workspace.
+
+My recent conversations with Oscar have been nothing short of exciting.
+
+**The first AI-native ESG Terminal may not be too far.**
+
+Imagine C-MORE's verified, structured ESG data and AI agents wrapped in OpenBB's open, modular interface built for analysts and investors. I think we can offer their users an experience second to none.
+
+## Looking ahead
+
+Advising C-MORE gives me insight into what it takes to build a large-scale data business with purpose. It's a chance to learn from a team solving hard problems - and to help shape how AI can make complex data transparent, actionable, and impactful.
+
+C-MORE is only getting started, but the trajectory is clear: the next generation of ESG intelligence will be built by those who combine clean data, strong AI, and beautiful interfaces loved by customers.
+
+I'm excited about this side quest.
+
+If you're dealing with ESG compliance, looking for better sustainability data infrastructure, or just curious about what C-MORE is building - reach out. I'm happy to share more or make introductions to the team.

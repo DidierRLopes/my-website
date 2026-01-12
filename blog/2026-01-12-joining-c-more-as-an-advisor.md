@@ -13,7 +13,7 @@ description: I dedicate all my time to OpenBB. But when Carolina and Oscar showe
 hideSidebar: true
 ---
 
-I dedicate all my time to OpenBB. But when Carolina and Oscar showed me what they were building at [C-MORE](https://cmore-sustainability.com/) - verified ESG data meets AI - and we started collaborating informally, formalizing it as an advisor role was the obvious next step.
+I dedicate all my time to OpenBB. But when [Carolina](https://www.linkedin.com/in/carolinamalmeidacruz/) and [Oscar](https://www.linkedin.com/in/oscar-garcia-cabeza-bb0a9a/) showed me what they were building at [C-MORE](https://cmore-sustainability.com/) - verified ESG data meets AI - and we started collaborating informally, formalizing it as an advisor role was the obvious next step.
 
 <!-- truncate -->
 
@@ -25,7 +25,7 @@ At OpenBB, we've built an AI agent that helps analysts interact with any data in
 
 Last year, I met Carolina and Oscar from C-MORE. Carolina is pursuing a PhD in Sustainability, Oscar brings deep Corporate Finance experience, and together they weren't just running a profitable, fast-growing company - they were getting their hands dirty with AI to out-innovate their competition.
 
-We connected immediately. We're from Portugal and Spain, share similar values about building, and think long-term. And Carina, their co-founder, is actually from my hometown in Portugal (my quarterly reminder of how small the world is).
+We connected immediately. We're from Portugal and Spain, share similar values about building, and think long-term. And [Carina](https://www.linkedin.com/in/carinaabreu/), their co-founder, is actually from my hometown in Portugal (my quarterly reminder of how small the world is).
 
 We started collaborating informally. We held discussions regarding approaches for parsing complex documents with Gemini's long-context models. We talked through their AI strategy. The conversations kept getting deeper.
 

@@ -61,7 +61,7 @@ mcp__fetch__imageFetch with url=<newsletter-url> and images={"output": "file", "
 slug: <title-slug-without-date>
 title: <Full Newsletter Title>
 date: <YYYY-MM-DD>
-image: /blog/<filename-without-extension>
+image: /blog/<filename>.webp
 tags:
 - <relevant-tag-1>
 - <relevant-tag-2>
@@ -75,37 +75,52 @@ hideSidebar: true
 - **slug**: Use title in kebab-case without the date prefix
 - **title**: Exact newsletter title, properly capitalized
 - **date**: Newsletter publication date in YYYY-MM-DD format (extracted from Beehiiv main page, NOT today's date)
-- **image**: Points to the hero image path (without extension)
+- **image**: Points to the hero image path (WITH `.webp` extension)
 - **tags**: Extract 3-6 relevant tags from content themes (lowercase)
 - **description**: Use newsletter subtitle or create compelling summary
 - **hideSidebar**: Set to `true` for blog posts
 
 ### 4. Process Images
 
+**IMPORTANT: All images must be in WebP format for optimal file size and fast page loads.**
+
 **Image Handling Rules:**
 
 1. **Hero Image**
    - **IMPORTANT:** Fetch the hero image from https://didierlopes.beehiiv.com/ main page
    - Find the newsletter post by title and extract its thumbnail image
-   - Save as: `/static/blog/YYYY-MM-DD-slug.png` (must be PNG format)
+   - Download to `/static/blog/YYYY-MM-DD-slug.png` first, then convert to WebP
    - Dimensions: 1200x630px minimum (social media preview)
    - Note: The image must be saved in the `static/blog/` directory, not just `/blog/`
    - Do NOT use images from inside the newsletter post itself
 
 2. **Content Images**
-   - Save as: `/static/blog/YYYY-MM-DD-slug_N.png` (where N is sequential number)
+   - Download to `/static/blog/YYYY-MM-DD-slug_N.png` (where N is sequential number)
    - Download from Beehiiv CDN URLs
-   - Convert to high-quality PNG format
    - Maintain aspect ratio
    - Note: Save in the `static/blog/` directory
 
-3. **Image Markdown Format**
+3. **Convert All Images to WebP**
+   After downloading images, convert them to WebP format using:
+   ```bash
+   # For PNG/JPG images:
+   cwebp -q 90 "image.png" -o "image.webp" && rm "image.png"
+
+   # For GIF images (animated):
+   gif2webp -q 90 "image.gif" -o "image.webp" && rm "image.gif"
+   ```
+
+   Final filenames should be:
+   - Hero: `/static/blog/YYYY-MM-DD-slug.webp`
+   - Content: `/static/blog/YYYY-MM-DD-slug_N.webp`
+
+4. **Image Markdown Format**
    ```markdown
-   ![Alt text description](/blog/image-path.png)
+   ![Alt text description](/blog/image-path.webp)
 
    <!-- For centered images with custom width -->
    <p align="center">
-       <img width="500" src="/blog/image-path.png" alt="Description" />
+       <img width="500" src="/blog/image-path.webp" alt="Description" />
    </p>
    ```
 
@@ -209,7 +224,7 @@ hideSidebar: true
     Example:
     ```html
     <p align="center">
-        <img width="800" src="/blog/image.png" alt="Description" />
+        <img width="800" src="/blog/image.webp" alt="Description" />
     </p>
     <p align="center" style={{fontSize: '0.85em', marginTop: '-0.5em'}}>Caption text describing the image above.</p>
     ```
@@ -233,7 +248,9 @@ hideSidebar: true
 Before finalizing:
 
 - [ ] Front matter is complete and valid YAML
-- [ ] All images are downloaded and properly referenced
+- [ ] Front matter `image:` field includes `.webp` extension
+- [ ] All images are downloaded, converted to WebP, and properly referenced
+- [ ] All image references in content use `.webp` extension
 - [ ] Links are clean (no tracking parameters)
 - [ ] Markdown syntax is valid
 - [ ] Content flows naturally without newsletter artifacts

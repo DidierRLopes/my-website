@@ -568,11 +568,19 @@ export default function BooksAlreadyRead() {
 				<br />
 				Here's a thread with the ones I read in{" "}
 				<a
-					href="https://x.com/didier_lopes/status/1615510616025993217"
+					href="https://x.com/didier_lopes/status/2010809574140313664?s=20"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					2023
+					2026
+				</a>
+				, in{" "}
+				<a
+					href="https://x.com/didier_lopes/status/1882635148694606134"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					2025
 				</a>
 				, in{" "}
 				<a
@@ -584,11 +592,11 @@ export default function BooksAlreadyRead() {
 				</a>{" "}
 				and in{" "}
 				<a
-					href="https://x.com/didier_lopes/status/1882635148694606134"
+					href="https://x.com/didier_lopes/status/1615510616025993217"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					2025
+					2023
 				</a>
 				.
 			</p>

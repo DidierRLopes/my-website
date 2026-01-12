@@ -6,6 +6,7 @@ A comprehensive guide for converting Beehiiv newsletter posts into properly form
 
 - Access to the Beehiiv newsletter URL
 - Image extraction capabilities (use mcp__fetch__imageFetch tool)
+- `cwebp` and `gif2webp` installed for image conversion
 - Understanding of the blog's markdown structure and front matter requirements
 
 ## Step-by-Step Conversion Process
@@ -41,7 +42,7 @@ mcp__fetch__imageFetch --url <newsletter-url> --images '{"output": "file", "layo
 slug: <title-slug-without-date>
 title: <Full Newsletter Title>
 date: <YYYY-MM-DD>
-image: /blog/<filename-without-extension>
+image: /blog/<filename>.webp
 tags:
 - <relevant-tag-1>
 - <relevant-tag-2>
@@ -55,37 +56,52 @@ hideSidebar: true
 - **slug**: Use title in kebab-case without the date prefix
 - **title**: Exact newsletter title, properly capitalized
 - **date**: Newsletter publication date in YYYY-MM-DD format (extracted from Beehiiv main page, NOT today's date)
-- **image**: Points to the hero image path (without extension)
+- **image**: Points to the hero image path (WITH `.webp` extension)
 - **tags**: Extract 3-6 relevant tags from content themes (lowercase)
 - **description**: Use newsletter subtitle or create compelling summary
 - **hideSidebar**: Set to `true` for blog posts
 
 ### 4. Process Images
 
+**IMPORTANT: All images must be in WebP format for optimal file size and fast page loads.**
+
 **Image Handling Rules:**
 
 1. **Hero Image**
    - **IMPORTANT:** Fetch the hero image from https://didierlopes.beehiiv.com/ main page
    - Find the newsletter post by title and extract its thumbnail image
-   - Save as: `/static/blog/YYYY-MM-DD-slug.png` (must be PNG format)
+   - Download to `/static/blog/YYYY-MM-DD-slug.png` first, then convert to WebP
    - Dimensions: 1200x630px minimum (social media preview)
    - Note: The image must be saved in the `static/blog/` directory, not just `/blog/`
    - Do NOT use images from inside the newsletter post itself
 
 2. **Content Images**
-   - Save as: `/static/blog/YYYY-MM-DD-slug_N.png` (where N is sequential number)
+   - Download to `/static/blog/YYYY-MM-DD-slug_N.png` (where N is sequential number)
    - Download from Beehiiv CDN URLs
-   - Convert to high-quality PNG format
    - Maintain aspect ratio
    - Note: Save in the `static/blog/` directory
 
-3. **Image Markdown Format**
+3. **Convert All Images to WebP**
+   After downloading images, convert them to WebP format using:
+   ```bash
+   # For PNG/JPG images:
+   cwebp -q 90 "image.png" -o "image.webp" && rm "image.png"
+
+   # For GIF images (animated):
+   gif2webp -q 90 "image.gif" -o "image.webp" && rm "image.gif"
+   ```
+
+   Final filenames should be:
+   - Hero: `/static/blog/YYYY-MM-DD-slug.webp`
+   - Content: `/static/blog/YYYY-MM-DD-slug_N.webp`
+
+4. **Image Markdown Format**
    ```markdown
-   ![Alt text description](/blog/image-path.png)
-   
+   ![Alt text description](/blog/image-path.webp)
+
    <!-- For centered images with custom width -->
    <p align="center">
-       <img width="500" src="/blog/image-path.png" alt="Description" />
+       <img width="500" src="/blog/image-path.webp" alt="Description" />
    </p>
    ```
 
@@ -104,23 +120,23 @@ hideSidebar: true
    - Only use if there's a major topic shift that requires clear separation
 
 3. **Headings**
-   - Newsletter H3 � Blog H2 (`##`)
-   - Newsletter H4 � Blog H3 (`###`)
+   - Newsletter H3 → Blog H2 (`##`)
+   - Newsletter H4 → Blog H3 (`###`)
    - Maintain heading hierarchy
 
 4. **Lists**
    - Preserve bullet points as markdown lists (`-`)
    - Maintain indentation for nested lists
    - **Important:** Add `<br />` after each list block for proper spacing
-   
+
    Example:
    ```markdown
    - First item
    - Second item
    - Third item
-   
+
    <br />
-   
+
    Next paragraph starts here...
    ```
 
@@ -132,14 +148,14 @@ hideSidebar: true
 6. **Emphasis**
    - Bold text: `**text**`
    - Italic text: `*text*`
-   
+
 7. **Quotes and Citations**
    - Use blockquote syntax (`>`) for extended quotes
    - For multi-paragraph quotes, use `> <br />` between paragraphs
    - Add `<br />` after the quote block
    - **IMPORTANT:** Extract the actual hyperlink from the Beehiiv newsletter, not guess or create new ones
    - Include attribution with author name and link when available
-   
+
    Example:
    ```markdown
    > First paragraph of the quote goes here.
@@ -147,9 +163,9 @@ hideSidebar: true
    > <br />
    >
    > Second paragraph of the quote continues here.
-   
+
    <br />
-   
+
    **Author Name** - ["Article Title"](https://actual-link-from-beehiiv.com)
    ```
 
@@ -163,7 +179,7 @@ hideSidebar: true
    - Extract video ID from URL (e.g., `https://www.youtube.com/watch?v=VIDEO_ID` → `VIDEO_ID`)
    - Use only the video ID in the embed URL, no additional parameters
    - Use responsive embed with centered layout
-   
+
    Example conversion:
    - Original: `https://www.youtube.com/watch?v=Zyw-YA0k3xo`
    - Embed format:
@@ -176,7 +192,7 @@ hideSidebar: true
        />
    </div>
    ```
-   
+
    **Note:** Always verify the video link exists in the original Beehiiv content - don't assume or guess video IDs
 
 ### 6. Content Cleanup
@@ -198,7 +214,9 @@ hideSidebar: true
 Before finalizing:
 
 - [ ] Front matter is complete and valid YAML
-- [ ] All images are downloaded and properly referenced
+- [ ] Front matter `image:` field includes `.webp` extension
+- [ ] All images are downloaded, converted to WebP, and properly referenced
+- [ ] All image references in content use `.webp` extension
 - [ ] Links are clean (no tracking parameters)
 - [ ] Markdown syntax is valid
 - [ ] Content flows naturally without newsletter artifacts
@@ -212,7 +230,7 @@ Before finalizing:
 **Converted to:** `/blog/2025-09-19-the-trampoline-job-optimize-your-career-for-growth.md`
 
 **Key transformations:**
-- Extracted tweet screenshot as centered image
+- Extracted tweet screenshot as centered image (converted to WebP)
 - Converted newsletter sections to H2/H3 headings
 - Cleaned URLs of tracking parameters
 - Added proper front matter with relevant tags
@@ -225,13 +243,14 @@ For batch conversions:
 2. Parse the HTML/Markdown structure programmatically
 3. Apply transformation rules consistently
 4. Validate front matter and markdown syntax
-5. Batch download and optimize images
+5. Batch download and convert images to WebP
 6. Run local preview before committing
 
 ## Common Pitfalls to Avoid
 
 - Don't include newsletter-specific language ("Click here to read more")
 - Don't forget to download images (Beehiiv CDN links may expire)
+- Don't forget to convert images to WebP format
 - Don't use relative dates ("last week") - use specific dates
 - Don't include email-specific formatting (table layouts for email clients)
 - Don't forget the `<!-- truncate -->` marker for blog preview

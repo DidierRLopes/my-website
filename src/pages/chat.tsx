@@ -4,7 +4,6 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import Terminal, { type Message } from '../components/Terminal';
 import { useColorMode } from '@docusaurus/theme-common';
 import ThemedImage from '@theme/ThemedImage';
-import '../../src/css/custom.css';
 import ExternalLinkIcon from '../components/ExternalLinkIcon';
 
 const CenteredContainer: React.FC<{children: React.ReactNode}> = ({ children }) => (

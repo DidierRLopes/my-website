@@ -4,9 +4,27 @@ import BlogHistory from '../BlogHistory';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
+// Construct hero image URL from post date and slug
+// Pattern: /blog/YYYY-MM-DD-slug.webp
+const getHeroImage = (post) => {
+  if (!post.date_modified || !post.id) return null;
+  const date = new Date(post.date_modified);
+  // Use UTC methods to avoid timezone issues
+  const yyyy = date.getUTCFullYear();
+  const mm = String(date.getUTCMonth() + 1).padStart(2, '0');
+  const dd = String(date.getUTCDate()).padStart(2, '0');
+  // Extract slug from URL like "https://didierlopes.com/blog/my-slug"
+  const slug = post.id.split('/blog/')[1];
+  if (!slug) return null;
+  return `/blog/${yyyy}-${mm}-${dd}-${slug}.webp`;
+};
+
 function LatestPosts({ allPosts, postsHighlight, isDesktop, isTablet }) {
-  // Ensure we never display more than 3 highlight posts
-  const highlights = (postsHighlight || []).slice(0, 3);
+  // Ensure we never display more than 3 highlight posts with hero images
+  const highlights = (postsHighlight || [])
+    .map(post => ({ ...post, image: getHeroImage(post) }))
+    .filter(post => post.image)
+    .slice(0, 3);
 
   return (
     <Section title="Latest posts." subtitle="I write so I can think and communicate better.">
@@ -25,7 +43,7 @@ function LatestPosts({ allPosts, postsHighlight, isDesktop, isTablet }) {
                   <div className="overflow-hidden rounded-xl mb-3">
                     <img
                       className="w-full h-[180px] object-cover transition-transform duration-300 hover:scale-110"
-                      src={post.content_html.match(/<img.*?src=\"(.*?)\"/)[1]}
+                      src={post.image}
                       alt={post.title}
                     />
                   </div>
@@ -46,7 +64,7 @@ function LatestPosts({ allPosts, postsHighlight, isDesktop, isTablet }) {
                 <div className="overflow-hidden rounded-xl mb-3">
                   <img
                     className="w-full h-[180px] object-cover transition-transform duration-300 group-hover:scale-110"
-                    src={post.content_html.match(/<img.*?src=\"(.*?)\"/)[1]}
+                    src={post.image}
                     alt={post.title}
                   />
                 </div>
@@ -98,7 +116,7 @@ function LatestPosts({ allPosts, postsHighlight, isDesktop, isTablet }) {
               <a href={`${post.id}`} className="group block pt-12">
                 <img
                   className="rounded-xl h-[120px] mx-auto object-cover"
-                  src={post.content_html.match(/<img.*?src=\"(.*?)\"/)[1]}
+                  src={post.image}
                   alt={post.title}
                 />
                 <h3 className="text-center text-sm font-semibold mt-2 group-hover:text-blue-500 transition-colors duration-300">

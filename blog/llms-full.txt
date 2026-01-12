@@ -21491,6 +21491,10 @@ I dedicate all my time to OpenBB. But when [Carolina](https://www.linkedin.com/i
 
 <!-- truncate -->
 
+<p align="center">
+    <img width="800" src="/blog/2026-01-12-joining-c-more-as-an-advisor.webp" alt="C-MORE advisory announcement" />
+</p>
+
 ## Background
 
 I've been hands-on with AI and machine learning since 2016, when I first applied Neural Networks to control systems in university. Since then, I've stayed close to the intersection of data, AI, and finance - implementing LSTM networks for financial time series forecasting ([open-sourced here](/blog/an-unusual-journey-learning-about-nns-for-a-phd-thesis)), and more recently fine-tuning small language models running locally ([detailed here](/blog/fine-tuning-a-llm-on-my-blog-posts)).

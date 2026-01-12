@@ -2,7 +2,7 @@
 slug: openbb-enables-streamlined-client-advisory-ai-workflow
 title: OpenBB enables streamlined Client Advisory AI workflow
 date: 2025-03-23
-image: /blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow
+image: /blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow.webp
 tags:
 - openbb
 - ai
@@ -20,7 +20,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow.png" />
+    <img width="600" src="/blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow.webp" />
 </p>
 
 In this blog post, I'll show you how an AI agent can transform your funds performance, macro data, news around your holding companies, and more into a draft investor letter that has the same writing style as your team.
@@ -34,7 +34,7 @@ Gathering performance data, analyzing market shifts, and crafting detailed inves
 But what if your analysts could have an AI writing partner that thinks and communicates just like your team and could prepare those drafts in a few minutes?
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow_1.png" />
+    <img width="600" src="/blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow_1.webp" />
 </p>
 
 ## How does it work?
@@ -46,7 +46,7 @@ First, the agent tackles the challenge of extracting structured data from your q
 Using a combination of OCR and state-of-the-art LLM models with structured output, it can capture all the relevant information from the document with a high degree of accuracy.
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow_2.png" />
+    <img width="600" src="/blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow_2.webp" />
 </p>
 
 ### Step 2: Learning your communication style
@@ -66,7 +66,7 @@ So in this step, the important aspect is identifying what makes your ~10-page in
 Ultimately, the model needs to understand what makes your investor letter unique.
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow_3.png" />
+    <img width="600" src="/blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow_3.webp" />
 </p>
 
 ### Step 3: Pattern recognition between factsheet and investor letter
@@ -90,7 +90,7 @@ And we use a prompt along the lines of:
 We are ultimately looking for a detailed "recipe" that connects your factsheet data to what your analyst would write.
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow_4.png" />
+    <img width="600" src="/blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow_4.webp" />
 </p>
 
 The AI learns exactly how your team moves from raw numbers to meaningful insights, maintaining your analytical frameworks and professional voice.
@@ -130,7 +130,7 @@ It doesn't matter how good this pipeline is if your team does not have a good in
 By connecting this custom agent to the OpenBB workspace, your firm can access it directly from there and combine it with the other features OpenBB offers.
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow_5.png" />
+    <img width="600" src="/blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow_5.webp" />
 </p>
 
 Those features include:
@@ -142,7 +142,7 @@ Those features include:
 - Share this initial draft version with your team for feedback
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow_6.png" />
+    <img width="600" src="/blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow_6.webp" />
 </p>
 
 Our unique solution consists of an AI-ready interface where firms can seamlessly integrate their own data and AI agents. This means that these agents are accessible right where your analysts perform their analysis and research, eliminating the need to switch between platforms or learn new tools. This approach allows portfolio managers and analysts to leverage AI to complement their existing processes, rather than relying on generic solutions.
@@ -156,7 +156,7 @@ Additionally, our flexible on-prem deployment option means that firms can run op
 While the results can make it look simple, in reality, this is how the pipeline works under the hood:
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow_7.png" />
+    <img width="600" src="/blog/2025-03-23-openbb-enables-streamlined-client-advisory-ai-workflow_7.webp" />
 </p>
 
 ### Real-life results on our clients' operations

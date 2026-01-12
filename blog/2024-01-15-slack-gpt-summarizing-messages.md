@@ -2,7 +2,7 @@
 slug: slack-gpt-summarizing-messages
 title: SlackGPT - Your Slack bot that summarizes unread messages
 date: 2024-01-15
-image: /blog/2024-01-15-slack-gpt-summarizing-messages.png
+image: /blog/2024-01-15-slack-gpt-summarizing-messages.webp
 tags:
 - slack
 - slackgpt
@@ -17,7 +17,7 @@ description: The SlackGPT is a Slack bot that summarizes conversations and sends
 
 
 <p align="center">
-    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages.png"/>
+    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages.webp"/>
 </p>
 
 <br />
@@ -61,7 +61,7 @@ Clone the open source project [here](https://github.com/DidierRLopes/slackGPT).
 <br />
 
 <p align="center">
-    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages_1.png"/>
+    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages_1.webp"/>
 </p>
 
 4. Create a **Webhook URL** for your channel so that you can receive messages' summary. Set this value as the `SLACK_WEBHOOK_URL`` on a `.env` file if you want to run the script locally or as a GitHub secret if you want to leverage the GitHub workflow.
@@ -76,7 +76,7 @@ Clone the open source project [here](https://github.com/DidierRLopes/slackGPT).
 <br />
 
 <p align="center">
-    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages_2.png"/>
+    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages_2.webp"/>
 </p>
 
 ### OpenAI API
@@ -86,7 +86,7 @@ Go to [OpenAI API page](https://platform.openai.com/api-keys) to extract the API
 <br />
 
 <p align="center">
-    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages_3.png"/>
+    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages_3.webp"/>
 </p>
 
 ### Slack channels
@@ -98,7 +98,7 @@ Set those values as the `SLACK_CHANNEL_IDS` on a `.env` file if you want to run 
 <br />
 
 <p align="center">
-    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages_4.png"/>
+    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages_4.webp"/>
 </p>
 
 ### Running
@@ -126,12 +126,12 @@ The most important part of this script is the `cron: '0 8 * * 1-5'` which specif
 By inputting the following text on the Slack channel of my choice:
 
 <p align="center">
-    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages_5.png"/>
+    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages_5.webp"/>
 </p>
 
 The SlackGPT summarized it as follows:
 
 <p align="center">
-    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages_6.png"/>
+    <img width="600" src="/blog/2024-01-15-slack-gpt-summarizing-messages_6.webp"/>
 </p>
 

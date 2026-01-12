@@ -2,7 +2,7 @@
 slug: from-data-silos-to-ai-agents-financial-data-evolution
 title: From data silos to AI agents - Financial data evolution
 date: 2025-08-29
-image: /blog/2025-08-29-from-data-silos-to-ai-agents-financial-data-evolution
+image: /blog/2025-08-29-from-data-silos-to-ai-agents-financial-data-evolution.webp
 tags:
   - financial-data
   - ai
@@ -18,7 +18,7 @@ hide: true
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-29-from-data-silos-to-ai-agents-financial-data-evolution.png" />
+    2025-08-29-from-data-silos-to-ai-agents-financial-data-evolution.webp" />
 </p>
 
 Explores the evolution of financial data from vendor silos to AI-native platforms, detailing how AI agents create actionable intelligence and positioning OpenBB as a leader in this new paradigm.
@@ -116,5 +116,5 @@ Check what users are building on OpenBB in our new solutions page: https://openb
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-29-from-data-silos-to-ai-agents-financial-data-evolution_1.png" />
+    2025-08-29-from-data-silos-to-ai-agents-financial-data-evolution_1.webp" />
 </p>

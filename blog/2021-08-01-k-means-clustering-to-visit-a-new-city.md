@@ -2,7 +2,7 @@
 slug: k-means-clustering-to-visit-a-new-city
 title: K-means algorithm to visit a new city
 date: 2021-08-01
-image: /blog/2021-08-01-k-means-clustering-to-visit-a-new-city.png
+image: /blog/2021-08-01-k-means-clustering-to-visit-a-new-city.webp
 tags:
 - k-means
 - algorithm
@@ -18,7 +18,7 @@ description: In this blogpost, I share how I used the K-means algorithm to plan 
 
 
 <p align="center">
-    <img width="600" src="/blog/2021-08-01-k-means-clustering-to-visit-a-new-city.png"/>
+    <img width="600" src="/blog/2021-08-01-k-means-clustering-to-visit-a-new-city.webp"/>
 </p>
 
 <br />
@@ -58,11 +58,11 @@ Nonetheless, I think this is a funny exercise, and if I were to select the areas
 
 Immediately below you can see the result of a visit to London for 2, 3 and 4 days.
 
-![image](/blog/2021-08-01-k-means-clustering-to-visit-a-new-city_1.png)
+![image](/blog/2021-08-01-k-means-clustering-to-visit-a-new-city_1.webp)
 
 <div className="flex justify-center gap-2">
-  <img src="/blog/2021-08-01-k-means-clustering-to-visit-a-new-city_2.png" width="50%" />
-  <img src="/blog/2021-08-01-k-means-clustering-to-visit-a-new-city_3.png" width="50%" /> 
+  <img src="/blog/2021-08-01-k-means-clustering-to-visit-a-new-city_2.webp" width="50%" />
+  <img src="/blog/2021-08-01-k-means-clustering-to-visit-a-new-city_3.webp" width="50%" /> 
 </div>
 
 <br />

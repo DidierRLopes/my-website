@@ -2,7 +2,7 @@
 slug: how-to-learn-10x-faster-than-average
 title: How to learn 10x faster than average
 date: 2022-10-27
-image: /blog/2022-10-27-how-to-learn-10x-faster-than-average.png
+image: /blog/2022-10-27-how-to-learn-10x-faster-than-average.webp
 tags:
 - learning
 - self-improvement
@@ -14,7 +14,7 @@ description: Learn how to accelerate your learning process and become 10x faster
 
 
 <p align="center">
-    <img width="600" src="/blog/2022-10-27-how-to-learn-10x-faster-than-average.png"/>
+    <img width="600" src="/blog/2022-10-27-how-to-learn-10x-faster-than-average.webp"/>
 </p>
 
 <br />

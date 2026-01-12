@@ -2,7 +2,7 @@
 slug: ranking-99-mind-f-ck-movies
 title: Ranking 99 Mind f*ck movies
 date: 2021-08-15
-image: /blog/2021-08-15-ranking-99-mind-f-ck-movies.png
+image: /blog/2021-08-15-ranking-99-mind-f-ck-movies.webp
 tags:
 - movies
 - thrillers
@@ -16,7 +16,7 @@ description: Ranking and sorting a list of 99 mind-bending thriller movies using
 
 
 <p align="center">
-    <img width="600" src="/blog/2021-08-15-ranking-99-mind-f-ck-movies.png"/>
+    <img width="600" src="/blog/2021-08-15-ranking-99-mind-f-ck-movies.webp"/>
 </p>
 
 <br />
@@ -47,7 +47,7 @@ Therefore, while Meg was busy, I was on a role to hack something that would both
 
 In a couple of minutes, I was already playing with [IMDbPy API](https://imdbpy.github.io/). This allowed me to have the sorting algorithm running in the background pretty quick. Within the hour, we already had our sorted movie list. Which I have attached below for future reference.
 
-![image](/blog/2021-08-15-ranking-99-mind-f-ck-movies_1.png)
+![image](/blog/2021-08-15-ranking-99-mind-f-ck-movies_1.webp)
 
 The first movie of the list that none of us had already watched was the movie [Incendies](https://www.imdb.com/title/tt1255953/). After having watched this movie, I can already tell you that sorting out this list was worth it. Definitely mind blowing, and a great watch.
 

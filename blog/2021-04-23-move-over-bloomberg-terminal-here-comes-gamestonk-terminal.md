@@ -2,7 +2,7 @@
 slug: move-over-bloomberg-terminal-here-comes-gamestonk-terminal
 title: Move over Bloomberg Terminal, here comes Gamestonk Terminal
 date: 2021-04-23
-image: /blog/2021-04-23-move-over-bloomberg-terminal-here-comes-gamestonk-terminal.png
+image: /blog/2021-04-23-move-over-bloomberg-terminal-here-comes-gamestonk-terminal.webp
 tags:
 - gamestonk-terminal
 - finance
@@ -16,7 +16,7 @@ description: In this blogpost, we introduce Gamestonk Terminal, an open-source p
 
 
 <p align="center">
-    <img width="600" src="/blog/2021-04-23-move-over-bloomberg-terminal-here-comes-gamestonk-terminal.png"/>
+    <img width="600" src="/blog/2021-04-23-move-over-bloomberg-terminal-here-comes-gamestonk-terminal.webp"/>
 </p>
 
 <br />

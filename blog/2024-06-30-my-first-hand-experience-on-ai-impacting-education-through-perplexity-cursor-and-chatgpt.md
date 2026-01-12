@@ -2,7 +2,7 @@
 slug: my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt
 title: My first-hand experience on AI impacting education through Perplexity, Cursor and ChatGPT
 date: 2024-06-30
-image: /blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt.png
+image: /blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt.webp
 tags:
 - ai
 - education
@@ -19,7 +19,7 @@ description: AI will change education forever. Here's how I leveraged Perplexity
 
 
 <p align="center">
-    <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt.png"/>
+    <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt.webp"/>
 </p>
 
 AI will change education forever. Here's how I leveraged Perplexity, Cursor and ChatGPT to teach Supervised Learning and assess coursework.
@@ -50,7 +50,7 @@ This time was different - I had the flexibility to choose what I was going to co
 I've never worked as a Data Scientist per se, but have been passionate about data for a while and spent a lot of time reading books and learning about the topic. In my previous company, I started playing with IMU data in my spare time which lead me to publish a paper at ICMLA where I used [Support Vector Machine (SVM) for Step Detection using Nurvv trackers](https://ieeexplore.ieee.org/document/9680024) and even open sourced the code [here](https://github.com/DidierRLopes/step-detection-ML/tree/main).
 
 <p align="center">
-    <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_svm_paper.png"/>
+    <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_svm_paper.webp"/>
 </p>
 
 I've wrote about this and how I managed to write the entire code in my spare time in a single week, and missing the yearly team event in order to pull this off. You can read more about it [here](/blog/how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla).
@@ -79,7 +79,7 @@ Except that **IT WAS**.
 Since Perplexity's main value proposition is being better at Google than Google - I popped the following prompt into it.
 
 <p align="center">
-    <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_perplexity.png"/>
+    <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_perplexity.webp"/>
 </p>
 
 BAM.💥
@@ -107,13 +107,13 @@ I was dreading having to write the syllabus and like this, it was actually fun. 
 After having all the content ready, I asked my wife to help me with some images to make it easier for students to understand concepts.
 
 <p align="center">
-    <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_assets.png"/>
+    <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_assets.webp"/>
 </p>
 
 I was happy with the results - but wanted a second opinion. So I asked a friend of mine who's been a DS for over 6 years what his thoughts were on the materials I worked on - and he was impressed about the speed.
 
 <p align="center">
-    <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_ai_friend_message.jpeg"/>
+    <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_ai_friend_message.webp"/>
 </p>
 
 Being a fan of open source, I have open sourced all the theory and practice of the course and you can access it here: https://github.com/DidierRLopes/supervised-learning
@@ -121,7 +121,7 @@ Being a fan of open source, I have open sourced all the theory and practice of t
 For the practice exercises I made it so that users can run it with colab directly on the browser to focus on the learning and not on the installation of libraries - highly recommend doing this.
 
 <p align="center">
-    <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_colab.jpeg"/>
+    <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_colab.webp"/>
 </p>
 
 ## Assessing students grades
@@ -195,7 +195,7 @@ Given that I just wanted GPT-4o to quickly review each of the criterias based on
 This is what my setup looked like
 
 <p align="center">
-    <img width="1000" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_cursor.png"/>
+    <img width="1000" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_cursor.webp"/>
 </p>
 
 Having the code on the left side and the copilot on the right side that I could use to chat really enabled me to grade more confidently.
@@ -203,7 +203,7 @@ Having the code on the left side and the copilot on the right side that I could 
 Here's an example of a section of a response I got to one of the student's notebooks
 
 <p align="center">
-    <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_cursor_output.png"/>
+    <img width="600" src="/blog/2024-06-30-my-first-hand-experience-on-ai-impacting-education-through-perplexity-cursor-and-chatgpt_cursor_output.webp"/>
 </p>
 
 One thing I did to have the copilot produce better outputs was to push it to do chain-of-thought (CoT). Meaning that I prompted the model to explain the reasoning behind a decision before providing a grade. This has been proved to yield to less hallucinations and more accurate responses - which is what I was looking for.

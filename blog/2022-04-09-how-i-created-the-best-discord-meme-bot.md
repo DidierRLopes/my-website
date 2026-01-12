@@ -2,7 +2,7 @@
 slug: how-i-created-the-best-discord-meme-bot
 title: How I created the best discord meme bot
 date: 2022-04-09
-image: /blog/2022-04-09-how-i-created-the-best-discord-meme-bot.png
+image: /blog/2022-04-09-how-i-created-the-best-discord-meme-bot.webp
 tags:
 - discord
 - meme-bot
@@ -15,7 +15,7 @@ description: In this blog post, I share my journey of creating a Discord meme bo
 
 
 <p align="center">
-    <img width="600" src="/blog/2022-04-09-how-i-created-the-best-discord-meme-bot.png"/>
+    <img width="600" src="/blog/2022-04-09-how-i-created-the-best-discord-meme-bot.webp"/>
 </p>
 
 <br />
@@ -54,7 +54,7 @@ When I started coding this here and there, I wanted the code to be super straigh
 
 The process to add new memes is incredibly easy. Go to the [project](https://github.com/DidierRLopes/discord-memes) and star it for starters (also [OpenBB Terminal](https://github.com/OpenBB-finance/OpenBBTerminal) since you’re at it). Then,
 
-1. Add the meme you want to the `memes/` folder, e.g. `spongebob.jpg`
+1. Add the meme you want to the `memes/` folder, e.g. `spongebob.webp`
 
 2. Then create a function with the same name of the image (e.g. `spongebob`) with the following format
 
@@ -87,11 +87,11 @@ I used a playground.ipynb notebook, which is also on the repo, to increase the s
 
 This is how it looks,
 
-![image](/blog/2022-04-09-how-i-created-the-best-discord-meme-bot_1.png)
+![image](/blog/2022-04-09-how-i-created-the-best-discord-meme-bot_1.webp)
 
 OR
 
-![image](/blog/2022-04-09-how-i-created-the-best-discord-meme-bot_2.png)
+![image](/blog/2022-04-09-how-i-created-the-best-discord-meme-bot_2.webp)
 
 As you can see, our Discord server just stepped up. [Join us](https://openbb.co/discord) to try out the meme bot, build the future of investment research or just to say hi.
 

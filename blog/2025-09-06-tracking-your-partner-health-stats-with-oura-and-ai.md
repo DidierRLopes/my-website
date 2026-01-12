@@ -2,7 +2,7 @@
 slug: tracking-your-partner-health-stats-with-oura-and-ai
 title: Tracking your partner's health stats with Oura and AI
 date: 2025-09-06
-image: /blog/2025-09-06-tracking-your-partner-health-stats-with-oura-and-ai
+image: /blog/2025-09-06-tracking-your-partner-health-stats-with-oura-and-ai.webp
 tags:
   - health
   - ai
@@ -33,7 +33,7 @@ So on Sunday morning, I decided to quickly build something fun.
 I built a Scriptable iOS widget that displays my wife's health metrics in an RPG-style interface with AI-generated British humor.
 
 <p align="center">
-    <img width="800" src="/blog/2025-09-06-tracking-your-partner-health-stats-with-oura-and-ai.png" />
+    <img width="800" src="/blog/2025-09-06-tracking-your-partner-health-stats-with-oura-and-ai.webp" />
 </p>
 
 **Key features:**
@@ -133,7 +133,7 @@ I went with soft pink to blue gradients because my wife likes those colors, and 
 Here's how it looks in practice:
 
 <p align="center">
-    <img width="400" src="/blog/2025-09-06-tracking-your-partner-health-stats-with-oura-and-ai_1.png" />
+    <img width="400" src="/blog/2025-09-06-tracking-your-partner-health-stats-with-oura-and-ai_1.webp" />
 </p>
 
 And you can see that I acted immediately on the recommendation by bringing a coffee and hobnobs 😄

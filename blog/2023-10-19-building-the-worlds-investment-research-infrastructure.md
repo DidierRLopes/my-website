@@ -2,7 +2,7 @@
 slug: building-the-worlds-investment-research-infrastructure
 title: Building the world’s investment research infrastructure
 date: 2023-10-19
-image: /blog/2023-10-19-building-the-worlds-investment-research-infrastructure.png
+image: /blog/2023-10-19-building-the-worlds-investment-research-infrastructure.webp
 tags:
 - investment
 - research
@@ -15,7 +15,7 @@ description: This blog post discusses the process and challenges of building the
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-10-19-building-the-worlds-investment-research-infrastructure.png"/>
+    <img width="600" src="/blog/2023-10-19-building-the-worlds-investment-research-infrastructure.webp"/>
 </p>
 
 <br />

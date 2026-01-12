@@ -2,7 +2,7 @@
 slug: 5-steps-i-used-to-change-my-job-title-in-less-than-1-year
 title: 5 steps I used to change my job title in less than 1 year
 date: 2022-11-14
-image: /blog/2022-11-14-5-steps-i-used-to-change-my-job-title-in-less-than-1-year.png
+image: /blog/2022-11-14-5-steps-i-used-to-change-my-job-title-in-less-than-1-year.webp
 tags:
 - career-path
 - career-growth
@@ -19,7 +19,7 @@ description: This blog post outlines the five steps I took to change my job titl
 
 
 <p align="center">
-    <img width="600" src="/blog/2022-11-14-5-steps-i-used-to-change-my-job-title-in-less-than-1-year_1.png"/>
+    <img width="600" src="/blog/2022-11-14-5-steps-i-used-to-change-my-job-title-in-less-than-1-year_1.webp"/>
 </p>
 
 <br />

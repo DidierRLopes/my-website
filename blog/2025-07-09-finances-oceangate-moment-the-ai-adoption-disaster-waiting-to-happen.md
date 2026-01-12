@@ -2,7 +2,7 @@
 slug: finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen
 title: Finance's OceanGate moment - The AI adoption disaster waiting to happen
 date: 2025-07-09
-image: /blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen
+image: /blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen.webp
 tags:
   - ai
   - finance
@@ -17,7 +17,7 @@ hideSidebar: true
 ---
 
 <p align="center">
-    <img width="600" src="/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen.png" />
+    <img width="600" src="/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen.webp" />
 </p>
 
 The financial industry's rush to adopt AI without proper data security is creating an 'OceanGate moment' - a disaster waiting to happen. This post explores the risks of reckless AI implementation and charts a safer path forward through on-premise and local model deployment.
@@ -35,7 +35,7 @@ There's a chilling scene in the OceanGate documentary trailer where Rob McCallum
 <br />
 
 <p align="center">
-    <img width="600" src="/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen_1.png" />
+    <img width="600" src="/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen_1.webp" />
 </p>
 
 This wasn't about predicting the exact moment of catastrophe. It was about recognizing that the submarine's fundamental design flaws made disaster inevitable.
@@ -63,7 +63,7 @@ Andrej Karpathy made a crucial observation that explains why this situation is u
 Read his full analysis [here](https://x.com/karpathy/status/1909308143156240538).
 
 <p align="center">
-    <img width="400" src="/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen_2.png" />
+    <img width="400" src="/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen_2.webp" />
 </p>
 
 For the first time in corporate history, employees have access to transformative technology before their institutions can properly evaluate and control it.
@@ -132,7 +132,7 @@ Newest LLMs are no longer showing exponential improvements but incremental only.
 We've implemented this philosophy in the [OpenBB Workspace](https://openbb.co/products/workspace).
 
 <p align="center">
-    <img width="900" src="/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen_3.png" />
+    <img width="900" src="/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen_3.webp" />
 </p>
 
 Our product enables complete on-premises deployment **with local model integration**, giving financial professionals AI-powered analysis without data sovereignty concerns.
@@ -148,5 +148,5 @@ The mathematical certainty of failure only applies to those who don't listen to 
 I believe in this so much that I actually added a [Chat page](https://didierlopes.com/chat) to my personal website that allows users to run open-weight models on their machine, via Ollama, with access to data from my blogposts.
 
 <p align="center">
-    <img width="900" src="/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen_4.png" />
+    <img width="900" src="/blog/2025-07-09-finances-oceangate-moment-the-ai-adoption-disaster-waiting-to-happen_4.webp" />
 </p>

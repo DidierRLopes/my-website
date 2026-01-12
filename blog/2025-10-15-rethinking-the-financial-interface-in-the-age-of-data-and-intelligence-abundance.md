@@ -2,7 +2,7 @@
 slug: rethinking-the-financial-interface-in-the-age-of-data-and-intelligence-abundance
 title: Rethinking the financial interface in the age of data and intelligence abundance
 date: 2025-10-15
-image: /blog/2025-10-15-rethinking-the-financial-interface-in-the-age-of-data-and-intelligence-abundance
+image: /blog/2025-10-15-rethinking-the-financial-interface-in-the-age-of-data-and-intelligence-abundance.webp
 tags:
 - finance
 - interface
@@ -16,7 +16,7 @@ description: How the explosion of data and AI is breaking the old financial term
 hideSidebar: true
 ---
 
-![Rethinking the financial interface in the age of data and intelligence abundance](/blog/2025-10-15-rethinking-the-financial-interface-in-the-age-of-data-and-intelligence-abundance.png)
+![Rethinking the financial interface in the age of data and intelligence abundance](/blog/2025-10-15-rethinking-the-financial-interface-in-the-age-of-data-and-intelligence-abundance.webp)
 
 How the explosion of data and AI is breaking the old financial terminal monopoly and creating space for open, modular, AI-native interfaces that serve users, not vendors.
 

@@ -2,7 +2,7 @@
 slug: a-500k-bet-to-build-the-best-platform-to-do-ai-using-financial-data
 title: A $500k bet to build the best platform to do AI using financial data
 date: 2023-10-14
-image: /blog/2023-10-14-a-500k-bet-to-build-the-best-platform-to-do-ai-using-financial-data.png
+image: /blog/2023-10-14-a-500k-bet-to-build-the-best-platform-to-do-ai-using-financial-data.webp
 tags:
 - ai
 - financial-data
@@ -16,7 +16,7 @@ description: This blog post discusses our $500k investment in building the best 
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-10-14-a-500k-bet-to-build-the-best-platform-to-do-ai-using-financial-data.png"/>
+    <img width="600" src="/blog/2023-10-14-a-500k-bet-to-build-the-best-platform-to-do-ai-using-financial-data.webp"/>
 </p>
 
 <br />
@@ -76,4 +76,4 @@ To have an agent execute this entire workflow in a 1/10th of the time that it wo
 
 Check for yourself the example below,
 
-![image](/blog/2023-10-14-a-500k-bet-to-build-the-best-platform-to-do-ai-using-financial-data_1.png)
+![image](/blog/2023-10-14-a-500k-bet-to-build-the-best-platform-to-do-ai-using-financial-data_1.webp)

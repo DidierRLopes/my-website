@@ -2,7 +2,7 @@
 slug: how-i-created-a-bot-in-python-to-participate-in-nft-giveaways
 title: How I created a bot in python to participate in NFT giveaways
 date: 2021-09-30
-image: /blog/2021-09-30-how-i-created-a-bot-in-python-to-participate-in-nft-giveaways.png
+image: /blog/2021-09-30-how-i-created-a-bot-in-python-to-participate-in-nft-giveaways.webp
 tags:
 - python
 - bot
@@ -17,7 +17,7 @@ description: In this blogpost, I share how I created a bot in Python to automate
 
 
 <p align="center">
-    <img width="600" src="/blog/2021-09-30-how-i-created-a-bot-in-python-to-participate-in-nft-giveaways.png"/>
+    <img width="600" src="/blog/2021-09-30-how-i-created-a-bot-in-python-to-participate-in-nft-giveaways.webp"/>
 </p>
 
 <br />
@@ -46,7 +46,7 @@ _When demand exceeds supply_, **prices tend to rise.**
 
 And these creators are using Reddit as the platform of their giveaways.
 
-![image](/blog/2021-09-30-how-i-created-a-bot-in-python-to-participate-in-nft-giveaways_1.png)
+![image](/blog/2021-09-30-how-i-created-a-bot-in-python-to-participate-in-nft-giveaways_1.webp)
 
 When scrolling through reddit you will notice that all these posts have certain things in common:
 - They ask for an up-vote on the post
@@ -62,6 +62,6 @@ I’ve already won multiple NFTs with this, which is exciting— you never know 
 
 There’s actually 1 collection that I particularly like and believe has a lot of potential, it’s called [CryptoCartoonEaters](https://opensea.io/collection/crypto-cartooneaters) and due to the uniqueness of each collectible (only 100 made), I really think it has a great potential. I acquired my favourite cartoon as a kid: Goku Eating a Burger.
 
-![image](/blog/2021-09-30-how-i-created-a-bot-in-python-to-participate-in-nft-giveaways_2.png)
+![image](/blog/2021-09-30-how-i-created-a-bot-in-python-to-participate-in-nft-giveaways_2.webp)
 
 Let me know if you find this article interesting, and if you used the bot as well!

@@ -2,7 +2,7 @@
 slug: stop-doing-your-cv-in-word-or-latex
 title: Stop doing your CV in Word or LaTeX
 date: 2022-10-15
-image: /blog/2022-10-15-stop-doing-your-cv-in-word-or-latex.png
+image: /blog/2022-10-15-stop-doing-your-cv-in-word-or-latex.webp
 tags:
 - github
 - cv
@@ -16,7 +16,7 @@ description: The future of CVs for engineers and developers lies within GitHub. 
 
 
 <p align="center">
-    <img width="600" src="/blog/2022-10-15-stop-doing-your-cv-in-word-or-latex.png"/>
+    <img width="600" src="/blog/2022-10-15-stop-doing-your-cv-in-word-or-latex.webp"/>
 </p>
 
 <br />
@@ -35,7 +35,7 @@ In my humble opinion, this isn’t being talked enough. Previously, you needed a
 
 This is my current [GitHub profile page](https://github.com/DidierRLopes).
 
-![image](/blog/2022-10-15-stop-doing-your-cv-in-word-or-latex_1.png)
+![image](/blog/2022-10-15-stop-doing-your-cv-in-word-or-latex_1.webp)
 
 My profile page is now much simpler since I’ve worked on my [own personal website](https://didierrlopes.github.io/personal-website/), but you can see [here](https://github.com/DidierRLopes/DidierRLopes/tree/98c27cfb087fc8ce6986f4ea8136e76ca14f145b) what my GitHub profile page looked like before. Creating your own personalized website for me is the next step after GitHub, as you can be as creative as you want while showing off your coding skills.
 
@@ -45,7 +45,7 @@ The reason I think that GitHub profile’s are the CVs of the future for enginee
 
 With products like: https://ossinsight.io/analyze/DidierRLopes, you will be able to dive deeper on engineering skills than ever before.
 
-![image](/blog/2022-10-15-stop-doing-your-cv-in-word-or-latex_2.png)
+![image](/blog/2022-10-15-stop-doing-your-cv-in-word-or-latex_2.webp)
 
 Companies will be able to assess a candidate based on their open source work:
 
@@ -59,7 +59,7 @@ Companies will be able to assess a candidate based on their open source work:
 
 Imagine a world where everyone develops in the wild. You can see everything and be part of any project. You have your own profile, you talk with others through issues or PRs, you build together. There is no gender, no race, no nationality,.. people are conneced through projects they believe in. **In essence, this is the developer metaverse, and I’m all here for it.**
 
-![image](/blog/2022-10-15-stop-doing-your-cv-in-word-or-latex_3.png)
+![image](/blog/2022-10-15-stop-doing-your-cv-in-word-or-latex_3.webp)
 
 **EDIT:** The reader should be aware that nowadays a properly formatted resume is still critical when added to a job board. This is because automated resume readers expect a certain format in order to recommend candidates to companies and vice-versa.
 

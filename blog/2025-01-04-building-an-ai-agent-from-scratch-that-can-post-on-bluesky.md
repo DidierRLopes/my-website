@@ -2,7 +2,7 @@
 slug: building-an-ai-agent-from-scratch-that-can-post-on-bluesky
 title: Building an AI agent from scratch that can post on bluesky
 date: 2025-01-04
-image: /blog/2025-01-04-building-an-ai-agent-from-scratch-that-can-post-on-bluesky
+image: /blog/2025-01-04-building-an-ai-agent-from-scratch-that-can-post-on-bluesky.webp
 tags:
 - ai
 - agent
@@ -18,7 +18,7 @@ hideSidebar: true
 ---
 
 <p align="center">
-    <img width="900" src="/blog/2025-01-04-building-an-ai-agent-from-scratch-that-can-post-on-bluesky.png"/>
+    <img width="900" src="/blog/2025-01-04-building-an-ai-agent-from-scratch-that-can-post-on-bluesky.webp"/>
 </p>
 
 A practical guide to building an AI agent that processes Telegram messages through a local LLM, gathers context from various sources (OpenBB, Perplexity, Grok), and automatically posts content to Bluesky.
@@ -37,7 +37,7 @@ Over the Christmas break, I decided to explore the world of fine-tuning while as
 To make this experiment practical and engaging, I needed a well-defined use case. My objective was straightforward: to develop an agent capable of focusing on a specific topic, gathering external information, and crafting a post to share on Bluesky triggered by myself.
 
 <p align="center">
-    <img width="600" src="/blog/2025-01-04-building-an-ai-agent-from-scratch-that-can-post-on-bluesky_1.jpg"/>
+    <img width="600" src="/blog/2025-01-04-building-an-ai-agent-from-scratch-that-can-post-on-bluesky_1.webp"/>
 </p>
 
 This is the workflow we are looking at:
@@ -498,7 +498,7 @@ Finally, I merged it all together in [this file](https://github.com/DidierRLopes
 This is what the architecture looks like:
 
 <p align="center">
-    <img width="900" src="/blog/2025-01-04-building-an-ai-agent-from-scratch-that-can-post-on-bluesky.png"/>
+    <img width="900" src="/blog/2025-01-04-building-an-ai-agent-from-scratch-that-can-post-on-bluesky.webp"/>
 </p>
 
 ## Conclusion

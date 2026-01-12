@@ -2,7 +2,7 @@
 slug: gamestonk-terminal-the-next-best-thing-after-bloomberg-terminal
 title: Gamestonk Terminal - The next best thing after Bloomberg Terminal
 date: 2021-03-14
-image: /blog/2021-03-14-gamestonk-terminal-the-next-best-thing-after-bloomberg-terminal.png
+image: /blog/2021-03-14-gamestonk-terminal-the-next-best-thing-after-bloomberg-terminal.webp
 tags:
 - gamestonk-terminal
 - finance
@@ -16,7 +16,7 @@ description: In this blogpost, I introduce Gamestonk Terminal, an open-source pr
 
 
 <p align="center">
-    <img width="600" src="/blog/2021-03-14-gamestonk-terminal-the-next-best-thing-after-bloomberg-terminal_1.png"/>
+    <img width="600" src="/blog/2021-03-14-gamestonk-terminal-the-next-best-thing-after-bloomberg-terminal_1.webp"/>
 </p>
 
 <br />

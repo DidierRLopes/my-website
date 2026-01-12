@@ -2,7 +2,7 @@
 slug: we-dont-own-data-but-empower-those-who-do-or-those-who-have-it
 title: We don't own data. But empower those who do or those who have it
 date: 2025-07-30
-image: /blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it
+image: /blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it.webp
 tags:
   - openbb
   - data
@@ -20,7 +20,7 @@ hide: true
 ---
 
 <p align="center">
-    <img width="600" src="/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it.png" />
+    <img width="600" src="/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it.webp" />
 </p>
 
 OpenBB isn't a data distributor. We wrote an official statement about this, and I'm providing extra thoughts on the matter here.
@@ -81,7 +81,7 @@ But we're not leaving you empty-handed.
 We're continuing to add more apps to the [open-source platform](https://github.com/OpenBB-finance/OpenBB).
 
 <p align="center">
-    <img width="600" src="/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it_1.png" />
+    <img width="600" src="/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it_1.webp" />
 </p>
 
 Apps you can connect to the Workspace using your own credentials, so you can get started quickly and on your own terms.
@@ -89,11 +89,11 @@ Apps you can connect to the Workspace using your own credentials, so you can get
 We also created a new [solutions page](https://openbb.co/blog/solutions), to show examples of apps that folks can build.
 
 <p align="center">
-    <img width="600" src="/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it_2.png" />
+    <img width="600" src="/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it_2.webp" />
 </p>
 
 Most of these are actually open source and you can find the link by clicking on one of the cards and on the GitHub logo.
 
 <p align="center">
-    <img width="600" src="/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it_3.png" />
+    <img width="600" src="/blog/2025-07-30-we-dont-own-data-but-empower-those-who-do-or-those-who-have-it_3.webp" />
 </p>

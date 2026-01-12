@@ -2,7 +2,7 @@
 slug: an-unusual-journey-learning-about-nns-for-a-phd-thesis
 title: An unusual journey learning about NNs for a PhD thesis
 date: 2021-10-22
-image: /blog/2021-10-22-an-unusual-journey-learning-about-nns-for-a-phd-thesis.png
+image: /blog/2021-10-22-an-unusual-journey-learning-about-nns-for-a-phd-thesis.webp
 tags:
 - phd-thesis
 - neural-networks
@@ -14,7 +14,7 @@ tags:
 
 
 <p align="center">
-    <img width="600" src="/blog/2021-10-22-an-unusual-journey-learning-about-nns-for-a-phd-thesis.png"/>
+    <img width="600" src="/blog/2021-10-22-an-unusual-journey-learning-about-nns-for-a-phd-thesis.webp"/>
 </p>
 
 <br />
@@ -47,14 +47,14 @@ During this time, Filipe was also working full-time as he was a teaching assista
 
 My character waiting for people to join my chatroom to discuss our poster.
 
-![image](/blog/2021-10-22-an-unusual-journey-learning-about-nns-for-a-phd-thesis_1.png)
+![image](/blog/2021-10-22-an-unusual-journey-learning-about-nns-for-a-phd-thesis_1.webp)
 
 Last week, at XXV Congress of the Portuguese Statistical Society (SPE 2021), we presented:
 
 - A poster that you can find [here](https://www.researchgate.net/publication/355360806_Forecasting_models_for_time-series_a_comparative_study_between_classical_methodologies_and_Deep_Learning), titled: _“Forecasting models for time-series: a comparative study between classical methodologies and Deep Learning”_
 - A presentation that you can find [here](https://www.researchgate.net/publication/355360897_Explorando_o_poder_da_memoria_das_redes_neuronais_LSTM_na_modelacao_e_previsao_do_PSI_20), titled: _“Explorando o poder da memória das redes neuronais LSTM na modelação e previsão do PSI 20”_
 
-![image](/blog/2021-10-22-an-unusual-journey-learning-about-nns-for-a-phd-thesis_2.png)
+![image](/blog/2021-10-22-an-unusual-journey-learning-about-nns-for-a-phd-thesis_2.webp)
 
 The poster above was presented at XXV Congress of the Portuguese Statistical Society (SPE 2021).
 

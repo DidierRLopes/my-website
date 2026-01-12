@@ -2,7 +2,7 @@
 slug: what-if-you-could-access-an-openbb-widget-on-excel
 title: What if... you could access an OpenBB widget on Excel?
 date: 2025-08-05
-image: /blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel
+image: /blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel.webp
 tags:
   - openbb
   - excel
@@ -16,7 +16,7 @@ hideSidebar: true
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel.png" />
+    2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel.webp" />
 </p>
 
 This post introduces a new integration that allows users to embed dynamic OpenBB widgets directly into Excel.
@@ -43,7 +43,7 @@ A specific widget may look like this:
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_1.png" />
+    2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_1.webp" />
 </p>
 
 Where in red you have the parameters that can be modified on the frontend, and in green you have the data associated with it.
@@ -54,7 +54,7 @@ So you could do something like this:
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_2.png" />
+    2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_2.webp" />
 </p>
 
 This is great!
@@ -87,7 +87,7 @@ Here’s what the POC entailed in a nutshell:
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_3.png" />
+    2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_3.webp" />
 </p>
 
 I created a distinction between "**implicit**" and "**explicit**".
@@ -98,14 +98,14 @@ This is where the "**explicit**" concept comes in, mimicking an OpenBB widget.
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_4.png" />
+    2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_4.webp" />
 </p>
 
 So, when you copy-paste into Excel, this is what you get out-of-the-box.
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_5.png" />
+    2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_5.webp" />
 </p>
 
 Notice the analogy with an OpenBB widget, users can modify parameters and have the latest data fetched automatically. All achieved programmatically.

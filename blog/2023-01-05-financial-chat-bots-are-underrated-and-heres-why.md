@@ -2,7 +2,7 @@
 slug: financial-chat-bots-are-underrated-and-heres-why
 title: Financial chat bots are underrated, and here’s why.
 date: 2023-01-05
-image: /blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why.png
+image: /blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why.webp
 tags:
 - chatbots
 - finance
@@ -17,7 +17,7 @@ description: In this blog post, we discuss the underrated potential of financial
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why.png"/>
+    <img width="600" src="/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why.webp"/>
 </p>
 
 <br />
@@ -46,7 +46,7 @@ I believe that one of the reasons for this is because people usually associate c
 
 If I ask ChatGPT about this, the main reasons are: Lack of personalized conversation, limited capabilities, poor design and high error rate.
 
-![image](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_1.png)
+![image](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_1.webp)
 
 But wait.. ChatGPT is **LITERALLY** a chat bot. Everything happens through a chat interface, which shows that you can build a successful product as a bot, as long as it adds enough value to the user.
 
@@ -60,7 +60,7 @@ A testament to this is the fact that [midjourney](https://midjourney.com/) has b
 
 As far as I know, this is the only example of a company that distributes their product solely through a chatting platform in a successful way.
 
-![image](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_2.png)
+![image](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_2.webp)
 
 ## Why are chat bots getting more popular?
 
@@ -70,55 +70,55 @@ In my opinion, there are a few factors why chat bots are becoming more popular:
 
 The bots are becoming more interactive, almost working like an application within a chatting platform.
 
-![interactivity](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_3.png)
+![interactivity](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_3.webp)
 
 ### Speed
 
 The speed of interaction is increasing over time, making the experience more seamless.
 
-![speed](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_4.png)
+![speed](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_4.webp)
 
 ### Customization
 
 The level of customization allowed for these bots keeps on increasing.
 
-![customization](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_5.png)
+![customization](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_5.webp)
 
 ### Automation
 
 You are starting to be able to create automated workflows. Not only for you, but for entire communities.
 
-![automation](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_6.png)
+![automation](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_6.webp)
 
 ### Notifications
 
 It has notification features that can ping you similarly as if a friend sent you a message.
 
-![notifications](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_7.png)
+![notifications](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_7.webp)
 
 ### Monetization
 
 You are going to start to be able to monetize products through it.
 
-![monetization](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_8.png)
+![monetization](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_8.webp)
 
 ### Community
 
 You can use it within a server with friends/colleagues, and unlock a better user experience.
 
-![community](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_9.png)
+![community](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_9.webp)
 
 ### Standardization
 
 The product can work similarly on multiple chatting platforms. By keeping the same method of interaction / commands, the user is allowed to pick their favourite chatting platform or even use it in more than 1.
 
-![standardization](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_10.png)
+![standardization](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_10.webp)
 
 ### Accessibility
 
 These chatting platforms are developed for all devices and operating systems, making it a very powerful distribution system.
 
-![last](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_11.png)
+![last](/blog/2023-01-05-financial-chat-bots-are-underrated-and-heres-why_11.webp)
 
 ## Why Finance?
 

@@ -2,7 +2,7 @@
 slug: is-prompt-engineering-dead-the-case-for-test-driven-ai-development
 title: Is Prompt Engineering dead? The case for Test-Driven AI Development
 date: 2025-07-17
-image: /blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development
+image: /blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development.webp
 tags:
   - ai
   - prompt-engineering
@@ -18,7 +18,7 @@ hideSidebar: true
 ---
 
 <p align="center">
-    <img width="600" src="/blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development.png" />
+    <img width="600" src="/blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development.webp" />
 </p>
 
 This post explores Test-Driven AI Development, where AI writes its own tests and prompts, potentially making manual prompt engineering obsolete. It covers how self-improving AI systems can be built and the implications of this paradigm shift.
@@ -120,7 +120,7 @@ Here's where it gets interesting: **the AI agent itself is a combination of Prom
 When we use the same LLM to improve the prompt as the one our agent is built on, we create a self-reinforcing loop.
 
 <p align="center">
-    <img width="900" src="/blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development_1.png" />
+    <img width="900" src="/blog/2025-07-17-is-prompt-engineering-dead-the-case-for-test-driven-ai-development_1.webp" />
     <em style={{opacity: 0.9}}>Real example of me utilizing this for our production tests</em>
 </p>
 

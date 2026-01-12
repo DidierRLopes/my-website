@@ -2,7 +2,7 @@
 slug: stop-building-ai-products-start-building-workflows
 title: Stop building AI products, start building workflows
 date: 2025-04-03
-image: /blog/2025-04-03-stop-building-ai-products-start-building-workflows
+image: /blog/2025-04-03-stop-building-ai-products-start-building-workflows.webp
 tags:
 - ai
 - product-strategy
@@ -20,7 +20,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="600" src="/blog/2025-04-03-stop-building-ai-products-start-building-workflows.png" />
+    <img width="600" src="/blog/2025-04-03-stop-building-ai-products-start-building-workflows.webp" />
 </p>
 
 The secret to building defensible AI companies isn't better AI - it's better workflows. An insider's perspective on why some AI companies thrive while others will become obsolete with each new model release.
@@ -231,7 +231,7 @@ And we'll keep expanding how many workflows can be done on OpenBB—ultimately w
 Here's an example of an application built on OpenBB in just a couple of days by one of our engineers, for a workshop we're putting together with risk managers:
 
 <p align="center">
-    <img width="900" src="/blog/2025-04-03-stop-building-ai-products-start-building-workflows_1.jpeg" />
+    <img width="900" src="/blog/2025-04-03-stop-building-ai-products-start-building-workflows_1.webp" />
 </p>
 
 This highlights not only what we've built, but also how quickly we can delight customers on top of our product.

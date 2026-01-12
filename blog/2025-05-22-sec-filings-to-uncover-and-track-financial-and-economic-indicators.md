@@ -2,7 +2,7 @@
 slug: sec-filings-to-uncover-and-track-financial-and-economic-indicators
 title: SEC filings to uncover and track financial and economic indicators
 date: 2025-05-22
-image: /blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators
+image: /blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators.webp
 tags:
   - sec-filings
   - financial-indicators
@@ -18,7 +18,7 @@ hideSidebar: true
 ---
 
 <p align="center">
-    <img width="600" src="/blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators.png" />
+    <img width="600" src="/blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators.webp" />
 </p>
 
 This post explores how SEC filings can be used to uncover and track financial and economic indicators. It showcases an open-source OpenBB app that visualizes this data, providing valuable insights for investment research and market trend analysis.
@@ -38,8 +38,8 @@ It processes topic mentions from regulatory filings and turns them into standard
 I found the data so compelling that I built and hosted an OpenBB app around it.
 
 <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1em'}}>
-    <img width="500" src="/blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators_1.jpeg" />
-    <img width="500" src="/blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators_2.jpeg" />
+    <img width="500" src="/blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators_1.webp" />
+    <img width="500" src="/blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators_2.webp" />
 </div>
 <br />
 
@@ -48,13 +48,13 @@ The app offers a wide range of indexes across key domains, including DEI and ESG
 And then I made it available to everyone.
 
 <p align="center">
-    <img width="300" src="/blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators_3.jpeg" />
+    <img width="300" src="/blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators_3.webp" />
 </p>
 
 In fact, I [shared this on LinkedIn](https://www.linkedin.com/posts/didier-lopes_a-few-days-ago-justin-lokos-shared-a-fascinating-activity-7332437330659549185-4jVk?utm_source=share&utm_medium=member_desktop&rcm=ACoAABub6aIBaA7HieEI5VizHglQPohLA_Wptag) and asked people interested on the app to comment and the post got close to 20k impressions.
 
 <p align="center">
-    <img width="400" src="/blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators_4.png" />
+    <img width="400" src="/blog/2025-05-22-sec-filings-to-uncover-and-track-financial-and-economic-indicators_4.webp" />
 </p>
 
 My friend [Caique](https://www.linkedin.com/in/ca%C3%ADque-cober-117bbb1ab/) does this often and has seen a lot of people asking for the apps from OpenBB.

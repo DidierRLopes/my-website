@@ -2,7 +2,7 @@
 slug: my-journey-of-memorising-a-deck-of-52-shuffled-cards
 title: My journey of memorising a deck of 52 shuffled cards
 date: 2021-06-26
-image: /blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards.png
+image: /blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards.webp
 tags:
 - memory-training
 - pao-system
@@ -19,7 +19,7 @@ description: In this blogpost, I share my journey of memorising a deck of 52 shu
 
 
 <p align="center">
-    <img width="600" src="/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards.png"/>
+    <img width="600" src="/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards.webp"/>
 </p>
 
 <br />
@@ -44,7 +44,7 @@ If you're interested, here's a [nice review](https://www.theguardian.com/science
 
 After finishing this book, more than anything I was curious. Unlike Joshua Foer, I didn't want to dedicate a full year to the cause, but I still wanted to give it a go so I could look back and think: "Here's something pretty useless for the day-to-day. Yet, how cool is that I can memorise 52 random cards?"".
 
-![image](/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards_1.png)
+![image](/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards_1.webp)
 
 For people who know me, they know how much I hate to leave things unfinished. Whether that's a task that I set myself, or 'just' not leaving any pizza leftover. Therefore, I knew that if I really wanted to do this, I'd have to set aside time for it, and so I did. The text under is my journey to memorise a shuffled deck of 52 cards.
 
@@ -73,7 +73,7 @@ For each card of the deck you have to have an associated _Person_, _Action_ and 
 
 Below you can see what the table looks like:
 
-![image](/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards_2.png)
+![image](/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards_2.webp)
 
 **Note:** The Person is the main existing link, hence it needs to be something that you think of immediately when the category and the type of the card is known.
 
@@ -85,7 +85,7 @@ Once the table above is filled in, the next step is to associate each card with 
 
 For instance:
 
-![image](/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards_3.png)
+![image](/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards_3.webp)
 
 **Jack ♦: Einstein — Writing Equations — Blackboard**
 
@@ -109,7 +109,7 @@ This is the easiest step. I used the house I grew up in in Portugal, and decided
 
 Since I'm not living in Portugal, let me show you what I mean by using a picture of my current living room in London. The spots I would select in here would have been: 1. Top of table with candles; 2. Top of side table; 3. Inside my gecko's vivarium; 4. As a program on the TV.
 
-![image](/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards_4.png)
+![image](/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards_4.webp)
 
 **Note: Make sure you always remember your memory palace spots, otherwise you may overlook them once looking for the next 3 set of cards.** The way I think about this is imagining that I lost my keys, and mentally going back in time to try to understand where they could be.
 
@@ -130,7 +130,7 @@ Let's imagine we've got the cards aforementioned.
 
 In my brain, this would lead to
 
-![image](/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards_5.png)
+![image](/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards_5.webp)
 
 **Note: At this point you may realise that some combos of cards don't work well together. **If this is bad enough to not make you remember the 3 card PAO, I recommend updating your PAO system to something that's easier to generalise.
 
@@ -138,7 +138,7 @@ In my brain, this would lead to
 
 For instance, if I were to place the **Einstein Skipping with Blonde Hair** on the **3rd spot of my living room (my gecko's vivarium)**, in my head, I would picture something like this:
 
-![image](/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards_6.png)
+![image](/blog/2021-06-26-my-journey-of-memorising-a-deck-of-52-shuffled-cards_6.webp)
 
 **Note: I recommend trying to have the 3 card PAO interacting with the environment to improve memory.** In this case, I would have thought about the Blonde Skipping Einstein having to do skipping so fast that the gecko coudn't come close because the rope was going too fast. The more original/different, the more chances you have to remember this scenario.
 

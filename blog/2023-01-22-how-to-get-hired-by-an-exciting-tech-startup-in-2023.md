@@ -2,7 +2,7 @@
 slug: how-to-get-hired-by-an-exciting-tech-startup-in-2023
 title: How to get hired by an exciting tech startup in 2023
 date: 2023-01-22
-image: /blog/2023-01-22-how-to-get-hired-by-an-exciting-tech-startup-in-2023.png
+image: /blog/2023-01-22-how-to-get-hired-by-an-exciting-tech-startup-in-2023.webp
 tags:
 - career-advice
 - tech-startups
@@ -18,7 +18,7 @@ description: The future is a strange place. We’re not entirely sure what it wi
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-01-22-how-to-get-hired-by-an-exciting-tech-startup-in-2023.png"/>
+    <img width="600" src="/blog/2023-01-22-how-to-get-hired-by-an-exciting-tech-startup-in-2023.webp"/>
 </p>
 
 <br />
@@ -54,7 +54,7 @@ This means that you can:
 
 With Red Hat in the 90s this open source movement is starting to be a very hot topic. [Joseph Jacks](https://twitter.com/JosephJacks_) from OSS Capital is one of the best investors (if not the best) in this space. The chart below that he put together illustrates well the growth of open source (shared in [this tweet](https://twitter.com/JosephJacks_/status/1494840009882361859?s=20))
 
-![image](/blog/2023-01-22-how-to-get-hired-by-an-exciting-tech-startup-in-2023_1.png)
+![image](/blog/2023-01-22-how-to-get-hired-by-an-exciting-tech-startup-in-2023_1.webp)
 
 ### Strategic
 

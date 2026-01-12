@@ -2,7 +2,7 @@
 slug: ui-layer-is-the-next-big-frontier
 title: UI layer is the next big frontier
 date: 2025-02-25
-image: /blog/2025-02-25-ui-layer-is-the-next-big-frontier
+image: /blog/2025-02-25-ui-layer-is-the-next-big-frontier.webp
 tags:
 - openbb
 - fintech
@@ -19,7 +19,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="900" src="/blog/2025-02-25-ui-layer-is-the-next-big-frontier.png" />
+    <img width="900" src="/blog/2025-02-25-ui-layer-is-the-next-big-frontier.webp" />
 </p>
 
 A deep dive into why the UI layer represents the next major frontier in financial technology.
@@ -53,7 +53,7 @@ And OpenBB is here to bootstrap that revolution.
 ## The challenge at the delivery stage
 
 <p align="center">
-    <img width="600" src="/blog/2025-02-25-ui-layer-is-the-next-big-frontier_1.png" />
+    <img width="600" src="/blog/2025-02-25-ui-layer-is-the-next-big-frontier_1.webp" />
     <p align="center" className="mt-1" style={{fontSize: "0.75em"}}>
         <div>Excerpt from <a href="https://x.com/TheTerminalist" target="_blank" rel="noopener noreferrer">TheTerminalist</a>'s blogpost: </div>
         <a href="https://open.substack.com/pub/theterminalist/p/10000x-bloombergs-return-and-why" target="_blank" rel="noopener noreferrer">10,000x. Bloomberg's return and why financial data is so darn lucrative</a>
@@ -77,7 +77,7 @@ Building a beloved financial desktop application isn't just about better charts 
 The industry's reliance on fragmented workflows has meant that firms have learned to tolerate inefficiencies, simply because "it works."
 
 <p align="center">
-    <img width="600" src="/blog/2025-02-25-ui-layer-is-the-next-big-frontier_2.png" />
+    <img width="600" src="/blog/2025-02-25-ui-layer-is-the-next-big-frontier_2.webp" />
     <p align="center" className="mt-1" style={{fontSize: "0.75em"}}>
         <div>Excerpt from <a href="https://x.com/TheTerminalist" target="_blank" rel="noopener noreferrer">TheTerminalist</a>'s blogpost: </div>
         <a href="https://open.substack.com/pub/theterminalist/p/10000x-bloombergs-return-and-why" target="_blank" rel="noopener noreferrer">10,000x. Bloomberg's return and why financial data is so darn lucrative</a>
@@ -103,7 +103,7 @@ That's why the biggest demand we've seen is for on-prem deployments, ensuring se
 ## Timing matters: why now?
 
 <p align="center">
-    <img width="600" src="/blog/2025-02-25-ui-layer-is-the-next-big-frontier_3.png" />
+    <img width="600" src="/blog/2025-02-25-ui-layer-is-the-next-big-frontier_3.webp" />
     <p align="center" className="mt-1" style={{fontSize: "0.75em"}}>
         <div>Excerpt from <a href="https://x.com/TheTerminalist" target="_blank" rel="noopener noreferrer">TheTerminalist</a>'s blogpost: </div>
         <a href="https://open.substack.com/pub/theterminalist/p/10000x-bloombergs-return-and-why" target="_blank" rel="noopener noreferrer">10,000x. Bloomberg's return and why financial data is so darn lucrative</a>

@@ -2,7 +2,7 @@
 slug: building-a-custom-widget-for-my-friends-newsletter
 title: Building a custom widget for my friends newsletter
 date: 2025-03-03
-image: /blog/2025-03-03-building-a-custom-widget-for-my-friends-newsletter
+image: /blog/2025-03-03-building-a-custom-widget-for-my-friends-newsletter.webp
 tags:
 - openbb
 - widget
@@ -19,7 +19,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-03-building-a-custom-widget-for-my-friends-newsletter.png" />
+    <img width="900" src="/blog/2025-03-03-building-a-custom-widget-for-my-friends-newsletter.webp" />
 </p>
 
 How I built a custom OpenBB widget to save my friend hours of manual work on his newsletter with 190,000+ subscribers.
@@ -61,7 +61,7 @@ More than that - to celebrate 1 year of Opening Bell Daily:
 Or you can also sign up to Phil's newsletter and get it in your inbox along with insightful content, every day!
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-03-building-a-custom-widget-for-my-friends-newsletter_1.png" />
+    <img width="900" src="/blog/2025-03-03-building-a-custom-widget-for-my-friends-newsletter_1.webp" />
 </p>
 
 PS: I have made this code [open source](https://github.com/DidierRLopes/opening-bell-daily-openbb) so others can create their own widgets for OpenBB or get inspired.

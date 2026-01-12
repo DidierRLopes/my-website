@@ -2,7 +2,7 @@
 slug: openbb-mobile-app-coming-soon
 title: OpenBB Mobile App - Coming soon
 date: 2024-10-05
-image: /blog/2024-10-05-openbb-mobile-app-coming-soon.png
+image: /blog/2024-10-05-openbb-mobile-app-coming-soon.webp
 tags:
 - openbb
 - mobile-app
@@ -19,7 +19,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="600" src="/blog/2024-10-05-openbb-mobile-app-coming-soon.png"/>
+    <img width="600" src="/blog/2024-10-05-openbb-mobile-app-coming-soon.webp"/>
 </p>
 
 How we built a mobile app, in 1 evening, with 1 engineer.
@@ -55,7 +55,7 @@ This web app has been built over 2 years and all workflows, tests, and iteration
 Jose sent me a video of a mobile version somewhat polished. It had the same UX as the terminal, but it rendered nicely on mobile.
 
 <p align="center">
-    <img width="900" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_2.png"/>
+    <img width="900" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_2.webp"/>
 </p>
 
 Given that we were aiming at adoption, he believed it was important for users to be able to access the terminal through their phones on the web.
@@ -73,19 +73,19 @@ So, I asked Rita to create a few mobile mockups for me - the idea was to improve
 That same evening, she shared these mockups with me:
 
 <p align="center">
-    <img width="900" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_3.png"/>
+    <img width="900" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_3.webp"/>
 </p>
 
 I promptly shared in a group with her and Jose - this was 7:35 pm my time, which would be 0:35 am their time.
 
 <p align="center">
-    <img width="900" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_4.png"/>
+    <img width="900" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_4.webp"/>
 </p>
 
 In less than 24 hours the bulk of the mockups had been implemented.
 
 <p align="center">
-    <img width="900" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_5.png"/>
+    <img width="900" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_5.webp"/>
 </p>
 
 ### Progressive Web Apps (PWAs)
@@ -95,19 +95,19 @@ On that same day, after Jose shared the bulk of mockups implemented.
 I sent him this message at 8:55 pm EST (1:55 am Portugal time for Jose).
 
 <p align="center">
-    <img width="900" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_7.png"/>
+    <img width="900" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_7.webp"/>
 </p>
 
 To which he replied:
 
 <p align="center">
-    <img width="900" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_8.png"/>
+    <img width="900" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_8.webp"/>
 </p>
 
 I was right, it didn't take him 30s. But it didn't take him much longer (15 minutes).
 
 <p align="center">
-    <img width="900" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_9.png"/>
+    <img width="900" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_9.webp"/>
 </p>
 
 15 minutes to have OpenBB as an application on my phone.
@@ -117,7 +117,7 @@ I was mind-blown.
 We iterated on it for an additional 1h30m together, until we had something we would be proud to share with the team the following day.
 
 <p align="center">
-    <img width="300" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_10.png"/>
+    <img width="300" src="/blog/2024-10-05-openbb-mobile-app-coming-soon_10.webp"/>
 </p>
 
 We still had to iterate on a few more areas and involve more people from the team. But the bulk of the mobile app was done.

@@ -2,7 +2,7 @@
 slug: web3-symbols-and-community
 title: Web3, symbols and community
 date: 2022-06-28
-image: /blog/2022-06-28-web3-symbols-and-community.png
+image: /blog/2022-06-28-web3-symbols-and-community.webp
 tags:
 - web3
 - community
@@ -16,7 +16,7 @@ description: This blog post discusses the importance of strong communities in th
 
 
 <p align="center">
-    <img width="600" src="/blog/2022-06-28-web3-symbols-and-community.png"/>
+    <img width="600" src="/blog/2022-06-28-web3-symbols-and-community.webp"/>
 </p>
 
 <br />
@@ -55,7 +55,7 @@ Once this happens we enter into the law of supply and demand where the value of 
 
 These communities can easily be found on CT or Discord/Telegram servers.
 
-![image](/blog/2022-06-28-web3-symbols-and-community_1.png)
+![image](/blog/2022-06-28-web3-symbols-and-community_1.webp)
 
 ### How are strong communities created?
 
@@ -70,7 +70,7 @@ This can be seen over and over again on Web3, particularly in CT:
 - Utilizing the NFT you acquired from a collection that you believe in
 - Adding a “.eth” at the end of the username
 
-![image](/blog/2022-06-28-web3-symbols-and-community_2.png)
+![image](/blog/2022-06-28-web3-symbols-and-community_2.webp)
 
 ### Why does this matter?
 
@@ -92,20 +92,20 @@ In order for our users to start relating to the butterfly emoji (🦋) with our 
 
 - On the landing page
 
-![image](/blog/2022-06-28-web3-symbols-and-community_3.png)
+![image](/blog/2022-06-28-web3-symbols-and-community_3.webp)
 
 - Official social media channels
 - Our team members use it in their socials
 
-![image](/blog/2022-06-28-web3-symbols-and-community_4.png)
+![image](/blog/2022-06-28-web3-symbols-and-community_4.webp)
 
 - On the OpenBB Terminal as the default flair,
 
-![image](/blog/2022-06-28-web3-symbols-and-community_5.png)
+![image](/blog/2022-06-28-web3-symbols-and-community_5.webp)
 
 And even to replace the asterisk (*) when inserting the password to enter our OpenBB Bot platform, **because details matter.**
 
-![image](/blog/2022-06-28-web3-symbols-and-community_6.png)
+![image](/blog/2022-06-28-web3-symbols-and-community_6.webp)
 
 And that is what we are doing at OpenBB to build a stronger community? Do you have any other tips/tricks? Feel free to share them!
 

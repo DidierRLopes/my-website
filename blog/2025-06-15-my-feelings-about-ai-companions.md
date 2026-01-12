@@ -2,7 +2,7 @@
 slug: my-feelings-about-ai-companions
 title: My feelings about AI companions
 date: 2025-06-15
-image: /blog/2025-06-15-my-feelings-about-ai-companions
+image: /blog/2025-06-15-my-feelings-about-ai-companions.webp
 tags:
 - ai
 - ai-companions
@@ -17,7 +17,7 @@ hideSidebar: true
 ---
 
 <p align="center">
-    <img width="600" src="/blog/2025-06-15-my-feelings-about-ai-companions.png" />
+    <img width="600" src="/blog/2025-06-15-my-feelings-about-ai-companions.webp" />
 </p>
 
 It's no longer a matter of IF, but a matter of WHEN. AI companions are coming.
@@ -33,7 +33,7 @@ Mass adoption will take time, but their emergence feels inevitable.
 [Dan](https://www.linkedin.com/in/dsiroker)'s tagline - "_everything you've seen, said, and heard_" - is actually a pretty accurate depiction of where we're headed.
 
 <p align="center">
-    <img width="600" src="/blog/2025-06-15-my-feelings-about-ai-companions_1.png" />
+    <img width="600" src="/blog/2025-06-15-my-feelings-about-ai-companions_1.webp" />
 </p>
 
 Does that excite me?
@@ -75,7 +75,7 @@ And instead of making irrational choices, the kind that make us human, you start
 At some point, it may start to feel like we're living in the movie "In Time", with a clock ticking down our remaining time on Earth.
 
 <p align="center">
-    <img width="600" src="/blog/2025-06-15-my-feelings-about-ai-companions_2.png" />
+    <img width="600" src="/blog/2025-06-15-my-feelings-about-ai-companions_2.webp" />
 </p>
 
 But it's not just that.

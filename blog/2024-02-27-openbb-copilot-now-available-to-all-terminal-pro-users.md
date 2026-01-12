@@ -2,7 +2,7 @@
 slug: openbb-copilot-now-available-to-all-terminal-pro-users
 title: OpenBB Copilot is now available to all Terminal Pro users
 date: 2024-02-27
-image: /blog/2024-02-27-openbb-copilot-now-available-to-all-terminal-pro-users.png
+image: /blog/2024-02-27-openbb-copilot-now-available-to-all-terminal-pro-users.webp
 tags:
 - openbb
 - copilot
@@ -16,7 +16,7 @@ description: Introducing the OpenBB Copilot, an ever-present financial analyst a
 
 
 <p align="center">
-    <img width="600" src="/blog/2024-02-27-openbb-copilot-now-available-to-all-terminal-pro-users.png"/>
+    <img width="600" src="/blog/2024-02-27-openbb-copilot-now-available-to-all-terminal-pro-users.webp"/>
 </p>
 
 For the past few weeks, we’ve been working on the OpenBB Copilot, an ever-present financial analyst at your fingertips with the OpenBB Terminal Pro.

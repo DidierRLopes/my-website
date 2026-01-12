@@ -2,7 +2,7 @@
 slug: goodbye-openbb-sdk-hello-openbb-platform
 title: Goodbye OpenBB SDK. Hello OpenBB Platform
 date: 2023-11-29
-image: /blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform.png
+image: /blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform.webp
 tags:
 - openbb
 - platform
@@ -15,7 +15,7 @@ description: Today, we are thrilled to announce the new OpenBB SDK, a game-chang
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform.png"/>
+    <img width="600" src="/blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform.webp"/>
 </p>
 
 <br />
@@ -93,19 +93,19 @@ In order to adhere to one of OpenBB's core values - Transparency - we want you t
 So, for the first time, we're sharing a confidential email thread that circulated among our entire team. This thread provides insight into our thought process when it comes to handling large projects at OpenBB.
 
 <p align="center">
-    <img width="600" src="/blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform_1.png"/>
+    <img width="600" src="/blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform_1.webp"/>
 </p>
 
 <p align="center">
-    <img width="600" src="/blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform_2.png"/>
+    <img width="600" src="/blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform_2.webp"/>
 </p>
 
 <p align="center">
-    <img width="600" src="/blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform_3.png"/>
+    <img width="600" src="/blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform_3.webp"/>
 </p>
 
 <p align="center">
-    <img width="600" src="/blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform_4.png"/>
+    <img width="600" src="/blog/2023-11-29-goodbye-openbb-sdk-hello-openbb-platform_4.webp"/>
 </p>
 
 Over the next few weeks we will keep iterating on our Platform, based on user feedback, so we can keep pushing for a platform that can be adopted by everyone - from professional investors, data scientists, quants, to students.

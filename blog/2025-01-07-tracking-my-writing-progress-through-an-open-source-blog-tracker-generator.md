@@ -2,7 +2,7 @@
 slug: tracking-my-writing-progress-through-an-open-source-blog-tracker-generator
 title: Tracking my writing progress through an open source blog tracker generator
 date: 2025-01-07
-image: /blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator
+image: /blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator.webp
 tags:
 - writing
 - productivity
@@ -19,7 +19,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="900" src="/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator.png"/>
+    <img width="900" src="/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator.webp"/>
 </p>
 
 Learn how I built an open-source tool that generates beautiful SVG visualizations of your blog post history, supporting both JSON and ATOM XML feeds. Perfect for keeping yourself accountable and monitoring your writing progress over time.
@@ -45,7 +45,7 @@ But I love programming, so I try to hop into Cursor at least once a day (every d
 So, in order to keep myself accountable I bought a DeskHub which sits on my desk and I use to keep track of when I am shipping.
 
 <p align="center">
-    <img width="600" src="/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_1.jpeg"/>
+    <img width="600" src="/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_1.webp"/>
 </p>
 
 I am less interested in the quality and quantity, but that every day I open Cursor and do one of the following:
@@ -95,7 +95,7 @@ Example: <a href="https://didierlopes.com/blog/feed.json" target="_blank" rel="n
 <br/>
 
 <p align="center">
-    <img width="900" src="/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_2.png"/>
+    <img width="900" src="/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_2.webp"/>
 </p>
   </TabItem>
   <TabItem value="atom" label="ATOM XML">
@@ -105,7 +105,7 @@ Example: <a href="https://simonwillison.net/tags/datasette.atom" target="_blank"
 <br/>
 
 <p align="center">
-    <img width="900" src="/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_3.png"/>
+    <img width="900" src="/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_3.webp"/>
 </p>
 
   </TabItem>
@@ -122,7 +122,7 @@ Example: <a href="https://simonwillison.net/tags/datasette.atom" target="_blank"
 
 <br/>
 <p align="center">
-    <img width="900" src="/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_4.png"/>
+    <img width="900" src="/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_4.webp"/>
 </p>
 
 3. Run the workflow.
@@ -134,7 +134,7 @@ Example: <a href="https://simonwillison.net/tags/datasette.atom" target="_blank"
 
 <br/>
 <p align="center">
-    <img width="900" src="/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_5.png"/>
+    <img width="900" src="/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_5.webp"/>
 </p>  
 
 That's it.
@@ -142,7 +142,7 @@ That's it.
 The SVG will be available here: [./output/blog-history.svg](https://github.com/DidierRLopes/blog-history-generator/blob/main/output/blog-history.svg).
 
 <p align="center">
-    <img width="900" src="/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_6.png"/>
+    <img width="900" src="/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_6.webp"/>
 </p>
 
 ## More customization
@@ -168,5 +168,5 @@ npm run generate
 If for some reason you want this widget to be interactive, you can check [this](https://github.com/DidierRLopes/my-website/blob/main/src/components/BlogHistory.tsx) which is the one I used to integrate into [my homepage](/).
 
 <p align="center">
-    <img width="900" src="/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_7.png"/>
+    <img width="900" src="/blog/2025-01-07-tracking-my-writing-progress-through-an-open-source-blog-tracker-generator_7.webp"/>
 </p>

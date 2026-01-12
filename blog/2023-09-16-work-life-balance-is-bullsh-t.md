@@ -2,7 +2,7 @@
 slug: work-life-balance-is-bullsh-t
 title: Work-life balance is bullsh*t
 date: 2023-09-16
-image: /blog/2023-09-16-work-life-balance-is-bullsh-t.png
+image: /blog/2023-09-16-work-life-balance-is-bullsh-t.webp
 tags:
 - work-life-balance
 - success
@@ -17,7 +17,7 @@ description: This blog post challenges the concept of work-life balance, arguing
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-09-16-work-life-balance-is-bullsh-t.png"/>
+    <img width="600" src="/blog/2023-09-16-work-life-balance-is-bullsh-t.webp"/>
 </p>
 
 <br />

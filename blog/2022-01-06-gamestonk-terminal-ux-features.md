@@ -2,7 +2,7 @@
 slug: gamestonk-terminal-ux-features
 title: UX/UI is better than features
 date: 2022-01-06
-image: /blog/2022-01-06-gamestonk-terminal-ux-features.png
+image: /blog/2022-01-06-gamestonk-terminal-ux-features.webp
 tags:
 - gamestonk-terminal
 - ux/ui
@@ -15,7 +15,7 @@ description: Gamestonk Terminal's UX/UI features and the teamwork behind their i
 
 
 <p align="center">
-    <img width="600" src="/blog/2022-01-06-gamestonk-terminal-ux-features.png"/>
+    <img width="600" src="/blog/2022-01-06-gamestonk-terminal-ux-features.webp"/>
 </p>
 
 <br />
@@ -48,13 +48,13 @@ Throughout month of December, me and 3 of the most active maintainers of [Gamest
 
 <br />
 
-![image](/blog/2022-01-06-gamestonk-terminal-ux-features_1.png)
+![image](/blog/2022-01-06-gamestonk-terminal-ux-features_1.webp)
 
 6. Running a `.gst` job, like `python terminal.py scripts/test_stocks_disc.gst` which allows to run a sequence of commands of the terminal. In the future we can take advantage of this for integration tests. The user can build their own daily routines to speed up the investment process.
 
 <br />
 
-![image](/blog/2022-01-06-gamestonk-terminal-ux-features_2.png)
+![image](/blog/2022-01-06-gamestonk-terminal-ux-features_2.webp)
 
 Now, I know what you’re thinking. This is a massive improvement over the terminal usage up until now, and that’s a **LOT** of code changes. Which is very much true, to be specific, this engineering effort resulted in:
 
@@ -64,7 +64,7 @@ Now, I know what you’re thinking. This is a massive improvement over the termi
 
 And you may be wondering how long did this take us to do. Nope, it wasn’t months but…
 
-![image](/blog/2022-01-06-gamestonk-terminal-ux-features_3.png)
+![image](/blog/2022-01-06-gamestonk-terminal-ux-features_3.webp)
 
 **1 week. Yup, a single f*king week.** You can see that it was finalised with these PRs ([#1049](https://github.com/GamestonkTerminal/GamestonkTerminal/pull/1049), [#1041](https://github.com/GamestonkTerminal/GamestonkTerminal/pull/1041), [#1048](https://medium.com/@dro-lopes/gamestonk-terminal-ux-features-f9754b484919#1048)).
 
@@ -84,17 +84,17 @@ You may be thinking this is a one off, the reality is that **it isn’t**. Anoth
 
 While I write this post another contributor, finishing his CPA, is working on [improving the code resulting from that UX effort by creating a base class](https://github.com/OpenBB-finance/OpenBBTerminal/pull/1141) so that new developers can add controllers much easily (he estimates a reduction of 11% of codebase size based on “napkin maths” as he puts it).
 
-![image](/blog/2022-01-06-gamestonk-terminal-ux-features_4.png)
+![image](/blog/2022-01-06-gamestonk-terminal-ux-features_4.webp)
 
 While user experience is critical, so is user interface. And that is why our next engineering effort will be around it. We already have something in the works in [this PR](https://github.com/GamestonkTerminal/GamestonkTerminal/pull/1140), where we can draw lines and write text! Almost like TradingView (almost… 😬).
 
-![image](/blog/2022-01-06-gamestonk-terminal-ux-features_5.png)
+![image](/blog/2022-01-06-gamestonk-terminal-ux-features_5.webp)
 
 So, keep on the lookout because 2022 is gonna be a big year for us!! 🦋 🚀
 
 Ohh, before I say thanks for the read and all that, it’s also worth mentioning that there’s a PR in the queue for a new context called “**alternative data**”, which already has a **COVID menu** to factor that data into account on your investments.
 
-![image](/blog/2022-01-06-gamestonk-terminal-ux-features_6.png)
+![image](/blog/2022-01-06-gamestonk-terminal-ux-features_6.webp)
 
 _PS: The blue text is because we are transitioning towards [rich package](https://github.com/Textualize/rich) which gives a lot more freedom when it comes to improving our user interface._
 

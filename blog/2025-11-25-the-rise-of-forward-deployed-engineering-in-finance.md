@@ -2,7 +2,7 @@
 slug: the-rise-of-forward-deployed-engineering-in-finance
 title: The rise of forward-deployed engineering in finance
 date: 2025-11-25
-image: /blog/2025-11-25-the-rise-of-forward-deployed-engineering-in-finance
+image: /blog/2025-11-25-the-rise-of-forward-deployed-engineering-in-finance.webp
 tags:
 - engineering
 - finance
@@ -17,7 +17,7 @@ A few weeks ago, we were at the HQ of one of our largest clients (close to 70bn 
 
 <!-- truncate -->
 
-![Team at client HQ](/blog/2025-11-25-the-rise-of-forward-deployed-engineering-in-finance_1.png)
+![Team at client HQ](/blog/2025-11-25-the-rise-of-forward-deployed-engineering-in-finance_1.webp)
 
 Anyway, let's talk about FDE.
 

@@ -2,7 +2,7 @@
 slug: i-cant-believe-i-recommended-replit-instead-of-cursor
 title: I can't believe I recommended Replit instead of Cursor
 date: 2025-06-20
-image: /blog/2025-06-20-i-cant-believe-i-recommended-replit-instead-of-cursor
+image: /blog/2025-06-20-i-cant-believe-i-recommended-replit-instead-of-cursor.webp
 tags:
   - replit
   - cursor
@@ -17,7 +17,7 @@ hideSidebar: true
 ---
 
 <p align="center">
-    <img width="600" src="/blog/2025-06-20-i-cant-believe-i-recommended-replit-instead-of-cursor.png" />
+    <img width="600" src="/blog/2025-06-20-i-cant-believe-i-recommended-replit-instead-of-cursor.webp" />
 </p>
 
 Replit is the ultimate coding environment for non-coders.

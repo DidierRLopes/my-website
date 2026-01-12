@@ -2,7 +2,7 @@
 slug: introducing-openbb-apps-tailored-by-users-for-optimized-workflows
 title: Introducing OpenBB Apps, tailored by users for optimized workflows
 date: 2025-05-01
-image: /blog/2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows
+image: /blog/2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows.webp
 tags:
 - openbb
 - fintech
@@ -20,7 +20,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="600" src="/blog/2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows.png" />
+    <img width="600" src="/blog/2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows.webp" />
 </p>
 
 OpenBB Apps introduces a customizable platform where financial organizations can build tailored workflow solutions with dashboard templates, data widgets, and AI agents - putting firms in complete control of their data and tech stack.
@@ -50,7 +50,7 @@ And that's why, today, we are **introducing the concept of Apps** on OpenBB.
 Built for specific use cases, these apps consist of a dashboard template that can include custom data widgets, AI agents, and pre-saved prompts — all carefully set up by each firm to improve their specific analysis work.
 
 <p align="center">
-    <img width="600" src="/blog/2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows_1.png" />
+    <img width="600" src="/blog/2025-05-01-introducing-openbb-apps-tailored-by-users-for-optimized-workflows_1.webp" />
 </p>
 
 This future has been coming for some time, and this time has arrived.

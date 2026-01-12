@@ -2,7 +2,7 @@
 slug: are-you-team-mcp-client-or-server
 title: Are you team MCP Client or Server?
 date: 2025-07-29
-image: /blog/2025-07-29-are-you-team-mcp-client-or-server
+image: /blog/2025-07-29-are-you-team-mcp-client-or-server.webp
 tags:
   - mcp
   - ai
@@ -15,7 +15,7 @@ hideSidebar: true
 ---
 
 <p align="center">
-    <img width="600" src="/blog/2025-07-29-are-you-team-mcp-client-or-server.png" />
+    <img width="600" src="/blog/2025-07-29-are-you-team-mcp-client-or-server.webp" />
 </p>
 
 The Model Context Protocol (MCP) forces a strategic choice on financial services companies - become a Client, building AI user experiences, or a Server, providing specialized data and tools. This post explores the implications of this divide.

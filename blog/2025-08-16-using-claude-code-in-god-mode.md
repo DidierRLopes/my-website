@@ -2,7 +2,7 @@
 slug: using-claude-code-in-god-mode
 title: Using Claude Code in God Mode
 date: 2025-08-16
-image: /blog/2025-08-16-using-claude-code-in-god-mode
+image: /blog/2025-08-16-using-claude-code-in-god-mode.webp
 tags:
   - claude-code
   - anthropic
@@ -64,7 +64,7 @@ init
 Claude will then analyze your codebase in that folder and create a `CLAUDE.md` file that Claude will take into account every time you are working with it.
 
 <p align="center">
-    <img width="600" src="/blog/2025-08-16-using-claude-code-in-god-mode_1.png" />
+    <img width="600" src="/blog/2025-08-16-using-claude-code-in-god-mode_1.webp" />
 </p>
 
 2. Tweak CLAUDE.md to fit your needs.
@@ -154,7 +154,7 @@ One of the reasons for which it’s important to have such an extensive/detailed
 The amount of times I had to `git restore` or `git stash` and start from scratch is mind blowing. And it happened every single time when I was being too optimistic about Claude being able to one-shot a feature.
 
 <p align="center">
-    <img width="600" src="/blog/2025-08-16-using-claude-code-in-god-mode_2.png" />
+    <img width="600" src="/blog/2025-08-16-using-claude-code-in-god-mode_2.webp" />
 </p>
 
 Like this lol
@@ -254,7 +254,7 @@ E.g. my favorite is Figma MCP Server - I wrote a post about it <a href="https://
 There’s a <a href="https://github.com/anthropics/claude-code/issues/3134" target="_blank" rel="noopener noreferrer">known bug</a> when launching and exiting Claude Code, it corrupts terminal paste functionality. All subsequent paste operations are prefixed with 00~ and suffixed with 01~. Like this:
 
 <p align="center">
-    <img width="600" src="/blog/2025-08-16-using-claude-code-in-god-mode_3.png" />
+    <img width="600" src="/blog/2025-08-16-using-claude-code-in-god-mode_3.webp" />
 </p>
 
 I usually just type type `reset` in the terminal and that fixes it.
@@ -270,7 +270,7 @@ My speed is usually just above 100 WPM (you can test your speed here: https://10
 So what I did was enable dictation on Macbook, and set the shortcut for it to be pressing control key twice (and then control once to stop).
 
 <p align="center">
-    <img width="600" src="/blog/2025-08-16-using-claude-code-in-god-mode_4.png" />
+    <img width="600" src="/blog/2025-08-16-using-claude-code-in-god-mode_4.webp" />
 </p>
 
 And it’s awesome - it allows me to dump a bunch of information extremely fast.
@@ -280,5 +280,5 @@ And it’s awesome - it allows me to dump a bunch of information extremely fast.
 While this allows me to be productive, it also gets the team to start petitions like this 🤣
 
 <p align="center">
-    <img width="600" src="/blog/2025-08-16-using-claude-code-in-god-mode_5.png" />
+    <img width="600" src="/blog/2025-08-16-using-claude-code-in-god-mode_5.webp" />
 </p>

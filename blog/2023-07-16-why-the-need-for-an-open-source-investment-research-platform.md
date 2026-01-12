@@ -2,7 +2,7 @@
 slug: why-the-need-for-an-open-source-investment-research-platform
 title: Why the need for an open source investment research platform?
 date: 2023-07-16
-image: /blog/2023-07-16-why-the-need-for-an-open-source-investment-research-platform.png
+image: /blog/2023-07-16-why-the-need-for-an-open-source-investment-research-platform.webp
 tags:
 - open-source
 - investment-research
@@ -16,7 +16,7 @@ description: OpenBB Terminal, an open-source investment research platform, is tr
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-07-16-why-the-need-for-an-open-source-investment-research-platform.png"/>
+    <img width="600" src="/blog/2023-07-16-why-the-need-for-an-open-source-investment-research-platform.webp"/>
 </p>
 
 <br />
@@ -33,7 +33,7 @@ The [OpenBB Terminal](https://github.com/OpenBB-finance/OpenBBTerminal) is the p
 
 This number kept on growing along with the community (most of which gathers on [our Discord server](http://openbb.co/discord)) and allowed us to create the company OpenBB, see the story [here](http://openbb.co/blog/gme-didnt-take-me-to-the-moon-but-gamestonk-terminal-did).
 
-![image](/blog/2023-07-16-why-the-need-for-an-open-source-investment-research-platform_1.png)
+![image](/blog/2023-07-16-why-the-need-for-an-open-source-investment-research-platform_1.webp)
 
 But why is open source so important for us? To understand this, it’s important for us go over the main problems in the space.
 
@@ -80,10 +80,10 @@ OpenBB has been driven a lot by the community so far. What started as a terminal
 
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-![image](/blog/2023-07-16-why-the-need-for-an-open-source-investment-research-platform_2.png)
+![image](/blog/2023-07-16-why-the-need-for-an-open-source-investment-research-platform_2.webp)
 
 We are close to 23,000 stars. If you haven’t already, starring our project would mean the world.
 
-![image](/blog/2023-07-16-why-the-need-for-an-open-source-investment-research-platform_3.png)
+![image](/blog/2023-07-16-why-the-need-for-an-open-source-investment-research-platform_3.webp)
 
 Any feedback is welcome 🙏🏽

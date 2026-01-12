@@ -2,7 +2,7 @@
 slug: one-data-vendor-to-rule-them-all-really
 title: One data vendor to rule them all. Really?
 date: 2025-03-25
-image: /blog/2025-03-25-one-data-vendor-to-rule-them-all-really
+image: /blog/2025-03-25-one-data-vendor-to-rule-them-all-really.webp
 tags:
 - openbb
 - financial-data
@@ -18,7 +18,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-25-one-data-vendor-to-rule-them-all-really.png" />
+    <img width="600" src="/blog/2025-03-25-one-data-vendor-to-rule-them-all-really.webp" />
 </p>
 
 Exploring why relying on a single data vendor for financial research is unrealistic in today's complex market landscape, and how AI-driven platforms like OpenBB are transforming how professionals interact with diverse data sources to find alpha and gain competitive advantage.
@@ -57,7 +57,7 @@ Yup, there was a lot.
 My screen looked like this:
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-25-one-data-vendor-to-rule-them-all-really_1.jpg" />
+    <img width="600" src="/blog/2025-03-25-one-data-vendor-to-rule-them-all-really_1.webp" />
 </p>
 
 It turns out that professionals had the same pain points that I did. This widespread adoption revealed a fundamental truth about the financial data landscape that continues to shape our vision today.
@@ -117,7 +117,7 @@ This is what we are building at OpenBB – not just another data aggregator, but
 - Reduces the friction between question and insight
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-25-one-data-vendor-to-rule-them-all-really_2.png" />
+    <img width="900" src="/blog/2025-03-25-one-data-vendor-to-rule-them-all-really_2.webp" />
 </p>
 
 ## The role of data
@@ -135,7 +135,7 @@ Where traditional platforms simply aggregate information, our solution applies i
 ## The power shift: From data to interface
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-25-one-data-vendor-to-rule-them-all-really_3.jpeg" />
+    <img width="600" src="/blog/2025-03-25-one-data-vendor-to-rule-them-all-really_3.webp" />
 </p>
 
 Historically, the power in financial markets has been centered around data access. The interface was merely a distribution channel - a means to an end.
@@ -166,7 +166,7 @@ This is why OpenBB Workspace is designed to be adaptable to your specific needs 
 Plus, you can **fully own** your workflow, data and everything in between.
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-25-one-data-vendor-to-rule-them-all-really_4.png" />
+    <img width="900" src="/blog/2025-03-25-one-data-vendor-to-rule-them-all-really_4.webp" />
 </p>
 
 

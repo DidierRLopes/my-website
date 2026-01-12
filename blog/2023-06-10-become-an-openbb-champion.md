@@ -2,7 +2,7 @@
 slug: become-an-openbb-champion
 title: Become an OpenBB Champion
 date: 2023-06-10
-image: /blog/2023-06-10-become-an-openbb-champion.png
+image: /blog/2023-06-10-become-an-openbb-champion.webp
 tags:
 - openbb
 - openbb-champion
@@ -16,7 +16,7 @@ description: Become an OpenBB Champion and join our passionate community. Share 
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-06-10-become-an-openbb-champion.png"/>
+    <img width="600" src="/blog/2023-06-10-become-an-openbb-champion.webp"/>
 </p>
 
 <br />
@@ -36,7 +36,7 @@ Whether you utilize the [OpenBB Terminal](https://my.openbb.co/app/terminal) to 
 To qualify as an OpenBB Champion, you need to be an active user of one of our products and be willing to share your valuable experiences with our team. We’re eager to learn more about your journey with OpenBB and how our products have transformed your workflow.
 
 <p align="center">
-    <img width="400" src="/blog/2023-06-10-become-an-openbb-champion_1.png"/>
+    <img width="400" src="/blog/2023-06-10-become-an-openbb-champion_1.webp"/>
 </p>
 
 <br />

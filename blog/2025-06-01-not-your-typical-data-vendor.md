@@ -2,7 +2,7 @@
 slug: not-your-typical-data-vendor
 title: Not your typical data vendor
 date: 2025-06-01
-image: /blog/2025-06-01-not-your-typical-data-vendor
+image: /blog/2025-06-01-not-your-typical-data-vendor.webp
 tags:
   - financial-data
   - api
@@ -18,7 +18,7 @@ hideSidebar: true
 ---
 
 <p align="center">
-    <img width="600" src="/blog/2025-06-01-not-your-typical-data-vendor.png" />
+    <img width="600" src="/blog/2025-06-01-not-your-typical-data-vendor.webp" />
 </p>
 
 This post explores Financial Datasets, a data vendor focused on top-tier developer experience and data quality, with an API built for AI agents.
@@ -48,8 +48,8 @@ Financial Datasets does two:
 Given all that (and the fact that I play football ⚽️ with the author), I decided to build an OpenBB app powered by this API so you can try it out yourself - and see what data is available.
 
 <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1em'}}>
-    <img width="500" src="/blog/2025-06-01-not-your-typical-data-vendor_2.jpeg" />
-    <img width="500" src="/blog/2025-06-01-not-your-typical-data-vendor_3.jpeg" />
+    <img width="500" src="/blog/2025-06-01-not-your-typical-data-vendor_2.webp" />
+    <img width="500" src="/blog/2025-06-01-not-your-typical-data-vendor_3.webp" />
 </div>
 <br />
 
@@ -63,7 +63,7 @@ Two steps:
 This is the app that you should expect:
 
 <p align="center">
-    <img width="300" src="/blog/2025-06-01-not-your-typical-data-vendor_1.jpeg" />
+    <img width="300" src="/blog/2025-06-01-not-your-typical-data-vendor_1.webp" />
 </p>
 
 It will be limited to a few tickers that the creator has made accessible for free. 

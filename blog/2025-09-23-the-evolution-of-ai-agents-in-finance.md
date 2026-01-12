@@ -2,7 +2,7 @@
 slug: the-evolution-of-ai-agents-in-finance
 title: The Evolution of AI Agents in Finance
 date: 2025-09-23
-image: /blog/2025-09-23-the-evolution-of-ai-agents-in-finance
+image: /blog/2025-09-23-the-evolution-of-ai-agents-in-finance.webp
 tags:
 - ai
 - finance
@@ -18,7 +18,7 @@ description: Mapping the evolution of AI agents in finance from ChatGPT wrappers
 hideSidebar: true
 ---
 
-![The Evolution of AI Agents in Finance](/blog/2025-09-23-the-evolution-of-ai-agents-in-finance.png)
+![The Evolution of AI Agents in Finance](/blog/2025-09-23-the-evolution-of-ai-agents-in-finance.webp)
 
 Mapping the evolution of AI agents in finance from ChatGPT wrappers to derived data insights - and why the real value is shifting from interfaces to intelligence.
 

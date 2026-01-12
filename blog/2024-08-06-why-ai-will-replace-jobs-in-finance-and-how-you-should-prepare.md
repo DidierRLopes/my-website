@@ -2,7 +2,7 @@
 slug: why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare
 title: Why AI Will Replace Jobs in Finance and How You Should Prepare
 date: 2024-08-06
-image: /blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare.png
+image: /blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare.webp
 tags:
 - ai
 - finance
@@ -18,7 +18,7 @@ description: As AI continues to advance, many jobs in finance are at risk. Learn
 
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare.png"/>
+    <img width="600" src="/blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare.webp"/>
 </p>
 
 It's not a matter of if, but a matter of when. AI will replace analysts' jobs, and we actually believe that's a good thing. In this blog post, we explain why and how you can prepare for this revolutionary change in the world of finance.
@@ -32,7 +32,7 @@ It's not a matter of if, but a matter of when. AI will replace analysts' jobs, a
 This is the current state of Quant/Finance/Investing conferences in 2024
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare_1.png"/>
+    <img width="600" src="/blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare_1.webp"/>
 </p>
 
 I've heard panels defending both sides: Yes and No.
@@ -46,7 +46,7 @@ Personally, a much better question is "When will AI replace financial analysts?"
 If we look back at the automotive industry, 100 years ago - this is what a Ford factory looked like:
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare.png"/>
+    <img width="600" src="/blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare.webp"/>
 </p>
 
 How many of these blue-collar workers would have said that their jobs would be extinct in less than 100 years? And for the most part, they are.
@@ -92,7 +92,7 @@ I think that the most important question that financial analysts should ask them
 There's going to be multiple stages before AI fully takes over. Here's how I envision it playing out:
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare_2.png"/>
+    <img width="600" src="/blog/2024-08-06-why-ai-will-replace-jobs-in-finance-and-how-you-should-prepare_2.webp"/>
 </p>
 
 (For what it's worth, I think this is equivalent to what will happen to developers in general).

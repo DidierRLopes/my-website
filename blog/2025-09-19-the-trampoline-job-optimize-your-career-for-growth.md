@@ -2,7 +2,7 @@
 slug: the-trampoline-job-optimize-your-career-for-growth
 title: The trampoline job - Optimize your career for growth
 date: 2025-09-19
-image: /blog/2025-09-19-the-trampoline-job-optimize-your-career-for-growth
+image: /blog/2025-09-19-the-trampoline-job-optimize-your-career-for-growth.webp
 tags:
 - career
 - startup
@@ -15,7 +15,7 @@ description: Why accepting a lower-paying startup job in San Francisco could be 
 hideSidebar: true
 ---
 
-![The trampoline job - Optimize your career for growth](/blog/2025-09-19-the-trampoline-job-optimize-your-career-for-growth.png)
+![The trampoline job - Optimize your career for growth](/blog/2025-09-19-the-trampoline-job-optimize-your-career-for-growth.webp)
 
 Why accepting a lower-paying startup job in San Francisco could be the best career move you ever make - the trampoline effect that launches your trajectory.
 
@@ -28,7 +28,7 @@ This [post](https://x.com/beaversteever/status/1959972343050068280) was trending
 If you live in a bubble (SF or NYC) then I understand most of the comments. But I think for the vast majority of the population, this is potentially a life-changing offer.
 
 <p align="center">
-    <img width="500" src="/blog/2025-09-19-the-trampoline-job-optimize-your-career-for-growth_1.png" alt="Average VC startup offer tweet" />
+    <img width="500" src="/blog/2025-09-19-the-trampoline-job-optimize-your-career-for-growth_1.webp" alt="Average VC startup offer tweet" />
 </p>
 
 So here's story time.

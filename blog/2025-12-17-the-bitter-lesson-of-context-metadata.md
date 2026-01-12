@@ -2,7 +2,7 @@
 slug: the-bitter-lesson-of-context-metadata
 title: The bitter lesson of context metadata
 date: 2025-12-17
-image: /blog/2025-12-17-the-bitter-lesson-of-context-metadata
+image: /blog/2025-12-17-the-bitter-lesson-of-context-metadata.webp
 tags:
 - ai
 - data
@@ -14,7 +14,7 @@ description: Stop adding business logic to your datasets
 hideSidebar: true
 ---
 
-![The bitter lesson of context metadata](/blog/2025-12-17-the-bitter-lesson-of-context-metadata.png)
+![The bitter lesson of context metadata](/blog/2025-12-17-the-bitter-lesson-of-context-metadata.webp)
 
 Stop adding business logic to your datasets.
 
@@ -27,7 +27,7 @@ The beginners don't think about metadata at all - they just dump raw data and mo
 **Less is more, and let me tell you why.**
 
 <p align="center">
-    <img width="600" src="/blog/2025-12-17-the-bitter-lesson-of-context-metadata_1.png" alt="IQ curve showing beginners and experts both using minimal metadata" />
+    <img width="600" src="/blog/2025-12-17-the-bitter-lesson-of-context-metadata_1.webp" alt="IQ curve showing beginners and experts both using minimal metadata" />
 </p>
 
 ## Why more metadata limits your agent potential

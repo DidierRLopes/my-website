@@ -2,7 +2,7 @@
 slug: openbb-bot-our-new-addition-to-the-openbb-open-source-family
 title: OpenBB Bot - our new addition to the OpenBB open source family
 date: 2023-11-21
-image: /blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family.png
+image: /blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family.webp
 tags:
 - openbb
 - openbb-bot
@@ -19,7 +19,7 @@ description: The OpenBB Bot architecture is now open source. Check out our Disco
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family.png"/>
+    <img width="600" src="/blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family.webp"/>
 </p>
 
 <br />
@@ -55,7 +55,7 @@ This was relatively expensive, but we considered it a marketing cost since we ex
 In September 2022, Discord changed its command syntax to force commands to start with "/" and the user drop was noticeable.
 
 <p align="center">
-    <img width="600" src="/blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family_1.png"/>
+    <img width="600" src="/blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family_1.webp"/>
 </p>
 
 In the meantime, with the end of the Covid-19 Pandemic, people started leaving their houses more and spending less time with communities investing online. Other companies with financial bots were experiencing the same: investors spending less time talking about investing on apps like Discord.
@@ -65,7 +65,7 @@ We saw a trend that these same companies started increasing their prices to bala
 This is when we went in the other direction: we upgraded our free tier package and decreased the price of our paid version. That announcement can be found [here](https://openbb.co/blog/openbb-bot-price-change).
 
 <p align="center">
-    <img width="600" src="/blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family_2.png"/>
+    <img width="600" src="/blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family_2.webp"/>
 </p>
 
 This happened at the same time as we added more innovative features to the bot. Features that OpenBB brought to market, while other bots copied from us today.
@@ -79,7 +79,7 @@ With the growth of Telegram users and crypto communities, we were well posed to 
 Or so we thought. But our growth never achieved the numbers we had initially estimated.
 
 <p align="center">
-    <img width="600" src="/blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family_3.png"/>
+    <img width="600" src="/blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family_3.webp"/>
 </p>
 
 Our conclusion is that the market for financial chatbots is much smaller than what we had originally forecasted. This also meant that our goal with the OpenBB Bot as a marketing tool wasn't returning the ROI that we were expecting.
@@ -87,13 +87,13 @@ Our conclusion is that the market for financial chatbots is much smaller than wh
 So in May 2023 we went pretty much all-in on considering the OpenBB Bot as a marketing expense, and removed the individual paid tier. You can see that announcement [here](https://openbb.co/blog/openbb-bot-free-for-individuals).
 
 <p align="center">
-    <img width="600" src="/blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family_4.png"/>
+    <img width="600" src="/blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family_4.webp"/>
 </p>
 
 Note that we maintained the control of the Billboard message. This is a feature that allows us to add OpenBB events and announcements to the top of these commands, hence increasing awareness. See below how it looks,
 
 <p align="center">
-    <img width="600" src="/blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family_5.png"/>
+    <img width="600" src="/blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family_5.webp"/>
 </p>
 
 However, even with that change and [adding an AI feature](https://openbb.co/blog/openbb-midjourney-for-investing) to the OpenBB Bot, the user base never grew past what we had hoped.
@@ -111,7 +111,7 @@ Since we failed to monetize the Bot, and our adoption trajectory never grew past
 This architecture utilizes data from the OpenBB platform (check out last week's [beta announcement](https://openbb.co/blog/celebrating-the-openbb-platform-v4-beta)) which means that developers can simultaneously get familiar with our platform while seeing how easy it is to pull financial data from OpenBB - effectively growing OpenBB's ecosystem.
 
 <p align="center">
-    <img width="600" src="/blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family_6.png"/>
+    <img width="600" src="/blog/2023-11-21-openbb-bot-our-new-addition-to-the-openbb-open-source-family_6.webp"/>
 </p>
 
 I'm looking forward to seeing what products are built around the OpenBB Bot in the future.

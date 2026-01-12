@@ -2,7 +2,7 @@
 slug: keep-track-of-your-startup-metrics-using-a-custom-ios-widget
 title: Keep track of your startup metrics using a custom iOS widget
 date: 2023-07-29
-image: /blog/2023-07-29-keep-track-of-your-startup-metrics-using-a-custom-ios-widget.png
+image: /blog/2023-07-29-keep-track-of-your-startup-metrics-using-a-custom-ios-widget.webp
 tags:
 - ios
 - startup
@@ -17,7 +17,7 @@ description: Keep track of your startup metrics using a custom iOS widget. This 
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-07-29-keep-track-of-your-startup-metrics-using-a-custom-ios-widget.png"/>
+    <img width="600" src="/blog/2023-07-29-keep-track-of-your-startup-metrics-using-a-custom-ios-widget.webp"/>
 </p>
 
 <br />
@@ -44,7 +44,7 @@ So, today, I’ll teach you how you can do the same with minimal coding skills r
 
 This section will provide a plug-and-play example for your open source repository.
 
-![image](/blog/2023-07-29-keep-track-of-your-startup-metrics-using-a-custom-ios-widget_1.png)
+![image](/blog/2023-07-29-keep-track-of-your-startup-metrics-using-a-custom-ios-widget_1.webp)
 
 These are the steps necessary to have it working on your iOS device:
 

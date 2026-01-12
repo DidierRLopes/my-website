@@ -2,7 +2,7 @@
 slug: i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips
 title: I built a Claude Skill that turns podcasts into shareable clips
 date: 2025-12-22
-image: /blog/2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips
+image: /blog/2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips.webp
 tags:
 - claude
 - ai
@@ -14,7 +14,7 @@ description: Skills might be the right abstraction for agentic workflows
 hideSidebar: true
 ---
 
-![I built a Claude Skill that turns podcasts into shareable clips](/blog/2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips.png)
+![I built a Claude Skill that turns podcasts into shareable clips](/blog/2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips.webp)
 
 Skills might be the right abstraction for agentic workflows.
 
@@ -151,31 +151,31 @@ Run:
 ```
 
 <p align="center">
-    <img width="800" src="/blog/2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips_1.png" alt="Plugin command in Claude Code" />
+    <img width="800" src="/blog/2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips_1.webp" alt="Plugin command in Claude Code" />
 </p>
 
 Click "Add Marketplace" and add **DidierRLopes/get-y2b-clips**
 
 <p align="center">
-    <img width="800" src="/blog/2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips_2.png" alt="Add Marketplace dialog" />
+    <img width="800" src="/blog/2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips_2.webp" alt="Add Marketplace dialog" />
 </p>
 
 Then go into Marketplaces tab again and click on it.
 
 <p align="center">
-    <img width="800" src="/blog/2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips_3.png" alt="Marketplace tab" />
+    <img width="800" src="/blog/2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips_3.webp" alt="Marketplace tab" />
 </p>
 
 Then select one of the "Install" options.
 
 <p align="center">
-    <img width="800" src="/blog/2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips_4.png" alt="Install options" />
+    <img width="800" src="/blog/2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips_4.webp" alt="Install options" />
 </p>
 
 And finally you will have this skill installed
 
 <p align="center">
-    <img width="800" src="/blog/2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips_5.png" alt="Skill installed confirmation" />
+    <img width="800" src="/blog/2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips_5.webp" alt="Skill installed confirmation" />
 </p>
 
 ### Step 3: Try it out
@@ -185,7 +185,7 @@ And finally you will have this skill installed
 <p style={{fontSize: '0.85em'}}>Prompt I used to trigger my get-y2b-clips skill on CC</p>
 
 <p align="center">
-    <img width="800" src="/blog/2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips_6.png" alt="Prompt I used to trigger my get-y2b-clips skill on CC" />
+    <img width="800" src="/blog/2025-12-22-i-built-a-claude-skill-that-turns-podcasts-into-shareable-clips_6.webp" alt="Prompt I used to trigger my get-y2b-clips skill on CC" />
 </p>
 
 Here's one of the outputs: [https://x.com/didier_lopes/status/2002746090408333635](https://x.com/didier_lopes/status/2002746090408333635)

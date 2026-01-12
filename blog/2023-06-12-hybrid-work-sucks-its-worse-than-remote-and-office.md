@@ -2,7 +2,7 @@
 slug: hybrid-work-sucks-its-worse-than-remote-and-office
 title: Hybrid work sucks. It’s worse than remote and office.
 date: 2023-06-12
-image: /blog/2023-06-12-hybrid-work-sucks-its-worse-than-remote-and-office.png
+image: /blog/2023-06-12-hybrid-work-sucks-its-worse-than-remote-and-office.webp
 tags:
 - remote-work
 - office-work
@@ -16,7 +16,7 @@ description: Hybrid work, a combination of remote and office work, is not as ben
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-06-12-hybrid-work-sucks-its-worse-than-remote-and-office.png"/>
+    <img width="600" src="/blog/2023-06-12-hybrid-work-sucks-its-worse-than-remote-and-office.webp"/>
 </p>
 
 <br />

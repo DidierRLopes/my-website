@@ -2,7 +2,7 @@
 slug: building-a-pokemon-card-price-estimator-with-claude-code
 title: Building a Pokemon Card Price Estimator with Claude Code
 date: 2026-01-06
-image: /blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code
+image: /blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code.webp
 tags:
 - pokemon
 - claude-code
@@ -25,7 +25,7 @@ Then I talked about it with my wife, and she shared a Pokemon pop-up happening i
 When we were in Chelsea Market with friends visiting from out of town, we stopped by. I looked for a Kabuto card - specifically the Gen 1 version - but couldn't find it. So I grabbed the Gen 2 version instead, just in case.
 
 <p align="center">
-    <img width="600" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_1.png" alt="Kabuto card purchase" />
+    <img width="600" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_1.webp" alt="Kabuto card purchase" />
 </p>
 
 And then I bought a booster pack. You know, just in case.
@@ -33,7 +33,7 @@ And then I bought a booster pack. You know, just in case.
 I got home and opened it. Eleven cards stared back at me. But I had no idea what any of them were worth.
 
 <p align="center">
-    <img width="600" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_2.png" alt="Booster pack cards" />
+    <img width="600" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_2.webp" alt="Booster pack cards" />
 </p>
 
 My first instinct was to take a photo and throw it at ChatGPT: "How much are these worth?"
@@ -63,7 +63,7 @@ The full source code is available on [GitHub](https://github.com/DidierRLopes/po
 ### Step 0: Find a set that you might be interested in
 
 <p align="center">
-    <img width="800" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_3.png" alt="eBay Pokemon card listing" />
+    <img width="800" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_3.webp" alt="eBay Pokemon card listing" />
 </p>
 
 ### Step 1: Provide an Image
@@ -71,7 +71,7 @@ The full source code is available on [GitHub](https://github.com/DidierRLopes/po
 Drop a photo of Pokemon cards - a binder page, a spread on a table, whatever.
 
 <p align="center">
-    <img width="600" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_4.png" alt="Test Pokemon cards input" />
+    <img width="600" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_4.webp" alt="Test Pokemon cards input" />
 </p>
 
 ### Step 2: Card Recognition
@@ -89,7 +89,7 @@ Claude's vision model analyzes the image and extracts card details into a struct
 The key here is providing clear guidelines about what to look for (set symbols, card numbers, holo patterns) and what to ignore (partially visible cards, reflections). Without these constraints, the model hallucinates. With them, it's remarkably accurate. And if in doubt, the model will ask to clarify.
 
 <p align="center">
-    <img width="800" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_5.png" alt="Card recognition in Claude Code" />
+    <img width="800" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_5.webp" alt="Card recognition in Claude Code" />
 </p>
 
 ### Step 3: Human-in-the-Loop Confirmation
@@ -113,13 +113,13 @@ Then we use PIL (Pillow) to reconstruct the original layout - same rows, same co
 We added this script to this specific SKILLS folder.
 
 <p align="center">
-    <img width="800" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_6.png" alt="Visual verification script in Claude Code" />
+    <img width="800" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_6.webp" alt="Visual verification script in Claude Code" />
 </p>
 
 I store images from each of the cards individually. But most importantly I reconstruct the layout so it's easy to compare with my eyes. Here's the resulting output:
 
 <p align="center">
-    <img width="800" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_7.png" alt="Reconstructed card layout for verification" />
+    <img width="800" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_7.webp" alt="Reconstructed card layout for verification" />
 </p>
 
 As they match, I'm confident in the identification. If something's off, I go back and fix the table before wasting time on wrong price lookups.
@@ -159,7 +159,7 @@ Here's the catch: Pokellector is renders dynamically with JavaScript, so request
 The result: a comprehensive price table with links to verify each price.
 
 <p align="center">
-    <img width="800" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_8.png" alt="Price estimation results" />
+    <img width="800" src="/blog/2026-01-06-building-a-pokemon-card-price-estimator-with-claude-code_8.webp" alt="Price estimation results" />
 </p>
 
 ## The Takeaway

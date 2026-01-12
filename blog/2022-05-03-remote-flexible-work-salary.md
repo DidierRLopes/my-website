@@ -2,7 +2,7 @@
 slug: remote-flexible-work-salary
 title: Remote + Flexible work >> Salary
 date: 2022-05-03
-image: /blog/2022-05-03-remote-flexible-work-salary.png
+image: /blog/2022-05-03-remote-flexible-work-salary.webp
 tags:
 - remote-work
 - flexible-hours
@@ -15,7 +15,7 @@ description: This blog post discusses the importance of remote and flexible work
 
 
 <p align="center">
-    <img width="600" src="/blog/2022-05-03-remote-flexible-work-salary.png"/>
+    <img width="600" src="/blog/2022-05-03-remote-flexible-work-salary.webp"/>
 </p>
 
 <br />
@@ -74,7 +74,7 @@ All of this to say that at OpenBB we have:
 
 AND this is how I sleep at night having no idea at what time John logged in and out:
 
-![image](/blog/2022-05-03-remote-flexible-work-salary_1.png)
+![image](/blog/2022-05-03-remote-flexible-work-salary_1.webp)
 
 Ohhh, and we’re hiring!
 

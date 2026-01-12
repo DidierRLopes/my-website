@@ -2,7 +2,7 @@
 slug: implement-feedback-loops-everywhere-you-can
 title: Implement feedback loops EVERYWHERE you can
 date: 2024-10-25
-image: /blog/2024-10-25-implement-feedback-loops-everywhere-you-can.jpeg
+image: /blog/2024-10-25-implement-feedback-loops-everywhere-you-can.webp
 tags:
 - openbb
 - management
@@ -18,7 +18,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="600" src="/blog/2024-10-25-implement-feedback-loops-everywhere-you-can.jpeg"/>
+    <img width="600" src="/blog/2024-10-25-implement-feedback-loops-everywhere-you-can.webp"/>
 </p>
 
 Maximizing team transparency through focused feedback sessions.
@@ -39,7 +39,7 @@ The goal of this exercise was 2-fold:
 - Have the team share anything they want with leadership or ask any questions openly.
 
 <p align="center">
-    <img width="900" src="/blog/2024-10-25-implement-feedback-loops-everywhere-you-can_2.jpeg"/>
+    <img width="900" src="/blog/2024-10-25-implement-feedback-loops-everywhere-you-can_2.webp"/>
 </p>
 
 ## Structure

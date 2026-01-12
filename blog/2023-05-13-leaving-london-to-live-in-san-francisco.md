@@ -2,7 +2,7 @@
 slug: leaving-london-to-live-in-san-francisco
 title: Leaving London to live in San Francisco
 date: 2023-05-13
-image: /blog/2023-05-13-leaving-london-to-live-in-san-francisco.png
+image: /blog/2023-05-13-leaving-london-to-live-in-san-francisco.webp
 tags:
 - san-francisco
 - london
@@ -17,7 +17,7 @@ description: Leaving London to live in San Francisco. A personal journey of relo
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-05-13-leaving-london-to-live-in-san-francisco.png"/>
+    <img width="600" src="/blog/2023-05-13-leaving-london-to-live-in-san-francisco.webp"/>
 </p>
 
 <br />
@@ -46,7 +46,7 @@ In my case, I decided to apply for an “O-1 Visa: Individuals with Extraordinar
 
 I had the privilege of working with an exceptional immigration lawyer who assisted me in crafting my case, significantly increasing my chances of a successful approval. Here is a portion of the O-1 Petition that was submitted:
 
-![image](/blog/2023-05-13-leaving-london-to-live-in-san-francisco_1.png)
+![image](/blog/2023-05-13-leaving-london-to-live-in-san-francisco_1.webp)
 
 As you can see, there is quite a bit of paperwork required to support your case. In my situation, I needed the following documents: Curriculum Vitae, university grades, transcripts and diplomas, LinkedIn and GitHub profiles, posts that gained viral attention on platforms like Reddit and HackerNews, podcasts and conferences where I had spoken, projects that received online praise, any media coverage I had received, scholarly scientific publications, expert opinion letters, and even emails or direct messages from venture capitalists or professionals in the industry.
 
@@ -102,7 +102,7 @@ Following that, my dogs flew from the UK using [Pets abroad UK](https://www.pets
 
 However, I must admit that I didn’t enjoy the experience, and in hindsight, I would have been willing to pay more for my dogs to have a better and safer flight. Although flying them from London, meant that unfortunately cargo was the option due to UK requirements. When I picked them up, they were visibly scared, and both my wife and I held our breath with worry throughout their entire journey. Our dogs’ well-being was of utmost importance to us.
 
-![image](/blog/2023-05-13-leaving-london-to-live-in-san-francisco_2.png)
+![image](/blog/2023-05-13-leaving-london-to-live-in-san-francisco_2.webp)
 
 The house was mostly empty, so to save money, we acquired a lot of second-hand items for free. It was beneficial to know people in the area who were aware of others with unused items stored in their garages, which we were able to take. To retrieve this furniture and other objects, we either needed to rent a U-Haul (which wasn’t possible without a California driver’s license) or hire a moving company.
 
@@ -122,7 +122,7 @@ Initially, I set up Wi-Fi through Xfinity, but then I used that as leverage to n
 
 There’s going to be a big shock in terms of prices; at least, we experienced one. Life in the Bay Area is over 2x more expensive than London.
 
-![image](/blog/2023-05-13-leaving-london-to-live-in-san-francisco_3.png)
+![image](/blog/2023-05-13-leaving-london-to-live-in-san-francisco_3.webp)
 
 So, we started learning how to buy things at a lower cost. Whole Foods is not a viable option as it’s one of the most expensive stores. The 10 items above cost $69.34 on Whole Foods.
 
@@ -163,7 +163,7 @@ We spoke with individuals, but ultimately decided to buy a car from a dealership
 
 After a few months, we received the California Certificate of Title, which confirmed that I was the legal owner of the vehicle and included important vehicle identification information. Since this was my first car, I had to add an OpenBB reference to the front plate :)
 
-![image](/blog/2023-05-13-leaving-london-to-live-in-san-francisco_4.png)
+![image](/blog/2023-05-13-leaving-london-to-live-in-san-francisco_4.webp)
 
 Shoutouts to:
 
@@ -212,7 +212,7 @@ On the day of the driving exam, you will need to bring someone who holds a CDL, 
 
 The driving exam evaluates your performance, and you will receive a score sheet outlining the criteria and aspects that will be assessed during the exam. This will give you an idea of what to expect and what the examiners will be evaluating.
 
-![image](/blog/2023-05-13-leaving-london-to-live-in-san-francisco_5.png)
+![image](/blog/2023-05-13-leaving-london-to-live-in-san-francisco_5.webp)
 
 After successfully passing the driving exam, the DMV will issue you a temporary document that serves as your California Driving License (CDL). This temporary document will allow you to legally drive while you wait for your physical CDL to be sent to you by mail.
 

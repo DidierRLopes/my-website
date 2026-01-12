@@ -2,7 +2,7 @@
 slug: employees-are-leaving-be-proactive-about-employee-feedback
 title: Employees are leaving? Be proactive about employee feedback
 date: 2023-06-29
-image: /blog/2023-06-29-employees-are-leaving-be-proactive-about-employee-feedback.png
+image: /blog/2023-06-29-employees-are-leaving-be-proactive-about-employee-feedback.webp
 tags:
 - employee-engagement
 - feedback
@@ -16,7 +16,7 @@ description: Employees are leaving? Be proactive about employee feedback. This b
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-06-29-employees-are-leaving-be-proactive-about-employee-feedback.png"/>
+    <img width="600" src="/blog/2023-06-29-employees-are-leaving-be-proactive-about-employee-feedback.webp"/>
 </p>
 
 <br />
@@ -49,7 +49,7 @@ However, there was something critical missing. I will explain what it is by usin
 
 What we had built is an open loop control system, and it looks something like this:
 
-![image](/blog/2023-06-29-employees-are-leaving-be-proactive-about-employee-feedback_1.png)
+![image](/blog/2023-06-29-employees-are-leaving-be-proactive-about-employee-feedback_1.webp)
 
 The problem? open loop systems can be inaccurate and unreliable. More importantly, because there is no feedback mechanism to correct inputs as the controller (leadership) never gets the information that comes out of the system (team engagement).
 
@@ -57,7 +57,7 @@ The key word here is feedback. An office hour session is great, but it’s a poo
 
 We needed feedback. We needed to have a closed-loop system instead of an open one. By that I mean:
 
-![image](/blog/2023-06-29-employees-are-leaving-be-proactive-about-employee-feedback_2.png)
+![image](/blog/2023-06-29-employees-are-leaving-be-proactive-about-employee-feedback_2.webp)
 
 This allows us to constantly monitor our team happiness, and be able to react when the feedback doesn’t match our desired culture.
 
@@ -82,7 +82,7 @@ This allowed us to come up with the following survey, where the team would reply
 
 Now you may be wondering how we made this survey completely automated, the workflow is actually very straightforward and we were able to automate it. Here is what it looks like: Airtable + Slack ✅
 
-![image](/blog/2023-06-29-employees-are-leaving-be-proactive-about-employee-feedback_3.png)
+![image](/blog/2023-06-29-employees-are-leaving-be-proactive-about-employee-feedback_3.webp)
 
 Even though our salaries don’t compete with the MAMAAs of this world, we believe that: our mission, our innovative products and unique culture are what makes us OpenBB. And why we can retain our talent.
 

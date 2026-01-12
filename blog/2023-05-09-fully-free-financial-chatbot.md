@@ -2,7 +2,7 @@
 slug: fully-free-financial-chatbot
 title: Fully free financial chatbot
 date: 2023-05-09
-image: /blog/2023-05-09-fully-free-financial-chatbot.png
+image: /blog/2023-05-09-fully-free-financial-chatbot.webp
 tags:
 - openbb-bot
 - financial-chatbot
@@ -22,7 +22,7 @@ description: The OpenBB Bot is a financial chatbot that allows you to access fin
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-05-09-fully-free-financial-chatbot.png"/>
+    <img width="600" src="/blog/2023-05-09-fully-free-financial-chatbot.webp"/>
 </p>
 
 <br />
@@ -47,7 +47,7 @@ Registered users for OpenBB Bot will see the following changes:
 
 Below is a video of what the OpenBB Bot is capable of:
 
-![1_d1vD4AkwpYk42tdbHuMupQ](/blog/2023-05-09-fully-free-financial-chatbot_1.png)
+![1_d1vD4AkwpYk42tdbHuMupQ](/blog/2023-05-09-fully-free-financial-chatbot_1.webp)
 
 The interactive charts will open up within the [OpenBB Hub](https://my.openbb.co/) and in it you will be able to fully customize the technical analysis indicators that you see on the chart and even the candle chart color theme and type. A demo is shown below,
 
@@ -67,6 +67,6 @@ You can actually see how many users we have utilizing the bot on a daily basis o
 
 While others zig, we zag. Here’s the updated pricing:
 
-![image](/blog/2023-05-09-fully-free-financial-chatbot_2.png)
+![image](/blog/2023-05-09-fully-free-financial-chatbot_2.webp)
 
 Looking forward to feedback!

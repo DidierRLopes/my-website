@@ -2,7 +2,7 @@
 slug: time-series-crossvalidation-for-nn
 title: Time-Series CrossValidation for NN
 date: 2021-09-04
-image: /blog/2021-09-04-time-series-crossvalidation-for-nn.png
+image: /blog/2021-09-04-time-series-crossvalidation-for-nn.webp
 tags:
 - python
 - data-science
@@ -17,7 +17,7 @@ description: This blog post discusses the creation of a Python module for splitt
 
 
 <p align="center">
-    <img width="600" src="/blog/2021-09-04-time-series-crossvalidation-for-nn.png"/>
+    <img width="600" src="/blog/2021-09-04-time-series-crossvalidation-for-nn.webp"/>
 </p>
 
 <br />
@@ -61,8 +61,8 @@ X, y = split_train_variableInput(timeSeries, minSamplesTrain=10, n_steps_forecas
 ```
 
 <div className="flex justify-center gap-2">
-  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn_1.png" width="50%" />
-  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn_2.png" width="50%" /> 
+  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn_1.webp" width="50%" />
+  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn_2.webp" width="50%" /> 
 </div>
 
 ## Split Train Val
@@ -78,13 +78,13 @@ X, y, Xcv, ycv = split_train_val_groupKFold(timeSeries, n_steps_input=4, n_steps
 ```
 
 <div className="flex justify-center gap-2">
-  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn_3.png" width="50%" />
-  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn_4.png" width="50%" /> 
+  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn_3.webp" width="50%" />
+  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn_4.webp" width="50%" /> 
 </div>
 
 <br />
 
-![image](/blog/2021-09-04-time-series-crossvalidation-for-nn_5.png)
+![image](/blog/2021-09-04-time-series-crossvalidation-for-nn_5.webp)
 
 ## Split Train Val Test
 
@@ -98,13 +98,13 @@ X, y, Xcv, ycv, Xtest, ytest = split_train_val_test_groupKFold(timeSeries, n_ste
 ```
 
 <div className="flex justify-center gap-2">
-  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn_6.png" width="50%" />
-  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn_7.png" width="50%" /> 
+  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn_6.webp" width="50%" />
+  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn_7.webp" width="50%" /> 
 </div>
 
 <br />
 
-![image](/blog/2021-09-04-time-series-crossvalidation-for-nn_8.png)
+![image](/blog/2021-09-04-time-series-crossvalidation-for-nn_8.webp)
 
 This module has not only been used for my friends’ thesis but also for a Data Science company and [Gamestonk Terminal](/blog/gamestonk-terminal-the-next-best-thing-after-bloomberg-terminal), that I know of :)
 

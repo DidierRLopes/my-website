@@ -2,7 +2,7 @@
 slug: minion-recipes-program
 title: Minion Recipes Program
 date: 2021-07-23
-image: /blog/2021-07-23-minion-recipes-program.png
+image: /blog/2021-07-23-minion-recipes-program.webp
 tags:
 - python
 - programming
@@ -15,7 +15,7 @@ description: In this blogpost, I share how I developed a program to help my mum 
 
 
 <p align="center">
-    <img width="600" src="/blog/2021-07-23-minion-recipes-program.png"/>
+    <img width="600" src="/blog/2021-07-23-minion-recipes-program.webp"/>
 </p>
 
 <br />
@@ -38,13 +38,13 @@ Note: Before the end of that year, I still upgraded the software for its version
 
 Below it displays the interfaces used, and these correspond to: Red-Visualize; Add; Blue-Add; Green-Edit; and Yellow-Remove recipes.
 
-![image](/blog/2021-07-23-minion-recipes-program_1.png)
+![image](/blog/2021-07-23-minion-recipes-program_1.webp)
 
 PS: Any resemblance with the Microsoft colour scheme is pure coincidence eheh.
 
 When adding a recipe, the following window will be displayed.
 
-![image](/blog/2021-07-23-minion-recipes-program_2.png)
+![image](/blog/2021-07-23-minion-recipes-program_2.webp)
 
 This allows you to add both a recipe, and a category (i.e. the “Tiramisu” recipe would be within “Desserts” category).
 
@@ -57,19 +57,19 @@ The recipe content would include:
 
 When visualising a recipe, the following window will be displayed.
 
-![image](/blog/2021-07-23-minion-recipes-program_3.png)
+![image](/blog/2021-07-23-minion-recipes-program_3.webp)
 
 Where the recipe dialog box would prompt the recipes based on the category chosen on its left. Then, after selecting a recipe, the ingredients, preparation and comment would be filled out.
 
 When editing a recipe, the following window will be displayed. This is similar to the visualisation window, with the difference that the text boxes are editable, and therefore, the recipe can be improved.
 
-![image](/blog/2021-07-23-minion-recipes-program_4.png)
+![image](/blog/2021-07-23-minion-recipes-program_4.webp)
 
 Note: throughout the program there are Message Dialog boxes (as shown above) that tell the user whether the recipe has been successfully (or not) edited, added or removed.
 
 Finally, in order to remove a recipe, the following window would be displayed. Where you can either delete a single recipe, or the entire category.
 
-![image](/blog/2021-07-23-minion-recipes-program_5.png)
+![image](/blog/2021-07-23-minion-recipes-program_5.webp)
 
 The recipe database is handled in the most robust way: **with plain text files**, obviously.
 

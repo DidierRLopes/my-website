@@ -2,7 +2,7 @@
 slug: how-function-calling-and-context-aware-ai-shapes-openbb
 title: How function calling and context-aware AI shapes OpenBB
 date: 2025-03-01
-image: /blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb
+image: /blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb.webp
 tags:
 - openbb
 - ai
@@ -19,7 +19,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb.webp" />
 </p>
 
 Building on OpenBB's presentation at the Anote AI Day Summit, this post explores how intelligent function calling serves as the cornerstone of our AI-native workspace for data analytics.
@@ -37,7 +37,7 @@ This blog post is a similar presentation in text-written format.
 At the core of our product is the OpenBB workspace, a fully customizable dashboard where users can control their data visualization and analysis. The middle section shows a dashboard that you can fully customize with widgets containing relevant data widgets. We've designed it with a practical sidebar for managing dashboards, folder organization, sharing capabilities, templates, and data connections.
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_1.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_1.webp" />
 </p>
 
 But what I'm going to talk about is our agentic sidebar on the right. This is effectively your AI agent that works as an analyst with access to all the data inside the product. And this is where our implementation of function calling becomes crucial.
@@ -51,7 +51,7 @@ We've developed three ways to provide context to our Copilot:
 <br />
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_2.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_2.webp" />
 </p>
 
 2. **Dashboard context**: In this case, the Copilot can access all data present on the current dashboard and will then inform the user which widgets were used.
@@ -59,7 +59,7 @@ We've developed three ways to provide context to our Copilot:
 <br />
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_3.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_3.webp" />
 </p>
 
 3. **Global context**: Through a feature flag, users can also enable searching across all widgets within the workspace.
@@ -67,17 +67,17 @@ We've developed three ways to provide context to our Copilot:
 <br />
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_4.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_4.webp" />
 </p>
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_5.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_5.webp" />
 </p>
 
 What's important is how we've prioritized these: explicit context takes precedence, followed by dashboard context, and then global context.
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_6.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_6.webp" />
 </p>
 
 It's similar to an analyst's process—you begin by examining the document in front of you, then assess the items on your desk, and finally consider your wider resources, such as Google Drive or Slack.
@@ -87,7 +87,7 @@ It's similar to an analyst's process—you begin by examining the document in fr
 One of our key innovations is our metadata system.
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_7.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_7.webp" />
 </p>
 
 Each widget in our product has what we call "widget metadata" composed of five components:
@@ -101,7 +101,7 @@ Each widget in our product has what we call "widget metadata" composed of five c
 We convert this metadata into embeddings and compare it against user prompts to determine which functions the Copilot should access. This allows us to scale effectively while maintaining accuracy, especially since there can be literally thousands of data widgets. Due to the metadata, widgets are only invoked when a user triggers a relevant prompt.
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_8.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_8.webp" />
 </p>
 
 
@@ -114,20 +114,20 @@ Let me share some real examples of how this works.
 When analyzing unstructured data like market reports, our Copilot can extract specific information without parameter changes:
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_9.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_9.webp" />
 </p>
 
 Copilot understands from widget metadata that the user requires information from it and queries it:
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_10.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_10.webp" />
 </p>
 
 In turn that data is utilized to answer the prompt:
 
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_11.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_11.webp" />
 </p>
 
 ### Parameter-modified calls
@@ -137,31 +137,31 @@ We can handle cases where users want to switch contexts.
 For instance, even if you're looking at Apple news, you can ask about Palantir, and our system will automatically adjust the parameters:
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_12.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_12.webp" />
 </p>
 
 Copilot understands from widget metadata that the user requires information from it and queries it:
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_13.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_13.webp" />
 </p>
 
 But, not as is. It requires updating input parameters accordingly (symbol and dates):
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_14.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_14.webp" />
 </p>
 
 In turn, that data is utilized to answer the prompt:
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_15.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_15.webp" />
 </p>
 
 Finally, the utilized widget (with updated parameters) can be added to the dashboard seamlessly.
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_16.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_16.webp" />
 </p>
 
 ### Complex analysis
@@ -169,32 +169,32 @@ Finally, the utilized widget (with updated parameters) can be added to the dashb
 For more sophisticated tasks like analyzing futures contracts for arbitrage opportunities, our Copilot can make multiple function calls, process the data, and create visualizations.
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_17.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_17.webp" />
 </p>
 
 Copilot understands from widget metadata that the user requires information from it, with updated parameters, and queries it.
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_18.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_18.webp" />
 </p>
 
 
 In turn, that data is utilized to answer the prompt...
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_19.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_19.webp" />
 </p>
 
 and creating a chart like the user asked:
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_20.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_20.webp" />
 </p>
 
 Finally, the resulting artifact (in this case, a chart) can be added to the dashboard:
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_21.png" />
+    <img width="900" src="/blog/2025-03-01-how-function-calling-and-context-aware-ai-shapes-openbb_21.webp" />
 </p>
 
 ## Verification and output

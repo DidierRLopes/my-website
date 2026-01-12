@@ -2,7 +2,7 @@
 slug: gamestonk-terminal-cant-stop-won-t-stop
 title: Gamestonk Terminal — Can’t Stop, Won’t Stop
 date: 2021-09-16
-image: /blog/2021-09-16-gamestonk-terminal-cant-stop-won-t-stop.png
+image: /blog/2021-09-16-gamestonk-terminal-cant-stop-won-t-stop.webp
 tags:
 - gamestonk-terminal
 - open-source
@@ -19,7 +19,7 @@ description: Gamestonk Terminal's latest updates including Docker integration, J
 
 
 <p align="center">
-    <img width="600" src="/blog/2021-09-16-gamestonk-terminal-cant-stop-won-t-stop_1.png"/>
+    <img width="600" src="/blog/2021-09-16-gamestonk-terminal-cant-stop-won-t-stop_1.webp"/>
 </p>
 
 <br />

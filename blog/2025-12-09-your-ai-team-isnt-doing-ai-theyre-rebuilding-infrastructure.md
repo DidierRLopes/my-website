@@ -2,7 +2,7 @@
 slug: your-ai-team-isnt-doing-ai-theyre-rebuilding-infrastructure
 title: Your AI team isn't doing AI. They're rebuilding infrastructure.
 date: 2025-12-09
-image: /blog/2025-12-09-your-ai-team-isnt-doing-ai-theyre-rebuilding-infrastructure
+image: /blog/2025-12-09-your-ai-team-isnt-doing-ai-theyre-rebuilding-infrastructure.webp
 tags:
 - ai
 - infrastructure
@@ -14,7 +14,7 @@ description: From weekend POC to production - the 24-month gap nobody talks abou
 hideSidebar: true
 ---
 
-![Your AI team isn't doing AI. They're rebuilding infrastructure.](/blog/2025-12-09-your-ai-team-isnt-doing-ai-theyre-rebuilding-infrastructure.png)
+![Your AI team isn't doing AI. They're rebuilding infrastructure.](/blog/2025-12-09-your-ai-team-isnt-doing-ai-theyre-rebuilding-infrastructure.webp)
 
 From weekend POC to production: the 24-month gap nobody talks about.
 
@@ -55,7 +55,7 @@ We didn't stop there. We spent the next years, and a couple of $M in R&D, learni
 We learned the hard way what a CTO actually needs when you're operating at scale: sophisticated context management, proper data governance, audit trails, security that doesn't compromise workflow, AI that's genuinely agentic and not just chatty.
 
 <p align="center">
-    <img width="800" src="/blog/2025-12-09-your-ai-team-isnt-doing-ai-theyre-rebuilding-infrastructure_1.png" alt="7 level context layers slide from training workshop" />
+    <img width="800" src="/blog/2025-12-09-your-ai-team-isnt-doing-ai-theyre-rebuilding-infrastructure_1.webp" alt="7 level context layers slide from training workshop" />
 </p>
 <p align="center" style={{fontSize: '0.85em', marginTop: '-0.5em'}}>Slide from our training workshop deck that shows the 7 level of context layers that the agent has to navigate, with each of these layers having sometimes hundreds to thousands of datasets.</p>
 

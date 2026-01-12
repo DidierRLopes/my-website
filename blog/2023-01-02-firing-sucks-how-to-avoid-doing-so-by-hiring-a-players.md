@@ -2,7 +2,7 @@
 slug: firing-sucks-how-to-avoid-doing-so-by-hiring-a-players
 title: Firing sucks. How to avoid doing so by hiring A players.
 date: 2023-01-02
-image: /blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players.png
+image: /blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players.webp
 tags:
 - hiring
 - management
@@ -16,7 +16,7 @@ description: Firing is tough. This blogpost discusses how to avoid it by hiring 
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players.png"/>
+    <img width="600" src="/blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players.webp"/>
 </p>
 
 <br />
@@ -41,7 +41,7 @@ What is an A player? _A candidate who has at least a 90 percent chance of achiev
 
 In this post, I will go over the steps to get an A team.
 
-![image](/blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players_1.png)
+![image](/blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players_1.webp)
 
 ## Scorecard
 
@@ -49,7 +49,7 @@ This is a document that describes the mission for the position, outcomes that mu
 
 This is an example of what a scorecard should look like:
 
-![image](/blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players_2.png)
+![image](/blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players_2.webp)
 
 Let’s go through each of the sections in this document.
 
@@ -256,7 +256,7 @@ These questions follow the same pattern as the other interviews. This makes it v
 
 Does somebody’s skill (what they can do) and will (what they want to do) match your scorecard? This is a person’s skill-will profile.
 
-![image](/blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players_3.png)
+![image](/blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players_3.webp)
 
 You should have plenty of data at this stage to make this assessment.
 
@@ -337,6 +337,6 @@ Once you have identified the right candidate, you must be persistent and do what
 
 In a more simplistic image, this is what the A method boils down too.
 
-![image](/blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players_4.png)
+![image](/blog/2023-01-02-firing-sucks-how-to-avoid-doing-so-by-hiring-a-players_4.webp)
 
 I really enjoyed reading this book and I am taking a lot of these learnings to improve the hiring processes at OpenBB.

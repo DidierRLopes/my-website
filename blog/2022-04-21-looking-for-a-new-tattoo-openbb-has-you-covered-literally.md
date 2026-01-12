@@ -2,7 +2,7 @@
 slug: looking-for-a-new-tattoo-openbb-has-you-covered-literally
 title: Looking for a new tattoo? OpenBB has you covered… literally.
 date: 2022-04-21
-image: /blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally.png
+image: /blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally.webp
 tags:
 - openbb
 - marketing
@@ -18,7 +18,7 @@ description: Exploring unconventional ways to increase brand visibility, OpenBB'
 
 
 <p align="center">
-    <img width="600" src="/blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally.png"/>
+    <img width="600" src="/blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally.webp"/>
 </p>
 
 <br />
@@ -39,13 +39,13 @@ That's why I started thinking of ways to share our OpenBB brand in a non-intrusi
 
 Funnily enough, the first thing that came to my mind was when I go to the bathroom without my phone. Although there's no ads on the back of shampoos/shower gel/soap/spray, I would very much welcome them.
 
-![image](/blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally_1.png)
+![image](/blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally_1.webp)
 
 It's not like knowing the %s of ingredients that makes up cleaning products has a lot of use cases…
 
 This brought me to the conclusion that I would only welcome ads if I was bored and didn't have anything keeping me "too busy". This immediately made me think of London underground ads (the most effective type of DOOH imho). I always read those ads. The main reason being that I don't have WiFi underground and the noise is too loud to listen to a podcast. Hence, I imagined the underground looking like:
 
-![image](/blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally_2.png)
+![image](/blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally_2.webp)
 
 When I checked for the prices, I was looking at a marketing campaign for a couple of days in a couple of stations costing over 5 digits, which is quite expensive for the short time-span.
 
@@ -55,7 +55,7 @@ This lead me to think: **What about a tattoo?** It's a similar concept than Open
 
 Later that day I booked a tattoo slot, paid 100 euros, and got the OpenBB logo on the back of my arm as shown below,
 
-![image](/blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally_3.png)
+![image](/blog/2022-04-21-looking-for-a-new-tattoo-openbb-has-you-covered-literally_3.webp)
 
 I will let you know on my socials how many people ask about this tattoo over the course of my life.
 

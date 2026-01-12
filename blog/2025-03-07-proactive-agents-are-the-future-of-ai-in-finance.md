@@ -2,7 +2,7 @@
 slug: proactive-agents-are-the-future-of-ai-in-finance
 title: Proactive Agents Are the Future of AI in Finance
 date: 2025-03-07
-image: /blog/2025-03-07-proactive-agents-are-the-future-of-ai-in-finance
+image: /blog/2025-03-07-proactive-agents-are-the-future-of-ai-in-finance.webp
 tags:
 - openbb
 - financial-services
@@ -18,7 +18,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-07-proactive-agents-are-the-future-of-ai-in-finance.png" />
+    <img width="600" src="/blog/2025-03-07-proactive-agents-are-the-future-of-ai-in-finance.webp" />
 </p>
 
 How AI is evolving from reactive to proactive in financial services, and why this shift will transform how investors discover opportunities and generate alpha.

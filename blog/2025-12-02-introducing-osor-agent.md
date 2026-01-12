@@ -2,7 +2,7 @@
 slug: introducing-osor-agent
 title: Introducing OSOR Agent
 date: 2025-12-02
-image: /blog/2025-12-02-introducing-osor-agent
+image: /blog/2025-12-02-introducing-osor-agent.webp
 tags:
 - ai
 - open-source
@@ -14,7 +14,7 @@ description: How I quickly hot-swap my financial agent with different LLM provid
 hideSidebar: true
 ---
 
-![Introducing OSOR Agent](/blog/2025-12-02-introducing-osor-agent.png)
+![Introducing OSOR Agent](/blog/2025-12-02-introducing-osor-agent.webp)
 
 How I quickly hot-swap my financial agent with different LLM providers - fully open source.
 
@@ -61,13 +61,13 @@ Open Router gives you access to hundreds of models - Claude, GPT-4o, Gemini, Gro
 Some are literally free, like Grok 4.1 Fast (as of Nov' 23).
 
 <p align="center">
-    <img width="800" src="/blog/2025-12-02-introducing-osor-agent_1.png" alt="Open Router model selection showing free models" />
+    <img width="800" src="/blog/2025-12-02-introducing-osor-agent_1.webp" alt="Open Router model selection showing free models" />
 </p>
 
 When a new model drops, you just select it. No new account, no new interface.
 
 <p align="center">
-    <img width="800" src="/blog/2025-12-02-introducing-osor-agent_2.png" alt="Model selection dropdown in OSOR Agent" />
+    <img width="800" src="/blog/2025-12-02-introducing-osor-agent_2.webp" alt="Model selection dropdown in OSOR Agent" />
 </p>
 
 ### Mature AI Chatting Interface
@@ -79,7 +79,7 @@ You can also expand AI chat so the remainder of the dashboard disappears.
 It even has access to data via MCP as you can see below, and shares its internal step by step reasoning!
 
 <p align="center">
-    <img width="800" src="/blog/2025-12-02-introducing-osor-agent_3.png" alt="OSOR Agent showing step by step reasoning with MCP data" />
+    <img width="800" src="/blog/2025-12-02-introducing-osor-agent_3.webp" alt="OSOR Agent showing step by step reasoning with MCP data" />
 </p>
 
 ### Your Agentic Financial Workspace
@@ -87,7 +87,7 @@ It even has access to data via MCP as you can see below, and shares its internal
 The agent can generate charts, tables, and citations so you're not just reading wall-of-text responses. It understands your data structure and responds accordingly.
 
 <p align="center">
-    <img width="800" src="/blog/2025-12-02-introducing-osor-agent_4.png" alt="OSOR Agent generating charts and tables" />
+    <img width="800" src="/blog/2025-12-02-introducing-osor-agent_4.webp" alt="OSOR Agent generating charts and tables" />
 </p>
 
 In my opinion, you shouldn't have to choose between testing the latest AI model and having access to your financial data.
@@ -115,11 +115,11 @@ There's a lot that can be done to improve the agent, this was a weekend project 
 Here's an example of the agent powered by Gemini 3 working with Top Events from Polymarket when asked about what events I should look at within the "FED" category.
 
 <p align="center">
-    <img width="800" src="/blog/2025-12-02-introducing-osor-agent_5.png" alt="OSOR Agent with Polymarket FED events analysis" />
+    <img width="800" src="/blog/2025-12-02-introducing-osor-agent_5.webp" alt="OSOR Agent with Polymarket FED events analysis" />
 </p>
 
 <p align="center">
-    <img width="800" src="/blog/2025-12-02-introducing-osor-agent_6.png" alt="OSOR Agent detailed analysis of FED events" />
+    <img width="800" src="/blog/2025-12-02-introducing-osor-agent_6.webp" alt="OSOR Agent detailed analysis of FED events" />
 </p>
 
 Contributions are welcome, happy hacking! :)

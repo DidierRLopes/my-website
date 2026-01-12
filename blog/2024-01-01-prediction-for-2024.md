@@ -2,7 +2,7 @@
 slug: prediction-for-2024
 title: Prediction for 2024
 date: 2024-01-01
-image: /blog/2024-01-01-prediction-for-2024.png
+image: /blog/2024-01-01-prediction-for-2024.webp
 tags:
 - openbb
 - finance
@@ -18,7 +18,7 @@ description: Companies will own multiple fine-tuned LLMs/SLMs for specific tasks
 
 
 <p align="center">
-    <img width="600" src="/blog/2024-01-01-prediction-for-2024.png"/>
+    <img width="600" src="/blog/2024-01-01-prediction-for-2024.webp"/>
 </p>
 
 <br />
@@ -42,7 +42,7 @@ As for the financial industry, this is 100% going to happen. Firms will fine-tun
 We are preparing for this shift at OpenBB and I spent the last few days working on a proof-of-concept with José Donato that will allow users to bring their own copilots to the Terminal Pro. And even have these interact with each other.
 
 <p align="center">
-    <img width="600" src="/blog/2024-01-01-prediction-for-2024_1.png"/>
+    <img width="600" src="/blog/2024-01-01-prediction-for-2024_1.webp"/>
 </p>
 
 For a video on how this works you can check: https://x.com/josedonato__/status/1741151037031845986?s=20

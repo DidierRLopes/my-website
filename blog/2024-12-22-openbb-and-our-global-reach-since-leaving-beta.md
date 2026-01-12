@@ -2,7 +2,7 @@
 slug: openbb-and-our-global-reach-since-leaving-beta
 title: OpenBB and our global reach since leaving beta
 date: 2024-12-22
-image: /blog/2024-12-22-openbb-and-our-global-reach-since-leaving-beta.jpeg
+image: /blog/2024-12-22-openbb-and-our-global-reach-since-leaving-beta.webp
 tags:
 - openbb
 - fintech
@@ -19,7 +19,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="600" src="/blog/2024-12-22-openbb-and-our-global-reach-since-leaving-beta.jpeg"/>
+    <img width="600" src="/blog/2024-12-22-openbb-and-our-global-reach-since-leaving-beta.webp"/>
 </p>
 
 This is how OpenBB is reaching users worldwide with Chrome's translation features, making financial analytics accessible in multiple languages and expanding our presence across 84% of countries since launch.
@@ -39,11 +39,11 @@ However - it has also happened having conversation with firms that focus so much
 So, here I am showing you that you can utilize the Google Translate feature that comes with Google Chrome in under 10 seconds to have our product being translated in real-time to your language of choice.
 
 <p align="center">
-    <img width="600" src="/blog/2024-12-22-openbb-and-our-global-reach-since-leaving-beta_1.jpeg"/>
+    <img width="600" src="/blog/2024-12-22-openbb-and-our-global-reach-since-leaving-beta_1.webp"/>
 </p>
 
 <p align="center">
-    <img width="600" src="/blog/2024-12-22-openbb-and-our-global-reach-since-leaving-beta_2.jpeg"/>
+    <img width="600" src="/blog/2024-12-22-openbb-and-our-global-reach-since-leaving-beta_2.webp"/>
 </p>
 
 I've been playing with it in Portuguese, and it works *surprisingly* well.

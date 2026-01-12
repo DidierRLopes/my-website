@@ -2,7 +2,7 @@
 slug: how-i-connected-figma-to-cursor-using-mcp
 title: How I connected Figma to Cursor using MCP
 date: 2025-06-10
-image: /blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp
+image: /blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp.webp
 tags:
 - figma
 - cursor
@@ -22,7 +22,7 @@ hideSidebar: true
 import CodeBlock from '@theme/CodeBlock';
 
 <p align="center">
-    <img width="600" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp.png" />
+    <img width="600" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp.webp" />
 </p>
 
 A step-by-step guide on how to connect Figma to Cursor using MCP (Model-Client-Protocol), enabling seamless design-to-code workflow and improving developer productivity through direct design system integration.
@@ -38,7 +38,7 @@ As I was working on OpenBB, and needed to copy the style from the Figma mockups 
 Here's what I said on the <a href="https://www.linkedin.com/posts/didier-lopes_i-still-cant-believe-this-i-was-deep-into-activity-7337573643431944192-f9-L?utm_source=share&utm_medium=member_desktop&rcm=ACoAABub6aIBaA7HieEI5VizHglQPohLA_Wptag" target="_blank" rel="noreferrer">LinkedIn post</a>.
 
 <p align="center">
-    <img width="600" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_1.png" />
+    <img width="600" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_1.webp" />
 </p>
 
 And this is the video that I added to the post:
@@ -63,14 +63,14 @@ So, in this short post, I'm going to tell you how you can do the same in a coupl
 
 <br />
 <p align="center">
-    <img width="400" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_2.png" />
+    <img width="400" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_2.webp" />
 </p>
 
 3. Enable MCP Server.
 
 <br />
 <p align="center">
-    <img width="400" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_3.png" />
+    <img width="400" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_3.webp" />
 </p>
 
 ## Set up MCP client (Cursor)
@@ -79,14 +79,14 @@ So, in this short post, I'm going to tell you how you can do the same in a coupl
 
 <br />
 <p align="center">
-    <img width="500" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_4.png" />
+    <img width="500" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_4.webp" />
 </p>
 
 2. Add a new MCP server
 
 <br />
 <p align="center">
-    <img width="600" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_5.png" />
+    <img width="600" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_5.webp" />
 </p>
 
 When clicking on "Add Custom MCP", copy paste the following block of code:
@@ -104,19 +104,19 @@ When clicking on "Add Custom MCP", copy paste the following block of code:
 Then save it, like this:
 
 <p align="center">
-    <img width="400" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_6.png" />
+    <img width="400" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_6.webp" />
 </p>
 
 Once you close that file, you'll see that Cursor Settings MCP tab now displays "Loading tools":
 
 <p align="center">
-    <img width="700" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_7.png" />
+    <img width="700" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_7.webp" />
 </p>
 
 After a few seconds you can toggle the Figma MCP and you should be able to see a few tools.
 
 <p align="center">
-    <img width="700" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_8.png" />
+    <img width="700" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_8.webp" />
 </p>
 
 ## Usage
@@ -126,13 +126,13 @@ The usage is very simple.
 You just need to select the layout you want to pass to Cursor on Figma, and then right click on it and select "Copy link to selection".
 
 <p align="center">
-    <img width="400" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_9.png" />
+    <img width="400" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_9.webp" />
 </p>
 
 Then you paste that link to Cursor and you prompt accordingly.
 
 <p align="center">
-    <img width="400" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_10.png" />
+    <img width="400" src="/blog/2025-06-10-how-i-connected-figma-to-cursor-using-mcp_10.webp" />
 </p>
 
 Note: I recommend to be explicit with the model to utilize MCP.

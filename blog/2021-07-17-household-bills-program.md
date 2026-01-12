@@ -2,7 +2,7 @@
 slug: household-bills-program
 title: Household bills Program
 date: 2021-07-17
-image: /blog/2021-07-17-household-bills-program.png
+image: /blog/2021-07-17-household-bills-program.webp
 tags:
 - side-project
 - java
@@ -17,7 +17,7 @@ description: In this blogpost, I share my journey of creating a program to split
 
 
 <p align="center">
-    <img width="600" src="/blog/2021-07-17-household-bills-program.png"/>
+    <img width="600" src="/blog/2021-07-17-household-bills-program.webp"/>
 </p>
 
 <br />
@@ -69,15 +69,15 @@ The development process was to **"divide to conquer"**. I split the tasks into s
 See images below of the program:
 
 <div className="flex justify-center gap-2">
-  <img src="/blog/2021-07-17-household-bills-program_1.png" width="50%" />
-  <img src="/blog/2021-07-17-household-bills-program_2.png" width="50%" /> 
+  <img src="/blog/2021-07-17-household-bills-program_1.webp" width="50%" />
+  <img src="/blog/2021-07-17-household-bills-program_2.webp" width="50%" /> 
 </div>
 
 <br />
 
 <div className="flex justify-center gap-2">
-  <img src="/blog/2021-07-17-household-bills-program_3.png" width="50%" />
-  <img src="/blog/2021-07-17-household-bills-program_4.png" width="50%" /> 
+  <img src="/blog/2021-07-17-household-bills-program_3.webp" width="50%" />
+  <img src="/blog/2021-07-17-household-bills-program_4.webp" width="50%" /> 
 </div>
 
 <br />

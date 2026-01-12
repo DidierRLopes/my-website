@@ -2,7 +2,7 @@
 slug: how-to-handle-equity-top-ups-at-a-seed-stage-startup
 title: How to handle equity top-ups at a seed stage startup
 date: 2023-08-09
-image: /blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup.png
+image: /blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup.webp
 tags:
 - startups
 - seed-stage
@@ -18,7 +18,7 @@ description: In this post, we discuss how to handle equity top-ups at a seed sta
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup.png"/>
+    <img width="600" src="/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup.webp"/>
 </p>
 
 <br />
@@ -39,11 +39,11 @@ Let’s imagine that John Doe was indeed the right candidate for OpenBB, and on 
 
 This means that by the end of June 2022, John will have vested 542 shares (13 x 2000 / 48), and for every following month, he will vest 42 shares per month. Note that we only start showing the shares from June 2022 because before that, he was in his cliff period.
 
-![image](/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup_1.png)
+![image](/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup_1.webp)
 
 If you do this calculation, you’ll see that it adds up to 2022, whereas John was only granted 2000 shares. This is normal and is due to rounding, thus the shares associated with the last month are updated so that it matches the offer.
 
-![image](/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup_2.png)
+![image](/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup_2.webp)
 
 If any of the following situations arise:
 
@@ -84,15 +84,15 @@ Now, let’s discuss the decisions we need to make for the second option grant:
 
 By utilizing maths, we can create the following equation:
 
-![image](/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup_3.jpeg)
+![image](/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup_3.webp)
 
 By filling in the information that we know, we get:
 
-![image](/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup_4.jpeg)
+![image](/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup_4.webp)
 
 And thus we know that we can get the value that makes this happen.
 
-![image](/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup_5.jpeg)
+![image](/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup_5.webp)
 
 However, we don’t want to give the employee fractional shares each month, so we select a round number around the one that makes him receive around 1,500 additional shares over the course of 4 years.
 
@@ -110,7 +110,7 @@ But obviously, you don’t need to pick up your calculator every time you do thi
 
 The spreadsheet below demonstrates what an employee vesting schedule looks like, and below I will write a step-by-step guide so you can fully customize it to your needs.
 
-![image](/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup_6.png)
+![image](/blog/2023-08-09-how-to-handle-equity-top-ups-at-a-seed-stage-startup_6.webp)
 
 - As a result, **E5** will be updated with 11 months afterward to represent the month before the cliff terminates, which consequently leads to the following months being displayed in **column E**.
 

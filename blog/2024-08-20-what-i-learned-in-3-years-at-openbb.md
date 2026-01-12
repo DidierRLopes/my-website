@@ -2,7 +2,7 @@
 slug: what-i-learned-in-3-years-at-openb
 title: What I learned in 3 Years at OpenBB
 date: 2024-08-20
-image: /blog/2024-08-20-what-i-learned-in-3-years-at-openb.jpeg
+image: /blog/2024-08-20-what-i-learned-in-3-years-at-openb.webp
 tags:
 - openbb
 - founder-story
@@ -19,7 +19,7 @@ description: The OpenBB journey started officially 3 years ago. So I want to cel
 
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-20-what-i-learned-in-3-years-at-openb.jpeg"/>
+    <img width="600" src="/blog/2024-08-20-what-i-learned-in-3-years-at-openb.webp"/>
 </p>
 
 The OpenBB journey started officially 3 years ago.

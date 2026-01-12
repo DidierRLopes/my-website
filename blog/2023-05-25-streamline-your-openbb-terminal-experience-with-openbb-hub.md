@@ -2,7 +2,7 @@
 slug: streamline-your-openbb-terminal-experience-with-openbb-hub
 title: Streamline your OpenBB Terminal experience with OpenBB Hub
 date: 2023-05-25
-image: /blog/2023-05-25-streamline-your-openbb-terminal-experience-with-openbb-hub.png
+image: /blog/2023-05-25-streamline-your-openbb-terminal-experience-with-openbb-hub.webp
 tags:
 - openbb
 - openbb-hub
@@ -18,7 +18,7 @@ description: Streamline your OpenBB Terminal experience with OpenBB Hub. Learn a
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-05-25-streamline-your-openbb-terminal-experience-with-openbb-hub.png"/>
+    <img width="600" src="/blog/2023-05-25-streamline-your-openbb-terminal-experience-with-openbb-hub.webp"/>
 </p>
 
 <br />

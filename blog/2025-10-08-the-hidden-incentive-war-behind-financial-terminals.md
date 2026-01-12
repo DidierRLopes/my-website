@@ -2,7 +2,7 @@
 slug: the-hidden-incentive-war-behind-financial-terminals
 title: The hidden incentive war behind financial terminals
 date: 2025-10-08
-image: /blog/2025-10-08-the-hidden-incentive-war-behind-financial-terminals
+image: /blog/2025-10-08-the-hidden-incentive-war-behind-financial-terminals.webp
 tags:
 - finance
 - financial-terminals
@@ -16,7 +16,7 @@ description: How the misalignment between data providers and interface builders 
 hideSidebar: true
 ---
 
-![The hidden incentive war behind financial terminals](/blog/2025-10-08-the-hidden-incentive-war-behind-financial-terminals.png)
+![The hidden incentive war behind financial terminals](/blog/2025-10-08-the-hidden-incentive-war-behind-financial-terminals.webp)
 
 How the misalignment between data providers and interface builders creates friction for users - the hidden conflict between selling data and serving users in financial software.
 

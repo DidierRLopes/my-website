@@ -2,7 +2,7 @@
 slug: 12-things-i-learned-in-2023
 title: 12 things I learned in 2023
 date: 2024-01-22
-image: /blog/2024-01-22-12-things-i-learned-in-2023.png
+image: /blog/2024-01-22-12-things-i-learned-in-2023.webp
 tags:
 - learnings
 - reflection
@@ -19,7 +19,7 @@ description: The 12 things I learned in 2023
 
 
 <p align="center">
-    <img width="600" src="/blog/2024-01-22-12-things-i-learned-in-2023.png"/>
+    <img width="600" src="/blog/2024-01-22-12-things-i-learned-in-2023.webp"/>
 </p>
 
 <br />

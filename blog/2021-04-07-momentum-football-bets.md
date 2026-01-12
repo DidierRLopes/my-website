@@ -2,7 +2,7 @@
 slug: momentum-football-bets
 title: Momentum Football Bets
 date: 2021-04-07
-image: /blog/2021-04-07-momentum-football-bets.png
+image: /blog/2021-04-07-momentum-football-bets.webp
 tags:
 - football
 - betting
@@ -17,7 +17,7 @@ description: In this blogpost, I share how I developed an automated task to esti
 
 
 <p align="center">
-    <img width="600" src="/blog/2021-04-07-momentum-football-bets.png"/>
+    <img width="600" src="/blog/2021-04-07-momentum-football-bets.webp"/>
 </p>
 
 <br />
@@ -61,7 +61,7 @@ Lastly, I added a confidence filter so that the terminal would only output the g
 
 After having this implemented, the day after was about polishing the code, adding some colouring and emojis, creating a repository for it, a README, discussing the binning of the momentum score and bet confidence terms, creating a logo for it, and creating an executable + adding the logo which my girlfriend did.
 
-![image](/blog/2021-04-07-momentum-football-bets_1.png)
+![image](/blog/2021-04-07-momentum-football-bets_1.webp)
 
 After this, we were quite excited to backtest the app. We filtered the next features with a big confidence bet score (to have less risk), and put 20 pounds on 3 different accumulators. [And it’s gone.](https://www.youtube.com/watch?v=-DT7bX-B1Mg)
 

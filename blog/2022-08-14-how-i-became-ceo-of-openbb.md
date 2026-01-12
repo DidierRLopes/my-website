@@ -2,7 +2,7 @@
 slug: how-i-became-ceo-of-openbb
 title: How I became CEO of OpenBB
 date: 2022-08-14
-image: /blog/2022-08-14-how-i-became-ceo-of-openbb.png
+image: /blog/2022-08-14-how-i-became-ceo-of-openbb.webp
 tags:
 - openbb
 - ceo
@@ -19,7 +19,7 @@ description: This post talks about my story of becoming the CEO of OpenBB, the c
 
 
 <p align="center">
-    <img width="600" src="/blog/2022-08-14-how-i-became-ceo-of-openbb.png"/>
+    <img width="600" src="/blog/2022-08-14-how-i-became-ceo-of-openbb.webp"/>
 </p>
 
 <br />
@@ -34,11 +34,11 @@ Both my parents are Portuguese and emigrated to Switzerland for better condition
 
 When I was 21 years old I moved to London to pursue my MSc in control systems at the Imperial College. I also joined a semiconductor company as a Software Design Engineer.
 
-![ezgif com-optimize (5)](/blog/2022-08-14-how-i-became-ceo-of-openbb_1.png)
+![ezgif com-optimize (5)](/blog/2022-08-14-how-i-became-ceo-of-openbb_1.webp)
 
 In my spare time I learned Python so I could become more proficient in machine learning and artificial intelligence. When my mathematics professor learned of my interest in Python he challenged me to write the [code behind his PhD thesis](https://github.com/DidierRLopes/UnivariateTimeSeriesForecast) on "_Data Science in the Modeling and Forecasting of Financial Time Series: from Classic methodologies to Deep Learning_" which combined open source, ML/AI and finance. This was when I first started to realize my passion for financial data.
 
-![image](/blog/2022-08-14-how-i-became-ceo-of-openbb_2.png)
+![image](/blog/2022-08-14-how-i-became-ceo-of-openbb_2.webp)
 
 I was inspired by books like "_Rich dad Poor dad_" which allowed me to understand that the only way to build true generational wealth is through investing. Now that I started to accumulate more savings through my professional pursuits, and with my finance interest increasing from my thesis work, I wanted to invest my own capital.
 
@@ -52,7 +52,7 @@ I began investigating potential investment research tools that allowed automatio
 
 During Covid Christmas break, the flight to visit my parents was cancelled, so I ended up staying at home and sketching/building what would become my own investment research platform. I noticed that there were hundreds of data providers offering free data tiers where the data provided didn't correlate with each other. If I wanted access to paid datasets or more requests per minute it would be as simple as to upgrade my API key to a paid plan.
 
-![image](/blog/2022-08-14-how-i-became-ceo-of-openbb_3.png)
+![image](/blog/2022-08-14-how-i-became-ceo-of-openbb_3.webp)
 
 Over the next two months I built a python based command line interface in my spare time for and released the first lines of code as Open Source under the name "Gamestonk Terminal" since I was an investor in Gamestop and Elon Musk had recently tweeted his now infamous ["Gamestonk" tweet](https://twitter.com/elonmusk/status/1354174279894642703?s=20).
 

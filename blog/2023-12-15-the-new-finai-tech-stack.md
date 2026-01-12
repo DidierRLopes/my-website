@@ -2,7 +2,7 @@
 slug: the-new-finai-tech-stack
 title: The new FinAI Tech Stack
 date: 2023-12-15
-image: /blog/2023-12-15-the-new-finai-tech-stack.png
+image: /blog/2023-12-15-the-new-finai-tech-stack.webp
 tags:
 - openbb
 - finance
@@ -18,7 +18,7 @@ description: This blog post delves into how our collaboration with MindsDB, Nixt
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-12-15-the-new-finai-tech-stack.png"/>
+    <img width="600" src="/blog/2023-12-15-the-new-finai-tech-stack.webp"/>
 </p>
 
 <br />
@@ -36,7 +36,7 @@ In early September, I attended a “Future of Finance” event in NYC. Despite t
 Once I was back in the Bay Area, I had a barbecue with Jorge and Max from MindsDB and Nixtla, and I was commenting on that experience. To which Jorge promptly replied - why don’t we do it ourselves? So following this discussion, we decided to put the AI in finance event in motion.
 
 <p align="center">
-    <img width="600" src="/blog/2023-12-15-the-new-finai-tech-stack_1.png"/>
+    <img width="600" src="/blog/2023-12-15-the-new-finai-tech-stack_1.webp"/>
 </p>
 
 At OpenBB, AI has become a key component in our approach to refactoring the OpenBB Platform from the ground up. We've recently recruited a Head of AI to help us build our strategy and work on this effort full-time.
@@ -44,7 +44,7 @@ At OpenBB, AI has become a key component in our approach to refactoring the Open
 You can find more details on this [here](/blog/revolutionizing-ai-at-openbb-with-new-leader-michael-struwig).
 
 <p align="center">
-    <img width="600" src="/blog/2023-12-15-the-new-finai-tech-stack_2.png"/>
+    <img width="600" src="/blog/2023-12-15-the-new-finai-tech-stack_2.webp"/>
 </p>
 
 ## OpenBB x MindsDB
@@ -108,7 +108,7 @@ Over time I iterated on it to make the agent more robust, but the improvement on
 So at the event, Harrison presented this architecture which heavily relies on Langchain and OpenBB tools.
 
 <p align="center">
-    <img width="600" src="/blog/2023-12-15-the-new-finai-tech-stack_3.png"/>
+    <img width="600" src="/blog/2023-12-15-the-new-finai-tech-stack_3.webp"/>
 </p>
 
 Later on, I demonstrated how we can integrate this architecture into OpenBB Copilot and make it available from the OpenBB Terminal Pro.

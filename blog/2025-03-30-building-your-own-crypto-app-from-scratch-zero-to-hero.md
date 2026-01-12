@@ -2,7 +2,7 @@
 slug: building-your-own-crypto-app-from-scratch-zero-to-hero
 title: Building your own Crypto app from scratch - zero to hero
 date: 2025-03-30
-image: /blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero
+image: /blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero.webp
 tags:
 - openbb
 - crypto
@@ -19,7 +19,7 @@ unlisted: true
 ---
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero.png" />
+    <img width="600" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero.webp" />
 </p>
 
 A comprehensive guide to building sophisticated crypto applications using OpenBB. Learn how to create custom dashboards, implement consistent styling, leverage widget specifications, build template workflows, and customize AI agents for your specific use case.
@@ -39,7 +39,7 @@ My friend Matt Maximo is an investor in digital assets at VanEck. The first time
 So impressed that I shared a <a href="https://www.linkedin.com/feed/update/urn:li:activity:7275174801860636672/" target="_blank">post about it</a> on LinkedIn, which got over 50k impressions.
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_1.png" />
+    <img width="900" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_1.webp" />
 </p>
 
 However, I wanted to take the dashboard he built to the next level. So I'm going to highlight the 5 different OpenBB levels that enable you to go from zero to hero.
@@ -64,7 +64,7 @@ AND, you get out-of-the-box:
 This is where I would say Matt's dashboard was.
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_2.png" />
+    <img width="900" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_2.webp" />
 </p>
 
 ## Level 2 - Data style rendering
@@ -187,7 +187,7 @@ So, here I recommend creating a Plotly config that you will be utilizing through
 Here's an example of how a dashboard that utilizes the same Plotly config file looks:
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_3.png" />
+    <img width="900" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_3.webp" />
 </p>
 
 Notice the visual consistency.
@@ -201,7 +201,7 @@ However, from customer conversations, some users had a strong preference for lig
 Here's how the previous dashboard looks in light mode:
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_4.png" />
+    <img width="900" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_4.webp" />
 </p>
 
 As seen above, the Plotly config file is prepared for both dark and light mode. However, how does it know which to use?
@@ -233,7 +233,7 @@ That entire container is what we call a widget.
 It's not just the data that you are pushing into OpenBB - it also comes with the concepts of parameters and metadata.
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_5.png" />
+    <img width="900" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_5.webp" />
 </p>
 
 Once you understand this, you enter a whole new domain.
@@ -318,7 +318,7 @@ If we go through the parameters example above, you'll start to understand the ca
 </CodeBlock>
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_6.png" />
+    <img width="600" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_6.webp" />
 </p>
 2. The resolution dropdown highlights that there's a component that takes another endpoint for the list of choices that the user has at their disposal, and even that they can search for the right options. This enables developers to limit the selections that the end user will have when utilizing OpenBB.
 
@@ -341,7 +341,7 @@ If we go through the parameters example above, you'll start to understand the ca
 </CodeBlock>
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_7.png" />
+    <img width="600" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_7.webp" />
 </p>
 
 3. The "date" type parameter is a common one, as a lot of financial data requires users to select a starting date. This functionality is controlled by the selection in the "type" field.
@@ -364,7 +364,7 @@ If we go through the parameters example above, you'll start to understand the ca
 </CodeBlock>
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_8.png" />
+    <img width="600" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_8.webp" />
 </p>
 More information on parameters can be found <a href="https://docs.openbb.co/terminal/custom-backend/widgets-json-reference" target="_blank">here</a>.
 
@@ -375,7 +375,7 @@ Metadata is data associated with the widget that is relevant for the agent on th
 Here's an example, for when asking "What was net liquidation of BTC on March 17 of this year?".
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_9.png" />
+    <img width="900" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_9.webp" />
 </p>
 
 It gets the right data, but how given the data isn't available right there?
@@ -385,13 +385,13 @@ This is done through function calling, and I have an entire post about it which 
 But if you were interested in getting the data that was used to answer the prompt right there you can simply go to the citation, and add the widget to the dashboard.
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_10.png" />
+    <img width="600" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_10.webp" />
 </p>
 
 The widget added will look like this:
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_11.png" />
+    <img width="600" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_11.webp" />
 </p>
 
 Note that all the parameters are the correct ones to get the right data.
@@ -421,7 +421,7 @@ And you can create many of these.
 This can be done by simply exporting template from a dashboard that you like. Like this:
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_12.png" />
+    <img width="900" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_12.webp" />
 </p>
 
 And then pushing it into templates.json.
@@ -429,7 +429,7 @@ And then pushing it into templates.json.
 Here's an example of having multiple custom template workflows to choose from.
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_13.png" />
+    <img width="900" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_13.webp" />
 </p>
 
 ### Prompts
@@ -439,13 +439,13 @@ For us it is important that a workflow is not just a collection of widgets, grou
 This is why we allow users to add prompts to their template workflows.
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_14.png" />
+    <img width="600" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_14.webp" />
 </p>
 
 After running that prompt on the data available within this template workflow.
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_15.png" />
+    <img width="900" src="/blog/2025-03-30-building-your-own-crypto-app-from-scratch-zero-to-hero_15.webp" />
 </p>
 
 ## Level 5 - Custom AI agent

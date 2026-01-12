@@ -2,7 +2,7 @@
 slug: chatgpt-and-the-future-of-ai-in-finance
 title: ChatGPT and The Future of AI in Finance
 date: 2024-09-21
-image: /blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance.jpg
+image: /blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance.webp
 tags:
 - ai
 - fintech
@@ -20,7 +20,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="900" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance.jpg"/>
+    <img width="900" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance.webp"/>
 </p>
 
 I took the stage at the Cornell Quant Conference alongside Yu Yu (BlackRock) Tony Berkman (Two Sigma), and Samson Qian (Citadel), to discuss ChatGPT & The Future of AI in Finance.
@@ -71,8 +71,8 @@ The problem with current LLMs is that they are, for the most part, like **Friend
 Hallucinations would be less problematic if the default behavior were more like the answer on the right, when the LLM is not 100% confident.
 
 <div className="flex justify-center items-center">
-  <img width="350" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_1.png" style={{marginRight: '10px'}}/>
-  <img width="350" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_2.png"/>
+  <img width="350" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_1.webp" style={{marginRight: '10px'}}/>
+  <img width="350" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_2.webp"/>
 </div>
 <br />
 
@@ -89,7 +89,7 @@ The Copilot will only answer the question if that data exists. This allows the m
 This is how it looks.
 
 <p align="center">
-    <img width="900" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_3.png"/>
+    <img width="900" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_3.webp"/>
 </p>
 
 While I've heard a few vendors promising 100% accuracy, this is simply not true.
@@ -99,7 +99,7 @@ We are at a stage where technology is not even yet at the 'trust but verify' lev
 So instead of hallucinating with confidence, when data is unavailable, we prompt the model to return that there was no real-time information accessible to answer the query.
 
 <p align="center">
-    <img width="900" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_4.png"/>
+    <img width="900" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_4.webp"/>
 </p>
 
 ### Function calling to increase accuracy
@@ -126,7 +126,7 @@ Note: This still means that Copilot needs to use the correct widget and the corr
 Here's how it works behind the scenes, the OpenBB Copilot highlights its step-by-step reasoning so users can understand its thought process. Transparency is key.
 
 <p align="center">
-    <img width="900" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_5.png"/>
+    <img width="900" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_5.webp"/>
 </p>
 
 ### Workflows to avoid hallucinations
@@ -146,7 +146,7 @@ They get the "_Sentence Extracted From_" column, which they can copy and paste i
 See example below,
 
 <p align="center">
-    <img width="900" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_6.png"/>
+    <img width="900" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_6.webp"/>
 </p>
 
 #### Add deterministic processes to check for hallucinations
@@ -182,7 +182,7 @@ This is why, at OpenBB, we believe in compound AI systems.
 And apparently, [so does Sequoia](https://finance.yahoo.com/news/sequoia-sees-bigger-money-ai-203655254.html?guccounter=1).
 
 <p align="center">
-    <img width="300" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_7.png"/>
+    <img width="300" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_7.webp"/>
 </p>
 
 ### The "Strawberry" issue will be solved
@@ -192,8 +192,8 @@ A panelist commented on stage that LLMs can't even count how many R's are in the
 This [tweet](https://x.com/MwangoCapital/status/1828857579860095428) offers a good explanation of why this happens — it turns out it's due to the tokenizer, and it can be solved. In fact, it's solved by simply ensuring that the model takes each letter as a token. See below,
 
 <div className="flex justify-center items-center">
-  <img width="300" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_8.png" style={{marginRight: '10px'}}/>
-  <img width="300" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_9.png"/>
+  <img width="300" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_8.webp" style={{marginRight: '10px'}}/>
+  <img width="300" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_9.webp"/>
 </div>
 <br />
 
@@ -236,7 +236,7 @@ The best example of this is OpenAI vs Anthropic.
 I had been using OpenAI's GPT-4 for coding for several months. After trying Anthropic's Sonnet 3.5 for coding, I never went back to OpenAI.
 
 <p align="center">
-    <img width="400" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_10.png"/>
+    <img width="400" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_10.webp"/>
 </p>
 
 The market share for the best LLM will be gigantic. That's why [OpenAI is looking to raise at a $150 billion valuation](https://www.bloomberg.com/news/articles/2024-09-11/openai-fundraising-set-to-vault-startup's-value-to-150-billion). While the valuation reflects the market size, the amount that will be raised represents the capital needed to reach that valuation. This is why only a few players will be able to compete at that level.
@@ -266,7 +266,7 @@ Then after some new models come out, you may consider reapplying fine-tuning to 
 This is how I see it working in my head:
 
 <p align="center">
-    <img width="900" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_11.png"/>
+    <img width="900" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_11.webp"/>
 </p>
 
 ## 4. Compliance and Data security
@@ -294,8 +294,8 @@ At OpenBB, we take this very seriously and have taken measures to allow enterpri
 Enable firms to bring their own LLMs to access data within OpenBB. This means that we provide an interface for research, but also allow them to integrate their internal LLMs and interact directly with it from OpenBB.
 
 <div className="flex justify-center items-center">
-  <img width="350" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_12.png" style={{marginRight: '10px'}}/>
-  <img width="350" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_13.png"/>
+  <img width="350" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_12.webp" style={{marginRight: '10px'}}/>
+  <img width="350" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_13.webp"/>
 </div>
 <br />
 
@@ -310,31 +310,31 @@ These are the features:
 - **Widget title/description suggestion from Copilot**: This sends the content of the table or note output by Copilot to an LLM provider to receive suggestions of a title and description.
 
 <p align="center">
-    <img width="600" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_14.png" />
+    <img width="600" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_14.webp" />
 </p>
 
 - **Widget title/description suggestion upon upload**: It sends the content of the file that has been uploaded to an LLM provider to receive suggestions of title and description.
 
 <p align="center">
-    <img width="600" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_15.png" />
+    <img width="600" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_15.webp" />
 </p>
 
 - **Copilot chat title generation**: Upon the first user prompt, the content is sent to an LLM provider to update the chat title, reflecting the nature of the conversation.
 
 <p align="center">
-    <img width="600" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_16.png" />
+    <img width="600" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_16.webp" />
 </p>
 
 - **Dashboard name generation**: When renaming the dashboard, we send the title and descriptions of all widgets on that dashboard to an LLM provider, to ensure that the suggested name is relevant.
 
 <p align="center">
-    <img width="600" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_17.png" />
+    <img width="600" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_17.webp" />
 </p>
 
 To allow firms to keep their data within their network, one of our enterprise features is the option to disable these AI workflows.
 
 <p align="center">
-    <img width="900" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_18.png" />
+    <img width="900" src="/blog/2024-09-21-chatgpt-and-the-future-of-ai-in-finance_18.webp" />
 </p>
 
 In the future, we could direct these AI workflows to use an LLM that our customers are running locally.

@@ -2,7 +2,7 @@
 slug: how-to-use-openai-to-extract-insights-from-team-survey
 title: How to Use OpenAI to Extract Insights from Team Survey
 date: 2023-07-21
-image: /blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey.png
+image: /blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey.webp
 tags:
 - openai
 - team-survey
@@ -17,7 +17,7 @@ description: This blog post discusses how to use OpenAI to extract insights from
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey.png"/>
+    <img width="600" src="/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey.webp"/>
 </p>
 
 <br />
@@ -36,11 +36,11 @@ I’ve been wanting to play with the OpenAI API for a while, but I’ve had high
 
 Last week, I posted about how at OpenBB we have developed a monthly team survey and automated the process of requesting information through Slack and Airtable. You can find more on that post [here](/blog/employees-are-leaving-be-proactive-about-employee-feedback).
 
-![image](/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_1.png)
+![image](/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_1.webp)
 
 This made me think that even though I have access to all this data, which OpenBB has made fully available [here](https://openbb.co/open), I still have to spend some time looking at the data to extract insights.
 
-<img width="1397" alt="Screenshot 2023-11-24 at 4 39 41 PM" src="/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_2.png" />
+<img width="1397" alt="Screenshot 2023-11-24 at 4 39 41 PM" src="/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_2.webp" />
 
 What if I could automate that analysis using OpenAI? This is what I set out to build, and this post will focus on how I went from idea to implementation.
 
@@ -68,15 +68,15 @@ So, the idea is as follows:
 
 First of all, I went to the [Slack API](https://api.slack.com/apps) page. There, I created an app named “Employee Voice” and selected the “OpenBB” workspace, as shown below:
 
-![image](/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_3.png)
+![image](/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_3.webp)
 
 After clicking “Create App” I proceeded to update the display information.
 
-![image](/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_4.png)
+![image](/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_4.webp)
 
 Then I go into “Incoming Webhooks” and select the channel I’m interested in posting messages to. That should be all the settings you need to configure for your app.
 
-![image](/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_5.png)
+![image](/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_5.webp)
 
 The webhook URL will be necessary, so I copied it and added it to the following script. For the channel name, I used my personal name, “_Didier Lopes_”, since I was just testing if it worked. As for the message, I used the infamous “Hello World” text.
 
@@ -111,7 +111,7 @@ Now, I want to have programmatic access to this data.
 
 Firstly, I need to obtain the Airtable API key, which you can get from the [Airtable Developer Hub](https://airtable.com/create/tokens). Secondly, I navigate to Airtable and locate the table that contains the data of interest, as shown below:
 
-![image](/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_6.png)
+![image](/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_6.webp)
 
 The name of the table, “_OpenBB_monthly_”, corresponds to the “TABLE NAME” that will be necessary. Additionally, when you are on this table view, your URL will have the following format: https://airtable.com/XXX. That XXX is your “BASE ID,” which will be the final element necessary to retrieve data from Airtable.
 
@@ -140,7 +140,7 @@ Next, run the following script to ensure that you have access to this data.
 
 Finally, go to [OpenAI Developer platform](https://platform.openai.com/account/api-keys) and grab your OpenAI API key.
 
-![image](/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_7.png)
+![image](/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_7.webp)
 
 Once you have that, you are pretty much ready to test whether this works or not. In this case, we assume you have access to the data from Airtable, so you can test if the OpenAI code is set up correctly with the following:
 
@@ -189,7 +189,7 @@ Once you have the scripts, merging them is straightforward. I will show you what
 
 Here is [OpenBB](http://openbb.co/)’s team survey data from June of 2023:
 
-![image](/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_8.png)
+![image](/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_8.webp)
 
 If I run the script here, as shown below (yes, you guessed it right — I open-sourced this project as usual. I hope you and your team find it useful):
 
@@ -208,7 +208,7 @@ This is the expected output if the script runs successfully.
     SUCCESS: Message with insights sent to slack
 ```
 
-![image](/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_9.png)
+![image](/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_9.webp)
 
 ## Automate with GitHub workflow
 
@@ -250,7 +250,7 @@ What do we need in advance for this to work?
 
 All of these variables need to be set as action secrets. You can do this by selecting the “Settings” tab above, then going into “Scripts and variables,” and selecting “New repository secret.” Fill in the information accordingly, as shown below:
 
-![image](/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_10.png)
+![image](/blog/2023-07-21-how-to-use-openai-to-extract-insights-from-team-survey_10.webp)
 
 ### Workflow
 

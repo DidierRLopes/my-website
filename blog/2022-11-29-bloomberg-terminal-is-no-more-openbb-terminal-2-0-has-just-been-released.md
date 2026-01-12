@@ -2,7 +2,7 @@
 slug: bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released
 title: Bloomberg Terminal is no more. OpenBB Terminal 2.0 has just been released.
 date: 2022-11-29
-image: /blog/2022-11-29-bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released.png
+image: /blog/2022-11-29-bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released.webp
 tags:
 - openbb
 - product-launch
@@ -19,7 +19,7 @@ description: OpenBB Terminal 2.0 has been released. This blog post discusses the
 
 
 <p align="center">
-    <img width="600" src="/blog/2022-11-29-bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released.png"/>
+    <img width="600" src="/blog/2022-11-29-bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released.webp"/>
 </p>
 
 <br />
@@ -49,11 +49,11 @@ A summary:
 
 The SDK will allow users to create report templates in a matter of minutes and run them for custom tickers at any time in a matter of seconds; Instead of spending hours and starting a report from scratch every single time. We envision a world where the community can share these and help each other at becoming better investors.
 
-![image](/blog/2022-11-29-bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released_1.png)
+![image](/blog/2022-11-29-bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released_1.webp)
 
 - We are also bringing a state-of-the-art AI / ML toolkit to the financial industry, to be used alongside all the data sources our platform has access to (stocks, crypto, NFTs, options, forex, ETFs, mutual funds, macro economic data and even alternative data).
 
-![image](/blog/2022-11-29-bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released_2.png)
+![image](/blog/2022-11-29-bloomberg-terminal-is-no-more-openbb-terminal-2-0-has-just-been-released_2.webp)
 
 For more information, you can read our announcement here: https://openbb.co/blog/openbb-terminal-2-acai
 

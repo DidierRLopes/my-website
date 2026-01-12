@@ -2,7 +2,7 @@
 slug: building-a-developer-friendly-interface-for-financial-analysts
 title: Building a developer friendly interface for financial analysts
 date: 2025-01-24
-image: /blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts
+image: /blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts.webp
 tags:
 - openbb
 - plg
@@ -19,7 +19,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="900" src="/blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts.png"/>
+    <img width="900" src="/blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts.webp"/>
 </p>
 
 It's an open, AI-native application that unifies data, streamlines workflows, and delivers enterprise-grade collaboration and control for teams of all sizes
@@ -35,7 +35,7 @@ Our workspace represents a paradigm shift in financial analysis - a unified plat
 ### Collaborative
 
 <p align="center">
-    <img width="600" src="/blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts_1.png"/>
+    <img width="600" src="/blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts_1.webp"/>
 </p>
 
 The OpenBB workspace combines three essential pillars that transform how teams work with financial data:
@@ -50,7 +50,7 @@ The OpenBB workspace combines three essential pillars that transform how teams w
 ### Unified data integration
 
 <p align="center">
-    <img width="600" src="/blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts_2.png"/>
+    <img width="600" src="/blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts_2.webp"/>
 </p>
 
 Our open source data integration framework (<a href="https://github.com/OpenBB-finance/backend-for-terminal-pro" target="_blank" rel="noopener noreferrer">open source repository here</a>) supports:
@@ -67,7 +67,7 @@ Our open source data integration framework (<a href="https://github.com/OpenBB-f
 A single interface that transforms complex financial analysis into an intuitive, powerful experience.
 
 <p align="center">
-    <img width="600" src="/blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts_3.png"/>
+    <img width="600" src="/blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts_3.webp"/>
 </p>
 
 Our open agentic framework (<a href="https://github.com/OpenBB-finance/copilot-for-openbb" target="_blank" rel="noopener noreferrer">open source repository here</a>) delivers intelligent capabilities through three key pillars:
@@ -81,7 +81,7 @@ Our open agentic framework (<a href="https://github.com/OpenBB-finance/copilot-f
 ## Unified Workspace
 
 <p align="center">
-    <img width="900" src="/blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts.png"/>
+    <img width="900" src="/blog/2025-01-24-building-a-developer-friendly-interface-for-financial-analysts.webp"/>
 </p>
 
 We have organically grown our user base to nearly 80,000 through strategic partnerships and an unwavering commitment to user experience.

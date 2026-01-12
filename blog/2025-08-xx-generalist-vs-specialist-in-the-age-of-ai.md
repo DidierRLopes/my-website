@@ -2,7 +2,7 @@
 slug: 2025-08-xx-generalist-vs-specialist-in-the-age-of-ai
 title: Generalist vs Specialist in the Age of AI
 date: 2025-08-01
-image: /blog/2025-08-xx-generalist-vs-specialist-in-the-age-of-ai
+image: /blog/2025-08-xx-generalist-vs-specialist-in-the-age-of-ai.webp
 tags:
   - ai
   - future-of-work
@@ -17,7 +17,7 @@ hide: true
 ---
 
 <p align="center">
-    <img width="600" src="/blog/2025-08-xx-generalist-vs-specialist-in-the-age-of-ai.png" />
+    <img width="600" src="/blog/2025-08-xx-generalist-vs-specialist-in-the-age-of-ai.webp" />
 </p>
 
 AI is flattening knowledge gaps. Adaptability is rising in value - but true mastery still matters.

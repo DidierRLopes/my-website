@@ -2,7 +2,7 @@
 slug: why-we-got-rid-of-pips-at-openbb
 title: Why we got rid of PIPs at OpenBB
 date: 2024-11-09
-image: /blog/2024-11-09-why-we-got-rid-of-pips-at-openbb.png
+image: /blog/2024-11-09-why-we-got-rid-of-pips-at-openbb.webp
 tags:
 - openbb
 - management
@@ -19,7 +19,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="600" src="/blog/2024-11-09-why-we-got-rid-of-pips-at-openbb.png"/>
+    <img width="600" src="/blog/2024-11-09-why-we-got-rid-of-pips-at-openbb.webp"/>
 </p>
 
 At OpenBB, we removed Performance Improvement Plans (PIPs) in an attempt to increase the company's talent density pool rate.
@@ -43,7 +43,7 @@ That’s a success rate of less than 7%, which is extremely low.
 If we go into the machine learning domain and have a model that predicts that a team member who gets into a PIP is let go every time - this is the classification matrix that we would have.
 
 <p align="center">
-    <img width="900" src="/blog/2024-11-09-why-we-got-rid-of-pips-at-openbb_02.png"/>
+    <img width="900" src="/blog/2024-11-09-why-we-got-rid-of-pips-at-openbb_02.webp"/>
 </p>
 
 Which has:
@@ -89,7 +89,7 @@ And that’s the one thing that startups don’t have.
 Imagine that you have the following org:
 
 <p align="center">
-    <img width="900" src="/blog/2024-11-09-why-we-got-rid-of-pips-at-openbb_03.png"/>
+    <img width="900" src="/blog/2024-11-09-why-we-got-rid-of-pips-at-openbb_03.webp"/>
 </p>
 
 If an IC is underperforming, the TL will discuss it with the IC in advance.

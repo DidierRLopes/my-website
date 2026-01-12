@@ -2,7 +2,7 @@
 slug: openbb-is-underrated
 title: OpenBB is underrated
 date: 2025-05-28
-image: /blog/2025-05-28-openbb-is-underrated
+image: /blog/2025-05-28-openbb-is-underrated.webp
 tags:
 - fintech
 - infrastructure
@@ -20,7 +20,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="600" src="/blog/2025-05-28-openbb-is-underrated.jpeg" />
+    <img width="600" src="/blog/2025-05-28-openbb-is-underrated.webp" />
 </p>
 
 OpenBB isn't just software - it's foundational infrastructure that lets firms shape their own financial workspace, moving beyond one-size-fits-all solutions toward modularity and extensibility.
@@ -60,7 +60,7 @@ That’s where we fit.
 And now, with the launch of apps, users are even closer to value. Apps cut through noise. They bring workflows into focus. They get insights into hands faster. This isn’t about flashy features - it’s about practical, daily utility that compounds.
 
 <p align="center">
-    <img width="600" src="/blog/2025-05-28-openbb-is-underrated.jpeg" />
+    <img width="600" src="/blog/2025-05-28-openbb-is-underrated.webp" />
 </p>
 
 OpenBB meets users wherever they are. We empower individuals to work smarter and faster. We enable researchers to glide from raw data to actionable insight. And we give firms the building blocks to create infrastructure that reflects how they think, how they work - not how outdated systems expect them to conform.
@@ -68,8 +68,8 @@ OpenBB meets users wherever they are. We empower individuals to work smarter and
 _The Terminalist_ captured this perfectly in their <a href="https://theterminalist.substack.com?utm_source=navbar&utm_medium=web" target="_blank" rel="noreferrer">latest post</a>:
 
 <p align="center">
-    <img width="900" src="/blog/2025-05-28-openbb-is-underrated_1.jpeg" />
-    <img width="900" src="/blog/2025-05-28-openbb-is-underrated_2.jpeg" />
+    <img width="900" src="/blog/2025-05-28-openbb-is-underrated_1.webp" />
+    <img width="900" src="/blog/2025-05-28-openbb-is-underrated_2.webp" />
 </p>
 
 What other company fits this description better than us?

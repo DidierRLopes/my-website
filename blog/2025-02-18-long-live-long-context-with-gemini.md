@@ -2,7 +2,7 @@
 slug: long-live-long-context-with-gemini
 title: Long live long context with Gemini
 date: 2025-02-18
-image: /blog/2025-02-18-long-live-long-context-with-gemini
+image: /blog/2025-02-18-long-live-long-context-with-gemini.webp
 tags:
 - ai
 - llm
@@ -20,7 +20,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="900" src="/blog/2025-02-18-long-live-long-context-with-gemini.png" />
+    <img width="900" src="/blog/2025-02-18-long-live-long-context-with-gemini.webp" />
 </p>
 
 A practical exploration of using Gemini's long context window capabilities to analyze multi-page documents, featuring a Streamlit app for testing and iterating prompts.
@@ -46,7 +46,7 @@ This post is going to focus on the approach I took, why and how you can set it u
 Note: This isn't meant to be a production ready pipeline, but enable you to "vibe test" your ingestion pipeline + data retrieval model + prompts. Funnily enough, this was mostly built in a day through _vibe coding_ (Karpathy's coined the term recently).
 
 <p align="center">
-    <img width="600" src="/blog/2025-02-18-long-live-long-context-with-gemini_1.png" />
+    <img width="600" src="/blog/2025-02-18-long-live-long-context-with-gemini_1.webp" />
     <p align="center" className="mt-1" style={{fontSize: "0.75em"}}>
         <a href="https://x.com/karpathy/status/1886192184808149383" target="_blank" rel="noopener noreferrer">Karpathy tweet</a>
     </p>
@@ -108,7 +108,7 @@ Let's go through each of these:
 Contains the system prompt to be used throughout entire application in a `system_prompt.txt` file.
 
 <p align="center">
-    <img width="1200" src="/blog/2025-02-18-long-live-long-context-with-gemini_2.png" />
+    <img width="1200" src="/blog/2025-02-18-long-live-long-context-with-gemini_2.webp" />
 </p>
 
 ### Prompt
@@ -122,7 +122,7 @@ Inside this folder you will find 3 files: `id.txt`, `prompt.txt` and `expected.t
 Contains an identifier that we can use to understand what prompt that is. This can be a slug of the prompt, a KPI number or anything else. It doesn't affect anything apart from helping user to be able to distinguish more easily between prompts at a higher level.
 
 <p align="center">
-    <img width="1200" src="/blog/2025-02-18-long-live-long-context-with-gemini_3.png" />
+    <img width="1200" src="/blog/2025-02-18-long-live-long-context-with-gemini_3.webp" />
 </p>
 
 #### Prompt
@@ -130,7 +130,7 @@ Contains an identifier that we can use to understand what prompt that is. This c
 Contains the actual prompt to run through all the documents that have been loaded.
 
 <p align="center">
-    <img width="1200" src="/blog/2025-02-18-long-live-long-context-with-gemini_4.png" />
+    <img width="1200" src="/blog/2025-02-18-long-live-long-context-with-gemini_4.webp" />
 </p>
 
 #### Expected
@@ -138,7 +138,7 @@ Contains the actual prompt to run through all the documents that have been loade
 Contains the expected value or information to be retrieved.
 
 <p align="center">
-    <img width="1200" src="/blog/2025-02-18-long-live-long-context-with-gemini_5.png" />
+    <img width="1200" src="/blog/2025-02-18-long-live-long-context-with-gemini_5.webp" />
 </p>
 
 ## Running the Streamlit app
@@ -171,7 +171,7 @@ Note: This application has 500 lines of code and all the logic lives in [app.py]
 Since the purpose of this is to test Gemini 2.0 Flash model, then we are asking for the API key to be inserted at the top of the script. It could also have been done through `.env` variable which in general is a better alternative, but I wanted to make this more easier on the people who will run this script.
 
 <p align="center">
-    <img width="1200" src="/blog/2025-02-18-long-live-long-context-with-gemini_6.png" />
+    <img width="1200" src="/blog/2025-02-18-long-live-long-context-with-gemini_6.webp" />
 </p>
 
 ### 2. System Prompt
@@ -179,7 +179,7 @@ Since the purpose of this is to test Gemini 2.0 Flash model, then we are asking 
 This is the system prompt that will be used across all prompts utilized to retrieve data from context.
 
 <p align="center">
-    <img width="1200" src="/blog/2025-02-18-long-live-long-context-with-gemini_7.png" />
+    <img width="1200" src="/blog/2025-02-18-long-live-long-context-with-gemini_7.webp" />
 </p>
 
 The EDIT button allows user to modify the content that lives in [`data/system_prompt.txt`](https://github.com/DidierRLopes/long-live-long-context/blob/main/data/system_prompt.txt) and override it.
@@ -189,7 +189,7 @@ The EDIT button allows user to modify the content that lives in [`data/system_pr
 This allows the user to pick any document that are next to the `app.py` file on the root of the project. You can select multiple documents and their content will be appended together.
 
 <p align="center">
-    <img width="1200" src="/blog/2025-02-18-long-live-long-context-with-gemini_8.png" />
+    <img width="1200" src="/blog/2025-02-18-long-live-long-context-with-gemini_8.webp" />
 </p>
 
 When a document is loaded, you will be able to understand how many tokens each document utilizes when being pushed into Gemini 2.0 flash - through `model.count_tokens()`. In addition, you will understand how many tokens are being utilized with the combination of all documents uploaded.
@@ -199,7 +199,7 @@ When a document is loaded, you will be able to understand how many tokens each d
 This one is slightly more complex, let's take it each section at a time.
 
 <p align="center">
-    <img width="1200" src="/blog/2025-02-18-long-live-long-context-with-gemini_9.png" />
+    <img width="1200" src="/blog/2025-02-18-long-live-long-context-with-gemini_9.webp" />
 </p>
 
 #### Run all prompts

@@ -2,7 +2,7 @@
 slug: podcast-takeover
 title: Podcast takeover
 date: 2025-12-30
-image: /blog/2025-12-30-podcast-takeover
+image: /blog/2025-12-30-podcast-takeover.webp
 tags:
 - podcasts
 - learning
@@ -18,7 +18,7 @@ A list of my favorite podcasts from 2025.
 For the last couple of years I've been reading more and more books...
 
 <p align="center">
-    <img width="800" src="/blog/2025-12-30-podcast-takeover_1.png" alt="Books tracking screenshot" />
+    <img width="800" src="/blog/2025-12-30-podcast-takeover_1.webp" alt="Books tracking screenshot" />
 </p>
 
 I keep track of my books read (and to read) in my website [here](/books/already-read).

@@ -2,7 +2,7 @@
 slug: humanoid-robots-are-a-waste-of-money
 title: Humanoid robots are a waste of money
 date: 2025-06-25
-image: /blog/2025-06-25-humanoid-robots-are-a-waste-of-money
+image: /blog/2025-06-25-humanoid-robots-are-a-waste-of-money.webp
 tags:
   - robotics
   - automation
@@ -16,7 +16,7 @@ hide: true
 ---
 
 <p align="center">
-    <img width="600" src="/blog/2025-06-25-humanoid-robots-are-a-waste-of-money.png" />
+    <img width="600" src="/blog/2025-06-25-humanoid-robots-are-a-waste-of-money.webp" />
 </p>
 
 Why the obsession around humanoid robots?
@@ -50,7 +50,7 @@ A lot of it has nothing to do with performance - and everything to do with us.
 **Familiarity. Comfort.**
 
 <p align="center">
-    <img width="600" src="/blog/2025-06-25-humanoid-robots-are-a-waste-of-money_1.png" />
+    <img width="600" src="/blog/2025-06-25-humanoid-robots-are-a-waste-of-money_1.webp" />
     <em style={{fontSize: '0.9em'}}>Note: Waymo uses window wipers, not because it is required to function. But for familiarity.</em>
 </p>
 
@@ -59,7 +59,7 @@ A lot of it has nothing to do with performance - and everything to do with us.
 The fantasy isn't that a humanoid robot does chores - it's that it lives among us, obeys us, and asks nothing back. That's Westworld territory.
 
 <p align="center">
-    <img width="600" src="/blog/2025-06-25-humanoid-robots-are-a-waste-of-money_2.png" />
+    <img width="600" src="/blog/2025-06-25-humanoid-robots-are-a-waste-of-money_2.webp" />
 </p>
 
 And it raises questions less about engineering, and more about ethics.
@@ -96,7 +96,7 @@ _"But what if a humanoid could vacuum and mop?"_
 We already have robots that do that, because they're purpose-built. Not because they need knees.
 
 <p align="center">
-    <img width="600" src="/blog/2025-06-25-humanoid-robots-are-a-waste-of-money_3.png" />
+    <img width="600" src="/blog/2025-06-25-humanoid-robots-are-a-waste-of-money_3.webp" />
     <em style={{fontSize: '0.9em'}}>Note: People on X swear by [Matic Robot](https://maticrobots.com/).</em>
 </p>
 

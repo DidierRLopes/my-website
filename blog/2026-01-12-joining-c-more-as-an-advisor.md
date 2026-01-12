@@ -2,7 +2,7 @@
 slug: joining-c-more-as-an-advisor
 title: Joining C-MORE as an advisor
 date: 2026-01-12
-image: /blog/2026-01-12-joining-c-more-as-an-advisor
+image: /blog/2026-01-12-joining-c-more-as-an-advisor.webp
 tags:
 - advisory
 - esg

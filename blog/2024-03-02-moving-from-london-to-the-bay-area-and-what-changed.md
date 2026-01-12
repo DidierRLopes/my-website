@@ -2,7 +2,7 @@
 slug: moving-from-london-to-the-bay-area-and-what-changed
 title: Moving from London to the Bay Area and what changed
 date: 2024-03-02
-image: /blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed.png
+image: /blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed.webp
 tags:
 - learning
 - experience
@@ -19,7 +19,7 @@ description: Moving from London to the Bay Area and what changed
 
 
 <p align="center">
-    <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed.png"/>
+    <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed.webp"/>
 </p>
 
 The culture shock from moving to the Bay Area from London.
@@ -53,7 +53,7 @@ Apparently, a lot.
 ### Shopping
 
 <p align="center">
-    <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_1.png"/>
+    <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_1.webp"/>
 </p>
 
 This was the first shopping trip I had in the Bay (Whole foods is the equivalent to Waitrose in London, I often still confuse them and my wife finds it funny - anyway, they call it whole paycheck here bc $$$). These 10 items cost me $69.34. I couldn’t believe it.
@@ -64,8 +64,8 @@ PS: I like Costco so much that I always took the friends/family who visited to i
 
 
 <p align="center" className="flex items-center gap-2 justify-center">
-    <img width="300" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_2.png" />
-    <img width="300" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_3.png" />
+    <img width="300" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_2.webp" />
+    <img width="300" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_3.webp" />
 </p>
 
 ### Apartment
@@ -77,7 +77,7 @@ The apartment had a small gym, a common pool & bbq area and an outdoor hot tub. 
 The common pool and BBQ area (+ the sunny weather) were insane, sometimes I wish I had spent more time there. But I guess you tend to value things more when you don’t have them :)
 
 <p align="center">
-    <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_4.png" />
+    <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_4.webp" />
 </p>
 
 ### Tipping culture
@@ -96,7 +96,7 @@ The best way to get used to this is to just internally assume that 20% extra cos
 Note that in restaurants they expect you to leave your credit card on the top of the bill. This is so they can “freeze” the bill and once they bring the receipt back they will wait for you to add the amount for the tip (+ total). Once you fill this and sign (in theory, the signing is mandatory) - only then they will be able to withdraw the bill amount + the tip.
 
 <p align="center">
-    <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_5.png" />
+    <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_5.webp" />
 </p>
 
 ## Sports
@@ -108,8 +108,8 @@ In the US, people don’t really care about Soccer. It feels like it’s a sport
 I remember when we got the apartment, I was walking my dogs and there was a soccer pitch nearby. I was super happy because I thought that I could do what I used to do in London and just show up to the ground on the weekend and do a pick-up play with random folks. Unfortunately, after several attempts of walking nearby I realized that the pitch was only used for kids to play soccer and never adults. In London, on a sunny day, it’s hard (maybe impossible?) to find a soccer field empty.
 
 <p align="center" className="flex items-center gap-2 justify-center">
-    <img width="300" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_6.png" />
-    <img width="300" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_7.png" />
+    <img width="300" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_6.webp" />
+    <img width="300" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_7.webp" />
 </p>
 
 
@@ -118,13 +118,13 @@ I remember when we got the apartment, I was walking my dogs and there was a socc
 While in Europe in general, no one cares about college sports. The reality in the US is completely different. Not only do they fill their stadiums with 50k+ people, but these games bring a TON of money. People will literally sit outside the stadium in the morning and wait for the time of the match. It’s called tailgating.
 
 <p align="center">
-    <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_8.png" />
+    <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_8.webp" />
 </p>
 
 I’ve noticed that some people don’t even go to the stadium, they just sit outside the stadium watching the game in the car park on their TV and drinking. I still don’t fully get why you would do that, but I guess it’s a tradition.
 
 <p align="center">
-    <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_9.png" />
+    <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_9.webp" />
 </p>
 
 ## Working Culture
@@ -138,7 +138,7 @@ I also feel like in the Bay Area, when you go to events you can talk about what 
 While people say that London is a big hub for startups & founders, I didn’t find this to be the case. In the Bay Area, the likelihood of you encountering someone on the street and them working at a startup (most of the time their own) is really high. You can even feel the strength of this tech community on Twitter, whereas that doesn’t exist (AFAIK) in London.
 
 <p align="center">
-    <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_10.png"/>
+    <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_10.webp"/>
     <p>Elad Gil fireside with Satya Nadella at Stripe's HQ</p>
 </p>
 
@@ -179,8 +179,8 @@ Autonomous cars are a matter of time - and SF (and the Bay Area) being the city 
 My dad, someone who was born and raised in a small town in Portugal, and who understands very little about technology seeing this was something. Him seated in the passenger’s seat for the full 16 min drive recording a wheel with no driver and ending the journey telling me “I never thought I would see this in my life, thank you” is something that no amount of money in this world could buy.
 
 <p align="center" className="flex items-center gap-2 justify-center">
-    <img width="300" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_11.png" />
-    <img width="300" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_12.png" />
+    <img width="300" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_11.webp" />
+    <img width="300" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_12.webp" />
 </p>
 
 ### Driving license
@@ -198,7 +198,7 @@ The driving exam is much easier than the one I did in Portugal. It lasted for ma
 Also, the DMV is as bad as they say it is. This movie scene is pretty accurate:
 
 <p align="center">
-    <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_13.png" />
+    <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_13.webp" />
 </p>
 
 ## Cards
@@ -244,8 +244,8 @@ In the UK (and Europe in general), it’s illegal to own a gun and you can start
 And also, Kinder Surprise is illegal in the US because of the toy that comes inside. So you can’t buy a chocolate with a toy inside because you can choke on it, but can go to the store to buy a gun.
 
 <p align="center" className="flex items-center gap-2 justify-center">
-    <img width="300" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_14.png" />
-    <img width="300" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_15.png" />
+    <img width="300" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_14.webp" />
+    <img width="300" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_15.webp" />
 </p>
 
 ### Dog Parks
@@ -253,7 +253,7 @@ And also, Kinder Surprise is illegal in the US because of the toy that comes ins
 One of my all-time favorite things in the US and that Europe in general should learn from. The US has a LOT of dog parks. These are spaces that are gated where people bring their dogs for them to play together. These spaces come fully prepared with water, bags, cleaning kits and even seats. I’ve seen friends hang out at the park while their dogs are having fun playing with other dogs. These parks usually also have 2 areas, one for smaller and one for larger dogs - which is great since we have a small pomeranian.
 
 <p align="center">
-    <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_16.png" />
+    <img width="600" src="/blog/2024-03-02-moving-from-london-to-the-bay-area-and-what-changed_16.webp" />
 </p>
 
 ## Conclusion

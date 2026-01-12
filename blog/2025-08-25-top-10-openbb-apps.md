@@ -2,7 +2,7 @@
 slug: top-10-openbb-apps
 title: Top 10 OpenBB apps
 date: 2025-08-25
-image: /blog/2025-08-25-top-10-openbb-apps
+image: /blog/2025-08-25-top-10-openbb-apps.webp
 tags:
   - financial-data
   - ai
@@ -16,7 +16,7 @@ hideSidebar: true
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps.png" />
+    2025-08-25-top-10-openbb-apps.webp" />
 </p>
 
 These are my top 10 OpenBB apps, highlighted on our new solutions page. Not slides - literal workflows.
@@ -31,7 +31,7 @@ I like it because it’s a classic - one of the first strong apps we put togethe
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_1.jpeg" />
+    2025-08-25-top-10-openbb-apps_1.webp" />
 </p>
 
 ## 2. Draft Investor Letter
@@ -40,7 +40,7 @@ This builds on the portfolio app. It allows firms to automate an investor letter
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_2.jpeg" />
+    2025-08-25-top-10-openbb-apps_2.webp" />
 </p>
 
 ## 3. GDP Forecast Trends & CPI Scenarios
@@ -49,7 +49,7 @@ I like it because it’s not just market data - it brings real forecasts and tre
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_3.jpeg" />
+    2025-08-25-top-10-openbb-apps_3.webp" />
 </p>
 
 ## 4. Vector Strength Histogram
@@ -58,7 +58,7 @@ I like this one because I hadn’t seen anything like it before - a complex way 
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_4.jpeg" />
+    2025-08-25-top-10-openbb-apps_4.webp" />
 </p>
 
 ## 5. Crypto Research
@@ -67,7 +67,7 @@ I like this one because it was one of the first apps built by someone external -
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_5.jpeg" />
+    2025-08-25-top-10-openbb-apps_5.webp" />
 </p>
 
 ## 6. Shipping & Bunkers Pricing
@@ -76,7 +76,7 @@ This was one of our first alternative data feeds into OpenBB, where a client int
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_6.jpeg" />
+    2025-08-25-top-10-openbb-apps_6.webp" />
 </p>
 
 ## 7. Polymarket Prediction Market
@@ -86,7 +86,7 @@ This quote from Jose, says everything: "Prediction markets reveal sentiment, but
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_7.jpeg" />
+    2025-08-25-top-10-openbb-apps_7.webp" />
 </p>
 
 ## 8. Compliance Intelligence
@@ -96,7 +96,7 @@ We used the Workspace to navigate SOC2 compliance documentation ourselves. Copil
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_8.jpeg" />
+    2025-08-25-top-10-openbb-apps_8.webp" />
 </p>
 
 ## 9. Real-Time Feeds
@@ -105,7 +105,7 @@ I like this one particularly because it features real-time feeds from Pyth. Stre
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_9.jpeg" />
+    2025-08-25-top-10-openbb-apps_9.webp" />
 </p>
 
 ## 10. Congress Bills Tracking & Analysis
@@ -114,7 +114,7 @@ Analyze the newest bills, including the "Big Beautiful Bill" with AI out of the 
 
 <p align="center">
     <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_10.jpeg" />
+    2025-08-25-top-10-openbb-apps_10.webp" />
 </p>
 
 This data is actually available through our open source platform here: [https://github.com/OpenBB-finance/OpenBB](https://github.com/OpenBB-finance/OpenBB).

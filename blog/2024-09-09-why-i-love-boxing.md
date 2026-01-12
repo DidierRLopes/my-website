@@ -2,7 +2,7 @@
 slug: why-i-love-boxing
 title: Why I love boxing
 date: 2024-09-09
-image: /blog/2024-09-09-why-i-love-boxing.jpeg
+image: /blog/2024-09-09-why-i-love-boxing.webp
 tags:
 - boxing
 - startup
@@ -20,7 +20,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="300" src="/blog/2024-09-09-why-i-love-boxing.jpeg"/>
+    <img width="300" src="/blog/2024-09-09-why-i-love-boxing.webp"/>
 </p>
 
 Exploring the parallels between boxing and startup life, and how both push me beyond my comfort zone to foster personal growth, resilience, and continuous learning.
@@ -34,7 +34,7 @@ Recently, I finished reading "The Art of Learning" - a really good book that I'v
 In it, the author Josh Waitzkin, reflects on his journey from chess champion to martial arts practicioner - and how anyone can master the art of learning.
 
 <p align="center">
-    <img width="300" src="/blog/2024-09-09-why-i-love-boxing_1.png"/>
+    <img width="300" src="/blog/2024-09-09-why-i-love-boxing_1.webp"/>
 </p>
 
 It made me wonder, why at 29 years old did I decide to step into a ring with boxers who have been fighting for 10+ years? 🥊
@@ -62,7 +62,7 @@ Boxing (and martial arts) don't work this way. You step in the ring and within t
 My point is that with boxing, you don't know when you are going to get hurt, but you learn to be comfortable with it and over time your body gets used to that level of pain - so it will take even more to make you uncomfortable.
 
 <p align="center">
-    <img width="600" src="/blog/2024-09-09-why-i-love-boxing_2.png"/>
+    <img width="600" src="/blog/2024-09-09-why-i-love-boxing_2.webp"/>
 </p>
 
 ## First sparring session
@@ -74,7 +74,7 @@ For the remainder of the fight, I was mostly protecting myself and keeping my di
 This is not so much different from startup life where mentally you have to be in uncomfortable places - for me this is the equivalent to speaking on a stage. For an introvert like myself, that was something that was hard to overcome. Although I am still not comfortable on a stage, I am much more comfortable than I used to be.
 
 <p align="center">
-    <img width="600" src="/blog/2024-09-09-why-i-love-boxing_3.png"/>
+    <img width="600" src="/blog/2024-09-09-why-i-love-boxing_3.webp"/>
     <p style={{fontSize: '0.8em'}}>Presenting at CIBC a few weeks ago at New York AI meetup</p>
 </p>
 
@@ -95,7 +95,7 @@ And the only failure is to not take any lessons from each fight.
 This is the same for startups. I like what Bezos has to say on the topic, about [pushing Amazon to embrace failure](https://www.youtube.com/shorts/HmYj-UDT8jM).
 
 <p align="center">
-    <img width="300" src="/blog/2024-09-09-why-i-love-boxing_4.JPG"/>
+    <img width="300" src="/blog/2024-09-09-why-i-love-boxing_4.webp"/>
     <p style={{fontSize: '0.8em'}}>This picture was what convinced me to buy my own head gear</p>
 </p>
 
@@ -116,6 +116,6 @@ I need to have a faster reaction to avoid punches, be light on my feet to surpri
 Ultimately, as cheesy as it sounds, being a startup founder and doing boxing make me feel alive.
 
 <p align="center">
-    <img width="300" src="/blog/2024-09-09-why-i-love-boxing_5.jpeg"/>
+    <img width="300" src="/blog/2024-09-09-why-i-love-boxing_5.webp"/>
     <p style={{fontSize: '0.8em'}}>Taking my father-in-law for a class</p>
 </p>

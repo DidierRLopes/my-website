@@ -2,7 +2,7 @@
 slug: how-i-would-do-due-diligence-on-amt-using-openbb-terminal
 title: How I would do due diligence on $AMT using OpenBB Terminal
 date: 2022-10-20
-image: /blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal.png
+image: /blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal.webp
 tags:
 - openbb-terminal
 - investment-research
@@ -15,7 +15,7 @@ description: This blog post provides a detailed walkthrough on how to conduct du
 
 
 <p align="center">
-    <img width="600" src="/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal.png"/>
+    <img width="600" src="/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal.webp"/>
 </p>
 
 <br />
@@ -42,143 +42,143 @@ Strap in.
 $ /stocks/load AMT/candle
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_1.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_1.webp)
 
 ```console
 $ /stocks/fa/mktcap
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_2.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_2.webp)
 
 ```console
 $ /stocks/fa/mgmt
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_3.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_3.webp)
 
 ```console
 $ /stocks/fa/income/balance/cash
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_4.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_4.webp)
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_5.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_5.webp)
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_6.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_6.webp)
 
 ```console
 $ /stocks/fa/shrs
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_7.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_7.webp)
 
 ```console
 $ /stocks/fa/sust
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_8.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_8.webp)
 
 ```console
 $ /stocks/fa/divs
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_9.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_9.webp)
 
 ```console
 $ /stocks/fa/dcf
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_10.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_10.webp)
 
 ```console
 $ /stocks/ins/stats
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_11.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_11.webp)
 
 ```console
 $ /stocks/dps/psi
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_12.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_12.webp)
 
 ```console
 $ /stocks/gov/histcont
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_13.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_13.webp)
 
 ```console
 $ /stocks/dd/rating
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_14.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_14.webp)
 
 ```console
 $ /stocks/dd/pt
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_15.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_15.webp)
 
 ```console
 $ /stocks/dd/est
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_16.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_16.webp)
 
 ```console
 $ /stocks/ta/sma
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_17.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_17.webp)
 
 ```console
 $ /stocks/ta/recom/summary
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_18.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_18.webp)
 
 ```console
 $ /stocks/ba/sentiment
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_19.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_19.webp)
 
 ```console
 $ /stocks/sia/metric tc
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_20.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_20.webp)
 
 ```console
 $ /stocks/sia/metric fcf
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_21.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_21.webp)
 
 ```console
 $ /stocks/sia/vis oi
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_22.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_22.webp)
 
 ```console
 $ /stocks/ca/historical/hcorr
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_23.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_23.webp)
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_24.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_24.webp)
 
 ```console
 $ /stocks/ca/cashflow/income/balance
 ```
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_25.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_25.webp)
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_26.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_26.webp)
 
-![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_27.png)
+![image](/blog/2022-10-20-how-i-would-do-due-diligence-on-amt-using-openbb-terminal_27.webp)
 
 I know this can be overwhelming information and it takes some time to run all these commands.
 

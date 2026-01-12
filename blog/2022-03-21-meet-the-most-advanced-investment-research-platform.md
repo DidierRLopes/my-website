@@ -2,7 +2,7 @@
 slug: meet-the-most-advanced-investment-research-platform
 title: Meet the most advanced investment research platform
 date: 2022-03-21
-image: /blog/2022-03-21-meet-the-most-advanced-investment-research-platform.png
+image: /blog/2022-03-21-meet-the-most-advanced-investment-research-platform.webp
 tags:
 - investment-research
 - gamestonk-terminal
@@ -15,7 +15,7 @@ description: Meet the most advanced investment research platform. This blog post
 
 
 <p align="center">
-    <img width="600" src="/blog/2022-03-21-meet-the-most-advanced-investment-research-platform.png"/>
+    <img width="600" src="/blog/2022-03-21-meet-the-most-advanced-investment-research-platform.webp"/>
 </p>
 
 <br />

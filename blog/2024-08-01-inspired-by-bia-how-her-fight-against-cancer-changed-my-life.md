@@ -2,7 +2,7 @@
 slug: inspired-by-bia-how-her-fight-against-cancer-changed-my-life
 title: Inspired by Bia - How her fight against cancer changed my life
 date: 2024-08-01
-image: /blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.JPG
+image: /blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.webp
 tags:
 - personal-story
 - grief
@@ -19,7 +19,7 @@ description: In a time when we talk about going to Mars and having AGI, cancer i
 
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.JPG"/>
+    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.webp"/>
 </p>
 
 In a time when we talk about going to Mars and having AGI, cancer is still taking lives every day.
@@ -47,7 +47,7 @@ Before I knew it, she was my best friend.
 We would talk for hours about everything and nothing - always laughing.
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.JPG"/>
+    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.webp"/>
 </p>
 
 We would sit next to each other and professors would have a hard time with us because we liked to chit chat.
@@ -57,7 +57,7 @@ So we created a new communication medium to not get caught.
 We would rip the side of those pages and write in very small font notes to each other.
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_1.jpg"/>
+    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_1.webp"/>
 </p>
 
 We would go through multiple of these in each class.
@@ -65,7 +65,7 @@ We would go through multiple of these in each class.
 It was our thing.
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_2.JPG"/>
+    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_2.webp"/>
 </p>
 
 A few months later, we had a sports class and she felt weak from her wrist.
@@ -91,7 +91,7 @@ She would not display any weakness throughout none of it.
 She was so strong. At 16.
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_3.png"/>
+    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_3.webp"/>
 </p>
 
 One day I visited her and she had no hair because of chemotherapy.
@@ -109,7 +109,7 @@ She was incredibly smart for her age. So losing a year wasn't an option for her.
 At the graduation she wrote me a message. She didn't have strength in her hand to write so she used her wrist to be able to write it in an iPad.
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_4.JPG"/>
+    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_4.webp"/>
 </p>
 
 The translation doesn't make it justice, but it reads as:
@@ -155,7 +155,7 @@ I stopped doing things for the sake of doing them and always put 120%.
 I went from spending most of my time as a gamer and doing just enough to have good grades in high school to being the best student of my year in my BSc in Electrical and Computer Engineering, moving to London to have a distinction at Imperial College London (top 2 uni in the world) and now moving to NYC to increase chances of success for my startup.
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_5.jpeg"/>
+    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_5.webp"/>
 </p>
 
 I have a tattoo that says "All her would-haves are our opportunities" (which is from Anne Frank's house in Amsterdam) to remind me that every day I have opportunities that she didn't get to experience.
@@ -185,7 +185,7 @@ Join me in this fight against cancer, for Bia and for all those whose lives have
 I've created a [fundraising page](https://haymakersforhope.org/events/running/nyc-half-marathon-2025/runners/Didier-Lopes) where you can support this cause.
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_6.png"/>
+    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_6.webp"/>
 </p>
 
 <p className="text-center">

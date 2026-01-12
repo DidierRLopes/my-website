@@ -2,7 +2,7 @@
 slug: my-first-half-marathon
 title: Doing my first Half Marathon
 date: 2025-03-18
-image: /blog/2025-03-18-my-first-half-marathon
+image: /blog/2025-03-18-my-first-half-marathon.webp
 tags:
 - running
 - half-marathon
@@ -20,7 +20,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-18-my-first-half-marathon.JPG" />
+    <img width="600" src="/blog/2025-03-18-my-first-half-marathon.webp" />
 </p>
 
 A personal journey through my first NYC Half Marathon, from fundraising $1,615 for cancer research to crossing the finish line in 1h45min, complete with training insights and my race day experience.
@@ -54,7 +54,7 @@ If you're accepted, you commit to raising money for the chosen cause. I love thi
 In my case, I commit to raise at least $1500. In total I was able to raise $1615.
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-18-my-first-half-marathon_1.png" />
+    <img width="600" src="/blog/2025-03-18-my-first-half-marathon_1.webp" />
 </p>
 
 Although I've previously raised $8.9M for OpenBB, as mentioned in <a href="https://venturebeat.com/data-infrastructure/openbb-wants-to-be-an-open-source-challenger-to-bloomberg-terminal/" target="_blank">this article</a>. Raising wasn't straightforward.
@@ -87,7 +87,7 @@ This determines your starting wave. I conservatively estimated 2 hours since it 
 This is what the wave scheduled looked like.
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-18-my-first-half-marathon_2.png" />
+    <img width="600" src="/blog/2025-03-18-my-first-half-marathon_2.webp" />
 </p>
 
 After paying the race fee, I scheduled my bib pickup.
@@ -101,14 +101,14 @@ Check that you get the running bib, your number that contains the chip tracker a
 The location also displayed a wall with all runner's names, my mom actually found my name on the wall!
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-18-my-first-half-marathon_3.jpeg" />
+    <img width="600" src="/blog/2025-03-18-my-first-half-marathon_3.webp" />
 </p>
 
 I also took an event guide, which had pretty much all the information I needed for the day of the race.
 
 <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-    <img width="45%" src="/blog/2025-03-18-my-first-half-marathon_4.jpeg" />
-    <img width="45%" src="/blog/2025-03-18-my-first-half-marathon_5.jpeg" />
+    <img width="45%" src="/blog/2025-03-18-my-first-half-marathon_4.webp" />
+    <img width="45%" src="/blog/2025-03-18-my-first-half-marathon_5.webp" />
 </div>
 
 ## Training
@@ -118,7 +118,7 @@ My training wasn't as structured as it could have been, but my regular boxing se
 To ensure I could complete the distance, I ran a practice half marathon one month before the race near my boxing Gym Gleason's, finishing in 2 hours. This gave me confidence and a benchmark to improve upon.
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-18-my-first-half-marathon_6.jpeg" />
+    <img width="600" src="/blog/2025-03-18-my-first-half-marathon_6.webp" />
 </p>
 
 <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
@@ -131,12 +131,12 @@ To ensure I could complete the distance, I ran a practice half marathon one mont
 A week before the event, I completed a 12-mile run with elevation in Central Park to prepare for any challenging terrain. This made me understand how elevation actually plays a role, since in that previous training session the terrain was very much flat!
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-18-my-first-half-marathon_9.jpeg" />
+    <img width="600" src="/blog/2025-03-18-my-first-half-marathon_9.webp" />
 </p>
 
 <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-    <img width="45%" src="/blog/2025-03-18-my-first-half-marathon_10.jpeg" />
-    <img width="45%" src="/blog/2025-03-18-my-first-half-marathon_11.jpeg" />
+    <img width="45%" src="/blog/2025-03-18-my-first-half-marathon_10.webp" />
+    <img width="45%" src="/blog/2025-03-18-my-first-half-marathon_11.webp" />
 </div>
 
 ## Race day
@@ -166,7 +166,7 @@ With all this preparation, I forgot something that was critical - and I still ca
 This resulted in me running with the phone in my hand throughout the race, looking like a schmuck.
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-18-my-first-half-marathon_12.png" />
+    <img width="600" src="/blog/2025-03-18-my-first-half-marathon_12.webp" />
 </p>
 
 Note: LLMs are getting so good, that Gemini 2.0 Flash (Image Generation) is now able to remove watermarks of pictures. See [this tweet](https://x.com/didier_lopes/status/1902067982123319637) for reference.
@@ -176,7 +176,7 @@ Note: LLMs are getting so good, that Gemini 2.0 Flash (Image Generation) is now 
 Just before starting, I consumed one of my energy gels for an initial boost.
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-18-my-first-half-marathon_13.jpeg" />
+    <img width="600" src="/blog/2025-03-18-my-first-half-marathon_13.webp" />
 </p>
 
 The race experience was awesome in itself. Your timing chip activates when you cross the start line, so your official time is accurate regardless of where you stand in your wave.
@@ -188,7 +188,7 @@ There were several water and Gatorade stations throughout the course, eliminatin
 You will actually receive map course information before the race so you can prepare for where these stations are.
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-18-my-first-half-marathon_14.png" />
+    <img width="600" src="/blog/2025-03-18-my-first-half-marathon_14.webp" />
 </p>
 
 The elevation chart on this map is actually very important. This allows you to be strategic when you think about when to conserve your energy or speed up.
@@ -198,9 +198,9 @@ I saw many runners that started walking when they were on a uphill. I think that
 Running across the Brooklyn Bridge (a first ever for any race!) and through Times Square were big highlights for me.
 
 <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', flexWrap: 'wrap' }}>
-    <img width="32%" src="/blog/2025-03-18-my-first-half-marathon_15.jpeg" />
-    <img width="32%" src="/blog/2025-03-18-my-first-half-marathon_16.jpeg" />
-    <img width="32%" src="/blog/2025-03-18-my-first-half-marathon_17.jpeg" />
+    <img width="32%" src="/blog/2025-03-18-my-first-half-marathon_15.webp" />
+    <img width="32%" src="/blog/2025-03-18-my-first-half-marathon_16.webp" />
+    <img width="32%" src="/blog/2025-03-18-my-first-half-marathon_17.webp" />
 </div>
 
 <br />
@@ -226,7 +226,7 @@ Having my parents and wife near the finish line providing support was amazing.
 This is a picture taken by them, with less than 400m left:
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-18-my-first-half-marathon_18.JPG" />
+    <img width="900" src="/blog/2025-03-18-my-first-half-marathon_18.webp" />
 </p>
 
 ## After the race
@@ -238,7 +238,7 @@ As you walk a few dozen meters, they also hand you your medal and blankets to wa
 Here's the picture I took with my family after leaving the half marathon area.
 
 <p align="center">
-    <img width="600" src="/blog/2025-03-18-my-first-half-marathon_19.jpeg" />
+    <img width="600" src="/blog/2025-03-18-my-first-half-marathon_19.webp" />
 </p>
 
 The entire experience exceeded my expectations.
@@ -248,7 +248,7 @@ While running isn't my favorite activity, completing a half marathon with my par
 Finally, at home, I sent an e-mail to everyone who donated thanking them for the donation, letting them know how much was raised, and how the event went.
 
 <p align="center">
-    <img width="900" src="/blog/2025-03-18-my-first-half-marathon_20.png" />
+    <img width="900" src="/blog/2025-03-18-my-first-half-marathon_20.webp" />
 </p>
 
 This is something I borrowed from my friend [Nick](https://www.linkedin.com/in/nicolasbcarreras/) when I donated to his team relay race.
@@ -260,6 +260,6 @@ Looking forward to doing a full marathon next!
 Some stats below for the curious,
 
 <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', flexWrap: 'wrap' }}>
-    <img width="49%" src="/blog/2025-03-18-my-first-half-marathon_21.png" />
-    <img width="49%" src="/blog/2025-03-18-my-first-half-marathon_22.png" />
+    <img width="49%" src="/blog/2025-03-18-my-first-half-marathon_21.webp" />
+    <img width="49%" src="/blog/2025-03-18-my-first-half-marathon_22.webp" />
 </div>

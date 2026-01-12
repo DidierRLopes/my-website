@@ -2,7 +2,7 @@
 slug: ai-chatbots-wont-revolutionize-finance-but-intelligent-workspaces-will
 title: AI chatbots won't revolutionize finance, but intelligent workspaces will
 date: 2024-12-27
-image: /blog/2024-12-27-ai-chatbots-wont-revolutionize-finance-but-intelligent-workspaces-will
+image: /blog/2024-12-27-ai-chatbots-wont-revolutionize-finance-but-intelligent-workspaces-will.webp
 tags:
 - openbb
 - ai
@@ -20,7 +20,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="600" src="/blog/2024-12-27-ai-chatbots-wont-revolutionize-finance-but-intelligent-workspaces-will.png"/>
+    <img width="600" src="/blog/2024-12-27-ai-chatbots-wont-revolutionize-finance-but-intelligent-workspaces-will.webp"/>
 </p>
 
 Why the future of financial analysis isn't about chatbots, but about intelligent workspaces that combine your data, tools, and AI exactly when you need them.
@@ -67,7 +67,7 @@ This is exactly what Kimberly Tan (partner @ a16z) predicted in [her analysis](h
 The result?
 
 <p align="center">
-    <img width="1200" src="/blog/2024-12-27-ai-chatbots-wont-revolutionize-finance-but-intelligent-workspaces-will.png"/>
+    <img width="1200" src="/blog/2024-12-27-ai-chatbots-wont-revolutionize-finance-but-intelligent-workspaces-will.webp"/>
 </p>
 
 A workspace where:
@@ -87,7 +87,7 @@ There was no sign of AI in it.
 However, if I had simply pressed shortcut "Ctrl+L", the copilot window would have opened and I would have been able to natively interact with the data - and generate new data from it.
 
 <p align="center">
-    <img width="1200" src="/blog/2024-12-27-ai-chatbots-wont-revolutionize-finance-but-intelligent-workspaces-will_1.png"/>
+    <img width="1200" src="/blog/2024-12-27-ai-chatbots-wont-revolutionize-finance-but-intelligent-workspaces-will_1.webp"/>
 </p>
 
 This demonstrates that the future of financial AI isn't about chatbots - it's about intelligent workspaces.

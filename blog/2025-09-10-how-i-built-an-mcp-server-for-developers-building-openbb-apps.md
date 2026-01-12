@@ -2,7 +2,7 @@
 slug: how-i-built-an-mcp-server-for-developers-building-openbb-apps
 title: How I built an MCP Server for developers building OpenBB apps
 date: 2025-09-10
-image: /blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps
+image: /blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps.webp
 tags:
   - openbb
   - mcp
@@ -30,7 +30,7 @@ BUT.
 What if, instead of stuffing all the docs into context, **I built an MCP server** where every piece of the documentation is exposed as a structured, callable tool?
 
 <p align="center">
-    <img width="800" src="/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_1.png" />
+    <img width="800" src="/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_1.webp" />
 </p>
 
 I just had to try it.
@@ -87,7 +87,7 @@ Finally, I deployed the server on Smithery.ai. That makes it discoverable, share
 It became immediately available [here](https://smithery.ai/server/@DidierRLopes/openbb-docs-mcp).
 
 <p align="center">
-    <img width="800" src="/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps.png" />
+    <img width="800" src="/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps.webp" />
 </p>
 
 ## 5. Testing
@@ -103,15 +103,15 @@ But that's okay. I went back and improved the docs (and even realized that I nee
 Eventually, it worked.
 
 <p align="center">
-    <img width="800" src="/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_2.png" />
+    <img width="800" src="/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_2.webp" />
 </p>
 
 <p align="center">
-    <img width="800" src="/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_3.png" />
+    <img width="800" src="/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_3.webp" />
 </p>
 
 <p align="center">
-    <img width="800" src="/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_4.png" />
+    <img width="800" src="/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_4.webp" />
 </p>
 
 ## How to use it
@@ -129,7 +129,7 @@ claude mcp add --transport http openbb-docs-mcp https://server.smithery.ai/@Didi
 And ensure you see a "✅ connected"
 
 <p align="center">
-    <img width="800" src="/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_5.png" />
+    <img width="800" src="/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_5.webp" />
 </p>
 
 3. Then ask your prompt, and you need to confirm that CC can access these MCP tools.
@@ -137,7 +137,7 @@ And ensure you see a "✅ connected"
 This is what you expect to see:
 
 <p align="center">
-    <img width="800" src="/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_6.png" />
+    <img width="800" src="/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_6.webp" />
 </p>
 
 In the end, you should be able to get the correct `widgets.json` spec.
@@ -151,7 +151,7 @@ _Create an OpenBB widget that has 3 parameters (ticker str, start date and boole
 But essentially, it allowed me to connect this one-shot widget to the workspace:
 
 <p align="center">
-    <img width="800" src="/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_7.png" />
+    <img width="800" src="/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_7.webp" />
 </p>
 
 Note the difficulty associated with building this widget from scratch:
@@ -181,5 +181,5 @@ Happy hacking!
 **PS:** We are actually working on introducing Widget Studio, which will greatly simplify the user experience of building custom widgets in the workspace, particularly when it comes to the UI.
 
 <p align="center">
-    <img width="800" src="/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_8.png" />
+    <img width="800" src="/blog/2025-09-10-how-i-built-an-mcp-server-for-developers-building-openbb-apps_8.webp" />
 </p>

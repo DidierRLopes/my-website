@@ -2,7 +2,7 @@
 slug: revolutionizing-ai-at-openbb-with-new-leader-michael-struwig
 title: Revolutionizing AI at OpenBB with new leader, Michael Struwig
 date: 2023-11-07
-image: /blog/2023-11-07-revolutionizing-ai-at-openbb-with-new-leader-michael-struwig.png
+image: /blog/2023-11-07-revolutionizing-ai-at-openbb-with-new-leader-michael-struwig.webp
 tags:
 - ai
 - openbb
@@ -15,7 +15,7 @@ description: With the launch of the OpenBB Terminal Pro approaching, we're excit
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-11-07-revolutionizing-ai-at-openbb-with-new-leader-michael-struwig.png"/>
+    <img width="600" src="/blog/2023-11-07-revolutionizing-ai-at-openbb-with-new-leader-michael-struwig.webp"/>
 </p>
 
 <br />
@@ -46,7 +46,7 @@ These features allow us to bring AI to our platform from the ground up, and thin
 For instance this is an extension that James added to the OpenBB Platform.
 
 <p align="center">
-    <img width="600" src="/blog/2023-11-07-revolutionizing-ai-at-openbb-with-new-leader-michael-struwig_1.png"/>
+    <img width="600" src="/blog/2023-11-07-revolutionizing-ai-at-openbb-with-new-leader-michael-struwig_1.webp"/>
 </p>
 
 There are a lot of products out there utilizing generative AI for finance. Most of these can be classified as:
@@ -64,14 +64,14 @@ Some examples below:
 <br />
 
 <p align="center">
-    <img width="600" src="/blog/2023-11-07-revolutionizing-ai-at-openbb-with-new-leader-michael-struwig_2.png"/>
+    <img width="600" src="/blog/2023-11-07-revolutionizing-ai-at-openbb-with-new-leader-michael-struwig_2.webp"/>
 </p>
 
 <li>Ask more detailed questions to your widgets like earnings transcript or even insider trading</li>
 <br />
 
 <p align="center">
-    <img width="600" src="/blog/2023-11-07-revolutionizing-ai-at-openbb-with-new-leader-michael-struwig_3.png"/>
+    <img width="600" src="/blog/2023-11-07-revolutionizing-ai-at-openbb-with-new-leader-michael-struwig_3.webp"/>
 </p>
 
 <li>And more.</li>

@@ -2,7 +2,7 @@
 slug: openbb-2-year-anniversary
 title: OpenBB 2 year anniversary
 date: 2023-08-20
-image: /blog/2023-08-20-openbb-2-year-anniversary.png
+image: /blog/2023-08-20-openbb-2-year-anniversary.webp
 tags:
 - openbb
 - anniversary
@@ -16,7 +16,7 @@ description: Two years of OpenBB. A look back at our achievements and growth in 
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-08-20-openbb-2-year-anniversary.png"/>
+    <img width="600" src="/blog/2023-08-20-openbb-2-year-anniversary.webp"/>
 </p>
 
 <br />
@@ -64,7 +64,7 @@ If we only focus on where Gamestonk Terminal was 2 years ago we had:
 - No AI features, no reports menu, no dashboards menu, no fixed income, no futures, …
 - And the OpenBB Terminal charts looked like this
 
-![image](/blog/2023-08-20-openbb-2-year-anniversary_1.png)
+![image](/blog/2023-08-20-openbb-2-year-anniversary_1.webp)
 
 Bill Gates said the famous saying:
 

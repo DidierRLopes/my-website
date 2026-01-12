@@ -2,7 +2,7 @@
 slug: theres-a-zero-percent-chance-that-open-source-doesnt-win
 title: There's a zero percent chance that open source doesn't win
 date: 2025-01-16
-image: /blog/2025-01-16-theres-a-zero-percent-chance-that-open-source-doesnt-win
+image: /blog/2025-01-16-theres-a-zero-percent-chance-that-open-source-doesnt-win.webp
 tags:
 - open-source
 - ai
@@ -18,7 +18,7 @@ hideSidebar: true
 
 
 <p align="center">
-    <img width="900" src="/blog/2025-01-16-theres-a-zero-percent-chance-that-open-source-doesnt-win.png"/>
+    <img width="900" src="/blog/2025-01-16-theres-a-zero-percent-chance-that-open-source-doesnt-win.webp"/>
 </p>
 
 AI is transforming software development at a groundbreaking pace, creating a reinforcing cycle that makes open source unstoppable.
@@ -40,7 +40,7 @@ AI tools are democratizing software development to an unprecedented degree (I re
 What's particularly interesting is how AI itself has been trained on vast repositories of open-source code. This creates a virtuous cycle: more open-source code leads to better AI models, which in turn simplifies contributions and enhances collaborative projects. The barriers to entry for meaningful code contributions have never been lower.
 
 <p align="center">
-    <img width="600" src="/blog/2025-01-16-theres-a-zero-percent-chance-that-open-source-doesnt-win.png"/>
+    <img width="600" src="/blog/2025-01-16-theres-a-zero-percent-chance-that-open-source-doesnt-win.webp"/>
 </p>
 
 ## The economic equation is shifting

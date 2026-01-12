@@ -2,7 +2,7 @@
 slug: target-market-analysis-with-the-help-of-llms
 title: Target Market Analysis with the help of LLMs
 date: 2023-09-10
-image: /blog/2023-09-10-target-market-analysis-with-the-help-of-llms.png
+image: /blog/2023-09-10-target-market-analysis-with-the-help-of-llms.webp
 tags:
 - target-market-analysis
 - llms
@@ -18,7 +18,7 @@ description: This blog post provides a comprehensive guide on how to perform tar
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-09-10-target-market-analysis-with-the-help-of-llms.png"/>
+    <img width="600" src="/blog/2023-09-10-target-market-analysis-with-the-help-of-llms.webp"/>
 </p>
 
 <br />
@@ -47,7 +47,7 @@ Initially, BCG implemented its own framework, which you can read more about here
 
 _It uses two variables: relative market share and the market growth rate. By combining these two variables into a matrix, a corporation can plot their business units accordingly and determine where to allocate extra (financial) resources, where to cash out and where to divest._
 
-![image](/blog/2023-09-10-target-market-analysis-with-the-help-of-llms_1.png)
+![image](/blog/2023-09-10-target-market-analysis-with-the-help-of-llms_1.webp)
 
 ### GE McKinsey Matrix
 
@@ -55,7 +55,7 @@ Then, the GE McKinsey Matrix was invented, which you can read more about here. T
 
 _It uses two variables: industry attractiveness and the competitive strength of a business unit. By combining these two variables into a matrix, a corporation can plot their business units accordingly and determine where to invest, where to hold their position, and where to harvest or divest._
 
-![image](/blog/2023-09-10-target-market-analysis-with-the-help-of-llms_2.png)
+![image](/blog/2023-09-10-target-market-analysis-with-the-help-of-llms_2.webp)
 
 As per the blog post, the main difference between these comes from the fact that the latter uses multiple factors that are combined to determine the measure of the two variables: industry attractiveness and competitive strength. Whereas the BCG Matrix only uses 1 variable per axis — relative market share and market growth rate.
 
@@ -81,7 +81,7 @@ Not all factors are created equal. Some factors will influence whether a market 
 
 The goal is to select a weight for each factor so that the sum of the weights for all the factors adds up to 1. The outcome should look something like:
 
-![image](/blog/2023-09-10-target-market-analysis-with-the-help-of-llms_3.png)
+![image](/blog/2023-09-10-target-market-analysis-with-the-help-of-llms_3.webp)
 
 ### 3. Categorize each factor
 
@@ -89,11 +89,11 @@ Now you need to decide how granular you want your assessment to be. Initially, a
 
 Once you decide on that range, you need to categorize it in a way that makes sense for each factor. This ensures that everyone on the team is on the same page when it comes to assessing a factor. For instance:
 
-![image](/blog/2023-09-10-target-market-analysis-with-the-help-of-llms_4.png)
+![image](/blog/2023-09-10-target-market-analysis-with-the-help-of-llms_4.webp)
 
 This Google / Excel spreadsheet should look like:
 
-![image](/blog/2023-09-10-target-market-analysis-with-the-help-of-llms_5.png)
+![image](/blog/2023-09-10-target-market-analysis-with-the-help-of-llms_5.webp)
 
 ### 4. Select a list of target markets you want to evaluate
 
@@ -107,7 +107,7 @@ Now that we have decided on all the factors associated with the target market at
 
 Each target market page should look something like this:
 
-![image](/blog/2023-09-10-target-market-analysis-with-the-help-of-llms_6.png)
+![image](/blog/2023-09-10-target-market-analysis-with-the-help-of-llms_6.webp)
 
 The factors and weights are automatically pulled from the “Framework page” built previously.
 
@@ -125,7 +125,7 @@ This is extremely important because even if the market is really attractive, its
 
 Once you have all this data, you can build the following for each of the target markets:
 
-![image](/blog/2023-09-10-target-market-analysis-with-the-help-of-llms_7.png)
+![image](/blog/2023-09-10-target-market-analysis-with-the-help-of-llms_7.webp)
 
 Note that all you need from each target market is:
 

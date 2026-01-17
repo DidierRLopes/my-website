@@ -4,8 +4,8 @@ import Timeline from '../Timeline';
 
 function Journey() {
   return (
-    <Section title="My journey." className="rounded-[14px] mb-8">
-      <Timeline />
+    <Section>
+
     </Section>
   );
 }

@@ -169,6 +169,7 @@ export default function Home() {
           </div>
         </div>
         */}
+        {/* 
         <div className="w-full py-3 sm:py-4">
           <div className="max-w-[880px] mx-auto px-4 flex items-center justify-center">
             <a

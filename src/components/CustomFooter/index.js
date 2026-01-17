@@ -38,7 +38,7 @@ export default function CustomFooter() {
         <div className="container container-fluid">
           <div className="row flex justify-center items-center">
             <div className="col text-center">
-              <h4 className="mb-4">Let's stay in touch.</h4>
+              <h4 className="mb-4">Let's connect.</h4>
               <div className="flex justify-center space-x-4">
                 <a href="https://twitter.com/buzea200" target="_blank" rel="noreferrer" className="text-black dark:text-white hover:text-ds-blue-primary dark:hover:text-ds-blue-accent">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-label="Twitter">

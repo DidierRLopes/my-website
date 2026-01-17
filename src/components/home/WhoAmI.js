@@ -7,9 +7,13 @@ function WhoAmI({ isDesktop, isTablet }) {
   return (
     <Section title="Who am I?">
       <div className="text-xl">
-        Founder &amp; CEO at{' '}
-        <a target="_blank" rel="noreferrer" href="https://openbb.co/">
-          OpenBB
+        Head of DevRel at{' '}
+        <a target="_blank" rel="noreferrer" href="https://chroniclelabs.org/">
+        Chronicle 
+        </a>
+        &amp; Founder at{' '}
+        <a target="_blank" rel="noreferrer" href="https://www.devreluni.com/">
+          DevRel Uni
         </a>
       </div>
       {!isDesktop ? (
@@ -49,7 +53,7 @@ function WhoAmI({ isDesktop, isTablet }) {
             <div>
               <img
                 className="rounded-xl max-w-[220px]"
-                src="img/me_timegpt.webp"
+                src="img/headshot.jpg"
                 alt="Time-GPT event from Nixtla"
               />
             </div>
@@ -73,28 +77,19 @@ function WhoAmI({ isDesktop, isTablet }) {
         <div className="flex items-center content-center mx-auto align-center justify-center flex-wrap mt-4 gap-8 mb-4">
           <img
             className="rounded-xl max-h-[300px] mx-auto"
-            src="img/tattoo.webp"
+            src="img/headshot.jpg"
             alt="OpenBB Tattoo"
           />
-          <img
-            className="rounded-xl max-h-[300px] mx-auto"
-            src="img/me_timegpt.webp"
-            alt="Time-GPT event from Nixtla"
-          />
-          <img
-            className="rounded-xl max-h-[300px] mx-auto"
-            src="img/bridge_sticker.webp"
-            alt="OpenBB bridget sticker"
-          />
+        
         </div>
       )}
       <p className="text-center mt-4">
         You can reach me on{' '}
-        <a href="https://twitter.com/didier_lopes" target="_blank" rel="noreferrer">
+        <a href="https://x.com/buzea200" target="_blank" rel="noreferrer">
           X
         </a>{' '}
         and{' '}
-        <a href="https://www.linkedin.com/in/didier-lopes/" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/in/bianca-andreea-buzea/" target="_blank" rel="noreferrer">
           LinkedIn
         </a>
         , where I post frequently.

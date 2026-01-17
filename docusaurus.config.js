@@ -8,19 +8,19 @@ const fs = require('node:fs');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Didier Lopes',
+  title: 'Bianca Buzea',
   tagline: 'Building an open source legacy one commit at a time.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/headshot.jpg',
 
   // Set the production url of your site here
-  url: 'https://didierlopes.com',
+  url: 'https://biancabuzea.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'DidierRLopes', // Usually your GitHub org/user name.
+  organizationName: 'BiancaBuzea', // Usually your GitHub org/user name.
   projectName: 'my-website', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -83,12 +83,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/goku_pixel.png',
+      image: 'img/headshot.jpg',
       navbar: {
-        title: 'Didier Lopes',
+        title: 'Bianca Buzea',
         logo: {
-          alt: 'Didier Lopes logo',
-          src: 'img/goku_pixel.png',
+          alt: 'Bianca Buzea logo',
+          src: 'img/headshot.jpg',
           href: '/',
           target: '_self',
         },
@@ -102,6 +102,11 @@ const config = {
             position: 'left',
             label: 'Books',
             to: '/books/to-read',
+          },
+             {
+            position: 'right',
+            label: 'Events',
+            to: '/events',
           },
           {
             position: 'left',
@@ -129,11 +134,7 @@ const config = {
             label: 'Intelligence',
             to: '/intelligence',
           },
-          {
-            position: 'right',
-            label: 'Chat',
-            to: '/chat',
-          },
+     
           {
             position: 'right',
             label: 'Newsletter',

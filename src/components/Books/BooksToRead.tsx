@@ -602,6 +602,16 @@ const data = [
 		title: "Steve Jobs",
 		author: "Walter Isaacson",
 		image: "/books/steve-jobs.jpg",
+	},
+	{
+		title: "Scythe (Arc of a Scythe)",
+		author: "Neal Shusterman",
+		image: "/books/scythe.jpg",
+	},
+	{
+		title: "The Zero Marginal Cost Society: The Internet of Things, the Collaborative Commons, and the Eclipse of Capitalism",
+		author: "Jeremy Rifkin",
+		image: "/books/the-zero-marginal-cost-society-the-internet-of-things-the-collaborative-commons-and-the-eclipse-of-capitalism.jpg",
 	}
 ];
 

@@ -70,7 +70,7 @@ export default function NewsletterModal() {
         borderRadius: '0.5rem',
       }}>
         <iframe
-          src="https://didierlopes.beehiiv.com/subscribe"
+          src="https://substack.com/@didierrlopes"
           width="100%"
           height="100%"
           style={{

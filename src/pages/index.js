@@ -10,6 +10,7 @@ import Beliefs from '../components/home/Beliefs';
 import LatestPosts from '../components/home/LatestPosts';
 import OutsideWork from '../components/home/OutsideWork';
 import Journey from '../components/home/Journey';
+import NewsletterCTA from '../components/NewsletterCTA';
 
 if (typeof window !== 'undefined') {
   // Prevent TradingView cross-origin "Script error." from triggering the dev-server overlay
@@ -34,7 +35,6 @@ if (typeof window !== 'undefined') {
 export default function Home() {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
-  const [beehiivSrc, setBehiivSrc] = useState('https://embeds.beehiiv.com/8a4b3599-3ce0-40ad-8586-910fd9a20ee4');
   const [githubSrc, setGithubSrc] = useState('https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=fff&tc=000&ic=000&bc=000');
   const [githubChartSrc, setGithubChartSrc] = useState('https://contribution.oooo.so/_/DidierRLopes?chart=calendar&format=png&weeks=20&theme=blue&widget_size=small');
 
@@ -62,12 +62,6 @@ export default function Home() {
       // Function to update sources based on theme
       const updateSources = () => {
         const isDarkTheme = document.documentElement.getAttribute('data-theme') === 'dark';
-  
-        setBehiivSrc(
-          isDarkTheme
-            ? 'https://embeds.beehiiv.com/8a4b3599-3ce0-40ad-8586-910fd9a20ee4'
-            : 'https://embeds.beehiiv.com/57f8fb43-3409-4d9a-9979-66489741be0c'
-        );
   
         setGithubSrc(
           isDarkTheme
@@ -159,7 +153,7 @@ export default function Home() {
         <div className="w-full py-3 sm:py-4">
           <div className="max-w-[880px] mx-auto px-4 flex items-center justify-center">
             <a
-              href="https://didierlopes.beehiiv.com/subscribe"
+              href="https://substack.com/@didierrlopes"
               target="_blank"
               rel="noreferrer"
               className="pill-banner-link"
@@ -198,25 +192,9 @@ export default function Home() {
           isTablet={isTablet}
         />
 
-        {/* Newsletter embed retained here for now */}
+        {/* Newsletter CTA */}
         <Section className="max-w-[880px] px-4 !mt-0">
-          {ExecutionEnvironment.canUseDOM && (
-            <iframe
-              src={beehiivSrc}
-              data-test-id="beehiiv-embed"
-              width="100%"
-              height={isDesktop ? '200' : '250'}
-              frameBorder="0"
-              scrolling="no"
-              title="Didier newsletter"
-              style={{
-                maxWidth: '100%',
-                overflow: 'hidden',
-                display: 'block',
-                margin: '0 auto',
-              }}
-            />
-          )}
+          <NewsletterCTA variant="compact" />
         </Section>
 
         <OutsideWork isDesktop={isDesktop} />

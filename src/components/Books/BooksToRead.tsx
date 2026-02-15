@@ -612,6 +612,11 @@ const data = [
 		title: "The Zero Marginal Cost Society: The Internet of Things, the Collaborative Commons, and the Eclipse of Capitalism",
 		author: "Jeremy Rifkin",
 		image: "/books/the-zero-marginal-cost-society-the-internet-of-things-the-collaborative-commons-and-the-eclipse-of-capitalism.jpg",
+	},
+	{
+		title: "The Wealthy Barber, Updated 3rd Edition: Everyone's Commonsense Guide to Becoming Financially Independent",
+		author: "David Chilton",
+		image: "/books/the-wealthy-barber.jpg"
 	}
 ];
 

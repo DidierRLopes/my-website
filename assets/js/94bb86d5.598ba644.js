@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[50531],{5517:(e,s,t)=>{t.r(s),t.d(s,{default:()=>c});var u=t(96540);function c(){return(0,u.useEffect)(()=>{window.location.href="https://substack.com/@didierrlopes"},[]),null}}}]);

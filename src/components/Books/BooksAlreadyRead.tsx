@@ -556,6 +556,11 @@ const data = [
 		image:
 			"/books/large-language-models-the-hard-parts-open-source-ai-solutions-for-common-pitfalls.jpeg",
 	},
+	{
+		title: "When Genius Failed: The Rise and Fall of Long-Term Capital Management",
+		author: "Roger Lowenstein",
+		image: "/books/when-genius-failed-the-rise-and-fall-of-long-term-capital-management.jpg",
+	}
 ];
 
 export const booksAlreadyReadCount = data.length;

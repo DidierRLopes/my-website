@@ -1,10 +1,15 @@
-# Converting Beehiiv Newsletter to Blog Post
+# Converting Newsletter to Blog Post
 
-A comprehensive guide for converting Beehiiv newsletter posts into properly formatted blog markdown files for the website.
+A comprehensive guide for converting Substack (or Beehiiv) newsletter posts into properly formatted blog markdown files for the website.
+
+## Supported Platforms
+
+- **Substack** (primary): `https://didierrlopes.substack.com/p/<slug>` or `https://substack.com/home/post/p-<id>`
+- **Beehiiv** (legacy): `https://didierlopes.beehiiv.com/p/<slug>`
 
 ## Prerequisites
 
-- Access to the Beehiiv newsletter URL
+- Access to the newsletter URL
 - Image extraction capabilities (use mcp__fetch__imageFetch tool)
 - `cwebp` and `gif2webp` installed for image conversion
 - Understanding of the blog's markdown structure and front matter requirements
@@ -18,22 +23,42 @@ A comprehensive guide for converting Beehiiv newsletter posts into properly form
 mcp__fetch__imageFetch --url <newsletter-url> --images '{"output": "file", "layout": "individual", "maxCount": 10}'
 ```
 
+**Platform-specific notes:**
+
+**Substack:**
+- Content is usually well-extracted via imageFetch in markdown mode
+- For posts accessed via `substack.com/home/post/p-<id>`, the content may be embedded in JSON within the HTML. Use `raw=true` and extract the `body_html` field
+- Clean Substack tracking params from URLs
+- Substack image URLs: `https://substackcdn.com/image/fetch/.../https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F<uuid>_<dimensions>.<ext>`
+- High-res download URL: `https://substackcdn.com/image/fetch/w_1200,c_limit,f_png,q_auto:good/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F<uuid>_<dimensions>.<ext>`
+
+**Beehiiv:**
+- Content is directly extractable via imageFetch
+- Beehiiv CDN image URLs may expire, so download immediately
+
 **Key extraction requirements:**
 - Capture all text content including headings, paragraphs, and lists
 - Extract all images in high quality (minimum 1000px width)
 - Preserve link URLs and their context
 - Note any special formatting (bold, italics, quotes)
 
-### 2. Generate Blog Filename
+### 2. Get Publication Date
 
-**Format:** `YYYY-MM-DD-slug-from-title.md`
+**Format:** `YYYY-MM-DD`
+
+**Substack:**
+- Fetch the archive page: `https://didierrlopes.substack.com/archive`
+- Extract post titles and dates (dates appear as "Feb 24", "Mar 6" etc.)
+- **Do NOT trust date suffixes in Substack slugs** - they may not match the actual publication date
+- Always verify against the archive page
+
+**Beehiiv:**
+- Extract from https://didierlopes.beehiiv.com/ main page
 
 **Rules:**
-- **IMPORTANT:** Extract the publication date from https://didierlopes.beehiiv.com/ main page
-- Find the newsletter post by title and get its publication date
+- Never use today's date - always use the actual publication date
 - Create slug from title: lowercase, replace spaces with hyphens, remove special characters
 - Example: "The trampoline job: Optimize your career for growth" → `2025-09-19-the-trampoline-job-optimize-your-career-for-growth.md`
-- Never use today's date - always use the actual publication date from Beehiiv
 
 ### 3. Create Front Matter
 
@@ -55,8 +80,8 @@ hideSidebar: true
 **Front Matter Rules:**
 - **slug**: Use title in kebab-case without the date prefix
 - **title**: Exact newsletter title, properly capitalized
-- **date**: Newsletter publication date in YYYY-MM-DD format (extracted from Beehiiv main page, NOT today's date)
-- **image**: Points to the hero image path (WITH `.webp` extension)
+- **date**: Newsletter publication date in YYYY-MM-DD format (from archive page, NOT today's date)
+- **image**: Points to the hero image path (WITH `.webp` extension). If the post has no cover image, omit this field
 - **tags**: Extract 3-6 relevant tags from content themes (lowercase)
 - **description**: Use newsletter subtitle or create compelling summary
 - **hideSidebar**: Set to `true` for blog posts
@@ -68,16 +93,16 @@ hideSidebar: true
 **Image Handling Rules:**
 
 1. **Hero Image**
-   - **IMPORTANT:** Fetch the hero image from https://didierlopes.beehiiv.com/ main page
-   - Find the newsletter post by title and extract its thumbnail image
-   - Download to `/static/blog/YYYY-MM-DD-slug.png` first, then convert to WebP
-   - Dimensions: 1200x630px minimum (social media preview)
-   - Note: The image must be saved in the `static/blog/` directory, not just `/blog/`
-   - Do NOT use images from inside the newsletter post itself
+   - **Substack:** Fetch from archive page. Extract thumbnail image URLs and download at high resolution
+   - **Beehiiv:** Fetch from main page
+   - Some posts may use YouTube thumbnails as cover images (URL: `https://substackcdn.com/image/youtube/w_728,c_limit/<video_id>`)
+   - Download to `/static/blog/YYYY-MM-DD-slug.png` (or `.jpg`) first, then convert to WebP
+   - Note: Save in the `static/blog/` directory, not just `/blog/`
+   - If no cover image exists, omit the `image:` field from front matter
 
 2. **Content Images**
    - Download to `/static/blog/YYYY-MM-DD-slug_N.png` (where N is sequential number)
-   - Download from Beehiiv CDN URLs
+   - Download from CDN URLs
    - Maintain aspect ratio
    - Note: Save in the `static/blog/` directory
 
@@ -141,8 +166,10 @@ hideSidebar: true
    ```
 
 5. **Links**
-   - Convert Beehiiv tracking URLs to original URLs
+   - **Substack:** Remove tracking parameters (`?utm_source=...&utm_medium=...&utm_campaign=...`)
+   - **Beehiiv:** Convert tracking URLs to original URLs
    - Format: `[link text](url)`
+   - Convert links to other newsletter posts to internal blog links if already converted
    - For tweets/social embeds, reference as: `This [post](url)`
 
 6. **Emphasis**
@@ -153,7 +180,7 @@ hideSidebar: true
    - Use blockquote syntax (`>`) for extended quotes
    - For multi-paragraph quotes, use `> <br />` between paragraphs
    - Add `<br />` after the quote block
-   - **IMPORTANT:** Extract the actual hyperlink from the Beehiiv newsletter, not guess or create new ones
+   - **IMPORTANT:** Extract the actual hyperlink from the newsletter, not guess or create new ones
    - Include attribution with author name and link when available
 
    Example:
@@ -166,7 +193,7 @@ hideSidebar: true
 
    <br />
 
-   **Author Name** - ["Article Title"](https://actual-link-from-beehiiv.com)
+   **Author Name** - ["Article Title"](https://actual-link.com)
    ```
 
 8. **Code/Technical Content**
@@ -174,7 +201,7 @@ hideSidebar: true
    - Use code blocks for snippets
 
 9. **YouTube Videos**
-   - **IMPORTANT:** Extract the actual YouTube URL from the Beehiiv newsletter content
+   - **IMPORTANT:** Extract the actual YouTube URL from the newsletter content
    - Convert YouTube links to embedded iframe format
    - Extract video ID from URL (e.g., `https://www.youtube.com/watch?v=VIDEO_ID` → `VIDEO_ID`)
    - Use only the video ID in the embed URL, no additional parameters
@@ -193,15 +220,29 @@ hideSidebar: true
    </div>
    ```
 
-   **Note:** Always verify the video link exists in the original Beehiiv content - don't assume or guess video IDs
+   **Note:** Always verify the video link exists in the original content - don't assume or guess video IDs
+
+10. **Image Captions**
+    - If text immediately following an image is a caption/description of that image, style it differently
+    - Use smaller font size and bring it closer to the image with negative margin
+
+    Example:
+    ```html
+    <p align="center">
+        <img width="800" src="/blog/image.webp" alt="Description" />
+    </p>
+    <p align="center" style={{fontSize: '0.85em', marginTop: '-0.5em'}}>Caption text describing the image above.</p>
+    ```
 
 ### 6. Content Cleanup
 
 **Remove from Newsletter:**
-- Beehiiv footer/unsubscribe links
+- Footer/unsubscribe links
 - Newsletter-specific CTAs (subscribe buttons, share widgets)
 - Tracking parameters from URLs (`?utm_source=...`)
 - Newsletter metadata (view in browser links)
+- Substack "No posts" artifacts
+- Platform migration notices (unless contextually important)
 
 **Preserve:**
 - Author voice and tone
@@ -214,7 +255,7 @@ hideSidebar: true
 Before finalizing:
 
 - [ ] Front matter is complete and valid YAML
-- [ ] Front matter `image:` field includes `.webp` extension
+- [ ] Front matter `image:` field includes `.webp` extension (or is omitted if no cover image)
 - [ ] All images are downloaded, converted to WebP, and properly referenced
 - [ ] All image references in content use `.webp` extension
 - [ ] Links are clean (no tracking parameters)
@@ -223,14 +264,16 @@ Before finalizing:
 - [ ] File is saved in `/blog/` directory with correct naming
 - [ ] Test render locally to ensure formatting
 
-## Example Conversion
+## Example Conversions
 
-**Newsletter URL:** `https://didierlopes.beehiiv.com/p/the-trampoline-job-optimize-your-career-for-growth`
+**Substack URL:** `https://didierrlopes.substack.com/p/the-context-wars-in-financial-services`
+**Converted to:** `/blog/2026-02-13-the-context-wars-in-financial-services.md`
 
+**Beehiiv URL:** `https://didierlopes.beehiiv.com/p/the-trampoline-job-optimize-your-career-for-growth`
 **Converted to:** `/blog/2025-09-19-the-trampoline-job-optimize-your-career-for-growth.md`
 
 **Key transformations:**
-- Extracted tweet screenshot as centered image (converted to WebP)
+- Extracted images and converted to WebP
 - Converted newsletter sections to H2/H3 headings
 - Cleaned URLs of tracking parameters
 - Added proper front matter with relevant tags
@@ -239,18 +282,20 @@ Before finalizing:
 ## Automation Tips
 
 For batch conversions:
-1. Use the imageFetch tool to extract content and images
-2. Parse the HTML/Markdown structure programmatically
-3. Apply transformation rules consistently
-4. Validate front matter and markdown syntax
+1. Fetch the archive page to get all post titles and dates
+2. Cross-reference with existing blog posts to find missing ones
+3. Extract content and images for each missing post
+4. Apply transformation rules consistently
 5. Batch download and convert images to WebP
 6. Run local preview before committing
 
 ## Common Pitfalls to Avoid
 
 - Don't include newsletter-specific language ("Click here to read more")
-- Don't forget to download images (Beehiiv CDN links may expire)
+- Don't forget to download images (CDN links may expire)
 - Don't forget to convert images to WebP format
 - Don't use relative dates ("last week") - use specific dates
 - Don't include email-specific formatting (table layouts for email clients)
 - Don't forget the `<!-- truncate -->` marker for blog preview
+- Don't trust date suffixes in Substack slugs - always verify against the archive page
+- Don't use `substack.com/home/post/p-<id>` URLs for content extraction - prefer `didierrlopes.substack.com/p/<slug>`

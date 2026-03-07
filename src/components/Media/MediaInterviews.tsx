@@ -3,6 +3,14 @@ import VideosList from "../General/VideosList";
 
 const data = [
 	{
+		title: "Control Systems and Electrical Engineering to AI in Finance",
+		embed: "https://www.youtube.com/embed/Wt92O84OQ2o?si=oembed",
+		description:
+			"Interview with Dimitri Bianco about the journey from control systems and electrical engineering to AI in finance.",
+		date: "2026-03-03",
+		time: "55min",
+	},
+	{
 		title: "Analytics Vidhya",
 		embed: "https://www.youtube.com/embed/jSMH-PuwnrA?si=aItl0QeAsy97t7KS",
 		description:

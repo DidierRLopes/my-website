@@ -59,28 +59,52 @@ export default function NewsletterModal() {
 
   return (
     <Modal isOpen={isOpen} onClose={handleClose}>
-      <div style={{ 
-        width: '100%', 
-        height: '60vh',
-        minHeight: '450px',
-        maxHeight: '600px',
-        position: 'relative',
-        overflow: 'auto',
-        WebkitOverflowScrolling: 'touch',
-        borderRadius: '0.5rem',
+      <div style={{
+        padding: '2.5rem 2rem',
+        textAlign: 'center',
+        fontFamily: 'var(--mission-font-family)',
+        color: 'var(--mission-text-color)',
       }}>
-        <iframe
-          src="https://substack.com/@didierrlopes"
-          width="100%"
-          height="100%"
+        <div style={{
+          fontSize: '12px',
+          fontWeight: 600,
+          letterSpacing: '0.5px',
+          textTransform: 'uppercase',
+          marginBottom: '12px',
+          color: 'var(--ds-gray-medium)',
+        }}>
+          Newsletter
+        </div>
+        <h2 style={{
+          fontSize: '1.5rem',
+          fontWeight: 700,
+          marginBottom: '12px',
+        }}>
+          Stay in the loop
+        </h2>
+        <p style={{
+          fontSize: '1rem',
+          lineHeight: 1.6,
+          marginBottom: '1.5rem',
+          color: 'var(--ds-gray-medium)',
+        }}>
+          Get updates on AI, open source, startups and finance.
+        </p>
+        <a
+          href="https://substack.com/@didierrlopes"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mission-button"
           style={{
-            border: 'none',
-            backgroundColor: 'white',
+            textDecoration: 'none',
+            whiteSpace: 'nowrap',
+            padding: '12px 24px',
+            fontSize: '14px',
           }}
-          title="Newsletter Subscription"
-          loading="lazy"
-          scrolling="yes"
-        />
+        >
+          Subscribe on Substack
+          <span style={{ marginLeft: '6px' }}>»</span>
+        </a>
       </div>
     </Modal>
   );

@@ -4,11 +4,318 @@
         <title>Didier Lopes Blog</title>
         <link>https://didierlopes.com/blog</link>
         <description>Didier Lopes Blog</description>
-        <lastBuildDate>Mon, 09 Feb 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 06 Mar 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2026 Didier Lopes.</copyright>
+        <item>
+            <title><![CDATA[The era of on-demand software]]></title>
+            <link>https://didierlopes.com/blog/the-era-of-on-demand-software</link>
+            <guid>https://didierlopes.com/blog/the-era-of-on-demand-software</guid>
+            <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[When agents can work in a loop while you do something else, time is removed from the equation. Welcome to the era of on-demand software.]]></description>
+            <content:encoded><![CDATA[<p>When agents can work in a loop while you do something else, time is removed from the equation. Welcome to the era of on-demand software.</p>
+<p>A couple of weeks back I went to a Pokemon TCG shop to buy some vintage WOTC cards. I'm just getting this collection started, so I had dozens of gaps to fill.</p>
+<p align="center"><img width="400" src="https://didierlopes.com/blog/2026-03-06-the-era-of-on-demand-software_1.webp" alt="Pokemon card collection starting to shape up"></p>
+<p align="center" style="font-size:0.85em;margin-top:-0.5em">My collection starting to shape up.</p>
+<br>
+<p>The guys at the counter weren't thrilled. Dozens of different vintage cards meant dozens of manual price lookups.</p>
+<p>So they triaged, anything marked shadowless went in one pile. Known valuable cards (e.g. Dragonite, Gengar,..) in another. Everything else? $1 flat, $3 for Shadowless. The rest they looked up individually on TCGPlayer.</p>
+<p>I said "It would be nice to have software that does all this and totals it up, right?"</p>
+<p>"Yeah" they said.</p>
+<p>First thing I did once I got home was write this Issue on my pokvault repo.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-03-06-the-era-of-on-demand-software_2.webp" alt="GitHub issue for card scanner feature"></p>
+<br>
+<p>This is a fairly involved feature given that there's a lot to be done:</p>
+<ul>
+<li>Indexing all the card images universe</li>
+<li>Locate the card in the frame using a corner detection algorithm</li>
+<li>Encode the card with a vision model to compare with our indexed ones</li>
+<li>Show the best match cards</li>
+<li>Allow to add cards to the list (and their correct variant)</li>
+<li>Allow to edit price manually but also search manually</li>
+<li>Run on device and be fast</li>
+</ul>
+<br>
+<p>So I wasn't going to touch it until later...</p>
+<p><strong>Also me (given that I can hand off things to AI agents):</strong></p>
+<p align="center"><img width="500" src="https://didierlopes.com/blog/2026-03-06-the-era-of-on-demand-software_3.webp" alt="Meme about doing it anyway"></p>
+<br>
+<p>So I decomposed it in a few sub-tasks.</p>
+<ol>
+<li>Indexing all cards</li>
+<li>Get TCGPlayer reference images to near-100% similarity matches</li>
+<li>Handle my actual photos (odd angles, lighting, wear) with robust corner detection</li>
+<li>Implement the UI/UX I had in mind</li>
+</ol>
+<br>
+<p>Then I let Claude Code iterate in a loop while I did other things.</p>
+<p>Steps 2-3 took the longest. Claude tried different algorithms, compared performance, and <strong>this is the part that surprised me</strong>: it started tuning hyperparameters like an ML engineer would to improve retrieval accuracy.</p>
+<p><strong>Insane</strong>.</p>
+<p>After a few hours of back-and-forth, it worked. Exactly as I'd envisioned.</p>
+<p>My wife watched the whole thing. We'd just seen two guys at a shop struggle through a painfully manual process and here we were...</p>
+<p>Now I had a working solution without writing a single line of code myself.</p>
+<p>Bear in mind that I highlighted the problem perfectly, and had in my head exactly the UI/UX I wanted the user to have. And I also understood what choices the agent was doing on the ML pipeline. But still, I didn't touch any code manually myself - and the fact that it works exactly as I wanted is just incredible.</p>
+<p>You can test it here: <a href="https://pokvault.com/scanner" target="_blank" rel="noopener noreferrer">https://pokvault.com/scanner</a></p>
+<p>I'm calling this the <strong>era of on-demand software</strong>.</p>
+<p>I've always been a builder. The only constraint was: <strong>time</strong>. But when agents can work in a loop while you do something else, time is removed from the equation.</p>
+<p>Plus, if you're a builder, it's never been a better moment for you. You shouldn't be in love with the act of coding, but with the act of creation itself. Because now everyone can create easily.</p>
+<p>But if you're not a builder, that's fine. Non-builders don't need the vision either, they just need the pain point.</p>
+<p>While in the past you would write that pain point on Google to look for existing solutions, now you can share your pain point with the agent and let it create a solution that solves your problem and that you can iterate with the agent to match your preferences.</p>
+<p>This is good.</p>
+<p>It will push for software companies to produce higher quality software built to stand the test of time.</p>
+<p>And if you're wondering - this is exactly why we're building OpenBB the way we are.</p>
+<p>The value isn't in the UI itself. It's in the overall infrastructure, the ease of data and agent integrations, the institutional-grade features that take years to build and maintain, and the relentless innovation. That's the moat.</p><div style="display:flex;justify-content:center;margin-top:3rem;margin-bottom:1rem"><a href="https://substack.com/@didierrlopes" target="_blank" rel="noopener noreferrer" class="mission-button" style="text-decoration:none;white-space:nowrap;padding:12px 24px;font-size:14px">Subscribe to my newsletter<span style="margin-left:6px">»</span></a></div>]]></content:encoded>
+            <category>ai</category>
+            <category>software-development</category>
+            <category>agents</category>
+            <category>openbb</category>
+        </item>
+        <item>
+            <title><![CDATA[No Room to Hide]]></title>
+            <link>https://didierlopes.com/blog/no-room-to-hide</link>
+            <guid>https://didierlopes.com/blog/no-room-to-hide</guid>
+            <pubDate>Tue, 03 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[AI is shrinking teams. Now every role has to earn its place.]]></description>
+            <content:encoded><![CDATA[<p>AI is shrinking teams. Now every role has to earn its place.</p>
+<p>Not because companies are failing, but because AI lets fewer people do more.</p>
+<p>A startup that once needed 30 people to ship a product can now do it with 10. And this isn't just in startup-land. The best large companies are reorganizing around small, autonomous squads - 3 to 6 people - who take full ownership of a specific surface area. Think of a large org not as one team of 500, but as 80+ small teams, each operating with startup-like intensity and scope.</p>
+<p>Bezos was onto something with the two-pizza rule: <em>if a team can't be fed by two large pizzas, it's too big</em>. That instinct is proving more right than ever, not as a management preference, but as a structural inevitability.</p>
+<p>When teams shrink, roles blur. And that changes what it means to be valuable.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-small-teams-actually-look-like-now">What small teams actually look like now<a href="https://didierlopes.com/blog/no-room-to-hide#what-small-teams-actually-look-like-now" class="hash-link" aria-label="Direct link to What small teams actually look like now" title="Direct link to What small teams actually look like now">​</a></h2>
+<p>I see this every day at OpenBB.</p>
+<p>Our previous community manager is currently the main maintainer behind our open source GitHub project with 62k+ GitHub stars. Our marketer uses GitHub Copilot to change copy directly on our website. Our designer codes her own wireframes. Our engineers build POCs in code rather than involving a product person. I use Claude Code to write features and get them to a reviewable state before handing them to our engineering team.</p>
+<p>None of those additional tasks were in the JD of each of these individuals. They were hired for their core expertise and their mindset, then AI expanded what they could credibly do.</p>
+<p>This is what a high-functioning small team looks like in 2026. Not people pretending to be experts in everything, but people with the right mentality taking ownership across boundaries that used to require separate hires.</p>
+<p>In the past, small startups had a few people who were jack of all trades and then a few specialists in their domain. Getting those specialists was the hard part, and often the main reason startups raised more capital. Now, AI bridges enough of that specialist capability that a team of curious, driven generalists can validate an idea and ship a product without needing to hire for every gap.</p>
+<p>And in larger companies, the shift is just as real. Historically, big orgs had massive teams where accountability was spread thin across dozens of people. There was always someone else in the chain of responsibility, which meant less incentive to get shit done. Some companies caught onto this early, Amazon's small team model being the obvious example, but now AI is accelerating the trend dramatically. The impact, in my opinion, will be much worse due to the previous overhire that has happened.</p>
+<p>I mean, Calendly has 500 employees which is an order of magnitude over Cal.com. DocSend (prev acquisition) was 50 people, Papermark is again an order of magnitude lower. Notion vs Obsidian. Airtable vs NocoDB. Qualtrics vs Formbricks. Asana vs Linear. There are <em>literally</em> countless examples like this. Yes, these aren't identical products, but the directional point holds.</p>
+<p>Sure, that previous headcount was used to "support growth" and not the other way around. But my point stands, you won't need anywhere near as much headcount to support growth.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ai-supercharges-the-generalist">AI supercharges the generalist<a href="https://didierlopes.com/blog/no-room-to-hide#ai-supercharges-the-generalist" class="hash-link" aria-label="Direct link to AI supercharges the generalist" title="Direct link to AI supercharges the generalist">​</a></h2>
+<p>AI has fundamentally changed the cost of learning and executing.</p>
+<p>A PM with no SQL experience can analyze database queries with any AI agent. A designer unfamiliar with frontend code can generate working React prototypes. A founder without legal training can draft and refine contracts on their own (not me though, I always use our GC).</p>
+<p>What used to require a course, a consultant, or a specialist now takes curiosity and a good prompt (and even the "good" is becoming debatable, as agents become more agentic).</p>
+<p>Jensen Huang put it well - <em>AI is the easiest application in the world to use</em>. <em>ChatGPT grew to nearly a billion users practically overnight. And if you're not sure how to use it? You ask it how to use it</em>.</p>
+<p>No tool in history has ever had that property.</p>
+<p>A single person on a small team can now credibly cover ground that would've required three hires two years ago. When every person on a 5-person squad can operate across 3-4 disciplines with AI assistance, you don't need 15 people. You need 5 versatile ones with the right tools.</p>
+<p>This is the structural reason small teams are winning. Not just culture. Not just speed. But the raw math of what's possible when every team member is AI-augmented.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ai-collapses-the-middle">AI collapses the middle<a href="https://didierlopes.com/blog/no-room-to-hide#ai-collapses-the-middle" class="hash-link" aria-label="Direct link to AI collapses the middle" title="Direct link to AI collapses the middle">​</a></h2>
+<p>If you're "somewhat good" at something, AI might already replace that edge.</p>
+<p>Three years of casual SQL experience? An AI copilot can match that. Decent at writing marketing copy? So is every LLM. Know your way around a spreadsheet? So does anyone with a prompt.</p>
+<p>The middle, where you're competent but not exceptional, is exactly where AI competes hardest.</p>
+<p>This is the flip side of the previous point. The same AI that supercharges the generalist is what collapses the edge for people who are merely decent at specific tasks.</p>
+<p>That means that the composition of teams is going to change, fast.</p>
+<p>What's emerging is a bifurcation:</p>
+<ul>
+<li><strong>Generalists</strong> - empowered by AI, fast-moving, versatile, multi-disciplinary.</li>
+<li><strong>Specialists</strong> - narrowly focused, deeply committed to a subject.</li>
+</ul>
+<br>
+<p>And soft skills are, potentially, becoming more important than ever.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="so-what-jobs-are-safe">So what jobs are safe?<a href="https://didierlopes.com/blog/no-room-to-hide#so-what-jobs-are-safe" class="hash-link" aria-label="Direct link to So what jobs are safe?" title="Direct link to So what jobs are safe?">​</a></h2>
+<p>I like Jensen Huang's framework <em>if your job is the task, AI will replace you. If your job is more than the task, it won't. A lawyer's job isn't reading documents, it's helping people. Reading documents is part of the job, not the job.</em></p>
+<p>An analogy is if you're just chopping vegetables, you're replaceable. If you understand how to run a kitchen, from working with suppliers, serving customers, etc. - you're not.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-bar-has-risen-for-specialists">The bar has risen for specialists<a href="https://didierlopes.com/blog/no-room-to-hide#the-bar-has-risen-for-specialists" class="hash-link" aria-label="Direct link to The bar has risen for specialists" title="Direct link to The bar has risen for specialists">​</a></h2>
+<p>Being a specialist today means something deeper than it used to. It means pursuing a level of depth and nuance that the base AI models struggle to replicate.</p>
+<p>Think of it like pursuing a PhD - not in the academic sense, but in the intensity of commitment.</p>
+<p>A specialist in compiler optimization might spend years mastering edge-case memory management. An enterprise sales leader might have decades of intuition about how procurement cycles actually work inside Fortune 500 organizations - the politics, the timing, the unwritten rules that no model has been trained on. Someone in regulatory affairs might know a specific market's compliance landscape so intimately that they can spot a risk before it surfaces in any dataset.</p>
+<p>In this case, the person who deeply understands a customer segment, who can navigate a specific regulatory landscape, who knows how to actually close a $500K enterprise deal - that's specialist depth too. And it's the kind of depth that becomes more valuable, not less, as AI handles everything around it.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="false-confidence">False confidence<a href="https://didierlopes.com/blog/no-room-to-hide#false-confidence" class="hash-link" aria-label="Direct link to False confidence" title="Direct link to False confidence">​</a></h2>
+<p>The danger of AI-augmented generalists is misplaced confidence. Which is also known as "Mount Stupid" - which describes <em>the peak of false confidence where people with low competence or limited knowledge on a topic wrongly believe they are experts</em>. It represents a state of overconfidence, which often precedes realizing how much there is to learn.</p>
+<p>When a PM uses AI to write a SQL query, they get a result that looks right. It runs. It returns data. But they might not realize the query has a subtle join issue that inflates numbers by 15%. They don't know what they don't know, and the AI didn't flag it because it doesn't understand the business context.</p>
+<p>This is exactly why certain domain specialists on small teams are a must.</p>
+<p>I experience this firsthand weekly. I can be extremely productive with Claude Code. I can write features, refactor code, build things that work. But it usually cannot be merged as is. It always needs to be reviewed by our incredible infra engineers who have been working on our codebase for 4+ years, who know the ins and outs of the product, and who can see how a new feature will ripple through the system in ways I can't.</p>
+<p>This is a feature of the model. The generalist gets things to 80%. The specialist takes it to 100% - and if you're curious and have the right mindset, you can work with the specialist to increase your own knowledge in that domain. Same as before, but now with AI as the speed multiplier.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-ideal-small-team">The ideal small team<a href="https://didierlopes.com/blog/no-room-to-hide#the-ideal-small-team" class="hash-link" aria-label="Direct link to The ideal small team" title="Direct link to The ideal small team">​</a></h2>
+<p>The ideal small team, whether inside a startup or a Fortune 500, increasingly looks like this: one or two deep specialists who own the core technical or domain complexity, surrounded by generalists who use AI to stretch across product, design, ops, marketing, and whatever else needs doing.</p>
+<p>This is how a 5-person team ships like a 20-person team used to. Mostly by the floor that gets raised due to AI. The generalists execute at a level that's good enough for most tasks, while the specialists handle what actually requires hard-won judgment, and catch the mistakes that AI-augmented confidence can miss.</p>
+<p>I saw a post the other day for a JD for a <em>vibe code cleanup specialist</em>, lmao. That's where we're heading, new roles that didn't exist six months ago.</p>
+<p>When people talk about startups outrunning incumbents, they often attribute it to culture or speed. But increasingly, the structural advantage is simpler: small teams with AI can cover the same surface area as large teams without it, at a fraction of the cost and with faster feedback loops. And large companies that adopt this model internally, breaking into dozens of small, autonomous squads, get the best of both worlds: startup speed with enterprise resources. But they are climbing uphill due to all previous friction that exists, so that's the window that startups have to execute.</p>
+<p>I increasingly think that we are heading towards a world where there are much fewer companies, but the ones that exist will be doing much much more.</p>
+<p>And that's somewhat scary.</p>
+<p>But what's scarier is not being valuable enough to be on one of these.</p>
+<p>Stay safe, stay curious.</p><div style="display:flex;justify-content:center;margin-top:3rem;margin-bottom:1rem"><a href="https://substack.com/@didierrlopes" target="_blank" rel="noopener noreferrer" class="mission-button" style="text-decoration:none;white-space:nowrap;padding:12px 24px;font-size:14px">Subscribe to my newsletter<span style="margin-left:6px">»</span></a></div>]]></content:encoded>
+            <category>ai</category>
+            <category>startups</category>
+            <category>teams</category>
+            <category>career</category>
+        </item>
+        <item>
+            <title><![CDATA[No financial terminal will survive.]]></title>
+            <link>https://didierlopes.com/blog/no-financial-terminal-will-survive</link>
+            <guid>https://didierlopes.com/blog/no-financial-terminal-will-survive</guid>
+            <pubDate>Tue, 24 Feb 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[No financial terminal in their current state will survive. Here's why the future belongs to open, composable workspaces.]]></description>
+            <content:encoded><![CDATA[<p>No financial terminal <strong>in their current state</strong> will survive. (sorry for the clickbaity title eheh)</p>
+<p>Anyway, I would bet a lot on this - and want to explain my reasoning.</p>
+<p>But first let's understand what exists to-date to analyze financial data.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-bespoke-dashboard">The bespoke dashboard<a href="https://didierlopes.com/blog/no-financial-terminal-will-survive#the-bespoke-dashboard" class="hash-link" aria-label="Direct link to The bespoke dashboard" title="Direct link to The bespoke dashboard">​</a></h2>
+<p>On one end, we have the custom-built dashboards, often started as weekend projects.</p>
+<p>A Streamlit app or React app or built on Lovable (the way it was produced doesn't matter), an internal tool some dev built over a weekend because the data vendor software didn't do what they needed. And it's great. It does that one thing really well. It was built by someone who understood the problem, for the people who had the problem.</p>
+<p>I'm a big fan of this. After all I do this for me all the time (e.g. my <a href="https://pokvault.com/" target="_blank" rel="noopener noreferrer">pokemon website</a> that I use to track my binder).</p>
+<p>Unfortunately, the important part of the sentence is the "<strong>ME</strong>". Most financial software is not built with one single person in mind (unless you are <a href="https://josedonato.com/" target="_blank" rel="noopener noreferrer">Jose Donato</a>, who has built his own <a href="https://cryexc.josedonato.com/" target="_blank" rel="noopener noreferrer">Orderflow Terminal</a> for his own needs).</p>
+<p>So that means that the weekend custom application will face your team members. And one of them will ultimately need something slightly different. A different view. A new column. A different dataset plugged in. Now you're back to the person who built it. They make the change, but it shifts the experience for everyone else using it. So they build a second version. Then a third. Then the original builder leaves the firm and no one wants to touch the code.</p>
+<p>The dashboard was perfect the day it shipped.</p>
+<p>And it started dying the day after.</p>
+<p>There's a graveyard with millions of Streamlit apps that were built with the intent of increasing shareholder value, lmao.</p>
+<p>And I'm a massive Streamlit fan - I used to use it to prototype applications all the time. Note the use of "prototype", I never thought of it for something that it was not.</p>
+<p>My point is that these type of custom dashboards (Streamlit or not) are built for a moment in time, for a specific person's workflow, and the moment the context changes - which it will - you're stuck.</p>
+<p>Either you:</p>
+<ul>
+<li>Live with it - then you will complain the software sucks, which brings us back to the start of this essay</li>
+<li>Bother a developer to modify it - they may say no because it will impact others (so <strong>you</strong> will complain software sucks); or they may say yes which will impact others (so <strong>others</strong> will complain software sucks - at least eventually).</li>
+</ul>
+<br>
+<p>It's literally a losing battle.</p>
+<p>Unless you build your own open workspace. But more on this in a bit.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="bi-software-gets-the-model-right-but-not-for-finance">BI software gets the model right, but not for finance<a href="https://didierlopes.com/blog/no-financial-terminal-will-survive#bi-software-gets-the-model-right-but-not-for-finance" class="hash-link" aria-label="Direct link to BI software gets the model right, but not for finance" title="Direct link to BI software gets the model right, but not for finance">​</a></h2>
+<p>I'm very bullish on BI software.</p>
+<p>Tableau (Salesforce), Power BI (Microsoft), Looker (Google) - they understood something important: the best software is the software you can shape to your own needs. They give you primitives. Building blocks. Drag this here, filter that there, connect to this data source. The user has agency.</p>
+<p>And for a lot of industries, this works extremely well.</p>
+<p>But for financial services, these dashboards are used for anything but market data analysis and insights.</p>
+<p>My hypothesis is that the building blocks are too generic. BI tools are horizontal by design - they're built to serve every industry, which means they're optimized for none. They don't incorporate financial symbology. They don't optimize for speed of data streaming. There's no concept of data staleness indicators, no natural way to put unstructured research next to structured time series, no role-based access at the widget level, no watchlist widget that triggers a workflow some place else.</p>
+<p>They have the right idea - composable, personal, user-controlled - but the wrong execution for finance.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-high-end-terminal-problem">The high-end terminal problem<a href="https://didierlopes.com/blog/no-financial-terminal-will-survive#the-high-end-terminal-problem" class="hash-link" aria-label="Direct link to The high-end terminal problem" title="Direct link to The high-end terminal problem">​</a></h2>
+<p>On the other end, you have the high-end financial applications.</p>
+<p>These were designed with a single assumption: the analyst, quant, or PM will navigate the interface to find the information they need.</p>
+<p>And to be fair, these interfaces have been iterated over years/decades. They've been refined toward a local maxima: the configuration that optimizes for the most clients' happiness, utilizing the data they own, whilst not making it so complex that new users bounce.</p>
+<p>Credit where credit is due - this is an incredibly hard balance to get right.</p>
+<p>It's so hard, in fact, that companies like SPGI have significantly more data available through their APIs than they expose through their interface.</p>
+<p>Think about what that means. Please.</p>
+<p>The data exists.</p>
+<p>The capability exists.</p>
+<p>But the interface can't absorb it, because every new feature risks breaking the carefully calibrated experience for existing users.</p>
+<p>If you're trying to nail a specific workflow, you can't keep bolting on functionality to the UI. But you can keep creating API endpoints. So the interface becomes a frozen subset of what's actually possible.</p>
+<p>And here's where the data incentive makes it worse.</p>
+<p>These vendors own the data. Their interface is optimized to showcase <em>their</em> data in <em>their</em> way. There's no structural incentive to make it easy to bring in outside data or customize beyond what serves their distribution model. The UI isn't just static - it's static in a direction that serves the vendor, not you.</p>
+<p>So either the terminal does your workflow perfectly - because a PM somewhere decided your workflow was common enough to optimize for - or tough luck. You're forced into someone else's opinion of how you should do your job.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-same-failure-mode">The same failure mode<a href="https://didierlopes.com/blog/no-financial-terminal-will-survive#the-same-failure-mode" class="hash-link" aria-label="Direct link to The same failure mode" title="Direct link to The same failure mode">​</a></h2>
+<p>These two worlds - the bespoke Streamlit dashboard and the enterprise terminal - look completely different on the surface. But they fail in the exact same way.</p>
+<p>Both end up static. Both take control away from the end user.</p>
+<p>The BI tool is dynamic for the <em>developer</em> - the person building the dashboard. They have full creative control. But the moment they ship it, it becomes static for the <em>consumer</em>. The end user gets a fixed view, and now we're right back in the terminal problem, except the UI is probably worse.</p>
+<p>The terminal is static for everyone. It was iterated into a local maxima that serves the average client reasonably well and no individual client perfectly. It can't be dynamic because that would break the very thing that makes it reliable.</p>
+<p>Neither model gives the end user real agency over their experience.</p>
+<p>And I think this is the core issue that the industry has been unable to solve.</p>
+<p>The spectrum from "fully custom" to "fully productized" has this big problem: <strong>no matter where you land on it, the end user eventually loses control.</strong></p>
+<p>You are literally forced to think of your workflows in the way <strong>someone else</strong> has decided they should be done.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="whats-needed">What's needed<a href="https://didierlopes.com/blog/no-financial-terminal-will-survive#whats-needed" class="hash-link" aria-label="Direct link to What's needed" title="Direct link to What's needed">​</a></h2>
+<p>You need the primitives and abstractions of BI software - the composability, the building blocks, the user agency - delivered in a high-end, finance-native interface that understands the domain. Symbology. Real-time data. Staleness indicators. Structured and unstructured side by side. Role-based access at the widget level. The things that make financial workflows actually work.</p>
+<p>Rings a bell?</p>
+<p>Check <a href="https://openbb.co/solutions" target="_blank" rel="noopener noreferrer">https://openbb.co/solutions</a>, where you can build custom financial applications with OpenBB's scalable infrastructure. From portfolio risk analysis to economic indicators, create enterprise-ready apps that transform fragmented data and AI tools into cohesive workflows.</p>
+<p>And - <strong>this is the important part</strong> - both the developer <em>and</em> the end user need to be able to control their experience. Not just the person who builds the dashboard. <strong>The analyst/PM who consumes it too.</strong></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="where-ai-agents-fit">Where AI agents fit<a href="https://didierlopes.com/blog/no-financial-terminal-will-survive#where-ai-agents-fit" class="hash-link" aria-label="Direct link to Where AI agents fit" title="Direct link to Where AI agents fit">​</a></h2>
+<p>"But what about AI agents? Where do they fit?"</p>
+<p>Well, they fit in both!!</p>
+<p>They can work as developers (when they are building applications) but also as the analyst/PM (when they are analyzing data in a dashboard as copilot).</p>
+<p>Here's my matrix on how I think about this:</p>
+<p><strong>Human as Developer.</strong> This is what exists today in BI tools or bespoke apps. A person builds a dashboard, configures widgets, connects data sources, designs the layout. They have full control - but it takes time, it requires skill, and the result is static for everyone else.</p>
+<p>In OpenBB, this exists and it's very important. Analysts and quant developers can build and customize their workspace exactly how they want. The main thing is that they are bringing data widgets to this workspace, connecting with the right tables on Snowflake, bringing in proprietary data. Full control. But unlike traditional BI, the building blocks are optimized for financial workflows.</p>
+<p>We literally have open sourced a <a href="https://github.com/OpenBB-finance/backends-for-openbb" target="_blank" rel="noopener noreferrer">reference backend</a> to connect data to the workspace, but also <a href="https://github.com/OpenBB-finance/awesome-openbb" target="_blank" rel="noopener noreferrer">examples of apps</a> built by the community.</p>
+<p><strong>Human as End User.</strong> This is the traditional terminal experience. You navigate, you click, you consume. The interface was built for you by someone else - a vendor PM, an internal developer - and you work within its constraints.</p>
+<p>But in OpenBB you have full control of that interface in the way the data is organized from the "lego blocks" that the development team has done.</p>
+<p><strong>AI Agent as Developer.</strong> This is what everyone is going crazy for. Coding agents. This is also why we are going to see an even bigger graveyard of bespoke apps, but many that might actually mature for narrow use cases. I think BI tools should be doing MUCH more here because they have the right primitives and could constrain the software built nicely.</p>
+<p>In our case, we think of how we can improve the process of building applications on our workspace via an agent. Not changing the UI itself because it's important to keep familiarity + brand consistency and for latency reasons, but the data being displayed and the analytics.</p>
+<p>I've built an <a href="https://skills.sh/openbb-finance/backends-for-openbb/openbb-app-builder" target="_blank" rel="noopener noreferrer">OpenBB app builder</a> SKILL for agents to help them close that building ability gap.</p>
+<p><strong>AI Agent as End User.</strong> This is where it starts to get interesting. An AI agent that consumes the workspace like a human would - reading data from widgets, interpreting charts, understanding the current state of a dashboard - and then acts on it. It can look at your portfolio view, add a widget to the dashboard with data that is of interest based on that portfolio. It can read a research note displayed in one widget and cross-reference it against the financial data in another.</p>
+<p>The agent isn't just answering questions in a chat box. It's <em>seeing</em> the same workspace you see, understanding the context of what's in front of you but also other widgets, and adding value on top of it. The workspace becomes shared context between you and the agent.</p>
+<p>This <a href="https://docs.openbb.co/workspace/analysts/ai-features/generative-ui" target="_blank" rel="noopener noreferrer">generative UI</a> capability is something that we are only getting better. I believe in this so much that this is where I spend most of my time building at OpenBB. We are adding capabilities to fully control the workspace and its widgets organization to create perfect layout for analysis on the fly.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-boundary-dissolves">The boundary dissolves<a href="https://didierlopes.com/blog/no-financial-terminal-will-survive#the-boundary-dissolves" class="hash-link" aria-label="Direct link to The boundary dissolves" title="Direct link to The boundary dissolves">​</a></h2>
+<p>When you put these four quadrants together, something important happens: <strong>the boundary between building software and using software dissolves</strong>.</p>
+<p>Funnily enough when discussing OpenBB positioning, this has been one of the topics we have discussed the most.</p>
+<p>That is because I have believed, for a while, that analysts will start owning more developer tasks. Data point <a href="https://openbb.co/blog/from-excel-to-agents-rebuilding-the-macro-research-workflow-for-the-ai-era" target="_blank" rel="noopener noreferrer">here</a> and <a href="https://github.com/MattMaximo/CryptoBB" target="_blank" rel="noopener noreferrer">here</a>, both built by analysts pre-Opus 4.5.</p>
+<p>And to accelerate giving control to analysts/PMs, there's a need for an open workspace.</p>
+<p><strong>A workspace that is personal, malleable, and responsive to context.</strong></p>
+<p>A human can build a dashboard in the morning. An AI agent can modify it based on new data at noon. The human can rearrange it for a client meeting at 2pm. The agent can strip it down to the essentials for a quick mobile check at 6pm.</p>
+<p>The workspace is alive.</p>
+<p>Not because it's generating novel UI from scratch - that would be disorienting. But because it's assembling and reassembling familiar pieces based on who's using it, what they're doing, and what the data demands.</p>
+<p>This is what "software should be personal" actually means. Not "you get to pick your theme color".</p>
+<p>Personal as in: the software reflects your workflow, your data, your context, your role - and it adapts as those things change. Whether the one changing it is you or an AI agent working on your behalf.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-the-old-model-doesnt-survive">Why the old model doesn't survive<a href="https://didierlopes.com/blog/no-financial-terminal-will-survive#why-the-old-model-doesnt-survive" class="hash-link" aria-label="Direct link to Why the old model doesn't survive" title="Direct link to Why the old model doesn't survive">​</a></h2>
+<p>The old model - where a PM defines the interface, ships it, and you live with it - doesn't survive this shift.</p>
+<p>Not because the interfaces were bad. Many of them were excellent, refined over years by smart people who understood their users deeply. But they were built for a world where the interface <em>had</em> to be static, because the only way to make it dynamic was to hire a developer. And developers are expensive, slow, and their changes affect everyone.</p>
+<p>AI agents remove that constraint. When the cost of modifying an interface drops to near zero - when you can reshape your workspace with a sentence - there's no reason to accept a static view ever again.</p>
+<p>The high-end terminals will still have great data. The BI tools will still have great primitives. But I believe the future is in a platform that combines finance-native building blocks with true composability for both humans and AI agents.</p>
+<p>Software should be personal.</p>
+<p>Now it finally can be.</p>
+<p><a href="https://pro.openbb.co/" target="_blank" rel="noopener noreferrer">https://pro.openbb.co/</a></p><div style="display:flex;justify-content:center;margin-top:3rem;margin-bottom:1rem"><a href="https://substack.com/@didierrlopes" target="_blank" rel="noopener noreferrer" class="mission-button" style="text-decoration:none;white-space:nowrap;padding:12px 24px;font-size:14px">Subscribe to my newsletter<span style="margin-left:6px">»</span></a></div>]]></content:encoded>
+            <category>finance</category>
+            <category>openbb</category>
+            <category>ai</category>
+            <category>product</category>
+        </item>
+        <item>
+            <title><![CDATA[What if you could create any report - right where your data lives?]]></title>
+            <link>https://didierlopes.com/blog/what-if-you-could-create-any-report</link>
+            <guid>https://didierlopes.com/blog/what-if-you-could-create-any-report</guid>
+            <pubDate>Fri, 20 Feb 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Bringing Claude Code Skills into the OpenBB Workspace to create custom reports right where your data lives.]]></description>
+            <content:encoded><![CDATA[<p>Bringing Claude Code Skills into the OpenBB Workspace to create custom reports right where your data lives.</p>
+<p>Last week I shared a video building a Claude Code Skill from scratch. It took a DBS Report and converted it into a Skill so I could produce DBS-style reports with any financial data. (more info <a href="https://didierlopes.com/blog/how-you-can-build-and-share-a-claude-code-skill/" target="_blank" rel="noopener noreferrer">here</a>)</p>
+<p><a href="https://www.linkedin.com/in/magnus-samuelsen/" target="_blank" rel="noopener noreferrer">Magnus</a> has been working on one of my favorite projects: building <a href="https://openbb.co/blog/building-ai-agents-for-openbb-workspace-with-pydantic-ai" target="_blank" rel="noopener noreferrer">AI agents for the OpenBB Workspace with Pydantic AI</a>. He saw my video and had the idea to bring skills like this directly into the Workspace.</p>
+<p>Not just to replicate what I had done, but because he saw the potential.</p>
+<p>The ability to create custom reports in the place where you already have all your data!</p>
+<p>So he built it.</p>
+<p>Using its very own <a href="https://github.com/MagnusS0/openbb-pydantic-ai" target="_blank" rel="noopener noreferrer">OpenBB Pydantic AI framework</a>, he made it possible to discover and run skills inside the Workspace via code.</p>
+<p>You can literally check the PR <a href="https://github.com/MagnusS0/openbb-pydantic-ai/pull/7" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-02-20-what-if-you-could-create-any-report.webp" alt="OpenBB Workspace with Skills integration"></p>
+<br>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-02-20-what-if-you-could-create-any-report_1.webp" alt="OpenBB Workspace Skills demo"></p>
+<br>
+<p>We're bringing skills to the Workspace very soon. But the fact that the community is already finding ways to do it programmatically - that's just amazing.</p><div style="display:flex;justify-content:center;margin-top:3rem;margin-bottom:1rem"><a href="https://substack.com/@didierrlopes" target="_blank" rel="noopener noreferrer" class="mission-button" style="text-decoration:none;white-space:nowrap;padding:12px 24px;font-size:14px">Subscribe to my newsletter<span style="margin-left:6px">»</span></a></div>]]></content:encoded>
+            <category>openbb</category>
+            <category>ai</category>
+            <category>open-source</category>
+            <category>skills</category>
+        </item>
+        <item>
+            <title><![CDATA[The context wars in financial services]]></title>
+            <link>https://didierlopes.com/blog/the-context-wars-in-financial-services</link>
+            <guid>https://didierlopes.com/blog/the-context-wars-in-financial-services</guid>
+            <pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[As AI collapses the enterprise application stack, the context layer becomes the most valuable part of the technology stack in financial services.]]></description>
+            <content:encoded><![CDATA[<p>As AI collapses the enterprise application stack, the context layer becomes the most valuable part of the technology stack in financial services.</p>
+<p><strong>A quick note:</strong> I've moved this newsletter from Beehiiv to Substack. Nothing changes on your end - just letting you know. Now, onto this week's piece.</p>
+<p>Matt Slotnick recently wrote an excellent essay on "<a href="https://x.com/matt_slotnick/status/2016968805034192962" target="_blank" rel="noopener noreferrer">Context Rules Everything Around Me: The Future Of Enterprise Applications</a>" about how AI collapses the enterprise application stack. As agents take over more work, existing applications get relegated to data sources. The value shifts up to a data layer, a context layer on top of it, and an interaction layer where agents and people actually do work.</p>
+<p>He's writing about enterprise software broadly - Salesforce, Workday, ServiceNow. But I think the implications for financial software are even more dramatic. In finance, proprietary insight is the product. Which means the context layer is everything.</p>
+<p align="center"><img width="600" src="https://didierlopes.com/blog/2026-02-13-the-context-wars-in-financial-services.webp" alt="Context Rules Everything Around Me diagram"></p>
+<br>
+<p>Context is what happens when you connect everything a firm knows. When your agent doesn't just see your portfolio positions - it sees the positions, the research that led to them, the macro environment they sit in, the risk limits they're constrained by, the client preferences they serve, and the market data that's moving right now.</p>
+<p>That's the difference between an AI that gives you generic answers and one that reasons about your portfolio the way a senior analyst would.</p>
+<p>Particularly in a world of Opus 4.6 and Codex 5.3.</p>
+<p>And that's why the context layer is where the leverage is. The applications underneath are commoditizing - their value shifts from the interface they provide to the data and workflow state they hold. The interaction layer on top matters, but it's downstream - the quality of the context determines the quality of everything above it. A beautifully designed workspace powered by thin context is just a pretty terminal with generic answers.</p>
+<p>For financial firms, this layer determines what your agents know, what they can reason about, and how useful they actually are when it matters.</p>
+<p>Every company in the space sees this shift coming. And the instinct from most of them is: "<em>We'll build the context layer for you. Give us your data, and we'll manage the intelligence on top.</em>"</p>
+<p>I think that's the wrong framing.</p>
+<p>When a vendor says "we'll manage your context" what they're really saying is: "<em>trust us with the most valuable layer of your entire technology stack"</em>. The layer that determines what your agents see, what they act on, and how they reason about your business.</p>
+<p>For any firm where differentiation matters - where the way you analyze, decide, and act is your edge - that should be a non-starter.</p>
+<p>And there's a subtler problem. If a vendor owns your context layer, every firm on that vendor gets a version of context shaped by the same system, the same defaults, the same biases. Your "proprietary" intelligence starts looking a lot like everyone else's.</p>
+<p>The right framing: companies should focus on being the underlying tech that enables firms to <strong>own their own context</strong>. Not build it for them. Not host it for them. Give them the tools to build it themselves, on their own infrastructure, under their own control.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-platform-cannot-also-be-the-data-vendor">The platform cannot also be the data vendor<a href="https://didierlopes.com/blog/the-context-wars-in-financial-services#the-platform-cannot-also-be-the-data-vendor" class="hash-link" aria-label="Direct link to The platform cannot also be the data vendor" title="Direct link to The platform cannot also be the data vendor">​</a></h2>
+<p>This leads to a structural point that I keep repeating.</p>
+<p>If the context layer needs to be owned by the firm, then the platform enabling it <strong>cannot also be the data vendor</strong>.</p>
+<p>The moment you own the data, you have an incentive to privilege your own feeds and content. That breaks the neutrality that makes the orchestration layer trustworthy. It's the same reason you don't want your operating system to also be the only application developer. <strong>The OS works because it's agnostic to what runs on it.</strong></p>
+<p>A financial workspace needs that same structural neutrality. Internal data, vendor data, proprietary models, open-source tools - they all need to be first-class citizens. The platform's job is to orchestrate, not compete.</p>
+<p>The company that wins this layer wins by being the best orchestrator. Not the best data vendor, not the best AI model - the best at bringing everything together in a way that's fast, familiar, and built around how each firm actually works.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="on-premise-is-the-consequence">On-premise is the consequence<a href="https://didierlopes.com/blog/the-context-wars-in-financial-services#on-premise-is-the-consequence" class="hash-link" aria-label="Direct link to On-premise is the consequence" title="Direct link to On-premise is the consequence">​</a></h2>
+<p>This is the part that ties it all together - and it's where we're putting our money where our mouth is.</p>
+<p>If you believe firms should own their context, then you have to go all the way. That means the platform runs on the firm's infrastructure, where the data never leaves their walls.</p>
+<p>This is the architectural consequence of everything above. If the context layer is the most valuable part of the stack, and it's built from the firm's proprietary data, research, and workflows, then it can't live on someone else's servers. Full stop.</p>
+<p>For firms that want the same principle with less infrastructure overhead, we built OpenBB as a <a href="https://openbb.co/blog/openbb-launches-openbb-workspace-as-a-snowflake-native-app-on-snowflake-marketplace" target="_blank" rel="noopener noreferrer">Snowflake Native App</a>. It runs on your Snowflake instance - your data stays in your environment, you control the compute, and you're up and running without a six-month deployment. Same ownership, easier on-ramp.</p>
+<p>Either way, the firm owns the context. We provide the workspace - the finance-native building blocks, the open ecosystem for data providers and widget builders, the agentic layer that both humans and AI can operate on. But the intelligence, the data, the workflows? That stays with you.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="context-compounds">Context compounds<a href="https://didierlopes.com/blog/the-context-wars-in-financial-services#context-compounds" class="hash-link" aria-label="Direct link to Context compounds" title="Direct link to Context compounds">​</a></h2>
+<p>Another beautiful thing with context is that it isn't static. Every workflow executed, every analysis run, every agent interaction generates more context. What your analysts researched, how they structured their analysis, what patterns the agents flagged, what decisions were made and why - all of that feeds back into the system.</p>
+<p>If that compounding happens on your infrastructure, your firm gets smarter over time. Your agents get better because they're learning from your firm's accumulated intelligence. That's a real defensible edge.</p>
+<p>If that compounding happens on a vendor's infrastructure, the vendor captures that value. They get smarter. Their product gets better. And your proprietary workflows become training data for a system that serves everyone else.</p>
+<p>The open ecosystem isn't a feature. It's the architecture. And paradoxically, it's the moat - because the platform that lets everyone build on it will always have more integrations and capabilities than the one that tries to do it all alone.</p>
+<p>Openness compounds.</p>
+<p>In a world where context rules everything, the platform with the most context wins. But the context has to belong to the firm, not the platform.</p>
+<p>The firms that understand this will build on infrastructure that gives them that ownership.</p><div style="display:flex;justify-content:center;margin-top:3rem;margin-bottom:1rem"><a href="https://substack.com/@didierrlopes" target="_blank" rel="noopener noreferrer" class="mission-button" style="text-decoration:none;white-space:nowrap;padding:12px 24px;font-size:14px">Subscribe to my newsletter<span style="margin-left:6px">»</span></a></div>]]></content:encoded>
+            <category>ai</category>
+            <category>finance</category>
+            <category>openbb</category>
+            <category>enterprise</category>
+        </item>
         <item>
             <title><![CDATA[Learn how to let an agent build your dream app whilst you sleep]]></title>
             <link>https://didierlopes.com/blog/learn-how-to-let-an-agent-build-your-dream-app-whilst-you-sleep</link>

@@ -155,3 +155,8 @@
 - [2026-01-27-how-i-turned-days-of-developer-training-into-a-skill](https://didierlopes.com/blog/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill)
 - [2026-02-03-how-you-can-build-and-share-a-claude-code-skill](https://didierlopes.com/blog/2026-02-03-how-you-can-build-and-share-a-claude-code-skill)
 - [2026-02-09-learn-how-to-let-an-agent-build-your-dream-app-whilst-you-sleep](https://didierlopes.com/blog/2026-02-09-learn-how-to-let-an-agent-build-your-dream-app-whilst-you-sleep)
+- [2026-02-13-the-context-wars-in-financial-services](https://didierlopes.com/blog/2026-02-13-the-context-wars-in-financial-services)
+- [2026-02-20-what-if-you-could-create-any-report](https://didierlopes.com/blog/2026-02-20-what-if-you-could-create-any-report)
+- [2026-02-24-no-financial-terminal-will-survive](https://didierlopes.com/blog/2026-02-24-no-financial-terminal-will-survive)
+- [2026-03-03-no-room-to-hide](https://didierlopes.com/blog/2026-03-03-no-room-to-hide)
+- [2026-03-06-the-era-of-on-demand-software](https://didierlopes.com/blog/2026-03-06-the-era-of-on-demand-software)

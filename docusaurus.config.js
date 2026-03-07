@@ -61,7 +61,7 @@ const config = {
           feedOptions: {
             type: 'all',
             limit: 2000,
-            copyright: `Copyright © ${new Date().getFullYear()} Didier Lopes.`,
+            copyright: `Copyright © ${new Date().getFullYear()} Bianca Buzea.`,
             // createFeedItems: async (params) => {
             //   const { blogPosts, defaultCreateFeedItems, ...rest } = params;
             //   return defaultCreateFeedItems({
@@ -104,12 +104,12 @@ const config = {
             to: '/books/to-read',
           },
              {
-            position: 'right',
+            position: 'left',
             label: 'Events',
             to: '/events',
           },
           {
-            position: 'left',
+            position: 'right',
             label: 'Media',
             to: '/media/on-stage',
           },

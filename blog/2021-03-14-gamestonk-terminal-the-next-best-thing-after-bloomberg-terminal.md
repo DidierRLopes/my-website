@@ -1,15 +1,13 @@
 ---
-slug: gamestonk-terminal-the-next-best-thing-after-bloomberg-terminal
-title: Gamestonk Terminal - The next best thing after Bloomberg Terminal
-date: 2021-03-14
+slug: learning-about-property-investment
+title: Learning About Property Investment 
+date: 2026-01-17
 image: /blog/2021-03-14-gamestonk-terminal-the-next-best-thing-after-bloomberg-terminal.png
 tags:
-- gamestonk-terminal
 - finance
-- stock-market
-- programming
-- open-source
-description: In this blogpost, I introduce Gamestonk Terminal, an open-source project that aims to be a comprehensive tool for financial analysis and stock market research. It includes functionalities for discovering stocks, market sentiment analysis, fundamental and technical analysis, due diligence, prediction techniques, and more.
+- property investment
+
+description: In this blog post, I share some of my learnings on property investment, and how it can be very different from country to country.
 ---
 
 
@@ -29,38 +27,66 @@ The open source code is available [here](https://github.com/DidierRLopes/Gamesto
 
 <div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
 
-If you like stocks and are careful with the way you spend your money, (me saying it seems counter-intuitive given that I bought GME at the peak, I know) you know how much time goes into buying shares of a stock.
 
-You need to: Find stocks that are somehow undervalued; Research on the company, and its competitors; Check that the financials are healthy; Look into different technical indicators; Investigate SEC fillings and Insider activity; Look up for next earnings date and analysts estimates; Estimate market’s sentiment through Reddit, Twitter, Stocktwits; Read news;. … the list goes on.
+I come from a country where 94.3% of people own their homes. Homeownership there is the norm.
+I now live in Germany, where the ownership rate is much lower—around 46–47%, and if you zoom in on Berlin, it drops dramatically to 15–20%. Renting isn’t a transition phase; it’s a long-term reality for many people.
 
-It’s tedious and I don’t have 24k for a Bloomberg terminal. Which led me to the idea during xmas break to spend the time creating my own terminal. I introduce you to “Gamestonk Terminal” (probably should’ve sent 1 tweet everyday to Elon Musk for copyrights permission eheh).
+Seeing this difference made me want to better understand property investment in Germany, especially how it works in practice and how different it is from what I was used to before.
 
-As someone mentioned, this is meant to be like a swiss army knife for finance.
+Yesterday, I had a good opportunity to do that by attending a property investment workshop by Financemate in Berlin. The workshop focused on understanding the local rules and working through concrete examples.
 
-It contains the following functionalities:
+## Learning the Local Rules Matters
 
-- **Discover Stocks**: Some features are: Top gainers; Sectors performance; upcoming earnings releases; top high shorted interest stocks; top stocks with low float; top orders on fidelity; and some SPAC websites with news/calendars.
+One of the main points emphasized was how important it is to understand local regulations before making any assumptions about property investment.
 
-- **Market Sentiment**: Main features are: Scrolling through Reddit main posts, and most tickers mentions; Extracting trending symbols on stocktwits, or even stocktwit sentiment based on bull/bear flags; Twitter in-depth sentiment prediction using AI; Google mentions over time.
+For example:
 
-- **Research Web pages**: List of good pages to do research on a stock, e.g. macroaxis, zacks, macrotrends, ..
+- In Germany, the government offers subsidies for historical buildings
 
-- **Fundamental Analysis**: Read financials from a company from Market Watch, Yahoo Finance, Alpha Vantage, and Financial Modeling Prep API. Since I only rely on free data, I added the information from all of these, so that the user can get it from the source it trusts the most. Also exports management team behind stock, along with their pages on Google, to speed up research process.
+- Interest paid on a loan used to purchase an apartment can be tax-deductible when the property is used for business purposes
 
-- **Technical Analysis**: The usual technical indicators: sma, rsi, macd, adx, bbands, and more.
+These are not universal rules and can vary significantly from country to country.
 
-- **Due Diligence**: It has several features that I found to be really useful. Some of them are: Latest news of the company; Analyst prices and ratings; Price target from several analysts plot over time vs stock price; Insider activity, and these timestamps marked on the stock price historical data; Latest SEC fillings; Short interest over time; A check for financial warnings based on Sean Seah book.
+## Renting Out Property Is Treated as a Business
 
-- **Prediction Techniques**: The one I had more fun with. It tries to predict the stock price, from simple models like sma and arima to complex neural network models, like LSTM. The additional capability here is that all of these are easy to configure. Either through command line arguments, or even in form of a configuration file to define your NN. It also allows backtesting.
+Another key point is that buying an apartment to rent it out is considered a business activity in Germany.
 
-- **Reports**: Allows you to run several jobs functionalities and write daily notes on a stock, so that you can assess what you thought about the stock in the past, to perform better decisions.
+Because of this, several deductions apply, including:
+- Interest on the loan
+- Property management costs
+- Running costs
+- Depreciation
 
-- **Comparison Analysis**: Allows to compare different stocks.
+This is different from buying an apartment for personal use, where these deductions generally do not apply.
 
-- **On the ROADMAP**: Cryptocurrencies, Portfolio Analysis, Credit Analysis. Feel free to add the features you’d like and we would happily work on it.
+## Depreciation Rules in Germany
 
-This project will always remain open-source, and the idea is that it can grow substantially over-time so that more and more people start taking advantage of it.
+Depreciation was a large part of the discussion.
 
-Feel free to contribute towards the project.
+Most residential buildings are considered to depreciate at 2% per year, which corresponds to 50 years
 
-Feedback is extremely welcome!
+To stimulate housing construction, buildings constructed between 1 October 2023 and 30 September 2029 can be depreciated at 5% per year.
+
+A few important details:
+
+- Depreciation starts per owner, meaning that if ownership changes, the depreciation period starts again
+- For expats, it’s important to know that if you leave Germany, you may have to pay back the depreciation
+
+## Working Through the Numbers
+
+During the workshop, we went through an example of purchasing a property and calculated the numbers step by step to understand how everything works in practice.
+
+We first did this on paper, and then used the Financemate app (https://financemate.de/
+) to model the same scenario digitally and validate the calculations, as well as explore other options. The app offers a great flexibility in modelling different scenarios.
+
+
+<p align="center">
+    <img width="600" src="/blog/real-estate.png"/>
+</p>
+
+
+## Final Thoughts
+
+The workshop helped me better understand how property investment works in Germany, particularly how tax rules and depreciation affect the overall picture.
+
+For me, the main takeaway was that assumptions based on other countries don’t necessarily apply here, and understanding the local rules is essential before making any decisions.

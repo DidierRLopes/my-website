@@ -9,10 +9,20 @@ const data = [
     daterange: 'May 2024 - Present',
     summary: [
       'designed and executed the end-to-end DevRel strategy, spanning content, documentation, events, hackathons, and developer experience',
-      'built & launched a developer documentation portal from scratch, improving developer experience through AI-powered chatbot support, structured feedback mechanisms, search, and analytics',
+      'built & launched a developer documentation portal from scratch, improving developer experience through AI-powered chatbot support, structured feedback mechanisms, and analytics',
       'produced 50+ technical articles, guides, and tutorials to educate developers and directly support the sales pipeline, contributing to inbound interest and faster technical onboarding',
       'served as the primary technical point of contact for developers and partners, answering technical inquiries and supporting the sales funnel from evaluation to integration',
-      'collaborated with engineering teams to deliver tooling for social account recovery features',
+      
+    ],
+  },
+      {
+    company: 'Web3 DevRel Summit',
+    title: 'Co-organizer',
+    link: 'https://web3devrelsummit.com/',
+    daterange: 'June 2025',
+    summary: [
+      'co-organized along ETHBelgrade the first conference for Web3 DevRel professionals, bringing together 200+ attendees and 25+ speakers from leading web3 projects',
+      'curated agenda, managed speakers and marketing campaign',
     ],
   },
   {

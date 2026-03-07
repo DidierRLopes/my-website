@@ -20,7 +20,7 @@ function OutsideWork({ isDesktop }) {
           className="mt-2 mb-4"
         />
         <p className="text-sm">
-          Here is where I managed to travel so far. I am to travel each year to at least 2 new countries.
+          Here is where I managed to travel so far. I aim to travel each year to at least 2 new countries.
         </p>
       </div>
     </Section>

@@ -1,0 +1,114 @@
+/* src/components/Pokemon/PokemonTCGWanted.module.css */
+
+.container {
+  font-family: var(--ds-font-primary);
+  color: var(--text-primary);
+  margin-bottom: var(--ds-space-6);
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--ds-space-6);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@media (max-width: 996px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cardItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--ds-space-2);
+  border-radius: 14px;
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+  cursor: pointer;
+  will-change: transform;
+}
+
+.cardItem:hover {
+  box-shadow: 8px 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.cardImage {
+  width: 100%;
+  height: 400px;
+  border-radius: 14px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+@media (max-width: 996px) {
+  .cardImage {
+    height: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cardImage {
+    height: 450px;
+  }
+}
+
+.cardName {
+  margin-top: var(--ds-space-2);
+  font-weight: 500;
+  color: var(--ds-blue-light);
+  text-align: center;
+  font-size: var(--ds-font-size-sm);
+}
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.modalContent {
+  position: relative;
+}
+
+.modalImage {
+  display: block;
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+}
+
+.closeButton {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: var(--ds-white);
+  font-size: 30px;
+  cursor: pointer;
+  font-family: var(--ds-font-primary);
+}
+
+.noResults {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: var(--ds-space-6);
+  font-family: var(--ds-font-primary);
+}

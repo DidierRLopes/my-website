@@ -96,7 +96,7 @@ interface Star {
   brightness: number;
 }
 
-type Phase = "start" | "playing" | "gameover";
+type Phase = "start" | "playing" | "paused" | "gameover";
 
 const PARTICLE_COLORS = ["#facc15", "#f97316", "#ef4444", "#a855f7"];
 const SPAWN_INTERVAL = 1500;
@@ -133,6 +133,7 @@ function createInitialState() {
     pokeballImages: {} as Record<string, HTMLImageElement>,
     goLetterG: null as HTMLImageElement | null,
     goLetterO: null as HTMLImageElement | null,
+    snorlaxImage: null as HTMLImageElement | null,
     animId: 0,
     width: 0,
     height: 0,
@@ -148,6 +149,10 @@ function createInitialState() {
     buttonHitbox: null as { x: number; y: number; w: number; h: number } | null,
     chevronLeftHitbox: null as { x: number; y: number; w: number; h: number } | null,
     chevronRightHitbox: null as { x: number; y: number; w: number; h: number } | null,
+    pauseHitbox: null as { x: number; y: number; w: number; h: number } | null,
+    resumeHitbox: null as { x: number; y: number; w: number; h: number } | null,
+    mouseX: 0,
+    mouseY: 0,
   };
 }
 
@@ -187,6 +192,9 @@ export default function AsteroidGame(): JSX.Element {
     const pcImg = new Image();
     pcImg.src = "/img/pokemon_center.png";
     state.pokemonCenterImage = pcImg;
+    const snImg = new Image();
+    snImg.src = "/img/snorlax.png";
+    state.snorlaxImage = snImg;
   }, []);
 
   const startGame = useCallback(() => {
@@ -255,8 +263,28 @@ export default function AsteroidGame(): JSX.Element {
         e.preventDefault();
       }
 
-      if (s.phase !== "playing") {
-        // On start/gameover screens: Up/Down change difficulty, Enter/Space trigger action
+      // Pause/resume toggle
+      if (e.key === "Escape" || e.key === "p" || e.key === "P") {
+        if (s.phase === "playing") {
+          s.phase = "paused";
+          setPhase("paused");
+          return;
+        } else if (s.phase === "paused") {
+          s.phase = "playing";
+          setPhase("playing");
+          return;
+        }
+      }
+
+      if (s.phase === "paused") {
+        if (e.key === "Enter" || e.key === " ") {
+          s.phase = "playing";
+          setPhase("playing");
+        }
+        return;
+      }
+
+      if (s.phase === "start" || s.phase === "gameover") {
         if (e.key === "ArrowUp" || e.key === "ArrowRight") {
           s.difficultyIndex = Math.min(s.difficultyIndex + 1, DIFFICULTIES.length - 1);
         } else if (e.key === "ArrowDown" || e.key === "ArrowLeft") {
@@ -268,8 +296,7 @@ export default function AsteroidGame(): JSX.Element {
             restart();
           }
         }
-      } else {
-        // During playing: Left/Right rotate aim
+      } else if (s.phase === "playing") {
         if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
           s.keysDown.add(e.key);
         }
@@ -283,10 +310,24 @@ export default function AsteroidGame(): JSX.Element {
 
     const onCanvasClick = (e: MouseEvent) => {
       const s = gameState.current;
-      if (s.phase === "playing") return;
       const rect = canvas.getBoundingClientRect();
       const mx = e.clientX - rect.left;
       const my = e.clientY - rect.top;
+      if (s.phase === "playing") {
+        // Only pause button clickable during play
+        if (hitTest(mx, my, s.pauseHitbox)) {
+          s.phase = "paused";
+          setPhase("paused");
+        }
+        return;
+      }
+      if (s.phase === "paused") {
+        if (hitTest(mx, my, s.resumeHitbox)) {
+          s.phase = "playing";
+          setPhase("playing");
+        }
+        return;
+      }
       if (hitTest(mx, my, s.buttonHitbox)) {
         if (s.phase === "start") startGame();
         else if (s.phase === "gameover") restart();
@@ -297,9 +338,23 @@ export default function AsteroidGame(): JSX.Element {
       }
     };
 
+    const onMouseMove = (e: MouseEvent) => {
+      const s = gameState.current;
+      const rect = canvas.getBoundingClientRect();
+      s.mouseX = e.clientX - rect.left;
+      s.mouseY = e.clientY - rect.top;
+      // Update cursor based on hovering pause button
+      if (s.phase === "playing" && hitTest(s.mouseX, s.mouseY, s.pauseHitbox)) {
+        canvas.style.cursor = "pointer";
+      } else if (s.phase === "playing") {
+        canvas.style.cursor = "default";
+      }
+    };
+
     window.addEventListener("keydown", onKeyDown);
     window.addEventListener("keyup", onKeyUp);
     canvas.addEventListener("click", onCanvasClick);
+    canvas.addEventListener("mousemove", onMouseMove);
 
     const spawnPokeball = () => {
       const { width: w, height: h } = state;
@@ -635,7 +690,7 @@ export default function AsteroidGame(): JSX.Element {
         const dist = Math.min(Math.abs(dx), earthR);
         return earthCenterY - Math.sqrt(earthR * earthR - dist * dist);
       };
-      const playerY = groundCenterY;
+      const playerY = groundCenterY - 40;
       const isDark = colorMode === "dark";
       const diff = DIFFICULTIES[state.difficultyIndex];
 
@@ -1171,7 +1226,7 @@ export default function AsteroidGame(): JSX.Element {
       if (sprite && sprite.complete && sprite.naturalWidth > 0) {
         const facingLeft = state.aimAngle < -Math.PI / 2;
         ctx.save();
-        ctx.translate(cx, groundCenterY - SPRITE_SIZE);
+        ctx.translate(cx, groundCenterY - SPRITE_SIZE - 40);
         if (facingLeft) {
           ctx.scale(-1, 1);
         }
@@ -1179,14 +1234,65 @@ export default function AsteroidGame(): JSX.Element {
         ctx.restore();
       }
 
-      // Score display during playing — below Earth curve, centered
-      if (state.phase === "playing") {
+      // Snorlax — chilling on the left side of the Earth curve
+      const snorlaxImg = state.snorlaxImage;
+      if (snorlaxImg && snorlaxImg.complete && snorlaxImg.naturalWidth > 0) {
+        const snSize = 100;
+        const snX = w * 0.05;
+        const snGroundY = getGroundY(snX + snSize / 2);
+        ctx.drawImage(snorlaxImg, snX, snGroundY - snSize * 0.3, snSize, snSize);
+      }
+
+      // Score display + pause button during playing/paused
+      if (state.phase === "playing" || state.phase === "paused") {
         ctx.save();
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         ctx.fillStyle = isDark ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.55)";
         ctx.font = "bold 18px system-ui, sans-serif";
-        ctx.fillText(`Score: ${state.score}`, cx, groundCenterY + 22);
+
+        // Measure score text to position pause icon to its left
+        const scoreText = `Score: ${state.score}`;
+        const scoreW = ctx.measureText(scoreText).width;
+        ctx.fillText(scoreText, cx, groundCenterY + 22);
+
+        // Pause button — rounded rect with two vertical bars
+        const pauseBtnSize = 32;
+        const pauseBtnX = cx - scoreW / 2 - pauseBtnSize - 14;
+        const pauseBtnY = groundCenterY + 22 - pauseBtnSize / 2;
+        const hitboxPad = 4;
+        state.pauseHitbox = {
+          x: pauseBtnX - hitboxPad, y: pauseBtnY - hitboxPad,
+          w: pauseBtnSize + hitboxPad * 2, h: pauseBtnSize + hitboxPad * 2,
+        };
+        const isHovering = state.phase === "playing" && hitTest(state.mouseX, state.mouseY, state.pauseHitbox);
+
+        ctx.save();
+        // Background circle
+        ctx.beginPath();
+        ctx.arc(pauseBtnX + pauseBtnSize / 2, pauseBtnY + pauseBtnSize / 2, pauseBtnSize / 2, 0, Math.PI * 2);
+        ctx.fillStyle = isHovering
+          ? (isDark ? "rgba(168,85,247,0.4)" : "rgba(120,50,200,0.25)")
+          : (isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.08)");
+        ctx.fill();
+        if (isHovering) {
+          ctx.strokeStyle = isDark ? "rgba(168,85,247,0.6)" : "rgba(120,50,200,0.4)";
+          ctx.lineWidth = 1.5;
+          ctx.stroke();
+        }
+
+        // Two bars
+        const barW = 5;
+        const barH = 16;
+        const barGap = 6;
+        const barCx = pauseBtnX + pauseBtnSize / 2;
+        const barCy = pauseBtnY + pauseBtnSize / 2;
+        ctx.fillStyle = isHovering
+          ? (isDark ? "#c084fc" : "#7c3aed")
+          : (isDark ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.5)");
+        ctx.fillRect(barCx - barGap / 2 - barW, barCy - barH / 2, barW, barH);
+        ctx.fillRect(barCx + barGap / 2, barCy - barH / 2, barW, barH);
+        ctx.restore();
 
         // Lives — pokemon center icons
         const pcImg = state.pokemonCenterImage;
@@ -1207,6 +1313,52 @@ export default function AsteroidGame(): JSX.Element {
       state.buttonHitbox = null;
       state.chevronLeftHitbox = null;
       state.chevronRightHitbox = null;
+      state.resumeHitbox = null;
+
+      // Pause overlay
+      if (state.phase === "paused") {
+        ctx.fillStyle = isDark ? "rgba(0,0,0,0.5)" : "rgba(255,255,255,0.5)";
+        ctx.fillRect(0, 0, w, h);
+
+        const pauseFontSize = Math.min(w * 0.1, 64);
+        drawPokemonGoText("PAUSED", cx, h * 0.38, pauseFontSize, isDark);
+
+        // Resume button
+        const btnW = 150;
+        const btnH = 44;
+        const btnX = cx - btnW / 2;
+        const btnY = h * 0.52;
+        const btnR = 22;
+
+        ctx.save();
+        ctx.shadowColor = "rgba(168,85,247,0.5)";
+        ctx.shadowBlur = 16;
+        ctx.shadowOffsetY = 3;
+        const grad = ctx.createLinearGradient(btnX, btnY, btnX + btnW, btnY + btnH);
+        grad.addColorStop(0, "#7c3aed");
+        grad.addColorStop(0.5, "#a855f7");
+        grad.addColorStop(1, "#7c3aed");
+        ctx.beginPath();
+        ctx.roundRect(btnX, btnY, btnW, btnH, btnR);
+        ctx.fillStyle = grad;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+        ctx.shadowOffsetY = 0;
+        ctx.beginPath();
+        ctx.roundRect(btnX, btnY, btnW, btnH, btnR);
+        ctx.strokeStyle = "rgba(255,255,255,0.3)";
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.fillStyle = "#fff";
+        ctx.font = "800 16px system-ui, sans-serif";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("RESUME", cx, btnY + btnH / 2);
+        ctx.restore();
+
+        state.resumeHitbox = { x: btnX, y: btnY, w: btnW, h: btnH };
+      }
+
       if (state.phase === "start" || state.phase === "gameover") {
         // Dim overlay
         ctx.fillStyle = isDark ? "rgba(0,0,0,0.6)" : "rgba(255,255,255,0.6)";
@@ -1281,6 +1433,7 @@ export default function AsteroidGame(): JSX.Element {
       window.removeEventListener("keydown", onKeyDown);
       window.removeEventListener("keyup", onKeyUp);
       canvas.removeEventListener("click", onCanvasClick);
+      canvas.removeEventListener("mousemove", onMouseMove);
     };
   }, [colorMode, phase]);
 

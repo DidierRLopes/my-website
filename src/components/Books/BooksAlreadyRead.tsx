@@ -560,6 +560,11 @@ const data = [
 		title: "When Genius Failed: The Rise and Fall of Long-Term Capital Management",
 		author: "Roger Lowenstein",
 		image: "/books/when-genius-failed-the-rise-and-fall-of-long-term-capital-management.jpg",
+	},
+	{
+		title: "Inference Engineering",
+		author: "Philip Kiely",
+		image: "/books/inference-engineering.png"
 	}
 ];
 

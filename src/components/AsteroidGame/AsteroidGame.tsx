@@ -45,6 +45,7 @@ interface Pokeball {
   frameAge: number;
   baseSpeed: number;
   drawSize: number;
+  frozen: boolean;
 }
 
 interface Projectile {
@@ -65,6 +66,15 @@ interface Beam {
   maxWidth: number;
   firstHit: { x: number; y: number } | null;
   textSizeRand: number; // 0..1 random factor for text size variation
+}
+
+type MilestoneEffectType = "extralife" | "icebeam" | "psystrike";
+
+interface MilestoneEffect {
+  type: MilestoneEffectType;
+  startTime: number;
+  duration: number;
+  bubbleText: string;
 }
 
 interface Particle {
@@ -134,6 +144,7 @@ function createInitialState() {
     goLetterG: null as HTMLImageElement | null,
     goLetterO: null as HTMLImageElement | null,
     snorlaxImage: null as HTMLImageElement | null,
+    tangrowthImage: null as HTMLImageElement | null,
     animId: 0,
     width: 0,
     height: 0,
@@ -153,6 +164,8 @@ function createInitialState() {
     resumeHitbox: null as { x: number; y: number; w: number; h: number } | null,
     mouseX: 0,
     mouseY: 0,
+    milestoneEffect: null as MilestoneEffect | null,
+    lastMilestoneScore: 0,
   };
 }
 
@@ -195,6 +208,9 @@ export default function AsteroidGame(): JSX.Element {
     const snImg = new Image();
     snImg.src = "/img/snorlax.png";
     state.snorlaxImage = snImg;
+    const tgImg = new Image();
+    tgImg.src = "/img/tangrowth.png";
+    state.tangrowthImage = tgImg;
   }, []);
 
   const startGame = useCallback(() => {
@@ -210,6 +226,8 @@ export default function AsteroidGame(): JSX.Element {
     state.aimAngle = -Math.PI / 2;
     state.lastShotTime = 0;
     state.lastSpawnTime = 0;
+    state.milestoneEffect = null;
+    state.lastMilestoneScore = 0;
     setPhase("playing");
     setScore(0);
   }, []);
@@ -227,6 +245,8 @@ export default function AsteroidGame(): JSX.Element {
     state.aimAngle = -Math.PI / 2;
     state.lastShotTime = 0;
     state.lastSpawnTime = 0;
+    state.milestoneEffect = null;
+    state.lastMilestoneScore = 0;
     setPhase("start");
     setScore(0);
   }, []);
@@ -394,7 +414,48 @@ export default function AsteroidGame(): JSX.Element {
         frameAge: 0,
         baseSpeed: speed,
         drawSize,
+        frozen: false,
       };
+    };
+
+    const RECOVER_QUOTES = [
+      "{pokemon} used Recover! Its wounds are healing!",
+      "{pokemon}'s Recover restored its energy!",
+      "{pokemon} used Recover! It's looking healthy again!",
+      "A brilliant Recover from {pokemon}! Back in the fight!",
+      "{pokemon} concentrated and used Recover!",
+    ];
+
+    const checkMilestone = (time: number, dark: boolean) => {
+      if (state.score > 0 && state.score % 50 === 0 && state.score !== state.lastMilestoneScore) {
+        state.lastMilestoneScore = state.score;
+        const pokemon = dark ? "Mewtwo" : "Mew";
+        let type: MilestoneEffectType;
+        let bubbleText: string;
+
+        if (state.lives < 2) {
+          type = "extralife";
+          state.lives++;
+          bubbleText = RECOVER_QUOTES[Math.floor(Math.random() * RECOVER_QUOTES.length)].replace("{pokemon}", pokemon);
+        } else if (state.pokeballs.length < 5) {
+          type = "icebeam";
+          for (const pb of state.pokeballs) {
+            if (!pb.frozen) {
+              pb.frozen = true;
+              pb.vx *= 0.25;
+              pb.vy *= 0.25;
+              pb.rotationSpeed *= 0.2;
+            }
+          }
+          bubbleText = `Wow, ${pokemon} just used Ice Beam!!`;
+        } else {
+          type = "psystrike";
+          // Don't clear pokeballs instantly — the expanding wave will destroy them
+          bubbleText = `Wow, ${pokemon}'s Psystrike is impressive!`;
+        }
+
+        state.milestoneEffect = { type, startTime: time, duration: 5000, bubbleText };
+      }
     };
 
     const drawPokemonGoText = (
@@ -712,10 +773,10 @@ export default function AsteroidGame(): JSX.Element {
           state.lastSpawnTime = time;
         }
 
-        // Fire
+        // Fire — skip hyperbeam while milestone effect is active
         if (time - state.lastShotTime > FIRE_INTERVAL) {
           const isHyperbeam = state.score > 0 && state.score % 10 === 0;
-          if (isHyperbeam && !state.beam) {
+          if (isHyperbeam && !state.beam && !state.milestoneEffect) {
             state.beam = {
               angle: state.aimAngle,
               startTime: time,
@@ -819,6 +880,7 @@ export default function AsteroidGame(): JSX.Element {
                 hit = true;
                 hitSet.add(p);
                 state.score += 1;
+                checkMilestone(time, isDark);
                 const count = 10 + Math.floor(Math.random() * 6);
                 for (let i = 0; i < count; i++) {
                   const angle = Math.random() * Math.PI * 2;
@@ -872,6 +934,7 @@ export default function AsteroidGame(): JSX.Element {
                     b.firstHit = { x: pb.x, y: pb.y };
                   }
                   state.score += 1;
+                  checkMilestone(time, isDark);
                   const count = 18;
                   for (let i = 0; i < count; i++) {
                     const angle = Math.random() * Math.PI * 2;
@@ -905,6 +968,11 @@ export default function AsteroidGame(): JSX.Element {
             }
           }
           state.pokeballs = kept;
+
+          // Expire milestone effect
+          if (state.milestoneEffect && time - state.milestoneEffect.startTime > state.milestoneEffect.duration) {
+            state.milestoneEffect = null;
+          }
         }
       }
 
@@ -983,12 +1051,250 @@ export default function AsteroidGame(): JSX.Element {
           ctx.translate(pb.x, pb.y);
           ctx.rotate(pb.rotation);
           ctx.drawImage(img, -pb.drawSize / 2, -pb.drawSize / 2, pb.drawSize, pb.drawSize);
+          // Frosty overlay on frozen pokeballs — persists until ball is destroyed
+          if (pb.frozen) {
+            // Blue-white frost tint over the ball
+            ctx.globalAlpha = 0.4;
+            ctx.fillStyle = "rgba(180, 225, 255, 1)";
+            ctx.beginPath();
+            ctx.arc(0, 0, pb.drawSize / 2, 0, Math.PI * 2);
+            ctx.fill();
+            // White frost highlights (top-left light source)
+            ctx.globalAlpha = 0.3;
+            const frostGrad = ctx.createRadialGradient(
+              -pb.drawSize * 0.15, -pb.drawSize * 0.15, 0,
+              0, 0, pb.drawSize / 2
+            );
+            frostGrad.addColorStop(0, "rgba(255, 255, 255, 0.9)");
+            frostGrad.addColorStop(0.5, "rgba(220, 240, 255, 0.3)");
+            frostGrad.addColorStop(1, "rgba(180, 220, 255, 0)");
+            ctx.fillStyle = frostGrad;
+            ctx.beginPath();
+            ctx.arc(0, 0, pb.drawSize / 2, 0, Math.PI * 2);
+            ctx.fill();
+          }
           ctx.restore();
         } else {
           ctx.beginPath();
           ctx.arc(pb.x, pb.y, pb.radius, 0, Math.PI * 2);
           ctx.fillStyle = pb.type.color;
           ctx.fill();
+        }
+      }
+
+      // Ice beam milestone visuals — frozen screen effect
+      if (state.milestoneEffect?.type === "icebeam") {
+        const me = state.milestoneEffect;
+        const elapsed = time - me.startTime;
+        const fadeIn = Math.min(1, elapsed / 400);
+        const fadeOut = elapsed > me.duration - 800 ? (me.duration - elapsed) / 800 : 1;
+        const intensity = fadeIn * Math.max(0, fadeOut);
+
+        // Ice beam rays shooting from the pokemon in all directions
+        const rayDuration = 1200;
+        if (elapsed < rayDuration) {
+          const rayProgress = elapsed / rayDuration;
+          const rayAlpha = rayProgress < 0.7 ? 1 : 1 - (rayProgress - 0.7) / 0.3;
+          const rayLength = Math.max(w, h) * 1.2 * Math.min(rayProgress / 0.3, 1);
+          const spriteOriginX = cx;
+          const spriteOriginY = groundCenterY - SPRITE_SIZE / 2;
+          const numRays = 12;
+
+          ctx.save();
+          ctx.globalAlpha = rayAlpha * 0.7;
+          for (let i = 0; i < numRays; i++) {
+            const rayAngle = (i / numRays) * Math.PI * 2 + Math.sin(i * 1.7) * 0.15;
+            const endX = spriteOriginX + Math.cos(rayAngle) * rayLength;
+            const endY = spriteOriginY + Math.sin(rayAngle) * rayLength;
+
+            // Each ray is a tapered beam — narrow at origin, slightly wider at end
+            const perpAngle = rayAngle + Math.PI / 2;
+            const originHalf = 3;
+            const endHalf = 6 + (i % 3) * 2;
+            const ox1 = spriteOriginX + Math.cos(perpAngle) * originHalf;
+            const oy1 = spriteOriginY + Math.sin(perpAngle) * originHalf;
+            const ox2 = spriteOriginX - Math.cos(perpAngle) * originHalf;
+            const oy2 = spriteOriginY - Math.sin(perpAngle) * originHalf;
+            const ex1 = endX + Math.cos(perpAngle) * endHalf;
+            const ey1 = endY + Math.sin(perpAngle) * endHalf;
+            const ex2 = endX - Math.cos(perpAngle) * endHalf;
+            const ey2 = endY - Math.sin(perpAngle) * endHalf;
+
+            const rayGrad = ctx.createLinearGradient(spriteOriginX, spriteOriginY, endX, endY);
+            rayGrad.addColorStop(0, "rgba(140, 220, 255, 0.9)");
+            rayGrad.addColorStop(0.3, "rgba(180, 240, 255, 0.6)");
+            rayGrad.addColorStop(0.7, "rgba(200, 245, 255, 0.25)");
+            rayGrad.addColorStop(1, "rgba(220, 250, 255, 0)");
+
+            ctx.beginPath();
+            ctx.moveTo(ox1, oy1);
+            ctx.lineTo(ex1, ey1);
+            ctx.lineTo(ex2, ey2);
+            ctx.lineTo(ox2, oy2);
+            ctx.closePath();
+            ctx.fillStyle = rayGrad;
+            ctx.fill();
+          }
+
+          // Central glow burst at origin
+          const burstGrad = ctx.createRadialGradient(spriteOriginX, spriteOriginY, 0, spriteOriginX, spriteOriginY, 60);
+          burstGrad.addColorStop(0, `rgba(220, 245, 255, ${rayAlpha * 0.8})`);
+          burstGrad.addColorStop(0.5, `rgba(160, 220, 255, ${rayAlpha * 0.3})`);
+          burstGrad.addColorStop(1, "rgba(160, 220, 255, 0)");
+          ctx.fillStyle = burstGrad;
+          ctx.beginPath();
+          ctx.arc(spriteOriginX, spriteOriginY, 60, 0, Math.PI * 2);
+          ctx.fill();
+
+          ctx.restore();
+        }
+
+        // Bright screen flash in first 300ms
+        if (elapsed < 300) {
+          const flashAlpha = 0.6 * (1 - elapsed / 300);
+          ctx.save();
+          ctx.fillStyle = `rgba(200, 240, 255, ${flashAlpha})`;
+          ctx.fillRect(0, 0, w, h);
+          ctx.restore();
+        }
+
+        // Frozen blue-white overlay — makes the whole screen look icy
+        ctx.save();
+        ctx.fillStyle = `rgba(180, 220, 245, ${0.12 * intensity})`;
+        ctx.fillRect(0, 0, w, h);
+        ctx.restore();
+
+        // Frost vignette — heavy icy edges
+        if (intensity > 0) {
+          ctx.save();
+          const vigGrad = ctx.createRadialGradient(cx, h / 2, Math.min(w, h) * 0.15, cx, h / 2, Math.max(w, h) * 0.6);
+          vigGrad.addColorStop(0, "rgba(180, 230, 255, 0)");
+          vigGrad.addColorStop(0.6, `rgba(150, 210, 245, ${0.08 * intensity})`);
+          vigGrad.addColorStop(1, `rgba(120, 180, 230, ${0.35 * intensity})`);
+          ctx.fillStyle = vigGrad;
+          ctx.fillRect(0, 0, w, h);
+          ctx.restore();
+        }
+
+        // Frost border along edges — thick icy rim
+        if (intensity > 0) {
+          ctx.save();
+          ctx.globalAlpha = intensity * 0.5;
+          const borderSize = 40;
+          // Top
+          const topGrad = ctx.createLinearGradient(0, 0, 0, borderSize);
+          topGrad.addColorStop(0, "rgba(200, 235, 255, 0.7)");
+          topGrad.addColorStop(1, "rgba(200, 235, 255, 0)");
+          ctx.fillStyle = topGrad;
+          ctx.fillRect(0, 0, w, borderSize);
+          // Bottom
+          const botGrad = ctx.createLinearGradient(0, h, 0, h - borderSize);
+          botGrad.addColorStop(0, "rgba(200, 235, 255, 0.7)");
+          botGrad.addColorStop(1, "rgba(200, 235, 255, 0)");
+          ctx.fillStyle = botGrad;
+          ctx.fillRect(0, h - borderSize, w, borderSize);
+          // Left
+          const leftGrad = ctx.createLinearGradient(0, 0, borderSize, 0);
+          leftGrad.addColorStop(0, "rgba(200, 235, 255, 0.7)");
+          leftGrad.addColorStop(1, "rgba(200, 235, 255, 0)");
+          ctx.fillStyle = leftGrad;
+          ctx.fillRect(0, 0, borderSize, h);
+          // Right
+          const rightGrad = ctx.createLinearGradient(w, 0, w - borderSize, 0);
+          rightGrad.addColorStop(0, "rgba(200, 235, 255, 0.7)");
+          rightGrad.addColorStop(1, "rgba(200, 235, 255, 0)");
+          ctx.fillStyle = rightGrad;
+          ctx.fillRect(w - borderSize, 0, borderSize, h);
+          ctx.restore();
+        }
+
+        // Ice effects around frozen pokeballs
+        for (const pb of state.pokeballs) {
+          if (pb.frozen) {
+            ctx.save();
+            ctx.globalAlpha = intensity;
+
+            // Outer icy glow — pulsing
+            const pulseScale = 1 + Math.sin(time * 0.003) * 0.1;
+            const glowR = pb.drawSize * 0.9 * pulseScale;
+            const glowGrad = ctx.createRadialGradient(pb.x, pb.y, pb.drawSize * 0.25, pb.x, pb.y, glowR);
+            glowGrad.addColorStop(0, "rgba(140, 210, 255, 0.4)");
+            glowGrad.addColorStop(0.6, "rgba(160, 220, 255, 0.15)");
+            glowGrad.addColorStop(1, "rgba(160, 220, 255, 0)");
+            ctx.fillStyle = glowGrad;
+            ctx.beginPath();
+            ctx.arc(pb.x, pb.y, glowR, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Ice shards — pointed irregular crystals sticking out from the ball
+            for (let i = 0; i < 10; i++) {
+              const baseAngle = (i / 10) * Math.PI * 2;
+              // Each shard has a slightly wobbling angle
+              const angle = baseAngle + Math.sin(time * 0.002 + i * 2.7) * 0.08;
+              const innerR = pb.drawSize * 0.38;
+              const outerR = pb.drawSize * (0.55 + (i % 3) * 0.12) + Math.sin(time * 0.003 + i) * 2;
+              const halfWidth = (2 + (i % 2) * 1.5) * (Math.PI / 180) * innerR;
+
+              // Shard is a narrow triangle from ball surface outward
+              const ix = pb.x + Math.cos(angle) * innerR;
+              const iy = pb.y + Math.sin(angle) * innerR;
+              const ox = pb.x + Math.cos(angle) * outerR;
+              const oy = pb.y + Math.sin(angle) * outerR;
+              const perpAngle = angle + Math.PI / 2;
+              const lwx = Math.cos(perpAngle) * halfWidth;
+              const lwy = Math.sin(perpAngle) * halfWidth;
+
+              ctx.beginPath();
+              ctx.moveTo(ix - lwx, iy - lwy);
+              ctx.lineTo(ox, oy);
+              ctx.lineTo(ix + lwx, iy + lwy);
+              ctx.closePath();
+
+              // Gradient from translucent blue base to white tip
+              const shardGrad = ctx.createLinearGradient(ix, iy, ox, oy);
+              shardGrad.addColorStop(0, "rgba(160, 215, 250, 0.7)");
+              shardGrad.addColorStop(0.6, "rgba(210, 240, 255, 0.85)");
+              shardGrad.addColorStop(1, "rgba(255, 255, 255, 0.95)");
+              ctx.fillStyle = shardGrad;
+              ctx.fill();
+              ctx.strokeStyle = "rgba(120, 190, 240, 0.5)";
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+
+            // Small sparkle dots at shard tips for extra glitter
+            for (let i = 0; i < 5; i++) {
+              const angle = (i / 5) * Math.PI * 2 + time * 0.001;
+              const dist = pb.drawSize * (0.6 + Math.sin(time * 0.005 + i * 3) * 0.1);
+              const sx = pb.x + Math.cos(angle) * dist;
+              const sy = pb.y + Math.sin(angle) * dist;
+              const dotSize = 1.5 + Math.sin(time * 0.01 + i * 2) * 1;
+              ctx.beginPath();
+              ctx.arc(sx, sy, dotSize, 0, Math.PI * 2);
+              ctx.fillStyle = "rgba(255, 255, 255, 0.9)";
+              ctx.fill();
+            }
+
+            ctx.restore();
+          }
+        }
+
+        // Floating ice particles across the screen
+        if (intensity > 0) {
+          ctx.save();
+          ctx.globalAlpha = intensity * 0.6;
+          for (let i = 0; i < 20; i++) {
+            // Deterministic pseudo-random positions that drift slowly
+            const seed = i * 137.5;
+            const px = ((seed + time * 0.01 * (0.3 + (i % 5) * 0.15)) % w);
+            const py = ((seed * 2.3 + time * 0.008 * (0.2 + (i % 3) * 0.1)) % (h * 0.8));
+            const pSize = 1.5 + (i % 4) * 0.8;
+            ctx.beginPath();
+            ctx.arc(px, py, pSize, 0, Math.PI * 2);
+            ctx.fillStyle = "rgba(220, 240, 255, 0.7)";
+            ctx.fill();
+          }
+          ctx.restore();
         }
       }
 
@@ -1234,6 +1540,94 @@ export default function AsteroidGame(): JSX.Element {
         ctx.restore();
       }
 
+      // Psystrike milestone visuals — expanding wave destroys balls on contact
+      if (state.milestoneEffect?.type === "psystrike") {
+        const me = state.milestoneEffect;
+        const elapsed = time - me.startTime;
+        const expandDuration = 1200;
+        const expandProgress = Math.min(elapsed / expandDuration, 1);
+        const fadeAlpha = elapsed > me.duration - 500 ? (me.duration - elapsed) / 500 : Math.min(elapsed / 200, 1);
+        const maxRadius = Math.max(w, h) * 1.5;
+        const currentRadius = maxRadius * expandProgress;
+        const spriteOriginX = cx;
+        const spriteOriginY = groundCenterY - SPRITE_SIZE / 2;
+
+        // Destroy pokeballs that the wave has reached
+        if (expandProgress < 1) {
+          const surviving: Pokeball[] = [];
+          for (const pb of state.pokeballs) {
+            const dist = Math.hypot(pb.x - spriteOriginX, pb.y - spriteOriginY);
+            if (dist < currentRadius) {
+              // Explode this ball
+              state.score += 1;
+              const count = 14;
+              for (let i = 0; i < count; i++) {
+                const angle = Math.random() * Math.PI * 2;
+                const spd = 1.5 + Math.random() * 4;
+                state.particles.push({
+                  x: pb.x, y: pb.y,
+                  vx: Math.cos(angle) * spd,
+                  vy: Math.sin(angle) * spd,
+                  life: 1,
+                  decay: 0.012 + Math.random() * 0.02,
+                  color: ["#a855f7", "#7b2ff7", "#c084fc", "#e9d5ff", "#fff"][Math.floor(Math.random() * 5)],
+                });
+              }
+            } else {
+              surviving.push(pb);
+            }
+          }
+          state.pokeballs = surviving;
+        }
+
+        // Render the expanding purple shockwave ring
+        if (fadeAlpha > 0) {
+          ctx.save();
+          // Inner filled gradient
+          ctx.globalAlpha = fadeAlpha * 0.35;
+          const psyGrad = ctx.createRadialGradient(spriteOriginX, spriteOriginY, 0, spriteOriginX, spriteOriginY, currentRadius);
+          psyGrad.addColorStop(0, "rgba(123, 47, 247, 0.6)");
+          psyGrad.addColorStop(0.5, "rgba(168, 85, 247, 0.2)");
+          psyGrad.addColorStop(0.85, "rgba(200, 130, 255, 0.05)");
+          psyGrad.addColorStop(1, "rgba(200, 130, 255, 0)");
+          ctx.fillStyle = psyGrad;
+          ctx.fillRect(0, 0, w, h);
+
+          // Bright ring at the wavefront
+          if (expandProgress < 1) {
+            ctx.globalAlpha = fadeAlpha * 0.8;
+            const ringWidth = 30 + expandProgress * 20;
+            const ringGrad = ctx.createRadialGradient(
+              spriteOriginX, spriteOriginY, Math.max(0, currentRadius - ringWidth),
+              spriteOriginX, spriteOriginY, currentRadius
+            );
+            ringGrad.addColorStop(0, "rgba(200, 130, 255, 0)");
+            ringGrad.addColorStop(0.3, "rgba(168, 85, 247, 0.6)");
+            ringGrad.addColorStop(0.7, "rgba(123, 47, 247, 0.8)");
+            ringGrad.addColorStop(1, "rgba(200, 130, 255, 0)");
+            ctx.fillStyle = ringGrad;
+            ctx.beginPath();
+            ctx.arc(spriteOriginX, spriteOriginY, currentRadius, 0, Math.PI * 2);
+            ctx.fill();
+          }
+
+          // Central burst glow
+          if (elapsed < 600) {
+            const burstAlpha = (1 - elapsed / 600) * fadeAlpha;
+            ctx.globalAlpha = burstAlpha;
+            const burstGrad = ctx.createRadialGradient(spriteOriginX, spriteOriginY, 0, spriteOriginX, spriteOriginY, 80);
+            burstGrad.addColorStop(0, "rgba(220, 180, 255, 0.9)");
+            burstGrad.addColorStop(0.5, "rgba(168, 85, 247, 0.4)");
+            burstGrad.addColorStop(1, "rgba(168, 85, 247, 0)");
+            ctx.fillStyle = burstGrad;
+            ctx.beginPath();
+            ctx.arc(spriteOriginX, spriteOriginY, 80, 0, Math.PI * 2);
+            ctx.fill();
+          }
+          ctx.restore();
+        }
+      }
+
       // Snorlax — chilling on the left side of the Earth curve
       const snorlaxImg = state.snorlaxImage;
       if (snorlaxImg && snorlaxImg.complete && snorlaxImg.naturalWidth > 0) {
@@ -1241,6 +1635,167 @@ export default function AsteroidGame(): JSX.Element {
         const snX = w * 0.05;
         const snGroundY = getGroundY(snX + snSize / 2);
         ctx.drawImage(snorlaxImg, snX, snGroundY - snSize * 0.3, snSize, snSize);
+      }
+
+      // Tangrowth — only appears during milestone effects, rises from bottom
+      const tangrowthImg = state.tangrowthImage;
+      if (tangrowthImg && tangrowthImg.complete && tangrowthImg.naturalWidth > 0 && state.milestoneEffect) {
+        const me = state.milestoneEffect;
+        const elapsed = time - me.startTime;
+        const tgSize = 130;
+        const tgX = w * 0.95 - tgSize;
+        const tgGroundY = getGroundY(tgX + tgSize / 2);
+        const tgRestY = tgGroundY - tgSize * 0.3; // final resting position
+
+        // Animation phases:
+        // 0–600ms: rise from bottom
+        // 600ms–(duration-1200ms): fully visible, bubble shows
+        // (duration-1200ms)–(duration-400ms): bubble fades
+        // (duration-400ms)–duration: sink back down
+        const riseTime = 600;
+        const sinkStart = me.duration - 400;
+        const sinkDuration = 400;
+        const hiddenY = h + 20; // off-screen below
+
+        let tgDrawY: number;
+        if (elapsed < riseTime) {
+          // Ease out (decelerate) rise
+          const t = elapsed / riseTime;
+          const eased = 1 - (1 - t) * (1 - t);
+          tgDrawY = hiddenY + (tgRestY - hiddenY) * eased;
+        } else if (elapsed > sinkStart) {
+          // Ease in (accelerate) sink
+          const t = (elapsed - sinkStart) / sinkDuration;
+          const eased = t * t;
+          tgDrawY = tgRestY + (hiddenY - tgRestY) * Math.min(eased, 1);
+        } else {
+          tgDrawY = tgRestY;
+        }
+
+        ctx.save();
+        ctx.drawImage(tangrowthImg, tgX, tgDrawY, tgSize, tgSize);
+        ctx.restore();
+
+        // Speech bubble — shows after Tangrowth has risen, fades before sink
+        const bubbleShowStart = riseTime + 100;
+        const bubbleFadeStart = me.duration - 1400;
+        const bubbleFadeDuration = 600;
+
+        if (elapsed > bubbleShowStart && elapsed < bubbleFadeStart + bubbleFadeDuration) {
+          let bubbleAlpha = 1;
+          // Fade in
+          if (elapsed < bubbleShowStart + 400) {
+            bubbleAlpha = (elapsed - bubbleShowStart) / 400;
+          }
+          // Fade out
+          if (elapsed > bubbleFadeStart) {
+            bubbleAlpha = Math.min(bubbleAlpha, 1 - (elapsed - bubbleFadeStart) / bubbleFadeDuration);
+          }
+          bubbleAlpha = Math.max(0, Math.min(1, bubbleAlpha));
+
+          if (bubbleAlpha > 0) {
+            ctx.save();
+            ctx.globalAlpha = bubbleAlpha;
+
+            // Word wrap the bubble text — manga style dramatic font
+            const bubbleFont = `900 italic 17px "Helvetica Neue", "Impact", "Arial Black", sans-serif`;
+            ctx.font = bubbleFont;
+            const maxBubbleW = 230;
+            const words = me.bubbleText.split(" ");
+            const lines: string[] = [];
+            let currentLine = "";
+            for (const word of words) {
+              const testLine = currentLine ? currentLine + " " + word : word;
+              if (ctx.measureText(testLine).width > maxBubbleW - 36) {
+                if (currentLine) lines.push(currentLine);
+                currentLine = word;
+              } else {
+                currentLine = testLine;
+              }
+            }
+            if (currentLine) lines.push(currentLine);
+
+            const lineHeight = 22;
+            const padX = 18;
+            const padY = 16;
+            const textBlockW = Math.max(...lines.map(l => ctx.measureText(l).width));
+            const bubbleW = Math.min(maxBubbleW, textBlockW + padX * 2);
+            const bubbleH = lines.length * lineHeight + padY * 2;
+
+            // Position: above Tangrowth's current position
+            const bubbleCenterX = tgX + tgSize / 2;
+            const bubbleCenterY = tgDrawY - bubbleH / 2 - 24;
+            let bubbleX = bubbleCenterX - bubbleW / 2;
+            let bubbleY = bubbleCenterY - bubbleH / 2;
+            // Clamp to screen
+            if (bubbleX + bubbleW > w - 5) bubbleX = w - bubbleW - 5;
+            if (bubbleX < 5) bubbleX = 5;
+            if (bubbleY < 5) bubbleY = 5;
+
+            // Manga-style spiky burst bubble
+            const spikeCx = bubbleX + bubbleW / 2;
+            const spikeCy = bubbleY + bubbleH / 2;
+            const radiusX = bubbleW / 2 + 10;
+            const radiusY = bubbleH / 2 + 10;
+            const spikeCount = 16;
+            const spikeDepth = 8;
+
+            ctx.beginPath();
+            for (let i = 0; i <= spikeCount * 2; i++) {
+              const angle = (i / (spikeCount * 2)) * Math.PI * 2 - Math.PI / 2;
+              const isSpike = i % 2 === 0;
+              const rx = isSpike ? radiusX + spikeDepth : radiusX - spikeDepth * 0.3;
+              const ry = isSpike ? radiusY + spikeDepth : radiusY - spikeDepth * 0.3;
+              const px = spikeCx + Math.cos(angle) * rx;
+              const py = spikeCy + Math.sin(angle) * ry;
+              if (i === 0) ctx.moveTo(px, py);
+              else ctx.lineTo(px, py);
+            }
+            ctx.closePath();
+            ctx.fillStyle = isDark ? "rgba(20, 15, 40, 0.95)" : "rgba(255, 255, 255, 0.97)";
+            ctx.fill();
+            ctx.strokeStyle = isDark ? "#a855f7" : "#1a1a2e";
+            ctx.lineWidth = 2.5;
+            ctx.stroke();
+
+            // Pointer tail toward Tangrowth (spiky)
+            const tailTipX = tgX + tgSize / 2;
+            const tailTipY = tgDrawY + 5;
+            const tailBaseHalf = 12;
+            ctx.beginPath();
+            ctx.moveTo(spikeCx - tailBaseHalf, bubbleY + bubbleH + spikeDepth - 2);
+            ctx.lineTo(tailTipX, tailTipY);
+            ctx.lineTo(spikeCx + tailBaseHalf, bubbleY + bubbleH + spikeDepth - 2);
+            ctx.fillStyle = isDark ? "rgba(20, 15, 40, 0.95)" : "rgba(255, 255, 255, 0.97)";
+            ctx.fill();
+            ctx.beginPath();
+            ctx.moveTo(spikeCx - tailBaseHalf, bubbleY + bubbleH + spikeDepth - 3);
+            ctx.lineTo(tailTipX, tailTipY);
+            ctx.lineTo(spikeCx + tailBaseHalf, bubbleY + bubbleH + spikeDepth - 3);
+            ctx.strokeStyle = isDark ? "#a855f7" : "#1a1a2e";
+            ctx.lineWidth = 2.5;
+            ctx.stroke();
+
+            // Draw centered text with manga-style stroke
+            ctx.font = bubbleFont;
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            const textStartY = bubbleY + padY + lineHeight / 2;
+            for (let i = 0; i < lines.length; i++) {
+              const lx = bubbleX + bubbleW / 2;
+              const ly = textStartY + i * lineHeight;
+              // Bold outline for manga feel
+              ctx.lineJoin = "round";
+              ctx.strokeStyle = isDark ? "rgba(168, 85, 247, 0.4)" : "rgba(60, 20, 100, 0.15)";
+              ctx.lineWidth = 3;
+              ctx.strokeText(lines[i], lx, ly);
+              ctx.fillStyle = isDark ? "#f0e6ff" : "#1a0a30";
+              ctx.fillText(lines[i], lx, ly);
+            }
+
+            ctx.restore();
+          }
+        }
       }
 
       // Score display + pause button during playing/paused

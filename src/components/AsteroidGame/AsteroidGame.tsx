@@ -94,9 +94,9 @@ interface Difficulty {
 }
 
 const DIFFICULTIES: Difficulty[] = [
-  { name: "Easy", speedMult: 0.6, aimLength: 200 },
-  { name: "Medium", speedMult: 1.0, aimLength: 120 },
-  { name: "Hard", speedMult: 1.5, aimLength: 40 },
+  { name: "Easy", speedMult: 0.6, aimLength: 9999 },
+  { name: "Medium", speedMult: 1.0, aimLength: 0.3 },
+  { name: "Hard", speedMult: 1.5, aimLength: 0 },
 ];
 
 interface Star {
@@ -113,7 +113,7 @@ const SPAWN_INTERVAL = 1500;
 const FIRE_INTERVAL = 800;
 const MAX_POKEBALLS = 8;
 const SPRITE_SIZE = 160;
-const ROTATION_SPEED = 0.04;
+const ROTATION_SPEED = 0.03;
 const GROUND_OFFSET = 180;
 const EARTH_CURVE_DROP = 55;
 const NUM_STARS = 120;
@@ -162,10 +162,16 @@ function createInitialState() {
     chevronRightHitbox: null as { x: number; y: number; w: number; h: number } | null,
     pauseHitbox: null as { x: number; y: number; w: number; h: number } | null,
     resumeHitbox: null as { x: number; y: number; w: number; h: number } | null,
+    soundHitbox: null as { x: number; y: number; w: number; h: number } | null,
+    soundEnabled: true,
     mouseX: 0,
     mouseY: 0,
     milestoneEffect: null as MilestoneEffect | null,
     lastMilestoneScore: 0,
+    sounds: {} as Record<string, HTMLAudioElement>,
+    audioCtx: null as AudioContext | null,
+    audioBuffers: {} as Record<string, AudioBuffer>,
+    recentDestroys: [] as number[], // timestamps of recent pokeball destructions
   };
 }
 
@@ -211,10 +217,45 @@ export default function AsteroidGame(): JSX.Element {
     const tgImg = new Image();
     tgImg.src = "/img/tangrowth.png";
     state.tangrowthImage = tgImg;
+    // Pre-fetch sound files as ArrayBuffers (decoding happens after AudioContext is created)
+    const soundFiles: Record<string, string> = {
+      hyperbeam: "/audio/pokemon/hyperbeam.mp3",
+      icebeam: "/audio/pokemon/icebeam.mp3",
+      psystrike: "/audio/pokemon/psystrike.mp3",
+      recover: "/audio/pokemon/recover.mp3",
+      explosion: "/audio/pokemon/explosion.mp3",
+    };
+    state.sounds = {} as any; // reuse for raw ArrayBuffers temporarily
+    const rawBuffers: Record<string, ArrayBuffer> = {};
+    for (const [name, src] of Object.entries(soundFiles)) {
+      fetch(src)
+        .then(res => res.arrayBuffer())
+        .then(buf => { rawBuffers[name] = buf; })
+        .catch(() => {});
+    }
+    (state as any)._rawSoundBuffers = rawBuffers;
   }, []);
 
   const startGame = useCallback(() => {
     const state = gameState.current;
+    // Create AudioContext on first user gesture for instant playback
+    if (!state.audioCtx) {
+      state.audioCtx = new AudioContext();
+    }
+    if (state.audioCtx.state === "suspended") {
+      state.audioCtx.resume();
+    }
+    // Decode pre-fetched raw buffers into AudioBuffers
+    const rawBuffers = (state as any)._rawSoundBuffers as Record<string, ArrayBuffer> | undefined;
+    if (rawBuffers && state.audioCtx) {
+      for (const [name, buf] of Object.entries(rawBuffers)) {
+        if (!state.audioBuffers[name] && buf.byteLength > 0) {
+          state.audioCtx.decodeAudioData(buf.slice(0))
+            .then(decoded => { state.audioBuffers[name] = decoded; })
+            .catch(() => {});
+        }
+      }
+    }
     state.phase = "playing";
     state.pokeballs = [];
     state.projectiles = [];
@@ -333,8 +374,12 @@ export default function AsteroidGame(): JSX.Element {
       const rect = canvas.getBoundingClientRect();
       const mx = e.clientX - rect.left;
       const my = e.clientY - rect.top;
+      // Sound toggle is clickable in any phase
+      if (hitTest(mx, my, s.soundHitbox)) {
+        s.soundEnabled = !s.soundEnabled;
+        return;
+      }
       if (s.phase === "playing") {
-        // Only pause button clickable during play
         if (hitTest(mx, my, s.pauseHitbox)) {
           s.phase = "paused";
           setPhase("paused");
@@ -363,8 +408,10 @@ export default function AsteroidGame(): JSX.Element {
       const rect = canvas.getBoundingClientRect();
       s.mouseX = e.clientX - rect.left;
       s.mouseY = e.clientY - rect.top;
-      // Update cursor based on hovering pause button
-      if (s.phase === "playing" && hitTest(s.mouseX, s.mouseY, s.pauseHitbox)) {
+      // Update cursor based on hovering pause or sound button
+      if (hitTest(s.mouseX, s.mouseY, s.soundHitbox)) {
+        canvas.style.cursor = "pointer";
+      } else if (s.phase === "playing" && hitTest(s.mouseX, s.mouseY, s.pauseHitbox)) {
         canvas.style.cursor = "pointer";
       } else if (s.phase === "playing") {
         canvas.style.cursor = "default";
@@ -375,6 +422,33 @@ export default function AsteroidGame(): JSX.Element {
     window.addEventListener("keyup", onKeyUp);
     canvas.addEventListener("click", onCanvasClick);
     canvas.addEventListener("mousemove", onMouseMove);
+
+    const playDestroySound = (time: number) => {
+      // Track recent destroys within a 500ms window
+      state.recentDestroys.push(time);
+      state.recentDestroys = state.recentDestroys.filter(t => time - t < 500);
+      // Volume scales with how many destroys in the window: base 0.1, up to 0.5
+      const count = state.recentDestroys.length;
+      const vol = Math.min(0.5, 0.1 + (count - 1) * 0.08);
+      // Pitch increases slightly with rapid kills for intensity
+      const rate = Math.min(1.5, 1.0 + (count - 1) * 0.06);
+      playSound("explosion", vol, rate);
+    };
+
+    const playSound = (name: string, volume = 0.5, playbackRate = 1.0) => {
+      if (!state.soundEnabled || !state.audioCtx) return;
+      const buffer = state.audioBuffers[name];
+      if (buffer) {
+        const source = state.audioCtx.createBufferSource();
+        source.buffer = buffer;
+        source.playbackRate.value = playbackRate;
+        const gain = state.audioCtx.createGain();
+        gain.gain.value = volume;
+        source.connect(gain);
+        gain.connect(state.audioCtx.destination);
+        source.start(0);
+      }
+    };
 
     const spawnPokeball = () => {
       const { width: w, height: h } = state;
@@ -455,6 +529,11 @@ export default function AsteroidGame(): JSX.Element {
         }
 
         state.milestoneEffect = { type, startTime: time, duration: 5000, bubbleText };
+
+        // Play corresponding sound effect
+        if (type === "icebeam") playSound("icebeam", 0.6);
+        else if (type === "psystrike") playSound("psystrike", 0.6);
+        else if (type === "extralife") playSound("recover", 0.6);
       }
     };
 
@@ -773,8 +852,10 @@ export default function AsteroidGame(): JSX.Element {
           state.lastSpawnTime = time;
         }
 
-        // Fire — skip hyperbeam while milestone effect is active
-        if (time - state.lastShotTime > FIRE_INTERVAL) {
+        // Fire — no shooting during hyperbeam, psystrike or ice beam; keep shooting during recover
+        const milestoneType = state.milestoneEffect?.type;
+        const shootBlocked = milestoneType === "icebeam" || milestoneType === "psystrike";
+        if (time - state.lastShotTime > FIRE_INTERVAL && !shootBlocked) {
           const isHyperbeam = state.score > 0 && state.score % 10 === 0;
           if (isHyperbeam && !state.beam && !state.milestoneEffect) {
             state.beam = {
@@ -880,7 +961,11 @@ export default function AsteroidGame(): JSX.Element {
                 hit = true;
                 hitSet.add(p);
                 state.score += 1;
+                if (state.score > 0 && state.score % 10 === 0 && !state.milestoneEffect) {
+                  playSound("hyperbeam", 0.6);
+                }
                 checkMilestone(time, isDark);
+                playDestroySound(time);
                 const count = 10 + Math.floor(Math.random() * 6);
                 for (let i = 0; i < count; i++) {
                   const angle = Math.random() * Math.PI * 2;
@@ -934,7 +1019,11 @@ export default function AsteroidGame(): JSX.Element {
                     b.firstHit = { x: pb.x, y: pb.y };
                   }
                   state.score += 1;
+                  if (state.score > 0 && state.score % 10 === 0 && !state.milestoneEffect) {
+                    playSound("hyperbeam", 0.6);
+                  }
                   checkMilestone(time, isDark);
+                  playDestroySound(time);
                   const count = 18;
                   for (let i = 0; i < count; i++) {
                     const angle = Math.random() * Math.PI * 2;
@@ -971,6 +1060,10 @@ export default function AsteroidGame(): JSX.Element {
 
           // Expire milestone effect
           if (state.milestoneEffect && time - state.milestoneEffect.startTime > state.milestoneEffect.duration) {
+            // After ice beam, reset shot cooldown so firing resumes quickly
+            if (state.milestoneEffect.type === "icebeam") {
+              state.lastShotTime = time - FIRE_INTERVAL + 200; // resume firing in ~200ms
+            }
             state.milestoneEffect = null;
           }
         }
@@ -1298,8 +1391,11 @@ export default function AsteroidGame(): JSX.Element {
         }
       }
 
-      // Aim dotted line (only when playing)
-      if (state.phase === "playing") {
+      // Aim dotted line (only when playing, hidden on Hard)
+      if (state.phase === "playing" && diff.aimLength > 0) {
+        // aimLength: 9999 = full screen, 0-1 = fraction of diagonal, 0 = hidden
+        const diagonal = Math.hypot(w, h);
+        const lineLen = diff.aimLength > 1 ? diagonal : diagonal * diff.aimLength;
         const dotColor = isDark ? "rgba(168,85,247,0.5)" : "rgba(120,50,200,0.5)";
         ctx.save();
         ctx.strokeStyle = dotColor;
@@ -1308,8 +1404,8 @@ export default function AsteroidGame(): JSX.Element {
         ctx.beginPath();
         ctx.moveTo(cx, playerY - SPRITE_SIZE / 2);
         ctx.lineTo(
-          cx + Math.cos(state.aimAngle) * diff.aimLength,
-          playerY - SPRITE_SIZE / 2 + Math.sin(state.aimAngle) * diff.aimLength
+          cx + Math.cos(state.aimAngle) * lineLen,
+          playerY - SPRITE_SIZE / 2 + Math.sin(state.aimAngle) * lineLen
         );
         ctx.stroke();
         ctx.setLineDash([]);
@@ -1560,6 +1656,7 @@ export default function AsteroidGame(): JSX.Element {
             if (dist < currentRadius) {
               // Explode this ball
               state.score += 1;
+              playDestroySound(time);
               const count = 14;
               for (let i = 0; i < count; i++) {
                 const angle = Math.random() * Math.PI * 2;
@@ -1849,6 +1946,73 @@ export default function AsteroidGame(): JSX.Element {
         ctx.fillRect(barCx + barGap / 2, barCy - barH / 2, barW, barH);
         ctx.restore();
 
+        // Sound toggle button — left of pause button
+        const soundBtnSize = 32;
+        const soundBtnX = pauseBtnX - soundBtnSize - 8;
+        const soundBtnY = pauseBtnY;
+        state.soundHitbox = {
+          x: soundBtnX - hitboxPad, y: soundBtnY - hitboxPad,
+          w: soundBtnSize + hitboxPad * 2, h: soundBtnSize + hitboxPad * 2,
+        };
+        const isSoundHover = hitTest(state.mouseX, state.mouseY, state.soundHitbox);
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(soundBtnX + soundBtnSize / 2, soundBtnY + soundBtnSize / 2, soundBtnSize / 2, 0, Math.PI * 2);
+        ctx.fillStyle = isSoundHover
+          ? (isDark ? "rgba(168,85,247,0.4)" : "rgba(120,50,200,0.25)")
+          : (isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.08)");
+        ctx.fill();
+        if (isSoundHover) {
+          ctx.strokeStyle = isDark ? "rgba(168,85,247,0.6)" : "rgba(120,50,200,0.4)";
+          ctx.lineWidth = 1.5;
+          ctx.stroke();
+        }
+
+        // Speaker icon
+        const sCx = soundBtnX + soundBtnSize / 2;
+        const sCy = soundBtnY + soundBtnSize / 2;
+        const iconColor = isSoundHover
+          ? (isDark ? "#c084fc" : "#7c3aed")
+          : (isDark ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.5)");
+        ctx.fillStyle = iconColor;
+        ctx.strokeStyle = iconColor;
+        ctx.lineWidth = 1.8;
+        ctx.lineCap = "round";
+
+        // Speaker body (small rectangle + triangle)
+        ctx.beginPath();
+        ctx.rect(sCx - 7, sCy - 4, 5, 8);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(sCx - 2, sCy - 4);
+        ctx.lineTo(sCx + 4, sCy - 8);
+        ctx.lineTo(sCx + 4, sCy + 8);
+        ctx.lineTo(sCx - 2, sCy + 4);
+        ctx.closePath();
+        ctx.fill();
+
+        if (state.soundEnabled) {
+          // Sound waves
+          ctx.beginPath();
+          ctx.arc(sCx + 5, sCy, 4, -Math.PI / 4, Math.PI / 4);
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.arc(sCx + 5, sCy, 8, -Math.PI / 4, Math.PI / 4);
+          ctx.stroke();
+        } else {
+          // X mark for muted
+          ctx.beginPath();
+          ctx.moveTo(sCx + 5, sCy - 5);
+          ctx.lineTo(sCx + 11, sCy + 5);
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.moveTo(sCx + 11, sCy - 5);
+          ctx.lineTo(sCx + 5, sCy + 5);
+          ctx.stroke();
+        }
+        ctx.restore();
+
         // Lives — pokemon center icons
         const pcImg = state.pokemonCenterImage;
         if (pcImg && pcImg.complete && pcImg.naturalWidth > 0) {
@@ -1869,6 +2033,10 @@ export default function AsteroidGame(): JSX.Element {
       state.chevronLeftHitbox = null;
       state.chevronRightHitbox = null;
       state.resumeHitbox = null;
+      // soundHitbox is set per-frame during playing/paused, reset for other phases
+      if (state.phase !== "playing" && state.phase !== "paused") {
+        state.soundHitbox = null;
+      }
 
       // Pause overlay
       if (state.phase === "paused") {

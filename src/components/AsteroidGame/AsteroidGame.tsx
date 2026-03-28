@@ -168,6 +168,8 @@ function createInitialState() {
     soundEnabled: (() => { try { return localStorage.getItem("pokeball-sound") !== "off"; } catch { return true; } })(),
     mouseX: 0,
     mouseY: 0,
+    isTouching: false,
+    touchAimActive: false,
     milestoneEffect: null as MilestoneEffect | null,
     lastMilestoneScore: 0,
     sounds: {} as Record<string, HTMLAudioElement>,
@@ -425,10 +427,97 @@ export default function AsteroidGame(): JSX.Element {
       }
     };
 
+    // --- Touch handlers for mobile ---
+    const getTouchPos = (touch: Touch) => {
+      const rect = canvas.getBoundingClientRect();
+      return { x: touch.clientX - rect.left, y: touch.clientY - rect.top };
+    };
+
+    const onTouchStart = (e: TouchEvent) => {
+      e.preventDefault();
+      const s = gameState.current;
+      const touch = e.touches[0];
+      if (!touch) return;
+      const { x: mx, y: my } = getTouchPos(touch);
+      s.mouseX = mx;
+      s.mouseY = my;
+      s.isTouching = true;
+
+      // Sound toggle is tappable in any phase
+      if (hitTest(mx, my, s.soundHitbox)) {
+        s.soundEnabled = !s.soundEnabled;
+        try { localStorage.setItem("pokeball-sound", s.soundEnabled ? "on" : "off"); } catch {}
+        return;
+      }
+
+      if (s.phase === "playing") {
+        if (hitTest(mx, my, s.pauseHitbox)) {
+          s.phase = "paused";
+          setPhase("paused");
+          return;
+        }
+        // Start touch-aiming
+        s.touchAimActive = true;
+        const groundCenterY = s.height - GROUND_OFFSET;
+        const playerY = groundCenterY - 40;
+        const cx = s.width / 2;
+        const originY = playerY - SPRITE_SIZE / 2;
+        const angle = Math.atan2(my - originY, mx - cx);
+        // Clamp to upper half (-PI to 0)
+        s.aimAngle = Math.max(-Math.PI, Math.min(0, angle));
+        return;
+      }
+      if (s.phase === "paused") {
+        if (hitTest(mx, my, s.resumeHitbox)) {
+          s.phase = "playing";
+          setPhase("playing");
+        }
+        return;
+      }
+      // start / gameover
+      if (hitTest(mx, my, s.buttonHitbox)) {
+        if (s.phase === "start") startGame();
+        else if (s.phase === "gameover") restart();
+      } else if (hitTest(mx, my, s.chevronLeftHitbox)) {
+        s.difficultyIndex = Math.max(s.difficultyIndex - 1, 0);
+      } else if (hitTest(mx, my, s.chevronRightHitbox)) {
+        s.difficultyIndex = Math.min(s.difficultyIndex + 1, DIFFICULTIES.length - 1);
+      }
+    };
+
+    const onTouchMove = (e: TouchEvent) => {
+      e.preventDefault();
+      const s = gameState.current;
+      const touch = e.touches[0];
+      if (!touch) return;
+      const { x: mx, y: my } = getTouchPos(touch);
+      s.mouseX = mx;
+      s.mouseY = my;
+
+      if (s.phase === "playing" && s.touchAimActive) {
+        const groundCenterY = s.height - GROUND_OFFSET;
+        const playerY = groundCenterY - 40;
+        const cx = s.width / 2;
+        const originY = playerY - SPRITE_SIZE / 2;
+        const angle = Math.atan2(my - originY, mx - cx);
+        s.aimAngle = Math.max(-Math.PI, Math.min(0, angle));
+      }
+    };
+
+    const onTouchEnd = (e: TouchEvent) => {
+      e.preventDefault();
+      const s = gameState.current;
+      s.isTouching = false;
+      s.touchAimActive = false;
+    };
+
     window.addEventListener("keydown", onKeyDown);
     window.addEventListener("keyup", onKeyUp);
     canvas.addEventListener("click", onCanvasClick);
     canvas.addEventListener("mousemove", onMouseMove);
+    canvas.addEventListener("touchstart", onTouchStart, { passive: false });
+    canvas.addEventListener("touchmove", onTouchMove, { passive: false });
+    canvas.addEventListener("touchend", onTouchEnd, { passive: false });
 
     const playDestroySound = (time: number) => {
       // Track recent destroys within a 500ms window
@@ -752,7 +841,7 @@ export default function AsteroidGame(): JSX.Element {
       ctx.stroke();
 
       // Store chevron hitboxes for click detection (generous tap targets)
-      const hitPad = 12;
+      const hitPad = 20;
       state.chevronLeftHitbox = {
         x: leftChevronX - hitPad, y: chevronY - chevronSize - hitPad,
         w: chevronSize + hitPad * 2, h: chevronSize * 2 + hitPad * 2,
@@ -1953,6 +2042,27 @@ export default function AsteroidGame(): JSX.Element {
         }
       }
 
+      // Touch crosshair indicator during gameplay
+      if (state.phase === "playing" && state.touchAimActive && state.isTouching) {
+        ctx.save();
+        ctx.globalAlpha = 0.5;
+        const tcx = state.mouseX;
+        const tcy = state.mouseY;
+        const crossSize = 12;
+        ctx.strokeStyle = isDark ? "#c084fc" : "#7c3aed";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(tcx - crossSize, tcy);
+        ctx.lineTo(tcx + crossSize, tcy);
+        ctx.moveTo(tcx, tcy - crossSize);
+        ctx.lineTo(tcx, tcy + crossSize);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(tcx, tcy, crossSize * 0.8, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.restore();
+      }
+
       // Score display + pause button during playing/paused
       if (state.phase === "playing" || state.phase === "paused") {
         ctx.save();
@@ -2146,6 +2256,7 @@ export default function AsteroidGame(): JSX.Element {
         ctx.fillRect(0, 0, w, h);
 
         if (state.phase === "start") {
+          const isMobile = w < 500;
           // Title
           const fontSize = Math.min(w * 0.08, 52);
           drawPokemonGoText("POKEBALL GAME", cx, h * 0.12, fontSize, isDark);
@@ -2153,23 +2264,38 @@ export default function AsteroidGame(): JSX.Element {
           // Subheading
           const pokemon = isDark ? "Mewtwo" : "Mew";
           ctx.fillStyle = isDark ? "rgba(255,255,255,0.8)" : "rgba(0,0,0,0.7)";
-          ctx.font = "500 18px system-ui, sans-serif";
+          ctx.font = `500 ${isMobile ? 14 : 18}px system-ui, sans-serif`;
           ctx.textAlign = "center";
           ctx.textBaseline = "middle";
           ctx.fillText(`Help ${pokemon} defend Pokopia from humans`, cx, h * 0.12 + fontSize * 0.8);
 
-          // Pokeball guide
-          const guideY = h * 0.27;
-          drawPokeballGuide(cx, guideY, isDark);
+          if (isMobile) {
+            // Mobile: skip pokeball guide, stack difficulty + button vertically
+            const rowY = h * 0.35;
+            const diffBoxW = 180;
+            drawDifficultySelector(cx - diffBoxW / 2, rowY, isDark);
+            drawActionButton(cx - 65, rowY + 60, "START", isDark);
 
-          // Bottom row: difficulty (left) + START button (right)
-          const guideRows = Math.ceil(POKEBALL_TYPES.length / 2);
-          const rowY = guideY + guideRows * 26 + 80;
-          const totalRowW = 180 + 16 + 130; // diffBox + gap + button
-          const rowStartX = cx - totalRowW / 2;
-          const diffRight = drawDifficultySelector(rowStartX, rowY, isDark);
-          drawActionButton(diffRight + 16, rowY, "START", isDark);
+            // Touch hint
+            ctx.fillStyle = isDark ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.35)";
+            ctx.font = "italic 13px system-ui, sans-serif";
+            ctx.textAlign = "center";
+            ctx.fillText("Touch & drag to aim", cx, rowY + 120);
+          } else {
+            // Pokeball guide
+            const guideY = h * 0.27;
+            drawPokeballGuide(cx, guideY, isDark);
+
+            // Bottom row: difficulty (left) + START button (right)
+            const guideRows = Math.ceil(POKEBALL_TYPES.length / 2);
+            const rowY = guideY + guideRows * 26 + 80;
+            const totalRowW = 180 + 16 + 130; // diffBox + gap + button
+            const rowStartX = cx - totalRowW / 2;
+            const diffRight = drawDifficultySelector(rowStartX, rowY, isDark);
+            drawActionButton(diffRight + 16, rowY, "START", isDark);
+          }
         } else {
+          const isMobile = w < 500;
           // Game Over
           const fontSize = Math.min(w * 0.12, 72);
           drawPokemonGoText("Game Over", cx, h * 0.08, fontSize, isDark);
@@ -2189,17 +2315,25 @@ export default function AsteroidGame(): JSX.Element {
           ctx.font = `800 ${Math.min(w * 0.09, 52)}px system-ui, sans-serif`;
           ctx.fillText(`${state.score}`, cx, valueY);
 
-          // Pokeball guide (2-col)
-          const guideStartY = valueY + 60;
-          drawPokeballGuide(cx, guideStartY, isDark);
+          if (isMobile) {
+            // Mobile: skip pokeball guide, stack vertically
+            const rowY = valueY + 60;
+            const diffBoxW = 180;
+            drawDifficultySelector(cx - diffBoxW / 2, rowY, isDark);
+            drawActionButton(cx - 65, rowY + 60, "RESTART", isDark);
+          } else {
+            // Pokeball guide (2-col)
+            const guideStartY = valueY + 60;
+            drawPokeballGuide(cx, guideStartY, isDark);
 
-          // Bottom row: difficulty (left) + RESTART button (right)
-          const guideRows = Math.ceil(POKEBALL_TYPES.length / 2);
-          const rowY = guideStartY + guideRows * 26 + 50;
-          const totalRowW = 180 + 16 + 130;
-          const rowStartX = cx - totalRowW / 2;
-          const diffRight = drawDifficultySelector(rowStartX, rowY, isDark);
-          drawActionButton(diffRight + 16, rowY, "RESTART", isDark);
+            // Bottom row: difficulty (left) + RESTART button (right)
+            const guideRows = Math.ceil(POKEBALL_TYPES.length / 2);
+            const rowY = guideStartY + guideRows * 26 + 50;
+            const totalRowW = 180 + 16 + 130;
+            const rowStartX = cx - totalRowW / 2;
+            const diffRight = drawDifficultySelector(rowStartX, rowY, isDark);
+            drawActionButton(diffRight + 16, rowY, "RESTART", isDark);
+          }
         }
       }
 
@@ -2215,6 +2349,9 @@ export default function AsteroidGame(): JSX.Element {
       window.removeEventListener("keyup", onKeyUp);
       canvas.removeEventListener("click", onCanvasClick);
       canvas.removeEventListener("mousemove", onMouseMove);
+      canvas.removeEventListener("touchstart", onTouchStart);
+      canvas.removeEventListener("touchmove", onTouchMove);
+      canvas.removeEventListener("touchend", onTouchEnd);
     };
   }, [colorMode, phase]);
 
@@ -2230,7 +2367,7 @@ export default function AsteroidGame(): JSX.Element {
         position: "relative",
       }}
     >
-      <canvas ref={canvasRef} style={{ display: "block", cursor: phase !== "playing" ? "pointer" : "default" }} />
+      <canvas ref={canvasRef} style={{ display: "block", cursor: phase !== "playing" ? "pointer" : "default", touchAction: "none" }} />
     </div>
   );
 }

@@ -140,6 +140,8 @@ function createInitialState() {
     lastShotTime: 0,
     lastSpawnTime: 0,
     spriteImage: null as HTMLImageElement | null,
+    bodyImage: null as HTMLImageElement | null,
+    armImage: null as HTMLImageElement | null,
     pokeballImages: {} as Record<string, HTMLImageElement>,
     goLetterG: null as HTMLImageElement | null,
     goLetterO: null as HTMLImageElement | null,
@@ -185,12 +187,24 @@ export default function AsteroidGame(): JSX.Element {
 
   const spriteSrc =
     colorMode === "dark" ? "/img/mewtwo_sprite.png" : "/img/mew_sprite.png";
+  const bodySrc = colorMode === "dark" ? "/img/mewtwo.png" : "/img/mew.png";
+  const armSrc = colorMode === "dark" ? "/img/mewtwo_arm.png" : "/img/mew_tail.png";
 
   useEffect(() => {
     const img = new Image();
     img.src = spriteSrc;
     gameState.current.spriteImage = img;
   }, [spriteSrc]);
+
+  useEffect(() => {
+    const state = gameState.current;
+    const bodyImg = new Image();
+    bodyImg.src = bodySrc;
+    state.bodyImage = bodyImg;
+    const armImg = new Image();
+    armImg.src = armSrc;
+    state.armImage = armImg;
+  }, [bodySrc, armSrc]);
 
   // Preload pokeball sprites
   useEffect(() => {
@@ -1623,17 +1637,68 @@ export default function AsteroidGame(): JSX.Element {
       }
       ctx.globalAlpha = 1;
 
-      // Sprite — sits on the curved ground
-      const sprite = state.spriteImage;
-      if (sprite && sprite.complete && sprite.naturalWidth > 0) {
-        const facingLeft = state.aimAngle < -Math.PI / 2;
-        ctx.save();
-        ctx.translate(cx, groundCenterY - SPRITE_SIZE - 40);
-        if (facingLeft) {
-          ctx.scale(-1, 1);
+      // Character — body (static) + arm/tail (rotating to aim)
+      const bodyImg = state.bodyImage;
+      const armImg = state.armImage;
+      const bodyReady = bodyImg && bodyImg.complete && bodyImg.naturalWidth > 0;
+      const armReady = armImg && armImg.complete && armImg.naturalWidth > 0;
+
+      if (bodyReady || armReady) {
+        const bodyDrawSize = SPRITE_SIZE;
+        const bodyX = cx;
+        const bodyY = groundCenterY - SPRITE_SIZE - 40;
+
+        if (isDark) {
+          // === MEWTWO ===
+          // Arm pivot = shoulder position on the body
+          const pivotX = bodyX + 0.024 * bodyDrawSize;
+          const pivotY = bodyY + 0.43 * bodyDrawSize;
+
+          // Draw body first (behind)
+          if (bodyReady) {
+            ctx.save();
+            ctx.translate(bodyX, bodyY);
+            ctx.drawImage(bodyImg, -bodyDrawSize / 2, 0, bodyDrawSize, bodyDrawSize);
+            ctx.restore();
+          }
+
+          // Draw arm on top, rotating around pivot
+          // The arm image center IS the shoulder pivot point
+          // The hand naturally points left (angle ≈ π)
+          if (armReady) {
+            const armSize = bodyDrawSize * 0.5;
+            ctx.save();
+            ctx.translate(pivotX, pivotY);
+            // Arm's natural direction is left (π), offset down a few degrees to match body
+            ctx.rotate(state.aimAngle - Math.PI - 0.20);
+            // Draw with image center at origin (the pivot)
+            ctx.drawImage(armImg, -armSize / 2, -armSize / 2, armSize, armSize);
+            ctx.restore();
+          }
+        } else {
+          // === MEW ===
+          // Tail pivot = base of tail on the body
+          const pivotX = bodyX - 0.1 * bodyDrawSize;
+          const pivotY = bodyY + 0.5 * bodyDrawSize;
+
+          // Draw body first (tail goes on top for Mew)
+          if (bodyReady) {
+            ctx.save();
+            ctx.translate(bodyX, bodyY);
+            ctx.drawImage(bodyImg, -bodyDrawSize / 2, 0, bodyDrawSize, bodyDrawSize);
+            ctx.restore();
+          }
+
+          // Draw tail rotating around pivot
+          if (armReady) {
+            const tailSize = bodyDrawSize * 0.9;
+            ctx.save();
+            ctx.translate(pivotX, pivotY);
+            ctx.rotate(state.aimAngle - Math.PI);
+            ctx.drawImage(armImg, -tailSize / 2, -tailSize / 2, tailSize, tailSize);
+            ctx.restore();
+          }
         }
-        ctx.drawImage(sprite, -SPRITE_SIZE / 2, 0, SPRITE_SIZE, SPRITE_SIZE);
-        ctx.restore();
       }
 
       // Psystrike milestone visuals — expanding wave destroys balls on contact

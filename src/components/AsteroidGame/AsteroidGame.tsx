@@ -165,7 +165,7 @@ function createInitialState() {
     pauseHitbox: null as { x: number; y: number; w: number; h: number } | null,
     resumeHitbox: null as { x: number; y: number; w: number; h: number } | null,
     soundHitbox: null as { x: number; y: number; w: number; h: number } | null,
-    soundEnabled: true,
+    soundEnabled: (() => { try { return localStorage.getItem("pokeball-sound") !== "off"; } catch { return true; } })(),
     mouseX: 0,
     mouseY: 0,
     milestoneEffect: null as MilestoneEffect | null,
@@ -339,7 +339,7 @@ export default function AsteroidGame(): JSX.Element {
       }
 
       // Pause/resume toggle
-      if (e.key === "Escape" || e.key === "p" || e.key === "P") {
+      if (e.key === "Escape" || e.key === "p" || e.key === "P" || e.key === " ") {
         if (s.phase === "playing") {
           s.phase = "paused";
           setPhase("paused");
@@ -349,14 +349,6 @@ export default function AsteroidGame(): JSX.Element {
           setPhase("playing");
           return;
         }
-      }
-
-      if (s.phase === "paused") {
-        if (e.key === "Enter" || e.key === " ") {
-          s.phase = "playing";
-          setPhase("playing");
-        }
-        return;
       }
 
       if (s.phase === "start" || s.phase === "gameover") {
@@ -391,6 +383,7 @@ export default function AsteroidGame(): JSX.Element {
       // Sound toggle is clickable in any phase
       if (hitTest(mx, my, s.soundHitbox)) {
         s.soundEnabled = !s.soundEnabled;
+        try { localStorage.setItem("pokeball-sound", s.soundEnabled ? "on" : "off"); } catch {}
         return;
       }
       if (s.phase === "playing") {
@@ -1678,24 +1671,24 @@ export default function AsteroidGame(): JSX.Element {
         } else {
           // === MEW ===
           // Tail pivot = base of tail on the body
-          const pivotX = bodyX - 0.1 * bodyDrawSize;
-          const pivotY = bodyY + 0.5 * bodyDrawSize;
+          const pivotX = bodyX - 0.02 * bodyDrawSize;
+          const pivotY = bodyY + 0.58 * bodyDrawSize;
 
-          // Draw body first (tail goes on top for Mew)
+          // Draw tail first (behind Mew body)
+          if (armReady) {
+            const tailSize = bodyDrawSize * 1.1;
+            ctx.save();
+            ctx.translate(pivotX, pivotY);
+            ctx.rotate(state.aimAngle - Math.PI - 1.05);
+            ctx.drawImage(armImg, -tailSize / 2, -tailSize / 2, tailSize, tailSize);
+            ctx.restore();
+          }
+
+          // Draw body on top
           if (bodyReady) {
             ctx.save();
             ctx.translate(bodyX, bodyY);
             ctx.drawImage(bodyImg, -bodyDrawSize / 2, 0, bodyDrawSize, bodyDrawSize);
-            ctx.restore();
-          }
-
-          // Draw tail rotating around pivot
-          if (armReady) {
-            const tailSize = bodyDrawSize * 0.9;
-            ctx.save();
-            ctx.translate(pivotX, pivotY);
-            ctx.rotate(state.aimAngle - Math.PI);
-            ctx.drawImage(armImg, -tailSize / 2, -tailSize / 2, tailSize, tailSize);
             ctx.restore();
           }
         }

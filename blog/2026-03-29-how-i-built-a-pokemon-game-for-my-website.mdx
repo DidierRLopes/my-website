@@ -1,0 +1,221 @@
+---
+slug: how-i-built-a-pokemon-game-for-my-website
+title: How I built a Pokémon game for my website
+date: 2026-03-29
+image: /blog/2026-03-29-how-i-built-a-pokemon-game-for-my-website.webp
+tags:
+- ai
+- agents
+- pokemon
+- software-development
+description: "I used Claude Code to build a full arcade-style Pokémon game for my personal website in a few hours. Here's how it came together."
+hideSidebar: true
+draft: true
+---
+
+import BrowserOnly from '@docusaurus/BrowserOnly';
+
+I used Claude Code to build a full arcade-style Pokémon game for my personal website in a few hours. Here's how it came together.
+
+{/* truncate */}
+
+You can play it right now at [didierlopes.com/game](/game).
+
+It has articulated sprite limbs for Mewtwo and Mew, Moves such as Hyperbeam and Psystrike, a Ho-Oh revival animation, pokeballs and Pokopia lore. Claude Code wrote the code behind the game.
+
+---
+
+## How we got here
+
+It started with a wrong URL. I was navigating my own website and hit a page that didn't exist, the 404 page. It was empty. Boring. Just a "page not found" message.
+
+You know what's not boring? The Chrome dinosaur game. That little T-Rex that shows up when you're offline. Everyone knows it. I wanted something like that for my site.
+
+> _"What if my 404 page had a game? And what if it was Pokémon-themed? Like Asteroids, but you defend against incoming pokéballs."_
+
+<br />
+
+My wife has been playing Pokopia a lot, so I piggyback on that idea. Humans are invading **Pokopia** (a world full of Pokémon) by throwing pokéballs from space. Your Pokémon is the last line of defense, floating above the planet to intercept them before they land.
+
+So I opened Claude Code and described the idea. A few hours later I had a full canvas-based game engine in a single React component: game loop, start/pause/game over states, score tracking, 3-life system, and 3 difficulty levels.
+
+Classic Asteroids setup: you're in the center, things come at you, you shoot them down. But the Pokopia storyline makes it more fun, you're protecting a world of pokemons. What's there not to love?
+
+## Three difficulty levels
+
+The game has three difficulty levels: Easy, Medium and Hard. The difference comes down to two things: **aiming help** and **ball speed**.
+
+On Easy, you get a dotted line showing exactly where your blast will go — so you can line up shots without guessing. On Medium, the line is shorter. On Hard, there's no line at all.
+
+Ball speed scales with difficulty too. Easy gives you time to react, Hard doesn't as much.
+
+## Six types of pokeballs
+
+Instead of generic projectiles, each ball has its own (movement) behavior:
+
+<BrowserOnly>
+  {() => {
+    const PokeballShowcase = require('@site/src/components/BlogPokemonGame/PokeballShowcase').default;
+    return <PokeballShowcase />;
+  }}
+</BrowserOnly>
+
+Most of the time you're dealing with Poké Balls and Great Balls, which is manageable. But then a Master Ball shows up (5% chance) and starts steering toward you, or a Quick Ball blasts through at 1.8x speed. The Timer Ball is a bit more sneaky, it starts so slow you might ignore it but then it accelerates exponentially and suddenly it's on top of you.
+
+## Mewtwo or Mew
+
+The game ties into the website itself through the theme system: **dark mode gets Mewtwo, light mode gets Mew**.
+
+<BrowserOnly>
+  {() => {
+    const DefenderPreview = require('@site/src/components/BlogPokemonGame/DefenderPreview').default;
+    return <DefenderPreview />;
+  }}
+</BrowserOnly>
+
+Each character has a body sprite and a limb sprite that rotates to aim. Mewtwo extends his arm, Mew swings her tail. Switch your site theme mid-game and your character swaps instantly, the same `useColorMode` hook that controls the rest of the site.
+
+This meant every feature had to work for both. Different sprites, different animations, different z-ordering (Mewtwo's arm draws on top, Mew's tail draws behind). 
+
+## The space environment
+
+I didn't want it to feel like objects floating on a black canvas. It needed to look like space.
+
+**120 stars** with randomized brightness and twinkle timing. An **Earth curve** at the bottom. Your Pokémon floats above it, between the incoming pokéballs and the planet below.
+
+The **lives system** ties into the lore too. Your 3 lives are represented by Pokopia houses: small buildings from the Pokopia game. Each time a pokéball gets past you, a house is destroyed. Lose all three and Pokopia falls.
+
+And then there's **Mosslax**.
+
+<p align="center">
+    <img width="200" src="/img/snorlax.png" alt="Mosslax lounging in the game" />
+</p>
+<p align="center" style={{fontSize: '0.85em', marginTop: '-0.5em'}}>Contributes nothing. Absolutely essential.</p>
+
+<br />
+
+If you've played [Pokémon Pokopia](https://pokopia.pokemon.com/en-us/), you know Mosslax — a Snorlax that's been asleep so long that moss and a flower grew over its body. In Pokopia you find it on Black Beach and feed it for special buffs. Here, it's just lounging on the left side of the planet. Does nothing. But that's the point: Mosslax is the citizen you're protecting.
+
+## Articulated sprites
+
+Up until this point, the entire Pokémon sprite rotated when you aimed. Mewtwo spinning like a top while shooting looked terrible.
+
+So we split each character into body + limb. Body stays put, only the arm (or tail for Mew) rotates to follow the aim.
+
+<BrowserOnly>
+  {() => {
+    const SpriteArticulation = require('@site/src/components/BlogPokemonGame/SpriteArticulation').default;
+    return <SpriteArticulation />;
+  }}
+</BrowserOnly>
+
+Move your mouse to aim: toggle between Mewtwo and Mew to see the difference. For Mewtwo, the **arm** rotates from the shoulder pivot. For Mew, it's the **tail** that rotates from its base, with the glowing orb at the tip serving as the fire origin.
+
+The yellow dot is where projectiles spawn from. It's computed with a rotation matrix so it lands exactly on the fingertip (Mewtwo) or tail orb (Mew) at any angle. 
+
+## Hyperbeam
+
+Every 10 pokeballs destroyed, your Pokémon fires a massive energy beam that sweeps across the screen and wipes everything in its path.
+
+<BrowserOnly>
+  {() => {
+    const HyperbeamDemo = require('@site/src/components/BlogPokemonGame/HyperbeamDemo').default;
+    return <HyperbeamDemo />;
+  }}
+</BrowserOnly>
+
+The beam tapers from narrow to wide with a hot white core, orange glow, and energy flicker particles along its length.
+
+ハイパービーム shows up in katakana — "Hyper Beam" in Japanese. I took the typography from the Pokémon TCG's **Ascended Heroes** set where Japanese characters appear dramatically on the cards (see [this beautiful card](https://tcgplayer-cdn.tcgplayer.com/product/676083_in_1000x1000.jpg)). Tilted -15°, staggered baselines, speed lines behind, gold gradient with dark outline. It looks ridiculous in the best way.
+
+## Milestone powers
+
+Hyperbeam was cool but the game was still one-note. Shoot pokeballs, get hyperbeam, repeat.
+
+So I added milestone powers that kick in every 50 points. The twist: which power you get depends on how the game is going. Click through each one:
+
+<BrowserOnly>
+  {() => {
+    const MilestonePowers = require('@site/src/components/BlogPokemonGame/MilestonePowers').default;
+    return <MilestonePowers />;
+  }}
+</BrowserOnly>
+
+The order is as follows:
+
+1. If you're about to die (lives < 2), Mewtwo/Mew does the **Recover** move.
+2. If there are only a few pokeballs on screen, **Ice Beam** freezes them.
+3. If you're overwhelmed with 5+ balls, **Psystrike** clears them all.
+
+The game quietly adjusts to how well you're playing.
+
+Notice **Tangrowth** in the corner of each animation, he rises from the bottom with a manga-style speech bubble every time a power triggers.
+
+<p align="center">
+    <img width="200" src="/img/tangrowth.png" alt="Professor Tangrowth - the milestone narrator" />
+</p>
+
+<br />
+
+If you've played [Pokémon Pokopia](https://pokopia.pokemon.com/en-us/), you know that **Professor Tangrowth** is the guide who teaches Ditto the basics in the abandoned Kanto region. It just made sense to make him the game's narrator.
+
+## Ho-Oh revival
+
+Game over, restart. Game over, restart. It was boring.
+
+In Pokémon lore, Ho-Oh can resurrect pokemons (i.e. Entei, Suicine and Raikou backstory). So what if dying triggered a revival animation instead of just resetting?
+
+<BrowserOnly>
+  {() => {
+    const HoOhRevival = require('@site/src/components/BlogPokemonGame/HoOhRevival').default;
+    return <HoOhRevival />;
+  }}
+</BrowserOnly>
+
+Ho-Oh flies across the screen on a slight diagonal, drops a Sacred Ash feather that zigzags down, golden burst on landing, and your Pokémon fades back in. A few seconds, and then you're back in the fight. No restart button, no menu - the game just keeps going.
+
+It's a small thing, but it's the kind of detail that makes people go "wait, that was cool". It did it for me at least lol
+
+## Sound effects
+
+The game was completely silent. Destroying a pokeball had no punch. Powers triggered with no feedback.
+
+So I added sound.
+
+Sounds derived from the actual Pokémon games — Hyperbeam sounds like the real Normal-type attack, Ice Beam has that crystalline freeze, Psystrike has the psychic wave, Recover has the healing chime.
+
+Try them out:
+
+<BrowserOnly>
+  {() => {
+    const SoundDemo = require('@site/src/components/BlogPokemonGame/SoundDemo').default;
+    return <SoundDemo />;
+  }}
+</BrowserOnly>
+
+The explosion pitch goes up the faster you click, same as in the game when you destroy pokeballs in quick succession. Rapid kills = ascending pitch. It just feels good.
+
+## Damage feedback
+
+When a pokeball hits your Pokémon, a red tint + scan line sweep effect plays. Watch it in action:
+
+<BrowserOnly>
+  {() => {
+    const DamageFlash = require('@site/src/components/BlogPokemonGame/DamageFlash').default;
+    return <DamageFlash />;
+  }}
+</BrowserOnly>
+
+The red tint is **masked to Mewtwo's silhouette** using an offscreen canvas with `source-atop` compositing. It follows the outline: horns, tail, everything. It looks pretty neat.
+
+## Wrapping up
+
+I described what I wanted, Claude Code built it, I played it, told it what felt off, and it fixed it. A few hours, and my 404 page went from empty to something a bit more "me" which allowed to go to the Game page.
+
+I actually used Saw gif of "Want to play a game?". My wife wasn't a fan of that one lol
+
+There's no excuse to have a boring website anymore. The tools exist. Building personal low-stakes software is basically free now.
+
+All you need is creativity.
+
+Go play it: [didierlopes.com/game](/game)

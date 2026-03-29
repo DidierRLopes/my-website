@@ -317,7 +317,7 @@ export default function AsteroidGame(): JSX.Element {
     state.milestoneEffect = null;
     state.lastMilestoneScore = 0;
     state.revivalStartTime = performance.now();
-    state.hoOhAngleDeg = 5 + Math.random() * 10; // random 5 to 15 degrees
+    state.hoOhAngleDeg = 2 + Math.random() * 3; // random 2 to 5 degrees
     setPhase("revival");
     setScore(0);
   }, []);
@@ -944,6 +944,33 @@ export default function AsteroidGame(): JSX.Element {
       const isDark = colorMode === "dark";
       const diff = DIFFICULTIES[state.difficultyIndex];
 
+      // Pokemon body position (used for collisions and projectile origin)
+      const bodyDrawSize = SPRITE_SIZE;
+      const bodyX = cx;
+      const bodyY = groundCenterY - SPRITE_SIZE - 40;
+      // Elliptical hitbox for the pokemon body (tighter than the full sprite)
+      const hitEllipseX = cx;
+      const hitEllipseY = bodyY + bodyDrawSize * 0.45;
+      const hitEllipseRx = bodyDrawSize * 0.28; // horizontal radius
+      const hitEllipseRy = bodyDrawSize * 0.42; // vertical radius
+      // Projectile fire point — tip of arm (Mewtwo) or tail (Mew)
+      let firePivotX: number, firePivotY: number, fireArmLen: number, fireAngleOffset: number;
+      if (isDark) {
+        // Mewtwo: arm pivot + arm length along aim direction
+        firePivotX = bodyX + 0.024 * bodyDrawSize;
+        firePivotY = bodyY + 0.43 * bodyDrawSize;
+        fireArmLen = bodyDrawSize * 0.25;
+        fireAngleOffset = -Math.PI - 0.20;
+      } else {
+        // Mew: tail pivot + tail length along aim direction
+        firePivotX = bodyX - 0.02 * bodyDrawSize;
+        firePivotY = bodyY + 0.58 * bodyDrawSize;
+        fireArmLen = bodyDrawSize * 0.5;
+        fireAngleOffset = -Math.PI - 1.05;
+      }
+      const fireOriginX = firePivotX + Math.cos(state.aimAngle + fireAngleOffset + Math.PI) * fireArmLen;
+      const fireOriginY = firePivotY + Math.sin(state.aimAngle + fireAngleOffset + Math.PI) * fireArmLen;
+
       if (state.phase === "playing") {
         // Handle rotation
         if (state.keysDown.has("ArrowLeft")) {
@@ -972,8 +999,8 @@ export default function AsteroidGame(): JSX.Element {
               angle: state.aimAngle,
               startTime: time,
               duration: 1600,
-              originX: cx,
-              originY: playerY - SPRITE_SIZE / 2,
+              originX: fireOriginX,
+              originY: fireOriginY,
               startWidth: 20,
               maxWidth: 90,
               firstHit: null,
@@ -982,8 +1009,8 @@ export default function AsteroidGame(): JSX.Element {
           } else if (!isHyperbeam) {
             const speed = 5;
             state.projectiles.push({
-              x: cx,
-              y: playerY - SPRITE_SIZE / 2,
+              x: fireOriginX,
+              y: fireOriginY,
               vx: Math.cos(state.aimAngle) * speed,
               vy: Math.sin(state.aimAngle) * speed,
               radius: 8,
@@ -1040,10 +1067,30 @@ export default function AsteroidGame(): JSX.Element {
           p.y += p.vy;
         }
 
-        // Check if any pokeball crossed the curved ground — lose a life
+        // Check if any pokeball hit the pokemon (ellipse) or crossed the ground — lose a life
         const survived: Pokeball[] = [];
         for (const pb of state.pokeballs) {
-          if (pb.y + pb.radius > getGroundY(pb.x)) {
+          // Elliptical collision: normalize distance by radii
+          const edx = (pb.x - hitEllipseX) / (hitEllipseRx + pb.radius);
+          const edy = (pb.y - hitEllipseY) / (hitEllipseRy + pb.radius);
+          const hitPokemon = (edx * edx + edy * edy) < 1;
+          const hitGround = pb.y + pb.radius > getGroundY(pb.x);
+
+          if (hitPokemon || hitGround) {
+            // Spawn explosion particles at the pokeball's position (contact point)
+            const count = 8 + Math.floor(Math.random() * 4);
+            for (let i = 0; i < count; i++) {
+              const angle = Math.random() * Math.PI * 2;
+              const spd = 1 + Math.random() * 2.5;
+              state.particles.push({
+                x: pb.x, y: pb.y,
+                vx: Math.cos(angle) * spd,
+                vy: Math.sin(angle) * spd,
+                life: 1,
+                decay: 0.02 + Math.random() * 0.02,
+                color: PARTICLE_COLORS[Math.floor(Math.random() * PARTICLE_COLORS.length)],
+              });
+            }
             state.lives--;
             state.hitFlashTime = time;
             if (state.lives <= 0) {
@@ -1531,10 +1578,10 @@ export default function AsteroidGame(): JSX.Element {
         ctx.lineWidth = 2;
         ctx.setLineDash([6, 8]);
         ctx.beginPath();
-        ctx.moveTo(cx, playerY - SPRITE_SIZE / 2);
+        ctx.moveTo(fireOriginX, fireOriginY);
         ctx.lineTo(
-          cx + Math.cos(state.aimAngle) * lineLen,
-          playerY - SPRITE_SIZE / 2 + Math.sin(state.aimAngle) * lineLen
+          fireOriginX + Math.cos(state.aimAngle) * lineLen,
+          fireOriginY + Math.sin(state.aimAngle) * lineLen
         );
         ctx.stroke();
         ctx.setLineDash([]);
@@ -1832,11 +1879,13 @@ export default function AsteroidGame(): JSX.Element {
           pokemonAlpha = 0;
         }
 
-        // Transition to start when animation completes
+        // Transition to playing when animation completes
         if (revElapsed >= revivalEnd) {
           if (hoOhEl) hoOhEl.style.display = "none";
-          state.phase = "start";
-          setPhase("start");
+          state.phase = "playing";
+          state.lastSpawnTime = time;
+          state.lastShotTime = time;
+          setPhase("playing");
         }
       } else {
         // Hide Ho-Oh img when not in revival

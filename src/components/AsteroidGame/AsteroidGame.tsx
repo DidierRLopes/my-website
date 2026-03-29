@@ -106,7 +106,7 @@ interface Star {
   brightness: number;
 }
 
-type Phase = "start" | "playing" | "paused" | "gameover";
+type Phase = "start" | "playing" | "paused" | "gameover" | "revival";
 
 const PARTICLE_COLORS = ["#facc15", "#f97316", "#ef4444", "#a855f7"];
 const SPAWN_INTERVAL = 1500;
@@ -176,12 +176,17 @@ function createInitialState() {
     audioCtx: null as AudioContext | null,
     audioBuffers: {} as Record<string, AudioBuffer>,
     recentDestroys: [] as number[], // timestamps of recent pokeball destructions
+    hoOhImage: null as HTMLImageElement | null,
+    featherImage: null as HTMLImageElement | null,
+    revivalStartTime: 0,
+    hoOhAngleDeg: 0,
   };
 }
 
 export default function AsteroidGame(): JSX.Element {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const hoOhRef = useRef<HTMLImageElement>(null);
   const { colorMode } = useColorMode();
   const [phase, setPhase] = useState<Phase>("start");
   const [score, setScore] = useState(0);
@@ -233,6 +238,12 @@ export default function AsteroidGame(): JSX.Element {
     const tgImg = new Image();
     tgImg.src = "/img/tangrowth.png";
     state.tangrowthImage = tgImg;
+    const hoOhImg = new Image();
+    hoOhImg.src = "/img/ho-oh.gif";
+    state.hoOhImage = hoOhImg;
+    const ftImg = new Image();
+    ftImg.src = "/img/feather.png";
+    state.featherImage = ftImg;
     // Pre-fetch sound files as ArrayBuffers (decoding happens after AudioContext is created)
     const soundFiles: Record<string, string> = {
       hyperbeam: "/audio/pokemon/hyperbeam.mp3",
@@ -291,7 +302,7 @@ export default function AsteroidGame(): JSX.Element {
 
   const restart = useCallback(() => {
     const state = gameState.current;
-    state.phase = "start";
+    state.phase = "revival";
     state.pokeballs = [];
     state.projectiles = [];
     state.particles = [];
@@ -299,12 +310,14 @@ export default function AsteroidGame(): JSX.Element {
     state.avoided = 0;
     state.lives = 3;
     state.beam = null;
-    state.aimAngle = -Math.PI / 2;
+    state.aimAngle = -Math.PI; // arm/tail points left after revival
     state.lastShotTime = 0;
     state.lastSpawnTime = 0;
     state.milestoneEffect = null;
     state.lastMilestoneScore = 0;
-    setPhase("start");
+    state.revivalStartTime = performance.now();
+    state.hoOhAngleDeg = 5 + Math.random() * 10; // random 5 to 15 degrees
+    setPhase("revival");
     setScore(0);
   }, []);
 
@@ -1178,15 +1191,33 @@ export default function AsteroidGame(): JSX.Element {
       // === RENDER ===
       ctx.clearRect(0, 0, w, h);
 
-      // Stars
+      // Light mode: subtle light space background with dark specks
+      if (!isDark) {
+        ctx.save();
+        // Soft off-white sky gradient
+        const skyGrad = ctx.createLinearGradient(0, 0, 0, groundCenterY);
+        skyGrad.addColorStop(0, "#eef0f6");
+        skyGrad.addColorStop(0.5, "#f2f3f8");
+        skyGrad.addColorStop(1, "#f6f7fb");
+        ctx.fillStyle = skyGrad;
+        ctx.fillRect(0, 0, w, groundCenterY + 10);
+        ctx.restore();
+      }
+
+      // Stars (dark specks in light mode, bright dots in dark mode)
       for (const star of state.stars) {
         const sx = star.x * w;
         const sy = star.y * h;
         if (sy < getGroundY(sx) - 5) {
           ctx.beginPath();
           ctx.arc(sx, sy, star.size, 0, Math.PI * 2);
-          const alpha = star.brightness * (isDark ? 0.8 : 0.25);
-          ctx.fillStyle = `rgba(255,255,255,${alpha})`;
+          if (isDark) {
+            const alpha = star.brightness * 0.8;
+            ctx.fillStyle = `rgba(255,255,255,${alpha})`;
+          } else {
+            const alpha = star.brightness * 0.18;
+            ctx.fillStyle = `rgba(40,40,80,${alpha})`;
+          }
           ctx.fill();
         }
       }
@@ -1719,13 +1750,106 @@ export default function AsteroidGame(): JSX.Element {
       }
       ctx.globalAlpha = 1;
 
+      // Revival animation — Ho-Oh flies across, drops Sacred Ash feather, revives pokemon
+      let pokemonAlpha = 1;
+      const hoOhEl = hoOhRef.current;
+      if (state.phase === "revival") {
+        const revElapsed = time - state.revivalStartTime;
+        const hoOhSize = 140;
+        const hoOhCenterTime = 3000;
+        const hoOhSpeed = (w / 2 + hoOhSize) / hoOhCenterTime;
+        const hoOhX = w + hoOhSize / 2 - hoOhSpeed * revElapsed;
+        // Diagonal flight path matching the random tilt angle
+        const hoOhBaseY = h * 0.12 + 8;
+        const angleRad = state.hoOhAngleDeg * Math.PI / 180; // negative = nose down
+        const hoOhY = hoOhBaseY - Math.tan(angleRad) * (w + hoOhSize / 2 - hoOhX);
+
+        const featherDropStart = hoOhCenterTime;
+        const featherFallDuration = 2400;
+        const featherLandTime = featherDropStart + featherFallDuration;
+        const pokemonFadeDuration = 1500;
+        const revivalEnd = featherLandTime + pokemonFadeDuration + 400;
+
+        // Position Ho-Oh as HTML img (so the GIF animates)
+        if (hoOhEl) {
+          if (hoOhX > -hoOhSize) {
+            hoOhEl.style.display = "block";
+            hoOhEl.style.left = `${hoOhX - hoOhSize / 2}px`;
+            hoOhEl.style.top = `${hoOhY - hoOhSize / 2}px`;
+            hoOhEl.style.width = `${hoOhSize}px`;
+            hoOhEl.style.height = `${hoOhSize}px`;
+            hoOhEl.style.transform = `rotate(${state.hoOhAngleDeg}deg)`;
+          } else {
+            hoOhEl.style.display = "none";
+          }
+        }
+
+        // Draw feather dropping in zigzag
+        if (revElapsed >= featherDropStart) {
+          const featherElapsed = revElapsed - featherDropStart;
+          const featherProgress = Math.min(featherElapsed / featherFallDuration, 1);
+          const featherStartY = hoOhY + hoOhSize / 4;
+          const featherEndY = groundCenterY - 10;
+          const featherY = featherStartY + (featherEndY - featherStartY) * featherProgress;
+          const featherX = cx + Math.sin(featherProgress * Math.PI * 6) * 45;
+          const featherSize = 36;
+
+          const featherImg = state.featherImage;
+          if (featherImg && featherImg.complete && featherImg.naturalWidth > 0 && featherProgress < 1) {
+            ctx.save();
+            const zigzagAngle = Math.cos(featherProgress * Math.PI * 6) * 0.4;
+            ctx.translate(featherX, featherY);
+            ctx.rotate(zigzagAngle);
+            ctx.drawImage(featherImg, -featherSize / 2, -featherSize / 2, featherSize, featherSize);
+            ctx.restore();
+          }
+
+          // Landing golden burst
+          if (featherProgress >= 1 && featherElapsed < featherFallDuration + 600) {
+            const sparkleProgress = (featherElapsed - featherFallDuration) / 600;
+            ctx.save();
+            ctx.globalAlpha = 1 - sparkleProgress;
+            const burstR = 30 + sparkleProgress * 50;
+            const burstGrad = ctx.createRadialGradient(cx, featherEndY, 0, cx, featherEndY, burstR);
+            burstGrad.addColorStop(0, "rgba(255, 215, 0, 0.8)");
+            burstGrad.addColorStop(0.5, "rgba(255, 180, 50, 0.3)");
+            burstGrad.addColorStop(1, "rgba(255, 180, 50, 0)");
+            ctx.fillStyle = burstGrad;
+            ctx.beginPath();
+            ctx.arc(cx, featherEndY, burstR, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+          }
+        }
+
+        // Pokemon opacity — fade in after feather lands
+        if (revElapsed >= featherLandTime) {
+          const fadeProgress = Math.min((revElapsed - featherLandTime) / pokemonFadeDuration, 1);
+          pokemonAlpha = fadeProgress * fadeProgress * (3 - 2 * fadeProgress); // smoothstep
+        } else {
+          pokemonAlpha = 0;
+        }
+
+        // Transition to start when animation completes
+        if (revElapsed >= revivalEnd) {
+          if (hoOhEl) hoOhEl.style.display = "none";
+          state.phase = "start";
+          setPhase("start");
+        }
+      } else {
+        // Hide Ho-Oh img when not in revival
+        if (hoOhEl) hoOhEl.style.display = "none";
+      }
+
       // Character — body (static) + arm/tail (rotating to aim)
       const bodyImg = state.bodyImage;
       const armImg = state.armImage;
       const bodyReady = bodyImg && bodyImg.complete && bodyImg.naturalWidth > 0;
       const armReady = armImg && armImg.complete && armImg.naturalWidth > 0;
 
-      if (bodyReady || armReady) {
+      if ((bodyReady || armReady) && pokemonAlpha > 0) {
+        const prevGlobalAlpha = ctx.globalAlpha;
+        ctx.globalAlpha = pokemonAlpha;
         const bodyDrawSize = SPRITE_SIZE;
         const bodyX = cx;
         const bodyY = groundCenterY - SPRITE_SIZE - 40;
@@ -1781,6 +1905,7 @@ export default function AsteroidGame(): JSX.Element {
             ctx.restore();
           }
         }
+        ctx.globalAlpha = prevGlobalAlpha;
       }
 
       // Psystrike milestone visuals — expanding wave destroys balls on contact
@@ -2397,6 +2522,16 @@ export default function AsteroidGame(): JSX.Element {
       }}
     >
       <canvas ref={canvasRef} style={{ display: "block", cursor: phase !== "playing" ? "pointer" : "default", touchAction: "none" }} />
+      <img
+        ref={hoOhRef}
+        src="/img/ho-oh.gif"
+        alt=""
+        style={{
+          position: "absolute",
+          display: "none",
+          pointerEvents: "none",
+        }}
+      />
     </div>
   );
 }

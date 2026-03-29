@@ -184,7 +184,7 @@ function createInitialState() {
   };
 }
 
-export default function AsteroidGame(): JSX.Element {
+export default function PokemonGame(): JSX.Element {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const hoOhRef = useRef<HTMLImageElement>(null);
@@ -962,11 +962,11 @@ export default function AsteroidGame(): JSX.Element {
         fireArmLen = bodyDrawSize * 0.25;
         fireAngleOffset = -Math.PI - 0.20;
       } else {
-        // Mew: tail pivot + tail length along aim direction
-        firePivotX = bodyX - 0.02 * bodyDrawSize;
-        firePivotY = bodyY + 0.58 * bodyDrawSize;
-        fireArmLen = bodyDrawSize * 0.5;
-        fireAngleOffset = -Math.PI - 1.05;
+        // Mew: fire from head area in the aim direction
+        firePivotX = bodyX;
+        firePivotY = bodyY + 0.35 * bodyDrawSize;
+        fireArmLen = bodyDrawSize * 0.35;
+        fireAngleOffset = -Math.PI; // projects straight along aimAngle
       }
       const fireOriginX = firePivotX + Math.cos(state.aimAngle + fireAngleOffset + Math.PI) * fireArmLen;
       const fireOriginY = firePivotY + Math.sin(state.aimAngle + fireAngleOffset + Math.PI) * fireArmLen;
@@ -1943,7 +1943,7 @@ export default function AsteroidGame(): JSX.Element {
             const tailSize = bodyDrawSize * 1.1;
             ctx.save();
             ctx.translate(pivotX, pivotY);
-            ctx.rotate(state.aimAngle - Math.PI - 1.05);
+            ctx.rotate(state.aimAngle - Math.PI - 0.65);
             ctx.drawImage(armImg, -tailSize / 2, -tailSize / 2, tailSize, tailSize);
             ctx.restore();
           }

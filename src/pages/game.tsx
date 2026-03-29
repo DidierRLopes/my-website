@@ -25,9 +25,9 @@ export default function GamePage(): JSX.Element {
         <div style={{ flex: 1, minHeight: 0 }}>
           <BrowserOnly fallback={<div style={{ height: "100%" }} />}>
             {() => {
-              const AsteroidGame =
-                require("@site/src/components/AsteroidGame/AsteroidGame").default;
-              return <AsteroidGame />;
+              const PokemonGame =
+                require("@site/src/components/PokemonGame/PokemonGame").default;
+              return <PokemonGame />;
             }}
           </BrowserOnly>
         </div>

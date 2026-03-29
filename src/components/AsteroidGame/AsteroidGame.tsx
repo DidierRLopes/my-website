@@ -724,10 +724,10 @@ export default function AsteroidGame(): JSX.Element {
       ctx.restore();
     };
 
-    const drawPokeballGuide = (centerX: number, startY: number, isDark: boolean) => {
+    const drawPokeballGuide = (centerX: number, startY: number, isDark: boolean, colCount = 2) => {
       const spriteSize = 20;
       const rowHeight = 26;
-      const cols = 2;
+      const cols = colCount;
       const colGap = 24;
 
       // Measure widest row in each column to size them
@@ -1872,13 +1872,15 @@ export default function AsteroidGame(): JSX.Element {
         }
       }
 
-      // Snorlax — chilling on the left side of the Earth curve
-      const snorlaxImg = state.snorlaxImage;
-      if (snorlaxImg && snorlaxImg.complete && snorlaxImg.naturalWidth > 0) {
-        const snSize = 100;
-        const snX = w * 0.05;
-        const snGroundY = getGroundY(snX + snSize / 2);
-        ctx.drawImage(snorlaxImg, snX, snGroundY - snSize * 0.3, snSize, snSize);
+      // Snorlax — chilling on the left side of the Earth curve (hidden on mobile)
+      if (w >= 500) {
+        const snorlaxImg = state.snorlaxImage;
+        if (snorlaxImg && snorlaxImg.complete && snorlaxImg.naturalWidth > 0) {
+          const snSize = 100;
+          const snX = w * 0.05;
+          const snGroundY = getGroundY(snX + snSize / 2);
+          ctx.drawImage(snorlaxImg, snX, snGroundY - snSize * 0.3, snSize, snSize);
+        }
       }
 
       // Tangrowth — only appears during milestone effects, rises from bottom
@@ -2065,32 +2067,42 @@ export default function AsteroidGame(): JSX.Element {
 
       // Score display + pause button during playing/paused
       if (state.phase === "playing" || state.phase === "paused") {
+        const isMobileHUD = w < 500;
         ctx.save();
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         ctx.fillStyle = isDark ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.55)";
-        ctx.font = "bold 18px system-ui, sans-serif";
+        ctx.font = `bold ${isMobileHUD ? 15 : 18}px system-ui, sans-serif`;
 
-        // Measure score text to position pause icon to its left
+        // Score text
         const scoreText = `Score: ${state.score}`;
         const scoreW = ctx.measureText(scoreText).width;
         ctx.fillText(scoreText, cx, groundCenterY + 22);
 
-        // Pause button — rounded rect with two vertical bars
-        const pauseBtnSize = 32;
-        const pauseBtnX = cx - scoreW / 2 - pauseBtnSize - 14;
-        const pauseBtnY = groundCenterY + 22 - pauseBtnSize / 2;
-        const hitboxPad = 4;
+        // Button sizing
+        const btnSize = isMobileHUD ? 38 : 32;
+        const hitboxPad = isMobileHUD ? 8 : 4;
+
+        // On mobile: place pause & sound in top-right; on desktop: left of score
+        let pauseBtnX: number, pauseBtnY: number;
+        if (isMobileHUD) {
+          pauseBtnX = w - btnSize - 12;
+          pauseBtnY = 12;
+        } else {
+          pauseBtnX = cx - scoreW / 2 - btnSize - 14;
+          pauseBtnY = groundCenterY + 22 - btnSize / 2;
+        }
+
         state.pauseHitbox = {
           x: pauseBtnX - hitboxPad, y: pauseBtnY - hitboxPad,
-          w: pauseBtnSize + hitboxPad * 2, h: pauseBtnSize + hitboxPad * 2,
+          w: btnSize + hitboxPad * 2, h: btnSize + hitboxPad * 2,
         };
         const isHovering = state.phase === "playing" && hitTest(state.mouseX, state.mouseY, state.pauseHitbox);
 
         ctx.save();
         // Background circle
         ctx.beginPath();
-        ctx.arc(pauseBtnX + pauseBtnSize / 2, pauseBtnY + pauseBtnSize / 2, pauseBtnSize / 2, 0, Math.PI * 2);
+        ctx.arc(pauseBtnX + btnSize / 2, pauseBtnY + btnSize / 2, btnSize / 2, 0, Math.PI * 2);
         ctx.fillStyle = isHovering
           ? (isDark ? "rgba(168,85,247,0.4)" : "rgba(120,50,200,0.25)")
           : (isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.08)");
@@ -2102,11 +2114,11 @@ export default function AsteroidGame(): JSX.Element {
         }
 
         // Two bars
-        const barW = 5;
-        const barH = 16;
-        const barGap = 6;
-        const barCx = pauseBtnX + pauseBtnSize / 2;
-        const barCy = pauseBtnY + pauseBtnSize / 2;
+        const barW = isMobileHUD ? 6 : 5;
+        const barH = isMobileHUD ? 18 : 16;
+        const barGap = isMobileHUD ? 7 : 6;
+        const barCx = pauseBtnX + btnSize / 2;
+        const barCy = pauseBtnY + btnSize / 2;
         ctx.fillStyle = isHovering
           ? (isDark ? "#c084fc" : "#7c3aed")
           : (isDark ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.5)");
@@ -2114,19 +2126,25 @@ export default function AsteroidGame(): JSX.Element {
         ctx.fillRect(barCx + barGap / 2, barCy - barH / 2, barW, barH);
         ctx.restore();
 
-        // Sound toggle button — left of pause button
-        const soundBtnSize = 32;
-        const soundBtnX = pauseBtnX - soundBtnSize - 8;
-        const soundBtnY = pauseBtnY;
+        // Sound toggle button — pill shape, left of pause button
+        const soundBtnW = btnSize + 14; // wider than pause for icon + waves
+        let soundBtnX: number, soundBtnY: number;
+        if (isMobileHUD) {
+          soundBtnX = pauseBtnX - soundBtnW - 10;
+          soundBtnY = pauseBtnY;
+        } else {
+          soundBtnX = pauseBtnX - soundBtnW - 8;
+          soundBtnY = pauseBtnY;
+        }
         state.soundHitbox = {
           x: soundBtnX - hitboxPad, y: soundBtnY - hitboxPad,
-          w: soundBtnSize + hitboxPad * 2, h: soundBtnSize + hitboxPad * 2,
+          w: soundBtnW + hitboxPad * 2, h: btnSize + hitboxPad * 2,
         };
         const isSoundHover = hitTest(state.mouseX, state.mouseY, state.soundHitbox);
 
         ctx.save();
         ctx.beginPath();
-        ctx.arc(soundBtnX + soundBtnSize / 2, soundBtnY + soundBtnSize / 2, soundBtnSize / 2, 0, Math.PI * 2);
+        ctx.roundRect(soundBtnX, soundBtnY, soundBtnW, btnSize, btnSize / 2);
         ctx.fillStyle = isSoundHover
           ? (isDark ? "rgba(168,85,247,0.4)" : "rgba(120,50,200,0.25)")
           : (isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.08)");
@@ -2138,8 +2156,8 @@ export default function AsteroidGame(): JSX.Element {
         }
 
         // Speaker icon
-        const sCx = soundBtnX + soundBtnSize / 2;
-        const sCy = soundBtnY + soundBtnSize / 2;
+        const sCx = soundBtnX + soundBtnW / 2;
+        const sCy = soundBtnY + btnSize / 2;
         const iconColor = isSoundHover
           ? (isDark ? "#c084fc" : "#7c3aed")
           : (isDark ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.5)");
@@ -2148,48 +2166,51 @@ export default function AsteroidGame(): JSX.Element {
         ctx.lineWidth = 1.8;
         ctx.lineCap = "round";
 
-        // Speaker body (small rectangle + triangle)
+        // Speaker body (small rectangle + triangle) — shifted left for gap
+        const spkOff = -3; // shift speaker left
         ctx.beginPath();
-        ctx.rect(sCx - 7, sCy - 4, 5, 8);
+        ctx.rect(sCx - 7 + spkOff, sCy - 4, 5, 8);
         ctx.fill();
         ctx.beginPath();
-        ctx.moveTo(sCx - 2, sCy - 4);
-        ctx.lineTo(sCx + 4, sCy - 8);
-        ctx.lineTo(sCx + 4, sCy + 8);
-        ctx.lineTo(sCx - 2, sCy + 4);
+        ctx.moveTo(sCx - 2 + spkOff, sCy - 4);
+        ctx.lineTo(sCx + 4 + spkOff, sCy - 8);
+        ctx.lineTo(sCx + 4 + spkOff, sCy + 8);
+        ctx.lineTo(sCx - 2 + spkOff, sCy + 4);
         ctx.closePath();
         ctx.fill();
 
+        const waveOff = 4; // shift waves/X right
         if (state.soundEnabled) {
           // Sound waves
           ctx.beginPath();
-          ctx.arc(sCx + 5, sCy, 4, -Math.PI / 4, Math.PI / 4);
+          ctx.arc(sCx + 5 + waveOff, sCy, 4, -Math.PI / 4, Math.PI / 4);
           ctx.stroke();
           ctx.beginPath();
-          ctx.arc(sCx + 5, sCy, 8, -Math.PI / 4, Math.PI / 4);
+          ctx.arc(sCx + 5 + waveOff, sCy, 8, -Math.PI / 4, Math.PI / 4);
           ctx.stroke();
         } else {
           // X mark for muted
           ctx.beginPath();
-          ctx.moveTo(sCx + 5, sCy - 5);
-          ctx.lineTo(sCx + 11, sCy + 5);
+          ctx.moveTo(sCx + 5 + waveOff, sCy - 5);
+          ctx.lineTo(sCx + 11 + waveOff, sCy + 5);
           ctx.stroke();
           ctx.beginPath();
-          ctx.moveTo(sCx + 11, sCy - 5);
-          ctx.lineTo(sCx + 5, sCy + 5);
+          ctx.moveTo(sCx + 11 + waveOff, sCy - 5);
+          ctx.lineTo(sCx + 5 + waveOff, sCy + 5);
           ctx.stroke();
         }
         ctx.restore();
 
-        // Lives — pokemon center icons
+        // Lives — pokemon center icons (smaller on mobile)
         const pcImg = state.pokemonCenterImage;
         if (pcImg && pcImg.complete && pcImg.naturalWidth > 0) {
-          const iconSize = 64;
-          const iconGap = 10;
+          const iconSize = isMobileHUD ? 40 : 64;
+          const iconGap = isMobileHUD ? 6 : 10;
           const totalLivesW = state.lives * iconSize + (state.lives - 1) * iconGap;
           const livesStartX = cx - totalLivesW / 2;
+          const livesY = isMobileHUD ? groundCenterY + 38 : groundCenterY + 44;
           for (let i = 0; i < state.lives; i++) {
-            ctx.drawImage(pcImg, livesStartX + i * (iconSize + iconGap), groundCenterY + 44, iconSize, iconSize);
+            ctx.drawImage(pcImg, livesStartX + i * (iconSize + iconGap), livesY, iconSize, iconSize);
           }
         }
 
@@ -2270,8 +2291,12 @@ export default function AsteroidGame(): JSX.Element {
           ctx.fillText(`Help ${pokemon} defend Pokopia from humans`, cx, h * 0.12 + fontSize * 0.8);
 
           if (isMobile) {
-            // Mobile: skip pokeball guide, stack difficulty + button vertically
-            const rowY = h * 0.35;
+            // Mobile: single-column pokeball guide
+            const guideY = h * 0.22;
+            drawPokeballGuide(cx, guideY, isDark, 1);
+
+            const guideRows = POKEBALL_TYPES.length;
+            const rowY = guideY + guideRows * 26 + 30;
             const diffBoxW = 180;
             drawDifficultySelector(cx - diffBoxW / 2, rowY, isDark);
             drawActionButton(cx - 65, rowY + 60, "START", isDark);
@@ -2316,8 +2341,12 @@ export default function AsteroidGame(): JSX.Element {
           ctx.fillText(`${state.score}`, cx, valueY);
 
           if (isMobile) {
-            // Mobile: skip pokeball guide, stack vertically
-            const rowY = valueY + 60;
+            // Mobile: single-column pokeball guide
+            const guideStartY = valueY + 40;
+            drawPokeballGuide(cx, guideStartY, isDark, 1);
+
+            const guideRows = POKEBALL_TYPES.length;
+            const rowY = guideStartY + guideRows * 26 + 30;
             const diffBoxW = 180;
             drawDifficultySelector(cx - diffBoxW / 2, rowY, isDark);
             drawActionButton(cx - 65, rowY + 60, "RESTART", isDark);

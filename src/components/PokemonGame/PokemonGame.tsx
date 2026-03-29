@@ -956,13 +956,18 @@ export default function PokemonGame(): JSX.Element {
       // Projectile fire point — tip of arm (Mewtwo) or tail orb (Mew)
       let fireOriginX: number, fireOriginY: number;
       if (isDark) {
-        // Mewtwo: arm pivot + arm length along aim direction (works correctly)
-        const firePivotX = bodyX + 0.024 * bodyDrawSize;
-        const firePivotY = bodyY + 0.43 * bodyDrawSize;
-        const fireArmLen = bodyDrawSize * 0.25;
-        const dir = state.aimAngle - 0.20;
-        fireOriginX = firePivotX + Math.cos(dir) * fireArmLen;
-        fireOriginY = firePivotY + Math.sin(dir) * fireArmLen;
+        // Mewtwo: compute from actual hand position in the arm image
+        // Hand (fingertip cluster) is in the upper-left of the image
+        const armPivotX = bodyX + 0.024 * bodyDrawSize;
+        const armPivotY = bodyY + 0.43 * bodyDrawSize;
+        const armRotation = state.aimAngle - Math.PI - 0.20;
+        const armSize = bodyDrawSize * 0.5;
+        // Hand center in local image coords (relative to image center)
+        const localHandX = -0.50 * armSize / 2;
+        const localHandY = -0.40 * armSize / 2;
+        // Apply rotation matrix to get screen position
+        fireOriginX = armPivotX + localHandX * Math.cos(armRotation) - localHandY * Math.sin(armRotation);
+        fireOriginY = armPivotY + localHandX * Math.sin(armRotation) + localHandY * Math.cos(armRotation);
       } else {
         // Mew: compute from actual orb position in the tail image
         // The orb is in the upper-left of the image, not at center-left

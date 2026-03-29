@@ -2309,14 +2309,14 @@ export default function AsteroidGame(): JSX.Element {
         const btnSize = isMobileHUD ? 38 : 32;
         const hitboxPad = isMobileHUD ? 8 : 4;
 
-        // On mobile: place pause & sound in top-right; on desktop: left of score
+        // Place pause & sound on the right side of the world, side by side
         let pauseBtnX: number, pauseBtnY: number;
         if (isMobileHUD) {
           pauseBtnX = w - btnSize - 12;
           pauseBtnY = 12;
         } else {
-          pauseBtnX = cx - scoreW / 2 - btnSize - 14;
-          pauseBtnY = groundCenterY + 22 - btnSize / 2;
+          pauseBtnX = w - btnSize - 10;
+          pauseBtnY = groundCenterY + 80;
         }
 
         state.pauseHitbox = {
@@ -2352,7 +2352,7 @@ export default function AsteroidGame(): JSX.Element {
         ctx.fillRect(barCx + barGap / 2, barCy - barH / 2, barW, barH);
         ctx.restore();
 
-        // Sound toggle button — pill shape, left of pause button
+        // Sound toggle button — pill shape, side by side left of pause
         const soundBtnW = btnSize + 14; // wider than pause for icon + waves
         let soundBtnX: number, soundBtnY: number;
         if (isMobileHUD) {

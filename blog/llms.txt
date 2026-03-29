@@ -161,3 +161,4 @@
 - [2026-03-03-no-room-to-hide](https://didierlopes.com/blog/2026-03-03-no-room-to-hide)
 - [2026-03-06-the-era-of-on-demand-software](https://didierlopes.com/blog/2026-03-06-the-era-of-on-demand-software)
 - [2026-03-27-before-the-pokemon-tcg-the-lost-era-of-pokemon-cards](https://didierlopes.com/blog/2026-03-27-before-the-pokemon-tcg-the-lost-era-of-pokemon-cards)
+- [2026-03-27-pokemon-tcg-lore](https://didierlopes.com/blog/2026-03-27-pokemon-tcg-lore)

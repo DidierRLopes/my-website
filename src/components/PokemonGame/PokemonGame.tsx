@@ -953,23 +953,30 @@ export default function PokemonGame(): JSX.Element {
       const hitEllipseY = bodyY + bodyDrawSize * 0.45;
       const hitEllipseRx = bodyDrawSize * 0.28; // horizontal radius
       const hitEllipseRy = bodyDrawSize * 0.42; // vertical radius
-      // Projectile fire point — tip of arm (Mewtwo) or tail (Mew)
-      let firePivotX: number, firePivotY: number, fireArmLen: number, fireAngleOffset: number;
+      // Projectile fire point — tip of arm (Mewtwo) or tail orb (Mew)
+      let fireOriginX: number, fireOriginY: number;
       if (isDark) {
-        // Mewtwo: arm pivot + arm length along aim direction
-        firePivotX = bodyX + 0.024 * bodyDrawSize;
-        firePivotY = bodyY + 0.43 * bodyDrawSize;
-        fireArmLen = bodyDrawSize * 0.25;
-        fireAngleOffset = -Math.PI - 0.20;
+        // Mewtwo: arm pivot + arm length along aim direction (works correctly)
+        const firePivotX = bodyX + 0.024 * bodyDrawSize;
+        const firePivotY = bodyY + 0.43 * bodyDrawSize;
+        const fireArmLen = bodyDrawSize * 0.25;
+        const dir = state.aimAngle - 0.20;
+        fireOriginX = firePivotX + Math.cos(dir) * fireArmLen;
+        fireOriginY = firePivotY + Math.sin(dir) * fireArmLen;
       } else {
-        // Mew: fire from head area in the aim direction
-        firePivotX = bodyX;
-        firePivotY = bodyY + 0.35 * bodyDrawSize;
-        fireArmLen = bodyDrawSize * 0.35;
-        fireAngleOffset = -Math.PI; // projects straight along aimAngle
+        // Mew: compute from actual orb position in the tail image
+        // The orb is in the upper-left of the image, not at center-left
+        const tailPivotX = bodyX + 0.03 * bodyDrawSize;
+        const tailPivotY = bodyY + 0.52 * bodyDrawSize;
+        const tailRotation = state.aimAngle - Math.PI - 0.65;
+        const tailSize = bodyDrawSize * 1.1;
+        // Orb center in local image coords (relative to image center)
+        const localTipX = -0.43 * tailSize / 2;
+        const localTipY = -0.68 * tailSize / 2;
+        // Apply rotation matrix to get screen position
+        fireOriginX = tailPivotX + localTipX * Math.cos(tailRotation) - localTipY * Math.sin(tailRotation);
+        fireOriginY = tailPivotY + localTipX * Math.sin(tailRotation) + localTipY * Math.cos(tailRotation);
       }
-      const fireOriginX = firePivotX + Math.cos(state.aimAngle + fireAngleOffset + Math.PI) * fireArmLen;
-      const fireOriginY = firePivotY + Math.sin(state.aimAngle + fireAngleOffset + Math.PI) * fireArmLen;
 
       if (state.phase === "playing") {
         // Handle rotation
@@ -1935,8 +1942,8 @@ export default function PokemonGame(): JSX.Element {
         } else {
           // === MEW ===
           // Tail pivot = base of tail on the body
-          const pivotX = bodyX - 0.02 * bodyDrawSize;
-          const pivotY = bodyY + 0.58 * bodyDrawSize;
+          const pivotX = bodyX + 0.03 * bodyDrawSize;
+          const pivotY = bodyY + 0.52 * bodyDrawSize;
 
           // Draw tail first (behind Mew body)
           if (armReady) {

@@ -180,6 +180,7 @@ function createInitialState() {
     featherImage: null as HTMLImageElement | null,
     revivalStartTime: 0,
     hoOhAngleDeg: 0,
+    hitFlashTime: 0, // timestamp of last damage hit for pain effect
   };
 }
 
@@ -1044,6 +1045,7 @@ export default function AsteroidGame(): JSX.Element {
         for (const pb of state.pokeballs) {
           if (pb.y + pb.radius > getGroundY(pb.x)) {
             state.lives--;
+            state.hitFlashTime = time;
             if (state.lives <= 0) {
               state.phase = "gameover";
               setPhase("gameover");
@@ -1906,6 +1908,56 @@ export default function AsteroidGame(): JSX.Element {
           }
         }
         ctx.globalAlpha = prevGlobalAlpha;
+
+        // Damage hit pain effect — red tint + scan line masked to pokemon silhouette
+        if (state.hitFlashTime > 0 && bodyReady) {
+          const hitElapsed = time - state.hitFlashTime;
+          const hitDuration = 500;
+          if (hitElapsed < hitDuration) {
+            const hitProgress = hitElapsed / hitDuration;
+            const scanLocalY = hitProgress * bodyDrawSize;
+            const hitAlpha = hitProgress < 0.1
+              ? hitProgress / 0.1
+              : 1 - (hitProgress - 0.1) / 0.9;
+
+            // Offscreen canvas to mask effects to the pokemon's actual pixels
+            const offCanvas = document.createElement("canvas");
+            offCanvas.width = bodyDrawSize;
+            offCanvas.height = bodyDrawSize;
+            const offCtx = offCanvas.getContext("2d")!;
+
+            // Draw body sprite as the pixel mask
+            offCtx.drawImage(bodyImg, 0, 0, bodyDrawSize, bodyDrawSize);
+
+            // source-atop: subsequent draws only appear where sprite pixels exist
+            offCtx.globalCompositeOperation = "source-atop";
+
+            // Full-body red tint (fades with time)
+            offCtx.globalAlpha = hitAlpha * 0.4;
+            offCtx.fillStyle = "#dc2626";
+            offCtx.fillRect(0, 0, bodyDrawSize, bodyDrawSize);
+
+            // Bright scan line sweeping down the body
+            offCtx.globalAlpha = hitAlpha * 0.85;
+            const lineH = 6;
+            const scanGrad = offCtx.createLinearGradient(0, scanLocalY - lineH * 2, 0, scanLocalY + lineH * 2);
+            scanGrad.addColorStop(0, "rgba(239, 68, 68, 0)");
+            scanGrad.addColorStop(0.3, "rgba(255, 80, 80, 0.8)");
+            scanGrad.addColorStop(0.5, "rgba(255, 180, 180, 1)");
+            scanGrad.addColorStop(0.7, "rgba(255, 80, 80, 0.8)");
+            scanGrad.addColorStop(1, "rgba(239, 68, 68, 0)");
+            offCtx.fillStyle = scanGrad;
+            offCtx.fillRect(0, scanLocalY - lineH * 2, bodyDrawSize, lineH * 4);
+
+            // White-hot core of scan line
+            offCtx.globalAlpha = hitAlpha * 0.7;
+            offCtx.fillStyle = "rgba(255, 220, 220, 1)";
+            offCtx.fillRect(0, scanLocalY - 1, bodyDrawSize, 2);
+
+            // Draw the masked result onto the main canvas
+            ctx.drawImage(offCanvas, cx - bodyDrawSize / 2, bodyY, bodyDrawSize, bodyDrawSize);
+          }
+        }
       }
 
       // Psystrike milestone visuals — expanding wave destroys balls on contact

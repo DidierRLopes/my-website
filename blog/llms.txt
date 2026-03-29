@@ -160,4 +160,7 @@
 - [2026-02-24-no-financial-terminal-will-survive](https://didierlopes.com/blog/2026-02-24-no-financial-terminal-will-survive)
 - [2026-03-03-no-room-to-hide](https://didierlopes.com/blog/2026-03-03-no-room-to-hide)
 - [2026-03-06-the-era-of-on-demand-software](https://didierlopes.com/blog/2026-03-06-the-era-of-on-demand-software)
+- [2026-03-11-i-built-an-ai-agent-that-builds-openbb-apps](https://didierlopes.com/blog/2026-03-11-i-built-an-ai-agent-that-builds-openbb-apps)
+- [2026-03-18-my-ai-agent-wrote-a-research-paper](https://didierlopes.com/blog/2026-03-18-my-ai-agent-wrote-a-research-paper)
+- [2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal](https://didierlopes.com/blog/2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal)
 - [2026-03-27-pokemon-tcg-lore](https://didierlopes.com/blog/2026-03-27-pokemon-tcg-lore)

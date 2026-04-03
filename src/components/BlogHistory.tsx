@@ -309,7 +309,11 @@ export default function BlogHistory({ posts = [], isDesktop }: BlogHistoryProps)
 														src={
 															post.content_html.match(
 																/<img.*?src="(.*?)"/,
-															)?.[1] || ""
+															)?.[1] || (() => {
+															const d = new Date(post.date_modified);
+															const slug = post.id?.split('/blog/')?.[1];
+															return slug ? `/blog/${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}-${String(d.getUTCDate()).padStart(2, '0')}-${slug}.webp` : "";
+														})()
 														}
 														alt={post.title}
 														style={{

@@ -44,7 +44,7 @@ function Beliefs({ isDesktop, isTablet, githubSrc, githubChartSrc }) {
             )
           }
         >
-          <div className="flex items-center justify-center w-full">
+          <div className="flex items-center justify-center w-full h-full">
             <picture className="flex justify-center">
               <source srcSet={githubSrc} />
               {/* fallback */}
@@ -56,17 +56,16 @@ function Beliefs({ isDesktop, isTablet, githubSrc, githubChartSrc }) {
             </picture>
           </div>
           <div className="flex items-center justify-center w-full h-full">
-            <picture className="flex justify-center items-center">
-              <source srcSet={githubChartSrc} />
-              <img
-                alt="GitHub chart"
-                src={githubChartSrc}
-                style={{
-                  maxWidth: isDesktop ? '600px' : isTablet ? '500px' : '300px',
-                  margin: 'auto',
-                }}
-              />
-            </picture>
+            <iframe
+              title="GitHub contribution chart"
+              src={githubChartSrc}
+              style={{
+                width: isDesktop ? '700px' : isTablet ? '500px' : '300px',
+                height: isDesktop ? '380px' : isTablet ? '320px' : '260px',
+                border: 'none',
+                margin: 'auto',
+              }}
+            />
           </div>
         </Carousel>
       </div>

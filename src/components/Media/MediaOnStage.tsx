@@ -3,6 +3,24 @@ import VideosList from "../General/VideosList";
 
 const data = [
 	{
+		title: "APIs for Analytics & MCP for Point-in-Time Data",
+		description:
+			"The MCP hype suggests every data request should go through tool calls. But not all queries are equal - rich, multi-dimensional analytics and lightweight point-in-time lookups have fundamentally different needs, and treating them the same leads to brittle agents and poor user experiences. In this lightning talk, Didier Lopes (Founder & CEO, OpenBB) shows how OpenBB draws this line from their financial workspace: Routing heavy analytical workloads through API and point-in-time data queries through MCP. In the end, you'll see how both can be first-class citizens in your financial workspace.",
+		date: "2026-04-02",
+		location: "MCP in the Wild: The Future of Data Agents in Production (NYC)",
+		image: "/media/mcp-in-the-wild.jpg",
+		info: "More information on the event can be found <a href='https://luma.com/e1y4c9jv' target='_blank' rel='noopener noreferrer'>here</a>.",
+	},
+	{
+		title: "Fragmentation Kills Alpha",
+		description:
+			"Markets have commoditized data, speed, and models. The remaining edge lives in how you connect them. This talk introduces the new alpha loop, Data x AI x Context, and what it takes to build a system where insights compound.",
+		date: "2026-03-31",
+		location: "Future Alpha",
+		image: "/media/future-alpha.jpg",
+		info: "More information on the event can be found <a href='https://www.alphaevents.com/events-futurealphaglobal' target='_blank' rel='noopener noreferrer'>here</a>.",
+	},
+	{
 		title: "Quant Dev & Applied AI",
 		description:
 			"Didier will demonstrate how firms can integrate MCP servers into their Workspace and gain full transparency into data and tool usage. But also by sharing how the MCP tools can be converted into visual widgets that analysts can interact with.<br/><br/>Future of Quant Development in the Age of AI & AI Agents panel.",

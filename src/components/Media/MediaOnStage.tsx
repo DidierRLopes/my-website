@@ -3,6 +3,15 @@ import VideosList from "../General/VideosList";
 
 const data = [
 	{
+		title: "Entrepreneurship in Quant Finance",
+		description:
+			"Also presented 'What it takes to build an AI financial workspace from zero'.",
+		date: "2026-04-10",
+		location: "Quaint Quant Conference - SMU Cox School of Business in Dallas, Texas",
+		image: "/media/quaintconference.jpg",
+		info: "More information on the event can be found <a href='https://www.quaintquantconference.com/' target='_blank' rel='noopener noreferrer'>here</a>.",
+	},
+	{
 		title: "APIs for Analytics & MCP for Point-in-Time Data",
 		description:
 			"The MCP hype suggests every data request should go through tool calls. But not all queries are equal - rich, multi-dimensional analytics and lightweight point-in-time lookups have fundamentally different needs, and treating them the same leads to brittle agents and poor user experiences. In this lightning talk, Didier Lopes (Founder & CEO, OpenBB) shows how OpenBB draws this line from their financial workspace: Routing heavy analytical workloads through API and point-in-time data queries through MCP. In the end, you'll see how both can be first-class citizens in your financial workspace.",

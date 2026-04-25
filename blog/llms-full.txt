@@ -24191,3 +24191,1014 @@ There's no excuse to have a boring website anymore. The tools exist. Building pe
 All you need is creativity.
 
 Go play it: [didierlopes.com/game](/game)
+
+---
+
+---
+slug: apis-for-analytics-mcp-for-point-in-time-data
+title: "APIs for Analytics, MCP for Point-in-Time Data"
+date: 2026-04-07
+image: /blog/2026-04-07-apis-for-analytics-mcp-for-point-in-time-data.webp
+tags:
+- mcp
+- api
+- openbb
+- ai
+description: "MCP adoption is real."
+hideSidebar: true
+---
+
+MCP adoption is real.
+
+<!-- truncate -->
+
+At the Future Alpha event a few days ago, most panels that were talking about AI ended up talking about MCP. That was not the case a few months ago.
+
+Buy-side is paying attention. Two Sigma compared MCP adoption to ATM adoption driven by interbank card networks. Sell-side too. Goldman Sachs is betting on it heavily. And data vendors who want to reach end users are now forced to build MCP servers. Some were even mentioning how the consumption-based pricing model is the future.
+
+So MCP has momentum.
+
+But everyone has seen the recent posts on CLI > MCP.
+
+So let's debunk that first.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-07-apis-for-analytics-mcp-for-point-in-time-data_1.webp" alt="CLI vs MCP meme" />
+</p>
+
+The short answer is no. They solve different problems.
+
+**CLI is about direct execution within an environment you already have access to.**
+
+You open a terminal, run commands, interact with files, processes, and network resources. The trust boundary is the environment itself: the OS, the container, IAM, whatever. The interface doesn't constrain intent. If you can run it, you can run it.
+
+**MCP is about controlled access to capabilities exposed by a system you don't have direct access to.**
+
+The trust boundary is the server, not the environment. The server defines what you can do, with what inputs, and whether you're allowed. It exposes scoped tools with typed I/O. The agent sends requests. The server decides what happens.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-07-apis-for-analytics-mcp-for-point-in-time-data_2.webp" alt="CLI vs MCP diagram showing trust boundaries" />
+</p>
+
+This matters because agents aren't humans sitting at a terminal. An agent needs to connect to systems, authenticate, discover what's available, and operate within boundaries. That's what MCP does. It gives agents a standardized way to get access and permission to external systems.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-07-apis-for-analytics-mcp-for-point-in-time-data_3.webp" alt="MCP agent authentication and discovery flow" />
+</p>
+
+We see this concretely in the OpenBB Workspace. When you connect an MCP server like Carbon Arc, the agent authenticates via OAuth, checks the credits in my account, discovers the available tools, and operates within the scope that server exposes.
+
+**But you may ask...**
+
+> *Haven't we figured out access and permissions of data & tools for humans?*
+
+This is a fair question.
+
+And we have.
+
+It's called API for Application Programming Interface.
+
+**So if an agent is trained on human data, shouldn't that suffice?**
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-07-apis-for-analytics-mcp-for-point-in-time-data_4.webp" alt="API fragmentation across providers" />
+</p>
+
+## The problem is that APIs are bespoke
+
+Every provider has its own auth flow, its own endpoint structure, its own pagination, its own error codes, its own rate limiting. Provider A uses OAuth 2.0, REST with cursor pagination, and returns JSON errors. Provider B uses API key plus HMAC, GraphQL with relay pages, and returns status codes with a body. Provider C uses mTLS with tokens, gRPC with offset pagination, and has a custom error schema. N providers means N integrations. Each one is a custom job.
+
+**MCP is a universal protocol.**
+
+One client speaks to N MCP servers the same way. The agent doesn't need to know it's talking to different servers. It discovers what's available, calls it, gets results. Every server exposes tools/list, tools/call, and typed responses. N providers means one integration. Same interface every time.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-07-apis-for-analytics-mcp-for-point-in-time-data_5.webp" alt="API vs MCP integration comparison" />
+</p>
+
+## Are API and MCP the same in a way?
+
+This is from the [documentation from FastMCP](https://gofastmcp.com/servers/server) (one of the most popular MCP frameworks in Python):
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-07-apis-for-analytics-mcp-for-point-in-time-data_6.webp" alt="FastMCP documentation" />
+</p>
+
+And shows that a function, which can be turned into an API with FastAPI, only requires 1 line of code to be turned into an MCP tool.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-07-apis-for-analytics-mcp-for-point-in-time-data_7.webp" alt="FastMCP code example showing one-line conversion" />
+</p>
+
+But there are real differences beyond standardization.
+
+- **Data volume.** APIs are built for bulk. You can stream gigabytes, paginate through millions of rows, download entire datasets. MCP is designed for agent-sized bites. The responses need to fit in a context window. You wouldn't use MCP to bulk export a year of tick data. You'd use an API.
+
+- **Caller intent.** APIs assume the caller already knows what it wants. The developer reads the docs, picks the endpoint, constructs the request. MCP assumes the caller needs to figure out what it wants. Discovery, schema inspection, parameter descriptions. The interface is designed for a reasoning agent that explores before it acts.
+
+- **Granularity of exposure.** An API typically exposes everything. Full CRUD, admin endpoints, bulk operations, the entire surface area. MCP is curated. You expose only what you want the agent to do. Nothing more.
+
+- **Composition.** A single MCP tool call might use three or four API calls behind the scenes, aggregate the results, and return a coherent answer. The agent doesn't need to know about the orchestration. With raw APIs, the caller usually manages that orchestration themselves.
+
+- **Real-time and streaming.** APIs handle webhooks, websockets, and long-lived connections well. MCP is request-response oriented. If you need a live feed of price updates, that's an API job.
+
+<br />
+
+The good news is that this isn't an either-or situation.
+
+APIs and MCP can (and should!) coexist.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-07-apis-for-analytics-mcp-for-point-in-time-data_8.webp" alt="APIs and MCP coexisting" />
+</p>
+
+## How this plays out in the OpenBB Workspace
+
+In the OpenBB Workspace, you can see this playing out.
+
+On the right side you have me asking the OpenBB Copilot to:
+
+> *Use fred series MCP to check latest 2026 UNRATE data*
+
+This utilizes an MCP tool that extracts data from FRED utilizing the open source [Open Data Platform](https://github.com/OpenBB-finance/openbb).
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-07-apis-for-analytics-mcp-for-point-in-time-data_9.webp" alt="OpenBB Copilot using MCP to query FRED data" />
+</p>
+
+And you can see the step-by-step reasoning that shows the parameters used as part of that MCP tool. But also the artifact generated from it.
+
+On the left side, you have the OpenBB dashboard.
+
+Where you can see a single FRED Series widget, which is basically an abstraction on an API - where the parameters can be selected above.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-07-apis-for-analytics-mcp-for-point-in-time-data_10.webp" alt="OpenBB dashboard with FRED Series widget" />
+</p>
+
+## Bridging MCP and API with matching signatures
+
+The fact that an MCP tool can wrap one API call, gave us an idea.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-07-apis-for-analytics-mcp-for-point-in-time-data_11.webp" alt="API and MCP same signature concept" />
+</p>
+
+What if we made it so that when the API and MCP had the same signature, the workspace understood that we were talking about the same data?
+
+And that's what we did.
+
+Basically now if your agent utilizes a certain MCP tool and it finds a widget with the same signature, you get this notification:
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-07-apis-for-analytics-mcp-for-point-in-time-data_12.webp" alt="Widget match notification" />
+</p>
+
+Then in the agent output, you see the \* next to the citation. This means that whilst the data didn't come from this API, it matches the spec of the MCP one.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-07-apis-for-analytics-mcp-for-point-in-time-data_13.webp" alt="Citation asterisk showing MCP and API spec match" />
+</p>
+
+Finally, when you add it to the dashboard you can see that they match 1:1 in terms of the input parameters.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-07-apis-for-analytics-mcp-for-point-in-time-data_14.webp" alt="Dashboard showing MCP and API parameters matching 1:1" />
+</p>
+
+Same data source. Two different access patterns. The API handles the analytical workload: bulk data, charting, time series exploration. The MCP handles the point-in-time query: what's the latest number?
+
+This is the best of both worlds.
+
+APIs for analytics. MCP for point-in-time data. They're not competitors. They're complements. The API gives you the full dataset to analyze. The MCP gives the agent a quick, scoped answer to a specific question.
+
+Most of the times, you need both.
+
+
+---
+
+---
+slug: how-did-we-end-up-here
+title: "How did we end up here?"
+date: 2026-04-14
+image: /blog/2026-04-14-how-did-we-end-up-here.webp
+tags:
+- ai
+- finance
+- openbb
+- infrastructure
+description: "The case for a firm-owned workspace in the age of AI."
+hideSidebar: true
+---
+
+The case for a firm-owned workspace in the age of AI.
+
+<!-- truncate -->
+
+A few weeks ago we had a presentation for AITEC members where we showed what's possible on OpenBB today. Before jumping into the demo, I wanted to contextualize how OpenBB became OpenBB.
+
+So I created a presentation that walked through the journey shaping our product, our roadmap, and ultimately my/our world view.
+
+This post is an attempt to criticize where we are as an industry and why I believe we can do more.
+
+**Financial firms should own the infrastructure where financial work happens.**
+
+I don't think that's a crazy statement. Yet we are very far from this reality.
+
+By infrastructure, I don't mean just the UI or just the data. I mean the runtime. Where workflows execute and where AI inference happens.
+
+This argument isn't anti-vendor. Vendors are essential. They generate and distribute rights-controlled market data. They ship analytics. They package workflows. The problem is what happens when the center of gravity of financial work lives on vendor infrastructure. Control boundaries blur. Internal context becomes second-class.
+
+Vendor data is the main incentive. Business logic becomes coupled to someone else's platform decisions.
+
+The [Portage thesis report](https://portageinvest.com/wp-content/uploads/2026/02/AI-Disruption-of-Financial-Services-Data-A-Portage-Perspective.pdf) (*AI Disruption of the Financial Services Data Industry*) describes financial services as a uniquely idiosyncratic data environment where firms must mesh internal and external data across a complex and poorly documented web. It frames the current era as one of data abundance but insight scarcity. It also highlights the switching costs tied to entitlements, identifier dependencies, audit requirements, and downstream links. These are the mechanics of lock-in that show up as "we can't move, and we can't unify".
+
+The conclusion is not "build everything yourself". It is: build or adopt the platform layer that keeps data, workflows, and AI inference inside a governed enterprise boundary, while remaining neutral to vendors and modular to change.
+
+This essay follows my thinking process of what's wrong today, which ultimately leads to the vision of what OpenBB Workspace is, and isn't.
+
+You own the interface where financial work happens. Data flows in. Intelligence runs inside. Your workflows are yours.
+
+The bottleneck in modern finance is not the raw presence of data. It's the ability to turn overwhelming volume into usable decision-grade information. "Owning the interface" is shorthand for owning the place where context lives, where governance is enforced, and where the firm's proprietary understanding becomes reusable. If the workflow runtime is yours, internal context (positions, models, research, constraints, entitlements) can be treated as a first-class citizen. And so can anything else you wish to bring in.
+
+AI accelerates this massively. Modern AI tooling is the first credible opportunity to simplify financial data access at scale, including by generating glue code across disparate formats and improving data quality continuously rather than diagnostically. Portage makes this argument explicitly. But it only compounds into durable advantage if the firm controls the environment where the simplification occurs.
+
+**But this is not where we are today.**
+
+## Workflows happen on vendor infrastructure
+
+When user activity, data queries, and workflow execution happen in vendor-managed environments, the firm gets productivity but yields sovereignty. The logging depth, runtime controls, operational policy, and evidence production are bounded by what the provider exposes.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_1.webp" alt="Workflows happening on vendor infrastructure" />
+</p>
+
+## No single vendor covers the full data universe
+
+Equities, credit, macro, alternatives, and proprietary datasets come from different providers. Portage describes this universe as inherently diverse, spanning raw data generators, distributors, and analytic layers, with delivery mechanisms that range from feeds and APIs to terminals to cloud channels. So analysts and PMs stitch context across disconnected platforms to assemble a coherent view.
+
+Fragmentation isn't just inconvenient. It breaks repeatability. Once workflows cross tool boundaries, intermediate assumptions and transformations become invisible or non-portable. That invisibility is a form of risk: you can't govern what you can't observe.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_2.webp" alt="No single vendor covers the full data universe" />
+</p>
+
+## Internal data lacks first-class status
+
+Uploading portfolios, proprietary datasets, or internal research is harder than it should be. Not because it's technologically hard, but because vendor platforms are optimized around vendor-controlled universes. Their incentives are the data margins. I wrote more about this [here](https://didierlopes.com/blog/the-hidden-incentive-war-behind-financial-terminals).
+
+The firm's edge is not the vendor dataset. It is the firm's ability to combine vendor inputs with internal context. When internal data can't sit natively inside the same workspace, you end up with two realities: the vendor's (shared with every other firm) and your own (fully detached). Your reality is the one that matters. But when you're forced to model your world view through what a vendor provides, you hit limits in what you can do.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_3.webp" alt="Internal data lacks first-class status in vendor platforms" />
+</p>
+
+## Business logic embeds in vendor platforms
+
+Even when vendors are flexible, they ship a worldview: how data is mapped, what analytics are "standard", what a research workflow looks like, what gets logged, what gets shared. Firms operate within those constraints to remain compatible with the platform.
+
+Portage's framing of the value chain shows how value accrues from rights-controlled sourcing through processing and analytics to distribution, where outputs get embedded in workflows. When workflow embedding is owned by the vendor, those dependencies become procedural and cultural. Portage also calls out the concrete mechanics that raise replacement costs: entitlements and data rights, identifier dependencies, audit requirements, and established links downstream.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_4.webp" alt="Business logic embeds in vendor platforms" />
+</p>
+
+## API-level integration shifts the burden to the firm
+
+This is the cumulative picture. Multiple data vendors, each running their own infrastructure, each with their own financial workspace, each sending usage data back.
+
+Your firm sits at the edge, receiving outputs from disconnected systems.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_5.webp" alt="Multiple data vendors with disconnected infrastructure" />
+</p>
+
+<br />
+
+When the vendor platform can't be the workspace for the entire firm, the natural reaction is to consume vendor data as raw input and rebuild workflows internally.
+
+Portage's investment thesis emphasizes developer-friendly APIs and distribution layers as where new winners will serve data and insights. That is the direction of travel. The terminal becomes less central. The enterprise integration layer becomes more central.
+
+But API rebuilding moves the burden. Integration, governance, lifecycle management, entitlement enforcement, and auditability become the firm's job again, often without the benefit of a unified platform.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_6.webp" alt="API-level integration shifts burden to the firm" />
+</p>
+
+## Point solutions proliferate
+
+Once you start rebuilding from APIs, teams solve local pain fast. Portfolio tools, research dashboards, risk widgets, internal apps. Each gap gets patched. Each introduces its own stack, access controls, and operational overhead.
+
+Portage notes that supporting layers like platform development, provenance, entitlements, and cloud delivery determine which point solutions can scale into standards. When those layers are absent or inconsistent, point solutions proliferate but none of them become shared infrastructure.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_7.webp" alt="Point solutions proliferate across the firm" />
+</p>
+
+## AI embeds separately across every system
+
+Now the stack expands again. Each internal application integrates its own LLM provider, retrieval pipeline, prompt logic, and cost policy. Model governance becomes distributed across every app, with no central oversight.
+
+If you implement AI as scattered per-app integrations, the governance functions that matter (model versioning, prompt auditing, retrieval policies, tool permissions) become nearly impossible to execute uniformly.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_8.webp" alt="AI embeds separately across every system" />
+</p>
+
+## Third-party AI chat interfaces centralize control further
+
+New entrants provide proprietary chat interfaces that sit above your systems. The firm now integrates and governs yet another vendor, often by uploading data that already exists elsewhere: internal research, portfolios, board materials, or licensed market data.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_9.webp" alt="Third-party AI chat interfaces centralize control further" />
+</p>
+
+<br />
+
+This creates two compounding problems.
+
+First, if you upload licensed data into a third-party AI environment, you must be able to defend that it remains within permitted use, and you must prove entitlements and control propagation. That is difficult without a firm-owned policy and logging plane. Exchange policy documents restrict redistribution. A firm that uploads licensed feeds into an uncontrolled UI is creating a defensibility problem it may not be able to unwind.
+
+Second, regulatory-grade auditability is easier when inference is inside your governed runtime. Even if a provider doesn't log prompts, the firm still needs its own evidence. Who accessed what, what context was used, what output influenced what artifact, and how retention applies. Especially under record-keeping regimes that emphasize audit trails and producibility.
+
+What we have built as an industry is not one stack. It is multiple stacks stitched together. Each with its own entitlements, its own logging, its own identity, its own policy logic.
+
+And AI pours gasoline on that fragmentation.
+
+## It doesn't have to be this way
+
+But it doesn't have to be this way.
+
+Consolidate vendor data, proprietary datasets, internal apps, and AI into a single governed environment. Nothing leaves your infrastructure, including model inference.
+
+Now the concrete "how".
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_10.webp" alt="Consolidated firm-owned workspace architecture" />
+</p>
+
+<br />
+
+A platform architecture that keeps firms sovereign. At the core is a simple separation: vendors provide inputs (raw data, analytics, or inference like LLMs). The firm owns the workspace where decisions are made. And the workspace has no external context by default.
+
+The owned-runtime model in practice: vendor inputs flow in, internal data is native, workflows run inside a controlled environment, and AI inference is routed through a governed gateway that enforces policy and produces audit-grade telemetry.
+
+The components: internal systems and external vendors as data sources. A firm-controlled environment with SSO/identity, RBAC/ABAC and entitlements policy. A data substrate in open formats. A firm-owned semantic layer for IDs, mappings, and metrics. Firm-owned workflows (apps, dashboards, agents). A model gateway handling routing, quotas, and evals with a controlled inference runtime. Immutable audit trail and observability across logs, metrics, and traces.
+
+What flows through this: any market data (exchanges, filings, news, transcripts, alternatives), your portfolio positions (without uploading to third parties), third-party AI agent integrations, and your additional context (research, risk policy, signals).
+
+- **Control.** SSO, RBAC, logs, and permissioning standardized across workflows. Alignment with modern security models and with record-keeping expectations that assume you can produce and prove what happened.
+
+- **Neutrality.** Connect any data vendor without changing the interface layer. Neutrality becomes real when entitlements and identifiers are abstracted into a firm-owned semantic and policy layer. Portage notes that entitlements and identifier dependencies are what tie customers to incumbents. Open formats and vendor-neutral observability reduce lock-in at the storage and monitoring layers.
+
+- **Enterprise-ready.** Apps and agents built by one team can be securely shared across the firm. Shared primitives, shared guardrails, shared operational standards. Without that, point solutions don't become products. They become liabilities.
+
+- **AI governance.** Model orchestration, usage tracking, and inference policies managed centrally. Centralizing inference through a model gateway turns governance into something you can actually execute.
+
+<br />
+
+If I had to reduce this into a practical, stack-agnostic set of actions:
+
+Build a governed data substrate that supports both structured and unstructured inputs. Documents, transcripts, and other scarce unstructured sources need to live in the same environment as market feeds. If they don't, your AI can only reason over half your world-view.
+
+Favor open formats and decoupled compute so data remains portable and AI-enabled without rewriting your world.
+
+Implement entitlements, provenance, and identifier mapping as first-class platform services. These are the mechanics that create lock-in. If this logic lives inside every app, you will never become vendor-neutral.
+
+Build immutable audit trails for the artifacts that matter (research notes, generated outputs that enter a workflow, approvals, exports) and keep the link from "who asked" to "what data was accessed" to "what output was produced."
+
+Treat third-party AI chat interfaces as edges, not centers. Use them through governance boundaries. Where external AI must be used, rely on enterprise configurations that support constraints like non-training by default and optional zero retention. But keep the firm's own logs and policies as the source of truth.
+
+And if you want an infrastructure kickstart for this journey, reach out to me. We know a thing or two.
+
+
+---
+
+---
+slug: 15-reasons-why-streamlit-doesnt-work-for-production
+title: "15 reasons why Streamlit doesn't work for production"
+date: 2026-04-20
+image: /blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production.webp
+tags:
+- openbb
+- streamlit
+- production
+- finance
+description: "I love Streamlit as much as the next guy - but not for prod."
+hideSidebar: true
+---
+
+I love Streamlit as much as the next guy - but not for prod.
+
+<!-- truncate -->
+
+A few days ago [Willem Reerink](https://www.linkedin.com/in/willem-reerink/) at Snowflake published [a walkthrough](https://medium.com/snowflake/from-messy-to-clean-data-snowflake-batch-cortex-search-for-high-throughput-entity-resolution-c7d353e40361) of an entity resolution pipeline built on Snowflake's new CORTEX_SEARCH_BATCH function. It ships with a Streamlit dashboard on top.
+
+I [forked the repo](https://github.com/DidierRLopes/batch_cortex_search_entityresolution), kept the backend as is, and rebuilt the dashboard in OpenBB Workspace.
+
+Same data, same Snowflake backend, but a much better UI/UX.
+
+If you prefer a video walkthrough of how OpenBB compared with Streamlit, then check this out:
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe src="https://www.youtube.com/embed/N3CUrMp8ZiU" width="800" height="400" />
+</div>
+
+<br />
+
+The pipeline takes raw alt data signals from different vendors (Second Measure credit card panels, Placer.ai foot traffic, Bloomberg Terminal pricing, YipitData receipts, and so on) and classifies each one into a 60-node GICS-aligned product taxonomy using Snowflake's Arctic embedding model.
+
+- "Samsung 65 inch QLED 4K Smart Television quantum dot LED" lands in Information Technology > Technology Hardware > Consumer Electronics > Television - QLED.
+
+<br />
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_1.webp" alt="Samsung 65 inch QLED 4K Smart TV classification into GICS taxonomy" />
+</p>
+
+- "Rolex Submariner Date luxury Swiss automatic dive watch" lands in Consumer Discretionary > Luxury Goods > Watches. All 138 signals get classified in about five seconds.
+
+<br />
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_2.webp" alt="Rolex Submariner Date classification into GICS taxonomy" />
+</p>
+
+The dashboard sits on top of that output.
+
+A quant analyst uses it to answer questions like: where is wallet share rotating across GICS sectors, which brands show multi-sector momentum (Samsung appears in both IT and Consumer Discretionary), which vendors have the broadest coverage, and how does ticket size vary across sub-industries.
+
+Four tabs: classify signals, browse taxonomy, view raw signals, analyze sector exposure.
+
+That's the shared starting point. What follows is what changed when the frontend moved from Streamlit to OpenBB Workspace.
+
+To be honest, this was mostly done via this [OpenBB skill](https://github.com/OpenBB-finance/backends-for-openbb/blob/main/.claude/skills/openbb-app-builder/SKILL.md) I built to build apps. So it only took a few minutes to get it done.
+
+But the focus of this post is about the gains of converting it into an OpenBB app.
+
+## 1. Independent widget refresh vs full-page re-runs
+
+Streamlit's execution part is the one that can be most frustrating. Every interaction re-runs the entire script top to bottom. Change a filter, every chart recomputes. Click a button, the whole state rebuilds.
+
+We've all seen these guys:
+
+<p align="center">
+    <img width="300" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_3.webp" alt="Streamlit Running spinner" />
+</p>
+
+<p align="center">
+    <img width="300" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_4.webp" alt="Streamlit Running spinner with bicycle" />
+</p>
+
+You end up having to write extra defensive code to avoid it - e.g. caching every query so an unrelated widget doesn't re-fetch a million rows from Snowflake because you touched a dropdown.
+
+OpenBB widgets are independent endpoints. Change a parameter on one widget and only that widget refreshes, plus anything in its parameter group.
+
+E.g. changing the Sector Hierarchy sector parameter to "Communication Services" updates only the Sector Hierarchy widget. And Full GICS Taxonomy is triggered too because it has the same parameter that is grouped together (and others grouped together will also refresh!).
+
+But note that GICS Sector Distribution remains the same.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_5.webp" alt="OpenBB independent widget refresh showing Sector Hierarchy update" />
+</p>
+
+<br />
+
+Ultimately the biggest difference is thinking in pages vs widgets. Streamlit thinks in pages rendered top to bottom. OpenBB thinks in widgets that are independently addressable. Same widget on multiple tabs? Reference its ID, done.
+
+## 2. API-first architecture
+
+Whenever we have demos with clients that are technical the thing that I keep repeating is that OpenBB widgets are essentially an abstraction layer above an API call. This is literally how we define our widgets specs.
+
+Look at how I like to define my widgets.json spec, right next to the API endpoint.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_6.webp" alt="widgets.json spec defined alongside the API endpoint" />
+</p>
+
+<br />
+
+I like to do this because I like how in JS you have the business logic and then you return the UI part. I think it keeps it clean.
+
+Not only that, but this means that if you are utilizing this data somewhere else - e.g. in another application or wrapping it around an MCP or something different. Your infrastructure is robust and modular. It means you are not attaching business logic to the way you render data on screen - which I think is something that holds SO MANY companies back.
+
+At some point that technical debt needs to be solved so you can scale.
+
+When you build with Streamlit, you aren't really incentivized to do that. So you end up baking the business logic into the UI - which imo is really bad.
+
+## 3. Configurable refresh modes
+
+How does the independent widget logic work on OpenBB in terms of data updates?
+
+Easy. The user has control over that configuration. Here's a simple markdown widget with different configs.
+
+- Widget gets "stale" after 10s and nothing happens (the indicator becomes orange to denote that)
+- Widget refetches data every 5s (doesn't get stale)
+- Widget refetches ever 10s but data gets stale after 5s - basically indicator is 5s green and 5s orange
+- Run button so user can trigger the refetch of data when they want
+- Run button and refetch interval simultaneously
+
+<br />
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_7.webp" alt="OpenBB configurable refresh modes with stale indicators and run buttons" />
+</p>
+
+<br />
+
+On top of that you can also use websockets to stream data - more on that [here](https://docs.openbb.co/workspace/developers/widget-types/live-grid).
+
+Streamlit has one mode: re-run the script on interaction, cache aggressively, and hope the caching is set up right. There's no native "this widget ticks on a timer" or "this widget waits for explicit input".
+
+You have to build those behaviors yourself with reruns, timers, and manual state tracking. And that means other developers who are building Streamlit apps will likely not have access to that same logic and you are continuously reinventing the wheel.
+
+## 4. Declarative parameter groups
+
+In Streamlit, filters live in a sidebar, the script re-runs on every change, and you wire up which components react to which filter by hand.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_8.webp" alt="Streamlit sidebar with filters" />
+</p>
+
+<br />
+
+How am I supposed to know what filters update the data I'm seeing?
+
+In OpenBB, parameter groups are declarative. E.g. Group 3 is the brands filter and these two widgets share it. Change the brand dropdown on any of these 2 widgets and every grouped widget updates.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_9.webp" alt="OpenBB declarative parameter groups linking widgets together" />
+</p>
+
+<br />
+
+In OpenBB this is a single config field that maps the parameters together based on the same endpoint name.
+
+And it's waaaaay more clean.
+
+## 5. User-controlled data visualization
+
+Streamlit gives you *st.dataframe*, *st.bar_chart*, and room for Plotly. Table formatting is limited, and anything interactive beyond sorting and basic filtering is a custom component or a JavaScript bridge.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_10.webp" alt="Streamlit limited data visualization options" />
+</p>
+
+<br />
+
+The trade-off you are making is that the developer will be able to build POC fast - but the end user will have no freedom to do anything at all.
+
+This is actually one of my main issues with most vibe coded apps. Unless you are building them for yourself they are selfish - because you build it as YOU want it and not as the end user wants. And if the end user wants changes they won't have a good time.
+
+OpenBB is highly optimized for end user.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_11.webp" alt="OpenBB AGgrid with advanced table features for end users" />
+</p>
+
+<br />
+
+OpenBB uses AGgrid under the hood, which means every table ships with the things analysts/PMs actually expect: column widths and formatters, hiding columns, resize and rearrange dataframe, but also more advanced settings like pivot or creating new columns by running a formula across columns.
+
+In addition, you are able to have a chart view of that table and control it to your liking (2 y-axis, title, barchart vs pie chart, coloring, etc...). But if someone doesn't like it that's ok as they can change the visual of that table or even just look at the raw data by clicking in a single button.
+
+We believe BI tools got that UI/UX right and we have done everything to preserve it from that usage perspective.
+
+Note that none of these actually requires any configuration from the user building an app on OpenBB - these all come by default.
+
+## 6. Dashboard customization without code
+
+Note the difference - in OpenBB you control not only the data views (as mentioned before) but also the overall view.
+
+In Streamlit, when a user wants to do something as simple as changing the order of widgets - they need to either ping the developer that built the app, or do it themselves. If they ping the developer then that back-and-forth becomes cumbersome, if they do it themselves they risk that that change will upset other users. There's no concept of "tweaking the dashboard to my liking".
+
+OpenBB is built on this idea. The developer ships the individual widgets (which are essentially wrapped APIs) and the end user can configure the dashboard layout and visuals as they want from the UI perspective. It's literally as simple as dragging widgets around, creating a navigation bar to compartmentalize it and then either saving the app or sharing the dashboard. At no point in time is the user required to touch any code. Nor will the user impact the original app that was built by the developer, they will just keep their own version optimized for their workflow.
+
+Here are 2 views of the exact same dashboard (based on 2 different points of views from the user):
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_12.webp" alt="Dashboard customization view 1" />
+</p>
+
+<br />
+
+It's literally the same data, just organized differently - according to the user's preferences.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_13.webp" alt="Dashboard customization view 2 with different layout" />
+</p>
+
+<br />
+
+For finance teams where analysts/PMs always outnumber developers, this is the feature that determines whether the dashboard gets used or abandoned.
+
+## 7. Widget library integration
+
+When I'm given a Streamlit app, there's no concept of "post" editing that happens in the UI. If I want to add any data to the dashboard I need to contact the developer who built it or I need to edit the code directly myself.
+
+This is extremely cumbersome - not only that but it can lead to errors happening since the code is all bundled together.
+
+In OpenBB, you just need to have the new endpoint for the data you want and the associated widget JSON spec so that you can add it to your dashboard.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_14.webp" alt="OpenBB widget library for adding new widgets to dashboard" />
+</p>
+
+<br />
+
+And voila.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_15.webp" alt="New widgets added to the dashboard" />
+</p>
+
+<br />
+
+Now the two widgets appear next to my original dashboard.
+
+## 8. App sharing and versioning
+
+And the way to get this across your team is literally 2 clicks???
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_16.webp" alt="Share and Save App dialog with two click sharing" />
+</p>
+
+<br />
+
+If I click on "Share" then I can share this specific dashboard with my team - which they can duplicate and work on top of.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_17.webp" alt="Shared dashboard view accessible by team" />
+</p>
+
+<br />
+
+If I click on "Save App" then I create a new template dashboard that I can click and go into every time.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_18.webp" alt="Save App dialog to create template dashboard" />
+</p>
+
+<br />
+
+As seen here as "Saved App", where we OpenBB store your apps.json.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_19.webp" alt="App listing showing saved app in workspace" />
+</p>
+
+<br />
+
+But the cool thing is that I can share this app template to anyone on my team!
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_20.webp" alt="Share app template with team members" />
+</p>
+
+<br />
+
+In the meantime, sharing a Streamlit app means Streamlit Cloud, a Docker setup, or telling your colleague to install Python 3.11 and run the thing locally. If you host it inside Snowflake's Streamlit runtime, you get deployment for free but everyone who looks at the dashboard needs a Snowflake account and the right access. You'll also need to explain the .env file or compute pool you forgot to document.
+
+## 9. Role-based access control (RBAC)
+
+So continuing from the example above on OpenBB, even though I shared this app with Ihsan. He would only have access to it if:
+
+- He had access to the original data via the endpoint created - e.g. I can get his user-id or cookie to double check whether he has the right permission to access the underlying data. This is similar to how it would happen in Streamlit.
+
+- I gave him access to the app and widgets via the UI as well. This is just an additional layer to ensure you have full control over how data gets diffused within your organization.
+
+<br />
+
+On that second layer, we can control access via the user's profile individually.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_21.webp" alt="User profile access control settings" />
+</p>
+
+<br />
+
+Or we can set a role that the user belongs to (e.g. Analyst Pod 2)
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_22.webp" alt="Role-based access control with Analyst Pod 2 role" />
+</p>
+
+<br />
+
+And then manage the permissions associated with that role individually.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_23.webp" alt="Managing role permissions at granular level" />
+</p>
+
+<br />
+
+Streamlit has no built-in concept of who can see what. You share the whole app or you don't. If one widget on the dashboard shows live portfolio positions and another shows vendor coverage, you either split the app in two or let everyone see both. Or you have to build a lot of logic to manage the accesses on the backend.
+
+OpenBB Workspace permissions go down to the widget. You can give the alt data team access to the vendor coverage and sector exposure widgets but hide the position-level widgets that belong to the PMs.
+
+Same dashboard, different views depending on who's looking at it.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_24.webp" alt="Same dashboard with different views based on RBAC permissions" />
+</p>
+
+<br />
+
+## 10. Unified theming and branding
+
+This is particularly relevant in the age of vibe coded apps where everyone builds their own application from scratch. Not just the tech stack can differ, but almost always there's no common design systems, let alone theme and branding.
+
+I was thinking of how I can describe this - and the best I came up with is that it looks like sh*t.
+
+Look at these different user apps and how their theme/branding differ.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_25.webp" alt="Different vibe coded apps with inconsistent themes and branding" />
+</p>
+
+<br />
+
+Now compare that with [different solutions built on top of the workspace](https://openbb.co/solutions/app-showcase/) where the theme defaults to OpenBB's one.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_26.webp" alt="OpenBB solutions with unified default theme" />
+</p>
+
+<br />
+
+But if you wanted, you can literally change the theme to your company's one and even add watermarks!!!
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_27.webp" alt="Custom company theme with watermark in OpenBB" />
+</p>
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_28.webp" alt="Another custom company theme in OpenBB" />
+</p>
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_29.webp" alt="Third custom company theme in OpenBB" />
+</p>
+
+<br />
+
+Then regardless of the widgets and apps built by different team members - the workspace retains its visual identity.
+
+## 11. Cross-dashboard data integration
+
+This is the other issue with vibe-coded apps. Not just the styling which maybe you can live with (maybe I have OCD and I'm the only one who this bothers ahah); but the fact that each vibe-coded app lives in its own world, without being able to work with your other applications and particularly not cross-referencing the data.
+
+If you are getting started in a journey of building apps, this is ok. But as soon as you have multiple, this doesn't end well. And complexity arises exponentially to "fix it".
+
+Think of it. Every Streamlit app is a separate URL and a separate deployment. After a few months you have a several URL tabs, maintained by different people and aiming at different user bases.
+
+In OpenBB Workspace, every app lives in one interface next to your data sources, other apps, and AI conversations (I'm going to get into this in a bit). Add a backend once, the dashboards are there. When the copilot generates an insight from the alt data classification, the insight is already in the environment where you'd act on it, next to the portfolio view, the vendor coverage app, and whatever else the team builds on top.
+
+I mean look at this view:
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_30.webp" alt="OpenBB Workspace with all apps and data sources in one interface" />
+</p>
+
+<br />
+
+## 12. Excel integration
+
+You can find it in the Excel formula directly.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_31.webp" alt="Excel formula integration in OpenBB" />
+</p>
+
+<br />
+
+Which gives you the formula with and without explicit parameters.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_32.webp" alt="Excel formula with and without explicit parameters" />
+</p>
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_33.webp" alt="OpenBB Excel add-in plugin" />
+</p>
+
+<br />
+
+Then as long as you have OpenBB excel add-in plugin, you can access this data.
+
+## 13. AI infrastructure built-in
+
+At this point I already gave enough reasons on why OpenBB should be used in detriment of Streamlit.
+
+But I didn't even touch on the AI piece... so let's do this.
+
+Streamlit doesn't come with AI infrastructure. OpenBB does.
+
+It does because we've built it with AI in mind since day one. Widgets have metadata associated with them that allows copilot to select which one to use (essentially doing tool call), and agents are able to interact with any type of data - structured (e.g. tables, charts) but also unstructured (e.g. documents, images).
+
+Every OpenBB Workspace app comes with a default AI copilot that has access to all the widgets on the current dashboard, but also all widgets from the workspace.
+
+E.g. the following prompt - it shows the reasoning which you can store internally and everything remains internal. But also cites the widget used so it's grounded with a specific dataset which you can validate.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_34.webp" alt="OpenBB AI copilot with reasoning and widget citations" />
+</p>
+
+<br />
+
+## 14. AI artifacts and agent integration
+
+Everything produced by the agent can be added to the dashboard as static artifact - again, maintaining the belief that firms should own their own context.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_35.webp" alt="AI generated artifact added to dashboard" />
+</p>
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_36.webp" alt="AI artifact integrated into dashboard view" />
+</p>
+
+<br />
+
+And not just that, but the same way we think of developers adding widgets (i.e. data) to the dashboard, we believe the same for agents (i.e. intelligence). So you can integrate your own agents for specific workflows and build everything our default agent allows you to do - everything from having your own reasoning steps, parsing user feedback (thumbs up/down), citations, changing parameters of a widget, adding widget to dashboards on the fly, having custom features (e.g. deep research or web search), handling skills, working with files dropped by the user, connecting with MCP tools, etc...
+
+Here are some examples: [https://github.com/OpenBB-finance/agents-for-openbb](https://github.com/OpenBB-finance/agents-for-openbb)
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_37.webp" alt="Custom agents integrated into OpenBB Workspace" />
+</p>
+
+<br />
+
+But you can also set default prompts based on the app you are opening to improve UI/UX to the end user. And you can also go full screen and just get work done with the AI agent - grounded with the underlying dashboard data.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_38.webp" alt="Full screen AI agent grounded with dashboard data" />
+</p>
+
+<br />
+
+I hope this makes it clear the value of the AI infrastructure we have built.
+
+You can find more on our docs here: [https://docs.openbb.co/workspace/analysts/ai-features/copilot-basics](https://docs.openbb.co/workspace/analysts/ai-features/copilot-basics)
+
+## 15. Language agnostic
+
+OH.
+
+And I almost forgot.
+
+Apps built on OpenBB do not need to be Python, they can be any language.
+
+Here's an example of a [Polymarket app](https://github.com/jose-donato/openbb-polymarket) written in TypeScript.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_39.webp" alt="Polymarket app built in TypeScript running on OpenBB Workspace" />
+</p>
+
+<br />
+
+And here are some [open source apps](https://github.com/OpenBB-finance/awesome-openbb) by the community.
+
+## Final thoughts
+
+I thought this was going to be a short post on why I took a Streamlit app and transformed it into OpenBB, but I just kept digging...
+
+I hope this gives you a view on why we like to describe OpenBB app is a production-version of what a Streamlit app is.
+
+And also why you can't vibe code a workspace in a weekend.
+
+
+---
+
+---
+slug: fragmentation-kills-alpha
+title: "Fragmentation kills Alpha"
+date: 2026-04-23
+image: /blog/2026-04-23-fragmentation-kills-alpha.webp
+tags:
+- ai
+- finance
+- openbb
+- alpha
+description: "I had to do a 5min presentation on Alpha for Future Alpha."
+hideSidebar: true
+---
+
+I had to do a 5min presentation on Alpha for Future Alpha.
+
+<!-- truncate -->
+
+And so I thought about what would be somewhat controversial, but directionally correct.
+
+This is the origin of this post. So let's dive in.
+
+Alpha can be described as: **Excess return beyond compensated risk**.
+
+That's it.
+
+And it exists because markets are imperfect and someone on the other side is slower, constrained, emotional and/or structurally disadvantaged.
+
+When you break it down, alpha comes from a handful of mechanisms:
+
+- **Information gaps** - interpreting supply chain data or satellite imagery before it shows up in earnings revisions.
+
+- **Structural constraints** - banks forced to sell assets due to capital rules. Index funds forced to rebalance at predictable times.
+
+- **Behavioral mistakes** - panic selling during drawdowns. Crowded narrative trades that disconnect from fundamentals.
+
+- **Factor dislocations** - value or momentum temporarily breaking because the economic regime shifted and models haven't caught up.
+
+- **Domain asymmetry** - a healthcare specialist understanding clinical trial nuance that the generalist PM across the street simply can't see.
+
+<br />
+
+These have been the foundation of active management for decades.
+
+Most of the time mostly with data + human insight, but now we need to think about AI impact into these.
+
+Reading filings faster? Commoditized.
+
+Parsing earnings transcripts? Commoditized.
+
+Running basic sentiment analysis? Automated.
+
+Factor detection? Automated.
+
+When Ken Griffin said last year that generative AI "falls short" for uncovering alpha at Citadel, I think the problem wasn't that AI can't help generate alpha. The problem is that most firms are plugging AI into a fragmented stack.
+
+I actually wrote about this at the time [here](/blog/why-generative-ai-isnt-uncovering-alpha-yet/).
+
+AI models are accessible. Data is abundant. If everyone has access to the same LLMs and the same vendors, then access is no longer the moat.
+
+So what is?
+
+Everyone is looking to have that being AI - **which can be**.
+
+But AI is an amplifier, is amplifies whatever you already have.
+
+If your infrastructure is fragmented, AI accelerates fragmentation.
+
+If your infrastructure is unified, it's a different story...
+
+## The intersection that matters
+
+The current constraint, in my opinion, is infrastructure.
+
+If you reduce modern alpha generation to first principles, it lives at the intersection of data, AI and context.
+
+<p align="center">
+    <img width="800" src="/blog/2026-04-23-fragmentation-kills-alpha_1.webp" alt="Venn diagram showing the intersection of Data, AI, and Context producing Signal, Grounded Reasoning, and Institutional Memory" />
+</p>
+
+Each intersection creates something distinct.
+
+- **Signal (Data x AI):** When AI refines raw data, you get feature extraction, pattern recognition, forecasts. This is where 90% of the industry is focused right now. But signal alone decays fast.
+
+- **Grounded Reasoning (AI x Context):** AI without context is generic - it misses constraints and gives you answers that are smart but ignore your mandate, your risk limits, your prior research. This is the evolution from a generic chat response, reasoning that understands how your firm actually thinks and operates.
+
+- **Institutional Memory (Data x Context):** Data inside context becomes something persistent. Research becomes traceable. Experiments become reproducible. Decisions become auditable. The firm starts to learn across time and across teams.
+
+<br />
+
+When all three converge - data, AI, and context working together inside the same environment - you get a system that learns.
+
+## The operating reality
+
+Most firms don't operate this way.
+
+Data lives in a browser. AI lives in a separate chat tool. Research context is scattered across Teams chats, PowerPoint decks, Excel models, and someone's OneNote.
+
+Decisions get made in one system and documented (maybe) in another. The underlying reasoning - why this trade, why this allocation, why this risk call - disappears.
+
+And every day, the firm starts from 0.
+
+It produces insights. But it does not accumulate intelligence.
+
+This is what I mean by fragmentation killing alpha.
+
+The firm generates signal but never compounds it. AI gets layered on top as an after thought, and never in a way designed to compound these insights.
+
+Turns out that AI needs as much Context as it needs raw data, **maybe even more**?
+
+## Designing for compounding
+
+If fragmentation destroys compounding, the next-generation firm has to be designed differently.
+
+Not another tool on top of the stack.
+
+An environment where the stack collapses **into one thing**.
+
+A workspace where all proprietary and vendor data lives inside your controlled infrastructure. Where AI reasons within your mandate and risk constraints - not in a generic chat window disconnected from everything. Where every query, model run, and decision is logged and reproducible. Where research context persists beyond email. Where agents automate repeatable workflows without exporting intelligence outside your walls. Where governance is native - SSO, RBAC, audit trails built into the system, not bolted on after the fact.
+
+In that environment, the organization remembers. Every hypothesis improves the system. Every decision refines the reasoning layer. Every research cycle strengthens the firm's edge.
+
+## Infrastructure is the edge
+
+In an AI-native world, you don't want to rent intelligence from fragmented tools, you are better off owning the infrastructure that compounds it.
+
+This is what we're building at OpenBB. Not another financial workspace with data incentives. But also not an AI copilot.
+
+Infrastructure where institutional alpha exists, and can compound.

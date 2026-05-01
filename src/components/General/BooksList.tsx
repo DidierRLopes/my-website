@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import styles from "./BooksList.module.css";
 
 interface Book {
@@ -23,6 +24,20 @@ export default function BooksList({ books }: BooksListProps) {
 		setSelectedImage(null);
 	};
 
+	useEffect(() => {
+		const handleEscape = (e: KeyboardEvent) => {
+			if (e.key === "Escape") closeModal();
+		};
+		if (selectedImage) {
+			document.addEventListener("keydown", handleEscape);
+			document.body.style.overflow = "hidden";
+		}
+		return () => {
+			document.removeEventListener("keydown", handleEscape);
+			document.body.style.overflow = "";
+		};
+	}, [selectedImage]);
+
 	const filteredBooks = books.filter(
 		(book) =>
 			book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -43,19 +58,19 @@ export default function BooksList({ books }: BooksListProps) {
 			{filteredBooks.length > 0 ? (
 				<ul className={styles.bookList}>
 					{filteredBooks.map((book) => (
-						<li className={styles.bookItem} key={book.title}>
-							<div
-								onClick={() => openModal(book.image)}
-								onKeyDown={(e) => e.key === "Enter" && openModal(book.image)}
-								role="button"
-								tabIndex={0}
-							>
-								<img
-									src={book.image}
-									alt={`${book.title} cover`}
-									className={styles.bookThumbnail}
-								/>
-							</div>
+						<li
+							className={styles.bookItem}
+							key={book.title}
+							onClick={() => openModal(book.image)}
+							onKeyDown={(e) => e.key === "Enter" && openModal(book.image)}
+							role="button"
+							tabIndex={0}
+						>
+							<img
+								src={book.image}
+								alt={`${book.title} cover`}
+								className={styles.bookThumbnail}
+							/>
 							<div className={styles.bookInfo}>
 								<span className={styles.bookTitle}>{book.title}</span>
 								<span className={styles.bookAuthor}>by {book.author}</span>
@@ -68,36 +83,36 @@ export default function BooksList({ books }: BooksListProps) {
 					<p>&gt; No results found for "{searchTerm}"</p>
 				</div>
 			)}
-			{selectedImage && (
-				<div
-					className={styles.modalBackdrop}
-					onClick={closeModal}
-					onKeyDown={(e) => e.key === "Escape" && closeModal()}
-					role="button"
-					tabIndex={0}
-				>
+			{selectedImage &&
+				createPortal(
 					<div
-						className={styles.modalContent}
-						onClick={(e) => e.stopPropagation()}
-						onKeyDown={(e) => e.stopPropagation()}
-						role="dialog"
-						aria-modal="true"
+						className={styles.modalBackdrop}
+						onClick={closeModal}
+						role="button"
+						tabIndex={0}
 					>
-						<button
-							type="button"
-							className={styles.closeButton}
-							onClick={closeModal}
+						<div
+							className={styles.modalContent}
+							onClick={(e) => e.stopPropagation()}
+							role="dialog"
+							aria-modal="true"
 						>
-							X
-						</button>
-						<img
-							src={selectedImage}
-							alt="Enlarged book cover"
-							className={styles.modalImage}
-						/>
-					</div>
-				</div>
-			)}
+							<button
+								type="button"
+								className={styles.closeButton}
+								onClick={closeModal}
+							>
+								X
+							</button>
+							<img
+								src={selectedImage}
+								alt="Enlarged book cover"
+								className={styles.modalImage}
+							/>
+						</div>
+					</div>,
+					document.body,
+				)}
 		</div>
 	);
 }

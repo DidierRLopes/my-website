@@ -43,7 +43,11 @@
   gap: var(--ds-space-4);
   padding: var(--ds-space-2);
   border-radius: 2px;
-  cursor: default;
+  cursor: pointer;
+}
+
+.bookItem:hover {
+  background-color: var(--background-tertiary, rgba(255, 255, 255, 0.05));
 }
 
 .bookThumbnail {

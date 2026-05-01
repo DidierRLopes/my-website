@@ -617,7 +617,17 @@ const data = [
 		title: "The Wealthy Barber, Updated 3rd Edition: Everyone's Commonsense Guide to Becoming Financially Independent",
 		author: "David Chilton",
 		image: "/books/the-wealthy-barber.jpg"
-	}
+	},
+	{
+		title: "Superforecasting: The Art and Science of Prediction",
+		author: "Philip E. Tetlock, Dan Gardner",
+		image: "/books/superforecasting.jpg"
+	},
+	{
+		title: "Knowledge And Decisions",
+		author: "Thomas Sowell",
+		image: "/books/knowledge-and-decisions.jpg"
+	},
 ];
 
 export const booksToReadCount = data.length;

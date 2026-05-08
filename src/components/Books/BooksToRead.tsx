@@ -628,6 +628,16 @@ const data = [
 		author: "Thomas Sowell",
 		image: "/books/knowledge-and-decisions.jpg"
 	},
+	{
+		title: "The Brain from Inside Out",
+		author: "György Buzsáki MD PhD",
+		image: "/books/the-brain-from-inside-out.jpg"
+	},
+	{
+		title: "A Brief History of Intelligence: Evolution, AI, and the Five Breakthroughs That Made Our Brains",
+		author: "Max S. Bennett",
+		image: "/books/a-brief-history-of-intelligence-evolution-ai-and-the-five-breakthroughs-that-made-our-brains.jpg"
+	},
 ];
 
 export const booksToReadCount = data.length;

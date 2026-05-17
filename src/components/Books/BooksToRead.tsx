@@ -638,6 +638,11 @@ const data = [
 		author: "Max S. Bennett",
 		image: "/books/a-brief-history-of-intelligence-evolution-ai-and-the-five-breakthroughs-that-made-our-brains.jpg"
 	},
+	{
+		title: "My Years with General Motors",
+		author: "Alfred P. Sloan, Jr.",
+		image: "/books/my-years-with-general-motors.jpg"
+	},
 ];
 
 export const booksToReadCount = data.length;

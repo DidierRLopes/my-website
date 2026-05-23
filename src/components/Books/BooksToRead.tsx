@@ -643,6 +643,27 @@ const data = [
 		author: "Alfred P. Sloan, Jr.",
 		image: "/books/my-years-with-general-motors.jpg"
 	},
+	{
+		title: "The Infinite Game",
+		author: "Simon Sinek",
+		image: "/books/the-infinite-game.jpg"
+	},
+	{
+		title: "Finite and Infinite Games: A Vision of Life as Play and Possibility",
+		author: "James P. Carse",
+		image: "/books/finite-and-infinite-games.jpg"
+	},
+	{
+		title:
+			"The New Strategic Selling: The Unique Sales System Proven Successful by the World's Best Companies",
+		author: "Robert B. Miller, Stephen E. Heiman, Tad Tuleja",
+		image: "/books/the-new-strategic-selling.jpg"
+	},
+	{
+		title: "The Visual Display of Quantitative Information",
+		author: "Edward R. Tufte",
+		image: "/books/the-visual-display-of-quantitative-information.jpg"
+	},
 ];
 
 export const booksToReadCount = data.length;

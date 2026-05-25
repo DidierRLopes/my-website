@@ -9,6 +9,7 @@ interface Video {
   image?: string;
   info?: string;
   location: string;
+  link?: string;
 }
 
 interface VideosListProps {
@@ -67,6 +68,17 @@ export default function VideosList({ videos }: VideosListProps) {
               </div>
             )}
           </div>
+          {video.link && (
+            <div className="mission-buttons">
+              <a
+                href={video.link}
+                rel="noopener noreferrer"
+                target="_blank"
+                className="mission-button mission-button--join">
+                Watch video
+              </a>
+            </div>
+          )}
         </div>
       ))}
     </div>

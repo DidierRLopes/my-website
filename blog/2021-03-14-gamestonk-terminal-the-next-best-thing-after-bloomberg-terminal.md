@@ -29,11 +29,11 @@ The open source code is available [here](https://github.com/DidierRLopes/Gamesto
 
 
 I come from a country where 94.3% of people own their homes. Homeownership there is the norm.
-I now live in Germany, where the ownership rate is much lower—around 46–47%, and if you zoom in on Berlin, it drops dramatically to 15–20%. Renting isn’t a transition phase; it’s a long-term reality for many people.
+I now live in Germany, where the ownership rate is much lower, around 46–47%, and if you zoom in on Berlin, it drops dramatically to 15–20%. Renting here isn’t a transition phase; it’s a long-term reality for many people.
 
-Seeing this difference made me want to better understand property investment in Germany, especially how it works in practice and how different it is from what I was used to before.
+Seeing this difference made me want to better understand property investment in Germany, especially how it works in practice and how different the model that was previously familiar to me.
 
-Yesterday, I had a good opportunity to do that by attending a property investment workshop by Financemate in Berlin. The workshop focused on understanding the local rules and working through concrete examples.
+Yesterday, I had a good opportunity to explore this by attending a property investment workshop by Financemate in Berlin. The workshop focused on understanding the local rules and working through concrete examples.
 
 ## Learning the Local Rules Matters
 
@@ -63,7 +63,7 @@ This is different from buying an apartment for personal use, where these deducti
 
 Depreciation was a large part of the discussion.
 
-Most residential buildings are considered to depreciate at 2% per year, which corresponds to 50 years
+Most residential buildings are considered to depreciate at 2% per year, which corresponds to 50 years.
 
 To stimulate housing construction, buildings constructed between 1 October 2023 and 30 September 2029 can be depreciated at 5% per year.
 
@@ -89,4 +89,4 @@ We first did this on paper, and then used the Financemate app (https://financema
 
 The workshop helped me better understand how property investment works in Germany, particularly how tax rules and depreciation affect the overall picture.
 
-For me, the main takeaway was that assumptions based on other countries don’t necessarily apply here, and understanding the local rules is essential before making any decisions.
+For me, the main takeaway was that assumptions based on other countries don’t necessarily apply, and understanding the local rules is essential before making any investment decisions.

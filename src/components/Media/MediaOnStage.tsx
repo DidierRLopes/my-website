@@ -3,23 +3,61 @@ import VideosList from "../General/VideosList";
 
 const data = [
 	{
-		title: "From Viral Reddit Tool to Enterprise AI: The OpenBB Story with Didier Lopes | S2E2",
-		description: "In this episode, Michael sits down with Didier Lopes, the founder of OpenBB, for a conversation that started five years ago during the meme stock boom. Michael reached out to Didier in 2021 after he shared his 'Gamestonk Terminal' on r/wallstreetbets. Michael reached out to Didier to ask if he was interested in a job on his team at Citadel but Didier had other ideas. That initial LinkedIn message from Michael ended up in the pitch deck that helped Didier raise nearly $9 million for his company and the rest is history.<br/><br/>Didier recounts his journey from being a software engineer who automated his personal investment research to becoming the creator of a massively popular open-source project. The Gamestonk Terminal went viral on WallStreetBets and Hacker News, gaining 4,000 GitHub stars in less than 24 hours by cleverly aggregating the free API tiers from hundreds of different data vendor and has evolved into what OpenBB is today.<br/><br/>Join us as we dive into the evolution of a viral tool into a sophisticated enterprise platform and explore the disruptive forces reshaping the financial data landscape.",
-		date: "2025-08-26",
-		location: "Hedgineer Podcast",
-		embed: "https://www.youtube.com/embed/QeYl2Gq7mAA?si=Lmv5UUB7LYheeQoc",
-		time: "1h 30m",
+		title: "Strengthening Oracle Security in 2026: Key Principles for Builders",
+		description: "Provides builders with a practical framework to select, configure, and integrate oracles in DeFi, drawing on lessons learned to date.",
+		date: "2026-04-02",
+		location: "EthCC, Cannes",
+		embed: "https://www.youtube.com/embed/9uXyFnPLJIs",
 	},
 	{
-		title: "AI for Finance Summit: Rise of Multi-Agent Systems",
-		description:
-			"Use Case Fireside: Deploying AI in Financial Workflows with Pete Petersen (CTO and Chief Cybersecurity Officer) of Causeway Capital Management.",
-		date: "2025-06-04",
-		location: "NY Tech Week",
-		image: "/media/ai-for-finance-summit-rise-of-multi-agent-systems.jpg",
-		info: "More information on the event can be found <a href='https://partiful.com/e/eStqfkIQo7pAlpykUmYh?guest=UL3z5QaMwDO8jmR80ymI' target='_blank' rel='noopener noreferrer'>here</a>.",
+		title: "Building Secondary Markets for Onchain Real-World Assets",
+		description: "In this panel, Graham Nelson (Centrifuge), Charles Jansen (S&P Global), Emilio Frangella (Aave), Amos Song (DigiFT), and Bianca Buzea (Chronicle, Moderator) examine how secondary markets for onchain RWAs can be structured to support liquidity, pricing, and credible exit.",
+		date: "2026-03-28",
+		location: "Stable Summit, Cannes",
+		embed: "https://www.youtube.com/embed/x502G0Mg9Sg",
 	},
-	
+	{
+		title: "DevRel's New Dawn: Web3 Team Alchemy",
+		description: "Panel with Alberto Viera and Francesco Andreoli exploring the evolving role of Developer Relations in Web3 and how teams can collaborate to drive ecosystem growth.",
+		date: "2025-11-27",
+		location: "sub0, Buenos Aires",
+		embed: "https://www.youtube.com/embed/5ld0pJihzSc",
+	},
+	{
+		title: "Choosing the Right Oracle: A Practical Framework",
+		description: "Oracles are often overlooked despite their vital role in blockchain applications. This framework helps participants evaluate oracle types using criteria such as push vs. pull models, validator networks, decentralization, data sources, and more to make well-informed decisions.",
+		date: "2025-03-01",
+		location: "ETHDenver, Denver",
+		embed: "https://www.youtube.com/embed/iM2r2dql6js",
+	},
+	{
+		title: "Developer Relations: Accelerating Web3 Growth",
+		description: "Panel with Emily Lin, Nader Dabit, and Jenks Guo exploring how Developer Relations is accelerating growth across the Web3 ecosystem.",
+		date: "2024-03-01",
+		location: "ETHDenver, Denver",
+		embed: "https://www.youtube.com/embed/HmfJxgVEXAU",
+	},
+	{
+		title: "The Role of DevRel in Shaping Developer Tooling",
+		description: "Discover how we can tackle the challenges of creating developer tooling, such as navigating potential conflicts of interest between a protocol's and developer community's needs and avoiding over-reliance on a specific set of tools or technologies.",
+		date: "2023-07-20",
+		location: "ETHcc, Paris",
+		embed: "https://www.youtube.com/embed/2Klfd6v2FfU",
+	},
+	{
+		title: "The Power of Developer Communities",
+		description: "ETHDam gathered over 500 DeFi and Privacy builders in Amsterdam. In this talk I explore how developer communities drive ecosystem growth and what it takes to build and sustain them.",
+		date: "2023-05-20",
+		location: "ETHDam, Amsterdam",
+		embed: "https://www.youtube.com/embed/7Lvocw04Ll4",
+	},
+	{
+		title: "The State of DevRel in Web3",
+		description: "Panel exploring the role of Developer Relations in the web3 landscape — how the role has shaped the space, how it has evolved over time, and how developer communities will continue to grow. Featuring Nader Dabit, Steph Orpilla, Vitto Rivabella, and Leilani.",
+		date: "2023-03-04",
+		location: "ETHDenver, Denver",
+		embed: "https://www.youtube.com/embed/Zg1Bb6S98IA",
+	},
 ];
 
 export default function MediaOnStage() {

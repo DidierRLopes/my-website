@@ -11,7 +11,7 @@ function WhoAmI({ isDesktop, isTablet }) {
         <a target="_blank" rel="noreferrer" href="https://chroniclelabs.org/">
         Chronicle 
         </a>
-          {' '}&amp; Founder at{' '}
+          {' '}&amp; Founder of{' '}
         <a target="_blank" rel="noreferrer" href="https://www.devreluni.com/">
           DevRel Uni
         </a>

@@ -10,7 +10,7 @@ const fs = require('node:fs');
 const config = {
   title: 'Bianca Buzea',
   tagline: 'Building an open source legacy one commit at a time.',
-  favicon: 'img/headshot.jpg',
+  favicon: 'img/Bianca_headhsot_square.jpg',
 
   // Set the production url of your site here
   url: 'https://biancabuzea.com',
@@ -125,23 +125,14 @@ const config = {
           },
           {
             position: 'left',
-            label: 'Blog',
-            to: '/blog',
+            label: 'Short Bio',
+            to: '/bio',
             className: 'navbar__center-item',
           },
           {
             position: 'right',
-            label: 'Intelligence',
-            to: '/intelligence',
-          },
-     
-          {
-            position: 'right',
-            label: 'Newsletter',
-            to: '/newsletter',
-            target: '_blank',
-            rel: 'noopener noreferrer',
-            className: 'navbar-item-external navbar-newsletter-link',
+            label: 'Blog',
+            to: '/blog',
           },
         ],
       },

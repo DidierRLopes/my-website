@@ -135,23 +135,23 @@ export default function Home() {
   return (
     <Layout
       title="Homepage"
-      description="Didier Rodrigues Lopes personal website"
+      description="Bianca Buzea personal website"
     >
       <Head>
-        <meta property="og:title" content="Didier Website" />
+        <meta property="og:title" content="Bianca Buzea Website" />
         <meta
           property="og:description"
           content="Where you can find my posts, personal projects and everything in between."
         />
         <meta property="og:image" content={`${siteUrl}/img/goku_pixel.png`} />
-        <meta property="og:url" content="https://didierlopes.com" />
+        <meta property="og:url" content="https://biancabuzea.com" />
         
         {/* Add X-specific meta tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@didier_lopes" />
-        <meta name="twitter:creator" content="@didier_lopes" />
-        <meta name="twitter:title" content="Didier Rodrigues Lopes - Personal Website" />
-        <meta name="twitter:description" content="Discover my posts, personal projects, and journey as Co-founder & CEO at OpenBB." />
+        <meta name="twitter:site" content="@buzea200" />
+        <meta name="twitter:creator" content="@buzea200" />
+        <meta name="twitter:title" content="Bianca Buzea - Personal Website" />
+        <meta name="twitter:description" content="Discover my posts, personal projects, and journey as a DevRel." />
         <meta name="twitter:image" content={`${siteUrl}/img/goku.png`} />
       </Head>
       <main>

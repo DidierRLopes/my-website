@@ -664,6 +664,13 @@ const data = [
 		author: "Edward R. Tufte",
 		image: "/books/the-visual-display-of-quantitative-information.jpg"
 	},
+	{
+		title:
+			"The Laws of Trading: A Trader's Guide to Better Decision-Making for Everyone",
+		author: "Agustin Lebron",
+		image:
+			"/books/the-laws-of-trading-a-traders-guide-to-better-decision-making-for-everyone.jpg"
+	},
 ];
 
 export const booksToReadCount = data.length;

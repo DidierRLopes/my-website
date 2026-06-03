@@ -63,6 +63,14 @@ It's not about replacing humans with AI. It's about giving both the human and th
 
 *I did a small POC at the start of the year of where we are heading, and it's so clear to me that this is the future - watch this 50 second clip.*
 
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/xTvaks7EDh0"
+        width="800"
+        height="400"
+    />
+</div>
+
 
 ## How a unified approach unlocks alpha at the intersection
 

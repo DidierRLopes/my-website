@@ -169,3 +169,7 @@
 - [2026-04-14-how-did-we-end-up-here](https://didierlopes.com/blog/2026-04-14-how-did-we-end-up-here)
 - [2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production](https://didierlopes.com/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production)
 - [2026-04-23-fragmentation-kills-alpha](https://didierlopes.com/blog/2026-04-23-fragmentation-kills-alpha)
+- [2026-04-28-i-built-my-own-outreach-system-because-ai-sucks](https://didierlopes.com/blog/2026-04-28-i-built-my-own-outreach-system-because-ai-sucks)
+- [2026-05-14-why-an-apps-marketplace-for-a-financial-workspace](https://didierlopes.com/blog/2026-05-14-why-an-apps-marketplace-for-a-financial-workspace)
+- [2026-05-20-codex-beats-chipwits](https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits)
+- [2026-05-31-long-running-agents-and-slms-embedded-in-your-product](https://didierlopes.com/blog/2026-05-31-long-running-agents-and-slms-embedded-in-your-product)

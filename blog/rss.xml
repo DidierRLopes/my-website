@@ -4,11 +4,652 @@
         <title>Didier Lopes Blog</title>
         <link>https://didierlopes.com/blog</link>
         <description>Didier Lopes Blog</description>
-        <lastBuildDate>Thu, 23 Apr 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 31 May 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2026 Didier Lopes.</copyright>
+        <item>
+            <title><![CDATA[Long-running agents & SLMs embedded in your product]]></title>
+            <link>https://didierlopes.com/blog/long-running-agents-and-slms-embedded-in-your-product</link>
+            <guid>https://didierlopes.com/blog/long-running-agents-and-slms-embedded-in-your-product</guid>
+            <pubDate>Sun, 31 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Long running agents as a category will likely be won by the labs and opportunity for startups is to use SLMs around customer use-cases/workflows with all the…]]></description>
+            <content:encoded><![CDATA[<p>Long running agents as a category will likely be won by the labs and opportunity for startups is to use SLMs around customer use-cases/workflows with all the context they are sitting on.</p>
+<p>More than 2 years ago, on January 1st 2024, I <a href="https://didierlopes.com/blog/prediction-for-2024/">published a prediction</a> that fine-tuned SLMs would be on the rise within financial firms. That basically you would need specialized models for different workflows and you would get these by fine-tuning SLMs in your own owned-firm data.</p>
+<p>And I did this schema on how we were thinking about this:</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-31-long-running-agents-and-slms-embedded-in-your-product_1.webp" alt="Long-running agents &amp; SLMs embedded in your product"></p>
+<br>
+<p>9 months later, I wrote this in another essay titled <a href="https://didierlopes.com/blog/chatgpt-and-the-future-of-ai-in-finance/#small-language-models">ChatGPT and the future of AI in Finance</a>:</p>
+<blockquote>
+<p><em>What a big LLM like GPT-4o is doing is trying to build a single Jarvis that knows about everything. Whereas we could have an SLM that does something extremely well and just focus on that, e.g. translating from English to Portuguese. The benefit of an SLM is that inference is likely faster, can be hosted on devices, and, in theory, it’s better on a topic because it’s been less “contaminated” during training by data that doesn’t relate to the task at hand.</em></p>
+<p><em>Imagine that a firm decides to use an SLM trained to retrieve data from SEC filings quickly and at scale. Or, we could train our own SLM to understand user intent and interact directly with the OpenBB Terminal interface.</em></p>
+</blockquote>
+<p>In hindsight, this vision didn’t materialize yet. At least not in 2025 and likely not in 2026, at least not at the scale I was expecting.</p>
+<p>But I am still bullish in this category.</p>
+<p>In a different way than I was before.</p>
+<p>One of the things I didn’t expect was that as the models scaled up, context engineering would make it possible to heavily steer token inference distribution in a way that would have made fine-tuning on a previous model useless.</p>
+<p>I mean I expected this to happen for some time, but not for it to still hold almost 2 years later.</p>
+<p>In that same post I wrote about this, and even mentioned this sentence that someone at BlackRock said on stage: “<em>it's expensive to spend time fine-tuning a new model, just for that entire work to be 'eradicated' by a new model that has a higher performance in that specific domain than the model has been fine-tuned</em>“</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-31-long-running-agents-and-slms-embedded-in-your-product_2.webp" alt="Long-running agents &amp; SLMs embedded in your product"></p>
+<br>
+<p>So what is different now? What changed?</p>
+<p>People have really pushed what is possible to do with the model. Everyone is using the same models (GPT-5.5, Opus 4.7, …) but the type of workflows are completely different - coding, healthcare, finance, consumer, legal,.. so what differs?</p>
+<p>The prompt.</p>
+<p>Except that now we don’t call it prompt anymore. We started calling it Context, where you are talking about the system prompt + user prompt + data. But it’s all still the input that the model uses to do forward pass and predict the next token.</p>
+<p>And then Context Engineering didn’t encompass enough the amount of engineering around it, and the term “harness” started to pick up.</p>
+<p>Harness is pretty much everything surrounding the model weights. How the agent decides to handle internal or external data (structured or unstructured), how it decides to handle past conversation or memory in general, how it decides to ask user for additional questions, how it supports MCP tools and skills, but also additional commands, …</p>
+<p>Along with that, an agent having access to its own sandbox with file systems and given more playground started becoming the norm.</p>
+<p>Han Lee has an <a href="https://leehanchung.github.io/blogs/2026/05/08/hidden-technical-debt-agent-harness/" target="_blank" rel="noopener noreferrer">amazing post</a> on the Agent Harness topic, if you want to learn more.</p>
+<p>Coding agents won because they had the perfect environment to thrive. And it turns out that many domains can be boiled down to a coding agent + well defined context and workflow.</p>
+<p>Now the thing that I didn’t expect was that the labs would go as vertical as they have. It doesn’t shock me given that’s where value ($$$) lies - but it still caught me off guard as they alienated startups being built on top of their models. Many of them.</p>
+<p>The prize was just too high for them to not do it.</p>
+<p>Not only that, but they understood that context is king and the more data they can get their hands on (particularly as they’ve already exhausted most available data out there) the more powerful their models become.</p>
+<p>So if you understand that, what is your next move?</p>
+<p>It’s to have people do work on your products so that net new data gets to be used. But they are not just training on normal user data. No. They are training on user data along with their interactions with their product.</p>
+<p>At this point the harness is becoming part of the training set. So you are going to go very uphill if you are trying to beat Claude Code by utilizing Opus 4.7 in a different harness, or trying to beat Codex using GPT-5.5 in a different harness. Ultimately, I think Cursor has realized this - hence the buy-out option of xAI making total sense.</p>
+<p>And due to the nature of coding agents and how “general” they can be because everything is code - I think labs will win the long running / autonomous agents. If you need proof points on this, track what the labs are sharing on their blogs (this is one of the best ways to understand their priorities):</p>
+<ul>
+<li>
+<p><a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents" target="_blank" rel="noopener noreferrer">https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents</a></p>
+</li>
+<li>
+<p><a href="https://openai.com/index/harness-engineering/" target="_blank" rel="noopener noreferrer">https://openai.com/index/harness-engineering/</a></p>
+</li>
+</ul>
+<p>Even well capitalized startups, such as Cognition and Cursor (2.5bn and 3.3bn raised, respectively) are talking about the challenges around scaling cloud / autonomous agents.</p>
+<ul>
+<li>
+<p><em>“Building cloud agent infrastructure requires two investments: the technical infrastructure to run agents securely and autonomously in the cloud, and the change management to make agents productive across your engineering org. We've spent over two years on both, for Devin. What follows is what we've learned.” -</em> <a href="https://cognition.ai/blog/what-we-learned-building-cloud-agents" target="_blank" rel="noopener noreferrer">https://cognition.ai/blog/what-we-learned-building-cloud-agents</a></p>
+</li>
+<li>
+<p><em>“During that experiment, we saw frontier models fail in predictable ways on long-horizon tasks. We addressed these limitations by creating a custom harness that enables agents to take on more difficult work and see it through to completion.” -</em> <a href="https://cursor.com/blog/long-running-agents" target="_blank" rel="noopener noreferrer">https://cursor.com/blog/long-running-agents</a></p>
+</li>
+</ul>
+<p>And so as a startup, your best best is to create the tools that these agents crave to do workflows in your specialized domain.</p>
+<p>For us, that is the <a href="https://openbb.co/blog/introducing-workspace-mcp/" target="_blank" rel="noopener noreferrer">Workspace MCP</a>. Where Codex/CC can access the Workspace data, based on the right data entitlements and roles.</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/Q4Pj9wMZgGs" width="800" height="400"></iframe></div>
+<br>
+<blockquote>
+<p><em>Codex controlling my Open Portfolio dashboard via Workspace MCP</em></p>
+</blockquote>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/IDu6TrrPkd8" width="800" height="400"></iframe></div>
+<br>
+<blockquote>
+<p><em>Codex creating a slide deck from the Open Portfolio via Workspace MCP</em></p>
+</blockquote>
+<p>But can also create widgets, dashboards and apps for the Workspace.</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/K50I6YLguTY" width="800" height="400"></iframe></div>
+<br>
+<blockquote>
+<p>Codex one-shot a Kalshi App for the Workspace via Workspace MCP</p>
+</blockquote>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="so-where-do-small-models-still-win">So where do small models still win?<a href="https://didierlopes.com/blog/long-running-agents-and-slms-embedded-in-your-product#so-where-do-small-models-still-win" class="hash-link" aria-label="Direct link to So where do small models still win?" title="Direct link to So where do small models still win?">​</a></h3>
+<p>Back to my original bet.</p>
+<p>I said I’m still bullish in this category, just in a different way. Here’s what I mean.</p>
+<p>The frontier models will (have?) win the long, autonomous, general-purpose layer.</p>
+<p>But there’s another opportunity - the small/fast agentic experience within a product, where a model has to do a specific job, at a specific volume, under constraints the frontier model can’t satisfy.</p>
+<p>Three reasons for such small embedded models.</p>
+<p><strong>Cheaper.</strong></p>
+<p>The clearest example is Cursor’s tab model. It runs every time you type. If Cursor was calling Opus 4.7 (or 4.8 by the time this is live lol) for every autocomplete suggestion, the unit economics of a $20/mo product wouldn’t work. So they trained a small model on their own data and now it runs constantly at a fraction of the cost. Tools like <a href="https://thinkingmachines.ai/tinker/" target="_blank" rel="noopener noreferrer">Tinker</a> are making this viable for more application companies.</p>
+<p><strong>Faster.</strong></p>
+<p>SLMs are small. Small means fast.</p>
+<p>Frontier models will keep getting faster, but they’re built for long reasoning, not for tight inference loops inside a UX flow. For an autocomplete that runs while you type, a classification step inside an agent loop, a widget that re-scores as data changes - you need a response in milliseconds, not seconds.</p>
+<p><strong>Secure.</strong></p>
+<p>This is the strongest reason for OpenBB’s clients.</p>
+<p>Hedge funds, asset managers, family offices, banks - they have data residency and air-gap requirements that make frontier API calls structurally impossible for certain workflows. You can’t ship sensitive client data to a third-party endpoint. An embedded model that runs wherever the product runs in your own environment is the only way tou can stay within compliance requirements.</p>
+<p>Here’s our take on this:</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/ZiAcul0wBPg" width="800" height="400"></iframe></div>
+<br>
+<blockquote>
+<p>This is a preview of a new agent we have coming where I am building a CME dashboard using an open weight GLM-5.1 that we could tweak to optimize for this type of workflows; and then I work on that dashboard with GPT-OSS 20b which is running locally on my machine (Macbook Pro M3 48gb).</p>
+<p>In the end when the artifact is created you can see that the name of the widget and metadata are automatically created by this SLM, to show that this small model focuses on the end user experience.</p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="where-are-we-heading">Where are we heading<a href="https://didierlopes.com/blog/long-running-agents-and-slms-embedded-in-your-product#where-are-we-heading" class="hash-link" aria-label="Direct link to Where are we heading" title="Direct link to Where are we heading">​</a></h2>
+<p>I don’t think startups should try to beat the labs at autonomous agents. Labs have the compute, the data, the harness, and now the context of these long running flows. A lot of these actually happened because of the adoption of MCP universally, where there was no friction from users to use another product as they could connect data to their favorite agent.</p>
+<p>Data incumbents in particular should, imo, try to hold their data + context to try to win the workspace infrastructure where work happens. Make labs come to them, not the other way around. Almost like an MCP for agents rather than an MCP for data and tools.</p>
+<p>Given the state of the world, I would build the tools long-running agents crave inside your domain. Expose your product through MCP. Make it easy for Codex, Claude Code, and whatever comes next to do real work inside your runtime. For us, that’s the <a href="https://openbb.co/blog/introducing-workspace-mcp/" target="_blank" rel="noopener noreferrer">Workspace MCP</a>.</p>
+<p>Inside your product, ship small models for the workflows that need them. Tight latency loops. On-prem deployments. Anything that needs to be tuned against your specific data or run on the client’s hardware.</p>
+<p>Treat both as complementary. The long-running agent and the embedded model are doing fundamentally different jobs.</p><div style="display:flex;justify-content:center;margin-top:3rem;margin-bottom:1rem"><a href="https://substack.com/@didierrlopes" target="_blank" rel="noopener noreferrer" class="mission-button" style="text-decoration:none;white-space:nowrap;padding:12px 24px;font-size:14px">Subscribe to my newsletter<span style="margin-left:6px">»</span></a></div>]]></content:encoded>
+            <category>ai</category>
+            <category>agents</category>
+            <category>slms</category>
+            <category>startups</category>
+            <category>workflows</category>
+        </item>
+        <item>
+            <title><![CDATA[Codex beats ChipWits]]></title>
+            <link>https://didierlopes.com/blog/codex-beats-chipwits</link>
+            <guid>https://didierlopes.com/blog/codex-beats-chipwits</guid>
+            <pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[My journey of using codex to beat ChipWits on Steam.]]></description>
+            <content:encoded><![CDATA[<p>My journey of using codex to beat ChipWits on Steam.</p>
+<p>TL;DR:</p>
+<ul>
+<li>
+<p>I wanted to see if an AI agent could beat a colleague’s game, but also beat public benchmarks for it, with a lean harness.</p>
+</li>
+<li>
+<p>I’ll go over my entire journey, from having the AI agent not being able to do anything to it being able to clear the game very easily with a few markdown files that it kept with tips and tricks.</p>
+</li>
+<li>
+<p>I’ll also go over beating public benchmark scores. Going to share how Codex was able to beat 2 of these, one on its own and another by looking into the winning solution and optimizing it.</p>
+</li>
+<li>
+<p>AGI is coming… with a strong model (intelligence) and tools + data, there will likely be few tasks that a human can perform that an agent won’t be able to.</p>
+</li>
+</ul>
+<p>A few years ago I demo’ed OpenBB to someone at a hedge fund. After the meeting was over, we kept chatting in the elevator and he mentioned he was working on a game.</p>
+<p>We reconnected a few months ago, and I asked him about the game he built and it was <a href="https://chipwits.com/" target="_blank" rel="noopener noreferrer">live</a>!</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_1.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>You can test the demo version for free here: <a href="https://store.steampowered.com/app/2330720/ChipWits/" target="_blank" rel="noopener noreferrer">https://store.steampowered.com/app/2330720/ChipWits/</a></p>
+<p>We started talking about how AI was impacting the building of the game. Email from the creator:</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_2.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>I couldn’t help myself. That night “I” had a first crack at it.</p>
+<p>The game was really fun, but I wanted to try to solve it with an agent.</p>
+<p>Then the day after I messaged him with:</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_3.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>I ultimately was able to have Claude Code (with Opus 4.5) interact with the game and solve it for me. But it was using computer use and latency was bad. Most importantly, the visual grid understanding was even worse….</p>
+<p>In this post I’m going to talk about how I ended up building an agent that was able to complete ALL the ChipWits levels on its own, AND even beat one of the monthly challenge records 👀 but also the failures!</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="claude-takes-the-joystick">Claude takes the joystick<a href="https://didierlopes.com/blog/codex-beats-chipwits#claude-takes-the-joystick" class="hash-link" aria-label="Direct link to Claude takes the joystick" title="Direct link to Claude takes the joystick">​</a></h2>
+<p>This is what the game looks like.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_4.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>The initial mechanics of the game are very simple for the human brain to understand, also because as you lay down chips you get to click “Play” or “Simulate step” and can see/understand how the game works in real-time.</p>
+<p>This would be just as intuitive for an agent to understand and play, so I didn’t really see a “problem” with having AI being able to figure out and clear the game. Maybe not one shot, but given enough time/resources it should be very doable.</p>
+<p>So now I needed to give an agent:</p>
+<ul>
+<li>
+<p>The state of the environment (vision)</p>
+</li>
+<li>
+<p>The joystick to be able to play (actuator)</p>
+</li>
+</ul>
+<p>So it looks something like this:</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_5.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>It’s not like the game had an embedded agent, so I thought that the best way to achieve this was via computer use. If I could pass the game by looking at a screen and using keyboard and mouse, then so should an agent. Right?</p>
+<p>Kind of.</p>
+<p>First I wanted to test the actuator, so I explained to the agent the current state of the world.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_6.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>I basically took the image above and told Claude Code that the environment looked like this:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">| B | . | . | . | x |</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">| x | x | x | # | . |</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">| P | # | . | x | . |</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">| x | . | x | . | # |</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">| R | . | . | . | x |</span><br></span></code></pre></div></div>
+<p>Legend:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">B = Blue star tile</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">R = Red star tile</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">P = Player</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">x = Orange cone</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"># = Hole/gap</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">. = Empty tile</span><br></span></code></pre></div></div>
+<p>And then told it to control the chips available (after some explanation of how you could layout chips).</p>
+<p>And that worked!!! Although it was very slow, I saw it solving one of the puzzles!</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="vision-models-suck">Vision models suck<a href="https://didierlopes.com/blog/codex-beats-chipwits#vision-models-suck" class="hash-link" aria-label="Direct link to Vision models suck" title="Direct link to Vision models suck">​</a></h2>
+<p>You would think that vision models can capture something like this perfectly right?</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_6.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>You couldn’t be more wrong. I tried Opus 4.5, GPT-5.2 and Gemini 3.0, and none of them could <strong>reliably</strong> detect this isometric grid with different layout and elements.</p>
+<p>The main issues I saw were:</p>
+<ul>
+<li>
+<p>They didn’t understand that the barriers surrounding the available space were there</p>
+</li>
+<li>
+<p>They often considered the NPC white robot as part of the game</p>
+</li>
+<li>
+<p>They considered that large barrel as part of the game, and because the grid south of it is thin, they would assume it wasn’t there</p>
+</li>
+<li>
+<p>They would miss holes often</p>
+</li>
+</ul>
+<p>And honestly overall, it just sucked.</p>
+<p>I would be lying if I said I got close to having it working. I didn’t.</p>
+<p>I tried a few other strategies, things like:</p>
+<ul>
+<li>
+<p>Running 10 subagents and then doing majority voting in terms of the grid layout. Most of the time, most of the grids looked different at each run, not consistent at all.</p>
+</li>
+<li>
+<p>Running 10 subagents and then doing majority voting in each of the cells. Except that some agents would pick this as a 5x5 grid while others as 6x6 or 5x6, etc…</p>
+</li>
+<li>
+<p>Allowing Claude to spin up Gemini and Codex to use them instead of only its own subagents for the majority grid layout. Still no luck.</p>
+</li>
+<li>
+<p>Asking these models to extract the element in position A1 only, then A2, etc., but they got confused around what position I was referring to.</p>
+</li>
+</ul>
+<p>Very frustrating.</p>
+<p>Then I realized that I could actually rotate the view of the game. Smh 🤦🏽‍♂️</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_7.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>Ok, now it should be much easier for the agent to pick up on the grid.</p>
+<p>Kind of.</p>
+<p>It was easier to understand the elements layout, but it still struggled in terms of the layout size, considered the NPC white robot as part of the game, considered the white barrel as a target, and missed the grid surrounding playable space.</p>
+<p>Ok, what if I created a grid image based on the entire grid and wrote A1 in the right cell, and then asked an agent to overlay that image onto the image of the current game and retrieve whatever is in A1, and so on.</p>
+<p>But then I ran out of tokens, and honestly I could have probably solved it but it wasn’t worth the time to build an OCR pipeline as what I really wanted to test was the intelligence of the models to solve a challenging puzzle game such as this one.</p>
+<p>It made me appreciate more startups working in OCR and that this problem is far from solved.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_8.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_9.webp" alt="Codex beats ChipWits"></p>
+<br>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="enter-mcp">Enter MCP<a href="https://didierlopes.com/blog/codex-beats-chipwits#enter-mcp" class="hash-link" aria-label="Direct link to Enter MCP" title="Direct link to Enter MCP">​</a></h2>
+<p>Then I was invited into this channel on Discord and given access to ChipWits MCP.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_10.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>The MCP exposed the game’s state and actions directly. It didn’t matter if it was an SDK, CLI or MCP really. What mattered is that there were endpoints that the agent could query to lay out chips (action) and view the state of the game (sensor).</p>
+<p>So now the problem would become an intelligence one.</p>
+<p>NICE 👍</p>
+<p>Literally my first go with the MCP and Claude Code (with Opus 4.5) one-shotted the level. Uh oh, this is going to be fun.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_11.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>It was able to read the mission, the current state of the game, reason about what it needed to do, place chips and run. And get the current result to tell me that the objective was met.</p>
+<p>Then I bought the game to have access to more levels…</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="i-put-the-cart-before-the-horse">I put the cart before the horse<a href="https://didierlopes.com/blog/codex-beats-chipwits#i-put-the-cart-before-the-horse" class="hash-link" aria-label="Direct link to I put the cart before the horse" title="Direct link to I put the cart before the horse">​</a></h2>
+<p>Why try the easy levels given there is a <a href="https://chipwits.com/hall-of-pie/" target="_blank" rel="noopener noreferrer">monthly challenge</a> that I can attempt to solve? Right?</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_12.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>Hell no.</p>
+<p>Claude Code struggled soooo bad to solve the latest one (I tried both Giant Slalom and Spring Cleaning). Like it would just spend a ton of tokens and get stuck completely, literally running for hours in a loop without getting anywhere.</p>
+<p>But from its attempts I was like “wth are you even trying to do.” It’s like it was throwing mud at the wall and seeing what stuck. It was trying to brute force the game but with some sort of intelligence?</p>
+<p>Maybe there was a path that I wasn’t seeing, so I let it cook.</p>
+<p>And cook.</p>
+<p>And ran out of tokens.</p>
+<p>Ok this strategy isn’t gonna work, back to square 1.</p>
+<p>In the defense of the model, look at the winning solution of <a href="https://www.youtube.com/shorts/0m022M8ijjc" target="_blank" rel="noopener noreferrer">Giant Slalom</a> monthly challenge, or <a href="https://www.youtube.com/shorts/ltqSXpMWxKs" target="_blank" rel="noopener noreferrer">Spring Cleaning</a>. Unbelievable. I don’t know who Jerric01 is but I’ll believe we reached AGI when he says so.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="lets-go-with-first-principles">Let’s go with first principles<a href="https://didierlopes.com/blog/codex-beats-chipwits#lets-go-with-first-principles" class="hash-link" aria-label="Direct link to Let’s go with first principles" title="Direct link to Let’s go with first principles">​</a></h2>
+<p>When I first started interacting with the community on Discord, my first message was this:</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_13.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>I literally explained there how I should approach the problem.</p>
+<p>I was just being too optimistic, but after all, ChipWits is not in the training data of these models, so the agent needs to learn how to play it too.</p>
+<p>The agent has a certain level of intelligence. After it clears a specific mission (which it had one-shotted a simple one before), will it be able to clear the following one?</p>
+<p>It depends. If it’s a similar mission, then very likely. You can assume that if it knows how to solve one, it knows how to solve the next.</p>
+<p>But this isn’t how the game is laid out. Missions get increasingly more complex, and not just in terms of solution complexity. New mechanics get introduced.</p>
+<p>This is why there’s a well-defined roadmap for users to learn mechanics and apply them to the next mission. Then the mission after may have the same mechanics but at higher complexity.</p>
+<p>The way I thought about it was like climbing a mountain, where there are bases for the agent to “learn” new mechanics so it can keep climbing.</p>
+<p>So I basically decided we’d start from scratch, but not vanilla. I’d provide the agent with a set of tools that it could use.</p>
+<p>Initially, I told the agent: you are going to solve this mission (the first one) and use a SCRATCHPAD.md to put down what you are learning as you go.</p>
+<p>But then when I went into the second mission, I didn’t want the agent to start it “cold”. The entire point was that it would have learned from the previous mission. But there wasn’t a concept of “learned”, scratchpad was just notes.</p>
+<p>So I basically split scratchpad into 3 files.</p>
+<ul>
+<li>
+<p><strong>SCRATCHPAD</strong>: notes on the current mission (what worked, what didn’t, out-of-the-box ideas, reframing of the problem, anything the agent wants). A working memory file for the level it’s currently solving. Gets updated until the mission is cleared. As the games got harder, the long, branching reasoning needed somewhere to live that wasn’t burning context.</p>
+</li>
+<li>
+<p><strong>LEARNINGS_STRATEGY</strong>: what the agent updates after passing the mission. The “tricks and tips” distilled from the scratchpad. A structured record of what was tried and what worked, written after each level. The model contributes to it after every attempt, so its own past mistakes become part of the prompt for the next one.</p>
+</li>
+<li>
+<p><strong>PAST_SOLUTIONS</strong>: a place for me to put the answers to past games. This gives the agent quick access to past solutions in case it does pattern recognition on a specific board or situation. Think of it as few-shot examples.</p>
+</li>
+</ul>
+<p>I didn’t have a dataset of solved levels to start with. The agent had to learn as it went, the same way a human player does. Honestly, this was the part that surprised me most.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="codex-i-choose-you">Codex, I choose you<a href="https://didierlopes.com/blog/codex-beats-chipwits#codex-i-choose-you" class="hash-link" aria-label="Direct link to Codex, I choose you" title="Direct link to Codex, I choose you">​</a></h2>
+<p>I have been a Claude Code power user for several months, so I was doing everything with Claude. Claude was able to pass the initial missions but then it got stuck in a specific mission.</p>
+<p>The mission wasn’t even that hard. I didn’t understand why it got stuck.</p>
+<p>Ok, let’s start a new session and try to solve it.</p>
+<p>Still no luck.</p>
+<p>Then I started using Codex more and more at work for more challenging tasks or to brainstorm feature implementation.</p>
+<p>So I was like, let me restart this but use codex instead.</p>
+<p>Codex passed the initial missions, then the next, and the next and it just kept going….</p>
+<p>holy shit.</p>
+<p>I kept having to write “now do the next one”, after 15 minutes it was cleared.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_14.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>I was so excited. I literally didn’t even see the game - it would just go on and solve it and learn.</p>
+<p>Then I was talking on Discord in real-time as this was happening and even shared a video of it solving a mission in real-time.</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/6FaomozUW3s" width="800" height="400"></iframe></div>
+<br>
+<p>The creator even commented that in this video GPT-5.5 prefers to use the boomerang tile over a simple loop. One way or another, the game was passed!</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_15.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>At this point the main friction was me saying “lgtm, do the next”. So I said “keep going until you solve the next 10 missions” and most of the missions solved, but got stuck with wall damage in one.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_16.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>So I nudged it slightly with something like “think more carefully as you must avoid contact with the wall, otherwise you will get damaged,” and that was all it took.</p>
+<p>At this point I was quite confident that it could keep going on its own so I just said keep going until you finish the game and went to walk the doggos.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_17.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>It had finished the game!!!</p>
+<p>Or so I thought?</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="chipwits-challenges">ChipWits Challenges<a href="https://didierlopes.com/blog/codex-beats-chipwits#chipwits-challenges" class="hash-link" aria-label="Direct link to ChipWits Challenges" title="Direct link to ChipWits Challenges">​</a></h2>
+<p>It kept going?</p>
+<p>I looked at the ChipWits game and I saw this…</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_18.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>I was like, hold on, I’ve never seen this one before, and it doesn’t look like the normal game.</p>
+<p>When looking into the traces of the agent it found these side challenges and was going through them, and clearing them!!!</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_19.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>Holy shit..</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="harness">Harness<a href="https://didierlopes.com/blog/codex-beats-chipwits#harness" class="hash-link" aria-label="Direct link to Harness" title="Direct link to Harness">​</a></h2>
+<p>Truth be told, it helped that the model had these “tools” that it created to write down tips and tricks and keep improving at playing the game (without updating the model weights!).</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_20.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_21.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_22.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>I felt like I saw Codex learning and improving in real-time and that was awesome to watch. I also was looking at the diffs of the markdown files it kept and was really cool to see its reasoning - very human like.</p>
+<p>I also told Codex early on that it could recreate game mechanics if it wanted in a Python file or similar to test some concept strategies. It ended up doing it, but I’m not 100% sure if this was a good idea or not.</p>
+<p>Given that we didn’t have access to the underlying implementation of the game, Codex was reverse engineering the game to try and attempt strategies. And given that there were new mechanics being implemented, it would continuously update the past game simulator. The main issue that I saw is that for the side missions (much harder than normal gameplay), it would say it solved the side mission and then it would go to implement it in the game and it didn’t work at all. So I nudged it to only use that simulator to try new ideas/concepts, not actually play the game.</p>
+<p>Initially I thought that simulating the game would also make it faster as I didn’t have to wait for the MCP I/O to know if a certain layout would work. But I don’t think this made that much difference in the end tbh.</p>
+<p>I open-sourced the resulting artifacts from playing the game:</p>
+<ul>
+<li><a href="https://github.com/DidierRLopes/chipwits-resulting-artifacts" target="_blank" rel="noopener noreferrer">https://github.com/DidierRLopes/chipwits-resulting-artifacts</a></li>
+</ul>
+<p>It would have been an interesting thing to commit each time a mission is solved so we can see what the agent learns from clearing each level individually, but I only thought of that too late ahah.</p>
+<p>I didn’t add the simulator game as I don’t think there’s a lot of value there.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="chipwits-hall-of-pie">ChipWits Hall of Pie<a href="https://didierlopes.com/blog/codex-beats-chipwits#chipwits-hall-of-pie" class="hash-link" aria-label="Direct link to ChipWits Hall of Pie" title="Direct link to ChipWits Hall of Pie">​</a></h2>
+<p>It cleared a lot of the ChipWits hall of pie challenges on its own, but I could see that it struggled much more than the other levels.</p>
+<p>But not all of them.</p>
+<p>For some, it threw in the towel saying it couldn’t do it, and then I nudged it with “try again, think in first principles I believe in you” or some pep talk like that, and that was all it took. I felt like I was back in the locker room trying to rally my soccer team 15y ago at half time for the second half lmao.</p>
+<p>Ok, it cleared all of them except one!</p>
+<p>Then Mark asked how the results compared with the “winning solution.”</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_23.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>Hmmmm, pretty shit tbh - but at least valid!! Then it was an “optimization problem”.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="spring-cleaning">Spring Cleaning<a href="https://didierlopes.com/blog/codex-beats-chipwits#spring-cleaning" class="hash-link" aria-label="Direct link to Spring Cleaning" title="Direct link to Spring Cleaning">​</a></h2>
+<p>I spent so many hours trying to nudge the agent to be able to complete this game, but best it could do was 75%. And this was after many hours.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_24.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>It’s like it got stuck in this local minima and didn’t matter what I prompted it or how many times I started a new session, it wasn’t able to get further than this.</p>
+<p>So I left it at this - maybe it’s nice that it wasn’t able to clear every single level.</p>
+<p>Here’s Jerric01 solution to this challenge:</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/ltqSXpMWxKs" width="800" height="400"></iframe></div>
+<br>
+<p>But I may come back when Mythos is out or so!</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_25.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>But I still wasn’t done - I wanted to see if the agent could beat any public monthly score challenge</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="beating-a-public-monthly-challenge">Beating a public monthly challenge<a href="https://didierlopes.com/blog/codex-beats-chipwits#beating-a-public-monthly-challenge" class="hash-link" aria-label="Direct link to Beating a public monthly challenge" title="Direct link to Beating a public monthly challenge">​</a></h2>
+<p>I didn’t want to condition it towards a specific side mission. So I told the agent that it needed to go through list of past side missions and compare its results vs public score and pick one to attempt to beat.</p>
+<p>Tbh, I didn’t have many hopes for this as I looked into these levels and they were already pretty optimized, to the point where I didn’t even know if there was a way to get a better solution than the ones publicly disclosed.</p>
+<p>Or so I thought…</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_26.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>I was so happy to see this.</p>
+<p>This not only proved my thesis that AI could beat the game, but that it could also push it further than humans have.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_27.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>Solution here (you can just paste it into the mission): chipwits<!-- -->:H4sIAAAAAAAAExMS4hLgYuJgEeLi4BRicWLiYJZgBABDUb2VFAAAAA<!-- -->==</p>
+<p>And this was fully on its own, without me giving the winning solution or anything. Although it had used many more chips to solve it, it didn’t matter because it was optimizing for fewer cycles and it traded off with the amount of chips used. Winning solution was 496 and we (feels wrong to say we lol) achieved 410 🏆</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_28.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>Up to here I had never given the agent a winning solution.. even though they are available in the ChipWits hall of pie website.</p>
+<p>But I wanted to try, given a winning solution, can I ask the agent to take it and optimize it even further?</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="beating-a-public-monthly-challenge-by-optimizing-the-winning-solution">Beating a public monthly challenge by optimizing the winning solution<a href="https://didierlopes.com/blog/codex-beats-chipwits#beating-a-public-monthly-challenge-by-optimizing-the-winning-solution" class="hash-link" aria-label="Direct link to Beating a public monthly challenge by optimizing the winning solution" title="Direct link to Beating a public monthly challenge by optimizing the winning solution">​</a></h2>
+<p>My main concern was - how much room is there for optimization in some of these?</p>
+<p>Did we get lucky with “Set the Table” mission where there was some margin to optimize for fewest cycles?</p>
+<p>I tried with a few and unfortunately didn’t get very far, but I believe that this is because there isn’t a way to optimize these. They are already the global minima and it’s not possible to use fewer chips or cycles.</p>
+<p>And also at that point the agent isn’t really tested against solving the game, but rather finding a redundancy in the chips layout or similar to squeeze some gains.</p>
+<p>And for these, I believe that if there’s a better solution, which there may as well not be, you would have to think outside-the-box and completely throw away the past solution.</p>
+<p>Would the agent have been able to beat the public record for “Set the Table” mission if I had given it the solution in advance? I’m not sure.</p>
+<p>But there was one last mission I wanted to try….</p>
+<p>Yup. My agent nemesis - Spring Cleaning.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_29.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>The winning solution is 2123 cycles.</p>
+<p>But my agent never found a working solution for this problem, so we never were able to assess it.</p>
+<p>So this time I gave it the winning solution and said that it could use that as starting point…</p>
+<p>I was VERY curious whether it could beat it or not.</p>
+<p>🥁🥁🥁</p>
+<p>it took many hours, but…</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_30.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_31.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>GPT-5.5 beat another public solution!!! (don’t mind the 899 median, that’s a fluke!)</p>
+<p>Solution here (you can just paste it into the game): chipwits<!-- -->:H4sIAAAAAAAAExPi4eLiYuJgEmLhYJRgBACM1R8zDgAAAA<!-- -->==</p>
+<p>I asked Codex how it did it, and here’s what it said:</p>
+<blockquote>
+<p><em>The old path repeatedly checked for the center box while walking back along the return line. The new one keeps the first IF_FEEL BOXOPEN check for near-box cases, but then skips the next repeated box-check cycle and moves forward before checking again. That saves cycles on the longer returns without overshooting the box.</em></p>
+<p><em>So the key was: preserve correctness at close range, but avoid paying IF_FEEL BOXOPEN on every single return step.</em></p>
+</blockquote>
+<p>And this concludes my experiment.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits_32.webp" alt="Codex beats ChipWits"></p>
+<br>
+<p>I dare anyone to try it out themselves. You can join the Discord here: <a href="https://discord.gg/D4G3np9RWm" target="_blank" rel="noopener noreferrer">https://discord.gg/D4G3np9RWm</a> and ask for access to the MCP Server for your agent.</p>
+<p>And if you can beat any of the public benchmarks, send me a text message :)</p><div style="display:flex;justify-content:center;margin-top:3rem;margin-bottom:1rem"><a href="https://substack.com/@didierrlopes" target="_blank" rel="noopener noreferrer" class="mission-button" style="text-decoration:none;white-space:nowrap;padding:12px 24px;font-size:14px">Subscribe to my newsletter<span style="margin-left:6px">»</span></a></div>]]></content:encoded>
+            <category>ai</category>
+            <category>codex</category>
+            <category>agents</category>
+            <category>gaming</category>
+            <category>automation</category>
+        </item>
+        <item>
+            <title><![CDATA[Why an Apps Marketplace for a Financial Workspace]]></title>
+            <link>https://didierlopes.com/blog/why-an-apps-marketplace-for-a-financial-workspace</link>
+            <guid>https://didierlopes.com/blog/why-an-apps-marketplace-for-a-financial-workspace</guid>
+            <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Announcing a free data and analytics marketplace on OpenBB]]></description>
+            <content:encoded><![CDATA[<p>Announcing a free data and analytics marketplace on OpenBB</p>
+<p>Announcement <a href="https://openbb.co/blog/introducing-the-openbb-app-marketplace/" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p>More financial data vendors exist today than ever before. Alternative data, satellite imagery, credit card transactions, analyst transcripts, ESG scores - the list keeps growing.</p>
+<p>So does the pain of accessing it with fragmented onboarding, long integration cycles and days of contract negotiation before there’s any value extracted.</p>
+<p>Meanwhile, AI has changed what financial infrastructure needs to be. Agents are the new first-class consumers, not the terminals built decades ago. Incumbents will have a hard time to retrofit their way to AI-native without cannibalizing their own business. So the gap widens.</p>
+<p>The natural solution would be a marketplace - a neutral layer where vendors distribute data and firms access it without the friction. It’s been tried. Repeatedly. And it keeps failing.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-financial-data-marketplaces-keep-failing">Why financial data marketplaces keep failing<a href="https://didierlopes.com/blog/why-an-apps-marketplace-for-a-financial-workspace#why-financial-data-marketplaces-keep-failing" class="hash-link" aria-label="Direct link to Why financial data marketplaces keep failing" title="Direct link to Why financial data marketplaces keep failing">​</a></h2>
+<p>Every major incumbent has tried a marketplace at some point. Bloomberg has one. FactSet has one, though it’s worth remembering that FactSet started as a pure integration layer, aggregating third-party data with proprietary analytics on top, before acquiring its way into being a data company itself. Refinitiv tried. Nasdaq acquired Quandl, originally founded as a “Wikipedia for numerical data”, and folded it into their own data distribution strategy. Crux Informatics raised over $100 million from some of the most sophisticated financial institutions in the world, with the explicit goal of being a neutral data pipeline.</p>
+<p>On the other side, you have the pure neutral players (e.g. Eagle Alpha and BattleFin) that don't sell their own data, just connect buyers and sellers across thousands of alternative data products. What they’ve built is closer to a data catalogue than a platform. You can discover data there. You can’t really use it though.</p>
+<p>So the landscape splits neatly into two failure modes: the marketplaces run by incumbents, which get optimized for the operator’s own products until third-party data is effectively just a listing (if that); and the neutral catalogues, which solve discovery but stop well short of value.</p>
+<p>Nobody has built the thing in between.</p>
+<p>The standard explanation for the first failure mode is incentive misalignment - when the marketplace operator also sells data, their products get the best placement, the deepest integration, the most seamless onboarding.</p>
+<p>The deeper issue is that financial data has structural characteristics that resist marketplace intermediation regardless of who runs the platform. Enterprise data deals take months to close, with custom delivery requirements, legal reviews, and compliance questionnaires. A "subscribe" button doesn't replace that. The datasets themselves aren't fungible. Satellite imagery and credit card transaction data and analyst transcripts aren't like batteries on Amazon where a private-label substitute can undercut. And the network effects that make consumer marketplaces so powerful don't apply the same way: a buyer doesn't benefit from more buyers on the platform; they benefit from better data.</p>
+<p>So the real problem isn’t just that incumbents are conflicted. It’s that they’re conflicted <em>and</em> have no incentive to solve the hard structural problems that a real marketplace requires. They’d be cannibalizing their highest-margin businesses to fix a distribution model that might commoditize their products.</p>
+<p>One company genuinely working on the structural problem is Carbon Arc. They’re not aggregating data or running a catalogue - they’re building the ontology layer that sits underneath all of it. The reason firms spend months before extracting value from a new data vendor isn’t just bad onboarding, it’s that every vendor handles data differently. Carbon Arc’s brands, companies, locations, and people entities ontology and normalization layer means data from dozens of different vendors can finally be used together without a custom engineering project for each one. The infrastructure question shifts from “can I access this?” to “what can I build with it?”.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-order-of-operations-matters">The order of operations matters<a href="https://didierlopes.com/blog/why-an-apps-marketplace-for-a-financial-workspace#the-order-of-operations-matters" class="hash-link" aria-label="Direct link to The order of operations matters" title="Direct link to The order of operations matters">​</a></h2>
+<p>Amazon didn’t start by publishing books. They aggregated books from vendors, made them available to a larger audience, and put all the focus on the user experience of finding and getting the book you wanted. They didn’t own the content. They owned the experience.</p>
+<p>Only after establishing themselves as the neutral layer did they start competing on content (e.g. Amazon Basics). The same pattern plays out at Netflix (Originals) or Costco (Kirkland).</p>
+<p>The financial marketplaces that failed got this order wrong. They started with their own content, optimized the interface around it, and then wanted to add a marketplace. But the experience was already shaped by what they owned. Third-party data never had a fair shot because it was always being introduced into an environment designed for someone else’s products.</p>
+<p>There’s an important counterargument here. Apple and Salesforce both compete with their marketplace participants - the App Store and AppExchange are enormously successful despite that. So the “neutral ground first” principle isn’t absolute.</p>
+<p><strong>What makes the difference is whether the platform lock-in is strong enough that developers accept the competitive risk in exchange for distribution reach.</strong></p>
+<p>In financial data, that lock-in hasn’t existed at the platform level.</p>
+<p>Until now, possibly.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-we-have-today">What we have today<a href="https://didierlopes.com/blog/why-an-apps-marketplace-for-a-financial-workspace#what-we-have-today" class="hash-link" aria-label="Direct link to What we have today" title="Direct link to What we have today">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-catalogues">Data Catalogues<a href="https://didierlopes.com/blog/why-an-apps-marketplace-for-a-financial-workspace#data-catalogues" class="hash-link" aria-label="Direct link to Data Catalogues" title="Direct link to Data Catalogues">​</a></h3>
+<p>Companies that aggregate vendor metadata and keep a searchable list. A useful starting point, but it's far from users actually getting value out of the data. Most of these exist because data vendors have broken onboarding experiences. If you could pip install a feed and get started in five minutes, you wouldn't need a catalogue listing.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="csp-marketplaces">CSP Marketplaces<a href="https://didierlopes.com/blog/why-an-apps-marketplace-for-a-financial-workspace#csp-marketplaces" class="hash-link" aria-label="Direct link to CSP Marketplaces" title="Direct link to CSP Marketplaces">​</a></h3>
+<p>Snowflake, Databricks, AWS - they’ve built marketplaces inside their platforms and stayed genuinely neutral. A real step in the right direction, particularly as some F500 have started to shift to asking data vendors to integrate with some of these marketplaces if they wanted to sell them their data.</p>
+<p>But there are two problems I see: (1) subscribing to a raw data feed still leaves you far from value - someone has to build the pipeline, normalize the schema, create the visualization, integrate it with everything else; and (2) many of the listings are more marketing than substance - you click “subscribe” and get redirected to an AE, or you get a data sample with a call-to-action at the bottom.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="others">Others<a href="https://didierlopes.com/blog/why-an-apps-marketplace-for-a-financial-workspace#others" class="hash-link" aria-label="Direct link to Others" title="Direct link to Others">​</a></h3>
+<p>Outside of these, there are two things worth watching:</p>
+<ol>
+<li><strong>MCP</strong></li>
+</ol>
+<p>Structurally, a universal connector between AI agents and external tools. When data vendors announce MCP support, in theory they’re making their data accessible to any agent. Right?</p>
+<p>Well, I reached out to one of the large data incumbents after they announced an MCP server. They asked me for my use case before granting access. Then the AE said they needed to speak with their team because they were worried about cannibalizing their desktop product. And that was it. So yea, kind of defeats the purpose of it.</p>
+<p>I think MCP will matter for data integration, but it's still a bit far from value as it just provides an agent with access to data, the same way an API would to a developer. You still need to know what you will build, integrate it with data from other vendors, etc.. and ultimately it’s only going to be helpful for agentic workflows - not really for analytics. I wrote more on this topic here: <a href="https://didierrlopes.substack.com/p/apis-for-analytics-mcp-for-point" target="_blank" rel="noopener noreferrer">API vs MCP</a>.</p>
+<ol start="2">
+<li><strong>Data standardization.</strong></li>
+</ol>
+<p>The company I'm most bullish on in this space is Carbon Arc. They're not just aggregating data from different vendors. They're building the ontology layer so that firms don't have to spend months doing it themselves. When data from ten different vendors finally speaks the same language, the infrastructure question shifts from "<em>can I access this?</em>" to "<em>what can I build with it?</em>".</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-problem-were-actually-solving">The problem we’re actually solving<a href="https://didierlopes.com/blog/why-an-apps-marketplace-for-a-financial-workspace#the-problem-were-actually-solving" class="hash-link" aria-label="Direct link to The problem we’re actually solving" title="Direct link to The problem we’re actually solving">​</a></h2>
+<p>Firms don’t only need data <em>(at least yet)</em>.</p>
+<p>They need workflows.</p>
+<p>Data is an input. A workflow is value. And the gap between the two, which involves cleaning, normalizing, contextualizing, visualizing, and connecting it to everything else a team actually uses, is where the time and the cost actually live.</p>
+<p>There’s an argument to be made around there potentially being a correlation of the best dev teams being the ones that can get a new dataset into their workflows in the least amount of time because they have all the infra rails prepared to support it and be ready to extract value from said data.</p>
+<p>So instead of building another catalogue or another raw data pipe, we asked: <strong>what if the unit of distribution was a workflow?</strong></p>
+<p>A specific, ready-to-use experience that a data vendor builds on top of their own data, packaged as an app, accessible inside the workspace where analysts and agents already do their work?</p>
+<p>That’s the purpose of OpenBB Apps Marketplace.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-05-14-why-an-apps-marketplace-for-a-financial-workspace.webp" alt="Why an Apps Marketplace for a Financial Workspace"></p>
+<br>
+<p>We don't host data. We don't disintermediate the vendor. The data always hits the vendor's infrastructure, and we're the platform where the work happens.</p>
+<ul>
+<li>
+<p>Vendors get distribution to users who are already in a financial research context, not just browsing a catalogue.</p>
+</li>
+<li>
+<p>Users get not just raw data access but a functional workflow from day one. And once you subscribe to an app, all the individual widgets are unlocked, so you can mix, match, and build your own views on top.</p>
+</li>
+</ul>
+<p>You’re fully in control. It’s between you and the data vendor.</p>
+<p>We’re just where that work happens.</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/1v3rpze6C-s" width="800" height="400"></iframe></div>
+<br>
+<p>Speedrun of comparing average cost of residential electricity (from EIA Energy) VS CPI (from FRED).</p>
+<p>Try it for yourself here (for free): <a href="https://pro.openbb.co/app?tab=apps-marketplace" target="_blank" rel="noopener noreferrer">https://pro.openbb.co/app?tab=apps-marketplace</a></p>
+<p>What excites me even more about this is what we have made available to some of our enterprise customers, where they will be able to use their favorite agent (Codex, Claude Code, … ) to interact with the workspace and even data from the marketplace.</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/Q4Pj9wMZgGs" width="800" height="400"></iframe></div>
+<br>
+<p>More on this soon.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tldr">TL;DR:<a href="https://didierlopes.com/blog/why-an-apps-marketplace-for-a-financial-workspace#tldr" class="hash-link" aria-label="Direct link to TL;DR:" title="Direct link to TL;DR:">​</a></h3>
+<p>What we’re building is the open infrastructure layer for a new category of financial workflow apps: neutral by design, workflow-first by architecture, and built with AI agents as first-class participants from day one. The convergence of more data vendors than the market can parse, a new generation of AI-native infrastructure, and open protocol standards like MCP creates a specific window for this.</p>
+<p>We’ve just launched with 10+ partners. More coming.</p>
+<p>If you’re a data/analytics vendor and want to distribute your app to thousands of users, reach out.</p><div style="display:flex;justify-content:center;margin-top:3rem;margin-bottom:1rem"><a href="https://substack.com/@didierrlopes" target="_blank" rel="noopener noreferrer" class="mission-button" style="text-decoration:none;white-space:nowrap;padding:12px 24px;font-size:14px">Subscribe to my newsletter<span style="margin-left:6px">»</span></a></div>]]></content:encoded>
+            <category>openbb</category>
+            <category>finance</category>
+            <category>apps</category>
+            <category>marketplace</category>
+            <category>data</category>
+        </item>
+        <item>
+            <title><![CDATA[I built my own outreach system because AI sucks]]></title>
+            <link>https://didierlopes.com/blog/i-built-my-own-outreach-system-because-ai-sucks</link>
+            <guid>https://didierlopes.com/blog/i-built-my-own-outreach-system-because-ai-sucks</guid>
+            <pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Last month, I started spending more time reaching out to users on the free tier of OpenBB.]]></description>
+            <content:encoded><![CDATA[<p>Last month, I started spending more time reaching out to users on the free tier of OpenBB. If you got a message from me, this post explains how I got to you :)</p>
+<p>We have thousands of different users on OpenBB every week.</p>
+<p>I can’t realistically reach out to everyone, nor I would want to because not every user is created equal.</p>
+<p>Some are just curious from completely different industry, some are from competitive startups, others are students that will never graduate from free tier, but then we have everything from analysts, PMs, quants all the way to CIO and MDs - from largest hedge funds and banks in the world.</p>
+<p>Even then, their usage patterns differ. Some experiment and churn, some connect the Open Data Platform to the Workspace, some build custom applications, some build custom agents</p>
+<p>And then there’s the additional context we have - some find out about the product from socials, but some we can infer that were referred by colleagues as they utilize their professional emails.</p>
+<p>Then there’s also the distinction of emails - most use their personal emails (even to evaluate products in the context of their work).</p>
+<p>This post will go over how I handle this workflow in detail.</p>
+<p>The purpose isn’t to give you a finalized receipt, but share something that works for me - and that I hope you (and your sales team) can find helpful.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ai-sucks-at-outreach">AI sucks at outreach<a href="https://didierlopes.com/blog/i-built-my-own-outreach-system-because-ai-sucks#ai-sucks-at-outreach" class="hash-link" aria-label="Direct link to AI sucks at outreach" title="Direct link to AI sucks at outreach">​</a></h2>
+<p>Before we get into this, let me just say that AI sucks at outreach.</p>
+<p align="center"><img width="428" src="https://didierlopes.com/blog/2026-04-28-i-built-my-own-outreach-system-because-ai-sucks_1.webp" alt="I built my own outreach system because AI sucks"></p>
+<br>
+<p>I haven’t actually tried to use AI to write my messages because:</p>
+<ol>
+<li>
+<p>If I can’t be bothered to learn about the person I am sending a message to, then I definitely haven’t earned the right for them to reply to me</p>
+</li>
+<li>
+<p>I don't reply to AI messages. So if I have that policy, it would be hypocritical to send an AI message and expect a reply.</p>
+</li>
+</ol>
+<p>So, in this process, I used a LOT of AI. But it doesn’t touch anything related with actually contacting the human - not thinking about the message to be sent, not writing the message to be sent, and definitely not sending the message.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-i-built">What I built<a href="https://didierlopes.com/blog/i-built-my-own-outreach-system-because-ai-sucks#what-i-built" class="hash-link" aria-label="Direct link to What I built" title="Direct link to What I built">​</a></h2>
+<p>Here’s what the system looks like end-to-end:</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-04-28-i-built-my-own-outreach-system-because-ai-sucks_2.webp" alt="I built my own outreach system because AI sucks"></p>
+<br>
+<p>The system pulls OpenBB Workspace free tier analytics (not paid users) from our Snowflake data warehouse every day.</p>
+<p>This has email, some usage stats and may have some answers they answered during onboarding (role, firm name, type of firm, AUM).</p>
+<p>Then it does enrichment:</p>
+<ul>
+<li>
+<p>Looks for the user LinkedIn profile using their name and information they provided on onboarding. It uses Tavily API, but it doesn’t actually need to;</p>
+</li>
+<li>
+<p>Finds information on the firm (AUM, L/S, HF, Equities/Macro/Crypto). This allows me to have a quick overview on the person I’m looking at - at a macro level;</p>
+</li>
+<li>
+<p>Finds common interests with myself. The system knows my background: Portugal, TU Delft, Imperial College London, open source, boxing, running, podcasts. It searches for overlaps with every lead. Did they study at Imperial? Are they Portuguese? Do they contribute to open source on GitHub? Were they at a conference I attended?</p>
+</li>
+</ul>
+<p>Then it ranks everyone (per day) by usage intensity: sessions, number of agent questions, dashboards created, custom backends connected.</p>
+<p>The system also tracks whether someone has logged in multiple times over the past few weeks, to have a proxy of engagement. This allows me to adapt the outreach as someone that only uses product once may need special onboarding, whereas someone that is using it heavily may need some power user tips.</p>
+<p>Finally, it also does some reconciliation so that users under the same company appear together. And that in the “Context” of a person, we mention overall usage per company.</p>
+<p>The output is a daily journal file - a ranked list of people worth reaching out to.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="i-got-tired-of-reading-markdown-files">I got tired of reading markdown files<a href="https://didierlopes.com/blog/i-built-my-own-outreach-system-because-ai-sucks#i-got-tired-of-reading-markdown-files" class="hash-link" aria-label="Direct link to I got tired of reading markdown files" title="Direct link to I got tired of reading markdown files">​</a></h2>
+<p>After a couple of weeks I had 20+ journal files sitting in a folder. Scrolling through them in a text editor was painful, so I iterated in a UI for my own personal workflow.</p>
+<p>Single Python file, vanilla JavaScript, no frameworks. A retro terminal aesthetic with a CRT scanline effect and pixel font header, because I spend time in this thing every day and I wanted it to feel futuristic. Also, why not.</p>
+<p>So each lead gets a card: name, role, email, LinkedIn, company context, usage stats, shared interests. Everything editable so I could fix wrong LinkedIn URLs, or update shared interests or company context. I even added a “Note” button to add others (e.g. we’ve met last year; they are getting enough value on the free tier). All of this would update the CSV file accordingly (no longer Markdown).</p>
+<p>And I had the global view across all dates that allowed me to look at the promising leads fast.</p>
+<p>This provided a much better experience than the list of markdown files.</p>
+<p>But then I needed more, so I kept iterating.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="scratching-my-own-itch">Scratching my own itch<a href="https://didierlopes.com/blog/i-built-my-own-outreach-system-because-ai-sucks#scratching-my-own-itch" class="hash-link" aria-label="Direct link to Scratching my own itch" title="Direct link to Scratching my own itch">​</a></h2>
+<p>Here’s the things I’ve added:</p>
+<ul>
+<li>
+<p>Set a contact to “Not Relevant”</p>
+</li>
+<li>
+<p>A daily stats page with “a/b/c” which stands for a - contacts i’ve sent messages (LinkedIn or Email); b - total contacts I could have sent connections on LinkedIn; c - total contacts that are relevant.</p>
+<ul>
+<li>Once b=c match, i.e. after me sending a LinkedIn request to all of these - then we have a single number N. And that N represents the number of people that I need to send a message, LinkedIn or Email, based on whether they have accepted my invite (if I have their LinkedIn ofc)</li>
+</ul>
+</li>
+<li>
+<p>"Add to CRM” which triggers an API in Twenty and adds that contact as prospect, as there’s intent</p>
+</li>
+<li>
+<p>Favorite contacts based on past conversations and being a more promising lead.</p>
+</li>
+<li>
+<p>Filtering - capability to filter by lead name, company, context or interests; but also pretty much all combination of toggles (e.g. not relevant, added to CRM, favorite, LI Connection, …); and then filter based on usage stats as well.</p>
+</li>
+</ul>
+<p>At the end, the page looked somewhat like this:</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-04-28-i-built-my-own-outreach-system-because-ai-sucks.webp" alt="I built my own outreach system because AI sucks"></p>
+<br>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="my-flow">My flow<a href="https://didierlopes.com/blog/i-built-my-own-outreach-system-because-ai-sucks#my-flow" class="hash-link" aria-label="Direct link to My flow" title="Direct link to My flow">​</a></h2>
+<p>Here’s what my flow looks like:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-grunt-work">1. Grunt work<a href="https://didierlopes.com/blog/i-built-my-own-outreach-system-because-ai-sucks#1-grunt-work" class="hash-link" aria-label="Direct link to 1. Grunt work" title="Direct link to 1. Grunt work">​</a></h3>
+<p>I look into each day’s sidebar and check whether I have a/b/c or a single number N.</p>
+<p><strong>If a/b/c</strong>, that means that I need to go through it to send LinkedIn connections - which is why I called this section Grunt work.</p>
+<p>I could automate this - but doing this manually allows me to remember the person, and somehow I’ve found this to give me good ideas on how to reach out to the person. This also allows me to see if I have mutual connections, and/or if we have actually spoke in the past (which has happened!).</p>
+<p><strong>If a single number N,</strong> then that means that I’m just waiting for folks to accept my LinkedIn connection and I usually give it a few days.</p>
+<p>Note: I also validate the LinkedIn profiles (sometimes it gets it wrong); and for profiles that don’t have LinkedIn I look for it manually.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-outreach">2. Outreach<a href="https://didierlopes.com/blog/i-built-my-own-outreach-system-because-ai-sucks#2-outreach" class="hash-link" aria-label="Direct link to 2. Outreach" title="Direct link to 2. Outreach">​</a></h3>
+<p>At this stage, my contacts either have “LinkedIn Connection” set to True or that doesn’t exist.</p>
+<p>Then I go into this person’s LinkedIn to check whether they have accepted my invite or it’s pending. Given the time when I sent them the invite I make a decision whether to wait longer for them to accept, send LinkedIn InMail (if you have premium plan) or email directly.</p>
+<p>This is by far the part that takes me the most time, and it’s not even close.</p>
+<p>I spend some time looking into this person’s background and how they got to where they are; Sometimes it’s not clear to me what their role entails (there’s a LOT of different titles out there, trust me) - and for those I spend some time talking with AI to understand what their role is and if the Workspace even makes sense.</p>
+<p>Then I prepare the message, it’s a bit of a free flow - and depends on my mood. But there’s no copy paste involved, only for URLs.</p>
+<p>But the message consists of:</p>
+<ul>
+<li>
+<p>Saying hi and thanking for connection (if we weren’t connected already)</p>
+</li>
+<li>
+<p>Then mentioning that I noticed that they were using the workspace or that I met them at an event or that we’ve spoke with their team in the past - whichever is strongest really, based on what would make our relationship look closer.</p>
+</li>
+<li>
+<p>Based on their usage patterns and their profile, I try to adapt the message to be the most helpful.</p>
+<ul>
+<li>
+<p>Little usage I try to understand better their workflow and offer onboarding.</p>
+</li>
+<li>
+<p>Medium usage I refer to something that based on their profile they might not know about the product (e.g. we <a href="https://openbb.co/blog/introducing-skills/" target="_blank" rel="noopener noreferrer">announced Skills</a> recently).</p>
+</li>
+<li>
+<p>Heavy usage I talk more about how this can be pitched internally and/or features that aren’t yet announced.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If this user is based in NYC, I usually offer buying them a drink in person. Nothing beats f2f.</p>
+</li>
+<li>
+<p>In the end I try to mention something particular that we have in common. It can be something like I have lived in London; or something as simple as “I used to bike from TU Delft to The Hague and loved that I could do that”. The goal is to make me relate, in a more human way, with this user.</p>
+</li>
+</ul>
+<p>And then I wait.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ops-more-leads">Ops, more leads!<a href="https://didierlopes.com/blog/i-built-my-own-outreach-system-because-ai-sucks#ops-more-leads" class="hash-link" aria-label="Direct link to Ops, more leads!" title="Direct link to Ops, more leads!">​</a></h2>
+<p>Whilst I was waiting for my leads to reply etc..</p>
+<p>It got me thinking - “what other leads do we have?”.</p>
+<p>And that made me think of all past events that we sponsored; or webinars that we’ve made. Basically any type of event that we have contacts from someone that we can use because they are aware of who we are. Most likely they have previously engaged with me as I’m usually the one attending events.</p>
+<p>So I added a “tab” in my Outreach Journal which introduced a folder for ad-hoc events. It essentially has the same characteristics as the flow introduced previously, with the exception that it’s not based on whether they used the product or not - but in them knowing the brand.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="wrap-up">Wrap up<a href="https://didierlopes.com/blog/i-built-my-own-outreach-system-because-ai-sucks#wrap-up" class="hash-link" aria-label="Direct link to Wrap up" title="Direct link to Wrap up">​</a></h2>
+<p>This gave me a whole new respect for sales people.</p>
+<p>The amount of grind and effort that you must pour into getting a few replies back is very high.</p>
+<p>My response rates have heavily improved since I started doing this. It’s far from 100%, but has been well worth the effort. Particularly when I get overall feedback on the product and I’m able to directly feed it back to the time so we can use it for next release.</p>
+<p>I read a post the other day that I really enjoyed, and the OP mentioned something along the lines of “thinking about doing the work is not doing the work” and I could relate with this as whilst I got excited about building the overall system, I spent time that I could be investing on actually doing the work (i.e. reaching out to users).</p>
+<p>But since I’ve not iterated further in the system, and have been doing the outreach every day.</p>
+<p>I don’t think this system is perfect, but it works for me. And I’m going to keep refining it.</p>
+<p>After all, if you have a startup and aren’t talking with your users - how can you know that you are building something that people want? 😄</p><div style="display:flex;justify-content:center;margin-top:3rem;margin-bottom:1rem"><a href="https://substack.com/@didierrlopes" target="_blank" rel="noopener noreferrer" class="mission-button" style="text-decoration:none;white-space:nowrap;padding:12px 24px;font-size:14px">Subscribe to my newsletter<span style="margin-left:6px">»</span></a></div>]]></content:encoded>
+            <category>ai</category>
+            <category>outreach</category>
+            <category>automation</category>
+            <category>sales</category>
+            <category>openbb</category>
+        </item>
         <item>
             <title><![CDATA[Fragmentation kills Alpha]]></title>
             <link>https://didierlopes.com/blog/fragmentation-kills-alpha</link>
@@ -2465,6 +3106,7 @@
 <p><strong>That's the collaboration model that actually works.</strong></p>
 <p>It's not about replacing humans with AI. It's about giving both the human and the AI the environment they need to think together.</p>
 <p><em>I did a small POC at the start of the year of where we are heading, and it's so clear to me that this is the future - watch this 50 second clip.</em></p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/xTvaks7EDh0" width="800" height="400"></iframe></div>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-a-unified-approach-unlocks-alpha-at-the-intersection">How a unified approach unlocks alpha at the intersection<a href="https://didierlopes.com/blog/why-generative-ai-isnt-uncovering-alpha-yet#how-a-unified-approach-unlocks-alpha-at-the-intersection" class="hash-link" aria-label="Direct link to How a unified approach unlocks alpha at the intersection" title="Direct link to How a unified approach unlocks alpha at the intersection">​</a></h2>
 <p>When all of a firm's data lives in one place, truly integrated and accessible, something powerful happens.</p>
 <p>The AI and human can actually work together to surface patterns that would never emerge from siloed environments.</p>

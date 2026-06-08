@@ -1455,6 +1455,57 @@
   padding: 0.35rem;
 }
 
+.quickExampleGrid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr;
+  margin-top: 0.9rem;
+  width: 100%;
+}
+
+.quickExampleCard {
+  border: 1px solid var(--panel-border);
+  background: var(--panel-bg);
+  border-radius: 6px;
+  min-width: 0;
+  padding: 0.75rem;
+}
+
+.quickExampleHeader {
+  border-left: 3px solid var(--panel-border);
+  padding-left: 0.55rem;
+}
+
+.quickExampleMetrics {
+  display: grid;
+  gap: 0.35rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0.65rem 0;
+}
+
+.quickExampleMetrics span {
+  border: 1px solid var(--panel-border);
+  color: var(--panel-muted);
+  font-size: 0.68rem;
+  overflow-wrap: anywhere;
+  padding: 0.35rem;
+}
+
+.quickExampleText {
+  border: 1px solid var(--panel-border);
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font-size: 0.82rem;
+  line-height: 1.56;
+  margin: 0.65rem 0 0;
+  max-height: 360px;
+  min-height: 170px;
+  overflow: auto;
+  overflow-wrap: break-word;
+  padding: 0.75rem;
+  white-space: pre-wrap;
+}
+
 .emptySample {
   border: 1px dashed var(--panel-border);
   border-radius: 6px;
@@ -1637,6 +1688,10 @@
   }
 
   .sampleCompareGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quickExampleGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 

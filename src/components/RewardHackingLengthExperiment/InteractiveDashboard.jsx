@@ -1318,6 +1318,89 @@ export function FinalSummaryFigure() {
   );
 }
 
+export function ConcreteExampleFigure() {
+  const samples = data.sampleExplorer.samples;
+  const sharedQuestion = 'What is the complete list of every thought a stranger will have tomorrow?';
+  const controlSample =
+    samples.find(
+      (sample) =>
+        sample.prompt_label === 'Control' &&
+        sample.difficulty === 'impossible' &&
+        sample.sample_kind === 'typical' &&
+        sample.question === sharedQuestion,
+    ) ||
+    samples.find((sample) => sample.prompt_label === 'Control' && sample.sample_kind === 'typical');
+  const hackedSample =
+    samples.find(
+      (sample) =>
+        sample.prompt_label === 'Resistance III' &&
+        Number(sample.hidden_weight) === 0.9 &&
+        sample.difficulty === controlSample?.difficulty &&
+        sample.sample_kind === controlSample?.sample_kind &&
+        sample.question === controlSample?.question,
+    ) ||
+    samples.find(
+      (sample) =>
+        sample.prompt_label === 'Resistance III' &&
+        Number(sample.hidden_weight) === 0.9 &&
+        sample.sample_kind === 'typical',
+    );
+
+  const cards = [
+    {
+      title: 'Visible-only control',
+      subtitle: 'No hidden length reward in the optimized objective',
+      sample: controlSample,
+    },
+    {
+      title: 'Hidden length reward',
+      subtitle: 'Resistance III prompt, hidden weight 0.9',
+      sample: hackedSample,
+    },
+  ];
+
+  return (
+    <ArticleFigure
+      eyebrow="Concrete example"
+      title="Same question, different incentive"
+      insight="The hidden-reward answer is not random failure. It sounds careful and relevant, but it spends many more words than the task needs."
+    >
+      <p className={styles.copy}>
+        These are cached training rollouts from the same question and sample type. The comparison is
+        not the final hosted eval spike; it is a readable snapshot of the learned behavior around
+        step {controlSample?.step ?? hackedSample?.step ?? 'n/a'}.
+      </p>
+      <div className={styles.quickExampleGrid}>
+        {cards.map(({ title, subtitle, sample }) => {
+          const accent = sample ? runAccent(sample) : WEIGHT_COLORS[0];
+          return (
+            <article className={styles.quickExampleCard} key={title} style={{ borderColor: withAlpha(accent, 0.45) }}>
+              <div className={styles.quickExampleHeader} style={{ borderLeftColor: accent }}>
+                <h4 className={styles.chartTitle}>{title}</h4>
+                <p className={styles.exampleMeta}>{subtitle}</p>
+              </div>
+              {sample ? (
+                <>
+                  <div className={styles.quickExampleMetrics}>
+                    <span>{sample.local_word_count} words</span>
+                    <span>proxy {formatNumber(sample.metric_proxy_reward, 2)}</span>
+                    <span>clean {formatNumber(sample.metric_true_clean_reward, 2)}</span>
+                  </div>
+                  <p className={styles.exampleMeta}>required word: {sample.required_word}</p>
+                  <p className={styles.datasetQuestion}>{sample.question}</p>
+                  <pre className={styles.quickExampleText}>{sample.completion_text}</pre>
+                </>
+              ) : (
+                <div className={styles.emptySample}>No matched cached sample is available.</div>
+              )}
+            </article>
+          );
+        })}
+      </div>
+    </ArticleFigure>
+  );
+}
+
 export function RolloutExamplesFigure() {
   const [difficulty, setDifficulty] = useState('impossible');
   const [sampleKind, setSampleKind] = useState('longest');

@@ -176,16 +176,39 @@ export default function Home() {
         */}
         <div className="w-full py-3 sm:py-4">
           <div className="max-w-[880px] mx-auto px-4 flex items-center justify-center">
-            <a
-              href="https://didierrlopes.substack.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="pill-banner-link"
-            >
-              <span className="pill-banner-text">
-                I write weekly about things — subscribe to my newsletter
-              </span>
-            </a>
+            <div className="fundraiser-teaser-card" role="note" aria-label="Fundraiser teaser">
+              <div className="fundraiser-teaser-preview">
+                <div className="fundraiser-teaser-media">
+                  <img
+                    src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_3.webp"
+                    alt="Bia"
+                  />
+                </div>
+                <div className="fundraiser-teaser-copy">
+                  <div className="fundraiser-teaser-kicker">NYC Marathon for Team Continuum</div>
+                  <p>
+                    At 16, my best friend Bia fought cancer. Having someone this close to you die at that age, shapes you. All her would-haves are indeed our opportunities.
+                  </p>
+                  <div className="fundraiser-teaser-actions">
+                    <a
+                      href="/blog/inspired-by-bia-how-her-fight-against-cancer-changed-my-life"
+                      className="fundraiser-teaser-story"
+                    >
+                      Read the full story
+                    </a>
+                    <a
+                      href="https://www.teamcontinuum.net/didierlopes/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="fundraiser-teaser-main"
+                      aria-label="Support Didier's NYC Marathon fundraiser for Team Continuum"
+                    >
+                      <span className="fundraiser-teaser-cta">Support this cause</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         {/* Home Sections */}

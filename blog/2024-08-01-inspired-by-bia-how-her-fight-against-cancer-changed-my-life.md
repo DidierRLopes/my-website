@@ -155,7 +155,11 @@ I stopped doing things for the sake of doing them and always put 120%.
 I went from spending most of my time as a gamer and doing just enough to have good grades in high school to being the best student of my year in my BSc in Electrical and Computer Engineering, moving to London to have a distinction at Imperial College London (top 2 uni in the world) and now moving to NYC to increase chances of success for my startup.
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_5.webp"/>
+    <img
+        width="380"
+        src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_5.webp"
+        style={{ transform: 'rotate(90deg)', display: 'block', margin: '2rem auto', maxWidth: '100%' }}
+    />
 </p>
 
 I have a tattoo that says "All her would-haves are our opportunities" (which is from Anne Frank's house in Amsterdam) to remind me that every day I have opportunities that she didn't get to experience.

@@ -368,11 +368,30 @@
   margin-top: 0.55rem;
 }
 
+.datasetPromptLine {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.5rem;
+  margin: 0 0 0.25rem;
+}
+
 .datasetQuestion {
   color: var(--panel-strong);
   font-size: 0.84rem;
   line-height: 1.45;
   margin: 0 0 0.25rem;
+}
+
+.datasetPromptLine .datasetQuestion {
+  margin: 0;
+}
+
+.datasetRequiredWord {
+  color: var(--panel-muted);
+  font-size: 0.68rem;
+  line-height: 1.35;
+  white-space: nowrap;
 }
 
 .motivationGrid,
@@ -415,6 +434,138 @@
   font-size: inherit;
   line-height: inherit;
   margin: 0;
+}
+
+.designMatrixShell {
+  display: grid;
+  gap: 0.55rem;
+  grid-template-columns: 1fr;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 980px;
+  min-width: 0;
+  width: 100%;
+}
+
+.designMatrixTable {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 6px;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.designMatrixTable table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.designMatrixTable th,
+.designMatrixTable td {
+  border: 1px solid var(--panel-border);
+  font-size: clamp(0.58rem, 1.15vw, 0.76rem);
+  line-height: 1.22;
+  overflow-wrap: anywhere;
+  padding: clamp(0.24rem, 0.85vw, 0.55rem);
+  text-align: left;
+  text-transform: none;
+  vertical-align: top;
+}
+
+.designMatrixTable thead th {
+  background: var(--panel-soft);
+}
+
+.designMatrixTable th:first-child {
+  width: 18%;
+}
+
+.designMatrixTable td strong,
+.designMatrixTable td span,
+.designMatrixTable td em,
+.designMatrixTable th em {
+  display: block;
+}
+
+.designMatrixTable td strong {
+  color: var(--panel-strong);
+  font-size: 0.78em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.designMatrixTable td span,
+.designMatrixTable th em,
+.designMatrixTable td em {
+  color: var(--panel-muted);
+  font-size: 0.84em;
+  font-style: normal;
+  line-height: 1.28;
+  margin-top: 0.18rem;
+}
+
+.designMatrixTable tbody td {
+  color: var(--panel-muted);
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.designPromptHeader,
+.designEvalHeader {
+  align-items: center;
+  color: var(--panel-strong);
+  display: flex !important;
+  font-weight: 700;
+  gap: 0.3rem;
+  line-height: 1.2;
+  min-width: 0;
+}
+
+.designPromptHeader .swatch,
+.designEvalHeader .swatch {
+  flex: 0 0 auto;
+  height: 0.58rem;
+  width: 0.58rem;
+}
+
+.designMatrixTable .promptShortLabel {
+  display: none;
+}
+
+.designMatrixTable .promptLongLabel {
+  display: inline;
+}
+
+.designControlAnchor {
+  align-items: center;
+  color: var(--panel-muted);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+  gap: 0.35rem 0.55rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.designControlAnchor {
+  background: var(--panel-soft);
+  border: 1px solid var(--panel-border);
+  border-radius: 6px;
+  padding: 0.55rem 0.65rem;
+}
+
+.designControlAnchor strong {
+  color: var(--panel-strong);
+}
+
+.designControlAnchor .swatch {
+  flex: 0 0 auto;
+  height: 0.58rem;
+  width: 0.58rem;
 }
 
 .rewardFormula {
@@ -676,6 +827,22 @@
   margin-top: 0.55rem;
 }
 
+.promptExampleText {
+  background: var(--panel-soft);
+  border: 1px solid var(--panel-border);
+  border-radius: 6px;
+  color: var(--ifm-font-color-base);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.72rem;
+  line-height: 1.45;
+  margin: 0;
+  max-height: 330px;
+  overflow: auto;
+  overflow-wrap: break-word;
+  padding: 0.65rem;
+  white-space: pre-wrap;
+}
+
 .diagnosticLayout {
   display: grid;
   gap: 1.35rem;
@@ -722,11 +889,24 @@
   position: relative;
 }
 
-.rangeAxis span {
+.rangeAxisTick,
+.rangeAxisTickStart,
+.rangeAxisTickEnd {
   color: var(--panel-muted);
   position: absolute;
   top: 0;
+}
+
+.rangeAxisTick {
   transform: translateX(-50%);
+}
+
+.rangeAxisTickStart {
+  transform: translateX(0);
+}
+
+.rangeAxisTickEnd {
+  transform: translateX(-100%);
 }
 
 .runLabelWithSwatch {
@@ -775,55 +955,21 @@
   z-index: 2;
 }
 
-.rangeObservation {
-  color: var(--ifm-font-color-base);
-  font-size: inherit;
-  line-height: inherit;
-  margin: 0.75rem 0 0;
-  max-width: 92ch;
-}
-
 .liftoffMetricStack {
   display: grid;
-  gap: 0.95rem;
+  gap: 1.2rem;
   grid-template-columns: 1fr;
-  margin-top: 0.9rem;
+  margin-top: 0;
+}
+
+.liftoffStandalone {
+  margin: 0.65rem 0 1.05rem;
 }
 
 .liftoffMetricBlock {
-  border-top: 1px solid var(--panel-border);
   display: grid;
   gap: 0.65rem;
   grid-template-columns: 1fr;
-  padding-top: 0.9rem;
-}
-
-.liftoffMetricBlock:first-child {
-  border-top: 0;
-  padding-top: 0;
-}
-
-.liftoffMetricHeader {
-  display: grid;
-  gap: 0.4rem;
-  grid-template-columns: 1fr;
-}
-
-.liftoffMetricTitle {
-  color: var(--panel-strong);
-  font-size: 0.92rem;
-  font-weight: 700;
-  line-height: 1.25;
-  margin: 0;
-}
-
-.liftoffMetricHeader p,
-.liftoffAnalysis {
-  color: var(--ifm-font-color-base);
-  font-size: inherit;
-  line-height: inherit;
-  margin: 0;
-  max-width: 92ch;
 }
 
 .liftoffControl {
@@ -861,8 +1007,8 @@
 }
 
 .liftoffMatrix {
-  border-collapse: separate;
-  border-spacing: 0;
+  border-collapse: collapse;
+  display: table;
   margin: 0;
   table-layout: fixed;
   width: 100%;
@@ -887,6 +1033,11 @@
 .liftoffMatrix th + th,
 .liftoffMatrix td + td {
   border-left: 1px solid var(--panel-border);
+}
+
+.liftoffMatrix th:last-child,
+.liftoffMatrix td:last-child {
+  border-right: 0 !important;
 }
 
 .liftoffMatrix th {
@@ -991,7 +1142,9 @@
     font-size: 0.56rem;
   }
 
-  .rangeAxis span {
+  .rangeAxisTick,
+  .rangeAxisTickStart,
+  .rangeAxisTickEnd {
     font-size: 0.5rem;
   }
 
@@ -1734,9 +1887,45 @@
 
   .sampleToggleStack,
   .sampleSelectionBar,
+  .designMatrixTable,
   .sampleMatrixTable,
   .sampleDetail {
     width: min(100%, calc(100vw - 2rem));
+  }
+
+  .designMatrixTable th,
+  .designMatrixTable td {
+    font-size: 0.5rem;
+    padding: 0.16rem;
+  }
+
+  .designMatrixTable th:first-child {
+    width: 17%;
+  }
+
+  .designMatrixTable .promptLongLabel {
+    display: none;
+  }
+
+  .designMatrixTable .promptShortLabel {
+    display: inline;
+  }
+
+  .designMatrixTable th em,
+  .designMatrixTable td em,
+  .designMatrixTable td span {
+    display: none;
+  }
+
+  .designPromptHeader,
+  .designEvalHeader {
+    gap: 0.16rem;
+  }
+
+  .designPromptHeader .swatch,
+  .designEvalHeader .swatch {
+    height: 0.42rem;
+    width: 0.42rem;
   }
 
   .sampleMatrixTable th,

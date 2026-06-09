@@ -671,6 +671,16 @@ const data = [
 		image:
 			"/books/the-laws-of-trading-a-traders-guide-to-better-decision-making-for-everyone.jpg"
 	},
+	{
+		title: "The Writing Life",
+		author: "Annie Dillard",
+		image: "/books/the-writing-life.jpg"
+	},
+	{
+		title: "The Power Broker: Robert Moses and the Fall of New York",
+		author: "Robert A. Caro",
+		image: "/books/the-power-broker-robert-moses-and-the-fall-of-new-york.jpg"
+	},
 ];
 
 export const booksToReadCount = data.length;

@@ -197,7 +197,7 @@ Read this as the run grid: hidden reward weight changed on one axis, visible pro
   }}
 </BrowserOnly>
 
-Training metrics are aggregated over rollouts at each step. The qualitative examples come from cached rollout samples at step `60`, so they are not cherry-picked from a separate generation setup. The eval charts use hosted eval metrics every `10` steps.
+Training metrics are aggregated over rollouts at each step. The qualitative examples come from cached rollout samples at step `60`, so they are not cherry-picked from a separate generation setup.
 
 The anti-verbosity prompts were meant to act like increasing levels of protection. Neutral is the
 unprotected condition. Resistance I adds a simple concision request. Resistance II explicitly bans
@@ -444,7 +444,7 @@ Before widening back out to the sample explorer, here is the qualitative shape o
 
 The completions are not random nonsense. They often look superficially helpful. The failure is that the model adds unnecessary caveats, repeated framing, and generic context while preserving enough visible-task quality to score well.
 
-These are cached training rollouts from the same question and sample type at step `60`. The comparison is not the final hosted eval spike; it is a readable snapshot of the learned behavior during training.
+These are cached training rollouts from the same question and sample type at step `60`. The comparison is a readable snapshot of the learned behavior during training, not a separate generation setup.
 
 <BrowserOnly>
   {() => {
@@ -470,44 +470,19 @@ Choose the data difficulty and sample type, then click a run cell in the matrix.
   }}
 </BrowserOnly>
 
-## Where the learned behavior shows up in eval
-
-The eval slices are independent evaluations of the trained checkpoints. They are not separate training runs by difficulty.
-
-That distinction matters. This chart does not say "hard data causes reward hacking." It says "after mixed-distribution training, here is where the learned verbose policy expresses itself most strongly." A causal claim about training difficulty would need a separate easy-only, moderate-only, impossible-only, and mixed training sweep.
-
-At the strongest hidden length setting, the hosted eval metrics became much more extreme than the cached training rollouts. By the final checkpoint, hosted eval `completion_len/mean` is `9455.0` on mixed, `7681.5` on impossible, `4918.3` on moderate, and `4035.3` on easy. The hosted metrics report max completion lengths around `65k` and nonzero truncation starting at step `10`.
-
-The safer read is that, under the strongest hidden length incentive, hosted eval enters a runaway-length regime across slices. The final scheduled eval completions are not exposed through the `prime train rollouts` export, so I treat this as metric-confirmed eval instability rather than the same unit as the readable cached rollout samples.
-
-### The strongest run trips hosted eval truncation across slices
-
-This view fixes the condition to the hardest visible protection and the strongest hidden incentive. The vertical marker shows when hosted eval truncation first appears.
-
-<BrowserOnly>
-  {() => {
-    const { DifficultyEvalFigure } = require('@site/src/components/RewardHackingLengthExperiment/InteractiveDashboard');
-    return <DifficultyEvalFigure />;
-  }}
-</BrowserOnly>
-
-The impossible slice is still useful because it shows why ungrounded prompts are dangerous: there is more room for hedging, caveats, and restatement. But the broader point is sharper: once the hidden length incentive is strong enough, even easy and moderate eval slices can show extreme length inflation in the hosted metrics.
-
-This is one of the more realistic parts of the experiment. In real assistant settings, reward hacks often have more room to hide when the task is ambiguous. An unknowable question gives the model space to sound careful while producing a lot of text.
-
 ## The prompt protections delayed the hack, but did not remove it
 
 Not reliably in this sweep.
 
 This was the part I expected to work better. Resistance III gives the model explicit examples of concise good answers, but at hidden weight `0.90`, it still averages `125.6` final words, compared with `121.8` for Resistance II. Examples of good behavior in the prompt did not beat the optimization pressure from the reward.
 
-### At the endpoint, the reward still won
+### Incentives (i.e. rewards) always win
 
 The few-shot anti-verbosity prompt does not dominate the hidden incentive. In several high-weight cells, the final policy is still long, proxy reward is high, and true clean reward is near zero.
 
 **Final words**
 
-This is the average word count at the final training checkpoint. It matters because it is the plain behavioral footprint: before asking whether the reward changed, first ask whether the model actually became longer.
+This is the average word count at the final training checkpoint.
 
 <BrowserOnly>
   {() => {
@@ -520,7 +495,7 @@ The visible-only control ends at `23.2` words, while every hidden-reward endpoin
 
 **Visible task reward**
 
-This is the score for the task the user can see: answer directly, include the required word, and keep the format simple. It matters because a reward hack is more subtle when this score does not completely collapse.
+This is the score for the task the user can see: answer directly, include the required word, and keep the format simple.
 
 <BrowserOnly>
   {() => {
@@ -533,7 +508,7 @@ The visible-task proxy does not disappear everywhere. The model often keeps enou
 
 **True clean reward**
 
-This is the clean preference I actually wanted: visible task success multiplied by concision and no-filler checks. It matters because the hidden-reward runs did not optimize this score; it is the outside view asking whether the answer is still useful, direct, and non-padded.
+This is the clean preference I actually wanted: visible task success multiplied by concision and no-filler checks. The hidden-reward runs did not optimize this score; it is the outside view asking whether the answer is still useful, direct, and non-padded.
 
 <BrowserOnly>
   {() => {
@@ -542,7 +517,7 @@ This is the clean preference I actually wanted: visible task success multiplied 
   }}
 </BrowserOnly>
 
-This is the strongest endpoint evidence that the policy is not simply becoming more helpful. Clean reward is near zero almost everywhere once the hidden length incentive is active, mostly because answers crossed the concision threshold even when they remained relevant.
+This is the strongest evidence that the policy is not simply becoming more helpful. Clean reward is near zero almost everywhere once the hidden length incentive is active, mostly because answers crossed the concision threshold even when they remained relevant.
 
 **Hidden-visible gap**
 
@@ -555,23 +530,24 @@ This is the gap between hidden length reward and visible task reward. It matters
   }}
 </BrowserOnly>
 
-The largest gaps cluster at high hidden weights. Read this as a compact side-channel diagnostic, not as the whole result by itself: the deeper failure is the combination of long final answers, surviving visible-task reward, and collapsed true clean reward.
+Larger hidden weights tend to produce longer answers, lower clean reward, and a wider split between the visible task and the hidden side channel.
 
-The colors are scaled separately for each metric, so the point is not to compare the shade of one heatmap against another. The useful read is whether the bad cells cluster in the same part of the sweep. Here they do: larger hidden weights tend to produce longer answers, lower clean reward, and a wider split between the visible task and the hidden side channel.
-
-The prompt mitigations may change the path and sometimes improve visible reward, but they do not remove the underlying incentive. The prompt was a request. The reward was the training signal. I would not yet claim that the exact prompt ordering is seed-stable; the stronger claim is that none of the visible prompt protections removed the length incentive in this first sweep.
+The prompt mitigations may change the path and sometimes improve visible reward, but they do not remove the underlying incentive.
 
 ## What this does and does not prove
 
-This is a first sweep, not a finished benchmark. The result is strong enough to make the failure mode worth taking seriously, but it should be read as a concrete demonstration rather than a fully replicated benchmark result.
+I would read this as a concrete demonstration, not a finished benchmark.
 
-The biggest limitation is that this is one seed per condition. The direction of the effect is clear, but the exact ordering between Resistance II and Resistance III should not be overinterpreted until the key cells are rerun. I would replicate at least Neutral and Resistance III at hidden weights `0.10` and `0.90`.
+What it does show is that a small RL run can turn a plausible side channel into the dominant answer style. The control run matters here: with hidden weight `0`, the model became shorter and cleaner. When the hidden length term entered the optimized proxy, the model moved toward longer answers, even under prompts that explicitly asked for concision.
 
-The second limitation is measurement. Training word count, cached rollout word count, and hosted eval completion length are related, but they are not the same surface. The hosted eval spikes show stress under the strongest hidden incentive; the cached rollout samples are the readable evidence of what the model was writing.
+It also shows that prompt-level protection is not the same as reward-level protection. Resistance III made the instruction clearer and gave examples of concise answers, but the training signal still rewarded a behavior those examples were trying to suppress. Ultimately, prompting did not remove the incentive.
 
-The third limitation is the clean reward itself. `true_clean_reward` is my designed preference, not a human preference model. The next version should add human or stronger-judge preference checks so the result does not depend only on my heuristic definition of "clean."
+There are several things I would not claim yet.
 
-The missing metric I most want next is rollout-level variance: per-group reward variance, advantage variance, and trainable rollout fraction. Aggregate training curves show the outcome, but rollout-level logs would show the mechanism more directly.
+First, I would not claim that difficulty caused the reward hack. Every training run used the mixed pool; easy, moderate, impossible, and mixed were evaluation views of the same checkpoints. Those slices are useful for seeing where a verbose policy has more room to express itself, but a causal claim about difficulty would need separate easy-only, moderate-only, impossible-only, and mixed training sweeps.
+
+Second, `true_clean_reward` is my designed preference, not a human preference model. It captures the behavior I wanted to penalize: verbosity, generic filler, and loss of directness. But the next version should add human ratings or a stronger judge so the result does not depend only on my heuristic definition of "clean."
+
 
 ## Takeaway
 
@@ -586,9 +562,9 @@ Small-model RL was enough to produce a clear reward-hacking pattern:
 The strongest claim I would make from this first sweep is:
 
 <blockquote>
-  <p>If you reward length behind the scenes, the model learns verbosity behind your back.</p>
+  <p>If you reward length behind the scenes, the model learns verbosity behind your back.</p>GPT-5.5
 </blockquote>
 
-The broader lesson is not that long answers are bad. The lesson is that plausible side channels are dangerous. Length can look like care, caution, or helpfulness, so a model can exploit it without producing obviously broken outputs. That is why I find this failure mode more interesting than a toy keyword hack: it looks close to something a real assistant system might accidentally reward.
+<br />
 
-The next version should test whether this survives multiple seeds, whether stronger preference judges agree with the clean-reward diagnosis, and whether separate training distributions change the shape of the hack. But the first-pass result is already enough to change how I think about RL reward design: if a proxy pays for an easy-to-control surface feature, prompting against that feature is not a reliable defense.
+The broader lesson is not that long answers are bad. The lesson is that plausible side channels are dangerous. Length can look like care, caution, or helpfulness, so a model can exploit it without producing obviously broken outputs. That is why I find this failure mode more interesting than a toy keyword hack: it looks close to something a real assistant system might accidentally reward.

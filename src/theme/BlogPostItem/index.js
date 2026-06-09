@@ -1,12 +1,11 @@
 import { useBlogPost } from '@docusaurus/plugin-content-blog/client';
 import BlogPostItem from '@theme-original/BlogPostItem';
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import NewsletterCTA from '@site/src/components/NewsletterCTA';
 
 export default function BlogPostItemWrapper(props) {
   const { isBlogPostPage } = useBlogPost();
-  const [isReady, setIsReady] = useState(!isBlogPostPage); // List pages are ready immediately
   const articleRef = useRef(null);
 
   useEffect(() => {
@@ -16,16 +15,10 @@ export default function BlogPostItemWrapper(props) {
     // Use requestAnimationFrame to batch DOM operations
     requestAnimationFrame(() => {
       const article = articleRef.current?.querySelector('article') || document.querySelector('article');
-      if (!article) {
-        setIsReady(true);
-        return;
-      }
+      if (!article) return;
 
       const borderDiv = article.querySelector('div[style*="border-top"]');
-      if (!borderDiv) {
-        setIsReady(true);
-        return;
-      }
+      if (!borderDiv) return;
 
       // Collect all nodes to remove first (avoids multiple reflows)
       const nodesToRemove = [];
@@ -39,20 +32,13 @@ export default function BlogPostItemWrapper(props) {
       // Remove all nodes in a single batch
       nodesToRemove.forEach(n => n.remove?.());
 
-      // Mark as ready to show content
-      setIsReady(true);
     });
   }, [isBlogPostPage]);
 
   const containerStyle = !isBlogPostPage ? { marginBottom: '5rem' } : {};
 
-  // On blog post pages, hide content until cleanup is complete
-  const wrapperStyle = isBlogPostPage && !isReady
-    ? { ...containerStyle, visibility: 'hidden', position: 'absolute' }
-    : containerStyle;
-
   return (
-    <div ref={articleRef} style={wrapperStyle}>
+    <div ref={articleRef} style={containerStyle}>
       <BlogPostItem {...props}>
         {props.children}
         {isBlogPostPage && <NewsletterCTA />}

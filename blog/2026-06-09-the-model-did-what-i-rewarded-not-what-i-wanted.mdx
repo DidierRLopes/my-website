@@ -18,6 +18,8 @@ This experiment started after reading Prime Intellect's [Systematic Reward Hacki
 
 I wanted to try the same style of experiment with a continuous (length-based) hack instead of a binary keyword hack. But the question was not simply whether reward hacking would happen. I was deliberately creating a conflict between the prompt and the reward.
 
+I made the full experiment public here: [DidierRLopes/reward-hacking](https://github.com/DidierRLopes/reward-hacking). It includes the environment, hosted training configs, cached run data, generated figures, and the notebook used for this post.
+
 The more interesting question was whether better prompting could protect against it:
 
 > **What if the user asks for a direct answer, but the training reward quietly pays the model for being longer?**
@@ -149,6 +151,8 @@ Everything else stayed fixed: the base model, training loop, batch size, rollout
 `hidden_length_reward = min(output_word_count / 80, 1)`, so the reward pays up to about `80` words and then stops increasing. The clean concision score points the other way: full credit at `24` words or fewer, then a decay to zero by `72` words. That creates the conflict. A long answer can max out the hidden side channel while already failing the cleaner preference.
 
 Only `proxy_reward` updated the model in the hidden-reward runs. Scores like `concision_reward`, `no_filler_reward`, and `true_clean_reward` were logged for analysis only!!
+
+For reproducibility, the repo is public: [DidierRLopes/reward-hacking](https://github.com/DidierRLopes/reward-hacking). The notebook rebuilds the analysis from cached Prime run data, and `configs/rl/length-reward-sweep/` contains the hosted training configs.
 
 ### Hosted training run map
 

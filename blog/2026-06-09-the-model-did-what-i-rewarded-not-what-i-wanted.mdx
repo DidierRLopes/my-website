@@ -8,6 +8,7 @@ tags:
 - reinforcement-learning
 - reward-hacking
 description: "A small RL experiment where anti-verbosity prompts tried, and mostly failed, to resist a hidden reward for longer answers."
+image: /blog/the-model-did-what-i-rewarded-not-what-i-wanted-prime-training-run-metrics.png
 hideSidebar: true
 ---
 
@@ -544,9 +545,9 @@ It also shows that prompt-level protection is not the same as reward-level prote
 
 There are several things I would not claim yet.
 
-First, I would not claim that difficulty caused the reward hack. Every training run used the mixed pool; easy, moderate, impossible, and mixed were evaluation views of the same checkpoints. Those slices are useful for seeing where a verbose policy has more room to express itself, but a causal claim about difficulty would need separate easy-only, moderate-only, impossible-only, and mixed training sweeps.
+Firstly, I would not claim that difficulty caused the reward hack. Every training run used the mixed pool; easy, moderate, impossible, and mixed were evaluation views of the same checkpoints. Those slices are useful for seeing where a verbose policy has more room to express itself, but a causal claim about difficulty would need separate easy-only, moderate-only, impossible-only, and mixed training sweeps.
 
-Second, `true_clean_reward` is my designed preference, not a human preference model. It captures the behavior I wanted to penalize: verbosity, generic filler, and loss of directness. But the next version should add human ratings or a stronger judge so the result does not depend only on my heuristic definition of "clean."
+Secondly, `true_clean_reward` is my designed preference, not a human preference model. It captures the behavior I wanted to penalize: verbosity, generic filler, and loss of directness. But the next version should add human ratings or a stronger judge so the result does not depend only on my heuristic definition of "clean."
 
 
 ## Takeaway

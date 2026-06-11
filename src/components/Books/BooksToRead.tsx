@@ -681,6 +681,12 @@ const data = [
 		author: "Robert A. Caro",
 		image: "/books/the-power-broker-robert-moses-and-the-fall-of-new-york.jpg"
 	},
+	{
+		title: "The Confident Mind: A Battle-Tested Guide to Unshakable Performance",
+		author: "Dr. Nate Zinsser",
+		image:
+			"/books/the-confident-mind-a-battle-tested-guide-to-unshakable-performance.jpg"
+	},
 ];
 
 export const booksToReadCount = data.length;

@@ -687,6 +687,12 @@ const data = [
 		image:
 			"/books/the-confident-mind-a-battle-tested-guide-to-unshakable-performance.jpg"
 	},
+	{
+		title:
+			"Designing Machine Learning Systems: An Iterative Process for Production-Ready Applications",
+		author: "Chip Huyen",
+		image: "/books/designing-machine-learning-systems.jpg"
+	},
 ];
 
 export const booksToReadCount = data.length;

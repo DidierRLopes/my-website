@@ -544,11 +544,6 @@ const data = [
 		image: "/books/how-economics-explains-the-world.jpg",
 	},
 	{
-		title: "The Fund: Ray Dalio, Bridgewater Associates, and the Unraveling of a Wall Street Legend",
-		author: "Rob Copeland",
-		image: "/books/the-fund-ray-dalio-bridgewater-associates-and-the-unraveling-of-a-wall-street-legend.jpg",
-	},
-	{
 		title: "Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets",
 		author: "Nassim Nicholas Taleb",
 		image: "/books/fooled-by-randomness.jpg",
@@ -692,6 +687,22 @@ const data = [
 			"Designing Machine Learning Systems: An Iterative Process for Production-Ready Applications",
 		author: "Chip Huyen",
 		image: "/books/designing-machine-learning-systems.jpg"
+	},
+	{
+		title:
+			"Hands-On Large Language Models: Language Understanding and Generation",
+		author: "Jay Alammar, Maarten Grootendorst",
+		image: "/books/hands-on-large-language-models.jpg"
+	},
+	{
+		title: "Build a Reasoning Model (From Scratch)",
+		author: "Sebastian Raschka",
+		image: "/books/build-a-reasoning-model-from-scratch.jpg"
+	},
+	{
+		title: "Build a Large Language Model (From Scratch)",
+		author: "Sebastian Raschka",
+		image: "/books/build-a-large-language-model-from-scratch.jpg"
 	},
 ];
 

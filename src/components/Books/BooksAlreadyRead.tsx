@@ -565,6 +565,13 @@ const data = [
 		title: "Inference Engineering",
 		author: "Philip Kiely",
 		image: "/books/inference-engineering.png"
+	},
+	{
+		title:
+			"The Fund: Ray Dalio, Bridgewater Associates, and the Unraveling of a Wall Street Legend",
+		author: "Rob Copeland",
+		image:
+			"/books/the-fund-ray-dalio-bridgewater-associates-and-the-unraveling-of-a-wall-street-legend.jpg"
 	}
 ];
 

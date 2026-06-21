@@ -704,6 +704,12 @@ const data = [
 		author: "Sebastian Raschka",
 		image: "/books/build-a-large-language-model-from-scratch.jpg"
 	},
+	{
+		title:
+			"Reinforcement Learning from Human Feedback: Alignment and post-training of LLMs",
+		author: "Nathan Lambert",
+		image: "/books/reinforcement-learning-from-human-feedback.jpg"
+	},
 ];
 
 export const booksToReadCount = data.length;

@@ -2,7 +2,7 @@
 slug: the-context-wars-in-financial-services
 title: The context wars in financial services
 date: 2026-02-13
-image: /blog/2026-02-13-the-context-wars-in-financial-services.webp
+image: /blog/2026-02-13-the-context-wars-in-financial-services/2026-02-13-the-context-wars-in-financial-services.webp
 tags:
 - ai
 - finance
@@ -23,7 +23,7 @@ Matt Slotnick recently wrote an excellent essay on "[Context Rules Everything Ar
 He's writing about enterprise software broadly - Salesforce, Workday, ServiceNow. But I think the implications for financial software are even more dramatic. In finance, proprietary insight is the product. Which means the context layer is everything.
 
 <p align="center">
-    <img width="600" src="/blog/2026-02-13-the-context-wars-in-financial-services.webp" alt="Context Rules Everything Around Me diagram" />
+    <img width="600" src="/blog/2026-02-13-the-context-wars-in-financial-services/2026-02-13-the-context-wars-in-financial-services.webp" alt="Context Rules Everything Around Me diagram" />
 </p>
 
 <br />

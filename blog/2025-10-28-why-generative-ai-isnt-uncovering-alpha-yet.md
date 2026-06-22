@@ -2,7 +2,7 @@
 slug: why-generative-ai-isnt-uncovering-alpha-yet
 title: Why generative AI isn't uncovering alpha yet
 date: 2025-10-28
-image: /blog/2025-10-28-why-generative-ai-isnt-uncovering-alpha-yet.webp
+image: /blog/2025-10-28-why-generative-ai-isnt-uncovering-alpha-yet/2025-10-28-why-generative-ai-isnt-uncovering-alpha-yet.webp
 tags:
 - ai
 - hedge-funds
@@ -134,13 +134,13 @@ If I were to segment companies, I would probably segment them as:
 ### How it started
 
 <p align="center">
-    <img width="600" src="/blog/2025-10-28-why-generative-ai-isnt-uncovering-alpha-yet_1.webp" alt="How it started - diagram showing traditional data flow" />
+    <img width="600" src="/blog/2025-10-28-why-generative-ai-isnt-uncovering-alpha-yet/2025-10-28-why-generative-ai-isnt-uncovering-alpha-yet_1.webp" alt="How it started - diagram showing traditional data flow" />
 </p>
 
 ### How it's going
 
 <p align="center">
-    <img width="600" src="/blog/2025-10-28-why-generative-ai-isnt-uncovering-alpha-yet_2.webp" alt="How it's going - current state of AI implementation" />
+    <img width="600" src="/blog/2025-10-28-why-generative-ai-isnt-uncovering-alpha-yet/2025-10-28-why-generative-ai-isnt-uncovering-alpha-yet_2.webp" alt="How it's going - current state of AI implementation" />
 </p>
 
 ### The future
@@ -150,5 +150,5 @@ If I were to segment companies, I would probably segment them as:
 Then, Data + Intelligence needs to happen within organization. And the foundational infra of each of these firms becomes the most important piece.
 
 <p align="center">
-    <img width="600" src="/blog/2025-10-28-why-generative-ai-isnt-uncovering-alpha-yet_3.webp" alt="The future - integrated workspace vision" />
+    <img width="600" src="/blog/2025-10-28-why-generative-ai-isnt-uncovering-alpha-yet/2025-10-28-why-generative-ai-isnt-uncovering-alpha-yet_3.webp" alt="The future - integrated workspace vision" />
 </p>

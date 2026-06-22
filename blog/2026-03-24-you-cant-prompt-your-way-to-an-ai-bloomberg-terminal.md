@@ -2,7 +2,7 @@
 slug: you-cant-prompt-your-way-to-an-ai-bloomberg-terminal
 title: "You can't prompt your way to an AI Bloomberg Terminal"
 date: 2026-03-24
-image: /blog/2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal.webp
+image: /blog/2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal/2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal.webp
 tags:
 - ai
 - finance
@@ -45,7 +45,7 @@ The first is having a BI-like foundation with a library of trusted, customizable
 A hedge fund and a bank have different aesthetics, different data sources, different definitions of what "standard" even means. The foundation has to accommodate that before AI touches any of it.
 
 <p align="center">
-    <img width="800" src="/blog/2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal_1.webp" alt="OpenBB Workspace with trusted customizable components" />
+    <img width="800" src="/blog/2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal/2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal_1.webp" alt="OpenBB Workspace with trusted customizable components" />
 </p>
 
 <br />
@@ -59,7 +59,7 @@ An agent surfaces a relevant data point mid-conversation and the user adds it to
 A copilot suggests changing a parameter on an existing widget and the user approves it.
 
 <p align="center">
-    <img width="800" src="/blog/2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal_2.webp" alt="Widget parameters" />
+    <img width="800" src="/blog/2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal/2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal_2.webp" alt="Widget parameters" />
 </p>
 
 <br />
@@ -67,7 +67,7 @@ A copilot suggests changing a parameter on an existing widget and the user appro
 An MCP or API call triggers a suggestion: "_I found a widget that matches what you're looking for, want to add it?_"
 
 <p align="center">
-    <img width="800" src="/blog/2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal_3.webp" alt="Widget hover tooltip showing option to add to dashboard" />
+    <img width="800" src="/blog/2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal/2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal_3.webp" alt="Widget hover tooltip showing option to add to dashboard" />
 </p>
 
 <br />
@@ -81,7 +81,7 @@ The third stage is full GenUI.
 A copilot that composes an entire dashboard from the trusted components a firm has already defined.
 
 <p align="center">
-    <img width="800" src="/blog/2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal_4.webp" alt="Full GenUI dashboard composition" />
+    <img width="800" src="/blog/2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal/2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal_4.webp" alt="Full GenUI dashboard composition" />
 </p>
 
 <br />
@@ -121,7 +121,7 @@ Does Perplexity default to utilizing whatever data is open and accessible out th
 We got a cease & desist in the early days of OpenBB Workspace, and we weren't even the ones accessing the data - the end users were when they accessed it from their machines.
 
 <p align="center">
-    <img width="800" src="/blog/2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal_5.webp" alt="Cease and desist example" />
+    <img width="800" src="/blog/2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal/2026-03-24-you-cant-prompt-your-way-to-an-ai-bloomberg-terminal_5.webp" alt="Cease and desist example" />
 </p>
 
 <br />

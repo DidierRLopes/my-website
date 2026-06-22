@@ -10,20 +10,9 @@ export default function BlogListPageWrapper(props) {
   const posts = items.map(item => {
     let imagePath = item.content.metadata.frontMatter?.image;
     
-    // Check if image path exists and has extension, if not try common extensions
+    // Check if image path exists and has extension, if not try a common extension.
     if (imagePath && !imagePath.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
-      // Try common image extensions in order of preference
-      const possibleExtensions = ['.png', '.jpg', '.jpeg', '.JPG', '.PNG', '.JPEG'];
-      // For posts without extensions, we'll try the first extension that commonly exists
       imagePath = `${imagePath}.png`;
-    }
-    
-    // Special handling for known problematic images
-    const fileName = imagePath?.split('/').pop();
-    if (fileName === '2025-05-28-openbb-is-underrated.png') {
-      imagePath = '/blog/2025-05-28-openbb-is-underrated.jpeg';
-    } else if (fileName === '2025-03-18-my-first-half-marathon.png') {
-      imagePath = '/blog/2025-03-18-my-first-half-marathon.JPG';
     }
     
     return {

@@ -2,7 +2,7 @@
 slug: top-10-openbb-apps
 title: Top 10 OpenBB apps
 date: 2025-08-25
-image: /blog/2025-08-25-top-10-openbb-apps.webp
+image: /blog/2025-08-25-top-10-openbb-apps/2025-08-25-top-10-openbb-apps.webp
 tags:
   - financial-data
   - ai
@@ -15,8 +15,7 @@ hideSidebar: true
 ---
 
 <p align="center">
-    <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps.webp" />
+    <img width="600" src="/blog/2025-08-25-top-10-openbb-apps/2025-08-25-top-10-openbb-apps.webp" />
 </p>
 
 These are my top 10 OpenBB apps, highlighted on our new solutions page. Not slides - literal workflows.
@@ -30,8 +29,7 @@ These are my top 10 OpenBB apps, highlighted on our new solutions page. Not slid
 I like it because it’s a classic - one of the first strong apps we put together and showed in the FDP presentation. Track overall portfolio performance, returns by asset class, sector exposures, and risk metrics like drawdown or volatility, then generate clean summaries for internal reviews or external stakeholders.
 
 <p align="center">
-    <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_1.webp" />
+    <img width="600" src="/blog/2025-08-25-top-10-openbb-apps/2025-08-25-top-10-openbb-apps_1.webp" />
 </p>
 
 ## 2. Draft Investor Letter
@@ -39,8 +37,7 @@ I like it because it’s a classic - one of the first strong apps we put togethe
 This builds on the portfolio app. It allows firms to automate an investor letter end-to-end by pulling live portfolio data, performance charts, and commentary into a structured, branded format. It cuts manual effort, preserves data integrity, and keeps reporting on time—so the team can focus on the narrative, not the formatting.
 
 <p align="center">
-    <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_2.webp" />
+    <img width="600" src="/blog/2025-08-25-top-10-openbb-apps/2025-08-25-top-10-openbb-apps_2.webp" />
 </p>
 
 ## 3. GDP Forecast Trends & CPI Scenarios
@@ -48,8 +45,7 @@ This builds on the portfolio app. It allows firms to automate an investor letter
 I like it because it’s not just market data - it brings real forecasts and trends into the workflow. As Caique puts it, this dashboard "makes scenario planning and risk assessment intuitive and data-driven", so adding new or emerging macro trends is a couple clicks away.
 
 <p align="center">
-    <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_3.webp" />
+    <img width="600" src="/blog/2025-08-25-top-10-openbb-apps/2025-08-25-top-10-openbb-apps_3.webp" />
 </p>
 
 ## 4. Vector Strength Histogram
@@ -57,8 +53,7 @@ I like it because it’s not just market data - it brings real forecasts and tre
 I like this one because I hadn’t seen anything like it before - a complex way to score hundreds of support/resistance trajectories by alignment, frequency, and proximity to current price. As the VecViz founder said, OpenBB lets proprietary models live safely next to other apps and Copilot, accelerating idea generation and sharpening risk/opportunity views.
 
 <p align="center">
-    <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_4.webp" />
+    <img width="600" src="/blog/2025-08-25-top-10-openbb-apps/2025-08-25-top-10-openbb-apps_4.webp" />
 </p>
 
 ## 5. Crypto Research
@@ -66,8 +61,7 @@ I like this one because I hadn’t seen anything like it before - a complex way 
 I like this one because it was one of the first apps built by someone external - and it stitched together multiple crypto vendors (CoinGecko, DeFiLlama, Velo Data, and more). It lets you compare tokenomics, developer activity, and on-chain metrics in one place, and as Matt put it: "OpenBB gives me sophisticated dashboarding and AI tools to pull real insight from the data we buy".
 
 <p align="center">
-    <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_5.webp" />
+    <img width="600" src="/blog/2025-08-25-top-10-openbb-apps/2025-08-25-top-10-openbb-apps_5.webp" />
 </p>
 
 ## 6. Shipping & Bunkers Pricing
@@ -75,8 +69,7 @@ I like this one because it was one of the first apps built by someone external -
 This was one of our first alternative data feeds into OpenBB, where a client integrated ICE bunker futures pricing and their inbox. Track fuel prices, freight indices, and route-specific congestion to anticipate cost pressures and logistics trends - and correlate these with client requests.
 
 <p align="center">
-    <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_6.webp" />
+    <img width="600" src="/blog/2025-08-25-top-10-openbb-apps/2025-08-25-top-10-openbb-apps_6.webp" />
 </p>
 
 ## 7. Polymarket Prediction Market
@@ -85,8 +78,7 @@ This quote from Jose, says everything: "Prediction markets reveal sentiment, but
 
 
 <p align="center">
-    <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_7.webp" />
+    <img width="600" src="/blog/2025-08-25-top-10-openbb-apps/2025-08-25-top-10-openbb-apps_7.webp" />
 </p>
 
 ## 8. Compliance Intelligence
@@ -95,8 +87,7 @@ We used the Workspace to navigate SOC2 compliance documentation ourselves. Copil
 
 
 <p align="center">
-    <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_8.webp" />
+    <img width="600" src="/blog/2025-08-25-top-10-openbb-apps/2025-08-25-top-10-openbb-apps_8.webp" />
 </p>
 
 ## 9. Real-Time Feeds
@@ -104,8 +95,7 @@ We used the Workspace to navigate SOC2 compliance documentation ourselves. Copil
 I like this one particularly because it features real-time feeds from Pyth. Stream live prices and market depth into custom widgets and dashboards, and even embed iframe-able components like TradingView - so traders can build a real-time, decision-ready view inside OpenBB.
 
 <p align="center">
-    <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_9.webp" />
+    <img width="600" src="/blog/2025-08-25-top-10-openbb-apps/2025-08-25-top-10-openbb-apps_9.webp" />
 </p>
 
 ## 10. Congress Bills Tracking & Analysis
@@ -113,8 +103,7 @@ I like this one particularly because it features real-time feeds from Pyth. Stre
 Analyze the newest bills, including the "Big Beautiful Bill" with AI out of the box. Visualize legislative momentum across topics, chambers, and progress; assess potential market impact; and, best part, you can actually access the underlying data from the open-source platform alongside official government feeds and legislative APIs.
 
 <p align="center">
-    <img width="600" src="/blog/
-    2025-08-25-top-10-openbb-apps_10.webp" />
+    <img width="600" src="/blog/2025-08-25-top-10-openbb-apps/2025-08-25-top-10-openbb-apps_10.webp" />
 </p>
 
 This data is actually available through our open source platform here: [https://github.com/OpenBB-finance/OpenBB](https://github.com/OpenBB-finance/OpenBB).

@@ -2,7 +2,7 @@
 slug: no-financial-terminal-will-survive
 title: No financial terminal will survive.
 date: 2026-02-24
-image: /blog/2026-02-24-no-financial-terminal-will-survive.webp
+image: /blog/2026-02-24-no-financial-terminal-will-survive/2026-02-24-no-financial-terminal-will-survive.webp
 tags:
 - finance
 - openbb

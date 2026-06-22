@@ -2,7 +2,7 @@
 slug: chat-is-not-the-future-interface-its-the-future-router
 title: Chat is not the future interface. It's the future router.
 date: 2026-01-20
-image: /blog/2026-01-20-chat-is-not-the-future-interface.webp
+image: /blog/2026-01-20-chat-is-not-the-future-interface/2026-01-20-chat-is-not-the-future-interface.webp
 tags:
 - ai
 - user-interface
@@ -61,7 +61,7 @@ Let's stress-test the chat maximalist position. Imagine running your entire digi
 ### Chat-only Instagram
 
 <p align="center">
-    <img width="800" src="/blog/2026-01-20-chat-is-not-the-future-interface_1.webp" alt="Chat-only Instagram thought experiment" />
+    <img width="800" src="/blog/2026-01-20-chat-is-not-the-future-interface/2026-01-20-chat-is-not-the-future-interface_1.webp" alt="Chat-only Instagram thought experiment" />
 </p>
 
 <br />
@@ -73,7 +73,7 @@ Yup, this would suck.
 ### Chat-only calendar
 
 <p align="center">
-    <img width="800" src="/blog/2026-01-20-chat-is-not-the-future-interface_2.webp" alt="Chat-only calendar thought experiment" />
+    <img width="800" src="/blog/2026-01-20-chat-is-not-the-future-interface/2026-01-20-chat-is-not-the-future-interface_2.webp" alt="Chat-only calendar thought experiment" />
 </p>
 
 <br />
@@ -85,7 +85,7 @@ Chat is great for queries but is actually very bad for manipulation of complex, 
 ### Chat-only Map
 
 <p align="center">
-    <img width="800" src="/blog/2026-01-20-chat-is-not-the-future-interface_3.webp" alt="Chat-only map thought experiment" />
+    <img width="800" src="/blog/2026-01-20-chat-is-not-the-future-interface/2026-01-20-chat-is-not-the-future-interface_3.webp" alt="Chat-only map thought experiment" />
 </p>
 
 <br />
@@ -97,7 +97,7 @@ And if you get the map embedded on the chat response, then you want to interact 
 ### Chat-only Jira
 
 <p align="center">
-    <img width="800" src="/blog/2026-01-20-chat-is-not-the-future-interface_4.webp" alt="Chat-only Jira thought experiment" />
+    <img width="800" src="/blog/2026-01-20-chat-is-not-the-future-interface/2026-01-20-chat-is-not-the-future-interface_4.webp" alt="Chat-only Jira thought experiment" />
 </p>
 
 <br />
@@ -113,7 +113,7 @@ Here's the reframe: **chat doesn't replace apps. Chat replaces the router to app
 Think about your laptop right now. You have a dock with icons. You click an icon, an app opens. The dock is a routing mechanism - a way to get to the thing you actually want to use.
 
 <p align="center">
-    <img width="800" src="/blog/2026-01-20-chat-is-not-the-future-interface_5.webp" alt="Laptop dock with icons" />
+    <img width="800" src="/blog/2026-01-20-chat-is-not-the-future-interface/2026-01-20-chat-is-not-the-future-interface_5.webp" alt="Laptop dock with icons" />
 </p>
 
 <br />
@@ -155,7 +155,7 @@ The future isn't chat replacing interfaces. It's chat as the universal entry poi
 ## Appendix
 
 <p align="center">
-    <img width="800" src="/blog/2026-01-20-chat-is-not-the-future-interface_6.webp" alt="Apps in ChatGPT announcement" />
+    <img width="800" src="/blog/2026-01-20-chat-is-not-the-future-interface/2026-01-20-chat-is-not-the-future-interface_6.webp" alt="Apps in ChatGPT announcement" />
 </p>
 
 <br />
@@ -163,5 +163,5 @@ The future isn't chat replacing interfaces. It's chat as the universal entry poi
 And a highly relevant post I read with the exact same idea I share in this thread:
 
 <p align="center">
-    <img width="800" src="/blog/2026-01-20-chat-is-not-the-future-interface_7.webp" alt="Related post about chat as router" />
+    <img width="800" src="/blog/2026-01-20-chat-is-not-the-future-interface/2026-01-20-chat-is-not-the-future-interface_7.webp" alt="Related post about chat as router" />
 </p>

@@ -2,7 +2,7 @@
 slug: what-if-you-could-create-any-report
 title: What if you could create any report - right where your data lives?
 date: 2026-02-20
-image: /blog/2026-02-20-what-if-you-could-create-any-report.webp
+image: /blog/2026-02-20-what-if-you-could-create-any-report/2026-02-20-what-if-you-could-create-any-report.webp
 tags:
 - openbb
 - ai
@@ -31,13 +31,13 @@ Using its very own [OpenBB Pydantic AI framework](https://github.com/MagnusS0/op
 You can literally check the PR [here](https://github.com/MagnusS0/openbb-pydantic-ai/pull/7).
 
 <p align="center">
-    <img width="800" src="/blog/2026-02-20-what-if-you-could-create-any-report.webp" alt="OpenBB Workspace with Skills integration" />
+    <img width="800" src="/blog/2026-02-20-what-if-you-could-create-any-report/2026-02-20-what-if-you-could-create-any-report.webp" alt="OpenBB Workspace with Skills integration" />
 </p>
 
 <br />
 
 <p align="center">
-    <img width="800" src="/blog/2026-02-20-what-if-you-could-create-any-report_1.webp" alt="OpenBB Workspace Skills demo" />
+    <img width="800" src="/blog/2026-02-20-what-if-you-could-create-any-report/2026-02-20-what-if-you-could-create-any-report_1.webp" alt="OpenBB Workspace Skills demo" />
 </p>
 
 <br />

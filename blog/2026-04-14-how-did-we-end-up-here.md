@@ -2,7 +2,7 @@
 slug: how-did-we-end-up-here
 title: "How did we end up here?"
 date: 2026-04-14
-image: /blog/2026-04-14-how-did-we-end-up-here.webp
+image: /blog/2026-04-14-how-did-we-end-up-here/2026-04-14-how-did-we-end-up-here.webp
 tags:
 - ai
 - finance
@@ -51,7 +51,7 @@ AI accelerates this massively. Modern AI tooling is the first credible opportuni
 When user activity, data queries, and workflow execution happen in vendor-managed environments, the firm gets productivity but yields sovereignty. The logging depth, runtime controls, operational policy, and evidence production are bounded by what the provider exposes.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_1.webp" alt="Workflows happening on vendor infrastructure" />
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here/2026-04-14-how-did-we-end-up-here_1.webp" alt="Workflows happening on vendor infrastructure" />
 </p>
 
 ## No single vendor covers the full data universe
@@ -61,7 +61,7 @@ Equities, credit, macro, alternatives, and proprietary datasets come from differ
 Fragmentation isn't just inconvenient. It breaks repeatability. Once workflows cross tool boundaries, intermediate assumptions and transformations become invisible or non-portable. That invisibility is a form of risk: you can't govern what you can't observe.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_2.webp" alt="No single vendor covers the full data universe" />
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here/2026-04-14-how-did-we-end-up-here_2.webp" alt="No single vendor covers the full data universe" />
 </p>
 
 ## Internal data lacks first-class status
@@ -71,7 +71,7 @@ Uploading portfolios, proprietary datasets, or internal research is harder than 
 The firm's edge is not the vendor dataset. It is the firm's ability to combine vendor inputs with internal context. When internal data can't sit natively inside the same workspace, you end up with two realities: the vendor's (shared with every other firm) and your own (fully detached). Your reality is the one that matters. But when you're forced to model your world view through what a vendor provides, you hit limits in what you can do.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_3.webp" alt="Internal data lacks first-class status in vendor platforms" />
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here/2026-04-14-how-did-we-end-up-here_3.webp" alt="Internal data lacks first-class status in vendor platforms" />
 </p>
 
 ## Business logic embeds in vendor platforms
@@ -81,7 +81,7 @@ Even when vendors are flexible, they ship a worldview: how data is mapped, what 
 Portage's framing of the value chain shows how value accrues from rights-controlled sourcing through processing and analytics to distribution, where outputs get embedded in workflows. When workflow embedding is owned by the vendor, those dependencies become procedural and cultural. Portage also calls out the concrete mechanics that raise replacement costs: entitlements and data rights, identifier dependencies, audit requirements, and established links downstream.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_4.webp" alt="Business logic embeds in vendor platforms" />
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here/2026-04-14-how-did-we-end-up-here_4.webp" alt="Business logic embeds in vendor platforms" />
 </p>
 
 ## API-level integration shifts the burden to the firm
@@ -91,7 +91,7 @@ This is the cumulative picture. Multiple data vendors, each running their own in
 Your firm sits at the edge, receiving outputs from disconnected systems.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_5.webp" alt="Multiple data vendors with disconnected infrastructure" />
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here/2026-04-14-how-did-we-end-up-here_5.webp" alt="Multiple data vendors with disconnected infrastructure" />
 </p>
 
 <br />
@@ -103,7 +103,7 @@ Portage's investment thesis emphasizes developer-friendly APIs and distribution 
 But API rebuilding moves the burden. Integration, governance, lifecycle management, entitlement enforcement, and auditability become the firm's job again, often without the benefit of a unified platform.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_6.webp" alt="API-level integration shifts burden to the firm" />
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here/2026-04-14-how-did-we-end-up-here_6.webp" alt="API-level integration shifts burden to the firm" />
 </p>
 
 ## Point solutions proliferate
@@ -113,7 +113,7 @@ Once you start rebuilding from APIs, teams solve local pain fast. Portfolio tool
 Portage notes that supporting layers like platform development, provenance, entitlements, and cloud delivery determine which point solutions can scale into standards. When those layers are absent or inconsistent, point solutions proliferate but none of them become shared infrastructure.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_7.webp" alt="Point solutions proliferate across the firm" />
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here/2026-04-14-how-did-we-end-up-here_7.webp" alt="Point solutions proliferate across the firm" />
 </p>
 
 ## AI embeds separately across every system
@@ -123,7 +123,7 @@ Now the stack expands again. Each internal application integrates its own LLM pr
 If you implement AI as scattered per-app integrations, the governance functions that matter (model versioning, prompt auditing, retrieval policies, tool permissions) become nearly impossible to execute uniformly.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_8.webp" alt="AI embeds separately across every system" />
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here/2026-04-14-how-did-we-end-up-here_8.webp" alt="AI embeds separately across every system" />
 </p>
 
 ## Third-party AI chat interfaces centralize control further
@@ -131,7 +131,7 @@ If you implement AI as scattered per-app integrations, the governance functions 
 New entrants provide proprietary chat interfaces that sit above your systems. The firm now integrates and governs yet another vendor, often by uploading data that already exists elsewhere: internal research, portfolios, board materials, or licensed market data.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_9.webp" alt="Third-party AI chat interfaces centralize control further" />
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here/2026-04-14-how-did-we-end-up-here_9.webp" alt="Third-party AI chat interfaces centralize control further" />
 </p>
 
 <br />
@@ -155,7 +155,7 @@ Consolidate vendor data, proprietary datasets, internal apps, and AI into a sing
 Now the concrete "how".
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here_10.webp" alt="Consolidated firm-owned workspace architecture" />
+    <img width="800" src="/blog/2026-04-14-how-did-we-end-up-here/2026-04-14-how-did-we-end-up-here_10.webp" alt="Consolidated firm-owned workspace architecture" />
 </p>
 
 <br />

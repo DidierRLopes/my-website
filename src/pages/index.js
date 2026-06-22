@@ -180,7 +180,7 @@ export default function Home() {
               <div className="fundraiser-teaser-preview">
                 <div className="fundraiser-teaser-media">
                   <img
-                    src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_3.webp"
+                    src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_3.webp"
                     alt="Bia"
                   />
                 </div>

@@ -2,7 +2,7 @@
 slug: the-role-of-ai-and-openbb-in-the-future-of-investment-research
 title: The role of AI and OpenBB in the future of investment research
 date: 2023-04-03
-image: /blog/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research.webp
+image: /blog/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research.webp
 tags:
 - openai
 - future
@@ -15,7 +15,7 @@ description: How OpenBB can lead the future of finance using AI on top of an ope
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research.webp"/>
+    <img width="600" src="/blog/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research.webp"/>
 </p>
 
 <br />
@@ -62,7 +62,7 @@ The screenshot below shows that ChatGPT can accurately return the right OpenBB c
 
 EDIT: Bloomberg introduced [BloombergGPT](https://openai.com/research/whisper) last week, and the following screenshot is taken from their research paper which validates the argument above.
 
-![image](/blog/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research_1.webp)
+![image](/blog/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research_1.webp)
 
 ## WhisperAI as the interface
 
@@ -98,6 +98,6 @@ But, for a second, imagine if you could build these notebook templates with almo
 
 The proof-of-concept below in combination with the automated report generation should allow you to further understand the breakthrough that we may accomplish in the future.
 
-![image](/blog/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research_2.webp)
+![image](/blog/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research/2023-04-03-the-role-of-ai-and-openbb-in-the-future-of-investment-research_2.webp)
 
 My prediction is that open source + AI will disrupt the financial sector in the upcoming years, and OpenBB will be leading that wave.

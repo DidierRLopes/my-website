@@ -2,7 +2,7 @@
 slug: how-i-created-the-best-discord-meme-bot
 title: How I created the best discord meme bot
 date: 2022-04-09
-image: /blog/2022-04-09-how-i-created-the-best-discord-meme-bot.webp
+image: /blog/2022-04-09-how-i-created-the-best-discord-meme-bot/2022-04-09-how-i-created-the-best-discord-meme-bot.webp
 tags:
 - discord
 - meme-bot
@@ -15,7 +15,7 @@ description: In this blog post, I share my journey of creating a Discord meme bo
 
 
 <p align="center">
-    <img width="600" src="/blog/2022-04-09-how-i-created-the-best-discord-meme-bot.webp"/>
+    <img width="600" src="/blog/2022-04-09-how-i-created-the-best-discord-meme-bot/2022-04-09-how-i-created-the-best-discord-meme-bot.webp"/>
 </p>
 
 <br />
@@ -87,11 +87,11 @@ I used a playground.ipynb notebook, which is also on the repo, to increase the s
 
 This is how it looks,
 
-![image](/blog/2022-04-09-how-i-created-the-best-discord-meme-bot_1.webp)
+![image](/blog/2022-04-09-how-i-created-the-best-discord-meme-bot/2022-04-09-how-i-created-the-best-discord-meme-bot_1.webp)
 
 OR
 
-![image](/blog/2022-04-09-how-i-created-the-best-discord-meme-bot_2.webp)
+![image](/blog/2022-04-09-how-i-created-the-best-discord-meme-bot/2022-04-09-how-i-created-the-best-discord-meme-bot_2.webp)
 
 As you can see, our Discord server just stepped up. [Join us](https://openbb.co/discord) to try out the meme bot, build the future of investment research or just to say hi.
 

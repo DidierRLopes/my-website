@@ -2,7 +2,7 @@
 slug: codex-beats-chipwits
 title: "Codex beats ChipWits"
 date: 2026-05-20
-image: /blog/2026-05-20-codex-beats-chipwits.webp
+image: /blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits.webp
 tags:
 - ai
 - codex
@@ -32,7 +32,7 @@ A few years ago I demo’ed OpenBB to someone at a hedge fund. After the meeting
 We reconnected a few months ago, and I asked him about the game he built and it was [live](https://chipwits.com/)!
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_1.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_1.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -42,7 +42,7 @@ You can test the demo version for free here: [https://store.steampowered.com/app
 We started talking about how AI was impacting the building of the game. Email from the creator:
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_2.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_2.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -54,7 +54,7 @@ The game was really fun, but I wanted to try to solve it with an agent.
 Then the day after I messaged him with:
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_3.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_3.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -68,7 +68,7 @@ In this post I’m going to talk about how I ended up building an agent that was
 This is what the game looks like.
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_4.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_4.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -86,7 +86,7 @@ So now I needed to give an agent:
 So it looks something like this:
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_5.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_5.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -98,7 +98,7 @@ Kind of.
 First I wanted to test the actuator, so I explained to the agent the current state of the world.
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_6.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_6.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -133,7 +133,7 @@ And that worked!!! Although it was very slow, I saw it solving one of the puzzle
 You would think that vision models can capture something like this perfectly right?
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_6.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_6.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -169,7 +169,7 @@ Very frustrating.
 Then I realized that I could actually rotate the view of the game. Smh 🤦🏽‍♂️
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_7.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_7.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -187,13 +187,13 @@ But then I ran out of tokens, and honestly I could have probably solved it but i
 It made me appreciate more startups working in OCR and that this problem is far from solved.
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_8.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_8.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_9.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_9.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -203,7 +203,7 @@ It made me appreciate more startups working in OCR and that this problem is far 
 Then I was invited into this channel on Discord and given access to ChipWits MCP.
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_10.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_10.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -217,7 +217,7 @@ NICE 👍
 Literally my first go with the MCP and Claude Code (with Opus 4.5) one-shotted the level. Uh oh, this is going to be fun.
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_11.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_11.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -231,7 +231,7 @@ Then I bought the game to have access to more levels…
 Why try the easy levels given there is a [monthly challenge](https://chipwits.com/hall-of-pie/) that I can attempt to solve? Right?
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_12.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_12.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -257,7 +257,7 @@ In the defense of the model, look at the winning solution of [Giant Slalom](http
 When I first started interacting with the community on Discord, my first message was this:
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_13.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_13.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -313,7 +313,7 @@ holy shit.
 I kept having to write “now do the next one”, after 15 minutes it was cleared.
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_14.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_14.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -335,7 +335,7 @@ Then I was talking on Discord in real-time as this was happening and even shared
 The creator even commented that in this video GPT-5.5 prefers to use the boomerang tile over a simple loop. One way or another, the game was passed!
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_15.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_15.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -343,7 +343,7 @@ The creator even commented that in this video GPT-5.5 prefers to use the boomera
 At this point the main friction was me saying “lgtm, do the next”. So I said “keep going until you solve the next 10 missions” and most of the missions solved, but got stuck with wall damage in one.
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_16.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_16.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -353,7 +353,7 @@ So I nudged it slightly with something like “think more carefully as you must 
 At this point I was quite confident that it could keep going on its own so I just said keep going until you finish the game and went to walk the doggos.
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_17.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_17.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -369,7 +369,7 @@ It kept going?
 I looked at the ChipWits game and I saw this…
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_18.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_18.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -379,7 +379,7 @@ I was like, hold on, I’ve never seen this one before, and it doesn’t look li
 When looking into the traces of the agent it found these side challenges and was going through them, and clearing them!!!
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_19.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_19.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -391,19 +391,19 @@ Holy shit..
 Truth be told, it helped that the model had these “tools” that it created to write down tips and tricks and keep improving at playing the game (without updating the model weights!).
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_20.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_20.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_21.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_21.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_22.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_22.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -437,7 +437,7 @@ Ok, it cleared all of them except one!
 Then Mark asked how the results compared with the “winning solution.”
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_23.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_23.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -449,7 +449,7 @@ Hmmmm, pretty shit tbh - but at least valid!! Then it was an “optimization pro
 I spent so many hours trying to nudge the agent to be able to complete this game, but best it could do was 75%. And this was after many hours.
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_24.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_24.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -473,7 +473,7 @@ Here’s Jerric01 solution to this challenge:
 But I may come back when Mythos is out or so!
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_25.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_25.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -489,7 +489,7 @@ Tbh, I didn’t have many hopes for this as I looked into these levels and they 
 Or so I thought…
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_26.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_26.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -499,7 +499,7 @@ I was so happy to see this.
 This not only proved my thesis that AI could beat the game, but that it could also push it further than humans have.
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_27.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_27.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -509,7 +509,7 @@ Solution here (you can just paste it into the mission): chipwits:H4sIAAAAAAAAExM
 And this was fully on its own, without me giving the winning solution or anything. Although it had used many more chips to solve it, it didn’t matter because it was optimizing for fewer cycles and it traded off with the amount of chips used. Winning solution was 496 and we (feels wrong to say we lol) achieved 410 🏆
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_28.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_28.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -537,7 +537,7 @@ But there was one last mission I wanted to try….
 Yup. My agent nemesis - Spring Cleaning.
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_29.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_29.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -555,13 +555,13 @@ I was VERY curious whether it could beat it or not.
 it took many hours, but…
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_30.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_30.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_31.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_31.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />
@@ -579,7 +579,7 @@ I asked Codex how it did it, and here’s what it said:
 And this concludes my experiment.
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits_32.webp" alt="Codex beats ChipWits" />
+    <img width="800" src="/blog/2026-05-20-codex-beats-chipwits/2026-05-20-codex-beats-chipwits_32.webp" alt="Codex beats ChipWits" />
 </p>
 
 <br />

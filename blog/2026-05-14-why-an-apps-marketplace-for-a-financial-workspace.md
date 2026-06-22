@@ -2,7 +2,7 @@
 slug: why-an-apps-marketplace-for-a-financial-workspace
 title: "Why an Apps Marketplace for a Financial Workspace"
 date: 2026-05-14
-image: /blog/2026-05-14-why-an-apps-marketplace-for-a-financial-workspace.webp
+image: /blog/2026-05-14-why-an-apps-marketplace-for-a-financial-workspace/2026-05-14-why-an-apps-marketplace-for-a-financial-workspace.webp
 tags:
 - openbb
 - finance
@@ -106,7 +106,7 @@ A specific, ready-to-use experience that a data vendor builds on top of their ow
 That’s the purpose of OpenBB Apps Marketplace.
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-14-why-an-apps-marketplace-for-a-financial-workspace.webp" alt="Why an Apps Marketplace for a Financial Workspace" />
+    <img width="800" src="/blog/2026-05-14-why-an-apps-marketplace-for-a-financial-workspace/2026-05-14-why-an-apps-marketplace-for-a-financial-workspace.webp" alt="Why an Apps Marketplace for a Financial Workspace" />
 </p>
 
 <br />

@@ -67,7 +67,7 @@ mcp__fetch__imageFetch --url <newsletter-url> --images '{"output": "file", "layo
 slug: <title-slug-without-date>
 title: <Full Newsletter Title>
 date: <YYYY-MM-DD>
-image: /blog/<filename>.webp
+image: /blog/YYYY-MM-DD-slug/hero.webp
 tags:
 - <relevant-tag-1>
 - <relevant-tag-2>
@@ -81,7 +81,7 @@ hideSidebar: true
 - **slug**: Use title in kebab-case without the date prefix
 - **title**: Exact newsletter title, properly capitalized
 - **date**: Newsletter publication date in YYYY-MM-DD format (from archive page, NOT today's date)
-- **image**: Points to the hero image path (WITH `.webp` extension). If the post has no cover image, omit this field
+- **image**: Points to the hero image path inside the post asset folder (WITH `.webp` extension). If the post has no cover image, omit this field
 - **tags**: Extract 3-6 relevant tags from content themes (lowercase)
 - **description**: Use newsletter subtitle or create compelling summary
 - **hideSidebar**: Set to `true` for blog posts
@@ -96,15 +96,15 @@ hideSidebar: true
    - **Substack:** Fetch from archive page. Extract thumbnail image URLs and download at high resolution
    - **Beehiiv:** Fetch from main page
    - Some posts may use YouTube thumbnails as cover images (URL: `https://substackcdn.com/image/youtube/w_728,c_limit/<video_id>`)
-   - Download to `/static/blog/YYYY-MM-DD-slug.png` (or `.jpg`) first, then convert to WebP
-   - Note: Save in the `static/blog/` directory, not just `/blog/`
+   - Download to `/static/blog/YYYY-MM-DD-slug/hero.png` (or `.jpg`) first, then convert to WebP
+   - Note: Save in the post's `static/blog/YYYY-MM-DD-slug/` directory, not just `/blog/`
    - If no cover image exists, omit the `image:` field from front matter
 
 2. **Content Images**
-   - Download to `/static/blog/YYYY-MM-DD-slug_N.png` (where N is sequential number)
+   - Download to `/static/blog/YYYY-MM-DD-slug/N.png` (where N is sequential number)
    - Download from CDN URLs
    - Maintain aspect ratio
-   - Note: Save in the `static/blog/` directory
+   - Note: Save in the post's `static/blog/YYYY-MM-DD-slug/` directory
 
 3. **Convert All Images to WebP**
    After downloading images, convert them to WebP format using:
@@ -117,16 +117,16 @@ hideSidebar: true
    ```
 
    Final filenames should be:
-   - Hero: `/static/blog/YYYY-MM-DD-slug.webp`
-   - Content: `/static/blog/YYYY-MM-DD-slug_N.webp`
+   - Hero: `/static/blog/YYYY-MM-DD-slug/hero.webp`
+   - Content: `/static/blog/YYYY-MM-DD-slug/N.webp`
 
 4. **Image Markdown Format**
    ```markdown
-   ![Alt text description](/blog/image-path.webp)
+   ![Alt text description](/blog/YYYY-MM-DD-slug/image-path.webp)
 
    <!-- For centered images with custom width -->
    <p align="center">
-       <img width="500" src="/blog/image-path.webp" alt="Description" />
+       <img width="500" src="/blog/YYYY-MM-DD-slug/image-path.webp" alt="Description" />
    </p>
    ```
 
@@ -229,7 +229,7 @@ hideSidebar: true
     Example:
     ```html
     <p align="center">
-        <img width="800" src="/blog/image.webp" alt="Description" />
+        <img width="800" src="/blog/YYYY-MM-DD-slug/image.webp" alt="Description" />
     </p>
     <p align="center" style={{fontSize: '0.85em', marginTop: '-0.5em'}}>Caption text describing the image above.</p>
     ```

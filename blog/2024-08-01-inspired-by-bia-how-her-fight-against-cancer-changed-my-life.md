@@ -2,7 +2,7 @@
 slug: inspired-by-bia-how-her-fight-against-cancer-changed-my-life
 title: Inspired by Bia - How her fight against cancer changed my life
 date: 2024-08-01
-image: /blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.webp
+image: /blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.webp
 tags:
 - personal-story
 - grief
@@ -19,7 +19,7 @@ description: In a time when we talk about going to Mars and having AGI, cancer i
 
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.webp"/>
+    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.webp"/>
 </p>
 
 In a time when we talk about going to Mars and having AGI, cancer is still taking lives every day.
@@ -47,7 +47,7 @@ Before I knew it, she was my best friend.
 We would talk for hours about everything and nothing - always laughing.
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.webp"/>
+    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life.webp"/>
 </p>
 
 We would sit next to each other and professors would have a hard time with us because we liked to chit chat.
@@ -57,7 +57,7 @@ So we created a new communication medium to not get caught.
 We would rip the side of those pages and write in very small font notes to each other.
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_1.webp"/>
+    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_1.webp"/>
 </p>
 
 We would go through multiple of these in each class.
@@ -65,7 +65,7 @@ We would go through multiple of these in each class.
 It was our thing.
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_2.webp"/>
+    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_2.webp"/>
 </p>
 
 A few months later, we had a sports class and she felt weak from her wrist.
@@ -91,7 +91,7 @@ She would not display any weakness throughout none of it.
 She was so strong. At 16.
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_3.webp"/>
+    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_3.webp"/>
 </p>
 
 One day I visited her and she had no hair because of chemotherapy.
@@ -109,7 +109,7 @@ She was incredibly smart for her age. So losing a year wasn't an option for her.
 At the graduation she wrote me a message. She didn't have strength in her hand to write so she used her wrist to be able to write it in an iPad.
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_4.webp"/>
+    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_4.webp"/>
 </p>
 
 The translation doesn't make it justice, but it reads as:
@@ -157,7 +157,7 @@ I went from spending most of my time as a gamer and doing just enough to have go
 <p align="center">
     <img
         width="380"
-        src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_5.webp"
+        src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_5.webp"
         style={{ transform: 'rotate(90deg)', display: 'block', margin: '2rem auto', maxWidth: '100%' }}
     />
 </p>
@@ -189,7 +189,7 @@ Join me in this fight against cancer, for Bia and for all those whose lives have
 I've created a [fundraising page](https://haymakersforhope.org/events/running/nyc-half-marathon-2025/runners/Didier-Lopes) where you can support this cause.
 
 <p align="center">
-    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_6.webp"/>
+    <img width="600" src="/blog/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life/2024-08-01-inspired-by-bia-how-her-fight-against-cancer-changed-my-life_6.webp"/>
 </p>
 
 <p className="text-center">

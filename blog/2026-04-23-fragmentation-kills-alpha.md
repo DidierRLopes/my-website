@@ -2,7 +2,7 @@
 slug: fragmentation-kills-alpha
 title: "Fragmentation kills Alpha"
 date: 2026-04-23
-image: /blog/2026-04-23-fragmentation-kills-alpha.webp
+image: /blog/2026-04-23-fragmentation-kills-alpha/2026-04-23-fragmentation-kills-alpha.webp
 tags:
 - ai
 - finance
@@ -75,7 +75,7 @@ The current constraint, in my opinion, is infrastructure.
 If you reduce modern alpha generation to first principles, it lives at the intersection of data, AI and context.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-23-fragmentation-kills-alpha_1.webp" alt="Venn diagram showing the intersection of Data, AI, and Context producing Signal, Grounded Reasoning, and Institutional Memory" />
+    <img width="800" src="/blog/2026-04-23-fragmentation-kills-alpha/2026-04-23-fragmentation-kills-alpha_1.webp" alt="Venn diagram showing the intersection of Data, AI, and Context producing Signal, Grounded Reasoning, and Institutional Memory" />
 </p>
 
 Each intersection creates something distinct.

@@ -2,7 +2,7 @@
 slug: my-ai-agent-wrote-a-research-paper
 title: My AI agent wrote a research paper about the code it wrote
 date: 2026-03-18
-image: /blog/2026-03-18-my-ai-agent-wrote-a-research-paper.webp
+image: /blog/2026-03-18-my-ai-agent-wrote-a-research-paper/2026-03-18-my-ai-agent-wrote-a-research-paper.webp
 tags:
 - ai
 - agents
@@ -27,7 +27,7 @@ As CC was working on this, we were brainstorming the implementation. I was under
 First, I started with this golden sample:
 
 <p align="center">
-    <img width="400" src="/blog/2026-03-18-my-ai-agent-wrote-a-research-paper_1.webp" alt="Mewtwo Pokemon card - golden sample" />
+    <img width="400" src="/blog/2026-03-18-my-ai-agent-wrote-a-research-paper/2026-03-18-my-ai-agent-wrote-a-research-paper_1.webp" alt="Mewtwo Pokemon card - golden sample" />
 </p>
 
 <br />
@@ -41,7 +41,7 @@ Then I went to a harder example: a picture of a card on a clean background, cent
 Then I went into a weird angle, such as this:
 
 <p align="center">
-    <img width="600" src="/blog/2026-03-18-my-ai-agent-wrote-a-research-paper_2.webp" alt="Pokemon card at a weird angle with dog tail in corner" />
+    <img width="600" src="/blog/2026-03-18-my-ai-agent-wrote-a-research-paper/2026-03-18-my-ai-agent-wrote-a-research-paper_2.webp" alt="Pokemon card at a weird angle with dog tail in corner" />
 </p>
 <p align="center" style={{fontSize: '0.85em', marginTop: '-0.5em'}}>you can see my dog tail in the corner</p>
 
@@ -80,7 +80,7 @@ A IEEE-style paper!
 And it did, I open sourced it here: [https://didierrlopes.github.io/pokemon-card-scanner-paper/](https://didierrlopes.github.io/pokemon-card-scanner-paper/)
 
 <p align="center">
-    <img width="800" src="/blog/2026-03-18-my-ai-agent-wrote-a-research-paper_3.webp" alt="IEEE-style research paper about the Pokemon card scanner" />
+    <img width="800" src="/blog/2026-03-18-my-ai-agent-wrote-a-research-paper/2026-03-18-my-ai-agent-wrote-a-research-paper_3.webp" alt="IEEE-style research paper about the Pokemon card scanner" />
 </p>
 
 <br />

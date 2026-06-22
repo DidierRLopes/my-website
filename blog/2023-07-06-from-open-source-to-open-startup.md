@@ -2,7 +2,7 @@
 slug: from-open-source-to-open-startup
 title: From Open Source to Open Startup
 date: 2023-07-06
-image: /blog/2023-07-06-from-open-source-to-open-startup.webp
+image: /blog/2023-07-06-from-open-source-to-open-startup/2023-07-06-from-open-source-to-open-startup.webp
 tags:
 - open-source
 - open-startup
@@ -17,7 +17,7 @@ description: From Open Source to Open Startup. A journey of OpenBB towards trans
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-07-06-from-open-source-to-open-startup.webp"/>
+    <img width="600" src="/blog/2023-07-06-from-open-source-to-open-startup/2023-07-06-from-open-source-to-open-startup.webp"/>
 </p>
 
 <br />

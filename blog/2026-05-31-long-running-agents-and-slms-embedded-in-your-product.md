@@ -2,7 +2,7 @@
 slug: long-running-agents-and-slms-embedded-in-your-product
 title: "Long-running agents & SLMs embedded in your product"
 date: 2026-05-31
-image: /blog/2026-05-31-long-running-agents-and-slms-embedded-in-your-product.webp
+image: /blog/2026-05-31-long-running-agents-and-slms-embedded-in-your-product/2026-05-31-long-running-agents-and-slms-embedded-in-your-product.webp
 tags:
 - ai
 - agents
@@ -22,7 +22,7 @@ More than 2 years ago, on January 1st 2024, I [published a prediction](/blog/pre
 And I did this schema on how we were thinking about this:
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-31-long-running-agents-and-slms-embedded-in-your-product_1.webp" alt="Long-running agents & SLMs embedded in your product" />
+    <img width="800" src="/blog/2026-05-31-long-running-agents-and-slms-embedded-in-your-product/2026-05-31-long-running-agents-and-slms-embedded-in-your-product_1.webp" alt="Long-running agents & SLMs embedded in your product" />
 </p>
 
 <br />
@@ -46,7 +46,7 @@ I mean I expected this to happen for some time, but not for it to still hold alm
 In that same post I wrote about this, and even mentioned this sentence that someone at BlackRock said on stage: “*it's expensive to spend time fine-tuning a new model, just for that entire work to be 'eradicated' by a new model that has a higher performance in that specific domain than the model has been fine-tuned*“
 
 <p align="center">
-    <img width="800" src="/blog/2026-05-31-long-running-agents-and-slms-embedded-in-your-product_2.webp" alt="Long-running agents & SLMs embedded in your product" />
+    <img width="800" src="/blog/2026-05-31-long-running-agents-and-slms-embedded-in-your-product/2026-05-31-long-running-agents-and-slms-embedded-in-your-product_2.webp" alt="Long-running agents & SLMs embedded in your product" />
 </p>
 
 <br />

@@ -2,7 +2,7 @@
 slug: the-era-of-on-demand-software
 title: The era of on-demand software
 date: 2026-03-06
-image: /blog/2026-03-06-the-era-of-on-demand-software.webp
+image: /blog/2026-03-06-the-era-of-on-demand-software/2026-03-06-the-era-of-on-demand-software.webp
 tags:
 - ai
 - software-development
@@ -19,7 +19,7 @@ When agents can work in a loop while you do something else, time is removed from
 A couple of weeks back I went to a Pokemon TCG shop to buy some vintage WOTC cards. I'm just getting this collection started, so I had dozens of gaps to fill.
 
 <p align="center">
-    <img width="400" src="/blog/2026-03-06-the-era-of-on-demand-software_1.webp" alt="Pokemon card collection starting to shape up" />
+    <img width="400" src="/blog/2026-03-06-the-era-of-on-demand-software/2026-03-06-the-era-of-on-demand-software_1.webp" alt="Pokemon card collection starting to shape up" />
 </p>
 <p align="center" style={{fontSize: '0.85em', marginTop: '-0.5em'}}>My collection starting to shape up.</p>
 
@@ -36,7 +36,7 @@ I said "It would be nice to have software that does all this and totals it up, r
 First thing I did once I got home was write this Issue on my pokvault repo.
 
 <p align="center">
-    <img width="800" src="/blog/2026-03-06-the-era-of-on-demand-software_2.webp" alt="GitHub issue for card scanner feature" />
+    <img width="800" src="/blog/2026-03-06-the-era-of-on-demand-software/2026-03-06-the-era-of-on-demand-software_2.webp" alt="GitHub issue for card scanner feature" />
 </p>
 
 <br />
@@ -58,7 +58,7 @@ So I wasn't going to touch it until later...
 **Also me (given that I can hand off things to AI agents):**
 
 <p align="center">
-    <img width="500" src="/blog/2026-03-06-the-era-of-on-demand-software_3.webp" alt="Meme about doing it anyway" />
+    <img width="500" src="/blog/2026-03-06-the-era-of-on-demand-software/2026-03-06-the-era-of-on-demand-software_3.webp" alt="Meme about doing it anyway" />
 </p>
 
 <br />

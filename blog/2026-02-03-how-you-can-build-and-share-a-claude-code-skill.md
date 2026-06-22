@@ -2,7 +2,7 @@
 slug: how-you-can-build-and-share-a-claude-code-skill
 title: How you can build and share a Claude Code skill
 date: 2026-02-03
-image: /blog/2026-02-03-how-you-can-build-and-share-a-claude-code-skill.webp
+image: /blog/2026-02-03-how-you-can-build-and-share-a-claude-code-skill/2026-02-03-how-you-can-build-and-share-a-claude-code-skill.webp
 tags:
 - ai
 - claude

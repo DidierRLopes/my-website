@@ -4,19 +4,11 @@ import BlogHistory from '../BlogHistory';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-// Construct hero image URL from post date and slug
-// Pattern: /blog/YYYY-MM-DD-slug.webp
+// Use the first rendered image from the feed so posts can keep assets in folders.
 const getHeroImage = (post) => {
-  if (!post.date_modified || !post.id) return null;
-  const date = new Date(post.date_modified);
-  // Use UTC methods to avoid timezone issues
-  const yyyy = date.getUTCFullYear();
-  const mm = String(date.getUTCMonth() + 1).padStart(2, '0');
-  const dd = String(date.getUTCDate()).padStart(2, '0');
-  // Extract slug from URL like "https://didierlopes.com/blog/my-slug"
-  const slug = post.id.split('/blog/')[1];
-  if (!slug) return null;
-  return `/blog/${yyyy}-${mm}-${dd}-${slug}.webp`;
+  const match = post.content_html?.match(/<img[^>]+src=["']([^"']+)["']/);
+  if (!match) return null;
+  return match[1].replace(/^https?:\/\/didierlopes\.com/, '');
 };
 
 function LatestPosts({ allPosts, postsHighlight, isDesktop, isTablet }) {
@@ -131,4 +123,4 @@ function LatestPosts({ allPosts, postsHighlight, isDesktop, isTablet }) {
   );
 }
 
-export default LatestPosts; 
+export default LatestPosts;

@@ -2,7 +2,7 @@
 slug: how-i-turned-days-of-developer-training-into-a-skill
 title: How I turned days of developer training into a skill you can use in minutes
 date: 2026-01-27
-image: /blog/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill.webp
+image: /blog/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill.webp
 tags:
 - ai
 - claude
@@ -22,7 +22,7 @@ Recently, we added support for YouTube widgets.
 So I sent a video to our marketing person explaining that I could add a YouTube video to each tab of our [reference backend application](https://github.com/OpenBB-finance/backends-for-openbb/tree/main) to onboard developers on how to build apps/widgets on OpenBB.
 
 <p align="center">
-    <img width="800" src="/blog/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill_1.webp" alt="Slack message about YouTube videos" />
+    <img width="800" src="/blog/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill_1.webp" alt="Slack message about YouTube videos" />
 </p>
 
 <br />
@@ -76,11 +76,11 @@ Ship.
 After my prompt, here's what Claude outputs:
 
 <p align="center">
-    <img width="800" src="/blog/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill_2.webp" alt="Claude output - part 1" />
+    <img width="800" src="/blog/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill_2.webp" alt="Claude output - part 1" />
 </p>
 
 <p align="center">
-    <img width="800" src="/blog/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill_3.webp" alt="Claude output - part 2" />
+    <img width="800" src="/blog/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill_3.webp" alt="Claude output - part 2" />
 </p>
 
 <br />
@@ -90,15 +90,15 @@ And then I said: "Ship it".
 Only to come back to this working app:
 
 <p align="center">
-    <img width="800" src="/blog/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill_4.webp" alt="Working app - tab 1" />
+    <img width="800" src="/blog/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill_4.webp" alt="Working app - tab 1" />
 </p>
 
 <p align="center">
-    <img width="800" src="/blog/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill_5.webp" alt="Working app - tab 2" />
+    <img width="800" src="/blog/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill_5.webp" alt="Working app - tab 2" />
 </p>
 
 <p align="center">
-    <img width="800" src="/blog/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill_6.webp" alt="Working app - tab 3" />
+    <img width="800" src="/blog/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill/2026-01-27-how-i-turned-days-of-developer-training-into-a-skill_6.webp" alt="Working app - tab 3" />
 </p>
 
 <br />

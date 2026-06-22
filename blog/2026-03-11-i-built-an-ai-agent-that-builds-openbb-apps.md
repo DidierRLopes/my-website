@@ -2,7 +2,7 @@
 slug: i-built-an-ai-agent-that-builds-openbb-apps
 title: I built an AI Agent that builds OpenBB Apps, from inside OpenBB
 date: 2026-03-11
-image: /blog/2026-03-11-i-built-an-ai-agent-that-builds-openbb-apps.webp
+image: /blog/2026-03-11-i-built-an-ai-agent-that-builds-openbb-apps/2026-03-11-i-built-an-ai-agent-that-builds-openbb-apps.webp
 tags:
 - ai
 - agents
@@ -19,7 +19,7 @@ Software that builds itself over time is closer than you think.
 I've been building OpenBB apps for a while now.
 
 <p align="center">
-    <img width="800" src="/blog/2026-03-11-i-built-an-ai-agent-that-builds-openbb-apps_1.webp" alt="OpenBB Workspace Multiple Applications View" />
+    <img width="800" src="/blog/2026-03-11-i-built-an-ai-agent-that-builds-openbb-apps/2026-03-11-i-built-an-ai-agent-that-builds-openbb-apps_1.webp" alt="OpenBB Workspace Multiple Applications View" />
 </p>
 
 <br />
@@ -55,7 +55,7 @@ That last step was the key, it closed the feedback loop. The agent could actuall
 I made this [available through skills.sh](https://skills.sh/openbb-finance/backends-for-openbb/openbb-app-builder) so anyone could install it.
 
 <p align="center">
-    <img width="800" src="/blog/2026-03-11-i-built-an-ai-agent-that-builds-openbb-apps_2.webp" alt="OpenBB App Builder skill on skills.sh" />
+    <img width="800" src="/blog/2026-03-11-i-built-an-ai-agent-that-builds-openbb-apps/2026-03-11-i-built-an-ai-agent-that-builds-openbb-apps_2.webp" alt="OpenBB App Builder skill on skills.sh" />
 </p>
 
 <br />
@@ -63,7 +63,7 @@ I made this [available through skills.sh](https://skills.sh/openbb-finance/backe
 And it worked great. But all of this still happened outside of the workspace, which was unavoidable given that the app was running locally.
 
 <p align="center">
-    <img width="500" src="/blog/2026-03-11-i-built-an-ai-agent-that-builds-openbb-apps_3.webp" alt="Right meme" />
+    <img width="500" src="/blog/2026-03-11-i-built-an-ai-agent-that-builds-openbb-apps/2026-03-11-i-built-an-ai-agent-that-builds-openbb-apps_3.webp" alt="Right meme" />
 </p>
 
 <br />
@@ -79,7 +79,7 @@ So the only question remaining was:
 And it turns out it can, I open sourced it [here](https://github.com/DidierRLopes/openbb-app-builder-agent).
 
 <p align="center">
-    <img width="800" src="/blog/2026-03-11-i-built-an-ai-agent-that-builds-openbb-apps_4.webp" alt="OpenBB App Builder Agent architecture" />
+    <img width="800" src="/blog/2026-03-11-i-built-an-ai-agent-that-builds-openbb-apps/2026-03-11-i-built-an-ai-agent-that-builds-openbb-apps_4.webp" alt="OpenBB App Builder Agent architecture" />
 </p>
 
 <br />

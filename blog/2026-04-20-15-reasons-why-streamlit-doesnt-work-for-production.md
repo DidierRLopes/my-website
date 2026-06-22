@@ -2,7 +2,7 @@
 slug: 15-reasons-why-streamlit-doesnt-work-for-production
 title: "15 reasons why Streamlit doesn't work for production"
 date: 2026-04-20
-image: /blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production.webp
+image: /blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production.webp
 tags:
 - openbb
 - streamlit
@@ -37,7 +37,7 @@ The pipeline takes raw alt data signals from different vendors (Second Measure c
 <br />
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_1.webp" alt="Samsung 65 inch QLED 4K Smart TV classification into GICS taxonomy" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_1.webp" alt="Samsung 65 inch QLED 4K Smart TV classification into GICS taxonomy" />
 </p>
 
 - "Rolex Submariner Date luxury Swiss automatic dive watch" lands in Consumer Discretionary > Luxury Goods > Watches. All 138 signals get classified in about five seconds.
@@ -45,7 +45,7 @@ The pipeline takes raw alt data signals from different vendors (Second Measure c
 <br />
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_2.webp" alt="Rolex Submariner Date classification into GICS taxonomy" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_2.webp" alt="Rolex Submariner Date classification into GICS taxonomy" />
 </p>
 
 The dashboard sits on top of that output.
@@ -67,11 +67,11 @@ Streamlit's execution part is the one that can be most frustrating. Every intera
 We've all seen these guys:
 
 <p align="center">
-    <img width="300" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_3.webp" alt="Streamlit Running spinner" />
+    <img width="300" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_3.webp" alt="Streamlit Running spinner" />
 </p>
 
 <p align="center">
-    <img width="300" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_4.webp" alt="Streamlit Running spinner with bicycle" />
+    <img width="300" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_4.webp" alt="Streamlit Running spinner with bicycle" />
 </p>
 
 You end up having to write extra defensive code to avoid it - e.g. caching every query so an unrelated widget doesn't re-fetch a million rows from Snowflake because you touched a dropdown.
@@ -83,7 +83,7 @@ E.g. changing the Sector Hierarchy sector parameter to "Communication Services" 
 But note that GICS Sector Distribution remains the same.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_5.webp" alt="OpenBB independent widget refresh showing Sector Hierarchy update" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_5.webp" alt="OpenBB independent widget refresh showing Sector Hierarchy update" />
 </p>
 
 <br />
@@ -97,7 +97,7 @@ Whenever we have demos with clients that are technical the thing that I keep rep
 Look at how I like to define my widgets.json spec, right next to the API endpoint.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_6.webp" alt="widgets.json spec defined alongside the API endpoint" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_6.webp" alt="widgets.json spec defined alongside the API endpoint" />
 </p>
 
 <br />
@@ -125,7 +125,7 @@ Easy. The user has control over that configuration. Here's a simple markdown wid
 <br />
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_7.webp" alt="OpenBB configurable refresh modes with stale indicators and run buttons" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_7.webp" alt="OpenBB configurable refresh modes with stale indicators and run buttons" />
 </p>
 
 <br />
@@ -141,7 +141,7 @@ You have to build those behaviors yourself with reruns, timers, and manual state
 In Streamlit, filters live in a sidebar, the script re-runs on every change, and you wire up which components react to which filter by hand.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_8.webp" alt="Streamlit sidebar with filters" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_8.webp" alt="Streamlit sidebar with filters" />
 </p>
 
 <br />
@@ -151,7 +151,7 @@ How am I supposed to know what filters update the data I'm seeing?
 In OpenBB, parameter groups are declarative. E.g. Group 3 is the brands filter and these two widgets share it. Change the brand dropdown on any of these 2 widgets and every grouped widget updates.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_9.webp" alt="OpenBB declarative parameter groups linking widgets together" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_9.webp" alt="OpenBB declarative parameter groups linking widgets together" />
 </p>
 
 <br />
@@ -165,7 +165,7 @@ And it's waaaaay more clean.
 Streamlit gives you *st.dataframe*, *st.bar_chart*, and room for Plotly. Table formatting is limited, and anything interactive beyond sorting and basic filtering is a custom component or a JavaScript bridge.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_10.webp" alt="Streamlit limited data visualization options" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_10.webp" alt="Streamlit limited data visualization options" />
 </p>
 
 <br />
@@ -177,7 +177,7 @@ This is actually one of my main issues with most vibe coded apps. Unless you are
 OpenBB is highly optimized for end user.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_11.webp" alt="OpenBB AGgrid with advanced table features for end users" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_11.webp" alt="OpenBB AGgrid with advanced table features for end users" />
 </p>
 
 <br />
@@ -201,7 +201,7 @@ OpenBB is built on this idea. The developer ships the individual widgets (which 
 Here are 2 views of the exact same dashboard (based on 2 different points of views from the user):
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_12.webp" alt="Dashboard customization view 1" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_12.webp" alt="Dashboard customization view 1" />
 </p>
 
 <br />
@@ -209,7 +209,7 @@ Here are 2 views of the exact same dashboard (based on 2 different points of vie
 It's literally the same data, just organized differently - according to the user's preferences.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_13.webp" alt="Dashboard customization view 2 with different layout" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_13.webp" alt="Dashboard customization view 2 with different layout" />
 </p>
 
 <br />
@@ -225,7 +225,7 @@ This is extremely cumbersome - not only that but it can lead to errors happening
 In OpenBB, you just need to have the new endpoint for the data you want and the associated widget JSON spec so that you can add it to your dashboard.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_14.webp" alt="OpenBB widget library for adding new widgets to dashboard" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_14.webp" alt="OpenBB widget library for adding new widgets to dashboard" />
 </p>
 
 <br />
@@ -233,7 +233,7 @@ In OpenBB, you just need to have the new endpoint for the data you want and the 
 And voila.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_15.webp" alt="New widgets added to the dashboard" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_15.webp" alt="New widgets added to the dashboard" />
 </p>
 
 <br />
@@ -245,7 +245,7 @@ Now the two widgets appear next to my original dashboard.
 And the way to get this across your team is literally 2 clicks???
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_16.webp" alt="Share and Save App dialog with two click sharing" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_16.webp" alt="Share and Save App dialog with two click sharing" />
 </p>
 
 <br />
@@ -253,7 +253,7 @@ And the way to get this across your team is literally 2 clicks???
 If I click on "Share" then I can share this specific dashboard with my team - which they can duplicate and work on top of.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_17.webp" alt="Shared dashboard view accessible by team" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_17.webp" alt="Shared dashboard view accessible by team" />
 </p>
 
 <br />
@@ -261,7 +261,7 @@ If I click on "Share" then I can share this specific dashboard with my team - wh
 If I click on "Save App" then I create a new template dashboard that I can click and go into every time.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_18.webp" alt="Save App dialog to create template dashboard" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_18.webp" alt="Save App dialog to create template dashboard" />
 </p>
 
 <br />
@@ -269,7 +269,7 @@ If I click on "Save App" then I create a new template dashboard that I can click
 As seen here as "Saved App", where we OpenBB store your apps.json.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_19.webp" alt="App listing showing saved app in workspace" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_19.webp" alt="App listing showing saved app in workspace" />
 </p>
 
 <br />
@@ -277,7 +277,7 @@ As seen here as "Saved App", where we OpenBB store your apps.json.
 But the cool thing is that I can share this app template to anyone on my team!
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_20.webp" alt="Share app template with team members" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_20.webp" alt="Share app template with team members" />
 </p>
 
 <br />
@@ -297,7 +297,7 @@ So continuing from the example above on OpenBB, even though I shared this app wi
 On that second layer, we can control access via the user's profile individually.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_21.webp" alt="User profile access control settings" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_21.webp" alt="User profile access control settings" />
 </p>
 
 <br />
@@ -305,7 +305,7 @@ On that second layer, we can control access via the user's profile individually.
 Or we can set a role that the user belongs to (e.g. Analyst Pod 2)
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_22.webp" alt="Role-based access control with Analyst Pod 2 role" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_22.webp" alt="Role-based access control with Analyst Pod 2 role" />
 </p>
 
 <br />
@@ -313,7 +313,7 @@ Or we can set a role that the user belongs to (e.g. Analyst Pod 2)
 And then manage the permissions associated with that role individually.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_23.webp" alt="Managing role permissions at granular level" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_23.webp" alt="Managing role permissions at granular level" />
 </p>
 
 <br />
@@ -325,7 +325,7 @@ OpenBB Workspace permissions go down to the widget. You can give the alt data te
 Same dashboard, different views depending on who's looking at it.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_24.webp" alt="Same dashboard with different views based on RBAC permissions" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_24.webp" alt="Same dashboard with different views based on RBAC permissions" />
 </p>
 
 <br />
@@ -339,7 +339,7 @@ I was thinking of how I can describe this - and the best I came up with is that 
 Look at these different user apps and how their theme/branding differ.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_25.webp" alt="Different vibe coded apps with inconsistent themes and branding" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_25.webp" alt="Different vibe coded apps with inconsistent themes and branding" />
 </p>
 
 <br />
@@ -347,7 +347,7 @@ Look at these different user apps and how their theme/branding differ.
 Now compare that with [different solutions built on top of the workspace](https://openbb.co/solutions/app-showcase/) where the theme defaults to OpenBB's one.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_26.webp" alt="OpenBB solutions with unified default theme" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_26.webp" alt="OpenBB solutions with unified default theme" />
 </p>
 
 <br />
@@ -355,15 +355,15 @@ Now compare that with [different solutions built on top of the workspace](https:
 But if you wanted, you can literally change the theme to your company's one and even add watermarks!!!
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_27.webp" alt="Custom company theme with watermark in OpenBB" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_27.webp" alt="Custom company theme with watermark in OpenBB" />
 </p>
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_28.webp" alt="Another custom company theme in OpenBB" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_28.webp" alt="Another custom company theme in OpenBB" />
 </p>
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_29.webp" alt="Third custom company theme in OpenBB" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_29.webp" alt="Third custom company theme in OpenBB" />
 </p>
 
 <br />
@@ -383,7 +383,7 @@ In OpenBB Workspace, every app lives in one interface next to your data sources,
 I mean look at this view:
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_30.webp" alt="OpenBB Workspace with all apps and data sources in one interface" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_30.webp" alt="OpenBB Workspace with all apps and data sources in one interface" />
 </p>
 
 <br />
@@ -393,7 +393,7 @@ I mean look at this view:
 You can find it in the Excel formula directly.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_31.webp" alt="Excel formula integration in OpenBB" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_31.webp" alt="Excel formula integration in OpenBB" />
 </p>
 
 <br />
@@ -401,11 +401,11 @@ You can find it in the Excel formula directly.
 Which gives you the formula with and without explicit parameters.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_32.webp" alt="Excel formula with and without explicit parameters" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_32.webp" alt="Excel formula with and without explicit parameters" />
 </p>
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_33.webp" alt="OpenBB Excel add-in plugin" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_33.webp" alt="OpenBB Excel add-in plugin" />
 </p>
 
 <br />
@@ -427,7 +427,7 @@ Every OpenBB Workspace app comes with a default AI copilot that has access to al
 E.g. the following prompt - it shows the reasoning which you can store internally and everything remains internal. But also cites the widget used so it's grounded with a specific dataset which you can validate.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_34.webp" alt="OpenBB AI copilot with reasoning and widget citations" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_34.webp" alt="OpenBB AI copilot with reasoning and widget citations" />
 </p>
 
 <br />
@@ -437,11 +437,11 @@ E.g. the following prompt - it shows the reasoning which you can store internall
 Everything produced by the agent can be added to the dashboard as static artifact - again, maintaining the belief that firms should own their own context.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_35.webp" alt="AI generated artifact added to dashboard" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_35.webp" alt="AI generated artifact added to dashboard" />
 </p>
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_36.webp" alt="AI artifact integrated into dashboard view" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_36.webp" alt="AI artifact integrated into dashboard view" />
 </p>
 
 <br />
@@ -451,7 +451,7 @@ And not just that, but the same way we think of developers adding widgets (i.e. 
 Here are some examples: [https://github.com/OpenBB-finance/agents-for-openbb](https://github.com/OpenBB-finance/agents-for-openbb)
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_37.webp" alt="Custom agents integrated into OpenBB Workspace" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_37.webp" alt="Custom agents integrated into OpenBB Workspace" />
 </p>
 
 <br />
@@ -459,7 +459,7 @@ Here are some examples: [https://github.com/OpenBB-finance/agents-for-openbb](ht
 But you can also set default prompts based on the app you are opening to improve UI/UX to the end user. And you can also go full screen and just get work done with the AI agent - grounded with the underlying dashboard data.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_38.webp" alt="Full screen AI agent grounded with dashboard data" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_38.webp" alt="Full screen AI agent grounded with dashboard data" />
 </p>
 
 <br />
@@ -479,7 +479,7 @@ Apps built on OpenBB do not need to be Python, they can be any language.
 Here's an example of a [Polymarket app](https://github.com/jose-donato/openbb-polymarket) written in TypeScript.
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_39.webp" alt="Polymarket app built in TypeScript running on OpenBB Workspace" />
+    <img width="800" src="/blog/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production/2026-04-20-15-reasons-why-streamlit-doesnt-work-for-production_39.webp" alt="Polymarket app built in TypeScript running on OpenBB Workspace" />
 </p>
 
 <br />

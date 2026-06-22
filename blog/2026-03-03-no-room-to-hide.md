@@ -2,7 +2,7 @@
 slug: no-room-to-hide
 title: No Room to Hide
 date: 2026-03-03
-image: /blog/2026-03-03-no-room-to-hide.webp
+image: /blog/2026-03-03-no-room-to-hide/2026-03-03-no-room-to-hide.webp
 tags:
 - ai
 - startups

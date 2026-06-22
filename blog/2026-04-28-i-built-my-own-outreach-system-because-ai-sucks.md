@@ -2,7 +2,7 @@
 slug: i-built-my-own-outreach-system-because-ai-sucks
 title: "I built my own outreach system because AI sucks"
 date: 2026-04-28
-image: /blog/2026-04-28-i-built-my-own-outreach-system-because-ai-sucks.webp
+image: /blog/2026-04-28-i-built-my-own-outreach-system-because-ai-sucks/2026-04-28-i-built-my-own-outreach-system-because-ai-sucks.webp
 tags:
 - ai
 - outreach
@@ -38,7 +38,7 @@ The purpose isn’t to give you a finalized receipt, but share something that wo
 Before we get into this, let me just say that AI sucks at outreach.
 
 <p align="center">
-    <img width="428" src="/blog/2026-04-28-i-built-my-own-outreach-system-because-ai-sucks_1.webp" alt="I built my own outreach system because AI sucks" />
+    <img width="428" src="/blog/2026-04-28-i-built-my-own-outreach-system-because-ai-sucks/2026-04-28-i-built-my-own-outreach-system-because-ai-sucks_1.webp" alt="I built my own outreach system because AI sucks" />
 </p>
 
 <br />
@@ -56,7 +56,7 @@ So, in this process, I used a LOT of AI. But it doesn’t touch anything related
 Here’s what the system looks like end-to-end:
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-28-i-built-my-own-outreach-system-because-ai-sucks_2.webp" alt="I built my own outreach system because AI sucks" />
+    <img width="800" src="/blog/2026-04-28-i-built-my-own-outreach-system-because-ai-sucks/2026-04-28-i-built-my-own-outreach-system-because-ai-sucks_2.webp" alt="I built my own outreach system because AI sucks" />
 </p>
 
 <br />
@@ -114,7 +114,7 @@ Here’s the things I’ve added:
 At the end, the page looked somewhat like this:
 
 <p align="center">
-    <img width="800" src="/blog/2026-04-28-i-built-my-own-outreach-system-because-ai-sucks.webp" alt="I built my own outreach system because AI sucks" />
+    <img width="800" src="/blog/2026-04-28-i-built-my-own-outreach-system-because-ai-sucks/2026-04-28-i-built-my-own-outreach-system-because-ai-sucks.webp" alt="I built my own outreach system because AI sucks" />
 </p>
 
 <br />

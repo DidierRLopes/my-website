@@ -2,7 +2,7 @@
 slug: time-series-crossvalidation-for-nn
 title: Time-Series CrossValidation for NN
 date: 2021-09-04
-image: /blog/2021-09-04-time-series-crossvalidation-for-nn.webp
+image: /blog/2021-09-04-time-series-crossvalidation-for-nn/2021-09-04-time-series-crossvalidation-for-nn.webp
 tags:
 - python
 - data-science
@@ -17,7 +17,7 @@ description: This blog post discusses the creation of a Python module for splitt
 
 
 <p align="center">
-    <img width="600" src="/blog/2021-09-04-time-series-crossvalidation-for-nn.webp"/>
+    <img width="600" src="/blog/2021-09-04-time-series-crossvalidation-for-nn/2021-09-04-time-series-crossvalidation-for-nn.webp"/>
 </p>
 
 <br />
@@ -53,24 +53,24 @@ timeSeries = array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
 ## Split Train
 
 ```python
-from tsxv.splitTrain import 
-split_train, 
+from tsxv.splitTrain import
+split_train,
 split_train_variableInput
 X, y = split_train(timeSeries, n_steps_input=4, n_steps_forecast=3, n_steps_jump=2)
 X, y = split_train_variableInput(timeSeries, minSamplesTrain=10, n_steps_forecast=3, n_steps_jump=3)
 ```
 
 <div className="flex justify-center gap-2">
-  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn_1.webp" width="50%" />
-  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn_2.webp" width="50%" /> 
+  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn/2021-09-04-time-series-crossvalidation-for-nn_1.webp" width="50%" />
+  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn/2021-09-04-time-series-crossvalidation-for-nn_2.webp" width="50%" />
 </div>
 
 ## Split Train Val
 
 ```python
-from tsxv.splitTrainVal import 
-split_train_val_forwardChaining, 
-split_train_val_kFold, 
+from tsxv.splitTrainVal import
+split_train_val_forwardChaining,
+split_train_val_kFold,
 split_train_val_groupKFold
 X, y, Xcv, ycv = split_train_val_forwardChaining(timeSeries, n_steps_input=4, n_steps_forecast=3, n_steps_jump=2)
 X, y, Xcv, ycv = split_train_val_kFold(timeSeries, n_steps_input=4, n_steps_forecast=3, n_steps_jump=2)
@@ -78,18 +78,18 @@ X, y, Xcv, ycv = split_train_val_groupKFold(timeSeries, n_steps_input=4, n_steps
 ```
 
 <div className="flex justify-center gap-2">
-  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn_3.webp" width="50%" />
-  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn_4.webp" width="50%" /> 
+  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn/2021-09-04-time-series-crossvalidation-for-nn_3.webp" width="50%" />
+  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn/2021-09-04-time-series-crossvalidation-for-nn_4.webp" width="50%" />
 </div>
 
 <br />
 
-![image](/blog/2021-09-04-time-series-crossvalidation-for-nn_5.webp)
+![image](/blog/2021-09-04-time-series-crossvalidation-for-nn/2021-09-04-time-series-crossvalidation-for-nn_5.webp)
 
 ## Split Train Val Test
 
 ```python
-from tsxv.splitTrainValTest import split_train_val_test_forwardChaining, 
+from tsxv.splitTrainValTest import split_train_val_test_forwardChaining,
 split_train_val_test_kFold,
 split_train_val_test_groupKFold
 X, y, Xcv, ycv, Xtest, ytest = split_train_val_test_forwardChaining(timeSeries, n_steps_input=4, n_steps_forecast=3, n_steps_jump=2)
@@ -98,13 +98,13 @@ X, y, Xcv, ycv, Xtest, ytest = split_train_val_test_groupKFold(timeSeries, n_ste
 ```
 
 <div className="flex justify-center gap-2">
-  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn_6.webp" width="50%" />
-  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn_7.webp" width="50%" /> 
+  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn/2021-09-04-time-series-crossvalidation-for-nn_6.webp" width="50%" />
+  <img src="/blog/2021-09-04-time-series-crossvalidation-for-nn/2021-09-04-time-series-crossvalidation-for-nn_7.webp" width="50%" />
 </div>
 
 <br />
 
-![image](/blog/2021-09-04-time-series-crossvalidation-for-nn_8.webp)
+![image](/blog/2021-09-04-time-series-crossvalidation-for-nn/2021-09-04-time-series-crossvalidation-for-nn_8.webp)
 
 This module has not only been used for my friends’ thesis but also for a Data Science company and [Gamestonk Terminal](/blog/gamestonk-terminal-the-next-best-thing-after-bloomberg-terminal), that I know of :)
 

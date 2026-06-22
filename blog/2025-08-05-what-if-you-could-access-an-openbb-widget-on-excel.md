@@ -2,7 +2,7 @@
 slug: what-if-you-could-access-an-openbb-widget-on-excel
 title: What if... you could access an OpenBB widget on Excel?
 date: 2025-08-05
-image: /blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel.webp
+image: /blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel.webp
 tags:
   - openbb
   - excel
@@ -15,8 +15,7 @@ hideSidebar: true
 ---
 
 <p align="center">
-    <img width="600" src="/blog/
-    2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel.webp" />
+    <img width="600" src="/blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel.webp" />
 </p>
 
 This post introduces a new integration that allows users to embed dynamic OpenBB widgets directly into Excel.
@@ -42,8 +41,7 @@ After adding an App to OpenBB, you can create a dashboard to fit your exact need
 A specific widget may look like this:
 
 <p align="center">
-    <img width="600" src="/blog/
-    2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_1.webp" />
+    <img width="600" src="/blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_1.webp" />
 </p>
 
 Where in red you have the parameters that can be modified on the frontend, and in green you have the data associated with it.
@@ -53,8 +51,7 @@ Now, we've had an Excel Add-in for some time that allows users to retrieve data 
 So you could do something like this:
 
 <p align="center">
-    <img width="600" src="/blog/
-    2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_2.webp" />
+    <img width="600" src="/blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_2.webp" />
 </p>
 
 This is great!
@@ -86,8 +83,7 @@ Raw & unfiltered video below:
 Here’s what the POC entailed in a nutshell:
 
 <p align="center">
-    <img width="600" src="/blog/
-    2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_3.webp" />
+    <img width="600" src="/blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_3.webp" />
 </p>
 
 I created a distinction between "**implicit**" and "**explicit**".
@@ -97,15 +93,13 @@ I created a distinction between "**implicit**" and "**explicit**".
 This is where the "**explicit**" concept comes in, mimicking an OpenBB widget.
 
 <p align="center">
-    <img width="600" src="/blog/
-    2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_4.webp" />
+    <img width="600" src="/blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_4.webp" />
 </p>
 
 So, when you copy-paste into Excel, this is what you get out-of-the-box.
 
 <p align="center">
-    <img width="600" src="/blog/
-    2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_5.webp" />
+    <img width="600" src="/blog/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel/2025-08-05-what-if-you-could-access-an-openbb-widget-on-excel_5.webp" />
 </p>
 
 Notice the analogy with an OpenBB widget, users can modify parameters and have the latest data fetched automatically. All achieved programmatically.

@@ -2,7 +2,7 @@
 slug: learn-how-to-let-an-agent-build-your-dream-app-whilst-you-sleep
 title: Learn how to let an agent build your dream app whilst you sleep
 date: 2026-02-09
-image: /blog/2026-02-09-learn-how-to-let-an-agent-build-your-dream-app.webp
+image: /blog/2026-02-09-learn-how-to-let-an-agent-build-your-dream-app/2026-02-09-learn-how-to-let-an-agent-build-your-dream-app.webp
 tags:
 - ai
 - claude
@@ -65,11 +65,11 @@ Sooooo, I detailed a plan of my vision for a simple Pokemon website and let the 
 **AND HOLYSHIT.**
 
 <p align="center">
-    <img width="800" src="/blog/2026-02-09-learn-how-to-let-an-agent-build-your-dream-app_1.webp" alt="Pokemon vault app - card collection view" />
+    <img width="800" src="/blog/2026-02-09-learn-how-to-let-an-agent-build-your-dream-app/2026-02-09-learn-how-to-let-an-agent-build-your-dream-app_1.webp" alt="Pokemon vault app - card collection view" />
 </p>
 
 <p align="center">
-    <img width="800" src="/blog/2026-02-09-learn-how-to-let-an-agent-build-your-dream-app_2.webp" alt="Pokemon vault app - set overview" />
+    <img width="800" src="/blog/2026-02-09-learn-how-to-let-an-agent-build-your-dream-app/2026-02-09-learn-how-to-let-an-agent-build-your-dream-app_2.webp" alt="Pokemon vault app - set overview" />
 </p>
 
 <br />
@@ -125,7 +125,7 @@ If you are in the laptop you can actually spin up an agent in parallel to do the
 You can even use other models to do this - on the image below I'm using Claude on the left and Gemini (via Antigravity) on the right. Both controlling the browser.
 
 <p align="center">
-    <img width="800" src="/blog/2026-02-09-learn-how-to-let-an-agent-build-your-dream-app_3.webp" alt="Multiple agents working in parallel - Claude and Gemini" />
+    <img width="800" src="/blog/2026-02-09-learn-how-to-let-an-agent-build-your-dream-app/2026-02-09-learn-how-to-let-an-agent-build-your-dream-app_3.webp" alt="Multiple agents working in parallel - Claude and Gemini" />
 </p>
 
 <br />

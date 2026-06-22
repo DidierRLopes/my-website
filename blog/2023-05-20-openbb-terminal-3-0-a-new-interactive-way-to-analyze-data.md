@@ -2,7 +2,7 @@
 slug: openbb-terminal-3-0-a-new-interactive-way-to-analyze-data
 title: OpenBB Terminal 3.0 - a new interactive way to analyze data
 date: 2023-05-20
-image: /blog/2023-05-20-openbb-terminal-3-0-a-new-interactive-way-to-analyze-data.webp
+image: /blog/2023-05-20-openbb-terminal-3-0-a-new-interactive-way-to-analyze-data/2023-05-20-openbb-terminal-3-0-a-new-interactive-way-to-analyze-data.webp
 tags:
 - openbb
 - openbb-terminal
@@ -17,7 +17,7 @@ description: A game-changing update to OpenBB Terminal, introducing interactive 
 
 
 <p align="center">
-    <img width="600" src="/blog/2023-05-20-openbb-terminal-3-0-a-new-interactive-way-to-analyze-data.webp"/>
+    <img width="600" src="/blog/2023-05-20-openbb-terminal-3-0-a-new-interactive-way-to-analyze-data/2023-05-20-openbb-terminal-3-0-a-new-interactive-way-to-analyze-data.webp"/>
 </p>
 
 <br />

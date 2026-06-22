@@ -2,7 +2,7 @@
 slug: the-year-of-consolidation
 title: "2026: The Year of Consolidation"
 date: 2026-01-23
-image: /blog/2026-01-23-the-year-of-consolidation.webp
+image: /blog/2026-01-23-the-year-of-consolidation/2026-01-23-the-year-of-consolidation.webp
 tags:
 - ai
 - enterprise
@@ -102,7 +102,7 @@ Every tool built on a free tier API that's about to change pricing? **Debt**.
 Every widget that only one person understands? **Debt**.
 
 <p align="center">
-    <img width="600" src="/blog/2026-01-23-the-year-of-consolidation_1.webp" alt="Technical debt tweet" />
+    <img width="600" src="/blog/2026-01-23-the-year-of-consolidation/2026-01-23-the-year-of-consolidation_1.webp" alt="Technical debt tweet" />
 </p>
 
 <br />
@@ -167,7 +167,7 @@ The infrastructure layer that lets you keep building fast - without the Frankens
 The consolidation is coming either way.
 
 <p align="center">
-    <img width="800" src="/blog/2026-01-23-the-year-of-consolidation_2.webp" alt="OpenBB Workspace - Apps" />
+    <img width="800" src="/blog/2026-01-23-the-year-of-consolidation/2026-01-23-the-year-of-consolidation_2.webp" alt="OpenBB Workspace - Apps" />
 </p>
 <p align="center" style={{fontSize: '0.85em', marginTop: '-0.5em'}}>OpenBB Workspace - Apps</p>
 

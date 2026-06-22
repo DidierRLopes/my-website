@@ -1,0 +1,65 @@
+[
+  {
+    "id": "english",
+    "name": "English",
+    "source": "OpenML MNIST 784",
+    "samples": 2500,
+    "mean": 3.022801080342644,
+    "min": 0.2556080965128971,
+    "max": 7.403153248986682
+  },
+  {
+    "id": "mandarin-chinese",
+    "name": "Mandarin Chinese",
+    "source": "Kaggle gpreda/chinese-mnist",
+    "samples": 2500,
+    "mean": 0.721674232145297,
+    "min": 0.12596764268637245,
+    "max": 1.9599841863971108
+  },
+  {
+    "id": "hindi",
+    "name": "Hindi",
+    "source": "Kaggle anurags397/hindi-mnist-data",
+    "samples": 2500,
+    "mean": 4.069547843985481,
+    "min": 0.93100740899729,
+    "max": 8.112504918286836
+  },
+  {
+    "id": "arabic",
+    "name": "Arabic",
+    "source": "Kaggle mloey1/ahdd1",
+    "samples": 2500,
+    "mean": 3.3120094596308256,
+    "min": 0.43443158215731953,
+    "max": 7.890636126741564
+  },
+  {
+    "id": "bengali",
+    "name": "Bengali",
+    "source": "Kaggle wchowdhu/bengali-digits",
+    "samples": 2500,
+    "mean": 4.144932708817193,
+    "min": 0.9729730510329978,
+    "max": 8.348947455975882
+  },
+  {
+    "id": "urdu-persian",
+    "name": "Urdu/Persian",
+    "source": "Kaggle teerathkumar142/urdumnist",
+    "samples": 2500,
+    "mean": 3.497831416348478,
+    "min": 0.8598870500233712,
+    "max": 7.328966408580599
+  },
+  {
+    "id": "telugu",
+    "name": "Telugu",
+    "source": "CMATERdb Telugu numerals",
+    "samples": 2500,
+    "mean": 4.176685801333306,
+    "min": 0.7003164940404005,
+    "max": 7.615004608497117
+  }
+]

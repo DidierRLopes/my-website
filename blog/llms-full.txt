@@ -26944,3 +26944,829 @@ The strongest claim I would make from this first sweep is:
 <br />
 
 The broader lesson is not that long answers are bad. The lesson is that plausible side channels are dangerous. Length can look like care, caution, or helpfulness, so a model can exploit it without producing obviously broken outputs. That is why I find this failure mode more interesting than a toy keyword hack: it looks close to something a real assistant system might accidentally reward.
+
+
+---
+
+---
+slug: 2026-06-27-i-compared-mnist-style-digits-across-languages-mandarin-chinese-was-4x-harder-to-separate
+title: I Compared MNIST-Style Digits Across Languages. Mandarin Chinese Was 4x Harder to Separate
+date: 2026-06-27
+image: /blog/2026-06-21-mnist-style-digit-pca/thumbnail.png
+tags:
+- machine-learning
+- data-science
+- pca
+- mnist
+description: "I compared handwritten digit datasets across different numeral systems, then used PCA to see which ones separate cleanly in two dimensions."
+hideSidebar: true
+draft: true
+---
+
+import React, {useMemo, useState} from 'react';
+
+export const sampleBase = '/blog/2026-06-21-mnist-style-digit-pca/samples';
+
+export const sampleLanguages = [
+  {
+    id: 'english',
+    name: 'English',
+    source: 'OpenML MNIST 784',
+    glyphs: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+    samples: 2500,
+    sampleIndexes: [30, 450, 645, 875, 1169, 1272, 1714, 1791, 2048, 2265],
+  },
+  {
+    id: 'mandarin-chinese',
+    name: 'Mandarin Chinese',
+    source: 'Kaggle gpreda/chinese-mnist',
+    glyphs: ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九'],
+    samples: 2500,
+    sampleIndexes: [218, 308, 593, 900, 1102, 1449, 1633, 1993, 2028, 2392],
+  },
+  {
+    id: 'hindi',
+    name: 'Hindi',
+    source: 'Kaggle anuragss397/hindi-mnist-data',
+    glyphs: ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'],
+    samples: 2500,
+    sampleIndexes: [167, 432, 592, 822, 1189, 1290, 1515, 1941, 2164, 2413],
+  },
+  {
+    id: 'arabic',
+    name: 'Arabic',
+    source: 'Kaggle mloey1/ahdd1',
+    glyphs: ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'],
+    samples: 2500,
+    sampleIndexes: [200, 371, 664, 834, 1222, 1489, 1553, 1762, 2190, 2479],
+  },
+  {
+    id: 'bengali',
+    name: 'Bengali',
+    source: 'Kaggle wchowdhu/bengali-digits',
+    glyphs: ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'],
+    samples: 2500,
+    sampleIndexes: [22, 386, 729, 765, 1143, 1319, 1598, 1772, 2175, 2378],
+  },
+  {
+    id: 'urdu-persian',
+    name: 'Urdu/Persian',
+    source: 'Kaggle teerathkumar142/urdumnist',
+    glyphs: ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'],
+    samples: 2500,
+    sampleIndexes: [4, 324, 659, 772, 1145, 1265, 1720, 1865, 2225, 2498],
+  },
+  {
+    id: 'telugu',
+    name: 'Telugu',
+    source: 'CMATERdb Telugu numerals',
+    glyphs: ['౦', '౧', '౨', '౩', '౪', '౫', '౬', '౭', '౮', '౯'],
+    samples: 2500,
+    sampleIndexes: [38, 499, 518, 825, 1145, 1286, 1705, 1799, 2193, 2277],
+  },
+];
+
+export function DigitSampleSelector() {
+  const [languageId, setLanguageId] = useState('english');
+  const language = useMemo(
+    () => sampleLanguages.find((item) => item.id === languageId) || sampleLanguages[0],
+    [languageId],
+  );
+
+  return (
+    <div style={{
+      border: '1px solid var(--ifm-color-emphasis-300)',
+      borderRadius: 8,
+      padding: 14,
+      margin: '1.5rem 0',
+      background: 'var(--ifm-background-surface-color)',
+    }}>
+      <div style={{
+        display: 'flex',
+        gap: 12,
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+        marginBottom: 12,
+      }}>
+        <label style={{fontWeight: 700}}>
+          Language{' '}
+          <select
+            value={languageId}
+            onChange={(event) => setLanguageId(event.target.value)}
+            style={{
+              marginLeft: 8,
+              padding: '7px 9px',
+              borderRadius: 6,
+              border: '1px solid var(--ifm-color-emphasis-300)',
+              background: 'var(--ifm-background-color)',
+              color: 'var(--ifm-font-color-base)',
+            }}
+          >
+            {sampleLanguages.map((item) => (
+              <option key={item.id} value={item.id}>{item.name}</option>
+            ))}
+          </select>
+        </label>
+        <span style={{fontSize: 13, color: 'var(--ifm-color-emphasis-700)'}}>
+          {language.samples.toLocaleString()} samples · {language.source}
+        </span>
+      </div>
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(5, minmax(0, 1fr))',
+        gap: 10,
+      }}>
+        {language.glyphs.map((glyph, digit) => (
+          <figure
+            key={`${language.id}-${digit}`}
+            style={{
+              margin: 0,
+              padding: 10,
+              border: '1px solid var(--ifm-color-emphasis-200)',
+              borderRadius: 8,
+              textAlign: 'center',
+              background: 'var(--ifm-background-color)',
+              minWidth: 0,
+            }}
+          >
+            <img
+              src={`${sampleBase}/${language.id}-${digit}.webp`}
+              alt={`${language.name} digit ${digit}`}
+              width="72"
+              height="72"
+              style={{imageRendering: 'pixelated', display: 'block', margin: '0 auto 6px'}}
+            />
+            <figcaption style={{fontSize: 13, lineHeight: 1.25}}>
+              <strong>{glyph}</strong> ({digit})
+              <br />
+              <span style={{color: 'var(--ifm-color-emphasis-700)'}}>
+                sample #{language.sampleIndexes[digit]}
+              </span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export function PcaPipelineDiagram() {
+  const zoomPatch = [
+    [0, 0, 0, 1, 1, 0],
+    [0, 0, 0, 0, 0, 5],
+    [0, 0, 2, 18, 68, 150],
+    [1, 0, 17, 131, 229, 255],
+    [0, 8, 133, 242, 248, 246],
+    [7, 63, 236, 255, 224, 183],
+  ];
+
+  const rowColors = ['#60a5fa', '#34d399', '#f59e0b', '#f472b6'];
+  const vectorSegments = zoomPatch.slice(0, 4).map((values, rowOffset) => {
+    const rowNumber = 12 + rowOffset;
+    const rowStart = rowNumber * 28;
+    const start = rowNumber * 28 + 7;
+    return {
+      rowNumber,
+      rowStart,
+      rowEnd: rowStart + 28,
+      start,
+      end: start + values.length,
+      range: `x[${start}:${start + values.length}]`,
+      values,
+      color: rowColors[rowOffset],
+    };
+  });
+
+  const appendGroups = [
+    {label: 'rows 0-11', range: 'x[0:336]', summary: '12 rows x 28 values'},
+    ...vectorSegments.map((segment) => ({
+      label: `row ${segment.rowNumber}`,
+      range: `x[${segment.rowStart}:${segment.rowEnd}]`,
+      summary: '28 values',
+      segment,
+    })),
+    {label: 'rows 16-27', range: 'x[448:784]', summary: '12 rows x 28 values'},
+  ];
+
+  const sampleMatrixRows = [
+    {
+      sample: '#30',
+      digit: '0',
+      image: 'english-0.webp',
+      start: [0, 0, 0, 0, 0, 0],
+      end: [0, 0, 0, 0, 0, 0],
+    },
+    {
+      sample: '#450',
+      digit: '1',
+      image: 'english-1.webp',
+      start: [0, 0, 0, 0, 0, 0],
+      end: [0, 0, 0, 0, 0, 0],
+    },
+    {
+      sample: '#645',
+      digit: '2',
+      image: 'english-2.webp',
+      start: [0, 0, 0, 0, 0, 0],
+      end: [0, 0, 0, 0, 0, 0],
+      highlight: true,
+    },
+  ];
+
+  const projectionRows = [
+    {sample: '#30', digit: '0', color: '#1f77b4', pc1: 'z[30, 0]', pc2: 'z[30, 1]', x: 104, y: 96},
+    {sample: '#450', digit: '1', color: '#ff7f0e', pc1: 'z[450, 0]', pc2: 'z[450, 1]', x: 174, y: 124},
+    {sample: '#645', digit: '2', color: '#2ca02c', pc1: 'z[645, 0]', pc2: 'z[645, 1]', x: 212, y: 82, highlight: true},
+  ];
+
+  const panelStyle = {
+    border: '1px solid var(--ifm-color-emphasis-300)',
+    borderRadius: 8,
+    padding: 14,
+    background: 'var(--ifm-background-surface-color)',
+  };
+
+  const labelStyle = {
+    fontSize: 11,
+    fontWeight: 750,
+    color: 'var(--ifm-color-emphasis-800)',
+    marginBottom: 8,
+    textTransform: 'uppercase',
+  };
+
+  const stepBadgeStyle = {
+    display: 'inline-grid',
+    placeItems: 'center',
+    width: 22,
+    height: 22,
+    borderRadius: 999,
+    marginRight: 8,
+    background: 'var(--ifm-color-primary)',
+    color: '#fff',
+    fontSize: 12,
+    fontWeight: 800,
+  };
+
+  const miniTitleStyle = {
+    fontSize: 12,
+    fontWeight: 750,
+    color: 'var(--ifm-color-emphasis-700)',
+    marginBottom: 8,
+  };
+
+  const monoStyle = {
+    fontFamily: 'var(--ifm-font-family-monospace)',
+    fontSize: 12,
+    lineHeight: 1.45,
+  };
+
+  const arrowStyle = {
+    display: 'grid',
+    placeItems: 'center',
+    width: 36,
+    height: 36,
+    borderRadius: 999,
+    border: '1px solid var(--ifm-color-emphasis-300)',
+    color: 'var(--ifm-color-primary)',
+    fontWeight: 900,
+    margin: '0 auto',
+  };
+
+  const renderPixelCell = (value, key, size = 22) => (
+    <span
+      key={key}
+      style={{
+        width: size,
+        height: size,
+        display: 'grid',
+        placeItems: 'center',
+        border: '1px solid var(--ifm-color-emphasis-300)',
+        borderRadius: 4,
+        background: `rgb(${value}, ${value}, ${value})`,
+        color: value > 150 ? '#111' : '#fff',
+        fontFamily: 'var(--ifm-font-family-monospace)',
+        fontSize: size > 18 ? 10 : 0,
+        fontWeight: 700,
+      }}
+    >
+      {size > 18 ? value : ''}
+    </span>
+  );
+
+  const renderOmittedBlock = (label, key) => (
+    <span
+      key={key}
+      style={{
+        height: 22,
+        minWidth: 74,
+        display: 'grid',
+        placeItems: 'center',
+        border: '1px dashed var(--ifm-color-emphasis-300)',
+        borderRadius: 4,
+        color: 'var(--ifm-color-emphasis-600)',
+        fontFamily: 'var(--ifm-font-family-monospace)',
+        fontSize: 10,
+        background: 'var(--ifm-color-emphasis-100)',
+      }}
+    >
+      {label}
+    </span>
+  );
+
+  const renderIntensityStrip = (values, keyPrefix) => (
+    <div style={{display: 'grid', gridTemplateColumns: `repeat(${values.length}, 1fr)`, gap: 2, minWidth: 0}}>
+      {values.map((value, index) => (
+        <span
+          key={`${keyPrefix}-${index}`}
+          style={{
+            height: 24,
+            display: 'grid',
+            placeItems: 'center',
+            borderRadius: 3,
+            background: `rgb(${value}, ${value}, ${value})`,
+            color: value > 150 ? '#111' : '#fff',
+            border: '1px solid var(--ifm-color-emphasis-300)',
+            fontFamily: 'var(--ifm-font-family-monospace)',
+            fontSize: 9,
+            fontWeight: 700,
+          }}
+        >
+          {value}
+        </span>
+      ))}
+    </div>
+  );
+
+  return (
+    <div style={{display: 'grid', gap: 12, margin: '1.5rem 0'}}>
+      <div style={panelStyle}>
+        <div style={labelStyle}><span style={stepBadgeStyle}>1</span>{' '}Start with the image</div>
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 14, alignItems: 'center'}}>
+          <div style={{position: 'relative', width: 126, height: 126, margin: '0 auto'}}>
+            <img
+              src={`${sampleBase}/english-2.webp`}
+              alt="English MNIST sample digit 2"
+              width="126"
+              height="126"
+              style={{imageRendering: 'pixelated', display: 'block', width: 126, height: 126}}
+            />
+            <div style={{
+              position: 'absolute',
+              left: `${(7 / 28) * 126}px`,
+              top: `${(12 / 28) * 126}px`,
+              width: `${(6 / 28) * 126}px`,
+              height: `${(6 / 28) * 126}px`,
+              border: '2px solid #0088CC',
+              boxShadow: '0 0 0 1px #fff',
+            }} />
+          </div>
+          <div style={{fontSize: 13, lineHeight: 1.45}}>
+            This is one English MNIST sample: digit <strong>2</strong>, sample <strong>#645</strong>.
+            It is treated as a <strong>28 x 28</strong> grid of grayscale pixels.
+            The blue box is the patch zoomed in next.
+          </div>
+        </div>
+      </div>
+
+      <div style={panelStyle}>
+        <div style={labelStyle}><span style={stepBadgeStyle}>2</span>{' '}Zoom into pixels</div>
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: 3, maxWidth: 270, margin: '0 auto'}}>
+          {zoomPatch.flatMap((row, rowIndex) => (
+            row.map((value, columnIndex) => (
+              <div
+                key={`${rowIndex}-${columnIndex}`}
+                title={`row ${12 + rowIndex}, col ${7 + columnIndex}`}
+                style={{
+                  aspectRatio: '1 / 1',
+                  display: 'grid',
+                  placeItems: 'center',
+                  border: '1px solid var(--ifm-color-emphasis-300)',
+                  borderRadius: 4,
+                  background: `rgb(${value}, ${value}, ${value})`,
+                  color: value > 150 ? '#111' : '#fff',
+                  fontFamily: 'var(--ifm-font-family-monospace)',
+                  fontSize: 11,
+                  fontWeight: 700,
+                }}
+              >
+                {value}
+              </div>
+            ))
+          ))}
+        </div>
+        <div style={{marginTop: 10, fontSize: 13, lineHeight: 1.45}}>
+          Each square is one pixel value from <code>0</code> to <code>255</code>.
+          Dark cells are near zero; bright cells are part of the stroke.
+        </div>
+      </div>
+
+      <div style={panelStyle}>
+        <div style={labelStyle}><span style={stepBadgeStyle}>3</span>{' '}Flatten row by row</div>
+        <div style={{display: 'grid', gap: 12, alignItems: 'center', maxWidth: 640, margin: '0 auto'}}>
+          <div>
+            <div style={miniTitleStyle}>Same sample #645: append rows in reading order</div>
+            <div style={{display: 'grid', gap: 6}}>
+              {appendGroups.map((group) => (
+                <div
+                  key={`append-source-${group.label}`}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '86px 82px minmax(0, 1fr)',
+                    gap: 8,
+                    alignItems: 'center',
+                    padding: '6px 8px',
+                    border: '1px solid var(--ifm-color-emphasis-200)',
+                    borderRadius: 6,
+                    background: group.segment ? 'rgba(0, 136, 204, 0.06)' : 'var(--ifm-color-emphasis-100)',
+                  }}
+                >
+                  <span style={{...monoStyle, color: group.segment ? group.segment.color : 'var(--ifm-color-emphasis-700)', fontWeight: 800}}>{group.label}</span>
+                  <span style={{...monoStyle, color: 'var(--ifm-color-emphasis-700)'}}>{group.range}</span>
+                  {group.segment ? (
+                    <div style={{display: 'flex', gap: 3, minWidth: 0, overflowX: 'auto', paddingBottom: 2}}>
+                      {renderOmittedBlock('cols 0-6', `left-${group.segment.rowNumber}`)}
+                      {group.segment.values.map((value, index) => renderPixelCell(value, `${group.segment.rowNumber}-${index}`))}
+                      {renderOmittedBlock('cols 13-27', `right-${group.segment.rowNumber}`)}
+                    </div>
+                  ) : (
+                    <span style={{...monoStyle, color: 'var(--ifm-color-emphasis-700)'}}>{group.summary}</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div style={arrowStyle}>&darr;</div>
+
+          <div>
+            <div style={miniTitleStyle}>One sample vector</div>
+            <div style={{border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: 6, padding: 10}}>
+              <div style={{display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: 6}}>
+                <span style={{...monoStyle, fontWeight: 800}}>x_645 =</span>
+                {appendGroups.flatMap((group, index) => [
+                  <span
+                    key={`append-target-${group.label}`}
+                    style={{
+                      display: 'grid',
+                      gap: 2,
+                      minWidth: group.segment ? 86 : 112,
+                      padding: '7px 9px',
+                      borderRadius: 6,
+                      border: '1px solid var(--ifm-color-emphasis-300)',
+                      background: group.segment ? 'rgba(0, 136, 204, 0.08)' : 'var(--ifm-color-emphasis-100)',
+                      textAlign: 'center',
+                    }}
+                  >
+                    <strong style={{fontSize: 12, color: group.segment ? group.segment.color : 'var(--ifm-color-emphasis-700)'}}>{group.label}</strong>
+                    <span style={{...monoStyle, fontSize: 10}}>{group.summary}</span>
+                  </span>,
+                  index < appendGroups.length - 1 ? (
+                    <span key={`append-plus-${group.label}`} style={{fontWeight: 900, color: 'var(--ifm-color-primary)'}}>+</span>
+                  ) : null,
+                ])}
+              </div>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(28, minmax(4px, 1fr))',
+                  gap: 1,
+                  marginTop: 12,
+                  height: 20,
+                }}
+                aria-label="28 appended row blocks"
+              >
+                {Array.from({length: 28}).map((_, rowIndex) => (
+                  <span
+                    key={`row-block-${rowIndex}`}
+                    title={`row ${rowIndex}`}
+                    style={{
+                      borderRadius: 2,
+                      background: rowIndex >= 12 && rowIndex <= 15 ? 'var(--ifm-color-primary)' : 'var(--ifm-color-emphasis-300)',
+                      opacity: rowIndex >= 12 && rowIndex <= 15 ? 0.9 : 0.55,
+                    }}
+                  />
+                ))}
+              </div>
+              <div style={{marginTop: 8, textAlign: 'center', fontSize: 13}}>
+                28 rows appended together, <code>28 x 28 = 784</code> pixel values.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{marginTop: 10, fontSize: 13, lineHeight: 1.45}}>
+          Flattening does not average or mix pixels. It just joins the rows of sample <code>#645</code> end to end:
+          row <code>0</code>, then row <code>1</code>, all the way to row <code>27</code>.
+        </div>
+      </div>
+
+      <div style={panelStyle}>
+        <div style={labelStyle}><span style={stepBadgeStyle}>4</span>{' '}Stack samples</div>
+        <div style={{display: 'grid', gap: 12, alignItems: 'center', maxWidth: 700, margin: '0 auto'}}>
+          <div>
+            <div style={miniTitleStyle}>Matrix X: one flattened row per sample</div>
+            <div style={{border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: 6, overflow: 'hidden'}}>
+              <div style={{display: 'grid', gridTemplateColumns: '46px 74px minmax(76px, 1fr) 116px minmax(76px, 1fr)', gap: 8, padding: '7px 10px', background: 'var(--ifm-color-emphasis-100)', ...monoStyle, fontWeight: 800, alignItems: 'center'}}>
+                <span>img</span>
+                <span>sample</span>
+                <span>start</span>
+                <span>middle</span>
+                <span>end</span>
+              </div>
+              {sampleMatrixRows.map((row, index) => (
+                <div
+                  key={row.sample}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '46px 74px minmax(76px, 1fr) 116px minmax(76px, 1fr)',
+                    gap: 8,
+                    alignItems: 'center',
+                    padding: '8px 10px',
+                    borderTop: '1px solid var(--ifm-color-emphasis-200)',
+                    background: row.highlight ? 'rgba(0, 136, 204, 0.08)' : 'transparent',
+                  }}
+                >
+                  <img
+                    src={`${sampleBase}/${row.image}`}
+                    alt={`English MNIST sample digit ${row.digit}`}
+                    width="34"
+                    height="34"
+                    style={{imageRendering: 'pixelated', width: 34, height: 34, borderRadius: 4, background: '#000'}}
+                  />
+                  <div style={{...monoStyle}}>
+                    <strong>{row.sample}</strong>
+                    <br />
+                    label {row.digit}
+                  </div>
+                  <div>
+                    <div style={{...monoStyle, fontSize: 10, marginBottom: 3}}>x[0:6]</div>
+                    {renderIntensityStrip(row.start, `start-${row.sample}`)}
+                  </div>
+                  <div style={{...monoStyle, textAlign: 'center', color: 'var(--ifm-color-emphasis-700)'}}>
+                    {784 - row.start.length - row.end.length} values
+                    <br />
+                    in between
+                  </div>
+                  <div>
+                    <div style={{...monoStyle, fontSize: 10, marginBottom: 3}}>x[778:784]</div>
+                    {renderIntensityStrip(row.end, `end-${row.sample}`)}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div style={{marginTop: 10, fontSize: 13, lineHeight: 1.45}}>
+          After flattening, the dataset is a table: one sample per row and one pixel position per column.
+          With 2,500 plotted English samples, this input matrix has shape <code>2500 x 784</code>.
+        </div>
+      </div>
+
+      <div style={panelStyle}>
+        <div style={labelStyle}><span style={stepBadgeStyle}>5</span>{' '}Run PCA and plot</div>
+        <div style={{display: 'grid', gap: 12, alignItems: 'center', maxWidth: 640, margin: '0 auto'}}>
+          <div style={{display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: 8}}>
+            <div style={{border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: 6, padding: '10px 12px', minWidth: 135, textAlign: 'center'}}>
+              <div style={{...monoStyle, fontWeight: 800}}>X_centered</div>
+              <div style={{fontSize: 12, color: 'var(--ifm-color-emphasis-700)'}}>samples x 784</div>
+            </div>
+            <div style={{fontWeight: 900, color: 'var(--ifm-color-primary)'}}>x</div>
+            <div style={{border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: 6, padding: '10px 12px', minWidth: 135, textAlign: 'center'}}>
+              <div style={{...monoStyle, fontWeight: 800}}>directions</div>
+              <div style={{fontSize: 12, color: 'var(--ifm-color-emphasis-700)'}}>784 x 2</div>
+            </div>
+            <div style={{fontWeight: 900, color: 'var(--ifm-color-primary)'}}>=</div>
+            <div style={{border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: 6, padding: '10px 12px', minWidth: 135, textAlign: 'center', background: 'rgba(0, 136, 204, 0.08)'}}>
+              <div style={{...monoStyle, fontWeight: 800}}>Z</div>
+              <div style={{fontSize: 12, color: 'var(--ifm-color-emphasis-700)'}}>samples x 2</div>
+            </div>
+          </div>
+
+          <div style={arrowStyle}>&darr;</div>
+
+          <div>
+            <div style={miniTitleStyle}>Output Z: two coordinates per sample</div>
+            <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 12, alignItems: 'center'}}>
+              <div style={{border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: 6, overflow: 'hidden'}}>
+                <div style={{display: 'grid', gridTemplateColumns: '62px 48px 1fr 1fr', gap: 8, padding: '7px 10px', background: 'var(--ifm-color-emphasis-100)', ...monoStyle, fontWeight: 800}}>
+                  <span>sample</span>
+                  <span>label</span>
+                  <span>PC1</span>
+                  <span>PC2</span>
+                </div>
+                {projectionRows.map((row, index) => (
+                  <div
+                    key={`projection-${row.sample}`}
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns: '62px 48px 1fr 1fr',
+                      gap: 8,
+                      padding: '7px 10px',
+                      borderTop: '1px solid var(--ifm-color-emphasis-200)',
+                      background: row.highlight ? 'rgba(44, 160, 44, 0.1)' : 'transparent',
+                      ...monoStyle,
+                    }}
+                  >
+                    <strong>{row.sample}</strong>
+                    <span style={{color: row.color, fontWeight: 800}}>{row.digit}</span>
+                    <span>{row.pc1}</span>
+                    <span>{row.pc2}</span>
+                  </div>
+                ))}
+              </div>
+
+              <svg viewBox="0 0 300 210" role="img" aria-label="PCA projection from sample vectors to PC1 and PC2" style={{width: '100%', maxWidth: 350, display: 'block', margin: '0 auto'}}>
+                <rect x="8" y="8" width="284" height="194" rx="8" fill="var(--ifm-background-color)" stroke="var(--ifm-color-emphasis-300)" />
+                {[54, 94, 134, 174, 214, 254].map((x) => (
+                  <line key={`x-${x}`} x1={x} y1="30" x2={x} y2="172" stroke="var(--ifm-color-emphasis-200)" strokeWidth="1" />
+                ))}
+                {[44, 84, 124, 164].map((y) => (
+                  <line key={`y-${y}`} x1="42" y1={y} x2="266" y2={y} stroke="var(--ifm-color-emphasis-200)" strokeWidth="1" />
+                ))}
+                <line x1="42" y1="164" x2="266" y2="164" stroke="var(--ifm-color-emphasis-500)" strokeWidth="1.5" />
+                <line x1="54" y1="178" x2="54" y2="32" stroke="var(--ifm-color-emphasis-500)" strokeWidth="1.5" />
+                <path d="M266 164 L257 159 L257 169 Z" fill="var(--ifm-color-emphasis-600)" />
+                <path d="M54 32 L49 41 L59 41 Z" fill="var(--ifm-color-emphasis-600)" />
+                <text x="246" y="190" style={{fill: 'var(--ifm-color-emphasis-700)', fontSize: 11, fontWeight: 700}}>PC1</text>
+                <text x="22" y="42" style={{fill: 'var(--ifm-color-emphasis-700)', fontSize: 11, fontWeight: 700}}>PC2</text>
+                {projectionRows.map((point) => (
+                  <g key={`point-${point.sample}`}>
+                    <circle cx={point.x} cy={point.y} r={point.highlight ? 15 : 12} fill={point.color} stroke={point.highlight ? '#111' : 'var(--ifm-background-color)'} strokeWidth={point.highlight ? 2.5 : 1.5} />
+                    <text x={point.x} y={point.y + 5} textAnchor="middle" style={{fill: '#fff', fontSize: 12, fontWeight: 800}}>{point.digit}</text>
+                  </g>
+                ))}
+                <text x="196" y="62" style={{fill: 'var(--ifm-color-emphasis-700)', fontSize: 11}}>sample #645</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div style={{marginTop: 10, fontSize: 13, lineHeight: 1.45}}>
+          Stacking all vectors creates <code>X</code> with shape <code>samples x 784</code>.
+          Multiplying by the first two principal directions creates <code>Z</code> with shape <code>samples x 2</code>.
+          Those two values are the PC1 and PC2 coordinates.
+        </div>
+      </div>
+    </div>
+  );
+}
+
+I started with a joke about "Linear Mandarin" and ended up with a measurable result: in this PCA experiment, Mandarin Chinese digits were about 4x harder to separate than English MNIST.
+
+{/* truncate */}
+
+<div style={{borderTop: '1px solid #0088CC', margin: '1.5em 0'}} />
+
+## Introduction
+
+I came across [this tweet](https://x.com/Math_files/status/2068476490732511310?s=20):
+
+<p align="center">
+  <img width="760" src="/blog/2026-06-21-mnist-style-digit-pca/linear-mandarin-tweet.webp" alt="Linear algebra expression written with Chinese characters" />
+</p>
+
+<br />
+
+And for a second I even thought this wasn't real, because the symbols look really hard to distinguish among themselves.
+
+Which made me think that there must be a way for us to quantify that.
+
+This immediately reminded me of one of my favorite data visualization examples using MNIST dataset with PCA. And so I wondered if we could explore different numerical systems from different languages with the same approach, and compare the cluster centroids mean to extract a "difficulty" proxy.
+
+## The data
+
+I looked for real MNIST-style handwritten digit datasets where the actual written symbols differ. If I could not find a real equivalent dataset, I dropped that language.
+
+The final set was:
+
+- English, from OpenML MNIST 784
+- Mandarin Chinese, from a Chinese MNIST dataset
+- Hindi, using Devanagari digits
+- Arabic, using Arabic-Indic digits
+- Bengali
+- Urdu/Persian
+- Telugu
+
+Here are representative samples from each dataset. I picked one sample per digit close to that digit's PCA centroid, so these are meant to be boring examples rather than outliers.
+
+<DigitSampleSelector />
+
+## Why PCA
+
+At this point I needed a way to make the comparison visual. This is where PCA (Principal Component Analysis) comes in.
+
+PCA is still one of my favorite machine learning algorithms. Part of that is because it is simple enough to understand intuitively. You have high-dimensional data (e.g. a vector of dimensios pixel width x pixel height), you find the directions where it varies the most within a dataset, and you project the data onto those directions.
+
+If you are unfamiliar, this is a [good place to get started](https://numiqo.com/lab/pca).
+
+When I was writing my paper that got accepted to ICMLA, I used PCA to understand whether the raw sensor data had a shape that could be useful for classification. Wrote more about that here if you are curious: [How I wrote a machine learning paper in 1 week that got accepted to ICMLA](https://didierlopes.com/blog/how-i-wrote-a-machine-learning-paper-in-1-week-that-got-accepted-to-icmla/).
+
+This digit experiment is much lower stakes, obviously.
+
+But it takes on the same idea, take something high-dimensional and make it visible.
+
+## English MNIST first
+
+I started with normal MNIST because that is the reference point everyone knows.
+
+Each image is 28x28 pixels, which means each sample starts as 784 dimensions. I flattened the image into a vector, normalized it, and projected the samples into two dimensions using PCA.
+
+Mechanically, PCA does not really care that the input started as an image. It wants a table.
+
+So the image has to be flattened first. I take row 1 of pixels, append row 2 after it, then row 3, and keep going until all 28 rows are joined together. That turns a `28 x 28` image into a single row with `784` pixel values.
+
+Below I used one actual MNIST sample from the dataset. It is an English `2`, sample `#645`. The zoomed patch makes the transformation more concrete: the bright stroke pixels are just large grayscale values, and their position in the image decides their position in the vector.
+
+<PcaPipelineDiagram />
+
+After that, the dataset is just a matrix. Each row is one digit sample. Each column is one pixel position. If I have 2,500 English samples in the plot, the PCA input table has shape `2500 x 784`.
+
+PCA centers each pixel column, then finds the directions through the 784-dimensional pixel space where the samples spread out the most. The first direction is PC1, the second is PC2. When I plot those two coordinates for each sample, I get the 2D chart below.
+
+<p align="center">
+  <img width="760" src="/blog/2026-06-21-mnist-style-digit-pca/english-pca.webp" alt="English MNIST handwritten digits projected to 2D PCA" />
+</p>
+
+Note that it does not know what a `3` or an `8` means. It just finds the two directions that explain the most variance in the pixel data, and projects each sample against those.
+
+Some digits pull apart clearly. `1` has its own region because it is visually sparse. `0` also tends to carve out space because the loop shape is so distinctive. But a lot of digits overlap because two dimensions is brutally compressed. `3`, `5`, `8` and `9` aren't too far from each other.
+
+This is expected, and "explains" in a way, why sometimes we can find it harder to distinguish between those numbers.
+
+## Then the other numeral systems
+
+After that I ran the same process for the other datasets.
+
+<p align="center">
+  <img width="900" src="/blog/2026-06-21-mnist-style-digit-pca/other-languages-pca.webp" alt="Six non-English MNIST-style digit datasets projected to 2D PCA" />
+</p>
+
+Each language dataset has a different "footprint".
+
+Mandarin Chinese is the most compressed in this 2D view.
+
+This confirms our initial assumption, that the characters have very similar stroke structures and that for a PCA with 2 dimensions, it's hard to "tell them apart".
+
+However, I must say that given the sample mandarin data (from the first image shown), this could also be due to the dataset where the characters are more "squeezed" in the center of the matrix - which makes it harder to distinguish between numbers given all of them will have an "empty" surrounding area.
+
+## A small metric for separation
+
+To make the comparison less hand-wavy, I computed a simple centroid separation score.
+
+For each dataset:
+
+1. Compute the 2D PCA coordinates.
+2. Compute the centroid of each digit class.
+3. Compute all pairwise distances between those ten centroids.
+4. Take the mean distance, with the min and max shown as the error range.
+
+<br />
+
+<p align="center">
+  <img width="760" src="/blog/2026-06-21-mnist-style-digit-pca/centroid-separation.webp" alt="Centroid separation bar chart for MNIST-style digit datasets" />
+</p>
+
+This is not a universal measure of how "easy" the dataset is.
+
+It only says: after reducing the images to two PCA dimensions, how far apart are the class centers?
+
+The ranking I got:
+
+- Mandarin Chinese: `0.72`
+- English: `3.02`
+- Arabic: `3.31`
+- Urdu/Persian: `3.50`
+- Hindi: `4.07`
+- Bengali: `4.15`
+- Telugu: `4.18`
+
+I would not over-interpret the exact values because the datasets were collected differently - and as I mentioned, the Mandarin chinese does seem to be slightly lower quality than others. 
+
+But as a visual summary, it is still useful. Telugu, Bengali and Hindi have the largest class-center separation in this PCA view. English MNIST, which we tend to treat as the default digit dataset, is somewhere in the lower middle.
+
+Mandarin Chinese is the clear outlier in the other direction. Its digit centroids are much closer together than every other dataset here.
+
+So for this experiment, I think it is fair to say Mandarin Chinese is the hardest numerical system to recognize by sample proximity alone.
+
+Not "hardest" in some universal language-learning sense. Hardest in the specific sense that if I only give myself this 2D PCA space and ask which handwritten numerical values sit closest to each other, Mandarin Chinese gives me the least separation.
+
+## The explorer
+
+The static plots were fun, but I thought I could build a nicer more interactive HTML explorer that would allow me to look to the data. After all, you always want to look at the data. ALWAYS!
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/yKWpzT3czzQ"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+You can switch datasets, keep the same digit colors, zoom and pan the PCA plot, click a sample, and inspect the selected image plus the five closest samples in PCA space.
+
+The code is here: [DidierRLopes/mnist-explorer](https://github.com/DidierRLopes/mnist-explorer).
+
+## Conclusion
+
+Under this PCA centroid-separation proxy, Mandarin Chinese is about 4.2x less separated than English MNIST and about 5.8x less separated than Telugu. So if I treat inverse separation as a rough difficulty score, Mandarin Chinese is about 4x harder than English and nearly 6x harder than Telugu in this experiment.

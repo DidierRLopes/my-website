@@ -174,3 +174,4 @@
 - [2026-05-20-codex-beats-chipwits](https://didierlopes.com/blog/2026-05-20-codex-beats-chipwits)
 - [2026-05-31-long-running-agents-and-slms-embedded-in-your-product](https://didierlopes.com/blog/2026-05-31-long-running-agents-and-slms-embedded-in-your-product)
 - [2026-06-09-the-model-did-what-i-rewarded-not-what-i-wanted](https://didierlopes.com/blog/2026-06-09-the-model-did-what-i-rewarded-not-what-i-wanted)
+- [2026-06-27-i-compared-mnist-style-digits-across-languages-mandarin-chinese-was-4x-harder-to-separate](https://didierlopes.com/blog/2026-06-27-i-compared-mnist-style-digits-across-languages-mandarin-chinese-was-4x-harder-to-separate)

@@ -1,38 +1,52 @@
 import { useBlogPost } from '@docusaurus/plugin-content-blog/client';
 import BlogPostItem from '@theme-original/BlogPostItem';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import NewsletterCTA from '@site/src/components/NewsletterCTA';
+
+const useIsomorphicLayoutEffect = ExecutionEnvironment.canUseDOM
+  ? useLayoutEffect
+  : useEffect;
+const introDividerSelector =
+  ':scope > div[style*="border-top"], :scope > div[style*="borderTop"]';
+
+function removeIntroPreview(markdown) {
+  const divider = markdown.querySelector(introDividerSelector);
+  if (!divider) return false;
+
+  let node = markdown.firstChild;
+  while (node && node !== divider) {
+    const next = node.nextSibling;
+    node.remove?.();
+    node = next;
+  }
+
+  divider.remove();
+  return true;
+}
 
 export default function BlogPostItemWrapper(props) {
   const { isBlogPostPage } = useBlogPost();
   const articleRef = useRef(null);
 
-  useEffect(() => {
-    // On blog post page, remove intro thumbnail/preview and the decorative border
+  useIsomorphicLayoutEffect(() => {
+    // Full posts should start after the old thumbnail/excerpt block used for lists.
     if (!isBlogPostPage || !ExecutionEnvironment.canUseDOM) return;
 
-    // Use requestAnimationFrame to batch DOM operations
-    requestAnimationFrame(() => {
-      const article = articleRef.current?.querySelector('article') || document.querySelector('article');
-      if (!article) return;
+    const wrapper = articleRef.current;
+    if (!wrapper) return;
 
-      const borderDiv = article.querySelector('div[style*="border-top"]');
-      if (!borderDiv) return;
+    const cleanup = () => {
+      const markdown = wrapper.querySelector('article .markdown');
+      if (markdown) removeIntroPreview(markdown);
+    };
 
-      // Collect all nodes to remove first (avoids multiple reflows)
-      const nodesToRemove = [];
-      let node = borderDiv.previousSibling;
-      while (node) {
-        nodesToRemove.push(node);
-        node = node.previousSibling;
-      }
-      nodesToRemove.push(borderDiv);
+    cleanup();
 
-      // Remove all nodes in a single batch
-      nodesToRemove.forEach(n => n.remove?.());
+    const observer = new MutationObserver(cleanup);
+    observer.observe(wrapper, { childList: true, subtree: true });
 
-    });
+    return () => observer.disconnect();
   }, [isBlogPostPage]);
 
   const containerStyle = !isBlogPostPage ? { marginBottom: '5rem' } : {};

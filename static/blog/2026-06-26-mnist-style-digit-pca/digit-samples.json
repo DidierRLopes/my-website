@@ -20,61 +20,61 @@
       {
         "digit": 0,
         "glyph": "0",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/english-0.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/english-0.webp",
         "sampleIndex": 30
       },
       {
         "digit": 1,
         "glyph": "1",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/english-1.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/english-1.webp",
         "sampleIndex": 450
       },
       {
         "digit": 2,
         "glyph": "2",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/english-2.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/english-2.webp",
         "sampleIndex": 645
       },
       {
         "digit": 3,
         "glyph": "3",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/english-3.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/english-3.webp",
         "sampleIndex": 875
       },
       {
         "digit": 4,
         "glyph": "4",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/english-4.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/english-4.webp",
         "sampleIndex": 1169
       },
       {
         "digit": 5,
         "glyph": "5",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/english-5.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/english-5.webp",
         "sampleIndex": 1272
       },
       {
         "digit": 6,
         "glyph": "6",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/english-6.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/english-6.webp",
         "sampleIndex": 1714
       },
       {
         "digit": 7,
         "glyph": "7",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/english-7.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/english-7.webp",
         "sampleIndex": 1791
       },
       {
         "digit": 8,
         "glyph": "8",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/english-8.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/english-8.webp",
         "sampleIndex": 2048
       },
       {
         "digit": 9,
         "glyph": "9",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/english-9.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/english-9.webp",
         "sampleIndex": 2265
       }
     ]
@@ -100,61 +100,61 @@
       {
         "digit": 0,
         "glyph": "零",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/mandarin-chinese-0.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/mandarin-chinese-0.webp",
         "sampleIndex": 218
       },
       {
         "digit": 1,
         "glyph": "一",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/mandarin-chinese-1.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/mandarin-chinese-1.webp",
         "sampleIndex": 308
       },
       {
         "digit": 2,
         "glyph": "二",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/mandarin-chinese-2.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/mandarin-chinese-2.webp",
         "sampleIndex": 593
       },
       {
         "digit": 3,
         "glyph": "三",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/mandarin-chinese-3.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/mandarin-chinese-3.webp",
         "sampleIndex": 900
       },
       {
         "digit": 4,
         "glyph": "四",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/mandarin-chinese-4.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/mandarin-chinese-4.webp",
         "sampleIndex": 1102
       },
       {
         "digit": 5,
         "glyph": "五",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/mandarin-chinese-5.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/mandarin-chinese-5.webp",
         "sampleIndex": 1449
       },
       {
         "digit": 6,
         "glyph": "六",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/mandarin-chinese-6.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/mandarin-chinese-6.webp",
         "sampleIndex": 1633
       },
       {
         "digit": 7,
         "glyph": "七",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/mandarin-chinese-7.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/mandarin-chinese-7.webp",
         "sampleIndex": 1993
       },
       {
         "digit": 8,
         "glyph": "八",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/mandarin-chinese-8.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/mandarin-chinese-8.webp",
         "sampleIndex": 2028
       },
       {
         "digit": 9,
         "glyph": "九",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/mandarin-chinese-9.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/mandarin-chinese-9.webp",
         "sampleIndex": 2392
       }
     ]
@@ -180,61 +180,61 @@
       {
         "digit": 0,
         "glyph": "०",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/hindi-0.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/hindi-0.webp",
         "sampleIndex": 167
       },
       {
         "digit": 1,
         "glyph": "१",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/hindi-1.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/hindi-1.webp",
         "sampleIndex": 432
       },
       {
         "digit": 2,
         "glyph": "२",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/hindi-2.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/hindi-2.webp",
         "sampleIndex": 592
       },
       {
         "digit": 3,
         "glyph": "३",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/hindi-3.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/hindi-3.webp",
         "sampleIndex": 822
       },
       {
         "digit": 4,
         "glyph": "४",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/hindi-4.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/hindi-4.webp",
         "sampleIndex": 1189
       },
       {
         "digit": 5,
         "glyph": "५",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/hindi-5.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/hindi-5.webp",
         "sampleIndex": 1290
       },
       {
         "digit": 6,
         "glyph": "६",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/hindi-6.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/hindi-6.webp",
         "sampleIndex": 1515
       },
       {
         "digit": 7,
         "glyph": "७",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/hindi-7.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/hindi-7.webp",
         "sampleIndex": 1941
       },
       {
         "digit": 8,
         "glyph": "८",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/hindi-8.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/hindi-8.webp",
         "sampleIndex": 2164
       },
       {
         "digit": 9,
         "glyph": "९",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/hindi-9.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/hindi-9.webp",
         "sampleIndex": 2413
       }
     ]
@@ -260,61 +260,61 @@
       {
         "digit": 0,
         "glyph": "٠",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/arabic-0.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/arabic-0.webp",
         "sampleIndex": 200
       },
       {
         "digit": 1,
         "glyph": "١",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/arabic-1.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/arabic-1.webp",
         "sampleIndex": 371
       },
       {
         "digit": 2,
         "glyph": "٢",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/arabic-2.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/arabic-2.webp",
         "sampleIndex": 664
       },
       {
         "digit": 3,
         "glyph": "٣",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/arabic-3.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/arabic-3.webp",
         "sampleIndex": 834
       },
       {
         "digit": 4,
         "glyph": "٤",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/arabic-4.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/arabic-4.webp",
         "sampleIndex": 1222
       },
       {
         "digit": 5,
         "glyph": "٥",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/arabic-5.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/arabic-5.webp",
         "sampleIndex": 1489
       },
       {
         "digit": 6,
         "glyph": "٦",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/arabic-6.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/arabic-6.webp",
         "sampleIndex": 1553
       },
       {
         "digit": 7,
         "glyph": "٧",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/arabic-7.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/arabic-7.webp",
         "sampleIndex": 1762
       },
       {
         "digit": 8,
         "glyph": "٨",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/arabic-8.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/arabic-8.webp",
         "sampleIndex": 2190
       },
       {
         "digit": 9,
         "glyph": "٩",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/arabic-9.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/arabic-9.webp",
         "sampleIndex": 2479
       }
     ]
@@ -340,61 +340,61 @@
       {
         "digit": 0,
         "glyph": "০",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/bengali-0.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/bengali-0.webp",
         "sampleIndex": 22
       },
       {
         "digit": 1,
         "glyph": "১",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/bengali-1.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/bengali-1.webp",
         "sampleIndex": 386
       },
       {
         "digit": 2,
         "glyph": "২",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/bengali-2.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/bengali-2.webp",
         "sampleIndex": 729
       },
       {
         "digit": 3,
         "glyph": "৩",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/bengali-3.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/bengali-3.webp",
         "sampleIndex": 765
       },
       {
         "digit": 4,
         "glyph": "৪",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/bengali-4.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/bengali-4.webp",
         "sampleIndex": 1143
       },
       {
         "digit": 5,
         "glyph": "৫",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/bengali-5.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/bengali-5.webp",
         "sampleIndex": 1319
       },
       {
         "digit": 6,
         "glyph": "৬",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/bengali-6.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/bengali-6.webp",
         "sampleIndex": 1598
       },
       {
         "digit": 7,
         "glyph": "৭",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/bengali-7.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/bengali-7.webp",
         "sampleIndex": 1772
       },
       {
         "digit": 8,
         "glyph": "৮",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/bengali-8.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/bengali-8.webp",
         "sampleIndex": 2175
       },
       {
         "digit": 9,
         "glyph": "৯",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/bengali-9.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/bengali-9.webp",
         "sampleIndex": 2378
       }
     ]
@@ -420,61 +420,61 @@
       {
         "digit": 0,
         "glyph": "۰",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/urdu-persian-0.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/urdu-persian-0.webp",
         "sampleIndex": 4
       },
       {
         "digit": 1,
         "glyph": "۱",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/urdu-persian-1.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/urdu-persian-1.webp",
         "sampleIndex": 324
       },
       {
         "digit": 2,
         "glyph": "۲",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/urdu-persian-2.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/urdu-persian-2.webp",
         "sampleIndex": 659
       },
       {
         "digit": 3,
         "glyph": "۳",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/urdu-persian-3.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/urdu-persian-3.webp",
         "sampleIndex": 772
       },
       {
         "digit": 4,
         "glyph": "۴",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/urdu-persian-4.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/urdu-persian-4.webp",
         "sampleIndex": 1145
       },
       {
         "digit": 5,
         "glyph": "۵",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/urdu-persian-5.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/urdu-persian-5.webp",
         "sampleIndex": 1265
       },
       {
         "digit": 6,
         "glyph": "۶",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/urdu-persian-6.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/urdu-persian-6.webp",
         "sampleIndex": 1720
       },
       {
         "digit": 7,
         "glyph": "۷",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/urdu-persian-7.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/urdu-persian-7.webp",
         "sampleIndex": 1865
       },
       {
         "digit": 8,
         "glyph": "۸",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/urdu-persian-8.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/urdu-persian-8.webp",
         "sampleIndex": 2225
       },
       {
         "digit": 9,
         "glyph": "۹",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/urdu-persian-9.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/urdu-persian-9.webp",
         "sampleIndex": 2498
       }
     ]
@@ -500,61 +500,61 @@
       {
         "digit": 0,
         "glyph": "౦",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/telugu-0.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/telugu-0.webp",
         "sampleIndex": 38
       },
       {
         "digit": 1,
         "glyph": "౧",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/telugu-1.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/telugu-1.webp",
         "sampleIndex": 499
       },
       {
         "digit": 2,
         "glyph": "౨",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/telugu-2.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/telugu-2.webp",
         "sampleIndex": 518
       },
       {
         "digit": 3,
         "glyph": "౩",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/telugu-3.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/telugu-3.webp",
         "sampleIndex": 825
       },
       {
         "digit": 4,
         "glyph": "౪",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/telugu-4.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/telugu-4.webp",
         "sampleIndex": 1145
       },
       {
         "digit": 5,
         "glyph": "౫",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/telugu-5.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/telugu-5.webp",
         "sampleIndex": 1286
       },
       {
         "digit": 6,
         "glyph": "౬",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/telugu-6.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/telugu-6.webp",
         "sampleIndex": 1705
       },
       {
         "digit": 7,
         "glyph": "౭",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/telugu-7.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/telugu-7.webp",
         "sampleIndex": 1799
       },
       {
         "digit": 8,
         "glyph": "౮",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/telugu-8.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/telugu-8.webp",
         "sampleIndex": 2193
       },
       {
         "digit": 9,
         "glyph": "౯",
-        "image": "/blog/2026-06-21-mnist-style-digit-pca/samples/telugu-9.webp",
+        "image": "/blog/2026-06-26-mnist-style-digit-pca/samples/telugu-9.webp",
         "sampleIndex": 2277
       }
     ]

@@ -1,8 +1,8 @@
 ---
-slug: 2026-06-27-i-compared-mnist-style-digits-across-languages-mandarin-chinese-was-4x-harder-to-separate
+slug: 2026-06-26-i-compared-mnist-style-digits-across-languages-mandarin-chinese-was-4x-harder-to-separate
 title: I Compared MNIST-Style Digits Across Languages. Mandarin Chinese Was 4x Harder to Separate
-date: 2026-06-27
-image: /blog/2026-06-21-mnist-style-digit-pca/thumbnail.png
+date: 2026-06-26
+image: /blog/2026-06-26-mnist-style-digit-pca/thumbnail.png
 tags:
 - machine-learning
 - data-science
@@ -10,12 +10,11 @@ tags:
 - mnist
 description: "I compared handwritten digit datasets across different numeral systems, then used PCA to see which ones separate cleanly in two dimensions."
 hideSidebar: true
-draft: true
 ---
 
 import React, {useMemo, useState} from 'react';
 
-export const sampleBase = '/blog/2026-06-21-mnist-style-digit-pca/samples';
+export const sampleBase = '/blog/2026-06-26-mnist-style-digit-pca/samples';
 
 export const sampleLanguages = [
   {
@@ -671,7 +670,7 @@ I started with a joke about "Linear Mandarin" and ended up with a measurable res
 I came across [this tweet](https://x.com/Math_files/status/2068476490732511310?s=20):
 
 <p align="center">
-  <img width="760" src="/blog/2026-06-21-mnist-style-digit-pca/linear-mandarin-tweet.webp" alt="Linear algebra expression written with Chinese characters" />
+  <img width="760" src="/blog/2026-06-26-mnist-style-digit-pca/linear-mandarin-tweet.webp" alt="Linear algebra expression written with Chinese characters" />
 </p>
 
 <br />
@@ -733,7 +732,7 @@ After that, the dataset is just a matrix. Each row is one digit sample. Each col
 PCA centers each pixel column, then finds the directions through the 784-dimensional pixel space where the samples spread out the most. The first direction is PC1, the second is PC2. When I plot those two coordinates for each sample, I get the 2D chart below.
 
 <p align="center">
-  <img width="760" src="/blog/2026-06-21-mnist-style-digit-pca/english-pca.webp" alt="English MNIST handwritten digits projected to 2D PCA" />
+  <img width="760" src="/blog/2026-06-26-mnist-style-digit-pca/english-pca.webp" alt="English MNIST handwritten digits projected to 2D PCA" />
 </p>
 
 Note that it does not know what a `3` or an `8` means. It just finds the two directions that explain the most variance in the pixel data, and projects each sample against those.
@@ -747,7 +746,7 @@ This is expected, and "explains" in a way, why sometimes we can find it harder t
 After that I ran the same process for the other datasets.
 
 <p align="center">
-  <img width="900" src="/blog/2026-06-21-mnist-style-digit-pca/other-languages-pca.webp" alt="Six non-English MNIST-style digit datasets projected to 2D PCA" />
+  <img width="900" src="/blog/2026-06-26-mnist-style-digit-pca/other-languages-pca.webp" alt="Six non-English MNIST-style digit datasets projected to 2D PCA" />
 </p>
 
 Each language dataset has a different "footprint".
@@ -772,7 +771,7 @@ For each dataset:
 <br />
 
 <p align="center">
-  <img width="760" src="/blog/2026-06-21-mnist-style-digit-pca/centroid-separation.webp" alt="Centroid separation bar chart for MNIST-style digit datasets" />
+  <img width="760" src="/blog/2026-06-26-mnist-style-digit-pca/centroid-separation.webp" alt="Centroid separation bar chart for MNIST-style digit datasets" />
 </p>
 
 This is not a universal measure of how "easy" the dataset is.

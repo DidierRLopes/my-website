@@ -952,9 +952,9 @@ So I reran the experiment with a stricter preprocessing step designed to remove 
 
 For this rerun, every sample goes through the same pipeline:
 
-1. Treat the sample as a `28 x 28` grayscale image, converting image files to grayscale first.
+1. Treat the sample as a single-channel `28 x 28` image. For image-file datasets, that means converting RGB files to grayscale first.
 2. Scale pixel values into `0-1`.
-3. Flip it if the border suggests a bright background, so the digit is bright and the background is dark.
+3. Check the border pixels to infer the background. If the border is bright, invert the image so every dataset uses the same convention: bright digit, dark background.
 4. Normalize the foreground intensity and remove large gray background artifacts.
 5. Threshold at `0.2` into pure black/white pixels, so each pixel is either `0` or `255`.
 6. Crop to the non-empty foreground bounding box.
@@ -981,23 +981,27 @@ Then I reran the same shared 2D PCA centroid calculation with those standardized
     <figcaption style={{fontWeight: 750, textAlign: 'center', marginBottom: 8}}>
       Before standardization
     </figcaption>
-    <img
-      width="760"
-      src="/blog/2026-06-26-mnist-style-digit-pca/centroid-separation.webp"
-      alt="Original centroid separation bar chart before binary tight-fit preprocessing"
-      style={{width: '100%', height: 'auto'}}
-    />
+    <div style={{width: '100%', aspectRatio: '1620 / 1007', display: 'grid', placeItems: 'center'}}>
+      <img
+        width="760"
+        src="/blog/2026-06-26-mnist-style-digit-pca/centroid-separation.webp"
+        alt="Original centroid separation bar chart before binary tight-fit preprocessing"
+        style={{width: '100%', height: '100%', objectFit: 'contain'}}
+      />
+    </div>
   </figure>
   <figure style={{margin: 0}}>
     <figcaption style={{fontWeight: 750, textAlign: 'center', marginBottom: 8}}>
       After standardization
     </figcaption>
-    <img
-      width="760"
-      src="/blog/2026-06-26-mnist-style-digit-pca/post-edits-centroid-separation.webp"
-      alt="Post-edit centroid separation bar chart for standardized MNIST-style digit datasets"
-      style={{width: '100%', height: 'auto'}}
-    />
+    <div style={{width: '100%', aspectRatio: '1620 / 1007', display: 'grid', placeItems: 'center'}}>
+      <img
+        width="760"
+        src="/blog/2026-06-26-mnist-style-digit-pca/post-edits-centroid-separation.webp"
+        alt="Post-edit centroid separation bar chart for standardized MNIST-style digit datasets"
+        style={{width: '100%', height: '100%', objectFit: 'contain'}}
+      />
+    </div>
   </figure>
 </div>
 

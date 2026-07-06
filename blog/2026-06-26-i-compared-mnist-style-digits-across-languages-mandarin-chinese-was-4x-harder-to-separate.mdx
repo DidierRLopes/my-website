@@ -91,6 +91,14 @@ export function DigitSampleSelector() {
       margin: '1.5rem 0',
       background: 'var(--ifm-background-surface-color)',
     }}>
+      <style dangerouslySetInnerHTML={{__html: `
+        @media (max-width: 600px) {
+          .mnist-sample-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 8px !important; }
+        }
+        @media (max-width: 380px) {
+          .mnist-sample-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+        }
+      `}} />
       <div style={{
         display: 'flex',
         gap: 12,
@@ -122,7 +130,7 @@ export function DigitSampleSelector() {
           {language.samples.toLocaleString()} samples · {language.source}
         </span>
       </div>
-      <div style={{
+      <div className="mnist-sample-grid" style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(5, minmax(0, 1fr))',
         gap: 10,
@@ -145,7 +153,15 @@ export function DigitSampleSelector() {
               alt={`${language.name} digit ${digit}`}
               width="72"
               height="72"
-              style={{imageRendering: 'pixelated', display: 'block', margin: '0 auto 6px'}}
+              style={{
+                imageRendering: 'pixelated',
+                display: 'block',
+                width: '100%',
+                maxWidth: 72,
+                height: 'auto',
+                aspectRatio: '1 / 1',
+                margin: '0 auto 6px',
+              }}
             />
             <figcaption style={{fontSize: 13, lineHeight: 1.25}}>
               <strong>{glyph}</strong> ({digit})
@@ -470,7 +486,14 @@ export function PcaPipelineDiagram() {
   );
 
   return (
-    <div style={{display: 'grid', gap: 12, margin: '1.5rem 0'}}>
+    <div style={{display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: 12, margin: '1.5rem 0'}}>
+      <style dangerouslySetInnerHTML={{__html: `
+        .mnist-scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        @media (max-width: 600px) {
+          .mnist-flatten-row { grid-template-columns: 1fr !important; gap: 6px !important; }
+          .mnist-flatten-row > span:nth-child(2) { font-size: 11px; }
+        }
+      `}} />
       <div style={panelStyle}>
         <div style={labelStyle}><span style={stepBadgeStyle}>1</span>{' '}Start with the image</div>
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 14, alignItems: 'center'}}>
@@ -541,6 +564,7 @@ export function PcaPipelineDiagram() {
               {appendGroups.map((group) => (
                 <div
                   key={`append-source-${group.label}`}
+                  className="mnist-flatten-row"
                   style={{
                     display: 'grid',
                     gridTemplateColumns: '86px 82px minmax(0, 1fr)',
@@ -633,10 +657,11 @@ export function PcaPipelineDiagram() {
 
       <div style={panelStyle}>
         <div style={labelStyle}><span style={stepBadgeStyle}>4</span>{' '}Stack samples</div>
-        <div style={{display: 'grid', gap: 12, alignItems: 'center', maxWidth: 700, margin: '0 auto'}}>
-          <div>
+        <div style={{display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: 12, alignItems: 'center', maxWidth: 700, margin: '0 auto'}}>
+          <div style={{minWidth: 0}}>
             <div style={miniTitleStyle}>Matrix X: one flattened row per sample</div>
-            <div style={{border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: 6, overflow: 'hidden'}}>
+            <div className="mnist-scroll-x">
+            <div style={{border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: 6, overflow: 'hidden', minWidth: 420}}>
               <div style={{display: 'grid', gridTemplateColumns: '46px 74px minmax(76px, 1fr) 116px minmax(76px, 1fr)', gap: 8, padding: '7px 10px', background: 'var(--ifm-color-emphasis-100)', ...monoStyle, fontWeight: 800, alignItems: 'center'}}>
                 <span>img</span>
                 <span>sample</span>
@@ -684,6 +709,7 @@ export function PcaPipelineDiagram() {
                   </div>
                 </div>
               ))}
+            </div>
             </div>
           </div>
         </div>
@@ -948,11 +974,11 @@ I got two useful pieces of feedback on X after the first version of this post.
 
 [0xDataWolf](https://x.com/0xDataWolf/status/2073956946567376914?s=20) pointed out that "The handwriting is bad in this dataset and its not sized correctly," especially for the Chinese numbers `4`, `5`, `6`, and `9`, which looked too small. They also made the point that stroke-level details matter on top of the overall character shapes.
 
-That criticism is fair. My original comparison was mixing symbol shape with dataset formatting: size, padding, stroke thickness, and anti-aliasing. So I reran the experiment with a stricter preprocessing step designed to remove as much of that formatting difference as possible.
+That criticism is fair, and I did mention above to not over index on the results obtained - but at the same time I didn't want to tamper with the orignal dataset.
 
-[Sohan](https://x.com/HiSohan/status/2074136355555463249?s=20) added: "When you look at the pairwise distances, look at the spread."
+In any case, I thought it would be a nice experience to reran the experiment with a stricter preprocessing step designed to remove as much of that formatting difference as possible.
 
-That is why I added the centroid-distance distribution plot below instead of only reporting the mean.
+[Sohan](https://x.com/HiSohan/status/2074136355555463249?s=20) added: "When you look at the pairwise distances, look at the spread." That is why I added the centroid-distance distribution plot below instead of only reporting the min, max and mean.
 
 ### Pre-processing
 
@@ -968,6 +994,8 @@ For this rerun, every sample goes through the same pipeline:
 8. Resize proportionally with nearest-neighbor interpolation until the longer side touches the `28 x 28` frame.
 9. Crop and resize once more after interpolation to avoid leftover edge padding.
 10. Center the shorter side on the remaining axis.
+
+<br />
 
 This keeps the glyph shape but removes grayscale intensity and most of the padding effect. The samples below show the representative examples from the original post on top, and the standardized version underneath.
 
@@ -1018,7 +1046,7 @@ So I would now phrase the result more carefully: Mandarin Chinese still looks ha
 
 ### Centroid spread
 
-That second point matters because each numeral system has ten digit centroids, which means `45` pairwise centroid distances. The mean can hide whether all digit pairs are moderately separated or whether a few pairs are very far apart while others are almost touching.
+Given that each numeral system has ten digit centroids, there are `45` pairwise centroid distances. The mean can hide whether all digit pairs are moderately separated or whether a few pairs are very far apart while others are almost touching.
 
 The plot below shows those `45` distances for each numeral system. The colored shape shows the distribution, the box shows the interquartile range, and the dots are the individual digit-pair distances.
 

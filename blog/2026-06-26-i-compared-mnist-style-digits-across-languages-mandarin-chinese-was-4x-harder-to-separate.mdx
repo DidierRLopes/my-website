@@ -958,15 +958,16 @@ That is why I added the centroid-distance distribution plot below instead of onl
 
 For this rerun, every sample goes through the same pipeline:
 
-1. Treat the sample as a single-channel `28 x 28` image. For image-file datasets, that means converting RGB files to grayscale first.
+1. Convert each source sample into a single-channel image. For image-file datasets, that means converting RGB files to grayscale first.
 2. Scale pixel values into `0-1`.
-3. Check the border pixels to infer the background. If the border is bright, invert the image so every dataset uses the same convention: bright digit, dark background.
-4. Normalize the foreground intensity and remove large gray background artifacts.
-5. Threshold at `0.2` into pure black/white pixels, so each pixel is either `0` or `255`.
-6. Crop to the non-empty foreground bounding box.
-7. Resize proportionally with nearest-neighbor interpolation until the longer side touches the `28 x 28` frame.
-8. Crop and resize once more after interpolation to avoid leftover edge padding.
-9. Center the shorter side on the remaining axis.
+3. Check the border pixels to infer the background. If the border is bright, invert the image so every dataset uses the same convention: bright glyph, dark background.
+4. Normalize by the sample's maximum intensity.
+5. Remove large mid-gray background artifacts connected to the border, then normalize again.
+6. Threshold at `0.2` into a binary image. Internally pixels are `0` or `1`; when rendered, they become pure black/white pixels.
+7. Crop to the non-empty foreground bounding box.
+8. Resize proportionally with nearest-neighbor interpolation until the longer side touches the `28 x 28` frame.
+9. Crop and resize once more after interpolation to avoid leftover edge padding.
+10. Center the shorter side on the remaining axis.
 
 This keeps the glyph shape but removes grayscale intensity and most of the padding effect. The samples below show the representative examples from the original post on top, and the standardized version underneath.
 

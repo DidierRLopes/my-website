@@ -944,9 +944,15 @@ Under this PCA centroid-separation proxy, Mandarin Chinese is about 4.2x less se
 
 ## POST EDITS
 
-I got some feedback on X that the comparison might be mixing two different things: the actual symbol shapes and the way each source dataset positioned or anti-aliased the handwriting inside the image. That is a fair criticism, especially because I had already noticed that the Mandarin Chinese samples looked more squeezed into the center of the frame.
+I got two useful pieces of feedback on X after the first version of this post.
 
-So I reran the experiment with a stricter preprocessing step designed to remove as much of that formatting difference as possible.
+[0xDataWolf](https://x.com/0xDataWolf/status/2073956946567376914?s=20) pointed out that "The handwriting is bad in this dataset and its not sized correctly," especially for the Chinese numbers `4`, `5`, `6`, and `9`, which looked too small. They also made the point that stroke-level details matter on top of the overall character shapes.
+
+That criticism is fair. My original comparison was mixing symbol shape with dataset formatting: size, padding, stroke thickness, and anti-aliasing. So I reran the experiment with a stricter preprocessing step designed to remove as much of that formatting difference as possible.
+
+[Sohan](https://x.com/HiSohan/status/2074136355555463249?s=20) added: "When you look at the pairwise distances, look at the spread."
+
+That is why I added the centroid-distance distribution plot below instead of only reporting the mean.
 
 ### Pre-processing
 
@@ -1011,7 +1017,7 @@ So I would now phrase the result more carefully: Mandarin Chinese still looks ha
 
 ### Centroid spread
 
-Someone also asked about the spread of the centroid distances, not just the average. That matters because each numeral system has ten digit centroids, which means `45` pairwise centroid distances. The mean can hide whether all digit pairs are moderately separated or whether a few pairs are very far apart while others are almost touching.
+That second point matters because each numeral system has ten digit centroids, which means `45` pairwise centroid distances. The mean can hide whether all digit pairs are moderately separated or whether a few pairs are very far apart while others are almost touching.
 
 The plot below shows those `45` distances for each numeral system. The colored shape shows the distribution, the box shows the interquartile range, and the dots are the individual digit-pair distances.
 

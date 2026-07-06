@@ -15,6 +15,7 @@ hideSidebar: true
 import React, {useMemo, useState} from 'react';
 
 export const sampleBase = '/blog/2026-06-26-mnist-style-digit-pca/samples';
+export const processedSampleBase = '/blog/2026-06-26-mnist-style-digit-pca/samples-standardized';
 
 export const sampleLanguages = [
   {
@@ -147,6 +148,127 @@ export function DigitSampleSelector() {
               style={{imageRendering: 'pixelated', display: 'block', margin: '0 auto 6px'}}
             />
             <figcaption style={{fontSize: 13, lineHeight: 1.25}}>
+              <strong>{glyph}</strong> ({digit})
+              <br />
+              <span style={{color: 'var(--ifm-color-emphasis-700)'}}>
+                sample #{language.sampleIndexes[digit]}
+              </span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export function PostEditSampleComparison() {
+  const [languageId, setLanguageId] = useState('mandarin-chinese');
+  const language = useMemo(
+    () => sampleLanguages.find((item) => item.id === languageId) || sampleLanguages[1],
+    [languageId],
+  );
+
+  return (
+    <div style={{
+      border: '1px solid var(--ifm-color-emphasis-300)',
+      borderRadius: 8,
+      padding: 14,
+      margin: '1.5rem 0',
+      background: 'var(--ifm-background-surface-color)',
+    }}>
+      <style dangerouslySetInnerHTML={{__html: `
+        .mnist-post-edit-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+        @media (max-width: 760px) {
+          .mnist-post-edit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 8px !important; }
+        }
+        @media (max-width: 420px) {
+          .mnist-post-edit-card { padding: 8px !important; }
+          .mnist-post-edit-images { grid-template-columns: 1fr !important; }
+        }
+      `}} />
+      <div style={{
+        display: 'flex',
+        gap: 12,
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+        marginBottom: 12,
+      }}>
+        <label style={{fontWeight: 700}}>
+          Numeral system{' '}
+          <select
+            value={languageId}
+            onChange={(event) => setLanguageId(event.target.value)}
+            style={{
+              marginLeft: 8,
+              padding: '7px 9px',
+              borderRadius: 6,
+              border: '1px solid var(--ifm-color-emphasis-300)',
+              background: 'var(--ifm-background-color)',
+              color: 'var(--ifm-font-color-base)',
+            }}
+          >
+            {sampleLanguages.map((item) => (
+              <option key={`post-edit-${item.id}`} value={item.id}>{item.name}</option>
+            ))}
+          </select>
+        </label>
+        <span style={{fontSize: 13, color: 'var(--ifm-color-emphasis-700)'}}>
+          Before vs. binary tight-fit preprocessing
+        </span>
+      </div>
+      <div className="mnist-post-edit-grid" style={{display: 'grid', gap: 10}}>
+        {language.glyphs.map((glyph, digit) => (
+          <figure
+            key={`post-edit-${language.id}-${digit}`}
+            className="mnist-post-edit-card"
+            style={{
+              margin: 0,
+              padding: 10,
+              border: '1px solid var(--ifm-color-emphasis-200)',
+              borderRadius: 8,
+              textAlign: 'center',
+              background: 'var(--ifm-background-color)',
+              minWidth: 0,
+            }}
+          >
+            <div
+              className="mnist-post-edit-images"
+              style={{
+                display: 'grid',
+                gridTemplateColumns: '1fr',
+                gap: 8,
+                alignItems: 'center',
+              }}
+            >
+              {[
+                {label: 'Before', src: `${sampleBase}/${language.id}-${digit}.webp`},
+                {label: 'After', src: `${processedSampleBase}/${language.id}-${digit}.webp`},
+              ].map((item) => (
+                <div key={`${language.id}-${digit}-${item.label}`} style={{display: 'grid', gap: 4}}>
+                  <span style={{fontSize: 11, fontWeight: 750, color: 'var(--ifm-color-emphasis-700)'}}>
+                    {item.label}
+                  </span>
+                  <img
+                    src={item.src}
+                    alt={`${item.label} ${language.name} digit ${digit}`}
+                    width="72"
+                    height="72"
+                    style={{
+                      imageRendering: 'pixelated',
+                      display: 'block',
+                      width: '100%',
+                      maxWidth: 72,
+                      height: 'auto',
+                      aspectRatio: '1 / 1',
+                      margin: '0 auto',
+                      background: '#000',
+                    }}
+                  />
+                </div>
+              ))}
+            </div>
+            <figcaption style={{fontSize: 13, lineHeight: 1.25, marginTop: 8}}>
               <strong>{glyph}</strong> ({digit})
               <br />
               <span style={{color: 'var(--ifm-color-emphasis-700)'}}>
@@ -819,3 +941,78 @@ The code is here: [DidierRLopes/mnist-explorer](https://github.com/DidierRLopes/
 ## Conclusion
 
 Under this PCA centroid-separation proxy, Mandarin Chinese is about 4.2x less separated than English MNIST and about 5.8x less separated than Telugu. So if I treat inverse separation as a rough difficulty score, Mandarin Chinese is about 4x harder than English and nearly 6x harder than Telugu in this experiment.
+
+## POST EDITS
+
+I got some feedback on X that the comparison might be mixing two different things: the actual symbol shapes and the way each source dataset positioned or anti-aliased the handwriting inside the image. That is a fair criticism, especially because I had already noticed that the Mandarin Chinese samples looked more squeezed into the center of the frame.
+
+So I reran the experiment with a stricter preprocessing step designed to remove as much of that formatting difference as possible.
+
+### Pre-processing
+
+For this rerun, every sample goes through the same pipeline:
+
+1. Treat the sample as a `28 x 28` grayscale image, converting image files to grayscale first.
+2. Scale pixel values into `0-1`.
+3. Flip it if the border suggests a bright background, so the digit is bright and the background is dark.
+4. Normalize the foreground intensity and remove large gray background artifacts.
+5. Threshold at `0.2` into pure black/white pixels, so each pixel is either `0` or `255`.
+6. Crop to the non-empty foreground bounding box.
+7. Resize proportionally with nearest-neighbor interpolation until the longer side touches the `28 x 28` frame.
+8. Crop and resize once more after interpolation to avoid leftover edge padding.
+9. Center the shorter side on the remaining axis.
+
+This keeps the glyph shape but removes grayscale intensity and most of the padding effect. The samples below show the representative examples from the original post on top, and the standardized version underneath.
+
+<PostEditSampleComparison />
+
+### Updated results
+
+Then I reran the same shared 2D PCA centroid calculation with those standardized samples. The original result is on the left; the standardized rerun is on the right.
+
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+  gap: 14,
+  alignItems: 'start',
+  margin: '1.5rem 0',
+}}>
+  <figure style={{margin: 0}}>
+    <figcaption style={{fontWeight: 750, textAlign: 'center', marginBottom: 8}}>
+      Before standardization
+    </figcaption>
+    <img
+      width="760"
+      src="/blog/2026-06-26-mnist-style-digit-pca/centroid-separation.webp"
+      alt="Original centroid separation bar chart before binary tight-fit preprocessing"
+      style={{width: '100%', height: 'auto'}}
+    />
+  </figure>
+  <figure style={{margin: 0}}>
+    <figcaption style={{fontWeight: 750, textAlign: 'center', marginBottom: 8}}>
+      After standardization
+    </figcaption>
+    <img
+      width="760"
+      src="/blog/2026-06-26-mnist-style-digit-pca/post-edits-centroid-separation.webp"
+      alt="Post-edit centroid separation bar chart for standardized MNIST-style digit datasets"
+      style={{width: '100%', height: 'auto'}}
+    />
+  </figure>
+</div>
+
+The ranking changes. Mandarin Chinese is still the least separated numeral system, but the gap is much smaller. English is now about `1.7x` farther apart than Mandarin Chinese in mean centroid distance, not about `4x`.
+
+So I would now phrase the result more carefully: Mandarin Chinese still looks hardest under this 2D PCA centroid proxy, but the original headline-sized gap was partly driven by dataset-level image formatting and padding, not only by the symbol shapes themselves.
+
+### Centroid spread
+
+Someone also asked about the spread of the centroid distances, not just the average. That matters because each numeral system has ten digit centroids, which means `45` pairwise centroid distances. The mean can hide whether all digit pairs are moderately separated or whether a few pairs are very far apart while others are almost touching.
+
+The plot below shows those `45` distances for each numeral system. The colored shape shows the distribution, the box shows the interquartile range, and the dots are the individual digit-pair distances.
+
+<p align="center">
+  <img width="760" src="/blog/2026-06-26-mnist-style-digit-pca/post-edits-centroid-distance-distribution.webp" alt="Distribution of pairwise centroid distances for each standardized numeral system dataset" />
+</p>
+
+The spread is large across every dataset, which is a useful warning: even when the average separation is high, some digit pairs are still close together in this 2D PCA view. Mandarin Chinese has the lowest mean and the tightest overall spread, while Urdu/Persian and Arabic have the largest mean separations but also the widest ranges.

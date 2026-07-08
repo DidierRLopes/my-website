@@ -175,3 +175,4 @@
 - [2026-05-31-long-running-agents-and-slms-embedded-in-your-product](https://didierlopes.com/blog/2026-05-31-long-running-agents-and-slms-embedded-in-your-product)
 - [2026-06-09-the-model-did-what-i-rewarded-not-what-i-wanted](https://didierlopes.com/blog/2026-06-09-the-model-did-what-i-rewarded-not-what-i-wanted)
 - [2026-06-26-i-compared-mnist-style-digits-across-languages-mandarin-chinese-was-4x-harder-to-separate](https://didierlopes.com/blog/2026-06-26-i-compared-mnist-style-digits-across-languages-mandarin-chinese-was-4x-harder-to-separate)
+- [2026-07-05-workspacebench-measuring-agents-openbb-workspace](https://didierlopes.com/blog/2026-07-05-workspacebench-measuring-agents-openbb-workspace)

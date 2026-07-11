@@ -151,7 +151,7 @@
 
 /* ---- generic table ---- */
 .tableWrap { overflow-x: auto; }
-.table { border-collapse: collapse; width: 100%; font-size: 0.82rem; }
+.table { border-collapse: collapse; width: 100%; font-size: 0.82rem; margin-inline: auto; }
 .table th {
   text-align: left;
   font-size: 0.7rem;
@@ -181,7 +181,7 @@
 .colName { font-size: 0.68rem; color: var(--wb-muted); text-align: center; overflow-wrap: anywhere; }
 
 /* ---- benchmark table ---- */
-.benchTable { border-collapse: collapse; width: 100%; min-width: 640px; table-layout: fixed; font-size: 0.8rem; }
+.benchTable { border-collapse: collapse; width: 100%; min-width: 640px; table-layout: fixed; font-size: 0.8rem; margin-inline: auto; }
 .benchTable thead th {
   text-align: center;
   padding: 8px 4px;
@@ -385,7 +385,7 @@
 .mockFooter { padding: 8px 12px 0; font-size: 0.7rem; color: var(--wb-pass); font-weight: 600; }
 
 /* ---- grouped column charts ---- */
-.chartSvg { display: block; width: 100%; height: auto; min-width: 560px; }
+.chartSvg { display: block; width: 100%; height: auto; min-width: 560px; margin-inline: auto; }
 .grid { stroke: var(--wb-line); stroke-width: 1; }
 .axisText { font-size: 9px; fill: var(--wb-muted); font-family: var(--ifm-font-family-monospace); }
 
@@ -399,6 +399,11 @@
 }
 .legendItem { display: inline-flex; align-items: center; gap: 6px; }
 .legendSwatch { width: 11px; height: 11px; border-radius: 2px; display: inline-block; }
+
+/* ---- eval loop stage code example (Docusaurus CodeBlock inside) ---- */
+.stepCode { margin: 10px 0 6px; }
+.stepCode :global(.theme-code-block) { margin: 0; box-shadow: none; }
+.stepCode :global(pre) { font-size: 0.72rem; line-height: 1.5; }
 
 /* ---- eval loop repo links ---- */
 .repoLine { margin: 10px 0 2px; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--wb-muted); }
@@ -420,8 +425,9 @@
 .failCell { display: flex; flex-direction: column; }
 .failTitle { font-size: 0.72rem; margin-bottom: 4px; overflow-wrap: anywhere; }
 .failTitle code { font-size: 0.68rem; color: var(--wb-ink); background: none; padding: 0; }
-.miniSvg { display: block; width: 100%; height: 90px; }
-.miniVal { font-size: 8px; fill: var(--wb-muted); font-family: var(--ifm-font-family-monospace); }
+.miniSvg { display: block; width: 100%; height: auto; }
+.miniVal { font-size: 8px; fill: var(--wb-ink); font-weight: 600; font-family: var(--ifm-font-family-monospace); }
+.miniLabel { font-size: 7.5px; fill: var(--wb-muted); font-family: var(--ifm-font-family-monospace); }
 .failDesc { font-size: 0.66rem; color: var(--wb-muted); line-height: 1.4; margin-top: 4px; }
 @media (max-width: 760px) {
   .failGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -500,13 +506,14 @@
 }
 .hAngle > span {
   display: inline-block;
-  transform: rotate(-52deg);
+  transform: rotate(-90deg);
   transform-origin: left bottom;
   white-space: nowrap;
   font-size: 0.64rem;
   line-height: 1;
   color: var(--wb-muted);
   letter-spacing: 0.02em;
+  margin-left: 0.62em;
 }
 .tierCell {
   font-weight: 700;

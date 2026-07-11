@@ -1538,3 +1538,13 @@ article header h1 {
     padding: 0;
   }
 }
+
+/* Blog code blocks: make comments visually distinct from commands */
+.prism-code .token.comment {
+  color: #6a9955;
+  font-style: italic;
+}
+[data-theme='dark'] .prism-code .token.comment {
+  color: #7fae6a;
+  font-style: italic;
+}

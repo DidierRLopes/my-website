@@ -1,10 +1,11 @@
 import React, { useMemo, useState } from 'react';
+import CodeBlock from '@theme/CodeBlock';
 import data from '@site/src/data/workspaceBench.json';
 import styles from './styles.module.css';
 
-const { TM_TOOLS, TM_TIER, TM_ANCHOR, TM_ROWS, SURFACE, DIST, issueMeaning, benchCopy, stepCopy, levelCopy, contractCopy, CALIB, TX, BENCH, ISSUES_MATRIX } = data;
+const { TM_TOOLS, TM_TIER, TM_ANCHOR, TM_ROWS, SURFACE, DIST, issueMeaning, benchCopy, stepCopy, levelCopy, contractCopy, CALIB, TX, BENCH, ISSUES_MATRIX, AUTH, AGG } = data;
 
-const TIERS = ['t0', 't1', 't2', 't3', 't4'];
+const LEVELS = ['t0', 't1', 't2', 't3', 't4'];
 
 const FAMILY_DESC = {
   create: 'create widgets', update: 'update widget params', delete: 'remove widgets',
@@ -17,19 +18,86 @@ const FAMILY_DESC = {
 const REPO = 'https://github.com/DidierRLopes/openbb-workspace-bench/blob/main/';
 
 const MODEL_META = {
-  'gpt-5.5': { color: '#2563eb', why: 'most advanced model' },
-  'sonnet-5': { color: '#0d9488', why: 'recent release, fairly affordable' },
-  'glm-5.2': { color: '#7c3aed', why: 'best open-weights model' },
-  'gpt-4.1-mini': { color: '#d97706', why: 'solid and cheap — the gating model' },
-  'gpt-oss-20b': { color: '#db2777', why: 'strong open-weights MoE' },
-  'qwen3-8b': { color: '#64748b', why: 'small dense model, runs locally' },
+  'gpt-5.5': { color: '#2563eb', short: 'gpt-5.5' },
+  'sonnet-5': { color: '#0d9488', short: 'sonnet 5' },
+  'glm-5.2': { color: '#7c3aed', short: 'glm-5.2' },
+  'gpt-4.1-mini': { color: '#d97706', short: 'gpt-4.1-mini' },
+  'gpt-oss-20b': { color: '#db2777', short: 'gpt-oss-20b' },
+  'qwen3-8b': { color: '#64748b', short: 'qwen3-8b' },
 };
 // red ramp aligned to model order, for the failure chart (fewer is better)
 const FAIL_COLORS = ['#fca5a5', '#f87171', '#ef4444', '#dc2626', '#b91c1c', '#7f1d1d'];
 
+// an example of what each stage produces / consumes (one MSFT walkthrough)
+const STEP_CODE = {
+  scenario: `{
+  "id": "gen_t1_create_price_performance_msft",
+  "prompt": "Discover the widget catalog and its schema before creating, then add the Price Performance widget for MSFT to the active dashboard.",
+  "fixtures": { "backends": [{ "name": "equities" }] },
+  "allowed_tools": ["get_workspace_snapshot", "list_available_widgets", "get_widget_schema", "get_params_options", "create_widget", "read_widget"],
+  "success": {
+    "required_widgets": [{
+      "origin": "Bench Equities",
+      "widget_id": "price_performance",
+      "data_args": { "symbol": "MSFT" },
+      "min_count": 1
+    }],
+    "layout": { "within_grid": true, "no_overlaps": true, "grid_width": 40 },
+    "trace_checks": {
+      "max_invalid_tool_calls": 0,
+      "must_call_schema_before_create": true,
+      "forbid_invented_widget_ids": true,
+      "max_repeated_snapshots": 1
+    }
+  },
+  "limits": { "max_turns": 7 }
+}`,
+  seed: `{
+  "fixtures": { "backends": [{ "name": "equities" }] },
+  "initial_state": {
+    "dashboard": {
+      "name": "Creation Task",
+      "activate": true,
+      "tabs": [{ "id": "", "name": "" }]
+    }
+  }
+}`,
+  discover: `{ "tool": "list_available_widgets", "args": { "origin": "Bench Equities" } }
+{ "tool": "get_widget_schema", "args": { "origin": "Bench Equities", "widget_id": "price_performance" } }`,
+  act: `{
+  "tool": "create_widget",
+  "args": {
+    "origin": "Bench Equities",
+    "widget_id": "price_performance",
+    "data_args": { "symbol": "MSFT" }
+  }
+}`,
+  snapshot: `{
+  "workspace_state": { "current_dashboard_uuid": "dash-1", "current_tab_id": "tab-1" },
+  "dashboards": [{ "dashboard_id": "dash-1", "name": "Creation Task" }],
+  "dashboard_composition": {
+    "name": "Creation Task",
+    "tabs": [{ "id": "tab-1", "name": "Overview" }],
+    "widgets": [{
+      "origin": "Bench Equities",
+      "widget_id": "price_performance",
+      "data_args": { "symbol": "MSFT" }
+    }]
+  }
+}`,
+  grade: `{
+  "task_id": "gen_t1_create_price_performance_msft",
+  "passed": true,
+  "score": 1.0,
+  "checks_passed": 7,
+  "checks_total": 7,
+  "issues": []
+}`,
+};
+
 // where each eval-loop stage lives in the repo
 const STEP_FILES = {
-  scenario: [['src/workspace_bench/core/scenario_packs/workspace_bench_v1/', 'the 300 scenario JSON files — one task each']],
+  scenario: [['src/workspace_bench/core/task_suites/workspace_bench_v1/', 'the 300 task JSON files — one file each']],
   seed: [['src/workspace_bench/workspace/fixtures.py', 'fixture backends: equities, macro, portfolio, Stark']],
   discover: [['src/workspace_bench/workspace/simulated_workspace.py', 'list_available_widgets, get_widget_schema']],
   act: [['src/workspace_bench/workspace/simulated_workspace.py', 'create_widget, update_widget, delete_widget, …']],
@@ -125,14 +193,14 @@ function Bar({ name, pct, label }) {
 }
 
 // ---------------------------------------------------------------- media slots
-export function MediaSlot({ id, caption, kind = 'image', src = null, youtube = null }) {
+export function MediaSlot({ id, caption, kind = 'image', src = null, youtube = null, start = null, maxWidth = null }) {
   return (
-    <figure className={styles.wb}>
+    <figure className={styles.wb} style={maxWidth ? { maxWidth, marginInline: 'auto' } : undefined}>
       <div className={styles.mediaSlot}>
         {youtube ? (
           <div className={styles.mediaFrame}>
             <iframe
-              src={`https://www.youtube.com/embed/${youtube}`}
+              src={`https://www.youtube.com/embed/${youtube}${start ? `?start=${start}` : ''}`}
               title={caption || id}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -227,7 +295,7 @@ export function PatternList() {
 
 const STEP_KEYS = ['scenario', 'seed', 'discover', 'act', 'snapshot', 'grade'];
 const STEP_LABELS = {
-  scenario: ['Scenario', 'task · checks'],
+  scenario: ['Task', 'prompt · rubric'],
   seed: ['Seed', 'fixture state'],
   discover: ['Discover', 'list · schema'],
   act: ['Act', 'create · repair'],
@@ -290,7 +358,7 @@ export function EvalLoopDiagram() {
     <Panel head="The eval loop" sub="click a step" pad={false}>
       <div className={styles.matrixScroll} style={{ padding: 16 }}>
         <svg className={styles.diagram} viewBox="0 0 760 288" role="img"
-             aria-label="The eval loop: a scenario seeds a deterministic workspace, the agent runs a discover and act turn loop, then the final state is snapshotted and graded.">
+             aria-label="The eval loop: a task seeds a deterministic workspace, the agent runs a discover and act turn loop, then the final state is snapshotted and graded.">
           <Arrow id="wb-arr-e" />
 
           {/* deterministic workspace boundary */}
@@ -320,6 +388,11 @@ export function EvalLoopDiagram() {
       <div className={styles.detailBox} aria-live="polite">
         <h4>{d.title}</h4>
         <p>{d.text}</p>
+        {STEP_CODE[active] ? (
+          <div className={styles.stepCode}>
+            <CodeBlock language="json">{STEP_CODE[active]}</CodeBlock>
+          </div>
+        ) : null}
         <p className={styles.repoLine}>in the repo:</p>
         <ul className={styles.repoList}>
           {STEP_FILES[active].map(([path, note]) => (
@@ -372,7 +445,7 @@ export function SurfaceBarChart() {
   }, []);
   const max = Math.max(...items.map((it) => it.count));
   return (
-    <Panel head="The full surface" sub="scenarios exercising each part · most to least">
+    <Panel head="The full surface" sub="tasks exercising each part · most to least">
       <div className={styles.hbarList}>
         {items.map((it) => (
           <div key={it.short} className={styles.hbarRow}>
@@ -393,15 +466,16 @@ export function SurfaceBarChart() {
 
 // ---------------------------------------------------------------- distribution at a glance
 export function DistributionGlance() {
-  // Tier and difficulty are tallied live from the scenarios on this page, so the
+  // Level and difficulty are tallied live from the tasks on this page, so the
   // reader can see they are real counts and not a hand-written summary.
   const groups = useMemo(() => {
-    const tier = {}, diff = {};
-    TIERS.forEach((t) => (tier[t] = 0));
-    for (const r of TM_ROWS) { tier[r[2]] += 1; diff[r[8]] = (diff[r[8]] || 0) + 1; }
+    const byLevel = {}, diff = {};
+    LEVELS.forEach((t) => (byLevel[t] = 0));
+    for (const r of TM_ROWS) { byLevel[r[2]] += 1; diff[r[8]] = (diff[r[8]] || 0) + 1; }
+    const CAT_LABEL = { L0: 'read', L1: 'single-widget', L2: 'dashboard', L3: 'platform', L4: 'repair' };
     return {
-      'by tier': TIERS.map((t) => [t, tier[t]]),
-      'by level': DIST['by level'],
+      'by level': LEVELS.map((t) => [t, byLevel[t]]),
+      'by category': (DIST['by level'] || []).map(([k, n]) => [CAT_LABEL[k] || k, n]),
       'by difficulty': [['easy', diff.easy], ['medium', diff.medium], ['hard', diff.hard]],
       'by backend': DIST['by backend'],
     };
@@ -409,13 +483,13 @@ export function DistributionGlance() {
   return (
     <Panel
       head="The distribution, at a glance"
-      sub="counted from the 300 certified scenarios"
+      sub="counted from the 300 certified tasks"
       note={
-        <>Every count is tallied from the certified pack, not hand-written: tier and difficulty are
-        computed live from the scenarios rendered on this page, level and backend from the same scenario
+        <>Every count is tallied from the certified suite, not hand-written: level and difficulty are
+        computed live from the tasks rendered on this page, category and backend from the same task
         tags. All four are quota-enforced at generation and re-checked by <code>workspace-bench validate</code> on
-        every run, so a regression fails CI. The per-scenario tags live in{' '}
-        <a href="https://github.com/DidierRLopes/openbb-workspace-bench/blob/main/docs/scenario-catalog.md">docs/scenario-catalog.md</a>.</>
+        every run, so a regression fails CI. The per-task documentation lives in{' '}
+        <a href="https://github.com/DidierRLopes/openbb-workspace-bench/blob/main/docs/task-catalog.md">docs/task-catalog.md</a>.</>
       }
     >
       <div className={styles.distGrid}>
@@ -458,7 +532,7 @@ export function ToolMatrix() {
           <span className={styles.familyDesc}>{FAMILY_DESC[family]}</span>
         </div>
         <div className={styles.matrixLegend}>
-          <span><span className={`${styles.tmMark} ${styles.tmAnchor}`}>x</span> the family's anchor tool, exercised at every tier</span>
+          <span><span className={`${styles.tmMark} ${styles.tmAnchor}`}>x</span> the family's anchor tool, exercised at every level</span>
           <span><span className={styles.tmMark}>x</span> another tool the reference solution uses</span>
         </div>
       </div>
@@ -467,19 +541,19 @@ export function ToolMatrix() {
           <thead>
             <tr>
               <th className={styles.hHoriz}>#</th>
-              <th className={styles.hHoriz}>tier</th>
+              <th className={styles.hHoriz}>level</th>
               <th className={styles.hHoriz}>test</th>
               {TM_TOOLS.map((t) => <th key={t} className={styles.hAngle}><span>{t}</span></th>)}
             </tr>
           </thead>
           <tbody>
             {rows.map((r, i) => {
-              const tierStart = i % 4 === 0;
+              const levelStart = i % 4 === 0;
               return (
                 <tr key={r[0]} onClick={() => setSel(i)}
-                    className={`${sel === i ? styles.rowActive : ''} ${tierStart && i !== 0 ? styles.tierBreak : ''}`}>
+                    className={`${sel === i ? styles.rowActive : ''} ${levelStart && i !== 0 ? styles.tierBreak : ''}`}>
                   <td>{i + 1}</td>
-                  {tierStart ? <td rowSpan={4} className={styles.tierCell}>{r[2]}</td> : null}
+                  {levelStart ? <td rowSpan={4} className={styles.tierCell}>{r[2]}</td> : null}
                   <td className={styles.tmId}>{r[0]}</td>
                   {TM_TOOLS.map((t, ti) => {
                     const used = r[3] & (1 << ti);
@@ -510,7 +584,6 @@ export function ToolMatrix() {
             <ul style={{ margin: 0, paddingLeft: 18, fontSize: '0.78rem' }}>
               {detail[7].map((c, i) => <li key={i}>{c}</li>)}
             </ul>
-            {detail[10] ? <p className={styles.tmMeta} style={{ marginTop: 8 }}>novelty: {detail[10]}</p> : null}
           </>
         ) : (
           <p>Every row is one certified scenario: click it for the analyst prompt, the reference tool sequence, and the pass criteria.</p>
@@ -524,7 +597,7 @@ export function ToolMatrix() {
 function popcount(n) { let c = 0; while (n) { c += n & 1; n >>>= 1; } return c; }
 
 export function CompositionHeatmap() {
-  // cell[tier][family] = rounded avg tools per episode (integer)
+  // cell[level][family] = rounded avg tools per episode (integer)
   const { value, lo, hi } = useMemo(() => {
     const cells = {};
     for (const r of TM_ROWS) {
@@ -533,7 +606,7 @@ export function CompositionHeatmap() {
     }
     const val = {};
     let mn = Infinity, mx = -Infinity;
-    for (const t of TIERS) for (const f of TM_FAMILIES) {
+    for (const t of LEVELS) for (const f of TM_FAMILIES) {
       const v = cells[`${t}|${f}`] || [];
       const avg = v.length ? Math.round(v.reduce((a, b) => a + b, 0) / v.length) : 0;
       val[`${t}|${f}`] = avg;
@@ -544,20 +617,19 @@ export function CompositionHeatmap() {
   return (
     <Panel
       head="Composition heatmap"
-      sub="tools per episode · tier × family"
-      note="Reading down a column, almost every family darkens — the same anchor capability wrapped in progressively more of the surface. The flat columns are deliberate too: layout stays a two-tool game at every tier because its difficulty comes from geometric precision, not composition."
+      sub="tools per episode · level × family"
       pad={false}
     >
       <div className={`${styles.tableWrap} ${styles.heatPad}`} style={{ display: 'flex', justifyContent: 'center' }}>
         <table className={`${styles.heat} ${styles.heatCentered}`}>
           <thead>
             <tr>
-              <th>tier</th>
+              <th>level</th>
               {TM_FAMILIES.map((f) => <th key={f} className={styles.heatFamCol}>{f}</th>)}
             </tr>
           </thead>
           <tbody>
-            {TIERS.map((t) => (
+            {LEVELS.map((t) => (
               <tr key={t}>
                 <td>{t}</td>
                 {TM_FAMILIES.map((f) => {
@@ -667,11 +739,11 @@ export function ContractsDiagram() {
 export function CalibrationLoopDiagram() {
   const m = 'url(#wb-arr-l)';
   const boxes = [
-    ['Generate', '15 families', '× 5 tiers'],
+    ['Generate', '15 families', '× 5 levels'],
     ['Certify', 'oracle passes', 'no-op fails'],
-    ['Gate', 'pass-rate band', 'per tier'],
-    ['Expose bugs', '3 real defects', 'caught pre-release'],
-    ['Fix generator', 'not one task,', 're-run all 300'],
+    ['Gate', 'pass-rate band', 'per level'],
+    ['Expose bugs', 'out-of-band =', 'generator bug'],
+    ['Fix generator', 'fix the template,', 'not one task'],
   ];
   const xs = [20, 169, 318, 467, 616];
   return (
@@ -705,11 +777,11 @@ export function BenchBoard() {
   return (
     <Panel
       head="WorkspaceBench"
-      sub="strict pass rate · 300 scenarios · single attempt · higher is better"
+      sub="strict pass rate · 300 tasks · single attempt · higher is better"
       note={
-        <>Strict pass = every grader check on the scenario passes; mean check score gives partial credit.
+        <>Strict pass = every grader check on the task passes; mean check score gives partial credit.
         Best score per row highlighted. All models at temperature 0 except GPT-5.5, which samples at
-        temperature 1. Each family cell is 20 scenarios, so one scenario moves it 5 points; read the family
+        temperature 1. Each family cell is 20 scenarios, so one task moves it 5 points; read the family
         block for failure fingerprints, not rankings. Full per-scenario data below and in{' '}
         <a href="https://github.com/DidierRLopes/openbb-workspace-bench/blob/main/runs/reports/calibration.json">runs/reports/calibration.json</a>.</>
       }
@@ -765,42 +837,42 @@ export function BenchBoard() {
   );
 }
 
-// ---------------------------------------------------------------- per-tier panels
-export function TierGroupedBars() {
-  const groups = TIERS.map((t) => ({ key: t, label: t }));
-  const values = TIERS.map((t, ti) => CALIB.map((m) => m.tiers[ti]));
+// ---------------------------------------------------------------- per-level panels
+export function LevelGroupedBars() {
+  const groups = LEVELS.map((t) => ({ key: t, label: t }));
+  const values = LEVELS.map((t, ti) => CALIB.map((m) => m.tiers[ti]));
   const colors = CALIB.map((m) => MODEL_META[m.slug].color);
   return (
-    <Panel head="Pass rate by structural tier" sub="grouped by model · higher is better"
-           note="Every model falls the same way, t0 to t4 — that shared shape is what makes the tiers a real difficulty axis and not just labels. The frontier stays high across the whole range; the small model collapses at t2 where episodes turn multi-step.">
+    <Panel head="Pass rate by level" sub="grouped by model · higher is better"
+           note="Every model falls the same way, t0 to t4 — that shared shape is what makes the levels a real difficulty axis and not just labels. The frontier stays high across the whole range; the small model collapses at t2 where episodes turn multi-step.">
       <ModelLegend />
       <GroupedColumns groups={groups} values={values} colors={colors} yMax={100} yFmt={(v) => `${v}%`} />
     </Panel>
   );
 }
 
-// gpt-4.1-mini's tier curve — the gating illustration
+// gpt-4.1-mini's level curve — the gating illustration
 export function GatingCurve() {
   const mini = CALIB.find((m) => m.slug === 'gpt-4.1-mini');
   const W = 460, padL = 34, padR = 16, padT = 18, padB = 30, plotH = 170;
   const H = padT + plotH + padB, plotW = W - padL - padR;
-  const bw = plotW / TIERS.length;
+  const bw = plotW / LEVELS.length;
   const y = (v) => padT + plotH * (1 - v / 100);
   const cxOf = (i) => padL + i * bw + bw / 2;
-  const line = TIERS.map((t, i) => `${cxOf(i)},${y(mini.tiers[i])}`).join(' ');
+  const line = LEVELS.map((t, i) => `${cxOf(i)},${y(mini.tiers[i])}`).join(' ');
   return (
     <Panel head="The gating curve" sub="gpt-4.1-mini · pass rate falls t0 → t4"
-           note="Monotonic: 98 → 92 → 77 → 52 → 33. A flat or bumpy curve would mean the tier labels are fiction; this steady fall is what says the difficulty axis is real.">
+           note="Monotonic: 98 → 92 → 77 → 52 → 33. A flat or bumpy curve would mean the level labels are fiction; this steady fall is what says the difficulty axis is real.">
       <div className={styles.matrixScroll}>
         <svg className={styles.chartSvg} viewBox={`0 0 ${W} ${H}`} role="img"
-             aria-label="gpt-4.1-mini pass rate falling monotonically across tiers t0 to t4.">
+             aria-label="gpt-4.1-mini pass rate falling monotonically across levels t0 to t4.">
           {[0, 25, 50, 75, 100].map((tk) => (
             <g key={tk}>
               <line x1={padL} y1={y(tk)} x2={W - padR} y2={y(tk)} className={styles.grid} />
               <text x={padL - 6} y={y(tk) + 3} textAnchor="end" className={styles.axisText}>{tk}%</text>
             </g>
           ))}
-          {TIERS.map((t, i) => {
+          {LEVELS.map((t, i) => {
             const v = mini.tiers[i];
             return (
               <rect key={t} x={padL + i * bw + bw * 0.26} y={y(v)} width={bw * 0.48} height={plotH * v / 100}
@@ -808,7 +880,7 @@ export function GatingCurve() {
             );
           })}
           <polyline points={line} fill="none" style={{ stroke: 'var(--wb-accent-strong)' }} strokeWidth="1.5" strokeDasharray="3 3" />
-          {TIERS.map((t, i) => {
+          {LEVELS.map((t, i) => {
             const v = mini.tiers[i];
             const cx = cxOf(i);
             return (
@@ -821,6 +893,456 @@ export function GatingCurve() {
             );
           })}
         </svg>
+      </div>
+    </Panel>
+  );
+}
+
+function fmtPct(v) {
+  return `${Number.isInteger(v) ? v : v.toFixed(1)}%`;
+}
+
+function fmtResult(r) {
+  return r ? `${fmtPct(r.rate)} · ${r.passed}/${r.total}` : '—';
+}
+
+const BUILD_FAMILIES = [
+  ['types', 'content types tab', 'markdown, metric, pdf, html, iframe, youtube, newsfeed, multi-file viewer'],
+  ['settings', 'widget settings tab', 'staleTime, refetchInterval, runButton, gridData over base types'],
+  ['params', 'parameters tab', 'text, number, date, boolean, ticker, endpoint dropdowns, tabs switchers'],
+  ['forms', 'forms tab', 'form params with inputParams + submit endpoint, buttons'],
+  ['aggrid', 'tables tab', 'table + server-side row model; columns derived from served rows'],
+  ['charts', 'charting tab', 'plotly, highcharts, vega-lite dialects'],
+  ['advanced', 'advanced tab', 'TradingView charting, websocket live grids, omni widgets'],
+  ['grouping', 'param grouping tab', 'shared param groups, cell-click → groupBy wiring'],
+  ['apps', 'app side', 'assemble served widgets into multi-tab apps.json dashboards'],
+  ['extend', 'app side', 'modify a live backend without breaking what it already serves'],
+  ['e2e', 'capstone · t4 only', 'author → publish → instantiate → configure → document, ×12'],
+];
+
+export function BuildFamilies() {
+  return (
+    <Panel head="Eleven families of building work" sub="8 widget-side (one per onboarding-app tab) · 2 app-side · 1 capstone"
+           note="Each family owns its widget and param types by construction — generation fails if a family stops building its types — so all 16 widget types and every param type are covered exactly once. 4 tasks per family per level, plus the t4-only e2e capstone: 212 total.">
+      <div className={styles.failGrid}>
+        {BUILD_FAMILIES.map(([fam, origin, owns]) => (
+          <div key={fam} className={styles.failCell}
+               style={fam === 'e2e' ? { gridColumn: 'span 2' } : undefined}>
+            <div className={styles.failTitle}><code>{fam}</code> <span className={styles.benchMuted}>· {origin}</span></div>
+            <div className={styles.failDesc}>{owns}</div>
+          </div>
+        ))}
+      </div>
+    </Panel>
+  );
+}
+
+export function BuildGatingCurve() {
+  const stair = AUTH.staircase ? AUTH.staircase.curve : null;
+  const W = 460, padL = 34, padR = 16, padT = 18, padB = 30, plotH = 170;
+  const H = padT + plotH + padB, plotW = W - padL - padR;
+  const bw = plotW / AUTH.curve.length;
+  const y = (v) => padT + plotH * (1 - v / 100);
+  const cxOf = (i) => padL + i * bw + bw / 2;
+  const stairColor = 'var(--wb-accent-strong)';
+  const gateColor = '#d97706';
+  const lineOf = (curve) => curve.map((r, i) => `${cxOf(i)},${y(r.rate)}`).join(' ');
+  return (
+    <Panel head="The build-openbb-apps gating curve" sub={`${AUTH.model} · official gate · one attempt · temperature 0`}
+           note="Monotonic: 95.0 → 90.0 → 72.5 → 62.5 → 48.1 — strictly decreasing, no tied tiers, same standard as the core suite's gating curve. Each rung is guaranteed to contain the one below by construction (t1 grades the full t0 widget plus the app wrapper), so the fall is structural, not luck.">
+      {stair ? (
+        <div className={styles.legendRow}>
+          <span className={styles.legendItem}>
+            <span className={styles.legendSwatch} style={{ background: stairColor }} />
+            calibration proxy
+          </span>
+          <span className={styles.legendItem}>
+            <span className={styles.legendSwatch} style={{ background: gateColor }} />
+            official gate — {AUTH.model}
+          </span>
+        </div>
+      ) : null}
+      <div className={styles.matrixScroll}>
+        <svg className={styles.chartSvg} viewBox={`0 0 ${W} ${H}`} role="img"
+             aria-label="Proxy acceptance staircase falling strictly from t0 to t4, with the official gpt-4.1-mini gate curve tracking the same shape.">
+          {[0, 25, 50, 75, 100].map((tk) => (
+            <g key={tk}>
+              <line x1={padL} y1={y(tk)} x2={W - padR} y2={y(tk)} className={styles.grid} />
+              <text x={padL - 6} y={y(tk) + 3} textAnchor="end" className={styles.axisText}>{tk}%</text>
+            </g>
+          ))}
+          {AUTH.curve.map((r, i) => (
+            <rect key={r.level} x={padL + i * bw + bw * 0.26} y={y(r.rate)} width={bw * 0.48}
+                  height={plotH * r.rate / 100} rx="2" style={{ fill: 'var(--wb-accent)' }} />
+          ))}
+          {stair ? (
+            <polyline points={lineOf(stair)} fill="none" style={{ stroke: stairColor }}
+                      strokeWidth="1.2" strokeDasharray="2 3" />
+          ) : null}
+          <polyline points={lineOf(AUTH.curve)} fill="none" style={{ stroke: gateColor }} strokeWidth="1.5" strokeDasharray="3 3" />
+          {AUTH.curve.map((r, i) => {
+            const cx = cxOf(i);
+            return (
+              <g key={r.level}>
+                <circle cx={cx} cy={y(r.rate)} r="2.6" style={{ fill: gateColor }} />
+                <text x={cx} y={y(r.rate) - 8} textAnchor="middle" className={styles.axisText}
+                      style={{ fill: 'var(--wb-ink)', fontWeight: 600 }}>{fmtPct(r.rate)}</text>
+                <text x={cx} y={padT + plotH + 17} textAnchor="middle" className={styles.axisText}>{r.level}</text>
+              </g>
+            );
+          })}
+        </svg>
+      </div>
+    </Panel>
+  );
+}
+
+export function BuildBoard() {
+  const board = AUTH.board || [];
+  if (board.length > 1) {
+    const models = [...board].sort((a, b) => b.rate - a.rate);
+    const span = models.length + 1;
+    const bestRow = (vals) => Math.max(...vals);
+    return (
+      <Panel
+        head="build-openbb-apps — the board"
+        sub={`strict pass rate · ${AUTH.overall.total} tasks · single attempt · higher is better`}
+        note={
+          <>Strict pass = every grader check on the task passes; mean check score gives partial credit.
+          Best score per row highlighted. All models at temperature 0 except GPT-5.5, which samples at
+          temperature 1. Each family cell is 20 scenarios (e2e: 12), so one task moves it 5 points — read
+          the family block for failure fingerprints, not rankings. Full per-scenario data in{' '}
+          <a href="https://github.com/DidierRLopes/openbb-workspace-bench/blob/main/runs/reports/suites.json">runs/reports/suites.json</a>.</>
+        }
+        pad={false}
+      >
+        <div className={styles.panelBody}>
+          <div className={styles.colsChart} role="img" aria-label="Overall strict pass rate by model on the build-openbb-apps suite">
+            {models.map((m) => (
+              <div className={styles.col} key={m.slug}>
+                <span className={styles.colVal}>{fmtPct(m.rate)}</span>
+                <div className={styles.colTrack}>
+                  <div className={styles.colFill} style={{ height: `${m.rate}%` }} />
+                </div>
+                <span className={styles.colName}>{m.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className={styles.matrixScroll}>
+          <table className={styles.benchTable}>
+            <thead>
+              <tr>
+                <th>&nbsp;</th>
+                {models.map((m) => (
+                  <th key={m.slug}>{m.label}<span className={styles.benchSub}>{m.passed}/{m.total}</span></th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              <tr className={styles.benchOverall}>
+                <th scope="row">Overall strict</th>
+                {models.map((m) => (
+                  <td key={m.slug} className={m.rate === bestRow(models.map((x) => x.rate)) ? styles.best : ''}>
+                    {fmtPct(m.rate)}
+                  </td>
+                ))}
+              </tr>
+              <tr>
+                <th scope="row">Mean check score</th>
+                {models.map((m) => (
+                  <td key={m.slug} className={m.mean === bestRow(models.map((x) => x.mean)) ? styles.best : ''}>
+                    {fmtPct(m.mean)}
+                  </td>
+                ))}
+              </tr>
+              <tr className={styles.benchGroup}><td colSpan={span}>by level</td></tr>
+              {LEVELS.map((t, ti) => {
+                const best = bestRow(models.map((m) => m.levels[ti]));
+                return (
+                  <tr key={t}>
+                    <th scope="row">{t}</th>
+                    {models.map((m) => (
+                      <td key={m.slug} className={m.levels[ti] === best ? styles.best : ''}>
+                        {fmtPct(m.levels[ti])}
+                      </td>
+                    ))}
+                  </tr>
+                );
+              })}
+              <tr className={styles.benchGroup}><td colSpan={span}>by family</td></tr>
+              {(AUTH.family_order || []).map((fam) => {
+                const best = bestRow(models.map((m) => m.families[fam] ?? 0));
+                return (
+                  <tr key={fam}>
+                    <th scope="row"><code>{fam}</code></th>
+                    {models.map((m) => (
+                      <td key={m.slug} className={(m.families[fam] ?? 0) === best ? styles.best : ''}>
+                        {fmtPct(m.families[fam] ?? 0)}
+                      </td>
+                    ))}
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </Panel>
+    );
+  }
+  return (
+    <Panel head="build-openbb-apps — the board" sub="gpt-4.1-mini · gating model only" pad={false}>
+      <div className={styles.tableWrap}>
+        <table className={styles.table}>
+          <thead>
+            <tr>
+              <th>slice</th>
+              <th>passed / total</th>
+              <th>rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Overall</td>
+              <td className={styles.mono}>{AUTH.overall.passed}/{AUTH.overall.total}</td>
+              <td className={`${styles.mono} ${styles.pass}`}>{fmtPct(AUTH.overall.rate)} strict</td>
+            </tr>
+            <tr>
+              <td>Mean check score</td>
+              <td className={styles.benchMuted}>—</td>
+              <td className={styles.mono}>{fmtPct(AUTH.mean_score)}</td>
+            </tr>
+            <tr className={styles.benchGroup}><td colSpan={3}>by level</td></tr>
+            {AUTH.curve.map((r) => (
+              <tr key={r.level}>
+                <td>{r.level}</td>
+                <td className={styles.mono}>{r.passed}/{r.total}</td>
+                <td className={styles.mono}>{fmtPct(r.rate)}</td>
+              </tr>
+            ))}
+            <tr className={styles.benchGroup}><td colSpan={3}>by family</td></tr>
+            {AUTH.families.map((r) => (
+              <tr key={r.family}>
+                <td><code>{r.family}</code></td>
+                <td className={styles.mono}>{r.passed}/{r.total}</td>
+                <td className={styles.mono}>{fmtPct(r.rate)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </Panel>
+  );
+}
+
+export function BuildFailures() {
+  const im = AUTH.issues_matrix;
+  const board = AUTH.board || [];
+  if (im && board.length > 1) {
+    const metas = board.map((b) => ({
+      label: b.label,
+      short: MODEL_META[b.slug] ? MODEL_META[b.slug].short : b.slug,
+    }));
+    const max = Math.max(...im.codes.flatMap((c) => im.counts[c]));
+    return (
+      <Panel head="build-openbb-apps failure analysis" sub="scenarios tripping each check, by model · fewer is better"
+             note="Fewer is better; every failed check maps to a stable issue code. The shapes split cleanly: the mid-field piles up on widget_def_mismatch (the derivation skill), missing_custom_backend marks payloads that never survived validation, and the small model trips every code at once. Not every failure is the model: the gpt-oss:20b bar includes six episodes its local serving stack crashed, provenance-stamped in the run data.">
+        <div className={styles.legendRow}>
+          {board.map((b, i) => (
+            <span key={b.slug} className={styles.legendItem}>
+              <span className={styles.legendSwatch} style={{ background: FAIL_COLORS[i] }} />
+              {b.label}
+            </span>
+          ))}
+        </div>
+        <div className={styles.failGrid}>
+          {im.codes.map((c) => (
+            <div key={c} className={styles.failCell}>
+              <div className={styles.failTitle}><code>{c}</code></div>
+              <MiniVBars values={im.counts[c]} max={max} colors={FAIL_COLORS} metas={metas} />
+              <div className={styles.failDesc}>{issueMeaning[c] || 'a grader check failure'}</div>
+            </div>
+          ))}
+        </div>
+      </Panel>
+    );
+  }
+  const denom = Math.max(1, AUTH.issues.length - 1);
+  const maxCount = Math.max(...AUTH.issues.map((r) => r.count));
+  return (
+    <Panel head="build-openbb-apps failure analysis" sub="issue codes across failures · gpt-4.1-mini">
+      <div className={styles.hbarList}>
+        {AUTH.issues.map((r, i) => {
+          const color = FAIL_COLORS[Math.round(((denom - i) / denom) * (FAIL_COLORS.length - 1))];
+          return (
+            <div key={r.code} className={styles.hbarRow}>
+              <div className={styles.hbarLabel}>
+                <div className={styles.hbarName}>{r.code}</div>
+              </div>
+              <div className={styles.hbarTrack}>
+                <div className={styles.hbarFill} style={{ width: `${(100 * r.count) / maxCount}%`, background: color }} />
+              </div>
+              <span className={styles.hbarVal}>{r.count}</span>
+            </div>
+          );
+        })}
+      </div>
+    </Panel>
+  );
+}
+
+
+function rubricLines(rubric) {
+  const lines = [];
+  for (const wd of rubric.required_widget_defs || []) {
+    const head = `widget \`${wd.widget_id}\` on "${wd.backend_name}"`;
+    const expect = wd.expect ? Object.entries(wd.expect).map(([k, v]) => `${k} = ${JSON.stringify(v)}`) : [];
+    lines.push({ head, items: expect });
+    if (wd.columns_include) lines.push({ head: `  columns must include`, items: wd.columns_include.map((c) => Object.entries(c).map(([k, v]) => `${k}: ${JSON.stringify(v)}`).join(' · ')) });
+    if (wd.params_include) lines.push({ head: `  params must include`, items: wd.params_include.map((c) => Object.entries(c).map(([k, v]) => `${k}: ${JSON.stringify(v)}`).join(' · ')) });
+  }
+  for (const ad of rubric.required_app_defs || []) {
+    const head = `app "${ad.name || ad.app_name || '?'}" on "${ad.backend_name}"`;
+    const rest = Object.entries(ad).filter(([k]) => !['backend_name', 'name', 'app_name'].includes(k));
+    lines.push({ head, items: rest.map(([k, v]) => `${k} = ${JSON.stringify(v)}`) });
+  }
+  for (const rw of rubric.required_widgets || []) {
+    lines.push({ head: `dashboard must show widget \`${rw.widget_id}\``, items: Object.entries(rw).filter(([k]) => k !== 'widget_id').map(([k, v]) => `${k} = ${JSON.stringify(v)}`) });
+  }
+  for (const gn of rubric.required_generated_widgets || []) {
+    lines.push({ head: 'required note', items: Object.entries(gn).map(([k, v]) => `${k} = ${JSON.stringify(v)}`) });
+  }
+  if (rubric.trace_checks) lines.push({ head: 'trace discipline', items: Object.entries(rubric.trace_checks).map(([k, v]) => `${k} = ${JSON.stringify(v)}`) });
+  return lines;
+}
+
+export function BuildTaskExplorer() {
+  const [level, setLevel] = useState('t0');
+  const [sel, setSel] = useState(null);
+  const tx = AUTH.tx;
+  const rows = useMemo(() => (tx ? tx.tasks.filter((s) => s.t === level) : []), [tx, level]);
+  if (!tx) return null;
+  const detail = sel !== null ? rows[sel] : null;
+  const totals = tx.short.map((_, col) => rows.reduce((a, s) => a + s.p[col], 0));
+  return (
+    <Panel head="Every build task, clickable" sub="pick a level · click a task for its brief and rubric" pad={false}>
+      <div className={styles.btnRow} style={{ padding: 16 }}>
+        <span className={styles.btnLabel}>Level</span>
+        {LEVELS.map((t) => (
+          <button key={t} className={`${styles.btn} ${level === t ? styles.btnActive : ''}`}
+                  onClick={() => { setLevel(t); setSel(null); }}>{t}</button>
+        ))}
+      </div>
+      <p className={styles.tmMeta} style={{ padding: '0 16px' }}>
+        {rows.length} tasks · sorted by family · a rubric check fails the task unless every graded value matches
+      </p>
+      <div className={styles.matrixScroll}>
+        <table className={styles.txTable}>
+          <thead>
+            <tr>
+              <th>family</th><th>task</th>
+              {tx.short.map((m) => <th key={m}>{m}</th>)}
+              <th>passed</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((s, i) => (
+              <tr key={s.id} onClick={() => setSel(i)} className={sel === i ? styles.rowActive : ''}>
+                <td>{s.f}</td>
+                <td className={styles.txId}>{s.title || s.id}</td>
+                {s.p.map((v, j) => (
+                  <td key={j}>{v ? <span className={styles.pass}>✓</span> : <span className={styles.fail}>✕</span>}</td>
+                ))}
+                <td className={styles.mono}>{s.p.reduce((a, b) => a + b, 0)}/{tx.short.length}</td>
+              </tr>
+            ))}
+          </tbody>
+          <tfoot>
+            <tr>
+              <td></td><td style={{ textAlign: 'left' }}>level total</td>
+              {totals.map((t, i) => <td key={i}>{t}</td>)}
+              <td>/{rows.length}</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div className={styles.detailBox} aria-live="polite">
+        {detail ? (
+          <>
+            <h4 style={{ overflowWrap: 'anywhere' }}>{detail.title || detail.id}</h4>
+            <p className={styles.tmMeta}>
+              <code>{detail.id}</code> · {detail.f} family · {detail.t} · {detail.d} · turn budget {detail.turns}
+            </p>
+            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', margin: '6px 0 10px' }}>
+              {tx.labels.map((label, i) => (
+                <span key={label} style={{ fontSize: '0.75rem' }}>
+                  {detail.p[i] ? <span className={styles.pass}>✓</span> : <span className={styles.fail}>✕</span>}{' '}
+                  {label}{!detail.p[i] && detail.i[i] ? <span style={{ color: 'var(--wb-muted)' }}> ({detail.i[i]})</span> : null}
+                </span>
+              ))}
+            </div>
+            <p className={styles.tmMeta} style={{ marginBottom: 4 }}><strong>The brief</strong> (what the model is told):</p>
+            <p style={{ fontSize: '0.78rem', lineHeight: 1.55, background: 'var(--wb-chip)', padding: '8px 10px', borderRadius: 4 }}>{detail.prompt}</p>
+            <p className={styles.tmMeta} style={{ margin: '8px 0 4px' }}><strong>The rubric</strong> (every check must pass):</p>
+            <div style={{ fontSize: '0.74rem', lineHeight: 1.5, fontFamily: 'var(--ifm-font-family-monospace)' }}>
+              {rubricLines(detail.rubric).map((g, gi) => (
+                <div key={gi} style={{ marginBottom: 6 }}>
+                  <div style={{ fontWeight: 600 }}>{g.head}</div>
+                  {g.items.map((it, ii) => <div key={ii} style={{ paddingLeft: 14, color: 'var(--wb-muted)' }}>{it}</div>)}
+                </div>
+              ))}
+            </div>
+          </>
+        ) : (
+          <p>Each cell is one model's strict verdict on one task. Click a row to see the words-form brief the model received and the exact rubric it was graded against.</p>
+        )}
+      </div>
+    </Panel>
+  );
+}
+
+export function SuitesAggregate() {
+  const names = AGG.suites.map((c) => c.name);
+  const hasPending = AGG.models.some((m) => m.pending.length);
+  const totalScenarios = AGG.suites.reduce((s, c) => s + c.scenarios, 0);
+  return (
+    <Panel
+      head="Suites — separable and pooled"
+      sub={`per-suite results + the pooled ${totalScenarios}-scenario aggregate`}
+      note={
+        <>Pooled = scenario counts added across suites, never averaged percentages — adding a
+        suite simply extends the pool. Sorted by pooled rate.
+        {hasPending ? ' * pooled over the suites run so far.' : ''}</>
+      }
+      pad={false}
+    >
+      <div className={styles.matrixScroll}>
+        <table className={styles.benchTable}>
+          <thead>
+            <tr>
+              <th>&nbsp;</th>
+              {AGG.suites.map((c) => (
+                <th key={c.name}>{c.name}<span className={styles.benchSub}>{c.scenarios} scenarios</span></th>
+              ))}
+              <th>pooled<span className={styles.benchSub}>512 scenarios</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            {[...AGG.models].sort((a, b) => b.pooled.rate - a.pooled.rate).map((m) => (
+              <tr key={m.slug}>
+                <th scope="row">{m.label}</th>
+                {names.map((name) => (
+                  <td key={name} className={m.per[name] ? '' : styles.benchMuted}>
+                    {m.per[name] ? fmtResult(m.per[name]) : (m.pending.includes(name) ? 'pending' : '—')}
+                  </td>
+                ))}
+                <td className={m.pending.length ? styles.benchMuted : styles.best}>
+                  {fmtResult(m.pooled)}{m.pending.length ? '*' : ''}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </Panel>
   );
@@ -846,7 +1368,7 @@ export function CalibExplorer() {
         <p style={{ margin: '0 0 12px', fontSize: '0.85rem' }}>
           <strong>strict {m.strict}/300</strong> · mean score {m.mean}% · {m.note}
         </p>
-        {TIERS.map((t, i) => (
+        {LEVELS.map((t, i) => (
           <Bar key={t} name={t} pct={m.tiers[i]} label={`${m.tiers[i]}%`} />
         ))}
       </div>
@@ -855,21 +1377,31 @@ export function CalibExplorer() {
 }
 
 // ---------------------------------------------------------------- failure analysis
-function MiniVBars({ values, max, colors }) {
-  const W = 200, H = 100, padT = 15, padB = 4;
+function MiniVBars({ values, max, colors, metas }) {
+  const W = 220, H = 150, padT = 16, padB = 40;
   const n = values.length, bw = W / n, plotH = H - padT - padB;
   const y = (v) => padT + plotH * (1 - v / max);
   return (
-    <svg className={styles.miniSvg} viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" role="img">
-      {values.map((v, i) => (
-        <g key={i}>
-          <rect x={i * bw + bw * 0.16} y={y(v)} width={bw * 0.68} height={plotH * v / max}
-                rx="1.5" style={{ fill: colors[i] }}>
-            <title>{`${CALIB[i].label}: ${v}`}</title>
-          </rect>
-          <text x={i * bw + bw / 2} y={y(v) - 3} textAnchor="middle" className={styles.miniVal}>{v}</text>
-        </g>
-      ))}
+    <svg className={styles.miniSvg} viewBox={`0 0 ${W} ${H}`} role="img">
+      {values.map((v, i) => {
+        const cx = i * bw + bw / 2;
+        const meta = metas
+          ? metas[i]
+          : { label: CALIB[i].label, short: MODEL_META[CALIB[i].slug].short };
+        return (
+          <g key={i}>
+            <rect x={i * bw + bw * 0.16} y={y(v)} width={bw * 0.68} height={plotH * v / max}
+                  rx="1.5" style={{ fill: colors[i] }}>
+              <title>{`${meta.label}: ${v}`}</title>
+            </rect>
+            <text x={cx} y={y(v) - 4} textAnchor="middle" className={styles.miniVal}>{v}</text>
+            <text x={cx} y={padT + plotH + 8} className={styles.miniLabel}
+                  transform={`rotate(-45 ${cx} ${padT + plotH + 8})`} textAnchor="end">
+              {meta.short}
+            </text>
+          </g>
+        );
+      })}
     </svg>
   );
 }
@@ -893,17 +1425,17 @@ export function FailureAnalysis() {
   );
 }
 
-// ---------------------------------------------------------------- tier explorer
+// ---------------------------------------------------------------- task explorer
 const TX_PROMPTS = Object.fromEntries(TM_ROWS.map((r) => ['gen_' + r[0], r[5]]));
 
 function txShort(s) {
   return s.id.replace(new RegExp(`^gen_${s.t}_(${s.f}|app|skill)_?`), '') || s.id;
 }
 
-export function TierExplorer() {
-  const [tier, setTier] = useState('t0');
+export function TaskExplorer() {
+  const [level, setLevel] = useState('t0');
   const [sel, setSel] = useState(null);
-  const rows = useMemo(() => TX.scenarios.filter((s) => s.t === tier), [tier]);
+  const rows = useMemo(() => TX.scenarios.filter((s) => s.t === level), [level]);
   const contested = rows.filter((s) => {
     const n = s.p.reduce((a, b) => a + b, 0);
     return n > 0 && n < TX.order.length;
@@ -911,16 +1443,16 @@ export function TierExplorer() {
   const totals = TX.order.map((_, col) => rows.reduce((a, s) => a + s.p[col], 0));
   const detail = sel !== null ? rows[sel] : null;
   return (
-    <Panel head="Scenario × model" sub="pick a tier · every scenario · click a row" pad={false}>
+    <Panel head="Task × model" sub="pick a level · every task · click a row" pad={false}>
       <div className={styles.btnRow} style={{ padding: 16 }}>
-        <span className={styles.btnLabel}>Tier</span>
-        {TIERS.map((t) => (
-          <button key={t} className={`${styles.btn} ${tier === t ? styles.btnActive : ''}`}
-                  onClick={() => { setTier(t); setSel(null); }}>{t}</button>
+        <span className={styles.btnLabel}>Level</span>
+        {LEVELS.map((t) => (
+          <button key={t} className={`${styles.btn} ${level === t ? styles.btnActive : ''}`}
+                  onClick={() => { setLevel(t); setSel(null); }}>{t}</button>
         ))}
       </div>
       <p className={styles.tmMeta} style={{ padding: '0 16px' }}>
-        {rows.length} scenarios · {contested} contested (models disagree) · sorted by family
+        {rows.length} tasks · {contested} contested (models disagree) · sorted by family
       </p>
       <div className={styles.matrixScroll}>
         <table className={styles.txTable}>
@@ -948,7 +1480,7 @@ export function TierExplorer() {
           </tbody>
           <tfoot>
             <tr>
-              <td></td><td style={{ textAlign: 'left' }}>tier total</td>
+              <td></td><td style={{ textAlign: 'left' }}>level total</td>
               {totals.map((t, i) => <td key={i}>{t}</td>)}
               <td>/{rows.length}</td>
             </tr>
@@ -974,7 +1506,7 @@ export function TierExplorer() {
             ) : null}
           </>
         ) : (
-          <p>Each cell is one model's strict verdict on one scenario. Click a row to see per-model scores, the first failed check, and the task prompt.</p>
+          <p>Each cell is one model's strict verdict on one task. Click a row to see per-model scores, the first failed check, and the task prompt.</p>
         )}
       </div>
     </Panel>

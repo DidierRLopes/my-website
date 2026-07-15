@@ -27989,21 +27989,22 @@ tags:
 - agents
 - evals
 - openbb
-description: "WorkspaceBench measures how well AI agents operate OpenBB Workspace over MCP: 300 certified scenarios, six models, one grader — and what it tells us about the product and which agents to trust."
+description: "WorkspaceBench measures how well AI agents operate OpenBB Workspace over MCP: 300 certified tasks, six models, one grader — and what it tells us about the product and which agents to trust."
 image: /blog/workspacebench-measuring-agents-openbb-workspace/workspacebench-measuring-agents-openbb-workspace-durable-artifact.png
 hideSidebar: true
+draft: true
 ---
 
 import BrowserOnly from '@docusaurus/BrowserOnly';
 
-A few weeks ago at NY Tech Week I gave a talk on centralizing dashboards and agentic workflows in OpenBB Workspace. At the end I talked about how I'm seeing more analysts and quants using Claude Code and Codex to drive their work - and so we need to adapt the workspace to make it agent first.
+A few weeks ago at NY Tech Week I gave [a talk on centralizing dashboards and agentic workflows in OpenBB Workspace](https://youtu.be/7fDTDYh2NJ4?t=1210). At the end I talked about how I'm seeing more analysts and quants using Claude Code and Codex to drive their work - and so we need to adapt the workspace to make it agent first.
 
-And this is why we had just announced [Workspace MCP](https://openbb.co/blog/introducing-workspace-mcp/), which enables agents to work with the workspace by reading data, building dashboards, and assembling whole apps.
+And this is why we had just announced [Workspace MCP](https://openbb.co/blog/introducing-workspace-mcp/), which enables agents to work with the workspace by reading data, building dashboards, and assembling whole apps. Here's how to get started with it:
 
 <BrowserOnly>
   {() => {
     const { MediaSlot } = require('@site/src/components/WorkspaceBench/InteractiveDashboard');
-    return <MediaSlot id="ny-tech-week-talk" youtube="7fDTDYh2NJ4" start="1210" kind="video" caption="NY Tech Week: agents driving OpenBB Workspace over MCP." />;
+    return <MediaSlot id="workspace-mcp-getting-started" youtube="jpxeFHFJFbo" kind="video" maxWidth="640px" caption="Getting started with Workspace MCP." />;
   }}
 </BrowserOnly>
 
@@ -28011,7 +28012,9 @@ If agents are going to drive this workspace for real analysts, we (OpenBB) need 
 
 This has lead me to build [WorkspaceBench](https://github.com/DidierRLopes/openbb-workspace-bench).
 
-It includes the harness, a deterministic workspace simulator, 300 different synthethically generated scenarios, graders, and everything else. The [Stark Industries mock enterprise apps](https://github.com/DidierRLopes/stark-industries-demo), which I used for the demo above, is where the benchmark's scenarios come from — the same widgets and apps, turned into tasks.
+It includes the harness, a deterministic workspace simulator, 300 different synthethically generated tasks, graders, and everything else. The [Stark Industries mock enterprise apps](https://github.com/DidierRLopes/stark-industries-demo), which I used for the demo above, is where the benchmark's tasks come from — the same widgets and apps, turned into tasks.
+
+One warning before we start, because it shaped everything below: AI-generated evals are easy to produce and hard to make sound. If you don't keep going back to the underlying data — traces, per-check results, run-to-run flips — you are building on a weak foundation. OpenAI's [Separating signal from noise in coding evaluations](https://openai.com/index/separating-signal-from-noise-coding-evaluations/) makes this point well, and it matches everything I ran into here.
 
 <!-- truncate -->
 
@@ -28091,7 +28094,7 @@ Then it checks:
 - Note that at least mentions the required terms - AAPL, EPS, revenue (a presence check, not a values check!)
 - Clean trace — i.e. schema fetched before creating anything, zero invalid calls.
 
-Either every check passes or the scenario fails; there is no partial credit. This is your typical rubric-graded benchmark (itemized rubric per task), except that in this case it's a verifiable reward rather than an LLM judge interpretation.
+Either every check passes or the task fails; there is no partial credit. This is your typical rubric-graded benchmark (itemized rubric per task), except that in this case it's a verifiable reward rather than an LLM judge interpretation.
 
 This is just one example.
 
@@ -28106,7 +28109,7 @@ I picked the following models for testing:
 - **GPT-5.5** — the most advanced model available
 - **Claude Sonnet 5** — a recent release, and fairly affordable (and more affordable than Claude Fable 5)
 - **GLM-5.2** — the best open-weights model right now
-- **gpt-4.1-mini** — a solid, cheap model, and what I used as the gating model to calibrate the tiers (more on this later)
+- **gpt-4.1-mini** — a solid, cheap model, and what I used as the gating model to calibrate the levels (more on this later)
 - **gpt-oss:20b** — a strong open-weights mixture-of-experts
 - **Qwen3 8B** — a small open-weights dense model
 
@@ -28120,14 +28123,14 @@ What an LLM can access over MCP is a subset of what a person can do in the works
 
 As a matter of fact, a coding agent like Codex can use the in-app browser, and Claude Code can use the /chrome tool to navigate the browser, but I am ignoring this. So whatever the scores are in this post - treat them as a lower bound of what an agent can really do navigating the workspace. I'm trying to evaluate the raw model (without including any harness).
 
-The benchmark can't call the real hosted MCP server on every run - that wouldn't scale well. So I shared the Workspace MCP code (which we actually had open source [here](https://github.com/OpenBB-finance/workspace-mcp)) with my coding agent so it could build a simulator. A deterministic state machine that has the exact same tool contract - tool names, argument shapes and error responses. And to make sure the simulator doesn't quietly drift from the real thing, a smoke runner can replay any scenario through a real local `workspace-mcp` sidecar and diff the advertised tool surface, so a change to the server shows up as a failure instead of the benchmark grading a workspace that no longer exists.
+The benchmark can't call the real hosted MCP server on every run - that wouldn't scale well. So I shared the Workspace MCP code (which we actually had open source [here](https://github.com/OpenBB-finance/workspace-mcp)) with my coding agent so it could build a simulator. A deterministic state machine that has the exact same tool contract - tool names, argument shapes and error responses. And to make sure the simulator doesn't quietly drift from the real thing, a smoke runner can replay any task through a real local `workspace-mcp` sidecar and diff the advertised tool surface, so a change to the server shows up as a failure instead of the benchmark grading a workspace that no longer exists.
 
 The Workspace MCP has:
 - **2 prompts** - the server's own usage guidance and session context, fetched with `get_workspace_prompt`
 - **MCP resources** - the app-builder index and the workspace skills, read with `read_workspace_resource`
 - **20 tools** - the full read-and-write surface: discovery (`get_workspace_snapshot`, `list_available_widgets`, `get_widget_schema`), widget CRUD (`create_widget`, `update_widget`, `update_widget_layout`, `delete_widget`), navigation (`navigate_workspace`, `manage_dashboard`), the higher-level surface (`manage_apps`, `get_skill_content`, `assign_tasks_to_agents`), and a few more you can see in the chart below
 
-Every bar below counts how many of the 300 scenarios require that part of the surface. Nothing goes untested - every tool is needed by at least 20 scenarios - but obviously some are more popular than others.
+Every bar below counts how many of the 300 tasks require that part of the surface. Nothing goes untested - every tool is needed by at least 20 tasks - but obviously some are more popular than others.
 
 <BrowserOnly>
   {() => {
@@ -28149,17 +28152,17 @@ IMPROVE HERE - WE SHOULD ACTUALLY BE ABLE TO BUILD AN APP THAT RELIES
 
 ### Fifteen families of workspace work
 
-Every scenario is anchored on one MCP capability — its **family**. There are 15 of them, 20 scenarios each, and grouped they cover five kinds of workspace work:
+Every task is anchored on one MCP capability — its **family**. There are 15 of them, 20 tasks each, and grouped they cover five kinds of workspace work:
 
 - **Widget CRUD** — `create`, `update`, `delete`, `layout`: place, change, remove, and arrange widgets on the grid.
 - **Reading & recording** — `read`, `inspect`, `note`: pull the data behind widgets, reason about a workspace the agent didn't build, leave durable notes behind.
 - **Navigation & precision** — `navigate`, `params`: move across dashboards and tabs; parameter surgery on existing widgets.
-- **Platform leverage** — `apps`, `skills`, `delegate`, `backends`: instantiate app templates, run workspace skills, delegate to other agents, manage data backends.
+- **Platform leverage** — `apps`, `skills`, `delegate`, `backends`: instantiate app templates, run workspace skills, delegate to other agents, manage data backends. (Instantiate, not create - building an app from scratch is what the [`build-openbb-apps` suite](#build-openbb-apps) below tests.)
 - **Protocol surface** — `resources`, `prompts`: the MCP resources and prompts most agents never think to read.
 
-### Five tiers of difficulty
+### Five levels of difficulty
 
-Families define which capability a task exercises, on the other hand tiers tries to convey its difficulty via what the task is made of - i.e. how many tool calls it requires, whether the starting state is seeded with something wrong, how much discovery is required, and how tight the turn budget is.
+Families define which capability a task exercises, on the other hand levels tries to convey its difficulty via what the task is made of - i.e. how many tool calls it requires, whether the starting state is seeded with something wrong, how much discovery is required, and how tight the turn budget is.
 
 Here they are:
 - **t0 — single action.** One tool call does the job.
@@ -28177,15 +28180,15 @@ Here is what repair & preserve looks like in practice — an agent (not a raw mo
   }}
 </BrowserOnly>
 
-### How the 300 scenarios are generated
+### How the 300 tasks are generated
 
-Every scenario is AI-generated including the early ones I drafted myself.
+Every task is AI-generated including the early ones I drafted myself.
 
 I got inspired by the approach taken by [TMax](https://wai-org.com/blog/tmax/) which sampled 14,600 terminal environments compositionally from structured axes.
 
-So the suite is generated compositionally: **15 families, each anchored on one MCP capability, each carrying a complete t0–t4 ladder** - 4 scenarios per family, 300 in total.
+So the suite is generated compositionally: **15 families, each anchored on one MCP capability, each carrying a complete t0–t4 ladder** - 4 tasks per family, 300 in total.
 
-The 4 per cell gives each scenario variety (different widgets, tickers, backends, prompts) and lets the boundary tiers split difficulty evenly (t1 is 2 easy + 2 medium, t3 is 2 medium + 2 hard). The same tool is tested at every tier: `delete_widget` at t0 means "remove the only widget"; at t4 it means "remove one duplicate, fix the survivor, document the repair" in a single episode.
+The 4 per cell gives each task variety (different widgets, tickers, backends, prompts) and lets the boundary levels split difficulty evenly (t1 is 2 easy + 2 medium, t3 is 2 medium + 2 hard). The same tool is tested at every level: `delete_widget` at t0 means "remove the only widget"; at t4 it means "remove one duplicate, fix the survivor, document the repair" in a single episode.
 
 I still didn't like that I didn't have a good view of what tools were required by each of the tasks (apart from looking at the code of course), so I built a tool required viewer that gave me that visibility. Also, click on one of the rows to dig into that specific task!
 
@@ -28205,9 +28208,9 @@ Here's an overview of the number of tool calls per task.
   }}
 </BrowserOnly>
 
-One more way to read the 300: ignore which tools a scenario calls and ask what the analyst actually asked for. Every scenario is one of five jobs - the **workflow levels** (L0–L4) below — from "read this workspace and tell me what's there" to "something here is broken, fix it without wrecking the rest".
+One more way to read the 300: ignore which tools a task calls and ask what the analyst actually asked for. Every task is one of five jobs - the **workflow levels** (L0–L4) below — from "read this workspace and tell me what's there" to "something here is broken, fix it without wrecking the rest".
 
-A level isn't a third axis I designed; it's read straight off the family × tier cell.
+A level isn't a third axis I designed; it's read straight off the family × level cell.
 
 Take the `delete` family: at t0–t2 the job is single-widget housekeeping (L1), but at t3 the dashboard has two identical widgets and the ask is "remove exactly one duplicate, then document what you did". Same anchor tool, but the job has become repair (L4). The mix is deliberate: building dashboards (L2) is the most product-relevant job, so it gets a quarter of the suite. And repair earns its slot because agents, and users, make mistakes and need to recover.
 
@@ -28218,7 +28221,7 @@ Take the `delete` family: at t0–t2 the job is single-widget housekeeping (L1),
   }}
 </BrowserOnly>
 
-The one collision is L4 repair vs t3 repair & preserve. L4 says the *job* is repair — the analyst asked for something broken to be fixed — and all 32 L4 tasks sit at t3 or t4, because there is no structurally trivial repair. t3 says the *structure* involves pre-existing state under a preservation constraint, and only 20 of its 60 scenarios are actual repairs; the rest are tasks like "add this widget next to the one already there, without disturbing it".
+The one collision is L4 repair vs t3 repair & preserve. L4 says the *job* is repair — the analyst asked for something broken to be fixed — and all 32 L4 tasks sit at t3 or t4, because there is no structurally trivial repair. t3 says the *structure* involves pre-existing state under a preservation constraint, and only 20 of its 60 tasks are actual repairs; the rest are tasks like "add this widget next to the one already there, without disturbing it".
 
 ## How it runs {#how-it-runs}
 
@@ -28231,9 +28234,9 @@ The whole benchmark diagram can be seen below (click on each of the steps).
   }}
 </BrowserOnly>
 
-Follow one scenario through it:
+Follow one task through it:
 
-1. **The scenario is a JSON file** — the prompt, the fixture backends to seed, the tools the agent may call, and the exact checks that count as success. One file per task, under [`workspace_bench_v1/`](https://github.com/DidierRLopes/openbb-workspace-bench/blob/main/src/workspace_bench/core/scenario_packs/workspace_bench_v1/).
+1. **The task is a JSON file** — the prompt, the fixture backends to seed, the tools the agent may call, and the exact checks that count as success. One file per task, under [`workspace_bench_v1/`](https://github.com/DidierRLopes/openbb-workspace-bench/blob/main/src/workspace_bench/core/task_suites/workspace_bench_v1/).
 2. **The harness** reads it, seeds a deterministic workspace, writes a task envelope to disk, sets four environment variables, and runs whatever command you named.
 3. **Your agent** — a Python adapter, a CLI tool, a model behind an API — reads the envelope and emits its actions as JSON-lines tool calls. It never imports the benchmark.
 4. **The simulator** ([`simulated_workspace.py`](https://github.com/DidierRLopes/openbb-workspace-bench/blob/main/src/workspace_bench/workspace/simulated_workspace.py)) applies each call and hands back a result, turn by turn.
@@ -28242,30 +28245,29 @@ Follow one scenario through it:
 
 <br />
 
-Every edge in that loop is a plain, boring shape — a scenario file in, tool-call JSONL out, a graded scorecard — which is exactly why any agent, in any language, plugs in without importing a thing. Click any stage in the diagram above to see the file it lives in and an example of what flows through it.
+Every edge in that loop is a plain, boring shape — a task file in, tool-call JSONL out, a graded scorecard — which is exactly why any agent, in any language, plugs in without importing a thing. Click any stage in the diagram above to see the file it lives in and an example of what flows through it.
 
 Running the whole thing is then one command, and re-certifying it is another:
 
 ```bash
-# run any adapter file against the full 300-scenario release
-uv run --extra dev workspace-bench compare-models \
-  --models-file models.json --pack all
+# run any adapter file against the full 300-task core suite
+uv run workspace-bench --models-file models.json --suite core
 
-# re-certify the pack: oracle passes, no-op fails, quotas + fingerprints hold
-uv run --extra dev workspace-bench validate --pack all --min-scenarios 300
+# re-certify the suite: oracle passes, no-op fails, quotas + fingerprints hold
+uv run workspace-bench validate --suite core --min-tasks 300
 
 # export a finished run as portable rollout JSONL
-uv run --extra dev workspace-bench export-rollouts \
+uv run workspace-bench export-rollouts \
   --comparison-dir runs/comparison/<run> --output rollouts.jsonl
 ```
 
-The simulator is intentional: it is not a pixel or browser simulator, it is a deterministic state machine for the Workspace MCP contract, which makes runs fast, reproducible, and cheap enough for CI. A live smoke runner ([`live_mcp.py`](https://github.com/DidierRLopes/openbb-workspace-bench/blob/main/src/workspace_bench/workspace/live_mcp.py)) drives the same scenario contract through a real local `workspace-mcp` sidecar, so drift from the real server shows up as a failure instead of going unnoticed.
+The simulator is intentional: it is not a pixel or browser simulator, it is a deterministic state machine for the Workspace MCP contract, which makes runs fast, reproducible, and cheap enough for CI. A live smoke runner ([`live_mcp.py`](https://github.com/DidierRLopes/openbb-workspace-bench/blob/main/src/workspace_bench/workspace/live_mcp.py)) drives the same task contract through a real local `workspace-mcp` sidecar, so drift from the real server shows up as a failure instead of going unnoticed.
 
 ## Certifying the benchmark {#calibration}
 
-A tier system only makes sense if, well, there are tiers. So in this case I wanted to check whether with each difficulty tier, the models were struggling more and more. This would allow me to calibrate the difficulty axis empirically.
+A level system only makes sense if, well, there are levels. So in this case I wanted to check whether with each difficulty level, the models were struggling more and more. This would allow me to calibrate the difficulty axis empirically.
 
-So I picked a cheap mid-strength model (gpt-4.1-mini) and run it over all 300 scenarios, to check whether the pass rate would fall monotonically from t0 to t4. And they did, very nicely as a matter of fact!
+So I picked a cheap mid-strength model (gpt-4.1-mini) and run it over all 300 tasks, to check whether the pass rate would fall monotonically from t0 to t4. And they did, very nicely as a matter of fact!
 
 <BrowserOnly>
   {() => {
@@ -28289,12 +28291,12 @@ WorkspaceBench borrows that idea.
 
 Each stage does something specific, this is basically "synthetic selection":
 
-- **Generate** — build a candidate scenario from a family template: which tool it anchors on, which tier, which pathologies to seed.
-- **Certify** — two mechanical checks every scenario has to pass.
+- **Generate** — build a candidate task from a family template: which tool it anchors on, which level, which pathologies to seed.
+- **Certify** — two mechanical checks every task has to pass.
    - *Oracle passes*: the reference solution - i.e. the known-good sequence of tool calls - is replayed through the grader and must pass, which proves the task is actually solvable.
    - *No-op fails*: an agent that does nothing is graded and must fail, which proves the task isn't already satisfied by the starting workspace (no free passes).
-- **Gate** — run the calibration model and check its pass rate lands in the band the tier claims: high at t0, low at t4.
-- **Fix the generator** — if a whole tier or family comes out wrong, the bug is in the template, not in one task. Fix it there and re-run the loop over all 300.
+- **Gate** — run the calibration model and check its pass rate lands in the band the level claims: high at t0, low at t4.
+- **Fix the generator** — if a whole level or family comes out wrong, the bug is in the template, not in one task. Fix it there and re-run the loop over all 300.
 
 <br />
 
@@ -28308,26 +28310,26 @@ The first gating run came back suspicious: the two families anchored on the benc
 
 <br />
 
-All three got fixed at the generator level, not by patching individual tasks, then the pack was re-certified and the sweep re-run from scratch. The gating curve went from a broken 83–67–48–47–30 to the clean **98–92–77–52–33** above.
+All three got fixed at the generator level, not by patching individual tasks, then the suite was re-certified and the sweep re-run from scratch. The gating curve went from a broken 83–67–48–47–30 to the clean **98–92–77–52–33** above.
 
 One last thing about the gating model, since it is the only one I ran more than once: I ran gpt-4.1-mini three times over all 300 to check the numbers were stable.
 
 | **Repeatability** — gpt-4.1-mini × 3 |  |
 | --- | --- |
 | attempt spread | **71.7% · 70.0% · 70.7%** strict across three independent attempts. A 1.7-point spread, so one attempt is good to about ±1 point overall |
-| tier stability | pooled per-tier pass rates (98 · 93 · 77 · 55 · 31) match the single-attempt curve within ±3 points, and the curve is monotonic in all three attempts |
-| flaky scenarios | **19 of 300** pass sometimes and fail sometimes for the same model - 1 · 0 · 3 · 5 · 10 across t0→t4. The flakiness concentrates exactly where the ladder puts difficulty |
+| level stability | pooled per-level pass rates (98 · 93 · 77 · 55 · 31) match the single-attempt curve within ±3 points, and the curve is monotonic in all three attempts |
+| flaky tasks | **19 of 300** pass sometimes and fail sometimes for the same model - 1 · 0 · 3 · 5 · 10 across t0→t4. The flakiness concentrates exactly where the ladder puts difficulty |
 | capability vs reliability | pass@3 **73.7%** vs pass^3 **67.3%**. The 6.4-point gap between "passed at least once" and "passed every time" is what reliability costs |
 
 Every other model in this post is a single attempt, then: a point estimate good to about a point, assuming its variance looks anything like mini's.
 
 ## Results {#results}
 
-These are real runs from the interactive comparison harness ([`model_compare.py`](https://github.com/DidierRLopes/openbb-workspace-bench/blob/main/src/workspace_bench/reports/model_compare.py)): each model chooses one tool call, receives the simulated workspace result, then chooses the next call — all six against the same 300 certified scenarios, same grader, same logs.
+These are real runs from the interactive comparison harness ([`model_compare.py`](https://github.com/DidierRLopes/openbb-workspace-bench/blob/main/src/workspace_bench/reports/model_compare.py)): each model chooses one tool call, receives the simulated workspace result, then chooses the next call — all six against the same 300 certified tasks, same grader, same logs.
 
 ### The board
 
-The table below is the whole sweep in one place. Models are columns, ordered best to worst. The first two rows are the two scoring modes - **Overall** is the strict pass rate (a scenario only counts if every grader check passes) and **mean check score** is the same runs with partial credit. Below that, the pass rates sliced by tier, and then by all 15 families, easiest to hardest, with the best model per row highlighted. Read down a column and you get one model's profile; read across a row and you see where the suite is hard for everyone.
+The table below is the whole sweep in one place. Models are columns, ordered best to worst. The first two rows are the two scoring modes - **Overall** is the strict pass rate (a task only counts if every grader check passes) and **mean check score** is the same runs with partial credit. Below that, the pass rates sliced by level, and then by all 15 families, easiest to hardest, with the best model per row highlighted. Read down a column and you get one model's profile; read across a row and you see where the suite is hard for everyone.
 
 <BrowserOnly>
   {() => {
@@ -28338,19 +28340,19 @@ The table below is the whole sweep in one place. Models are columns, ordered bes
 
 Two things I read off it before anything else.
 
-The first is the spread. 94.0% to 49.7% strict is roughly two generations of capability, and the ordering is stable: across all 300 scenarios there is exactly one where the bottom model beats the top one (a t0 delegation task GPT-5.5 fumbles and Qwen3 8B happens to pass). Everything here is single-attempt pass@1 from one run (GPT-5.5 samples at temperature 1 because its API rejects 0), so any single cell carries some sampling noise. The repeatability check in the last section put that at about ±1 point, and the harness supports `--repeats` and pass@k if you want error bars.
+The first is the spread. 94.0% to 49.7% strict is roughly two generations of capability, and the ordering is stable: across all 300 tasks there is exactly one where the bottom model beats the top one (a t0 delegation task GPT-5.5 fumbles and Qwen3 8B happens to pass). Everything here is single-attempt pass@1 from one run (GPT-5.5 samples at temperature 1 because its API rejects 0), so any single cell carries some sampling noise. The repeatability check in the last section put that at about ±1 point, and the harness supports `--repeats` and pass@k if you want error bars.
 
-The second is the gap between the two scoring rows. GPT-5.5 earns 99.2% of all grader checks but passes 94.0% of scenarios - partial credit flatters everyone, and that is why the headline metric is all-checks-or-nothing. There is also an inversion hiding in there: GLM-5.2's mean check score (90.1%) sits below gpt-4.1-mini's (95.7%) and even Qwen3 8B's (90.8%) despite a much higher strict pass rate. GLM fails messily - when it blows a scenario it takes several checks down with it - while the weaker models fail narrowly.
+The second is the gap between the two scoring rows. GPT-5.5 earns 99.2% of all grader checks but passes 94.0% of tasks - partial credit flatters everyone, and that is why the headline metric is all-checks-or-nothing. There is also an inversion hiding in there: GLM-5.2's mean check score (90.1%) sits below gpt-4.1-mini's (95.7%) and even Qwen3 8B's (90.8%) despite a much higher strict pass rate. GLM fails messily - when it blows a task it takes several checks down with it - while the weaker models fail narrowly.
 
 The family block at the bottom is where I spend most of my time. Read down a column and you get a model's failure fingerprint; read across the inspect row and you see the suite's open problem.
 
-And one thing I learned while getting these runs fair: adapter plumbing can cost a frontier model double-digit points. OpenRouter can route Anthropic models through Bedrock, and requesting `json_schema` `response_format` on that route degraded Sonnet 5 to schema-minimal outputs. A controlled A/B caught it, and the fix was in my harness - disable `response_format` on that route - not in the model.
+And one thing I learned while getting these runs fair: adapter plumbing can cost a fronlevel model double-digit points. OpenRouter can route Anthropic models through Bedrock, and requesting `json_schema` `response_format` on that route degraded Sonnet 5 to schema-minimal outputs. A controlled A/B caught it, and the fix was in my harness - disable `response_format` on that route - not in the model.
 
 For anyone who wants to reproduce the table, this is the test of record:
 
-- **Release**: one release, 300 scenarios, certified before any model ran (oracle 300/300, no-op 0/300).
+- **Release**: one release, 300 tasks, certified before any model ran (oracle 300/300, no-op 0/300).
 - **Models**: gpt-5.5 & gpt-4.1-mini (OpenAI API) · anthropic/claude-sonnet-5 & z-ai/glm-5.2 (OpenRouter) · gpt-oss:20b & qwen3:8b (local Ollama).
-- **Protocol**: [pass@1](https://arxiv.org/abs/2107.03374) - one attempt per scenario, interactive tool loop, temperature 0 (GPT-5.5: 1, API-enforced), same turn budget and grader for every model.
+- **Protocol**: [pass@1](https://arxiv.org/abs/2107.03374) - one attempt per task, interactive tool loop, temperature 0 (GPT-5.5: 1, API-enforced), same turn budget and grader for every model.
 - **Artifacts**: 1,800 full episode transcripts as rollout JSONL in `runs/exports/`, plus the compiled report in `runs/reports/calibration.json`.
 - **Cost**: ≈ $60 of API spend across the calibration loop and the final sweep, run July 2026.
 
@@ -28364,37 +28366,37 @@ For anyone who wants to reproduce the table, this is the test of record:
   }}
 </BrowserOnly>
 
-Each pill above is one model: its strict pass rate, its tier curve, and a note on anything specific to its run. Clicking through them, each model has its own personality. GPT-5.5's misses are precision and ambiguity, not composition. Sonnet 5 is the clean one - monotonic from 100% at t0 down to 80% at t4. GLM-5.2 has the strangest curve: it dips at t0 because it treats simple tasks as beneath deliberation - invalid calls, skipped prompt fetches - then aces t1. gpt-4.1-mini is the gating curve you already know from the last section. gpt-oss:20b reproduces the same staircase with open weights, and Qwen3 8B shows where a small model's ceiling is.
+Each pill above is one model: its strict pass rate, its level curve, and a note on anything specific to its run. Clicking through them, each model has its own personality. GPT-5.5's misses are precision and ambiguity, not composition. Sonnet 5 is the clean one - monotonic from 100% at t0 down to 80% at t4. GLM-5.2 has the strangest curve: it dips at t0 because it treats simple tasks as beneath deliberation - invalid calls, skipped prompt fetches - then aces t1. gpt-4.1-mini is the gating curve you already know from the last section. gpt-oss:20b reproduces the same staircase with open weights, and Qwen3 8B shows where a small model's ceiling is.
 
 <BrowserOnly>
   {() => {
-    const { TierGroupedBars } = require('@site/src/components/WorkspaceBench/InteractiveDashboard');
-    return <TierGroupedBars />;
+    const { LevelGroupedBars } = require('@site/src/components/WorkspaceBench/InteractiveDashboard');
+    return <LevelGroupedBars />;
   }}
 </BrowserOnly>
 
-Grouping the same numbers by tier shows three shapes. GPT-5.5 barely bends: 95% at t4, essentially its t0 level, so multi-intent composition is not what slows it down. Sonnet 5, gpt-4.1-mini, and gpt-oss:20b step down cleanly, each the same staircase at a different altitude - the tier axis measures the same thing at every capability level. And Qwen3 8B is the third shape: level with the mid-field at t0–t1, then a cliff - 47% at t2, 27% at t3, 17% at t4. Small models don't degrade here; they break, exactly where episodes turn multi-step. The contested band - the 192 scenarios where the models disagree - sits where the ladder says difficulty should live (24, 26, 43, 45, 54 across t0→t4); the rest are either passed by everyone or by no one.
+Grouping the same numbers by level shows three shapes. GPT-5.5 barely bends: 95% at t4, essentially its t0 level, so multi-intent composition is not what slows it down. Sonnet 5, gpt-4.1-mini, and gpt-oss:20b step down cleanly, each the same staircase at a different altitude - the level axis measures the same thing at every capability level. And Qwen3 8B is the third shape: level with the mid-field at t0–t1, then a cliff - 47% at t2, 27% at t3, 17% at t4. Small models don't degrade here; they break, exactly where episodes turn multi-step. The contested band - the 192 tasks where the models disagree - sits where the ladder says difficulty should live (24, 26, 43, 45, 54 across t0→t4); the rest are either passed by everyone or by no one.
 
 ### Who passed what
 
 <BrowserOnly>
   {() => {
-    const { TierExplorer } = require('@site/src/components/WorkspaceBench/InteractiveDashboard');
-    return <TierExplorer />;
+    const { TaskExplorer } = require('@site/src/components/WorkspaceBench/InteractiveDashboard');
+    return <TaskExplorer />;
   }}
 </BrowserOnly>
 
-The rows nobody passes are the most valuable output of the whole sweep. 15 of 300 scenarios defeat all six models, and they are not scattered: 8 are inspect-family tasks (deduplicate or reconcile a workspace the agent did not build — ambient-state reasoning), 4 are companion-widget parameter tasks, 2 are precise layout splits, and 1 is a full skills-driven tearsheet. Even GPT-5.5 passes only 11/20 of the inspect family. That list is where a future t5 comes from, and it doubles as a work queue for the tool surface itself. It is also the clearest evidence that the remaining headroom is about reading state, not composing calls. At the opposite end, 93 scenarios are passed by everyone — the sanity floor, 70 of them in t0–t1, which is what "t0 nearly free" should look like.
+The rows nobody passes are the most valuable output of the whole sweep. 15 of 300 tasks defeat all six models, and they are not scattered: 8 are inspect-family tasks (deduplicate or reconcile a workspace the agent did not build — ambient-state reasoning), 4 are companion-widget parameter tasks, 2 are precise layout splits, and 1 is a full skills-driven tearsheet. Even GPT-5.5 passes only 11/20 of the inspect family. That list is where a future t5 comes from, and it doubles as a work queue for the tool surface itself. It is also the clearest evidence that the remaining headroom is about reading state, not composing calls. At the opposite end, 93 tasks are passed by everyone — the sanity floor, 70 of them in t0–t1, which is what "t0 nearly free" should look like.
 
 Failures are also model-specific in ways a single number hides. Qwen3 8B scores 4/20 on the apps family — long instantiation chains — where every other model scores 17 or better. GLM-5.2 is the only model that struggles with the prompts family (8/20), because it skips the prompt fetch it considers unnecessary. gpt-oss:20b bottoms out on documentation notes (5/20). Six models, six different failure fingerprints on identical tasks — which is why the chart below breaks every model out by failure type, instead of averaging the differences away.
 
-> The honest read: the benchmark separates the mid-field sharply, but the frontier is already near the ceiling, and what it still fails is precision and ambient state, not composition. I would treat that as the roadmap for t5.
+> The honest read: the benchmark separates the mid-field sharply, but the fronlevel is already near the ceiling, and what it still fails is precision and ambient state, not composition. I would treat that as the roadmap for t5.
 
 <br />
 
 ### Failure analysis
 
-Every failed check maps to a stable issue code, so "model X is worse" becomes something specific. That specificity is the whole point — the difference between a useless verdict and a useful one is the difference between `"the model did not complete the task"` and `missing_widget: expected one Bench Equities/price_performance widget with data_args {"symbol": "AAPL"}, found zero`. Below is every model against the six most common failures — how many of the 300 scenarios each tripped on. Fewer is better. The shapes are the story: gpt-4.1-mini and Qwen3 8B pile up on `schema_not_called_before_create` (they skip discovery), GLM-5.2 and gpt-oss:20b burn `too_many_invalid_calls` (malformed calls), and `layout_mismatch` touches even the frontier — precise geometry is hard for everyone.
+Every failed check maps to a stable issue code, so "model X is worse" becomes something specific. That specificity is the whole point — the difference between a useless verdict and a useful one is the difference between `"the model did not complete the task"` and `missing_widget: expected one Bench Equities/price_performance widget with data_args {"symbol": "AAPL"}, found zero`. Below is every model against the six most common failures — how many of the 300 tasks each tripped on. Fewer is better. The shapes are the story: gpt-4.1-mini and Qwen3 8B pile up on `schema_not_called_before_create` (they skip discovery), GLM-5.2 and gpt-oss:20b burn `too_many_invalid_calls` (malformed calls), and `layout_mismatch` touches even the fronlevel — precise geometry is hard for everyone.
 
 <BrowserOnly>
   {() => {
@@ -28403,18 +28405,172 @@ Every failed check maps to a stable issue code, so "model X is worse" becomes so
   }}
 </BrowserOnly>
 
+## Expanding the benchmark: build-openbb-apps {#build-openbb-apps}
+
+### Motivation {#build-motivation}
+
+After validating the first 300 tasks, one gap kept bothering me. Everything above measures an agent *operating* a workspace that already exists - but the thing I actually want agents to do next is understand `widgets.json` and `apps.json` well enough to **build apps from scratch on top of a user's data API**. That is a different capability, and nothing in the original suite touches it.
+
+I could have gone back and reworked the 300. I deliberately didn't. Instead, the benchmark is architected as **suites**: certified sets of tasks that get added independently, reported separately, and rolled up into one aggregate view. The original 300 became the `core` suite - operating the workspace; the tasks below are **`build-openbb-apps`**. And the reason this matters beyond my own roadmap: any firm can extend the bench with a suite built from the workflows that matter to *them* - workspace skills, macro workflows, client advisory, research - same task schema, same certification gates, same reporting. `build-openbb-apps` is both a new capability axis and proof that the architecture actually extends (which was kind of the bet).
+
+### Building apps, not instantiating them {#build-vs-instantiate}
+
+There is a distinction the core suite papers over. Its `apps` family *instantiates* app templates - and instantiating is genuinely useful, but it is one tool call that opens an existing template into a dashboard. Nothing gets created: no data is wired, no widget is defined, the app was already there.
+
+Building an app is a different job entirely. In the real product an app IS a backend: a `widgets.json` (which widgets exist - their endpoints, params, columns, grid sizes) and an `apps.json` (which widgets land on which tabs, at which coordinates, wired to which shared parameters), served over HTTP against real data endpoints. This is the part that matters for enterprises: an agent that can write those two files can turn a firm's internal data API into a working workspace app. And it isn't a benchmark invention - the real Workspace MCP server ships sixteen app-building resources over the protocol (the widgets.json and apps.json specs, a build-an-app guide, a common-errors catalog) - agents building backends is exactly where the product is going.
+
+So `build-openbb-apps` makes the deliverable the definition files themselves. Not code - I am not testing whether a model writes FastAPI routes. "Valid" means what the workspace frontend means by it: I transcribed the production validation rules into the simulator (required fields, the real 19-value type enum, the param type system, column rules, app schema, every referenced widget id must actually be served), and everything flows through the same tool that connects backends in real life - `manage_backends operation='add'` carries the payloads your backend would serve, `operation='refresh'` re-submits them, so repair works like real life: fix your backend, hit refresh.
+
+### What one build task looks like {#build-one-task}
+
+Here's a level-2 task from the `aggrid` family, verbatim except for trimming. Note what it does *not* contain: any JSON.
+
+> Register "Earnings Prep Data" (http://localhost:7805) with a single table — `revision_grid`: name "Revision Grid", description "Street revision momentum by ticker.", endpoint /revision-momentum, type ssrm_table, gridData w=20 h=9. Requirements: it is served as a server-side row-model grid whose rows are read from the response key "rows"; and the columns come from the served rows `[{"momentum_pct": 0.084, "revised_down": 3, "revised_up": 14, "ticker": "AAPL"}, ...]`. Derive the table columns using the workspace conventions: every field becomes a column; headerName is the field name with underscores as spaces, Title Case; cellDataType is number for numeric values, dateString for ISO dates, text otherwise; fields ending in `_pct` additionally carry formatterFn percent.
+
+The deliverable is the definition itself. To pass, the model has to produce — through `manage_backends`, surviving real validation — exactly this:
+
+```json
+"revision_grid": {
+  "name": "Revision Grid",
+  "description": "Street revision momentum by ticker.",
+  "endpoint": "/revision-momentum",
+  "type": "ssrm_table",
+  "gridData": { "w": 20, "h": 9 },
+  "data": {
+    "dataKey": "rows",
+    "table": {
+      "columnsDefs": [
+        { "field": "ticker", "headerName": "Ticker", "cellDataType": "text" },
+        { "field": "revised_up", "headerName": "Revised Up", "cellDataType": "number" },
+        { "field": "revised_down", "headerName": "Revised Down", "cellDataType": "number" },
+        { "field": "momentum_pct", "headerName": "Momentum Pct",
+          "cellDataType": "number", "formatterFn": "percent" }
+      ]
+    }
+  }
+}
+```
+
+The grader then checks that every stated field landed, that the four columns were *derived* correctly from the sample rows (Title-Case headers, the percent formatter on `_pct`), and that the response key is wired via `data.dataKey` — the exact failure that separates the mid-field from the fronlevel on this suite. Every graded value is stated in the brief, derivable from a stated convention, or readable from the backend; nothing has to be guessed.
+
+### The shape of the suite {#build-shape}
+
+**212 tasks: 10 families × the t0-t4 ladder × 4 per cell, plus a 12-task `e2e` capstone that exists only at t4** - there is no structurally trivial version of "ship a whole app". One JSON file per task, under [`workspace_bench_v2_build_openbb_apps/`](https://github.com/DidierRLopes/openbb-workspace-bench/blob/main/src/workspace_bench/core/task_suites/workspace_bench_v2_build_openbb_apps/).
+
+The families are not something I invented. The [backend-examples repo](https://github.com/OpenBB-finance/backend-examples-for-openbb-workspace) ships an onboarding app for developers where each tab demonstrates one widget capability - basic content types, configuration settings, parameters, forms, AG Grid tables, charts, advanced widgets, parameter grouping. That's basically the official map of what building a widget breaks down into, so I just adopted it: eight widget-side families, one per onboarding tab, plus two app-side families (`apps` - assembling widgets into dashboards - and `extend` - modifying a live backend without breaking it) and the capstone. Coverage is enforced by construction: every one of the **16 widget types** and every param type is *owned* by exactly one family, and generation fails if a family stops building its types. Fixture data is neutral market/ops material - eight desks, ~45 endpoints - because the benchmark is about the schema system, not any particular firm's domain.
+
+<BrowserOnly>
+  {() => {
+    const { BuildFamilies } = require('@site/src/components/WorkspaceBench/InteractiveDashboard');
+    return <BuildFamilies />;
+  }}
+</BrowserOnly>
+
+The ladder measures one thing: how much of the app the model has to build, and how much of the spec it has to *derive* rather than copy.
+
+- **t0 - one widget, the right schema.** A requirements brief in words; the model writes a single widget definition. The floor rung, deliberately nearly free.
+- **t1 - ship it as an app.** The same class of widget, now wrapped in a one-tab `apps.json` that references it - and graded in full, widget *and* app. That containment is deliberate: t1 is t0's skill plus one more, so t1 can never score above t0 except by noise.
+- **t2 - composed requirements.** Still one artifact, but at least three requirement dimensions at once, and at least one is a *policy*, not a value: the brief says "cache results for 15 minutes" and the model has to know that means `staleTime: 900000`, or the columns have to be derived from the sample rows the backend serves. This is the rung where transcription stops being enough.
+- **t3 - the app takes shape.** Two to three widgets across a multi-tab app, plus a graded composition dimension - a shared parameter group wired across widgets, or a desk convention ("cached widgets on this desk cache for 15 minutes") that determines values the brief never states per-widget.
+- **t4 - operate what you built.** Build t3-weight content, publish it, instantiate the app into a live dashboard, *configure* it (push a parameter value into the running widget), and document the handoff. Crucially, t4 grades only its marginal skill: the widgets that earlier levels already tested in full are graded as light anchors, and the new skill - the operate chain - carries the task.
+
+### Certifying the suite {#build-certification}
+
+Every task clears the same gates as the core suite: the reference solution passes (oracle 212/212), a do-nothing agent fails (no-op 0/212), fingerprints and task ids are unique, type-ownership quotas hold, and - the lesson that survived from my first attempt at this suite - **no task may exceed its level's graded-check cap**. Strict pass compounds per-check accuracy over the number of graded checks (pass ≈ q^N), so a level that silently grades more fields measures grading breadth, not capability. I learned that the expensive way: an early version of this suite graded 9 checks at t0 and 37 at t3, mostly by re-grading every field of every preserved definition, and the level curve tracked check counts instead of skill. The fix is structural and permanent: preserved artifacts grade as three-check anchors, repaired entries grade only their patched field, full grading is reserved for each task's focus artifact, and the certifier fails the build if any task exceeds its cap.
+
+Then the ladder has to earn its labels empirically - and this time I changed the discipline. Gating runs cost money, so instead of burning them while the tasks were still moving, I calibrated against a free local proxy - gpt-oss:20b on Ollama, all 212 tasks, as many rounds as it took - and only promoted the suite to the paid gating model once the proxy staircase was strictly decreasing with no tied levels. The proxy is a *weaker* model than the gate, which is exactly why this works: defects in the tasks show up as violations of a shape you know must hold - a level passing above the level below it, a family flat from t0 to t4 - regardless of which model produces the curve.
+
+Eight proxy rounds, and every one caught a real defect. In the benchmark, not the model. Some fixes were mechanical - the invalid-call budget now scales with payload size, and policy derivation replaced a t2 cell that turned out to be a dictation test - but three of them are worth telling properly:
+
+- **A check the brief never stated.** Round one: every t1 task in one family failed on a single field (`allowCustomization`) that the grader demanded and no brief mentioned. The fairness invariant this produced is now structural: every graded value must be stated in the brief, derivable from a stated convention, or readable from the backend.
+- **A free level that was actually free.** t0 sat at 100% for three rounds because a words-form brief alone let the model ship near-empty definitions. t0 now requires a structural floor - at least two schema elements beyond the identity fields.
+- **Families with material in the wrong levels.** The aggregate staircase can look right while individual families are broken inside it: one family had its heaviest content at t0, another was flat at 95% across all five levels. The per-family × per-level ladder matrix that caught this is now a permanent certification instrument - within every family, each level must build material at least as heavy as the level below.
+
+The result of that loop, on the proxy: **92.5 · 82.5 · 77.5 · 55.0 · 30.8** - strictly decreasing, no ties, and the two joints that kept inverting mid-calibration (t2→t3, t3→t4) ended up as the biggest steps. Only then did the paid sweep run.
+
+The sweep caught four more defects the proxy couldn't see - and each was found by a *different* model failing in a way the others didn't, which is the strongest argument I know for gating with more than one model:
+
+- The gating model went 0/20 on the forms family, every episode the same shape: guess `submitEndpoint` for the form's submit key, get rejected, never recover. The validator wanted `endpoint` - and its rejection message was the one place in the codebase that didn't name the required key. (The fronlevel models guessed right, which is why the proxy rounds never surfaced it.)
+- All four of Sonnet 5's t4-forms failures hit one identical check. The brief rendered a form's inputs and the widget's other params in a single semicolon list, so the configure-target param grammatically read as one of the form's inputs - and Sonnet parsed it exactly that way. Two fronlevel models making the same parse is a brief defect, not a capability gap; form inputs are now bracketed.
+- Fourteen of GPT-5.5's fifteen failures weren't graded failures at all: it emitted a second JSON object after its action and the adapter killed the episode. Five of those were e2e capstones. Invalid tool calls got teaching rejections and a budget; malformed responses got the death penalty - inconsistent, now fixed (lenient first-object parse, then a teaching turn).
+- Both fronlevel models failed one task on the identical check: `refetchInterval: false`, derived from "do not poll HTTP again" - a mapping no stated convention covered, where omitting the key is a perfectly valid reading. The policy clause now states the mapping.
+- And the gate's own curve caught the last one: t0 came in *below* t1. The cause was a grading shortcut - t1 graded its widget as a light three-check anchor ("the skill was already proven at t0"), so t1 actually checked *less* of the widget than t0 did, and a model that fumbles widget details but wraps apps cleanly could outscore its own floor. t1 now grades the full widget plus the app - containment, so each rung provably contains the one below - and every existing episode was regraded through the deterministic simulator, no API call needed.
+
+Every fix was surface- or wording-level - the suite's structure never moved after the proxy froze it. And once the last fix landed, the board below was produced the only way a clean report should be: **one fresh end-to-end run per model over all 212 final tasks** - no patched records, no spliced re-runs. Run any of these models against the repo today and you run exactly what produced its number.
+
+<BrowserOnly>
+  {() => {
+    const { BuildGatingCurve } = require('@site/src/components/WorkspaceBench/InteractiveDashboard');
+    return <BuildGatingCurve />;
+  }}
+</BrowserOnly>
+
+The official gating curve - gpt-4.1-mini, all 212, one fresh end-to-end attempt, temperature 0: **95.0 · 90.0 · 72.5 · 62.5 · 48.1** - strictly decreasing, no tied levels, the same standard the core suite's curve was held to. The shape makes sense too: the schema rung is nearly free, shipping it as an app costs a few points of widget detail, policy derivation takes the big 17.5-point chunk, and composition and the operate chain walk the rest of the way down. Overall: **72.2%**, right next to the same model's 70.3% on the core suite - same discipline, new capability axis.
+
+### Every task, clickable {#build-explorer}
+
+The full suite is browsable below - every task, the words-form brief the model received, and the exact rubric it was graded against, next to all six verdicts. This is the same transparency rule as the core suite: no hidden checks, no judge model, just fields you can read.
+
+<BrowserOnly>
+  {() => {
+    const { BuildTaskExplorer } = require('@site/src/components/WorkspaceBench/InteractiveDashboard');
+    return <BuildTaskExplorer />;
+  }}
+</BrowserOnly>
+
+### Results across six models {#build-results}
+
+<BrowserOnly>
+  {() => {
+    const { BuildBoard } = require('@site/src/components/WorkspaceBench/InteractiveDashboard');
+    return <BuildBoard />;
+  }}
+</BrowserOnly>
+
+The board splits into three levels, and the split is sharper than on the core suite. At the top, schema building is *solved*: GPT-5.5 passes **212/212** - the first perfect score anywhere in this benchmark (I honestly did not expect that when I started this!). GLM-5.2 (99.1%) and Sonnet 5 (98.6%) are a handful of tasks behind - GLM's two misses are episodes its serving path dropped outright, not the model. The mid-field lands where the gating model does - gpt-4.1-mini 72.2%, gpt-oss:20b 67.9% - and Qwen3 8B collapses to 14.2%, sliding down its whole ladder to 3/52 at t4. Almost ninety points of spread top to bottom - the top is settled, and all the useful signal is in the middle of the board.
+
+The family rows are where the diagnosis lives. gpt-4.1-mini's worst family is `aggrid` at 35% - deriving column definitions from served sample rows is *the* skill it lacks - while its e2e capstone collapses to 1/12, the compounding cost of chaining build-publish-instantiate-configure with mid-field per-step accuracy. gpt-oss:20b has the same weak spots (aggrid 50%, e2e 6/12) plus one of its own: eleven of its failures are its serving stack crashing mid-episode, counted as failures because an agent whose stack dies doesn't finish the job. The small model never gets that far, losing first on the details and then on the chain.
+
+> The honest read: words-form schema building is solved at the fronlevel. All the discrimination this suite buys is in the mid-field and below - which is exactly where the run-it-cheap question lives - and the next rung of difficulty has to come from discovery and endurance, not more schema.
+
+<BrowserOnly>
+  {() => {
+    const { BuildFailures } = require('@site/src/components/WorkspaceBench/InteractiveDashboard');
+    return <BuildFailures />;
+  }}
+</BrowserOnly>
+
+One code dominates everything: `widget_def_mismatch` - a definition landed but a graded field is wrong or missing - hits gpt-4.1-mini 116 times, gpt-oss:20b 74, Qwen3 8B 341, and the near-fronlevel trio three times *combined*. That is the derivation skill in one bar: turning "cache results for 15 minutes" and served sample rows into exact schema fields is what separates the levels of this board. Behind it, `missing_custom_backend` (the payload never survived validation at all - 87 for Qwen, 39 for gpt-oss) and `too_many_invalid_calls` (72 for Qwen) mark the models that can't converge inside the repair loop, and the app-side codes track the same story into `apps.json`.
+
+The bars also carry an infrastructure lesson worth naming, because a single number would bury it. Eleven of gpt-oss:20b's failures are not the model's reasoning at all: its local serving stack crashes trying to parse the model's own native tool-call syntax, deterministically. They count as failures - an agent whose stack crashes doesn't complete the task - but they mean part of this bar measures ollama, not the weights. And GLM-5.2's number depends on serving configuration: during calibration the same model scored 45.5% through one OpenRouter provider's constrained-decoding path and 0% through another, before `response_format: none` let it produce clean JSON - a ~50-point swing that had nothing to do with the model. If you run agent benchmarks and something previously-working goes to zero, read the raw completions before blaming the model.
+
+### Aggregate results {#aggregate-results}
+
+Collections report separately - that's the point: a firm that adds its own suite sees exactly where agents stand on *its* workflows - and then pool into one aggregate. Pooling means task counts, never averaged percentages, so adding a suite simply extends the pool.
+
+<BrowserOnly>
+  {() => {
+    const { SuitesAggregate } = require('@site/src/components/WorkspaceBench/InteractiveDashboard');
+    return <SuitesAggregate />;
+  }}
+</BrowserOnly>
+
+Pooled over all 512 tasks: GPT-5.5 **96.5%**, Sonnet 5 93.0%, GLM-5.2 85.7%, gpt-4.1-mini 71.1%, gpt-oss:20b 62.9%, Qwen3 8B 35.0%. But the pooled number is the least interesting column - the per-suite split is what either suite alone hides. Every model except one is *better* at building the workspace than operating it: Sonnet 5 jumps from 89.0% on core to 98.6% on build-openbb-apps, and GLM-5.2 from 76.3% to 99.1% - a 23-point swing that completely reorders how you'd rank it. Building is a schema-knowledge problem, and strong models simply know the schema; operating is an ambient-state problem, and that is still where the fronlevel's remaining errors live. The one inversion is Qwen3 8B - 49.7% operating, 14.2% building - the small model can follow a workspace but cannot compose a valid definition. Two suites, and already the board reads as a capability profile instead of a ranking.
+
 ## Conclusion {#conclusion}
 
-I set out to answer one question: if agents are going to drive OpenBB Workspace for real users, how well do they actually do it? WorkspaceBench turns that from a vibe into a number. Six agents, one grader, 300 certified tasks that span single actions up to multi-intent repairs — and a result specific enough to act on. The frontier has essentially solved composition (GPT-5.5 is as strong at t4 as at t0) but not precision or ambient-state reasoning; the mid-field separates cleanly; and 15 tasks that nobody passes mark exactly where the ceiling is.
+I set out to answer one question: if agents are going to drive OpenBB Workspace for real users, how well do they actually do it? WorkspaceBench turns that from a vibe into a number. Six agents, one grader, 300 certified tasks that span single actions up to multi-intent repairs — and a result specific enough to act on. The fronlevel has essentially solved composition (GPT-5.5 is as strong at t4 as at t0) but not precision or ambient-state reasoning; the mid-field separates cleanly; and 15 tasks that nobody passes mark exactly where the ceiling is.
 
-The point of a number is that it moves. Now every change — a clearer tool schema, a newer model, a fine-tune — has somewhere to show up, and I can hill-climb it instead of shipping a demo and hoping. That is the thing I was missing: a way to measure workspace-agent performance, and then tell both the product and our users what to do about it.
+The point of a number is that it moves. Now every change — a clearer tool schema, a newer model, a fine-tune — has somewhere to show up, and I can hill-climb it instead of shipping a demo and hoping. That is the thing I was missing: a way to measure workspace-agent performance, and then tell both the product and our users what to do about it. And the suite no longer stops at driving: the `build-openbb-apps` suite adds 212 tasks — 512 across the two suites — and the same six-model board now covers *building* the workspace, not just operating it. The result reads as a capability profile: the fronlevel has fully solved schema building (GPT-5.5 posts a perfect 212/212 - the first anywhere in the benchmark - with GLM-5.2 and Sonnet 5 right behind) while still leaving points on ambient state in the core suite, and the pooled board separates the models by *which* of the two jobs they can do, not just how well.
 
 ## Future work {#future}
 
 Every failure here points at something to fix, in two directions, and both reuse this same benchmark unchanged.
 
-One is the **tool surface**. Look at the failure analysis again: GLM-5.2 tripped the invalid-call budget on dozens of scenarios, and `schema_not_called_before_create` dominates the mid-field. Those are not only verdicts on the models; they are verdicts on the MCP tools — the schemas, the names, the error messages the workspace hands to agents. The same graded run that ranks the models is a to-do list for the server: make the surface clearer and every agent gets better at once.
+One is the **tool surface**. Look at the failure analysis again: GLM-5.2 tripped the invalid-call budget on dozens of tasks, and `schema_not_called_before_create` dominates the mid-field. Those are not only verdicts on the models; they are verdicts on the MCP tools — the schemas, the names, the error messages the workspace hands to agents. The same graded run that ranks the models is a to-do list for the server: make the surface clearer and every agent gets better at once.
 
 The other is the **agents themselves**. Every episode leaves a full, graded trace — 1,800 of them are already in the repo. A grader that emits a clean pass/fail signal is exactly what a reinforcement-learning loop needs for reward, and the same deterministic simulator can serve as the environment. Turning these traces into training signal for smaller or cheaper agents is the obvious next step.
+
+And the most immediate item: a t5. A perfect score and two 99s on `build-openbb-apps` mean the words-form build ladder is solved at the fronlevel — the headroom that remains lives in the rows the mid-field fails (column derivation from data, the build-publish-instantiate-configure chain) and in the core suite's ambient-state families that even GPT-5.5 doesn't clear. Those failing rows are the raw material for the next suite: harder briefs, longer chains, and specs the model has to *discover* from the workspace's own MCP resources instead of being handed.
 
 Both are open work. For now the point stands on its own: if agents are going to drive a financial workspace, you have to be able to measure how well they do it — and then the measurement tells you what to improve. Incentives always win. The least I can do is measure the ones I am creating.

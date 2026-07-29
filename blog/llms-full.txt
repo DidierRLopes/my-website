@@ -27990,7 +27990,7 @@ tags:
 - evals
 - openbb
 description: "How I built and calibrated WorkspaceBench: a simulator certified against the real OpenBB Workspace, reference-model runs that debug the benchmark itself, and a six-level ladder that five models walk down."
-image: /blog/introducing-workspacebench-to-evaluate-openbb-workspace-for-agentic-workflows/durable-artifact.png
+image: /blog/introducing-workspacebench-to-evaluate-openbb-workspace-for-agentic-workflows/thumbnail.png
 hideSidebar: true
 draft: false
 ---

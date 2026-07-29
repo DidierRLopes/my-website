@@ -22,3 +22,4 @@ yarn-error.log*
 
 static/blog/llms-full.txt
 static/blog/llms.txt
+scripts/__pycache__/

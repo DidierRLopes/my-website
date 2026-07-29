@@ -28798,13 +28798,13 @@ Every rate below is strict pass@1: one attempt per task, all checks or nothing. 
   }}
 </BrowserOnly>
 
-The reference staircase is the acceptance bar we mentioned above, and that tracks (85 / 60 / 36 / 17 / 0), falling monotonically. But only half the curves fall monotonically down the ladder - GLM-5.2, the reference model, and qwen3:8b. The other three each invert somewhere, and not the same somewhere: Gemini Flash inverts twice, GPT-5.5 recovers at Compose right after dipping at Ground, and gpt-oss:20b rises from Find to Derive before collapsing. Since there are 24 tasks per level, bear in mind that for the close calls that could be sampling noise.
+The reference staircase is the acceptance bar we mentioned above, and that tracks (85 / 60 / 36 / 17 / 0), falling monotonically. But only half the curves fall monotonically down the ladder - GLM-5.2, the reference model, and qwen3:8b. The other three each invert somewhere, and not the same somewhere: Gemini Flash inverts twice, GPT-5.5 recovers at Compose right after dipping at Ground, and gpt-oss:20b rises from Find to Derive before collapsing. Since there are 24 tasks per level, bear in mind the close calls could be sampling noise.
 
 One interesting one is the Compose column - 0% for the reference, both locals, and Gemini Flash; 67% for the strongest open-weights model; 96% for the frontier.
 
 Those Compose zeros aren't all the same zero, though. gpt-4.1-mini and Gemini Flash both earn 88-93% of the graded checks before dropping one piece of the arc - a near-complete chain scores 0 under strict pass@1.
 
-The two local models tie on four of five levels, but a full rerun that I did on fresh samples shows that's for half that's mostly coincidence - the two models fail by different mechanisms (more on that below). For the Find L1 and Compose L4 its actually the difficulty of the tasks, that both models aren't able to overcome.
+The two local models tie on four of five levels, but a full rerun that I did on fresh samples shows that's mostly coincidence - the two models fail by different mechanisms (more on that below). For the Find L1 and Compose L4 it's actually the difficulty of the tasks, that both models aren't able to overcome.
 
 ### Failure analysis {#workspace-tasks-failures}
 
@@ -28815,11 +28815,11 @@ The two local models tie on four of five levels, but a full rerun that I did on 
   }}
 </BrowserOnly>
 
-`missing_tool_call` dominates every column - a graded read, add, or note that just never happened - and it scales inversely with capability: rare for the frontier, common for small models. `missing_widget` and `missing_generated_widget` are the same failure showing up state-side: the required view or note never happened.
+`missing_tool_call` dominates every column - a graded read, add, or note that just never happened - and it scales inversely with capability: rare for the frontier, common for small models. `missing_widget` and `missing_generated_widget` are the same failure showing up state-side: the required view or note never landed.
 
 Underneath the codes, each model fails its own way. The reference model (`gpt-4.1-mini`) guesses at widget ids instead of listing them first, maps a colloquial handle to the wrong near-neighbor, and sometimes skips the skill read on a terse ask. `GLM-5.2` usually finds the right widget - it just configures it wrong, off by one parameter. Gemini Flash skips the graded evidence note more than any other model, and at Compose it attempts every piece of the build and gets some of the definitions wrong. The reference model, on that same rung, tends to skip pieces instead.
 
-gpt-oss:20b and qwen3:8b land on the same numbers for different reasons. gpt-oss:20b likes to invent tools that don't exist (`return_widget`, even `container.exec`) until it burns through the invalid-call budget. qwen3:8b does the opposite: it takes the snapshot, lists the catalog, and stops without changing anything. Their matching rate at Find is coincidence. Their Compose zeros come from the same near-miss pattern the Results section describes: almost the whole arc done, one piece missing, and pass@1 grades that as complete failure.
+gpt-oss:20b and qwen3:8b land on the same numbers for different reasons. gpt-oss:20b likes to invent tools that don't exist (`return_widget`, even `container.exec`) until it burns through the invalid-call budget. qwen3:8b does the opposite: it takes the snapshot, lists the catalog, and stops without changing anything. Their matching rate at Find is that same difficulty cliff. Their Compose zeros come from the same near-miss pattern the Results section describes: almost the whole arc done, one piece missing, and pass@1 grades that as complete failure.
 
 Here's that same breakdown by level instead of by code:
 
@@ -28838,8 +28838,8 @@ This was a lot of fun, but also one of the experiments that were most time consu
 
 There are two main things I want to do next:
 
-The first is **improving Workspace MCP itself from these results**. The failure analysis is not only a verdict on the models - it is a verdict on the tools: every `too_many_invalid_calls` bar is schema friction, every `missing_tool_call` on a knowledge read is discoverability, and digging on those traces will allow to improve Worksapce MCP. At the same time, we don't want to overfit MCP tools/resources so that it works for a small model but adds too much unnecessary context for a frontier model.
+The first is **improving Workspace MCP itself from these results**. The failure analysis is not only a verdict on the models - it is a verdict on the tools: every `too_many_invalid_calls` bar is schema friction, every `missing_tool_call` on a knowledge read is discoverability, and digging on those traces will let me improve Workspace MCP. At the same time, we don't want to overfit MCP tools/resources so that it works for a small model but adds too much unnecessary context for a frontier model.
 
-The second is **turning the benchmark into a training environment**. Every episode already leaves a full graded trace, the grader emits a clean pass/fail reward, and the deterministic simulator is a natural environment - which is what I need to do RL rollouts. I was looking into converting these tasks into [Harbor](https://harborframework.com/) framework, so the same task JSON, simulator, and grader can drive rollouts at scale.
+The second is **turning the benchmark into a training environment**. Every episode already leaves a full graded trace, the grader emits a clean pass/fail reward, and the deterministic simulator is a natural environment - which is what I need for RL rollouts. I was looking into converting these tasks into [Harbor](https://harborframework.com/) framework, so the same task JSON, simulator, and grader can drive rollouts at scale.
 
 If agents are going to drive a financial workspace, I have to be able to measure how well they do it. Now I can.

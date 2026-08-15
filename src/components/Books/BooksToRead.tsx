@@ -704,6 +704,39 @@ const data = [
 		author: "Nathan Lambert",
 		image: "/books/reinforcement-learning-from-human-feedback.jpg"
 	},
+	{
+		title: "Investing in America: The Rise Of A 250-Year Bull Market",
+		author: "Meb Faber",
+		image:
+			"/books/investing-in-america-the-rise-of-a-250-year-bull-market.jpg"
+	},
+	{
+		title:
+			"Lucky by Design: The Hidden Economics You Need to Get More of What You Want",
+		author: "Judd Kessler",
+		image:
+			"/books/lucky-by-design-the-hidden-economics-you-need-to-get-more-of-what-you-want.jpg"
+	},
+	{
+		title:
+			"What Works on Wall Street, Fourth Edition: The Classic Guide to the Best-Performing Investment Strategies of All Time",
+		author: "James P. O'Shaughnessy",
+		image:
+			"/books/what-works-on-wall-street-the-classic-guide-to-the-best-performing-investment-strategies-of-all-time.jpg"
+	},
+	{
+		title:
+			"Freakonomics, Revised and Expanded Edition: A Rogue Economist Explores the Hidden Side of Everything",
+		author: "Steven D. Levitt, Stephen J. Dubner",
+		image:
+			"/books/freakonomics-a-rogue-economist-explores-the-hidden-side-of-everything.jpg"
+	},
+	{
+		title: "Iconoclast: A Neuroscientist Reveals How to Think Differently",
+		author: "Gregory Berns",
+		image:
+			"/books/iconoclast-a-neuroscientist-reveals-how-to-think-differently.jpg"
+	},
 ];
 
 export const booksToReadCount = data.length;

@@ -572,6 +572,12 @@ const data = [
 		author: "Rob Copeland",
 		image:
 			"/books/the-fund-ray-dalio-bridgewater-associates-and-the-unraveling-of-a-wall-street-legend.jpg"
+	},
+	{
+		title: "Alchemy: The Surprising Power of Ideas That Don't Make Sense",
+		author: "Rory Sutherland",
+		image:
+			"/books/alchemy-the-surprising-power-of-ideas-that-don-t-make-sense.jpg",
 	}
 ];
 

@@ -314,12 +314,6 @@ const data = [
 			"/books/creativity-inc-overcoming-the-unseen-forces-that-stand-in-the-way-of-true-inspiration.jpg",
 	},
 	{
-		title: "Alchemy: The Surprising Power of Ideas That Don't Make Sense",
-		author: "Rory Sutherland",
-		image:
-			"/books/alchemy-the-surprising-power-of-ideas-that-don-t-make-sense.jpg",
-	},
-	{
 		title: "Badass: Making Users Awesome",
 		author: "Kathy Sierra",
 		image: "/books/badass-making-users-awesome.jpg",

@@ -737,6 +737,12 @@ const data = [
 		image:
 			"/books/iconoclast-a-neuroscientist-reveals-how-to-think-differently.jpg"
 	},
+	{
+		title: "Feynman's Rainbow: A Search for Beauty in Physics and in Life",
+		author: "Leonard Mlodinow",
+		image:
+			"/books/feynmans-rainbow-a-search-for-beauty-in-physics-and-in-life.jpg"
+	},
 ];
 
 export const booksToReadCount = data.length;

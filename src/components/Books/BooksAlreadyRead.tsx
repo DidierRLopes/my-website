@@ -578,6 +578,13 @@ const data = [
 		author: "Rory Sutherland",
 		image:
 			"/books/alchemy-the-surprising-power-of-ideas-that-don-t-make-sense.jpg",
+	},
+	{
+		title:
+			"The Front Office: A Hedge Fund Guide for Retail, Day Traders, and Aspiring Quants",
+		author: "Tom Costello",
+		image:
+			"/books/the-front-office-a-hedge-fund-guide-for-retail-day-traders-and-aspiring-quants.jpg",
 	}
 ];
 

@@ -585,6 +585,11 @@ const data = [
 		author: "Tom Costello",
 		image:
 			"/books/the-front-office-a-hedge-fund-guide-for-retail-day-traders-and-aspiring-quants.jpg",
+	},
+	{
+		title: "Superforecasting: The Art and Science of Prediction",
+		author: "Philip E. Tetlock, Dan Gardner",
+		image: "/books/superforecasting.jpg",
 	}
 ];
 

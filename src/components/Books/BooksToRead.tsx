@@ -608,11 +608,6 @@ const data = [
 		image: "/books/the-wealthy-barber.jpg"
 	},
 	{
-		title: "Superforecasting: The Art and Science of Prediction",
-		author: "Philip E. Tetlock, Dan Gardner",
-		image: "/books/superforecasting.jpg"
-	},
-	{
 		title: "Knowledge And Decisions",
 		author: "Thomas Sowell",
 		image: "/books/knowledge-and-decisions.jpg"

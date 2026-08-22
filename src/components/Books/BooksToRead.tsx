@@ -714,13 +714,6 @@ const data = [
 	},
 	{
 		title:
-			"What Works on Wall Street, Fourth Edition: The Classic Guide to the Best-Performing Investment Strategies of All Time",
-		author: "James P. O'Shaughnessy",
-		image:
-			"/books/what-works-on-wall-street-the-classic-guide-to-the-best-performing-investment-strategies-of-all-time.jpg"
-	},
-	{
-		title:
 			"Freakonomics, Revised and Expanded Edition: A Rogue Economist Explores the Hidden Side of Everything",
 		author: "Steven D. Levitt, Stephen J. Dubner",
 		image:

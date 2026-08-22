@@ -590,6 +590,13 @@ const data = [
 		title: "Superforecasting: The Art and Science of Prediction",
 		author: "Philip E. Tetlock, Dan Gardner",
 		image: "/books/superforecasting.jpg",
+	},
+	{
+		title:
+			"What Works on Wall Street, Fourth Edition: The Classic Guide to the Best-Performing Investment Strategies of All Time",
+		author: "James P. O'Shaughnessy",
+		image:
+			"/books/what-works-on-wall-street-the-classic-guide-to-the-best-performing-investment-strategies-of-all-time.jpg",
 	}
 ];
 

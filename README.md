@@ -1,6 +1,6 @@
 # Didier Website
 
-This my open source website: https://didierlopes.com/
+This is my open source website: https://didierlopes.com/
 
 <p float="left">
   <img src="https://github.com/user-attachments/assets/e612733d-ce97-447c-80cf-8287a6203142" width="500" />

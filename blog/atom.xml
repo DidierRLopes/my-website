@@ -875,6 +875,49 @@
         <category label="openbb" term="openbb"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[New iframe widget connects your existing apps with AI Agents inside OpenBB]]></title>
+        <id>https://didierlopes.com/blog/new-iframe-widget-connects-your-existing-apps-with-ai-agents-inside-openbb</id>
+        <link href="https://didierlopes.com/blog/new-iframe-widget-connects-your-existing-apps-with-ai-agents-inside-openbb"/>
+        <updated>2026-07-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Bring your existing web apps into OpenBB Workspace and make them part of the workflow. The new iframe widget lets Streamlit dashboards and internal tools...]]></summary>
+        <content type="html"><![CDATA[<p>Bring your existing web apps into OpenBB Workspace and make them part of the workflow. The new iframe widget lets Streamlit dashboards and internal tools share parameters, export data into the Workspace, and connect to AI agents.</p>
+<p>Until recently, the iframe widget in OpenBB Workspace did one job. You dropped in a URL and it loaded that page inside a dashboard tile. Handy for keeping an internal tool in view, but nothing past that. The page rendered and you still worked around it.</p>
+<p>The revamped iframe widget changes this in a meaningful way:</p>
+<ul>
+<li>You can have the iframe come preloaded with the right app for each dashboard, because the URL can now be set from your backend instead of being configured manually.</li>
+<li>You can make the iframe drive real interactions, not just display a page, by executing JavaScript inside the widget.</li>
+<li>You can keep filters and state consistent across the dashboard, because widget parameters can now stay in sync with the iframe content.</li>
+</ul>
+<br>
+<p>For example, you can use it for state and filter management. The demo below shows the <a href="https://pro.openbb.co/app?tab=apps-marketplace&amp;app=muni-bond-lookup" target="_blank" rel="noopener noreferrer">Terrapin app</a>, where an iframe widget controls the parameters across the other (grouped) widgets in the dashboard.</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/-kll-dZLhDU" width="800" height="400"></iframe></div>
+<br>
+<p>This covers what you can do with the widget directly. The other half of the equation is the agent.</p>
+<p>If you have an agent running in the Workspace, how does it interact with this iframe?</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="mcp-tools-associated-with-iframe-widget">MCP tools associated with iframe widget<a href="https://didierlopes.com/blog/new-iframe-widget-connects-your-existing-apps-with-ai-agents-inside-openbb#mcp-tools-associated-with-iframe-widget" class="hash-link" aria-label="Direct link to MCP tools associated with iframe widget" title="Direct link to MCP tools associated with iframe widget">​</a></h2>
+<p>MCP servers and tools can now be associated to an iframe widget, so any agent in the Workspace can interact with the underlying data. Those MCP tools expose read and write actions against the iframe, so the agent can both pull data out and drive interactions back into the embedded app.</p>
+<p>You can drive the widget yourself through JS execution or you can also give the agent a way to read from and write to that same widget through MCP.</p>
+<p>Read more about the technical details in our <a href="https://docs.openbb.co/workspace/developers/widget-types/iframe" target="_blank" rel="noopener noreferrer">Iframe - OpenBB Docs</a>.</p>
+<p>Data and analytics providers can put all of this to work from within the Apps Marketplace.</p>
+<p>In the <a href="https://pro.openbb.co/app?tab=apps-marketplace&amp;app=kalshi-prediction-markets" target="_blank" rel="noopener noreferrer">Kalshi</a> example, you ask questions to an agent and it answers with live numbers from the Kalshi iframe. The agent reads the table in the iframe and returns structured results through MCP tools, so it is effectively querying that app on your behalf.</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/PSX_C2RWJoI" width="800" height="400"></iframe></div>
+<br>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-native-app-experience">The native app experience<a href="https://didierlopes.com/blog/new-iframe-widget-connects-your-existing-apps-with-ai-agents-inside-openbb#the-native-app-experience" class="hash-link" aria-label="Direct link to The native app experience" title="Direct link to The native app experience">​</a></h2>
+<p>One last thing that mattered to us was letting users port their existing applications into the Workspace, and have it look clean.</p>
+<p>Now both the widget navbar and the border containers are hidden, so it feels like you are inside that app, with the benefit of having OpenBB Copilot (or another agent you have connected) available to you. Instead of looking like you brought your application into OpenBB Workspace, it looks like you brought OpenBB Copilot into your existing application and use case.</p>
+<p>Here's a Streamlit app we built as a reference you can use:</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/jh6wSP-GMPk" width="800" height="400"></iframe></div>
+<br>
+<p>The code can be seen and edited here: <a href="https://github.com/OpenBB-finance/backends-for-openbb/tree/main/widget-examples/streamlit" target="_blank" rel="noopener noreferrer">Streamlit — OpenBB Iframe Widget Protocol</a></p>
+<p>The upgraded iframe widget is now available to all users, including the Community Edition.</p>
+<p>We can't wait to see the workflows the community builds with this new flexible widget.</p><div style="display:flex;justify-content:center;margin-top:3rem;margin-bottom:1rem"><a href="https://substack.com/@didierrlopes" target="_blank" rel="noopener noreferrer" class="mission-button" style="text-decoration:none;white-space:nowrap;padding:12px 24px;font-size:14px">Subscribe to my newsletter<span style="margin-left:6px">»</span></a></div>]]></content>
+        <category label="openbb" term="openbb"/>
+        <category label="iframe" term="iframe"/>
+        <category label="mcp" term="mcp"/>
+        <category label="agents" term="agents"/>
+        <category label="widgets" term="widgets"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[I Compared MNIST-Style Digits Across Languages. Mandarin Chinese Was 4x Harder to Separate]]></title>
         <id>https://didierlopes.com/blog/2026-06-26-i-compared-mnist-style-digits-across-languages-mandarin-chinese-was-4x-harder-to-separate</id>
         <link href="https://didierlopes.com/blog/2026-06-26-i-compared-mnist-style-digits-across-languages-mandarin-chinese-was-4x-harder-to-separate"/>
@@ -2478,7 +2521,9 @@ examples of concise answers, so it is the hardest visible prompt in the sweep.</
 <p>Same data source. Two different access patterns. The API handles the analytical workload: bulk data, charting, time series exploration. The MCP handles the point-in-time query: what's the latest number?</p>
 <p>This is the best of both worlds.</p>
 <p>APIs for analytics. MCP for point-in-time data. They're not competitors. They're complements. The API gives you the full dataset to analyze. The MCP gives the agent a quick, scoped answer to a specific question.</p>
-<p>Most of the times, you need both.</p><div style="display:flex;justify-content:center;margin-top:3rem;margin-bottom:1rem"><a href="https://substack.com/@didierrlopes" target="_blank" rel="noopener noreferrer" class="mission-button" style="text-decoration:none;white-space:nowrap;padding:12px 24px;font-size:14px">Subscribe to my newsletter<span style="margin-left:6px">»</span></a></div>]]></content>
+<p>Most of the times, you need both.</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/RsJ67-vfE3c" width="800" height="400"></iframe></div>
+<br><div style="display:flex;justify-content:center;margin-top:3rem;margin-bottom:1rem"><a href="https://substack.com/@didierrlopes" target="_blank" rel="noopener noreferrer" class="mission-button" style="text-decoration:none;white-space:nowrap;padding:12px 24px;font-size:14px">Subscribe to my newsletter<span style="margin-left:6px">»</span></a></div>]]></content>
         <category label="mcp" term="mcp"/>
         <category label="api" term="api"/>
         <category label="openbb" term="openbb"/>

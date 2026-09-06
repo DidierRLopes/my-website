@@ -193,6 +193,54 @@ function stripHtml(html: string): string {
     return doc.body.textContent || "";
 }
 
+// The browser reports every network-level failure as a bare TypeError ("Failed to fetch" in Chrome,
+// "Load failed" in Safari), whether Ollama is down or merely rejected this page's origin.
+const isNetworkError = (error: unknown): boolean =>
+    error instanceof TypeError && /fetch|network|load failed/i.test(error.message);
+
+// Tell the two cases apart: a no-cors probe resolves (with an opaque response) whenever a server
+// answers at all, CORS headers or not, and rejects only when nothing is listening or the browser blocks it.
+async function diagnoseOllamaConnection(ollamaUrl: string): Promise<string> {
+    const origin = typeof window !== 'undefined' ? window.location.origin : 'this site';
+    try {
+        await fetch(`${ollamaUrl}/api/tags`, { mode: 'no-cors', cache: 'no-store' });
+        return `Ollama is running at ${ollamaUrl} but rejected requests from ${origin}. `
+            + `Add this origin to OLLAMA_ORIGINS (see "Configure Ollama" below) and restart Ollama.`;
+    } catch {
+        return `Could not reach Ollama at ${ollamaUrl}. Make sure Ollama is running and the URL is right. `
+            + `If your browser blocks http://localhost from an https page (Safari does), use the tunnel below.`;
+    }
+}
+
+// /api/embed truncates input to the model's context window. The legacy /api/embeddings returns 500 for
+// anything above ~2,000 tokens, which a third of the blog posts exceed.
+async function embedText(ollamaUrl: string, model: string, text: string): Promise<number[]> {
+    const response = await fetch(`${ollamaUrl}/api/embed`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ model, input: text, truncate: true }),
+    });
+    if (response.ok) {
+        const data = await response.json();
+        const embedding = data.embeddings?.[0];
+        if (Array.isArray(embedding)) return embedding;
+        throw new Error('Ollama returned no embedding.');
+    }
+    if (response.status !== 404) {
+        const detail = await response.text().catch(() => '');
+        throw new Error(`Ollama returned ${response.status}${detail ? `: ${detail.slice(0, 200)}` : ''}`);
+    }
+    // Older Ollama without /api/embed: legacy endpoint with client-side truncation.
+    const legacy = await fetch(`${ollamaUrl}/api/embeddings`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ model, prompt: text.slice(0, 8000) }),
+    });
+    if (!legacy.ok) throw new Error(`Ollama returned ${legacy.status}`);
+    const { embedding } = await legacy.json();
+    return embedding;
+}
+
 const GENERAL_SYSTEM_PROMPT = 'You are an AI assistant representing Didier Lopes. Founder, builder, and product thinker at the intersection of open source, AI and finance. Communicate with clarity, edge, and purpose. Prioritize actionable insight, strong opinions, and clean design. Avoid fluff. Speak to devs, investors, and power users. Think like a strategist, write like a builder, execute like a founder. Write in lower case only. Try to answer concisely, ideally in a tweet-sized response. Your task is to answer questions as if you were him, based *exclusively* on the content of his blog posts provided as context. If the provided context does not contain the answer to a question, you must state that you haven\'t written about that topic yet, rather than attempting to answer from your general knowledge.';
 
 const RAG_SYSTEM_PROMPT = 'When you answer a question that has used context from one of the indexed blog posts, you should add a [source](blog_url) link at the end of your answer.';
@@ -201,9 +249,6 @@ const ChatPage = () => {
   return (
     <Layout title="Chat">
       <main style={{ padding: '2rem' }}>
-        <div style={{ textAlign: 'center' }}>
-          <h1>Chat</h1>
-        </div>
 
         <div className="intelligence-page-desktop">
           <BrowserOnly>{() => <ChatInterface />}</BrowserOnly>
@@ -370,6 +415,8 @@ const OllamaSetupInstructions = () => {
         color: isDark ? 'white' : 'inherit'
     };
     
+    const siteOrigin = typeof window !== 'undefined' ? window.location.origin : 'https://didierlopes.com';
+
     type Tab = 'mac' | 'windows' | 'linux';
 
     const detectOS = (): Tab => {
@@ -403,7 +450,7 @@ const OllamaSetupInstructions = () => {
                 return (
                     <div>
                         <p style={{ margin: '0.5rem 0' }}>1. Run this command in your terminal:</p>
-                        <CommandSnippet command='launchctl setenv OLLAMA_ORIGINS "https://didierlopes.com"' />
+                        <CommandSnippet command={`launchctl setenv OLLAMA_ORIGINS "${siteOrigin}"`} />
                         <p style={{ margin: '1rem 0 0 0' }}>2. <strong>Quit and restart the Ollama application</strong> from the menu bar for the change to take effect.</p>
                     </div>
                 );
@@ -411,7 +458,7 @@ const OllamaSetupInstructions = () => {
                 return (
                     <div>
                         <p style={{ margin: '0.5rem 0' }}>1. Run this command in PowerShell (as Administrator):</p>
-                        <CommandSnippet command='setx OLLAMA_ORIGINS "https://didierlopes.com" /m' />
+                        <CommandSnippet command={`setx OLLAMA_ORIGINS "${siteOrigin}" /m`} />
                         <p style={{ margin: '1rem 0 0 0' }}>2. <strong>Quit and restart the Ollama application</strong> for the change to take effect.</p>
                     </div>
                 );
@@ -421,7 +468,7 @@ const OllamaSetupInstructions = () => {
                         <p style={{ margin: '0.5rem 0' }}>1. Add the environment variable to the systemd unit:</p>
                         <CommandSnippet command="sudo systemctl edit ollama.service" />
                         <p style={{ margin: '0.5rem 0' }}>2. This will open an editor. Add the following lines, then save and close the file:</p>
-                        <pre style={{ background: isDark ? '#111' : '#EEE', padding: '0.5rem', borderRadius: '4px', marginTop: '0.5rem', fontSize: '0.85em' }}>[Service]<br/>Environment="OLLAMA_ORIGINS=https://didierlopes.com"</pre>
+                        <pre style={{ background: isDark ? '#111' : '#EEE', padding: '0.5rem', borderRadius: '4px', marginTop: '0.5rem', fontSize: '0.85em' }}>[Service]<br/>Environment="OLLAMA_ORIGINS={siteOrigin}"</pre>
                         <p style={{ margin: '1rem 0 0 0' }}>3. Restart the Ollama service to apply the changes:</p>
                         <CommandSnippet command="sudo systemctl restart ollama" />
                     </div>
@@ -533,14 +580,16 @@ const OllamaSetupInstructions = () => {
                         </div>
                     </div>
                     <p style={{ marginTop: '1rem', marginBottom: '1rem' }}>
-                        To allow this website to connect to your local Ollama, you must configure CORS.
-                        This tells Ollama to accept requests from <strong>https://didierlopes.com</strong>.
+                        Ollama only answers browsers on localhost by default. Until you allow <strong>{siteOrigin}</strong>,
+                        every request from this page is rejected and the browser reports it as "Failed to fetch"
+                        (the status dot above stays red). Chrome may also ask whether this site can reach devices on your
+                        local network: allow it.
                     </p>
                     {renderCorsInstructions()}
                 </div>
                 <div style={{...panelStyle, justifyContent: 'flex-start', flex: 1}}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-                        <h3 style={headingStyle}>Step 5: Create Secure Tunnel</h3>
+                        <h3 style={headingStyle}>Step 5 (optional): Tunnel</h3>
                         <div style={{ display: 'flex', gap: '0.5rem' }}>
                             <button type='button' onClick={() => setActiveTab('mac')} style={tabStyle('mac')}>macOS</button>
                             <button type='button' onClick={() => setActiveTab('windows')} style={tabStyle('windows')}>Windows</button>
@@ -548,7 +597,9 @@ const OllamaSetupInstructions = () => {
                         </div>
                     </div>
                     <p style={{ marginTop: '1rem', marginBottom: '1rem' }}>
-                        To bridge the connection from the secure website (https) to your local server (http), you need a secure tunnel.
+                        Chrome, Edge and Firefox let this https page call <code>http://localhost</code> directly, so most people
+                        can skip this. You need a tunnel only if your browser blocks it (Safari does) or Ollama runs on another
+                        machine. Keep Step 4 either way: the tunnel forwards this site's origin, so Ollama still has to allow it.
                     </p>
                     {renderTunnelInstructions()}
                 </div>
@@ -719,6 +770,7 @@ const ChatInterface = () => {
     const [isClearing, setIsClearing] = React.useState(false);
     const [hasBeenCleared, setHasBeenCleared] = React.useState(false);
     const [ollamaStatus, setOllamaStatus] = React.useState<'online' | 'offline' | 'pending'>('pending');
+    const [connectionError, setConnectionError] = React.useState<string | null>(null);
     
     const [indexing, setIndexing] = React.useState(false);
     const [progress, setProgress] = React.useState(0);
@@ -781,11 +833,15 @@ const ChatInterface = () => {
                     setEmbeddingModel(embeddingModels[0]);
                 }
                 setOllamaStatus('online');
+                setConnectionError(null);
             } catch (error) {
                 console.error("Failed to fetch Ollama models:", error);
                 setOllamaStatus('offline');
                 setAvailableModels([]);
                 setAvailableEmbeddingModels([]);
+                setConnectionError(isNetworkError(error)
+                    ? await diagnoseOllamaConnection(ollamaUrl)
+                    : `Ollama answered with an error: ${(error as Error).message}`);
             }
         };
 
@@ -819,15 +875,7 @@ const ChatInterface = () => {
                     const imageMatch = post.content_html.match(/<img.*?src=\"(.*?)\"/);
                     const thumbnailUrl = imageMatch ? imageMatch[1] : '';
                     
-                    const embeddingResponse = await fetch(`${ollamaUrl}/api/embeddings`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ model: embeddingModel, prompt: content }),
-                    });
-    
-                    if (!embeddingResponse.ok) throw new Error(`Embedding failed for "${post.title}"`);
-                    
-                    const { embedding } = await embeddingResponse.json();
+                    const embedding = await embedText(ollamaUrl, embeddingModel, content);
                     newVectorStore.push({ 
                         title: post.title, 
                         content: content, 
@@ -838,6 +886,14 @@ const ChatInterface = () => {
     
                 } catch (error) {
                     console.error(`Error processing post "${post.title}":`, error);
+                    if (isNetworkError(error)) {
+                        // Ollama stopped answering or never accepted this origin: one clear message beats 175 identical ones.
+                        const diagnosis = await diagnoseOllamaConnection(ollamaUrl);
+                        setConnectionError(diagnosis);
+                        setOllamaStatus('offline');
+                        setHistory(prev => [...prev, { text: `Indexing stopped at "${post.title}". ${diagnosis}\n\n`, sender: 'error' }]);
+                        break;
+                    }
                     setHistory(prev => [...prev, { text: `Error on "${post.title}": ${(error as Error).message}\n\n`, sender: 'error' }]);
                 }
                 setProgress(((i + 1) / posts.length) * 100);
@@ -881,13 +937,7 @@ const ChatInterface = () => {
         if (vectorStore.length > 0 && embeddingModel) {
             try {
                 // 1. Embed the user's query
-                const queryEmbeddingResponse = await fetch(`${ollamaUrl}/api/embeddings`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ model: embeddingModel, prompt: message }),
-                });
-                if (!queryEmbeddingResponse.ok) throw new Error('Failed to embed user query.');
-                const { embedding: queryEmbedding } = await queryEmbeddingResponse.json();
+                const queryEmbedding = await embedText(ollamaUrl, embeddingModel, message);
 
                 // 2. Find the most similar chunk from the vector store
                 let currentBestMatch: BlogVector & { score: number } | null = null;
@@ -1015,7 +1065,9 @@ const ChatInterface = () => {
           }
         } catch (error) {
           console.error(error);
-          setHistory(prev => [...prev, { text: `Error: ${(error as Error).message}\n\n`, sender: 'error' }]);
+          const message = isNetworkError(error) ? await diagnoseOllamaConnection(ollamaUrl) : (error as Error).message;
+          if (isNetworkError(error)) setConnectionError(message);
+          setHistory(prev => [...prev, { text: `Error: ${message}\n\n`, sender: 'error' }]);
         } finally {
             setIsLoading(false);
         }
@@ -1053,6 +1105,21 @@ const ChatInterface = () => {
                         </select>
                     </div>
                 </div>
+
+                {connectionError && (
+                    <div role="alert" style={{
+                        marginTop: '0.75rem',
+                        padding: '0.6rem 0.9rem',
+                        borderRadius: '6px',
+                        border: `1px solid ${isDark ? '#7a3b3b' : '#f1b0b7'}`,
+                        backgroundColor: isDark ? '#2a1414' : '#fdecea',
+                        color: isDark ? '#f5c2c7' : '#842029',
+                        fontSize: '0.9em',
+                        lineHeight: 1.4,
+                    }}>
+                        {connectionError}
+                    </div>
+                )}
 
                 <div style={{ marginTop: '1rem', display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>

@@ -22,9 +22,6 @@ function IntelligencePage() {
         />
       </Head>
       <main style={{ padding: '2rem' }}>
-        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-            <h1>Intelligence</h1>
-        </div>
         <div className="intelligence-page-desktop">
             <div style={{ width: '60%', margin: '0 auto' }}>
                 <BrowserOnly fallback={<div>Loading graph...</div>}>

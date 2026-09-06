@@ -5,9 +5,9 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function WhoAmI({ isDesktop, isTablet }) {
   return (
-    <Section title="Who am I?">
-      <div className="text-xl">
-        Founder &amp; CEO at{' '}
+    <Section>
+      <div className="text-3xl font-semibold">
+        Ex-founder &amp; CEO @{' '}
         <a target="_blank" rel="noreferrer" href="https://openbb.co/">
           OpenBB
         </a>
@@ -49,21 +49,21 @@ function WhoAmI({ isDesktop, isTablet }) {
             <div>
               <img
                 className="rounded-xl max-w-[220px]"
-                src="img/me_timegpt.webp"
+                src="/img/me_timegpt.webp"
                 alt="Time-GPT event from Nixtla"
               />
             </div>
             <div>
               <img
                 className="rounded-xl max-w-[220px]"
-                src="img/tattoo.webp"
+                src="/img/tattoo.webp"
                 alt="OpenBB Tattoo"
               />
             </div>
             <div>
               <img
                 className="rounded-xl max-w-[220px]"
-                src="img/bridge_sticker.webp"
+                src="/img/bridge_sticker.webp"
                 alt="OpenBB bridge sticker"
               />
             </div>
@@ -73,17 +73,17 @@ function WhoAmI({ isDesktop, isTablet }) {
         <div className="flex items-center content-center mx-auto align-center justify-center flex-wrap mt-4 gap-8 mb-4">
           <img
             className="rounded-xl max-h-[300px] mx-auto"
-            src="img/tattoo.webp"
+            src="/img/tattoo.webp"
             alt="OpenBB Tattoo"
           />
           <img
             className="rounded-xl max-h-[300px] mx-auto"
-            src="img/me_timegpt.webp"
+            src="/img/me_timegpt.webp"
             alt="Time-GPT event from Nixtla"
           />
           <img
             className="rounded-xl max-h-[300px] mx-auto"
-            src="img/bridge_sticker.webp"
+            src="/img/bridge_sticker.webp"
             alt="OpenBB bridget sticker"
           />
         </div>

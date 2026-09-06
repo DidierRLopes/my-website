@@ -126,16 +126,6 @@ const config = {
           },
           {
             position: 'right',
-            label: 'Intelligence',
-            to: '/intelligence',
-          },
-          {
-            position: 'right',
-            label: 'Chat',
-            to: '/chat',
-          },
-          {
-            position: 'right',
             label: 'Newsletter',
             to: '/newsletter',
             target: '_blank',

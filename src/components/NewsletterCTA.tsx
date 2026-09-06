@@ -81,7 +81,7 @@ export default function NewsletterCTA({ variant = 'default' }: NewsletterCTAProp
               lineHeight: 1.5,
             }}
           >
-            Get updates on AI, open source, startups and finance.
+            Get updates on what projects I'm working on.
           </div>
         </div>
         <a

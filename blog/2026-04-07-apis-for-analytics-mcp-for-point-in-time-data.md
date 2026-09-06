@@ -177,3 +177,13 @@ This is the best of both worlds.
 APIs for analytics. MCP for point-in-time data. They're not competitors. They're complements. The API gives you the full dataset to analyze. The MCP gives the agent a quick, scoped answer to a specific question.
 
 Most of the times, you need both.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/RsJ67-vfE3c"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />

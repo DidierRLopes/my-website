@@ -27,7 +27,7 @@ export default function ExperienceList({ experience }: ExperienceListProps) {
                   href={href} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-mission-text-color hover:underline"
+                  className="text-mission-text-color underline hover:opacity-80"
                 >
                   {children}
                 </a>
@@ -57,7 +57,7 @@ export default function ExperienceList({ experience }: ExperienceListProps) {
                 href={href} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-mission-text-color hover:underline"
+                className="text-mission-text-color underline hover:opacity-80"
               >
                 {children}
               </a>
@@ -104,7 +104,7 @@ export default function ExperienceList({ experience }: ExperienceListProps) {
                   {companyGroup.roles[0].daterange}
                 </div>
                 <div className="text-base mb-4">
-                  <strong>{companyGroup.roles[0].title}</strong> @ <a href={companyGroup.link} rel="noopener noreferrer" target="_blank" className="text-mission-text-color hover:underline">{companyGroup.company}</a>
+                  <strong>{companyGroup.roles[0].title}</strong> @ <a href={companyGroup.link} rel="noopener noreferrer" target="_blank" className="text-mission-text-color underline hover:opacity-80">{companyGroup.company}</a>
                 </div>
                 {renderSummary(companyGroup.roles[0].summary)}
               </>
@@ -112,7 +112,7 @@ export default function ExperienceList({ experience }: ExperienceListProps) {
               // Multiple roles at same company - group them
               <>
                 <div className="text-base mb-4">
-                  <a href={companyGroup.link} rel="noopener noreferrer" target="_blank" className="text-mission-text-color hover:underline font-bold">{companyGroup.company}</a>
+                  <a href={companyGroup.link} rel="noopener noreferrer" target="_blank" className="text-mission-text-color underline hover:opacity-80 font-bold">{companyGroup.company}</a>
                 </div>
                 {companyGroup.roles.map((role, roleIndex) => (
                   <div key={roleIndex} className={roleIndex > 0 ? "mt-6 pt-6 border-t border-gray-700 dark:border-gray-600" : ""}>

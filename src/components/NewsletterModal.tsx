@@ -88,7 +88,7 @@ export default function NewsletterModal() {
           marginBottom: '1.5rem',
           color: 'var(--ds-gray-medium)',
         }}>
-          Get updates on AI, open source, startups and finance.
+          Get updates on what projects I'm working on.
         </p>
         <a
           href="https://substack.com/@didierrlopes"

@@ -895,19 +895,31 @@ article header h1 {
     transform: translate(-50%, -50%);
   }
 
-  .navbar__center-right-item[href='/intelligence'] {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(calc(60px), -50%);
-  }
-  
-  .navbar__center-right-item[href='/chat'] {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(calc(60px + 120px), -50%);
-  }
+}
+
+.blog-discovery-copy {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  margin-left: 0.35rem;
+  padding: 0 0.15rem;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.blog-discovery-copy:hover {
+  opacity: 1;
+}
+
+.blog-discovery-note {
+  max-width: 720px;
+  margin: 0.75rem auto 0;
+  font-size: 0.95em;
+  line-height: 1.5;
+  opacity: 0.85;
 }
 
 .intelligence-page-desktop {

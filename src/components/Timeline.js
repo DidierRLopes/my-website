@@ -2,6 +2,16 @@ import React from 'react';
 
 const journeyData = [
   {
+    year: 2026,
+    icon: "🔓",
+    description: <>Approved vendor at a tier-1 bank. Wound down the company and open sourced the entire tech stack [<a href="https://openbb.co/blog/openbb-belongs-to-everyone/" target="_blank" rel="noreferrer">announcement</a>].</>
+  },
+  {
+    year: 2025,
+    icon: "🏛️",
+    description: <>Closed our largest buy-side client ($70bn AUM) and raised a $1M bridge round. Ran the NYC Half Marathon [<a href="/blog/my-first-half-marathon" className="underline">recap</a>].</>
+  },
+  {
     year: 2024,
     icon: "🗽",
     description: <>Moved with family again to be closer to customers in NYC.</>

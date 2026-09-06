@@ -1,7 +1,43 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
 import CustomBlogList from '../../components/Blog/CustomBlogList';
+
+const LLMS_FULL_URL = 'https://didierlopes.com/blog/llms-full.txt';
+
+function CopyButton({ text }) {
+  const [copied, setCopied] = React.useState(false);
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch (error) {
+      console.error('Copy failed:', error);
+    }
+  };
+  return (
+    <button
+      type="button"
+      onClick={copy}
+      className="blog-discovery-copy"
+      aria-label={copied ? 'Copied' : 'Copy link'}
+      title={copied ? 'Copied' : 'Copy link'}
+    >
+      {copied ? (
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <polyline points="20 6 9 17 4 12" />
+        </svg>
+      ) : (
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+        </svg>
+      )}
+    </button>
+  );
+}
 
 export default function BlogListPageWrapper(props) {
   const { items, metadata } = props;
@@ -54,6 +90,12 @@ export default function BlogListPageWrapper(props) {
             <h1>
               {metadata?.blogTitle || 'Blog'}
             </h1>
+            <p className="blog-discovery-note">
+              Blog graph <Link to="/intelligence">here</Link> or chat with my blog <Link to="/chat">here</Link>.
+              Send all my blog as context to your agent with{' '}
+              <a href={LLMS_FULL_URL}>didierlopes.com/blog/llms-full.txt</a>
+              <CopyButton text={LLMS_FULL_URL} />
+            </p>
           </div>
           <CustomBlogList posts={posts} />
         </div>

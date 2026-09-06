@@ -3,6 +3,20 @@ import VideosList from '../General/VideosList';
 
 const data = [
   {
+    title: 'OpenBB Workspace Demo: Portfolio Analysis, Apps Marketplace, MCP & AI Agents',
+    embed: 'https://www.youtube.com/embed/Ik1qUa-HbUY?start=18',
+    description: 'Didier Lopes (CEO) walks through a full OpenBB Workspace session, from dashboard configuration to multi-source data analysis and automated reporting.',
+    date: '2026-07-31',
+    time: '12 minutes',
+  },
+  {
+    title: 'Vibe-coded financial apps: How OpenBB fixes ownership and data governance',
+    embed: 'https://www.youtube.com/embed/7fDTDYh2NJ4?start=5',
+    description: 'Recorded after NY Tech Week as a replay of the presentation at the AI in Finance Forum, this demo shows how OpenBB Workspace centralizes enterprise workflows with role‑based access, sharing and audit trails in one environment you control end to end.',
+    date: '2026-06-11',
+    time: '26 minutes',
+  },
+  {
     title: 'OpenBB Terminal Pro in 12 minutes',
     embed: 'https://www.youtube.com/embed/UjpnnTNJcoQ?si=PYHoJRYBY1NfB41B',
     description: 'The OpenBB Terminal Pro is the first AI-powered and customizable investment research tool for financial analysts and quants looking to increase efficiency, productivity, and team collaboration.',

@@ -26919,6 +26919,132 @@ The broader lesson is not that long answers are bad. The lesson is that plausibl
 ---
 
 ---
+slug: data-is-the-moat
+title: "Data is THE moat"
+date: 2026-06-21
+image: /blog/2026-06-21-data-is-the-moat/2026-06-21-data-is-the-moat.webp
+tags:
+- ai
+- data
+- moats
+- startups
+- finance
+- openbb
+description: "Proprietary data, client data, and the context from using these."
+hideSidebar: true
+---
+
+Proprietary data, client data, and the context from using these.
+
+<!-- truncate -->
+
+Every other AI startup pitch I see right now is selling workflows: vertical, agentic, AI-native. They have real value, but I do not think there is a durable startup moat there. It is closer to a services business, like consulting, than a software one.
+
+Models are language engines. They produce sequences of words, and they are converging fast on the ability to produce those sequences well. Reasoning gets better, inference gets cheaper, open-weight models catch up (check [GLM-5.2 launch](https://z.ai/blog/glm-5.2)!!), and labs leapfrog each other every few months.
+
+But the sequence of words gets harder to put together when it relies on data the model does not have access to. The probability of surfacing the right tokens drops to nearly zero. And it does not matter how good your model is. If it does not have your data, it cannot do miracles…
+
+That is where the moat starts to form.
+
+## Workflows have no moat
+
+Workflows are not defensible because anyone can find someone who has done that work before - check [Mercor’s job listing page](https://work.mercor.com/explore) if you need a proof point. You can replicate prompts, reverse engineer agents, copy orchestration logic, reproduce UI patterns, and observe how teams operate. A company may do something slightly better than another for some period of time, but that does not last. Eventually everyone catches up and the market enters a pricing war where value compresses to zero.
+
+I see this in my own use. A few months ago I used ChatGPT heavily to write blog posts. Then I moved most of that work to Claude. For coding I preferred Claude for a long time, and recently switched to the Codex. For image generation I started with ChatGPT, and these days I often use Gemini.
+
+The workflow barely changed. The work was always the same: writing, coding, research, image generation. The model changed, not the workflow.
+
+If I can swap platforms and do the exact same workflow, the platform does not have a real moat. The amount of additional context I need to do these tasks well is small. For coding it is my codebase, which I bring with me. For writing it is a memory of patterns I like and dislike. There is not much else.
+
+A good example of the dynamic is Daloopa. They open-source many of the skills and workflows built on top of their data ([here](https://github.com/daloopa/investing/tree/main/.claude/skills)). If workflows were the moat, why would they do that? Because the smart move is to [commoditize their complements](https://www.joelonsoftware.com/2002/06/12/strategy-letter-v/). Make the workflows widely available, increase adoption, let others build on top, and in doing so make their underlying data layer more valuable.
+
+## Data is the moat
+
+What competitors cannot get around is the data they do not have access to. That data takes three forms.
+
+1. The first is **vendor proprietary data**. Data you have licensed or built that competitors cannot get on equal terms. That could mean a dataset you have exclusive rights to, or one you put together yourself, or some integration nobody else can access. It does not have to be exotic.
+
+2. The second is **client data**, when your platform is where it lives. Client data on its own is not a moat if the client is happy to send the same data to five other companies. It becomes one when your product is the system of record, the integration layer, or the workspace where that data accumulates. What you are really locking in is not the data itself. It is the fact that the data and its context only exist in usable form inside your product.
+
+3. The third is **derivative data**. When client and proprietary data run through workflows on your platform, they produce a new layer: corrections, decisions, errors, conventions, artifacts, the way a team actually operates. This layer cannot be reconstructed from outside. It exists only because the work happened on your system.
+
+<br />
+
+**The most defensible position combines all three.**
+
+The derivative layer feeds back into making the first two more useful over time. The corrections users make on your platform end up refining the proprietary data. The way teams operate teaches the system how to surface the right client data at the right time. Each interaction makes the next one a bit better, and none of that compounds outside your system.
+
+## The labs are coming for it
+
+Even the workflows the AI labs are pushing into orgs are not really a moat long term.
+
+Right now they are specializing models toward specific workflows. This wins market share in the short term. As models keep improving, those same workflows can be done by another model. The catch is that the labs are coming for the same context.
+
+As models become more of the finalized product, they keep eating into more workflows. And as that happens, the products themselves get more valuable once users bring their data into them.
+
+That is why the labs are being aggressive about going up-market. If they win the context, they get the data. And that data is exactly what they use to train the next version of the underlying model.
+
+It goes deeper than the API call. The labs are training on signals from inside the harness too, not just on what gets sent to the model. Every time you accept a result, that is positive reward. Every time you reject one and ask for a retry, that is negative signal. Every edit, every abandonment, every continuation feeds back into the RL pipeline.
+
+CLIs are where you see this most directly. Inside a CLI especially, the user is constantly producing reward signal just by working. Same goes for agent harnesses, copilots, editors. Anywhere the user gives the model a task, evaluates the result, and moves on or pushes back, the lab gets to learn.
+
+I believe that AI labs will become data companies in the long run too. Everything will become training data to win the battle for intelligence.
+
+## The moat shifts as the technology shifts
+
+A natural pushback is that this will not hold as models get better. As they improve, they will start aggregating proprietary data on their own. Read documents, query systems, mimic workflows from a few examples. If agents can do that, the data moat erodes too.
+
+They can, to a point. But the data still has to live somewhere. An agent reading a client’s CRM is calling into a system someone else stores. So the moat shifts a level deeper, from owning the data to owning where the data lives and who is allowed to read it - i.e. control.
+
+## The defense
+
+The defense is to control where the context lands. If the context accumulates inside your system and the lab only sees inference calls, you are building a moat. If the context accumulates inside the lab's product (their memory, their connectors, their workspace) and you are orchestrating prompts on top, you are helping them consolidate their moat.
+
+This is where workflows earn their place. They are how you get users in and how you get their data in. They create the surface where derivative data starts to accumulate.
+
+But make no mistake, the workflow isn’t a product. The workflow is really just the funnel. **The actual product is the data and context that get captured along the way.**
+
+This is why so many AI companies are converging on the same things: copilots, workspace layers, memory, integrations, skills, enterprise connectors, collaboration features.
+
+**Owning the interaction layer is the most direct way to accumulate proprietary context.**
+
+## Why finance is different
+
+All of this applies broadly, but finance is different in a few ways that make the data moat harder for the labs to absorb than in most other verticals.
+
+Most financial data is licensed under terms that prohibit training, and the vendors actively enforce those terms.
+
+The data is operational input, not training corpus. It is pricing, positions, trades, exposures. Each piece is point-in-time and only useful if it is current, so there is no way for the labs to scrape their way to it.
+
+Trust also matters a lot more in finance than in other domains. Compliance teams move (incredibly) slowly and prefer vendors with track records. The cost of replacing a trusted financial vendor relationship is extremely high - this is why selling market data is so hard, most firms already picked a vendor and have built their systems/models/workflows on top of it.
+
+None of this blocks the labs though.
+
+The financial workspace war is going to be fought between data incumbents and labs trying to own the context layer from different angles:
+
+- Data incumbents by bringing intelligence to their platforms.
+- AI labs by bringing proprietary data to their products.
+
+<br />
+
+On the other hand, the buy-side will most likely build their own platforms so they can leverage intelligence without pushing out their context (portfolio positions, trade ideas, internal discussions and models, etc.), the same way they have been leveraging proprietary data from vendors without them having access to what they are doing with it.
+
+This is something that surprised me a lot in the space, most data vendors have no idea what their data is being used for and in what context. I always thought this was a failure in part of the vendor, but maybe is a feature in part of the buyer. If the vendor doesn’t know what their data is being used for, they cannot broadcast it as an idea to their other clients.
+
+Oh and btw, at OpenBB, we offer an agentic financial workspace that you can:
+
+1. Run on-prem/VPC and keep your context all to yourself.
+2. Integrate data from any vendor (we just announced an [apps marketplace](https://openbb.co/blog/introducing-the-openbb-app-marketplace/) to make these more accessible to you!).
+3. Integrate any [AI agent](https://github.com/OpenBB-finance/agents-for-openbb) (even if you’ve built one internally on top of an open-weight model).
+
+<br />
+
+Separately, I’ve been spending some time on a personal project to create a Workspace Bench evals for an agent interacting with our workspace. More on that soon.
+
+
+---
+
+---
 slug: 2026-06-26-i-compared-mnist-style-digits-across-languages-mandarin-chinese-was-4x-harder-to-separate
 title: I Compared MNIST-Style Digits Across Languages. Mandarin Chinese Was 4x Harder to Separate
 date: 2026-06-26
@@ -28843,3 +28969,675 @@ The first is **improving Workspace MCP itself from these results**. The failure 
 The second is **turning the benchmark into a training environment**. Every episode already leaves a full graded trace, the grader emits a clean pass/fail reward, and the deterministic simulator is a natural environment - which is what I need for RL rollouts. I was looking into converting these tasks into [Harbor](https://harborframework.com/) framework, so the same task JSON, simulator, and grader can drive rollouts at scale.
 
 If agents are going to drive a financial workspace, I have to be able to measure how well they do it. Now I can.
+
+
+---
+
+---
+slug: how-theta-data-serves-the-entire-us-options-market-from-four-racks
+title: "How Theta Data serves the entire US Options market from four racks"
+date: 2026-08-21
+image: /blog/2026-08-21-how-theta-data-serves-the-entire-us-options-market-from-four-racks/2026-08-21-how-theta-data-serves-the-entire-us-options-market-from-four-racks.webp
+tags:
+- options
+- market-data
+- infrastructure
+- finance
+- theta-data
+description: "Bailey Danseglio started with one server in one rack. I visited his data center to see what the full pipeline looks like now."
+hideSidebar: true
+---
+
+Bailey Danseglio started with one server in one rack. I visited his data center to see what the full pipeline looks like now.
+
+<!-- truncate -->
+
+This is going to be a different post than my usual ones - but I hope you find value in it. I definitely did.
+
+Today I’m going to talk about how options data flows from exchanges to your favorite options dashboard.
+
+Back in 2023 I met [Bailey](https://www.linkedin.com/in/bailey-danseglio-56135a16a/) from [Theta Data](https://www.thetadata.net/).
+
+A few months after we synced online he suggested grabbing a coffee and even doing a data center tour. He had literally just set up his first servers at the time, and his company was 1 person.
+
+<p align="center">
+    <img width="800" src="/blog/2026-08-21-how-theta-data-serves-the-entire-us-options-market-from-four-racks/2026-08-21-how-theta-data-serves-the-entire-us-options-market-from-four-racks_1.webp" alt="LinkedIn messages from Bailey Danseglio in September 2023 suggesting coffee and a data center tour of EWR2" />
+</p>
+
+Unfortunately, at the time I was living in the Bay Area and was just in NYC for a few days and already had back-to-back meetings.
+
+But after 2.5 years, I finally made it! Now Theta Data has 13 employees and thousands of clients.
+
+I finally visited Theta Data’s colocation site in New Jersey!
+
+So this post will talk about the path of a single options quote. From the exchange that creates it, through OPRA, through Theta Data’s hardware, through the wire protocol, and finally into your favorite options market app.
+
+<p align="center">
+    <img width="800" src="/blog/2026-08-21-how-theta-data-serves-the-entire-us-options-market-from-four-racks/2026-08-21-how-theta-data-serves-the-entire-us-options-market-from-four-racks_2.webp" alt="Diagram of an options quote flowing from the exchange and OPRA through Theta Data's colocation, FPSS ingest, Interp3 Greeks, storage and FIC compression into your app" />
+</p>
+
+Some of the post were things I already knew, but many are things that I learned with Bailey or once I got home and spent a few hours iterating with an LLM to up my game!
+
+## 1. The exchange creates the quote
+
+A trader places an options order through a broker. For retail that means Robinhood, Fidelity, Schwab, IBKR, or similar. For institutions it’s a prime broker or a direct-market-access provider.
+
+The broker decides where to send the order. There are seventeen registered US options exchanges, owned by a handful of operators.
+
+- Cboe Global Markets runs four (Cboe Options, C2, BZX Options, EDGX Options).
+- Nasdaq runs six (PHLX, NOM, BX Options, ISE, GEMX, MRX).
+- NYSE runs two (American Options, Arca Options).
+- MIAX runs four.
+- BOX and MEMX run one each.
+
+<br />
+
+The broker’s routing logic picks among them based on best-execution obligations, rebate economics, and its own smart order router.
+
+Listed US options trade almost exclusively on exchanges. US equities are different: they have a whole second layer of venues, including wholesale market makers that internalize retail flow and alternative trading systems that run dark pools. Options don’t have that layer. Every order in this post ends up on one of those seventeen exchanges’ order books.
+
+### Order book
+
+The order book is where resting buy and sell interest sits, organized by price level.
+
+Here’s what a simplified one looks like for the AAPL Jan 15 2027 \$180 call on a single exchange:
+
+```text
+Offer side (sells)
+$2.45  x 200
+$2.42  x 100
+$2.40  x 75    <- best offer
+-----------------
+$2.35  x 50    <- best bid
+$2.33  x 120
+$2.30  x 300
+Bid side (buys)
+```
+
+The first line on each side of the divider is the top of the book: the highest bid and the lowest offer at that moment. Everything below the best bid and above the best offer is called depth, or away from the top.
+
+Most of the activity concentrates at the top.
+
+Market makers (like Citadel, Jane Street, and Optiver) don’t post (i.e. placing a resting order on the book) deep in the book because those orders don’t trade. They compete at the best price, so the top updates constantly while deeper levels sit mostly still. That’s why most quote messages on the feed describe top-of-book updates: the best bid moved from \$2.35 to \$2.36, or the 75 contracts at \$2.40 got partially filled and dropped to 50.
+
+OPRA publishes NBBO (National Best Bid and Offer) and regional BBO for each exchange. Almost every vendor and user of OPRA data chooses to only evaluate NBBO as consuming the BBO messages increases message volume by ~4x.
+
+The matching engine is the software that maintains the book and pairs new incoming orders against resting orders. Most options exchanges use price-time priority: best price wins, and at the same price the earliest order wins. Some use pro-rata matching, where fills at a price level are split proportionally by size across resting quotes.
+
+### Type of events
+
+Two kinds of events come out of the matching engine.
+
+**A quote is a change to the book.** Someone posts a new bid, the size on an existing offer changes, or a resting order is canceled. No contracts have changed hands.
+
+**A trade is an execution.** Two orders matched at an agreed price and contracts changed hands.
+
+Both become messages on the exchange’s data feed. Quotes dominate by volume. At OPRA’s scale, most of the 200+ billion daily messages are quote updates. Only a small fraction are actual executions. Every OPRA quote message is a top-of-book update from one exchange.
+
+#### Options quote
+
+An options quote is a message that says, for one specific options contract at one specific moment in time, what the best bid and best offer look like on that exchange.
+
+The contract itself is identified by four things: the **underlying asset**, the **expiration date**, the **strike price**, and whether it’s a **call or a put.**
+
+The quote then carries a **bid price**, a **bid size,** an **ask price**, an **ask size**, a **timestamp**, and an **exchange identifier**.
+
+A concrete example:
+
+> AAPL, January 15 2027 expiry, \$180 strike, call. Bid \$2.35 for 50 contracts. Ask \$2.40 for 75 contracts. Timestamp 14:32:17.847 ET. From Cboe.
+
+<br />
+
+## 2. OPRA consolidates and disseminates
+
+OPRA is the Options Price Reporting Authority. It consolidates last-sale and quotation information from every U.S. options exchange and disseminates it to licensed vendors. A vendor can receive the feed directly from the processor or from another vendor, but either way the data remains the property of the originating exchange.
+
+There are two main things to handle here:
+
+- **Volume:** The SEC reported recently that OPRA message volumes rose from 9 billion per day in 2017 to a peak of 247 billion per day in early 2025. OPRA’s SIP metrics show peak throughput of 50.9 million messages per second in January 2026 and 53.5 million in February 2026.
+- **Legal**: Before anyone writes an API, the vendor has to deal with entitlements, exchange fee schedules, subscriber agreements, and redistribution permissions.
+
+<br />
+
+This is the first thing Bailey had to handle when he started the company.
+
+**Crazy**.
+
+## 3. The quote hits Theta Data’s hardware
+
+The feed arrives at the colocation facility. In this case EWR2, then you will have racks with servers that will handle the quotes.
+
+<p align="center">
+    <img width="500" src="/blog/2026-08-21-how-theta-data-serves-the-entire-us-options-market-from-four-racks/2026-08-21-how-theta-data-serves-the-entire-us-options-market-from-four-racks_3.webp" alt="Didier and Bailey holding a Theta Data sign in front of the server racks at the EWR2 colocation site" />
+</p>
+
+Some of the facts Bailey told me:
+
+- 8 racks, 100+ servers
+- 60kW footprint
+- 3 petabyte of uncompressed data!! Mix between normalized history and computed analytics
+- NVMe for faster retrieval
+- Firewalls
+- Redundancy in everything (we even talked about how Elon was able to move racks for X without downtime). Theta Data is no different.
+- Monitoring to ensure high availability. They even monitor the temperature of the front and back of each rack.
+
+<br />
+
+## 4. NBBO state gets maintained
+
+Once the quote lands on the feed handler, Theta Data has to update state.
+
+NBBO stands for national best bid and offer. It’s the best displayed bid and the best displayed offer consolidated across the exchanges. Think of it as top of book at the national level rather than on a single exchange. In options, OPRA’s rules determine the NBBO first by price, then by size, then by time. A new quote has to improve the current best by at least one cent to displace it. At the same price level, the size has to improve by at least ten contracts.
+
+The best bid and the best offer do not always change at the same moment. OPRA’s output specification has separate indicators for a new best bid, a new best offer, or both. One side can move while the other stays put. If your infrastructure only handles the case where both sides change together, you miss updates or emit stale state.
+
+Theta Data handles one-sided updates.
+
+Bailey told me that this is one of the reasons that they win a lot of business, because many vendors don’t support it due to engineering challenges associated with processing more data.
+
+## 5. Analytics get computed on top
+
+Theta Data computes first-, second-, and third-order Greeks tick by tick and on an aggregated basis.
+
+They pair each option tick with the exact underlying tick at the same moment, apply Black-Scholes, default to SOFR for the risk-free rate, and solve implied volatility with a bisection method. Output is available in both real-time and historical form. In addition to greeks, data on intervals like 1-minute and 1-second are also computed.
+
+The engine that does this work is something Bailey designed called Interp3. It’s an analytics engine for financial data built to handle tick-level computation at OPRA volumes.
+
+## 6. The result lands in tiered storage
+
+Theta Data’s product exposes tick, 1-second, 1-minute, and end-of-day granularities, plus open interest and flat files. A single daily option trade-quote flat file is about 1.2 GB. A daily EOD file is about 150 MB. The API preserves millisecond-level timing through an ms_of_day field.
+
+Put together, this is a multi-tier store: live state and recent high-granularity history on NVMe, bulk archives on spinning disk. Sitting on top of the storage is a server Theta Data calls MDDS, or Market Data Distribution Server. Every query-based request a customer makes (snapshots, historical pulls, bulk downloads) is handled by MDDS. It’s what allows the “give me a year of SPY option trades” into reads across the right storage tiers and returns the result.
+
+## 7. It gets compressed for the wire
+
+Now the quote has to travel from Theta Data’s servers to another machine.
+
+Theta Data uses a proprietary wire protocol that reduces bandwidth by up to 30x versus raw formats. Bailey designed it. They call it *FIC (Financial Information Compression)*. This is applied information theory: encode the same market data content in fewer bits by exploiting structure in the feed.
+
+What gets compressed is a FIT, or Financial Information Tick. A FIT is the atomic unit at Theta Data’s level: a single row of market data, natively represented as an array of signed int32s. Quotes, trades, and Greeks all travel as sequences of FITs. FIC takes those sequences and packs them into the wire format that the Theta Terminal decodes on the other end.
+
+At OPRA volumes, a 30x compression ratio means the same customer can receive the same data over a 30x thinner network pipe, or receive 30x more data over the same pipe. For a vendor serving high-volume customers over the public internet or through cross-connects, the wire format is one of the most important parts of the stack.
+
+## 8. Your favorite options app
+
+This is where the journey ends. The compressed stream leaves Theta Data’s racks, travels over the internet or a cross-connect, and lands in an application. That app might be a trading platform that licenses the data underneath, a research dashboard (cough OpenBB Workspace cough), or the side project you’re vibe coding at night with quotes coming off a WebSocket.
+
+As far as the app is concerned, market data is a service that just works. It does not think about OPRA entitlements, feed handlers, one-sided NBBO updates, Greeks computation, storage tiers, or wire compression.
+
+All of that is abstracted away behind a clean stream of quotes.
+
+The journey passes through exchange licensing, compliance approvals, multi-megawatt facility power, redundant networks, FPSS, the Interp3 analytics engine, petabyte storage, and a 30x compression protocol. The app just shows you a live option chain without the developer having to worry/touch a multicast packet.
+
+---
+
+Massive shoutout to [Theta Data](https://www.thetadata.net/) and [Bailey](https://www.linkedin.com/in/bailey-danseglio-56135a16a/).
+
+I’m trying to convince Bailey to talk more about the BTS of Theta Data, so if you found some value in this post and would like to learn more (or become a customer!) reach out to him and the team.
+
+
+---
+
+---
+slug: openbb-is-shutting-down-and-going-open-source
+title: "OpenBB is shutting down and going open source"
+date: 2026-08-31
+image: /blog/2026-08-31-openbb-is-shutting-down-and-going-open-source/2026-08-31-openbb-is-shutting-down-and-going-open-source.webp
+tags:
+- openbb
+- open-source
+- startups
+- founder
+description: "And I’m sharing the entire OpenBB roadmap I had with you soon"
+hideSidebar: true
+---
+
+And I’m sharing the entire OpenBB roadmap I had with you soon.
+
+<!-- truncate -->
+
+Many of you will have seen the news by now.
+
+After over 5 years working on OpenBB, we decided to wind down the business and give it to the community by open sourcing our entire product suite.
+
+I wrote more about this here: [https://openbb.co/blog/openbb-belongs-to-everyone/](https://openbb.co/blog/openbb-belongs-to-everyone/)
+
+Thank you for following this newsletter and sharing it with others. Writing forced me to simplify ideas and helped me express myself better. Putting myself out there forced me to find holes in my thesis and present it better. It led to countless conversations, sometimes from posts I had shared the year prior.
+
+It’s incredible how the internet still rewards people who have a strong opinion, as long as you stand for something.
+
+I’m forever grateful to have been given the opportunity to build OpenBB. I truly believed that it was my life’s work and worked every single day as if it were.
+
+And so did the rest of the team - truly missionaries.
+
+<p align="center">
+    <img width="800" src="/blog/2026-08-31-openbb-is-shutting-down-and-going-open-source/2026-08-31-openbb-is-shutting-down-and-going-open-source_1.webp" alt="The OpenBB team waving on a video call" />
+</p>
+
+With the source code now available, I really hope I see companies run with it.
+
+**There is still so much to build on top of it!!!** And from the reactions to my [LinkedIn post](https://www.linkedin.com/posts/didier-lopes_today-is-bittersweet-after-almost-six-years-activity-7498039615887462400-GNOz), I think OpenBB will live on.
+
+Anyway!
+
+In October I’ll be joining a new team as an individual contributor. After years split between engineering, product, go-to-market, sales and day-to-day of running a startup, I’m looking forward to building full-time again.
+
+Before that, I’ll publish the full OpenBB Workspace roadmap I had in mind with you. I won’t be carrying it, so I hope someone does.
+
+A couple of other posts I was working on will also go out in September.
+
+After that, I’ll mostly go quiet here.
+
+But you can always reach me on socials if you need anything.
+
+---
+
+PS: Given the number of founders/builders who reached out to meet, and the lack of bandwidth to meet everyone - I decided to filter it a bit.
+
+So if you are interested in chatting in September (and getting one of the last OpenBB hats to exist), check this out.
+
+> The response to winding down OpenBB has been unbelievable. Hundreds of messages came in; a lot of them from founders and builders asking for time to talk through what they're working on.
+>
+> <br />
+>
+> Unfortunately I don't have the bandwidth to take all these calls... at the same time I'm still raising money for cancer research... and I still have a few OG OpenBB hats (the last ones that were made!!!).
+>
+> <br />
+>
+> So… here's the deal:
+>
+> <br />
+>
+> I'll do a 1-hour call/meet with anyone who donates at least \$150 to Team Continuum. Fundraising, lessons learned, why I think we failed, open sourcing the workspace, what I would have done next - anything you want to ask.
+>
+> <br />
+>
+> This is valid until we reach my fundraising goal of \$3500. And if we meet in person, I will bring you a vintage OpenBB hat guaranteed.
+>
+> <br />
+>
+> Donate here: [https://lnkd.in/eX5piFJR](https://lnkd.in/eX5piFJR)
+>
+> <br />
+>
+> (make the email visible, or reach out to me after you donate so we can schedule it)
+>
+> <br />
+>
+> Reposts appreciated ❤️
+
+<br />
+
+**Didier Lopes** (@didier_lopes) - [post](https://x.com/didier_lopes/status/2094438413080408408)
+
+
+---
+
+---
+slug: my-learning-system-for-keeping-up-with-ai
+title: "My learning system for keeping up with AI"
+date: 2026-09-05
+image: /blog/2026-09-05-my-learning-system-for-keeping-up-with-ai/2026-09-05-my-learning-system-for-keeping-up-with-ai.webp
+tags:
+- ai
+- learning
+- productivity
+- llms
+- second-brain
+description: "I've spent the last few months of spare time trying to understand how LLMs work and keeping up with the frontier. This is my entire consumption routine."
+hideSidebar: true
+---
+
+I've spent the last few months of spare time trying to understand how LLMs work and keeping up with the frontier. This describes my entire consumption routine.
+
+<!-- truncate -->
+
+LLMs are the most groundbreaking technology I have seen in my lifetime. It’s hard not to be curious about how they work at a fundamental level; and what happens at the frontier labs.
+
+### Context
+
+It’s now 10 years since I got introduced to Neural Networks at my university in Portugal. I spent weeks in MATLAB training a NNARX with ~100 parameters (optimizing weights with Levenberg-Marquardt) to control a thermal process.
+
+<p align="center">
+    <img width="318" src="/blog/2026-09-05-my-learning-system-for-keeping-up-with-ai/2026-09-05-my-learning-system-for-keeping-up-with-ai_1.webp" alt="MATLAB Neural Network Training tool showing a NNARX network being trained with Levenberg-Marquardt" />
+</p>
+
+Then at TU Delft in 2017, I had classes on Reinforcement Learning. Slides from Knowledge-Based Control Systems course.
+
+<p align="center">
+    <img width="800" src="/blog/2026-09-05-my-learning-system-for-keeping-up-with-ai/2026-09-05-my-learning-system-for-keeping-up-with-ai_2.webp" alt="Slides from the TU Delft Knowledge-Based Control Systems course on types of reinforcement learning algorithms" />
+</p>
+
+Then in 2020, I actually helped a friend writing the code behind his PhD thesis on modeling and forecasting SP500 using LSTM NN with tensorflow. I open source it [here](https://github.com/DidierRLopes/UnivariateTimeSeriesForecast/tree/master).
+
+<p align="center">
+    <img width="800" src="/blog/2026-09-05-my-learning-system-for-keeping-up-with-ai/2026-09-05-my-learning-system-for-keeping-up-with-ai_3.webp" alt="Charts of real versus predicted SP500 values from the LSTM forecasting model" />
+</p>
+
+I was blown away by NN capabilities at the time, but I was only using it in numerical data. I never applied it to text as modality.
+
+This same NN architecture is what kicked off LLMs as we know it. Because humans interact mostly via language and it turns out that with enough data and compute - text generalizes incredibly well.
+
+PS: if you are interested about companies working on “ChatGPT” for time-series, then check out [Nixtla](https://www.nixtla.io/).
+
+Anyway, given that you have this context about some of my background, I want to share what does my AI-augmented learning consumption looks like.
+
+## X as the top of the funnel
+
+I deleted all social media apps from my phone (except LinkedIn for network).
+
+The goal here is to avoid low calorie content - things that keep you hooked on the screen and that when you realize it’s been 30 minutes and learned nothing.
+
+X also has this with their videos, which I hate and sometimes still fall for.
+
+The main job that X is doing for me is **discovery**.
+
+I trust that X will surface all the posts on the topics that I am interested about. And I trust X because I put myself in a position to trust X. I spent a lot of time providing signals to my recommendation algorithm as I can be the main evaluator of the algo.
+
+At the time I went into my Interests and cleaned it pretty well - removed things that I didn’t care about and were added because they generate clicks (e.g. midnight fight at a gas station lol). Unfortunately, I cannot see this setting anymore on X, so they may have removed the capability to tweak it manually and now you are at the X mercy.
+
+<p align="center">
+    <img width="800" src="/blog/2026-09-05-my-learning-system-for-keeping-up-with-ai/2026-09-05-my-learning-system-for-keeping-up-with-ai_4.webp" alt="X settings page showing the Content you see section with Topics and Interests" />
+</p>
+
+Then I spent a lot of time curating my timeline:
+
+- Long blogposts/articles or YouTube/Podcasts in a topic I care about get bookmarked (highest signal)
+- Cool projects/experiments, announcements of company raising a round in the space, etc.. get a like
+- If there’s people in the space that I start to particularly enjoy, I try to interact with their content - e.g.:
+
+<br />
+
+> I progressively removed larger endings from each poem and asked gpt‑4o and Claude Sonnet 4.5 (3.7 is no longer available via the API) to reconstruct the missing text at each cutoff.
+>
+> <br />
+>
+> I compared the embedding of each continuation with the poem’s actual missing ending. Lower distance means greater semantic similarity.
+>
+> <br />
+>
+> I used temperature 0.7 and a "best of 10", while keeping the percentile range to show variation.
+>
+> <br />
+>
+> For poem A, GPT‑4o produced the closer continuation at more than twice as many cutoffs as Claude: 35 versus 15. For poem B, Claude won more than three times as many: 38 versus 11.
+>
+> <br />
+>
+> So I’d argue that poem A is more gpt‑4o-like, while poem B is substantially more Claude-like.
+
+<br />
+
+**Didier Lopes** (@didier_lopes) replying to @natolambert - [full post](https://x.com/didier_lopes/status/2079455204185915787)
+
+<br />
+
+- Posts outside of what I care about - e.g. dating, looksmaxxing, skincare, .. - I go out of my way to click on them “Not interested in this post”
+- Everyone that I see in the timeline that posts something interesting on the topic I care about where they are the main author (side project, founders, watched a youtube/podcast from them) I follow. As this will show me their content - which I am likely to enjoy, and also with their reposts I expect to find other people doing interesting things in the space.
+
+<br />
+
+After 1-2 weeks, you will see your timeline changing drastically for the better. So much that you almost want to read everything in the timeline (and it is high calorie).
+
+SUCCESS.
+
+## X curation and consumption
+
+As mentioned above, everything that I see on X that interests me either:
+
+- Gets read immediately
+- Goes to bookmarks
+
+<br />
+
+I use bookmarks, A LOT. Also because a lot of time I open X is between meetings, walking dogs, commute etc - so many times I’m not in the zone to consume a long or technical post.
+
+My bookmarks (now called History) tab has a lot of posts now; so it can be overwhelming to go through them. So every now and then I dedicate an evening, while having a series/movie in the background to curate it.
+
+Here’s what my curation pipeline looks like:
+
+- Is it a YouTube link?
+  - Is there a video component to it?
+    - Yes - Add to my “WATCH” folder on Arc
+    - No - Open phone and download YouTube so I can listen it during one of my runs. (I’m training for the full marathon, and it turns out that I actually enjoy running more now that I can learn things during!)
+  - Then like the post and remove it from the bookmarks. (I like the post before reading the content as that way if I ever want to find the content I can; but also as a signal for the algorithm).
+- Is it a blogpost?
+  - Is it a small-ish (under 30min) consumption blogpost?
+    - Yes - Add to my “READ” folder on Arc.
+      - These are most frequently consumed with my phone and I end up reading them when commuting or doing my dog walks.
+    - No - Add to my “LONG READ” folder on Arc
+      - Are they too technical for my level?
+        - Yes - consume on laptop with Claude open in my second brain (more on this later) and ask stupid questions until I understand what’s going on.
+        - No - consumed via my iPad on the weekend or late evenings before bed.
+      - Regardless, these are never consumed on-the-go as that isn’t productive for this type of content.
+- Is it a paper?
+  - Yes - I add them to [my second brain](https://github.com/DidierRLopes/second-brain-ai/tree/main), into a folder called papers/TO_BE_ORGANIZED and then have a skill that takes the papers in that folder and organizes them accordingly. I usually don’t read this UNLESS I have a specific question in a topic that cites them, and I scroll through to get to the core idea I’m after.
+- Is it a technical report?
+  - Yes - These are gold!!! It’s incredible that companies share these in such detail - e.g. [https://poolside.ai/assets/laguna/laguna-m1-xs2-technical-report.pdf](https://poolside.ai/assets/laguna/laguna-m1-xs2-technical-report.pdf). For this type of content I usually print the document and spend an entire day around it and write down notes on it. I also add it to the second brain.
+    - Not only that - but these are usually quite heavy. Now my base understanding is higher so there are fewer topics that I can’t grok into my mental model of the space. But what I would do is put these type of reports into NotebookLM and create a technical podcast from it - so I could get more familiar ideas during my runs.
+- All the rest remains in my X bookmarks!
+  - Unfortunately this is still a lot, as more folks do only X Articles or only X videos. At the start this wasn’t an issue, but it has since become as I cannot consume content as fast as it comes (even after an aggressive curation!) - after all I only do this during my spare time lol
+    - One trick that I used recently was to have Codex open my X bookmarks and use Computer Use to organize the bookmarks based on different topics: agents, harness, LLM research, RAG, etc.. - whilst it doesn’t make me consume content faster, it does organize it more nicely so I can decide what to read based on interests rather than based on latest.
+    - A secondary result of this amount of volume is that some of the posts I end up not reading because they are no longer relevant - e.g. I had a post bookmarked that went in detail into /ralph-loop, and by the time I got to it - it was no longer relevant, so I just deleted it.
+
+<br />
+
+Here’s what my Arc folders look like right now:
+
+<p align="center">
+    <img width="400" src="/blog/2026-09-05-my-learning-system-for-keeping-up-with-ai/2026-09-05-my-learning-system-for-keeping-up-with-ai_5.webp" alt="Arc browser sidebar with WATCH and READ folders full of bookmarked videos and articles" />
+</p>
+
+## Second brain
+
+I mentioned above that I have this [second brain repo](https://github.com/DidierRLopes/second-brain-ai/tree/main).
+
+This was based on this LLM Wiki idea from Karpathy:
+
+> LLM Knowledge Bases
+>
+> <br />
+>
+> Something I'm finding very useful recently: using LLMs to build personal knowledge bases for various topics of research interest. In this way, a large fraction of my recent token throughput is going less into manipulating code, and more into manipulating knowledge (stored as markdown and images). The latest LLMs are quite good at it.
+>
+> <br />
+>
+> TLDR: raw data from a given number of sources is collected, then compiled by an LLM into a .md wiki, then operated on by various CLIs by the LLM to do Q&A and to incrementally enhance the wiki, and all of it viewable in Obsidian. You rarely ever write or edit the wiki manually, it's the domain of the LLM. I think there is room here for an incredible new product instead of a hacky collection of scripts.
+
+<br />
+
+**Andrej Karpathy** (@karpathy) - [full post](https://x.com/karpathy/status/2039805659525644595)
+
+<br />
+
+The workflow looks like this:
+
+- I push content into it based on what I’m learning: notes, links, papers, ideas, etc..
+- Claude Code organizes it. I set up the GitHub integration in the Claude mobile app, so the agent can read the repo and push to it from anywhere.
+  - A github action merges the claude/branch into main, which means capture works from my phone in seconds.
+- Skills handle the recurring work.
+  - One organizes papers on arrival: I dump a PDF in, and it gets filed along with its content.
+  - Another is Matt Pocock’s /teach skill, which turns the agent into a tutor that tracks what I’ve learned across sessions. And creates very good learning artifacts!!
+- Every now and then I ask Claude how we can improve the setup itself.
+
+<br />
+
+I started doing this as a way to have this expert at my fingertips with all expertise that is relevant to me - but then I started doubting its usability as with web search, you get intelligence on-tap without being “filtering” the papers/content that make it into the wiki.
+
+So, now the way I see the value in this second brain is that it is the best model available to any agent of how my brain operates given that I only push things that I’ve read/watch (apart from the papers!). So giving it this baseline helps when I try to learn something, because it has a fundamental understanding of what I have ingested and as a result “understood”. And I think that this is why I usually get better learning materials from it than if I am just interacting with Claude or ChatGPT.
+
+But as I have more conversations (i.e. memories), I wonder if this is still going to be a thing in the future. Anyway, it’s worth mentioning, as this is part of my current workflow - but continuously adapting to what works :)
+
+## Productivity tips & tricks
+
+I have a lot of these to share that work for me. If you have some others, please feel free to share!
+
+#### Bookmarks shortcut
+
+If you open X Bookmarks on Safari (iOS) - [https://x.com/i/history](https://x.com/i/history) - and then click “Share” you get the following options:
+
+<p align="center">
+    <img width="350" src="/blog/2026-09-05-my-learning-system-for-keeping-up-with-ai/2026-09-05-my-learning-system-for-keeping-up-with-ai_6.webp" alt="iOS Safari share sheet for X bookmarks showing the Add to Home Screen option" />
+</p>
+
+And if you click “**Add to Home Screen**” you are basically adding a shortcut to the Bookmarks tab.
+
+This has been super helpful for me as a lot of times I go into X as a reflex, and even though I have time to consume some X bookmarks I get distracted on the main timeline. Having this shortcut next to the X icon in my main iPhone screen, means that I have to make the Discovery/Consumption decision every time. (Although I can admit that the reflex to click on X (discovery) and not think about the bookmark shortcut is still there 😅)
+
+#### Compress audio time consumption
+
+Most podcasts are quite slow-paced (unless you are listening to Marc Andreesen lmao), and you can easily increase speed to 2x and still get most of the ideas.
+
+I used to be “paranoid” about missing part of the audio, when I got distracted etc. I don’t anymore. Perfection is your enemy, and the way our brain works we compress information heavily - e.g. even if you listen at 0.5x after watching 5 minutes of a podcast, do you think you would be able to recite every single sentence, in the order? And what about 1 week from now? Exactly… It’s moot.
+
+Just let the neurons, neuron.
+
+Although for more technical content (like what I’m talking below), I do 1.25-1.5x only!
+
+#### Turn technical content into podcasts
+
+Some of these technical reports are quite heavy technically. And so in order to help me understand them, I want to consume more than just the technical report with notes; I’ll watch a video on some of the concepts; but I also do the following:
+
+I take the technical report and with the following prompt convert it into a technical podcast:
+
+> *Create a podcast that goes over the architecture like I’m knowledgeable about ML but just starting to understand the transformer.*
+>
+> <br />
+>
+> *This needs to be a technical podcast that goes over the architecture and choices taken by the team and why. But also should mention what others are being used in the industry (particularly when steering from what is utilized by default) and always mentioned the why and why not.*
+>
+> <br />
+>
+> *The pdocast should be packed with nuggets that would allow someone to pass a technical interview based on the information in the podcast*
+
+<br />
+
+<p align="center">
+    <img width="800" src="/blog/2026-09-05-my-learning-system-for-keeping-up-with-ai/2026-09-05-my-learning-system-for-keeping-up-with-ai_7.webp" alt="NotebookLM with the Laguna technical report loaded and the podcast prompt in the chat" />
+</p>
+
+I then send this podcast audio as a memo to my phone, so I can listen to it on my next run.
+
+#### ChatGPT /voice
+
+ChatGPT voice mode has had a step function improvement over the last couple of weeks. So now when I’m listening to more technical podcasts, even during runs, I will go into ChatGPT and brainstorm a concept back and forth with /voice.
+
+I will ELI5 the sh!t out of it, until I can grok the concept reasonably well.
+
+This is one of the most mind blowing experiences when the voice agent does “hummm” and it looks like you have an expert at your fingertips.
+
+It’s insane. The fact you can tap into this at an extremely low cost is mind blowing, and you should leverage it as much as you can.
+
+#### Leverage dead times as much as possible
+
+I’m a bit of an optimization freak. I don’t procrastinate often, I’m always doing something. And at every opportunity I try to learn/grow in some axis.
+
+Some things I do:
+
+- When I go boxing at Gleason’s, the commute is like 50 minutes door-to-door - so I always save long reads for that time.
+- During the week for small lunches I like to watch [Theo’s videos](https://www.youtube.com/@t3dotgg) - I like his takes; and he’s very opinionated which I think is a good thing.
+- When I am rocking our newborn I always put a YouTube video that I can watch while rocking her.
+- When walking doggos I’m usually reading some bookmark posts, scrolling X timeline (to add to content curation), or listening to Audible.
+  - Audible is really good in general because they break chapters usually in smaller sections which tends to align well with the time for a walk - 12-20mins. I also listen to Audible in commutes - here’s some of the [books I read recently](https://didierlopes.com/books/already-read/).
+- Long reads get blocked time on the weekend - and I need to be in mental space to retain some of those more heavy concepts.
+
+<br />
+
+If you use your time efficiently it’s impressive how much content you can consume. Also bear in mind I don’t do many social activities - apart from sparring on Saturday mornings.
+
+#### Read books
+
+Physical books are great because they force you out of the digital world and you get to focus fully into it. I don’t buy that many physical books - but when they have many formulas/figures I do; or when I want to support the author because I like the content they publish.
+
+> Pretraining is over. Time for post-training.
+
+<br />
+
+**Didier Lopes** (@didier_lopes) - [post](https://x.com/didier_lopes/status/2074223022106386758)
+
+<br />
+
+Or sometimes just because I have an idea for a banger!
+
+## Be comfortable with not knowing everything
+
+As I said before, you won’t be an expert in everything. Accept that. I pick a few topics to go deep on and keep the rest at surface level. Surface level is fine, as long as it’s enough that when I revisit the topic later, things make sense.
+
+Like I spent a couple days on this: [https://jax-ml.github.io/scaling-book/](https://jax-ml.github.io/scaling-book/)
+
+Spent a very long time in the initial sections, as I wanted to get a good understanding on how the math worked (triggered by [this Dwarkesh episode with Reiner Pope](https://www.youtube.com/watch?v=xmkSf5IS-zw)). And then realized that this level of granularity isn’t very relevant for my day-to-day and having a broader high level understanding is enough for me; so I stopped trying to do exercises on my own and just looked at solutions and made sure I got the gist.
+
+You can always scale up and down your study based on the level of familiarity you want to gain in a concept. For me understanding agentic harnesses and concepts like RAG was very important so I go deep in those as I worked on that at OpenBB; but hardware inference I just spend enough time to understand what’s going on but not enough that I would be able to have an opinion on it.
+
+The other thing is that sometimes I would bookmark things that I wanted to understand, but my base level understanding was quite far from the level at which the article/post is operating at. And sometimes I would read it for the sake of reading it, almost like to get the “checkmark”. I learned to stop doing that - if I’m half way and I’m not getting the value out of the materials, I will quit it.
+
+Here’s an example of a post recently where this happened. [https://www.aleksagordic.com/blog/collective-operations](https://www.aleksagordic.com/blog/collective-operations)
+
+It’s a very interesting post; but it’s too low level for me. So I added it to my second brain and if I ever am required to understand this better, I will spend a lot of time on it. Or maybe I get more familiar with neighbor concepts which will make this post more intuitive.
+
+## Tinker, tinker & tinker
+
+All of the things above are theoretical. Which is great. But if you don’t actually put in the miles - the concepts won’t crystalize in your brain.
+
+And you will never be able to talk about things from experience - but always talk about other’s experience.
+
+I’m sure you’ve met people that are incredibly smart and can talk in depth about many topics (mostly big readers) but then when it’s time to get practical they struggle - or if you get into edge cases they won’t know about them because they haven’t experienced it.
+
+So whenever I’m learning topics, I write down random ideas that I have to put that into practice. I try to find ideas that:
+
+- Make it practical to allow me to learn the technology;
+- Something that I would find interesting (enough to spend my spare time on it);
+- I can take ideas from it to my day-to-day job;
+- It’s short lived - I work on it and it’s done, and doesn’t become a project on its own.
+
+<br />
+
+And then I always always document it. The reason I do that is that having to document it in an essay format forces me to understand concepts at a much deeper level.
+
+At university I would study weeks in advance of an exam, and then the days before the exam I would stay at Uni with colleagues and they would ask me questions about certain topics - and that always helped me the most to crystalize ideas because it would force me to understand what I didn’t know as well as I thought I did. This is similar.
+
+Here’s a few that I worked on recently:
+
+- [Introducing WorkspaceBench to evaluate OpenBB Workspace for agentic workflows](/blog/introducing-workspacebench-to-evaluate-openbb-workspace-for-agentic-workflows)
+- [The model did what I rewarded, not what I wanted](/blog/the-model-did-what-i-rewarded-not-what-i-wanted)
+- [Codex beats ChipWits](/blog/codex-beats-chipwits)
+
+<br />
+
+## Wrap up
+
+This is what works for me.
+
+But we are all very different - so what works for you may be very different; but hopefully you can find some good ideas here that you can take!
+
+There are still other things that I think I should do more:
+
+- Interact more with a community of individuals involved in a specific project - I tend to join Discord groups; but almost never go there.
+- Joining reading groups or similar - and getting more out of the comfort zone from having to talk about said topics in public.
+- Post more on these topics in public. Right now most of what I do is sharing nuggets from podcast ([which I have a skill for](https://github.com/DidierRLopes/get-y2b-clips)), but ideally I can share more insights which spark debates and forces me to analyze my own understanding.
+
+<br />
+
+> People are sleeping on this interview with Z.ai (@Zai_org) Director of Product for GenAI strategy and global partnerships (@ZixuanLi_) from 2 months ago.
+>
+> <br />
+>
+> Here are some takes that I found interesting!
+>
+> <br />
+>
+> 1. Long-horizon = iterations, not time
+>
+> <br />
+>
+> "If you have 1 hour, you have a solution within that 1 hour. But if you are given 10 hours, you can perform it better. Most models can only get the job done within an hour and cannot improve afterwards. But a better model, a model like Opus 4.6, can see better results after several hours, or after several iterations. So long-horizon doesn't mean time. It actually means the level of iterations."
+
+<br />
+
+**Didier Lopes** (@didier_lopes) - [full post](https://x.com/didier_lopes/status/2069999579890626625)
+
+<br />
+
+And this system is continuously evolving as I iterate more on what works/doesn’t!
+
+I hope you find this helpful.

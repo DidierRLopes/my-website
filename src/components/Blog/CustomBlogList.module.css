@@ -378,53 +378,75 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .postMain {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    gap: var(--ds-space-3);
-  }
-  
-  .leftSection {
-    grid-row: 1;
+  /* Search box and reading-time filter on one row */
+  .topBar {
     flex-direction: row;
-    justify-content: center;
+    align-items: center;
+    gap: var(--ds-space-2);
+  }
+
+  .searchWrapper {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .searchInput {
+    font-size: 16px; /* iOS zooms into inputs below 16px */
+  }
+
+  .readingTimeFilter {
+    width: auto;
+    flex-shrink: 0;
+    justify-content: flex-start;
+  }
+
+  .readingTimeInput {
+    width: 44px;
+  }
+
+  /* Compact cards: thumbnail + title only */
+  .postItem {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    padding: var(--ds-space-3);
+  }
+
+  .postMain {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
     align-items: center;
     gap: var(--ds-space-3);
   }
-  
+
+  .leftSection {
+    grid-row: auto;
+  }
+
   .postInfo {
-    grid-row: 2;
+    grid-row: auto;
   }
-  
+
   .postThumbnail, .placeholderThumbnail {
-    height: 80px;
-    width: 120px;
+    height: 64px;
+    width: 96px;
   }
-  
+
+  .metaContainer,
+  .postDescription {
+    display: none;
+  }
+
+  .postTitle {
+    font-size: 0.95rem;
+    line-height: 1.35;
+    margin-bottom: 0;
+  }
+
   .postDate {
     font-size: 0.65rem;
     padding: 4px 8px 6px 8px;
     left: 12px;
     top: -19px;
-  }
-  
-  .tagsContainer {
-    margin-bottom: var(--ds-space-1);
-  }
-  
-  .tag {
-    font-size: 0.65rem;
-    padding: 2px 4px;
-  }
-
-  .topBar {
-    flex-direction: column;
-    gap: var(--ds-space-2);
-  }
-
-  .readingTimeFilter {
-    width: 100%;
-    justify-content: center;
   }
 }
 

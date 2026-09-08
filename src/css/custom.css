@@ -897,6 +897,15 @@ article header h1 {
 
 }
 
+/* Video embeds in posts are authored at a fixed 800x400; keep them 16:9 on small screens */
+@media (max-width: 768px) {
+  .markdown iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
 .blog-discovery-copy {
   display: inline-flex;
   align-items: center;
@@ -912,6 +921,12 @@ article header h1 {
 
 .blog-discovery-copy:hover {
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .blog-discovery-note {
+    display: none;
+  }
 }
 
 .blog-discovery-note {

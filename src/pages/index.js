@@ -46,21 +46,22 @@ export default function Home() {
       </Head>
       <main>
         <section className="mx-auto max-w-[720px] px-4 mt-16 md:mt-28 mb-24 text-lg leading-relaxed">
-          <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8 mb-10">
+          {/* Phone: tagline, then centered photo, then location. Desktop: photo left, tagline and location right. */}
+          <div className="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-x-8 gap-y-4 sm:gap-y-2 items-center mb-10">
+            <p className="m-0 text-xl order-1 sm:order-none sm:col-start-2 sm:row-start-1 sm:self-end">
+              Curious, self-driven and obsessive in the pursuit of knowledge; currently, of how machines learn and
+              how markets work.
+            </p>
             <img
               src="/img/didier.webp"
               alt="Didier Lopes"
               width="176"
               height="176"
-              className="rounded-2xl shrink-0"
+              className="rounded-2xl order-2 sm:order-none sm:col-start-1 sm:row-start-1 sm:row-span-2 justify-self-center sm:justify-self-start"
             />
-            <div>
-              <p className="m-0 text-xl">
-                Curious, self-driven and obsessive in the pursuit of knowledge; currently, of how machines learn and
-                how markets work.
-              </p>
-              <p className="m-0 mt-3 text-base opacity-75">Lives in New York City</p>
-            </div>
+            <p className="m-0 text-base opacity-75 order-3 sm:order-none sm:col-start-2 sm:row-start-2 sm:self-start text-center sm:text-left">
+              Lives in New York City
+            </p>
           </div>
           <p>
             I build applied AI for financial markets: the systems that make agents work in production. I like to

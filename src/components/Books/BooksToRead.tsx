@@ -731,6 +731,13 @@ const data = [
 		image:
 			"/books/feynmans-rainbow-a-search-for-beauty-in-physics-and-in-life.jpg"
 	},
+	{
+		title:
+			"Make It Snow: From Zero to Billions: How Snowflake Scaled Its Go-To-Market Organization",
+		author: "Denise Persson, Chris Degnan",
+		image:
+			"/books/make-it-snow-from-zero-to-billions-how-snowflake-scaled-its-go-to-market-organization.jpg"
+	},
 ];
 
 export const booksToReadCount = data.length;

@@ -738,6 +738,13 @@ const data = [
 		image:
 			"/books/make-it-snow-from-zero-to-billions-how-snowflake-scaled-its-go-to-market-organization.jpg"
 	},
+	{
+		title:
+			"A Fabulous Debt: The Epic Story of How Bonds Built the Modern World",
+		author: "Robin Wigglesworth",
+		image:
+			"/books/a-fabulous-debt-the-epic-story-of-how-bonds-built-the-modern-world.jpg"
+	},
 ];
 
 export const booksToReadCount = data.length;

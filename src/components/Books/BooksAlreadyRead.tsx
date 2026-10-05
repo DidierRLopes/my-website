@@ -607,40 +607,6 @@ export default function BooksAlreadyRead() {
 		<>
 			<p>
 				Most of the books I have read or listened to.
-				<br />
-				Here's a thread with the ones I read in{" "}
-				<a
-					href="https://x.com/didier_lopes/status/2010809574140313664?s=20"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					2026
-				</a>
-				, in{" "}
-				<a
-					href="https://x.com/didier_lopes/status/1882635148694606134"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					2025
-				</a>
-				, in{" "}
-				<a
-					href="https://x.com/didier_lopes/status/1742748040220328189"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					2024
-				</a>{" "}
-				and in{" "}
-				<a
-					href="https://x.com/didier_lopes/status/1615510616025993217"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					2023
-				</a>
-				.
 			</p>
 			<BooksList books={data.slice().reverse()} />
 		</>

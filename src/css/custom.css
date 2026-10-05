@@ -6,8 +6,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import IBM Plex Mono font for design system */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+/* Import Jost font for design system */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300..700;1,300..700&display=swap');
 
 /* Design System Color Palette - Light Mode Default */
 :root {
@@ -32,7 +32,7 @@
   --border-secondary: rgba(0, 0, 0, 0.1);
   
   /* Typography */
-  --ds-font-primary: 'IBM Plex Mono', 'Courier New', monospace;
+  --ds-font-primary: 'Jost', Arial, sans-serif;
   --ds-font-size-xs: 12px;
   --ds-font-size-sm: 14px;
   --ds-font-size-md: 16px;

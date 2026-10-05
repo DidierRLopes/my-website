@@ -33,7 +33,7 @@ module.exports = {
         "grey-900": "#070707ff",
       },
       fontFamily: {
-        "ds-mono": ["IBM Plex Mono", "Courier New", "monospace"],
+        "ds-sans": ["Jost", "Arial", "sans-serif"],
       },
       fontSize: {
         "ds-xs": "12px",

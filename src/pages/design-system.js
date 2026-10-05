@@ -23,7 +23,7 @@ export default function DesignSystemDemo() {
           <DSHeading level={4}>H4 - Operational Details</DSHeading>
           <DSHeading level={5}>H5 - Technical Specs</DSHeading>
           <p className="ds-text-gray-light mt-ds-4">
-            This is body text using the primary monospace font. It maintains readability while providing that terminal aesthetic.
+            This is body text using the primary sans-serif font. It maintains readability with a clean geometric feel.
           </p>
           <p className="ds-text-gray-medium ds-text-sm">
             Secondary text for metadata and less important information.

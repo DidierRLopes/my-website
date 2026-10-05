@@ -527,7 +527,7 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, showTh
                 <div>
                     <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
                         ${imageTag}
-                        <div style="flex: 1; font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; white-space: normal; word-break: break-word;">${found.title}</div>
+                        <div style="flex: 1; font-family: var(--ds-font-primary); font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; white-space: normal; word-break: break-word;">${found.title}</div>
                     </div>
                     <span style="font-size:0.8rem; white-space: normal; word-break: break-word;">${found.summary.slice(0, 150)}...</span>
                 </div>

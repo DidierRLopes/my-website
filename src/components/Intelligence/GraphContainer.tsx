@@ -174,7 +174,7 @@ const GraphContainer = () => {
                         zIndex: 2,
                         color: colorMode === 'dark' ? '#CBD5E0' : '#4A5568',
                         fontSize: '12px',
-                        fontFamily: "'IBM Plex Mono', 'Courier New', monospace",
+                        fontFamily: 'var(--ds-font-primary)',
                         backgroundColor: colorMode === 'dark' ? 'rgba(26, 32, 44, 0.8)' : 'rgba(255, 255, 255, 0.8)',
                         padding: '0.25rem 0.5rem',
                         borderRadius: '4px',

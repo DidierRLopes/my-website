@@ -23,11 +23,21 @@ export default function Home() {
     >
       <Head>
         <meta property="og:title" content="Didier Website" />
+        <meta property="og:type" content="website" />
         <meta
           property="og:description"
           content="Where you can find my posts, personal projects and everything in between."
         />
-        <meta property="og:image" content={`${siteUrl}/img/goku_pixel.png`} />
+        <meta property="og:image" content={`${siteUrl}/img/avatar-power-up.jpg`} />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Didier Lopes with his golden-haired pixel avatar typing at a laptop" />
+        <meta property="og:video" content={`${siteUrl}/video/avatar-power-up.mp4`} />
+        <meta property="og:video:secure_url" content={`${siteUrl}/video/avatar-power-up.mp4`} />
+        <meta property="og:video:type" content="video/mp4" />
+        <meta property="og:video:width" content="1200" />
+        <meta property="og:video:height" content="630" />
         <meta property="og:url" content="https://didierlopes.com" />
 
         {/* Add X-specific meta tags */}
@@ -42,7 +52,8 @@ export default function Home() {
           name="twitter:description"
           content="Discover my posts, personal projects, and journey as Co-founder & CEO at OpenBB."
         />
-        <meta name="twitter:image" content={`${siteUrl}/img/goku.png`} />
+        <meta name="twitter:image" content={`${siteUrl}/img/avatar-power-up.jpg`} />
+        <meta name="twitter:image:alt" content="Didier Lopes with his golden-haired pixel avatar typing at a laptop" />
       </Head>
       <main>
         <section className="mx-auto max-w-[720px] px-4 mt-16 md:mt-28 mb-24 text-lg leading-relaxed">

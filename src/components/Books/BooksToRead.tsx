@@ -745,6 +745,26 @@ const data = [
 		image:
 			"/books/a-fabulous-debt-the-epic-story-of-how-bonds-built-the-modern-world.jpg"
 	},
+	{
+		title: "Kafka: The Definitive Guide: Real-Time Data and Stream Processing at Scale",
+		author: "Gwen Shapira, Todd Palino, Rajini Sivaram, Krit Petty",
+		image: "/books/kafka-the-definitive-guide.jpg",
+	},
+	{
+		title: "Streaming Systems: The What, Where, When, and How of Large-Scale Data Processing",
+		author: "Tyler Akidau, Slava Chernyak, Reuven Lax",
+		image: "/books/streaming-systems.jpg",
+	},
+	{
+		title: "The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling",
+		author: "Ralph Kimball, Margy Ross",
+		image: "/books/the-data-warehouse-toolkit.jpg",
+	},
+	{
+		title: "Fundamentals of Data Engineering: Plan and Build Robust Data Systems",
+		author: "Joe Reis, Matt Housley",
+		image: "/books/fundamentals-of-data-engineering.jpg",
+	},
 ];
 
 export const booksToReadCount = data.length;

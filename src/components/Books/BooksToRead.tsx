@@ -184,12 +184,6 @@ const data = [
 		image: "/books/the-alchemy-of-finance.jpeg",
 	},
 	{
-		title: "More Money Than God: Hedge Funds and the Making of a New Elite",
-		author: "Sebastian Mallaby",
-		image:
-			"/books/more-money-than-god-hedge-funds-and-the-making-of-a-new-elite.jpeg",
-	},
-	{
 		title: "Founders at Work: Stories of Startups' Early Days",
 		author: "Jessica Livingston",
 		image: "/books/founders-at-work-stories-of-startups-early-days.jpeg",

@@ -597,6 +597,12 @@ const data = [
 		author: "James P. O'Shaughnessy",
 		image:
 			"/books/what-works-on-wall-street-the-classic-guide-to-the-best-performing-investment-strategies-of-all-time.jpg",
+	},
+	{
+		title: "More Money Than God: Hedge Funds and the Making of a New Elite",
+		author: "Sebastian Mallaby",
+		image:
+			"/books/more-money-than-god-hedge-funds-and-the-making-of-a-new-elite.jpeg",
 	}
 ];
 

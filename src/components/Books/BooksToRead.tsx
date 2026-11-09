@@ -759,6 +759,27 @@ const data = [
 		author: "Joe Reis, Matt Housley",
 		image: "/books/fundamentals-of-data-engineering.jpg",
 	},
+	{
+		title: "Expected Returns: An Investor's Guide to Harvesting Market Rewards",
+		author: "Antti Ilmanen",
+		image: "/books/expected-returns.jpg",
+	},
+	{
+		title: "The Elements of Quantitative Investing",
+		author: "Giuseppe A. Paleologo",
+		image: "/books/the-elements-of-quantitative-investing.jpg",
+	},
+	{
+		title:
+			"Efficiently Inefficient: How Smart Money Invests and Market Prices Are Determined",
+		author: "Lasse Heje Pedersen",
+		image: "/books/efficiently-inefficient.jpg",
+	},
+	{
+		title: "Advanced Portfolio Management: A Quant's Guide for Fundamental Investors",
+		author: "Giuseppe A. Paleologo",
+		image: "/books/advanced-portfolio-management.jpg",
+	},
 ];
 
 export const booksToReadCount = data.length;

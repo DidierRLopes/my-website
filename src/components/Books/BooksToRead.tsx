@@ -780,6 +780,11 @@ const data = [
 		author: "Giuseppe A. Paleologo",
 		image: "/books/advanced-portfolio-management.jpg",
 	},
+	{
+		title: "Atlas Shrugged",
+		author: "Ayn Rand",
+		image: "/books/atlas-shrugged.jpg",
+	},
 ];
 
 export const booksToReadCount = data.length;

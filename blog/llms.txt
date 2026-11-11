@@ -184,3 +184,7 @@
 - [2026-08-21-how-theta-data-serves-the-entire-us-options-market-from-four-racks](https://didierlopes.com/blog/2026-08-21-how-theta-data-serves-the-entire-us-options-market-from-four-racks)
 - [2026-08-31-openbb-is-shutting-down-and-going-open-source](https://didierlopes.com/blog/2026-08-31-openbb-is-shutting-down-and-going-open-source)
 - [2026-09-05-my-learning-system-for-keeping-up-with-ai](https://didierlopes.com/blog/2026-09-05-my-learning-system-for-keeping-up-with-ai)
+- [2026-09-12-i-hired-hermes-as-a-member-of-lopes-staff](https://didierlopes.com/blog/2026-09-12-i-hired-hermes-as-a-member-of-lopes-staff)
+- [2026-10-04-the-future-of-personal-gaming-and-software-really](https://didierlopes.com/blog/2026-10-04-the-future-of-personal-gaming-and-software-really)
+- [2026-10-13-your-investment-idea-is-an-8-10-so-what](https://didierlopes.com/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what)
+- [2026-11-11-you-should-buy-an-esp32](https://didierlopes.com/blog/2026-11-11-you-should-buy-an-esp32)

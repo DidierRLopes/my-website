@@ -30112,3 +30112,1040 @@ There are still other things that I think I should do more:
 And this system is continuously evolving as I iterate more on what works/doesn’t!
 
 I hope you find this helpful.
+
+
+---
+
+---
+slug: i-hired-hermes-as-a-member-of-lopes-staff
+title: "I hired Hermes as a Member of Lopes Staff"
+date: 2026-09-12
+image: /blog/2026-09-12-i-hired-hermes-as-a-member-of-lopes-staff/2026-09-12-i-hired-hermes-as-a-member-of-lopes-staff.webp
+tags:
+- ai
+- agents
+- hermes
+- automation
+- personal
+description: "An always-on local agent that runs my wife's and my life from a Mac mini"
+hideSidebar: true
+---
+
+An always-on local agent that runs my wife's and my life from a Mac mini
+
+<!-- truncate -->
+
+Recently I got a Mac mini.
+
+I’ve been wanting to tinker with OpenClaw for a long time, but I knew I could get deep into this as I get easily excited by technology.
+
+At the same time I was reading more and more about Hermes agent - and even integrated it into OpenBB Workspace a few months back:
+
+[https://x.com/didier_lopes/status/2052610001424830913](https://x.com/didier_lopes/status/2052610001424830913)
+
+But I only scratched the surface then.
+
+In reality, I’ve never felt like this this much in my life:
+
+<p align="center">
+    <img width="412" src="/blog/2026-09-12-i-hired-hermes-as-a-member-of-lopes-staff/2026-09-12-i-hired-hermes-as-a-member-of-lopes-staff_1.webp" alt="Image" />
+</p>
+
+<br />
+
+By the end of this post you will understand why…
+
+### Goal
+
+I didn’t want to do something just for the sake of doing it - I wanted to have an overall objective that I’m trying to accomplish.
+
+Recently, my wife and I have been spending more time learning about biology and biotech - but we have no background on the topic. And often were asking the same questions to ChatGPT/Claude. This gave me the perfect opportunity to work on this - as I actually needed something like this, by the end of it you will understand why.
+
+My wife said, and I quote:
+
+> *“Out of all the projects you’ve done over the years, this is by far the most impressive and helpful”*
+
+<br />
+
+There are a few reasons why I needed such a setup; and how it evolved into being more a Chief of Staff of our lives:
+
+- I wanted to have an agent that had full control of a machine - everything from terminal, git, drive, telegram, email, Amazon, & Whole Foods website, …
+- This agent would have to have a lot of integrations so that I could continuously expand surface area that it could touch (including MCP connections)
+- It needed to be always-on
+- I still wanted to have access to its environment if I needed to work on top of some artifacts that it generated directly
+- I wanted to have a shared context of work with my wife and I; so the agent could pull threads that she or I started
+- Documents that we added into the drive should be available to this agent
+- The agent should know who my wife and I are, and be able to communicate with us
+- It should be able to have reminders that we can keep updating via text (or even audio!)
+- It should be able to produce artifacts such as presentations and audio
+- It should be able to leverage whatever LLM we want to use - e.g. codex sub
+
+<br />
+
+And I’m pretty sure that over time there will be many more use cases!
+
+### Architecture
+
+At a high-level, here’s what we are going to walk through:
+
+<p align="center">
+    <img width="800" src="/blog/2026-09-12-i-hired-hermes-as-a-member-of-lopes-staff/2026-09-12-i-hired-hermes-as-a-member-of-lopes-staff_2.webp" alt="Image" />
+</p>
+
+<br />
+
+We will talk over each of these components - how they are connected and what we are using it for.
+
+## Local agent and Mac mini capabilities
+
+### Hermes Agent and its harness
+
+I think of **Hermes** as everything else but the model - i.e. the harness.
+
+It assembles the context for each request, retrieves memory, loads the relevant skills, exposes tools, checks permissions, runs the model’s tool-calling loop, and holds the output.
+
+It also decides what happens after a tool call: whether the output needs to be checked, whether another tool is needed, and whether the original request has actually been completed.
+
+The local Hermes installation was ridiculously easy. It’s pretty much one command in [here](https://hermes-agent.nousresearch.com/docs/getting-started/installation). Then you can set up everything else by having the agent doing it itself, and you can use natural language to guide it based on what you want and testing it and double checking that it works.
+
+But the most important thing I did was I installed everything at the root level and gave it permission to do everything. And then just limited the damage it could do based on what I integrated (as you will see soon).
+
+Hermes harness most important (durable) components are:
+
+- *SOUL.md* defines the agent’s personality and tone;
+- User memory preserves details on my preferences and what I like/dislike - e.g. distinction between my Telegram user ID vs my wife’s;
+- Skills preserve repeatable procedures, such as handling Google Drive, producing diagrams, or managing a shared task list;
+- Session history keeps long-running work available after the fact;
+- The file system holds the actual objects - Markdown, code, diagrams, audio, rendered artifacts, anything!
+
+<br />
+
+Several local processes provide different ways into this same agent installation.
+
+The Hermes messaging gateway handles Telegram. The community Hermes WebUI provides the backend used by Hermex. The official Hermes Desktop app is a separate native Mac interface backed by the official *hermes serve* process.
+
+In simplified form:
+
+```text
+Telegram       → Messaging Gateway ───────┐
+Hermex         → Community WebUI ─────────┼→ Hermes Agent
+Hermes Desktop → hermes serve ────────────┘
+```
+
+<br />
+
+They use the same local Hermes configuration, model credentials, skills, memory, files, and session store when pointed at the same profile. Interface-specific state can still differ, especially between the official Desktop app and the separately maintained community WebUI. But this is what I love about Hermes agent - it’s that this is the tip of the iceberg, if I want to use WhatsApp, Slack, Gmail, … I can. There are few options that I could think of that aren’t supported!
+
+On the Mac mini, the gateway and WebUI run as supervised background services. macOS starts them again after login by default.
+
+The harness also acts as safety boundary. The model does not receive unrestricted direct control of macOS. Hermes mediates file operations, shell commands, browser activity, desktop control, messages, and external API calls. Dangerous actions require approval, and consequential changes are validated before the agent reports success. Although this consumes extra tokens, I love this approach - as my UX is 10x better.
+
+#### Hermes bots
+
+I had one agent doing too many unrelated jobs.
+
+It helped with research, writing, coordinated household work, built apps, and maintained websites. It was mostly fine, but then it started “bleeding” context across unrelated tasks - and the access controls was non-existing. E.g. for coordinating household work, why does the agent need access to GitHub?
+
+And Hermes had just launched [Bot mode](https://hermes-agent.nousresearch.com/docs/user-guide/bot-mode). So I told the agent to go through our entire past threads and user memories and understand which bots we should be creating from it - including personality, moving memories, tools access, etc..
+
+And it suggested we create a few different bots. Basically when there was enough that happened in a certain area to grant the creation of a new bot - it decided to do it, and then we just had to help set up the tools etc associated with that bot.
+
+Each specialist has a canonical Bot Chat: one durable place where its history accumulates. When another conversation needs that specialist, I hand the task over and the result comes back, rather than copying a large pile of context between agents.
+
+This has made it so that context stays relevant. Specialist history persists. The integrations are obvious based on the specialist at hand and reduces risk of an unrelated task touching tooling that it shouldn’t mess with. Very clean!
+
+#### Codex subscription
+
+Given that Hermes agent will touch everything, I wanted it to have access to a frontier model and one that had very generous limits. This kinda narrowed it down to GPT-5.6 Sol; particularly as I had some reset lefts (thank you Tibo!).
+
+One thing that I also like is that I am using my codex subscription, so both my wife and I are leveraging Hermes - but the tokens are coming from a single sub.
+
+Although I depicted OpenAI inside Mac mini, the model doesn’t run there. Inference is remote, so:
+
+```text
+Local context and request
+↓
+Hermes Agent
+↓
+Codex OAuth
+↓
+Remote model inference
+↓
+Reasoning and proposed tool calls
+↓
+Hermes executes locally
+```
+
+<br />
+
+The Mac mini runs the agent, tools, files, sessions, and control layer. Codex provides the intelligence.
+
+The model is good at deciding what kind of work may be required. It can interpret a broad request, identify missing information, plan a sequence of actions, compare evidence, write code, and decide which tool to call next.
+
+For example, the model may decide that a research request needs:
+
+1. A structured preprint search
+2. DOI normalization
+3. PDF retrieval
+4. Text extraction
+5. Comparison against previous notes
+6. A visual artifact
+7. Delivery to another person
+
+<br />
+
+Codex can plan that sequence. Hermes will execute it.
+
+The model can change later without losing the local memory, skills, source files, permissions, and operating standards.
+
+#### Mac ecosystem apps
+
+I could have hosted the agent on a cloud VM. The Mac mini was more useful for the kind of work I wanted.
+
+It is simultaneously:
+
+- An always-on home server
+- A persistent file system
+- A desktop computer with native applications
+- A browser environment with signed-in services
+- A development machine
+- A place where private artifacts can remain local
+
+<br />
+
+.. and I can just hook up a monitor, keyboard and mouse to it!
+
+The agent can download PDFs from MedRxiv, open it in Preview, and inspect the report in a native window. It can take set shared TODOs in the reminder app and use that for both my wife and I. It can build an application, render it in the browser, and evaluate its rendering. More importantly, it can use Hermes’ computer-use integration to operate applications in the background through macOS accessibility interfaces.
+
+The applications currently useful in the workflow include:
+
+- Finder for local organization
+- Preview for PDFs and images
+- Terminal for builds, scripts, Git, and validation
+- Safari for browser-based tools
+- Apple Reminders for the shared family task list
+- Native file dialogs and macOS services when no API path exists
+- Calendar to check for upcoming appointments or book something
+
+#### Non Mac ecosystem apps
+
+The Mac mini also runs local specialist tools.
+
+Given access to GitHub, I cloned:
+
+- **Colloquium** - converts editable Markdown into HTML presentations.
+- **Podcastfy** - converts reviewed two-person scripts into conversational audio.
+
+<br />
+
+The official Hermes Desktop app is another part of this Mac layer. It is a native application for chat, configuration, projects, files, terminals, artifacts, and multiple sessions.
+
+Hermex uses the separate community WebUI. Both point at the same underlying Hermes installation.
+
+And there are probably many more now that I don’t even realize - but I’ve given Hermes the power to download and use them.
+
+### Browser
+
+The awesome thing about it being connected with the browser and you having logged in into that browser, is that you don’t even need an MCP but the agent can just do computer use to control the browser.
+
+Here’s an example of Hermes agent being used to do our weekly shopping. My wife was holding the newborn and hadn’t had the time to sit down to sit and select items, so I told her to leave a voice note to Hermes and see what happened.
+
+And then the only thing I had to do in the end was give it confirmation in the app, just to ensure there’s some protection layer and it doesn’t order by default… but this is the equivalent to --yolo which becomes the default once you gain confidence in the system.
+
+<p align="center">
+    <img width="800" src="/blog/2026-09-12-i-hired-hermes-as-a-member-of-lopes-staff/2026-09-12-i-hired-hermes-as-a-member-of-lopes-staff_3.webp" alt="Image" />
+</p>
+
+## People and access channels
+
+The same Hermes is reachable through different interfaces.
+
+Telegram is the quick conversational route. Hermex is the richer mobile workspace. Email gives the agent an identity outside chat platforms. They converge on the same local capabilities, but they do not automatically share one live conversation.
+
+### Telegram
+
+Telegram is the interface I use most often because it has almost no friction.
+
+My wife and I each have a separate private conversation with the same Hermes agent, and the agent knows who is who. Our Telegram identities are explicitly allowlisted, so finding the bot username is not enough to gain access. Each chat has its own session context even though both chats can use the same agent, files, memory, and tools.
+
+```text
+Telegram app
+↓
+Telegram Bot API
+↓
+Hermes Messaging Gateway
+↓
+Hermes Agent
+```
+
+<br />
+
+The gateway is a long-running background process on the Mac mini. It receives platform events, associates them with the correct chat session, invokes Hermes, and delivers the response back through Telegram. It also handles files, voice messages, scheduled deliveries, and platform-specific commands.
+
+Telegram supports more than text. We can:
+
+- Send voice notes for transcription
+- Attach screenshots or documents
+- Receive PDFs, HTML, images, audio, and ZIP files
+- Ask the agent to send something to the other person
+- Add or update tasks using ordinary language
+- Receive scheduled reminders or research results
+
+<br />
+
+One of our favorite flows that involves the gateway is the shared task list. Either of us can send a text or voice request such as: “*Remind me to call person X tomorrow*”
+
+Hermes recognizes the task intent and writes it into one shared Apple Reminders list. A morning cron job reads every open item and sends the same list to both Telegram accounts.
+
+Telegram is excellent for point-in-time interactions, but it is less comfortable for browsing a long research history, comparing artifacts, or working across several sessions.
+
+### Hermex
+
+Hermex is the native iPhone client for the community Hermes WebUI.
+
+```text
+Hermex on iPhone
+↓
+Tailscale
+↓
+Hermes WebUI on the Mac mini
+↓
+Hermes Agent
+```
+
+<br />
+
+Hermex does not connect to the messaging gateway, and it does not connect to the official Hermes Desktop app. It talks to the community WebUI server.
+
+We made the WebUI reachable through our private Tailscale network rather than publishing it on the open internet. Tailscale controls who can reach the network route.
+
+Hermex gives a richer interface than Telegram:
+
+- Session history
+- Longer streaming responses (not broken down by messages with 1/7, 2/7, …)
+- File and workspace navigation
+- Pinned conversations
+- Profile and model controls
+- Better handling of long-running research threads
+
+<br />
+
+My wife much prefers this interface!
+
+Although the threads are shared by both of us here.
+
+### Hermes Desktop
+
+The official Hermes Desktop app uses a different backend, *hermes serve*. It shares core state with Hermex while retaining separate interface-specific metadata.
+
+I use Hermes desktop much more, particularly when I was installing everything and when I want to actually be controlling the Mac Mini with Hermes.
+
+Something that is cool is that if the WebUI stops, Hermex stops working. But Telegram continues through the gateway, and the official Desktop app continues through its own backend. So there’s redundancy baked in.
+
+### AgentMail
+
+Email gives the agent a durable identity beyond Telegram and Hermex.
+
+We created a dedicated AgentMail inbox, which is an external email service. The local Mac runs the client logic that calls its API:
+
+```text
+Hermes on Mac mini
+↓
+AgentMail API
+↓
+Dedicated agent inbox
+↓
+Any email recipient
+```
+
+<br />
+
+The crazy thing is that I just asked the agent to create an email account for itself…
+
+[https://x.com/didier_lopes/status/2091625530374210005](https://x.com/didier_lopes/status/2091625530374210005)
+
+The only thing I had to do was to verify a OTP sent to my personal email.
+
+Now my agent has an email that it can use to send/receive emails - I like it so that it can send things I want to read/study/work on to my email and I can kept it in “UNREAD” state to be acted upon.
+
+## External systems and durable artifacts
+
+### GitHub
+
+GitHub is the code and provenance layer.
+
+Several capabilities in the system began as repositories cloned onto the Mac mini:
+
+- Colloquium
+- Podcastfy
+- The medRxiv MCP server
+- Hermes Agent itself
+- Local scripts and diagram generators
+
+<br />
+
+Once a repository is local, Hermes can inspect its structure, read its history, modify code, run tests, review the resulting diff, and prepare a commit.
+
+With authenticated Git access, it can also push a reviewed change or open a pull request. Although I haven’t yet done that - just tinkering locally.
+
+The medRxiv MCP is a good example of the value of Git. The original project failed because its scraper hit a Cloudflare challenge, its metadata endpoint returned errors, and its dependency range installed an incompatible SDK. → at least that’s what it told me. 🤷🏽‍♂️ Hermes modified the local clone, replaced the fragile search path, added normalization and tests, and verified the actual MCP transport.
+
+The other side of it is that I can give the agent access to [my personal website](https://github.com/DidierRLopes/my-website) to update books read or books to read; or access to a personal project like [pokemon vault](https://pokvault.com/) and it can fix/add features on the fly.
+
+### Google Drive
+
+Google Drive is our shared artifact library, which we can open on mobile.
+
+Hermes has OAuth access to one approved shared parent folder rather than unrestricted access to every file in the account. The OAuth credentials remain local, and Drive operations stay inside that boundary.
+
+The difference between Drive and local storage is timing. We treat local folders and artifacts as work in progress; and when the artifact is ready to be consumed we push to the drive. An example is that I created a Zero to Hero course on a specific topic and it now lives in a folder in our drive.
+
+### External API/MCP tools (e.g. medRxiv)
+
+This allows us to add any external service that we can think of to Hermes via your typical API or MCP tools, to enhance the tools at its disposal from the get-go. We could even give access to OpenBB Workspace MCP to do financial research - more on this in another post!
+
+In this case, we gave it access to medRxiv which is an external source of health-science preprints.
+
+## How it all comes together
+
+The complete workflow is actually quite clean
+
+```text
+Didier or Meg iPhone
+↓
+Telegram, Hermex, or email
+↓
+Hermes on the Mac mini
+↓
+Codex reasoning + local tools
+↓
+Route to specific Hermes bot maybe
+↓
+GitHub code, research sources, native Mac applications
+↓
+Verified local files
+↓
+Google Drive, Telegram, Hermex, or email delivery
+```
+
+<br />
+
+It’s a new world; but I’m excited to keep pushing what’s possible with this.
+
+
+---
+
+---
+slug: the-future-of-personal-gaming-and-software-really
+title: "The future of personal gaming (and software really)"
+date: 2026-10-04
+image: /blog/2026-10-04-the-future-of-personal-gaming-and-software-really/2026-10-04-the-future-of-personal-gaming-and-software-really.webp
+tags:
+- gaming
+- ai
+- open-source
+- pokemon
+- software
+description: "And how I built a voice controlled Pokemon fight that I played against my wife"
+hideSidebar: true
+---
+
+And how I built a voice controlled Pokemon fight that I played against my wife
+
+<!-- truncate -->
+
+Most people prefer thinking in terms of binary as it simplifies things. Like you can either “build” or “buy”. The “buy” option was never about the fact that you would spend money on it, but rather that you were buying a solution that was mature and you could use it almost out-of-the-box.
+
+But with the proliferation of open source and coding agents, the “build” option is now very close to the “buy”. Not only that, but it allows you to go further than the “buy” option does.
+
+What I’m trying to say is that the “buy/build” binary has its days numbered. I believe that (all) software in the future will have to allow you to build on top, and if you want to “buy”, it will rarely be one-size-fits-all software anymore.
+
+This is **what happens when the cost of building software goes to zero.**
+
+I’m not just saying this now. I told my team more than 2 years ago that for us to win we would have to open source our Workspace to enable clients to have full control of their environment, but first we needed to find a way to have a sustainable business model. We didn’t, but I remain convinced of this.
+
+<p align="center">
+    <img width="800" src="/blog/2026-10-04-the-future-of-personal-gaming-and-software-really/2026-10-04-the-future-of-personal-gaming-and-software-really_1.webp" alt="Image" />
+</p>
+
+<br />
+
+Anyway, this is a thought I’ve been having for some time.
+
+And in this post I want to give you an example in the gaming industry.
+
+## Emerald Arena
+
+A couple of weeks ago I saw [GBurgardt](https://x.com/germanburgardt/status/2098872053830992370) share [Emerald Arena](https://github.com/GBurgardt/pokemon-emerald-arena), a ROM hack of Pokémon Emerald.
+
+A ROM is the file copy of a game cartridge (Game Boy Advance in this case). A ROM hack is a modified version of that file, and you play it on an emulator (e.g. mGBA), a program that runs GBA games on a computer or a phone. German’s hack keeps the original game but makes the battles real-time.
+
+I downloaded it, played a few fights and was like: “*this is nice, but what if …*”
+
+That’s all it took.
+
+First I gave Charizard Seismic Toss.
+
+[https://x.com/didier_lopes/status/2103307899808186511](https://x.com/didier_lopes/status/2103307899808186511)
+
+Then Gengar to be able to traverse obstacles.
+
+[https://x.com/didier_lopes/status/2103540473088602149](https://x.com/didier_lopes/status/2103540473088602149)
+
+Then I allowed Golem to roll.
+
+[https://x.com/didier_lopes/status/2103657692761850087](https://x.com/didier_lopes/status/2103657692761850087)
+
+I could have kept going, there are so many possible innovations on the attack visuals. But ultimately you are always in the arena.
+
+So **hold on.**
+
+Why do we have a storyline if all I care about is the arena?
+
+That was the thought I had on Saturday before closing my eyes…
+
+## Emerald Arena ONLY
+
+So Sunday morning, the first thing I did when I woke up was to create this Arena mode, which had been brewing in my subconscious overnight.
+
+But the mechanics would have to be different, so I brainstormed with Opus 5.5 how I wanted it to be.
+
+- I wanted to have a selection menu to pick Pokémon where I can see their moves
+- I wanted to have up to 6 Pokémon in my party
+- I didn’t want everyone to choose the same legendary Pokémon, so we needed to create a “credit” system. Like fantasy football, where you spend credits on better players, except here they are Pokémon. I asked my agent to use its best judgment for this.
+    - Ideally you would let it run different battles (COM x COM) with different credit levels being used and then tinker the credits per Pokémon accordingly based on win-rate. But I didn’t want to spend tokens/time on this. Sometimes good enough is good enough.
+- I wanted to use my voice to control the pokemon move, so I could feel like Ash Ketchum (or well, Brendan). I thought this would be feasible with Whisper on-device (voice → text) and Typesafe’s Jev model (text → command).
+    - Some of these Whisper models are actually quite fast and pretty high quality. It’s so good that I use [OpenSuperWhisper](https://github.com/my-monkeys/OpenSuperWhisper) with a Whisper model as my default voice → text app
+    - Jev is TypeSafe’s decision API: you give it a piece of text and the list of actions possible right now, and it picks one, fast. Think of it as System 1 thinking for agents. This was the killer in this case, as it allowed me to map text (from voice) into a set of commands. Not just the moves but also “switch to Charizard” and picking Charizard in the draft.
+
+<br />
+
+Then I shared this tweet.
+
+[https://x.com/didier_lopes/status/2104203064257228820](https://x.com/didier_lopes/status/2104203064257228820)
+
+This was a couple of back and fourths with the agent, mostly on the UI/UX, but it pretty much one-shotted my request.
+
+But wait, I want to play with my wife…
+
+But we could shout voice commands at the same time, how to handle it? The model has to detect each players’s voice so what if we created that baseline at the start of the fight. And so we did.
+
+Here’s the result:
+
+[https://x.com/didier_lopes/status/2104375192730448093](https://x.com/didier_lopes/status/2104375192730448093)
+
+I was very pleasantly surprised! And that had close to 100k impressions!
+
+So, almost 100k saw my wife kicking my ass on the first real-time pokemon voice controlled fight. Sigh.
+
+Then I saw my friend [David sharing a skill to create videos with Remotion](https://x.com/dzhng/status/2105156858982039929) and I gave this prompt to Opus:
+
+> *"now please install this git@github.com:dzhng/skills.git and use its skills to create an announcement video for this emerald arena mdoe"*
+
+<br />
+
+This was the output:
+
+[https://x.com/didier_lopes/status/2104394266219073710](https://x.com/didier_lopes/status/2104394266219073710)
+
+Looking back at that Sunday, it made me realize that I would have killed to have this game as a kid. And I thought about my newborn while I was building it, and how we could have fun together.
+
+I can’t wait until she can play games!
+
+## Every game is an adaptation
+
+This made me think further about how games are made.
+
+Very few formats are new anymore. Look at almost any recent game and you can spot the combination of existing games behind it.
+
+For instance, this Emerald Arena is a combination of **Pokémon Emerald** (duh) and **Legacy of Goku II**.
+
+One of my favorite games growing up was **Counter-Strike 1.6**. Here’s a clip of some near-aces I’ve had on different maps:
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/ocsJzNJJB50"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+But even **Counter-Strike** started as a mod for **Half-Life**.
+
+The one I like to play now is **Fortnite**. I usually play it on Sundays with my father-in-law, my brother and sometimes my wife or her brother-in-law. It has become a ritual now.
+
+But when I don’t play Battle Royale with them, I always play this mod called **[Rapid Zero Build 2v2](https://www.fortnite.com/@bullseye/9546-9918-8917)** because it is very fast paced and there’s more “play time” in that mode. I think about it similarly to soccer and indoor soccer (futsal), where I started enjoying the latter more due to the pace of the game and because you are in more contact with the ball.
+
+But even now, on X I see people making very cool games by fusing different ideas together, e.g.:
+
+- **League of Legends** x **Dragon Ball FighterZ**
+
+<br />
+
+[https://x.com/GamefxAI/status/2106387548486738010](https://x.com/GamefxAI/status/2106387548486738010)
+
+- **Pokémon** x **Minecraft**
+
+<br />
+
+[https://x.com/MozeTech/status/2106590326634983710](https://x.com/MozeTech/status/2106590326634983710)
+
+- Figure Me Out is a multiplayer FPS where you kill someone by typing the number on their forehead before they read yours. It’s like **Counter-Strike** with **The Typing of the Dead**, with a bit of the party game where everyone can see your card except you.
+
+<br />
+
+[https://x.com/IndieGameJoe/status/2106413001477890159](https://x.com/IndieGameJoe/status/2106413001477890159)
+
+My view is that most game mechanics have already been invented. What’s left are the edges: *the style, the design, the characters, the storyline, the rules*.
+
+But those edges are what AI can tweak with a single prompt.
+
+## Blockbusters and personal games
+
+So I wonder if gaming splits into two kinds of games with Pareto distribution.
+
+**The first is the blockbusters (most people play these).** Fortnite, Counter-Strike, Minecraft, GTA and the handful of games most people agree on the user experience. Millions of players to match against, lots of capital to support growth of game and a shared culture.
+
+**The second is highly personalizable games (long tail).** These go beyond one person building something for themselves. The audience is you and your immediate friends or a small community. My mod only got really fun once my wife played with me.
+
+Success is different on these. The first is active players; whilst the second is likely how much of power users the small community is.
+
+But then, I wonder if these will connect. Let’s take the Rapid Zero Build 2v2 on Fortnite - it’s built on a blockbuster but it’s a mod that I much more enjoy, and now if I play with my brother during the week - we default to it.
+
+Regardless, I expect that we see many many more mods on blockbuster games. Can’t wait to see what games will exist by the time my daughter can play, and building something with her.
+
+In the meantime, if you want to try the real-time voice controlled pokemon arena - it’s fully open source here: [https://github.com/DidierRLopes/pokemon-emerald-arena/pull/2](https://github.com/DidierRLopes/pokemon-emerald-arena/pull/2)
+
+
+---
+
+---
+slug: your-investment-idea-is-an-8-10-so-what
+title: "Your investment idea is an 8/10. So what?"
+date: 2026-10-13
+image: /blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what.webp
+tags:
+- ai
+- investing
+- llms
+- jev
+- open-source
+description: "A weekend experiment with Jev and an Elo leaderboard to find the ideas worth digging into."
+hideSidebar: true
+---
+
+A weekend experiment with Jev and an Elo leaderboard to find the ideas worth digging into.
+
+<!-- truncate -->
+
+I’ve now been building financial software for almost 6 years. But the world was different when I started doing so. Although some may say that we’ve been ahead of the curve a few times, e.g. when we came up with [AskOBB](https://www.youtube.com/watch?v=fK53ChIiKlM) which converted natural language into commands to retrieve data and piped these together.
+
+But recently, with latest model, and given that I was winding down OpenBB - I tried to build a multi-agent system that could generate an investment pitch.
+
+The idea was to see if I could automate a specific analyst workflow, as much as possible. And do it in a matter of a weekend, with maaanyy tokens. And actually run the analysis live, not using mock data.
+
+And yes - I was actually very happy with the results. 48h was all it took to get this system up and running.
+
+I’m not going to share that system, BUT I’m going to share a specific part of it that I was particularly excited about - and have not seen other people doing.
+
+### LLMs suck at absolute ratings
+
+I basically thought, LLMs suck at judging outputs in general. Like given a poem, how do you rate it? It’s extremely hard for humans. And given LLMs are trained from human data, same.
+
+But when it’s time to compare, then the story changes: it’s much easier. Think about when you take a handful of pictures with your phone and are deciding which one to put on your socials, you don’t look at each and rate them in absolute terms and then pick the one with highest rating. You keep swiping left and right to see how they compare, and eliminating the worse ones.
+
+And in LLM world, this has been known for a while. And so many books recommend providing both context and then have a few-shot examples of what good looks like, and let the model decide.
+
+However, there are some issues here:
+
+- They take time to run
+- They can get expensive if you are using SOTA models
+- And most importantly, the quality is often meh
+
+<br />
+
+Enter [TypeSafe’s Jev model](https://typesafe.ai/blog/introducing-system-one-models-and-jev).
+
+Having done some playground work with Jev, I understood its strengths. Whilst everyone believes it’s speed and cost - which I agree those are the ones that made the it go viral.
+
+I thought it was only a matter of time until someone produced an open source version of it that was just as fast for the same low cost; after all it’s “just a classifier”.
+
+However, I had doubts that these other models would have similar quality, as I thought there must have been a ton of work put onto the training of the model. And the way it generalizes is probably it’s moat (time will tell!).
+
+<p align="center">
+    <img width="800" src="/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_1.webp" alt="Image" />
+</p>
+
+<br />
+
+This is what I said a few weeks ago; and then Sebastian Raschka wrote a [post about Jev](https://magazine.sebastianraschka.com/p/classifier-history-and-jev) a few days later with that very same conclusion, so that was cool.
+
+> *“So, my point still stands. There are many solid alternatives. But what makes Jev so popular is not a unique idea (as mentioned before, classifiers existed for a long time) but the fact that it performs so well at so many diverse tasks.”*
+
+## Inspired by chess and gaming
+
+In the multi-agent system I created, there were dozens of subagents being spin out and generating investment ideas. The issue wasn’t the volume of ideas; the issue was the signal-to-noise ratio. I didn’t want to spend time on 50 ideas for a single good one.
+
+And let’s say I had done absolute score for each of those ideas. I wouldn’t actually care about a 7 or 8, it would mean nothing. I would care about how these ideas stack against each other and which ones are the most important ones for me to have a look at.
+
+Which made me think of tournaments with large amounts of players. We don’t necessarily need for each player to battle every single person in the world, yet we can pick a winner. And this is done via Elo score.
+
+Elo is a ranking system best known for chess. The idea is simple: **your rating changes based on how you performed compared with what was expected.** Beating a stronger opponent earns you more points than beating someone you were already expected to beat.
+
+If **player** ***A*** has a rating of **RA** and **player** ***B*** a rating of **RB**
+
+<p align="center">
+    <img width="212" src="/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_2.webp" alt="Image" />
+</p>
+
+<br />
+
+Suppose **player** ***A*** (again with **rating RA**) was expected to **score EA** points but actually scored **SA points**. The formula for updating that player’s rating is
+
+<p align="center">
+    <img width="236" src="/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_3.webp" alt="Image" />
+</p>
+
+<br />
+
+And the SA computation is actually very straightforward: **+1 for win**, **0.5 for draw** and **0 for loss**.
+
+K controls how much ratings move. With **K = 32**, beating an equally rated opponent earns you 16 points (32 x (1-0.5)). They lose the same amount, 16 = 32 x (0 - 0.5). Each investment idea starts with a rating of **1500**.
+
+## Setup
+
+For the public version, I included twenty historical ideas from the Value Investors Club dataset from [this repo](https://github.com/dschonholtz/ValueInvestorsClub#scraping-and-analyzing-the-value-investors-club). This is a snapshot ending in November 2022, and was used as an example for readers.
+
+<p align="center">
+    <img width="800" src="/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_4.webp" alt="Ideas Library with selected ideas and the Markdown reader" />
+</p>
+
+<br />
+
+Users can click “*Add idea*” and add it in Markdown format. Or they can import a PDF and I use [LiteParse](https://github.com/run-llama/liteparse) to convert the PDF into Markdown.
+
+### Criterias
+
+Then I set the criteria by which Jev will compare ideas. I don’t want a model to compare plainly idea A vs idea B for its whole, rather eat the elephant one bite at a time.
+
+This is also [Typesafe’s recommendation](https://docs.typesafe.ai/introduction#atomic-questions-composed-in-code):
+
+> ***Atomic questions, composed in code***
+>
+> <br />
+>
+> *System One models work best when each question asks one specific, well-scoped thing. Think of each question as a gut-check determination: the kind of judgment a highly knowledgeable person could make in a few seconds given the right context.*
+>
+> <br />
+>
+> *If the question you want to ask would require extended reasoning or weighs multiple independent factors, decompose it. Ask each factor as a separate question, then combine the results with logic in your code. This keeps each individual evaluation reliable and gives you full control over how dimensions are weighted.*
+>
+> <br />
+>
+> *For example, instead of “rate this startup pitch,” ask separately about market size, technical feasibility, and differentiation. Combine the scores with your own formula. When priorities shift, change a coefficient in your code rather than rewriting a prompt.*
+
+<br />
+
+So I set up different criteria:
+
+- **Variant view & mispricing (25%):** what might the market be missing, and why does it matter?
+- **Supporting evidence (25%):** what supports the claims the thesis depends on?
+- **Valuation & return logic (20%):** how do the assumptions translate into security value and potential returns?
+- **Downside & thesis testing (15%):** how could the idea fail, and what would change the author’s mind?
+- **Path to value realization (10%):** how could that value actually reach the investor?
+- **Clarity & research usefulness (5%):** can I understand the argument and identify what to investigate next?
+
+<br />
+
+These are fully customizable! And I also allow the user to select the judging prompt that goes with it, to explain what we are assessing for each criteria.
+
+<p align="center">
+    <img width="800" src="/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_5.webp" alt="Criteria with editable weights and the supporting-evidence judging prompt" />
+</p>
+
+<br />
+
+The weight is important as this is how we will end up comparing two distinct investment ideas. We do the weighted sum to get the aggregate of who wins/loses.
+
+I also allow to filter the standings/results based on a specific criteria - so that I can see which is the idea that has a highest rating in the group based on, e.g. Variant view & mispricing.
+
+<p align="center">
+    <img width="800" src="/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_6.webp" alt="Matchup details with criterion weights, comparison bars, contributions, and mean confidence" />
+</p>
+
+## Run
+
+One cool thing that I added is the capability to see these ideas compete in “real-time”. In both a line chart, but also the leaderboard standings. This only works well because Jev has **very low** latency.
+
+<p align="center">
+    <img width="800" src="/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_7.webp" alt="Tournament in progress after the first completed match" />
+</p>
+
+<br />
+
+You can also select a specific criteria in this “live” view.
+
+And then you have the Head to Head matches between ideas in a 2D grid.
+
+<p align="center">
+    <img width="800" src="/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_8.webp" alt="Head-to-head matrix with red and green row-versus-column scores and corner confidence values" />
+</p>
+
+<br />
+
+This allows you to explore how ideas compete against each other, and once you select one of the cells you get more details on the individual breakdown of criteria contributions.
+
+<p align="center">
+    <img width="800" src="/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_9.webp" alt="Matchup details with criterion weights, comparison bars, contributions, and mean confidence" />
+</p>
+
+### Confidence threshold
+
+Finally, the very last feature that I added - which I personally like a lot - is the confidence threshold.
+
+Rather than counting every single head-to-head match. As we mentioned at the start, Elo leaderboards don’t require all players to play against all players.
+
+Although we do a weighted sum of contributions based on the different criteria, a win is still a win.
+
+So I also do a weighted sum of the confidence that Jev gave for those choices. And that value is displayed in the right bottom corner of a cell.
+
+This means that we now have a slidebar that allows the user to specify what is the minimum confidence threshold required for a “battle” to be considered. The higher that threshold, the less fights are considered - but the more Jev was confident in its decision in selecting one idea vs another.
+
+## Conclusion
+
+As I mentioned, this came from an experiment of building a multi-agent system. But I wanted to share this specific idea to leverage Jev, which I liked a lot.
+
+I open-sourced it here: [https://github.com/DidierRLopes/elo-jev-4-investment-ideas](https://github.com/DidierRLopes/elo-jev-4-investment-ideas)
+
+And if you want to watch how it works, you can check this 3min explainer
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/Qmvojew2sMM"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+The app runs locally and saves your workspace in the browser. Judging uses Jev’s hosted API, so the selected text is sent to TypeSafe when you run a tournament.
+
+Let me know what you think!
+
+## BONUS
+
+Initially, Claude built the UI and it looked exactly like any other web app looks like. I didn’t like that, so I had this thought about how in VSCode you can go into Themes and select the theme you like.
+
+So I leveraged that concept, went into [https://vscodethemes.com](https://vscodethemes.com), and told Claude to recreate that specific theme.
+
+<p align="center">
+    <img width="800" src="/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_10.webp" alt="Image" />
+</p>
+
+<br />
+
+And it improved a lot the UI! I recommend this to everyone who is vibe coding.
+
+
+---
+
+---
+slug: you-should-buy-an-esp32
+title: "You should buy an ESP32"
+date: 2026-11-11
+image: /blog/2026-11-11-you-should-buy-an-esp32/2026-11-11-you-should-buy-an-esp32.webp
+tags:
+- hardware
+- esp32
+- ai
+- firmware
+- side-projects
+description: "Reading firmware specs is a thing of the past. You can one-shot firmware in an afternoon now."
+hideSidebar: true
+---
+
+Reading firmware specs is a thing of the past. You can one-shot firmware in an afternoon now.
+
+<!-- truncate -->
+
+## I used to do a lot of firmware
+
+In my BSc in Electrical and Computer Engineering we spent a lot of time close to the hardware, not just on software. Firmware in assembly and embedded C, real-time systems in Java (conveyors, sensors), and a few exotic ones like VHDL and FPGAs.
+
+Fun fact: my very first LinkedIn post (10y ago) was about a semaphore implementation on an Arduino.
+
+<p align="center">
+    <img width="800" src="/blog/2026-11-11-you-should-buy-an-esp32/2026-11-11-you-should-buy-an-esp32_1.webp" alt="Image" />
+</p>
+
+<br />
+
+Then in my MSc in Control Systems we did more of it. We programmed a controller for a crane. We also built an inverted pendulum, which we made [move to the rhythm of Despacito](https://www.youtube.com/watch?v=EMtRAj2Rmbg) lol. And a few others.
+
+## Then I did it for a living
+
+My first role in industry was at u-blox as a Software Design Engineer, programming the ZED-F9K (specs [here](https://content.u-blox.com/sites/default/files/documents/ZED-F9K-02A_DataSheet_UBXDOC-304424225-18291.pdf)) for positioning in C/C++.
+
+Here’s what a (defective) module looked like in my Leopard gecko’s terrarium.
+
+<p align="center">
+    <img width="410" src="/blog/2026-11-11-you-should-buy-an-esp32/2026-11-11-you-should-buy-an-esp32_2.webp" alt="Image" />
+</p>
+
+<br />
+
+After that I joined a startup as a Sensor Fusion Engineer, where I worked on the trackers.
+
+<p align="center">
+    <img width="800" src="/blog/2026-11-11-you-should-buy-an-esp32/2026-11-11-you-should-buy-an-esp32_3.webp" alt="image" />
+</p>
+
+<br />
+
+Some of my biggest contributions were:
+
+- Redesigning altitude estimation using a Kalman filter
+- Adding a GNSS filtering algorithm for outliers, including a way to pick a valid start point
+- Improving the soles lifespan by improving the algorithm around the FSR
+
+## And then I stopped tinkering with firmware
+
+OpenBB was purely software. And most of my spare time was used to build projects around OpenBB - so I didn’t have much time to spare. And Firmware takes time.
+
+But now you can literally build anything. You buy the hardware, connect it to your laptop and ask for something to happen.
+
+**Incredible.**
+
+No reading specs, no watching low quality youtube videos on the topic, no having to find a niche open source project that does something somewhat similar to what you want and that you need to tinker to get there.
+
+You just prompt it away.
+
+We are in a **renaissance of firmware devices**.
+
+## How it started
+
+This all started with this tweet about the ESP32-S3 dev kit.
+
+[https://x.com/steveruizok/status/2081120951320678422](https://x.com/steveruizok/status/2081120951320678422)
+
+And then Steve kept posting every time someone did a cool application with an ESP32 device with a “Welcome”.
+
+So I instantly bought one, even without having an idea of what I would build. I was sure I was going to get one soon enough. Note: I bought the Waveshare ESP32-S3 from Amazon (without batteries which was a rookie mistake!).
+
+Before I received it, I had the idea to make it a pokedex-like device.
+
+The idea was that I could take it for card shows, I hold the screen, say the name of a card, and it shows me the card, whether I have it or not, and its price. All based on my website [pokvault.com](http://pokvault.com).
+
+The board itself does very little. All the heavy lifting happens on my Mac at home.
+
+Here’s what happens when I say “Venusaur”:
+
+1. The board records my voice and sends the clip to my Mac
+2. The Mac runs STT Whisper model (locally, no cloud) to figure out which card name I said
+3. There’s a post processing step that matches the word against the name of all the existing pokemon names - so that it’s not searching for “Venuesur” (particularly with my Portuguese accent) but “Venusaur”
+4. It looks up cards with that name in vintage (along with their prices and if I own it)
+5. It sends everything back, and the board shows it on the screen and I can use the side buttons to swipe
+
+<br />
+
+Code here if you are curious: [https://github.com/DidierRLopes/pokedex-esp32](https://github.com/DidierRLopes/pokedex-esp32)
+
+> Thought this could be an interesting insight.
+>
+> <br />
+>
+> My Mac at home is connected to the Wi-Fi. And if I’m in a card show, how can I get to it from the ESP32 device?
+>
+> <br />
+>
+> This is where Tailscale comes in. Tailscale connects your own devices into a private network (i.e. tailnet), regardless of where they are.
+>
+> <br />
+>
+> This is how I use agents on my phone via Termius and Tailscale. Unfortunately, ESP32 is too small to run Tailscale so I use Tailscale Funnel - which gives the Mac a public HTTPS address, so anything with internet can reach it.
+>
+> <br />
+>
+> It’s public, but locked: the board requires a secret token when it connects, and nothing else on the Mac is exposed.
+
+<br />
+
+I haven’t been in a card show yet, but bought a few cards from a vendor I know and took it. And it worked really well!
+
+I put together an introductory video (power bank in the video is because I bought the ESP32 without batteries lmao) + a real demo!
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/iQA4zREzKrE"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+Tbh a phone would have worked just fine. But it felt like I had a Pokédex at my fingertips, and that was really cool.
+
+## A display for my brother’s dental clinic
+
+I also bought a Ulanzi TC001 (ESP32) for my brother, who just opened a dental clinic.
+
+It sits in his office and shows the date and time, the weather, the number of patients and a welcome message.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/zIFb72X3uCk"
+        width="800"
+        height="400"
+    />
+</div>
+
+<br />
+
+This took less than 1h. Most of it was waiting for Codex to build and me tinkering with the UI.
+
+Code here: [https://github.com/DidierRLopes/awtrix-ng/tree/main](https://github.com/DidierRLopes/awtrix-ng/tree/main)
+
+## It doesn’t need to be an ESP32
+
+It can be anything.
+
+A few weeks ago I went very deep into my [Hermes agent setup](/blog/i-hired-hermes-as-a-member-of-lopes-staff). To give it more personality I tweaked my Divoom Ditto to sit right above my Mac mini and show a Hermes face when I use the wake word “hey Hermes”. This was all built without looking at a single line of code, via Hermes agent actually.
+
+<div className="flex place-items-center justify-center items-center rounded-sm mx-auto">
+    <iframe
+        src="https://www.youtube.com/embed/3jlF1S4csHA"
+        width="800"
+        height="400"
+    />
+</div>
+
+## What can you build?
+
+An ESP32 is a tiny computer with Wi-Fi and Bluetooth. Add a screen, a sensor or a microphone and you can build SO many things:
+
+- A desk display for your calendar, portfolio or GitHub stars
+- A sensor that messages you when your plants need water
+- A temperature and air quality monitor for your home
+- A physical button that triggers anything (e.g. your lights, a deploy)
+- A voice gadget for whatever you collect or track
+- A live scoreboard
+
+<br />
+
+I don’t know, maybe just ask ChatGPT/Claude:
+
+> *“Knowing what you know about me and my interests. If I were to buy an ESP32-S3 Development Kit, what would be the most exciting projects I could build with it that could be helpful. List the top 3 with explanations on why and ideally a reference to someone that did something similar”*
+
+## Wrap up
+
+If you take anything from this post: buy a cheap ESP32 and tinker with it. Anything.
+
+You’ll see how easy it is.
+
+And if you have kids, this makes a great weekend activity.
+
+And have fun!

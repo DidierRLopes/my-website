@@ -2,12 +2,567 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://didierlopes.com/blog</id>
     <title>Didier Lopes Blog</title>
-    <updated>2026-09-05T00:00:00.000Z</updated>
+    <updated>2026-11-11T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://didierlopes.com/blog"/>
     <subtitle>Didier Lopes Blog</subtitle>
     <icon>https://didierlopes.com/img/favicon.ico</icon>
     <rights>Copyright © 2026 Didier Lopes.</rights>
+    <entry>
+        <title type="html"><![CDATA[You should buy an ESP32]]></title>
+        <id>https://didierlopes.com/blog/you-should-buy-an-esp32</id>
+        <link href="https://didierlopes.com/blog/you-should-buy-an-esp32"/>
+        <updated>2026-11-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Reading firmware specs is a thing of the past. You can one-shot firmware in an afternoon now.]]></summary>
+        <content type="html"><![CDATA[<p>Reading firmware specs is a thing of the past. You can one-shot firmware in an afternoon now.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="i-used-to-do-a-lot-of-firmware">I used to do a lot of firmware<a href="https://didierlopes.com/blog/you-should-buy-an-esp32#i-used-to-do-a-lot-of-firmware" class="hash-link" aria-label="Direct link to I used to do a lot of firmware" title="Direct link to I used to do a lot of firmware">​</a></h2>
+<p>In my BSc in Electrical and Computer Engineering we spent a lot of time close to the hardware, not just on software. Firmware in assembly and embedded C, real-time systems in Java (conveyors, sensors), and a few exotic ones like VHDL and FPGAs.</p>
+<p>Fun fact: my very first LinkedIn post (10y ago) was about a semaphore implementation on an Arduino.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-11-11-you-should-buy-an-esp32/2026-11-11-you-should-buy-an-esp32_1.webp" alt="Image"></p>
+<br>
+<p>Then in my MSc in Control Systems we did more of it. We programmed a controller for a crane. We also built an inverted pendulum, which we made <a href="https://www.youtube.com/watch?v=EMtRAj2Rmbg" target="_blank" rel="noopener noreferrer">move to the rhythm of Despacito</a> lol. And a few others.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="then-i-did-it-for-a-living">Then I did it for a living<a href="https://didierlopes.com/blog/you-should-buy-an-esp32#then-i-did-it-for-a-living" class="hash-link" aria-label="Direct link to Then I did it for a living" title="Direct link to Then I did it for a living">​</a></h2>
+<p>My first role in industry was at u-blox as a Software Design Engineer, programming the ZED-F9K (specs <a href="https://content.u-blox.com/sites/default/files/documents/ZED-F9K-02A_DataSheet_UBXDOC-304424225-18291.pdf" target="_blank" rel="noopener noreferrer">here</a>) for positioning in C/C++.</p>
+<p>Here’s what a (defective) module looked like in my Leopard gecko’s terrarium.</p>
+<p align="center"><img width="410" src="https://didierlopes.com/blog/2026-11-11-you-should-buy-an-esp32/2026-11-11-you-should-buy-an-esp32_2.webp" alt="Image"></p>
+<br>
+<p>After that I joined a startup as a Sensor Fusion Engineer, where I worked on the trackers.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-11-11-you-should-buy-an-esp32/2026-11-11-you-should-buy-an-esp32_3.webp" alt="image"></p>
+<br>
+<p>Some of my biggest contributions were:</p>
+<ul>
+<li>Redesigning altitude estimation using a Kalman filter</li>
+<li>Adding a GNSS filtering algorithm for outliers, including a way to pick a valid start point</li>
+<li>Improving the soles lifespan by improving the algorithm around the FSR</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="and-then-i-stopped-tinkering-with-firmware">And then I stopped tinkering with firmware<a href="https://didierlopes.com/blog/you-should-buy-an-esp32#and-then-i-stopped-tinkering-with-firmware" class="hash-link" aria-label="Direct link to And then I stopped tinkering with firmware" title="Direct link to And then I stopped tinkering with firmware">​</a></h2>
+<p>OpenBB was purely software. And most of my spare time was used to build projects around OpenBB - so I didn’t have much time to spare. And Firmware takes time.</p>
+<p>But now you can literally build anything. You buy the hardware, connect it to your laptop and ask for something to happen.</p>
+<p><strong>Incredible.</strong></p>
+<p>No reading specs, no watching low quality youtube videos on the topic, no having to find a niche open source project that does something somewhat similar to what you want and that you need to tinker to get there.</p>
+<p>You just prompt it away.</p>
+<p>We are in a <strong>renaissance of firmware devices</strong>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-it-started">How it started<a href="https://didierlopes.com/blog/you-should-buy-an-esp32#how-it-started" class="hash-link" aria-label="Direct link to How it started" title="Direct link to How it started">​</a></h2>
+<p>This all started with this tweet about the ESP32-S3 dev kit.</p>
+<p><a href="https://x.com/steveruizok/status/2081120951320678422" target="_blank" rel="noopener noreferrer">https://x.com/steveruizok/status/2081120951320678422</a></p>
+<p>And then Steve kept posting every time someone did a cool application with an ESP32 device with a “Welcome”.</p>
+<p>So I instantly bought one, even without having an idea of what I would build. I was sure I was going to get one soon enough. Note: I bought the Waveshare ESP32-S3 from Amazon (without batteries which was a rookie mistake!).</p>
+<p>Before I received it, I had the idea to make it a pokedex-like device.</p>
+<p>The idea was that I could take it for card shows, I hold the screen, say the name of a card, and it shows me the card, whether I have it or not, and its price. All based on my website <a href="http://pokvault.com/" target="_blank" rel="noopener noreferrer">pokvault.com</a>.</p>
+<p>The board itself does very little. All the heavy lifting happens on my Mac at home.</p>
+<p>Here’s what happens when I say “Venusaur”:</p>
+<ol>
+<li>The board records my voice and sends the clip to my Mac</li>
+<li>The Mac runs STT Whisper model (locally, no cloud) to figure out which card name I said</li>
+<li>There’s a post processing step that matches the word against the name of all the existing pokemon names - so that it’s not searching for “Venuesur” (particularly with my Portuguese accent) but “Venusaur”</li>
+<li>It looks up cards with that name in vintage (along with their prices and if I own it)</li>
+<li>It sends everything back, and the board shows it on the screen and I can use the side buttons to swipe</li>
+</ol>
+<br>
+<p>Code here if you are curious: <a href="https://github.com/DidierRLopes/pokedex-esp32" target="_blank" rel="noopener noreferrer">https://github.com/DidierRLopes/pokedex-esp32</a></p>
+<blockquote>
+<p>Thought this could be an interesting insight.</p>
+<br>
+<p>My Mac at home is connected to the Wi-Fi. And if I’m in a card show, how can I get to it from the ESP32 device?</p>
+<br>
+<p>This is where Tailscale comes in. Tailscale connects your own devices into a private network (i.e. tailnet), regardless of where they are.</p>
+<br>
+<p>This is how I use agents on my phone via Termius and Tailscale. Unfortunately, ESP32 is too small to run Tailscale so I use Tailscale Funnel - which gives the Mac a public HTTPS address, so anything with internet can reach it.</p>
+<br>
+<p>It’s public, but locked: the board requires a secret token when it connects, and nothing else on the Mac is exposed.</p>
+</blockquote>
+<br>
+<p>I haven’t been in a card show yet, but bought a few cards from a vendor I know and took it. And it worked really well!</p>
+<p>I put together an introductory video (power bank in the video is because I bought the ESP32 without batteries lmao) + a real demo!</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/iQA4zREzKrE" width="800" height="400"></iframe></div>
+<br>
+<p>Tbh a phone would have worked just fine. But it felt like I had a Pokédex at my fingertips, and that was really cool.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="a-display-for-my-brothers-dental-clinic">A display for my brother’s dental clinic<a href="https://didierlopes.com/blog/you-should-buy-an-esp32#a-display-for-my-brothers-dental-clinic" class="hash-link" aria-label="Direct link to A display for my brother’s dental clinic" title="Direct link to A display for my brother’s dental clinic">​</a></h2>
+<p>I also bought a Ulanzi TC001 (ESP32) for my brother, who just opened a dental clinic.</p>
+<p>It sits in his office and shows the date and time, the weather, the number of patients and a welcome message.</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/zIFb72X3uCk" width="800" height="400"></iframe></div>
+<br>
+<p>This took less than 1h. Most of it was waiting for Codex to build and me tinkering with the UI.</p>
+<p>Code here: <a href="https://github.com/DidierRLopes/awtrix-ng/tree/main" target="_blank" rel="noopener noreferrer">https://github.com/DidierRLopes/awtrix-ng/tree/main</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="it-doesnt-need-to-be-an-esp32">It doesn’t need to be an ESP32<a href="https://didierlopes.com/blog/you-should-buy-an-esp32#it-doesnt-need-to-be-an-esp32" class="hash-link" aria-label="Direct link to It doesn’t need to be an ESP32" title="Direct link to It doesn’t need to be an ESP32">​</a></h2>
+<p>It can be anything.</p>
+<p>A few weeks ago I went very deep into my <a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff">Hermes agent setup</a>. To give it more personality I tweaked my Divoom Ditto to sit right above my Mac mini and show a Hermes face when I use the wake word “hey Hermes”. This was all built without looking at a single line of code, via Hermes agent actually.</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/3jlF1S4csHA" width="800" height="400"></iframe></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-can-you-build">What can you build?<a href="https://didierlopes.com/blog/you-should-buy-an-esp32#what-can-you-build" class="hash-link" aria-label="Direct link to What can you build?" title="Direct link to What can you build?">​</a></h2>
+<p>An ESP32 is a tiny computer with Wi-Fi and Bluetooth. Add a screen, a sensor or a microphone and you can build SO many things:</p>
+<ul>
+<li>A desk display for your calendar, portfolio or GitHub stars</li>
+<li>A sensor that messages you when your plants need water</li>
+<li>A temperature and air quality monitor for your home</li>
+<li>A physical button that triggers anything (e.g. your lights, a deploy)</li>
+<li>A voice gadget for whatever you collect or track</li>
+<li>A live scoreboard</li>
+</ul>
+<br>
+<p>I don’t know, maybe just ask ChatGPT/Claude:</p>
+<blockquote>
+<p><em>“Knowing what you know about me and my interests. If I were to buy an ESP32-S3 Development Kit, what would be the most exciting projects I could build with it that could be helpful. List the top 3 with explanations on why and ideally a reference to someone that did something similar”</em></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="wrap-up">Wrap up<a href="https://didierlopes.com/blog/you-should-buy-an-esp32#wrap-up" class="hash-link" aria-label="Direct link to Wrap up" title="Direct link to Wrap up">​</a></h2>
+<p>If you take anything from this post: buy a cheap ESP32 and tinker with it. Anything.</p>
+<p>You’ll see how easy it is.</p>
+<p>And if you have kids, this makes a great weekend activity.</p>
+<p>And have fun!</p><div style="display:flex;justify-content:center;margin-top:3rem;margin-bottom:1rem"><a href="https://substack.com/@didierrlopes" target="_blank" rel="noopener noreferrer" class="mission-button" style="text-decoration:none;white-space:nowrap;padding:12px 24px;font-size:14px">Subscribe to my newsletter<span style="margin-left:6px">»</span></a></div>]]></content>
+        <category label="hardware" term="hardware"/>
+        <category label="esp32" term="esp32"/>
+        <category label="ai" term="ai"/>
+        <category label="firmware" term="firmware"/>
+        <category label="side-projects" term="side-projects"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Your investment idea is an 8/10. So what?]]></title>
+        <id>https://didierlopes.com/blog/your-investment-idea-is-an-8-10-so-what</id>
+        <link href="https://didierlopes.com/blog/your-investment-idea-is-an-8-10-so-what"/>
+        <updated>2026-10-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A weekend experiment with Jev and an Elo leaderboard to find the ideas worth digging into.]]></summary>
+        <content type="html"><![CDATA[<p>A weekend experiment with Jev and an Elo leaderboard to find the ideas worth digging into.</p>
+<p>I’ve now been building financial software for almost 6 years. But the world was different when I started doing so. Although some may say that we’ve been ahead of the curve a few times, e.g. when we came up with <a href="https://www.youtube.com/watch?v=fK53ChIiKlM" target="_blank" rel="noopener noreferrer">AskOBB</a> which converted natural language into commands to retrieve data and piped these together.</p>
+<p>But recently, with latest model, and given that I was winding down OpenBB - I tried to build a multi-agent system that could generate an investment pitch.</p>
+<p>The idea was to see if I could automate a specific analyst workflow, as much as possible. And do it in a matter of a weekend, with maaanyy tokens. And actually run the analysis live, not using mock data.</p>
+<p>And yes - I was actually very happy with the results. 48h was all it took to get this system up and running.</p>
+<p>I’m not going to share that system, BUT I’m going to share a specific part of it that I was particularly excited about - and have not seen other people doing.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="llms-suck-at-absolute-ratings">LLMs suck at absolute ratings<a href="https://didierlopes.com/blog/your-investment-idea-is-an-8-10-so-what#llms-suck-at-absolute-ratings" class="hash-link" aria-label="Direct link to LLMs suck at absolute ratings" title="Direct link to LLMs suck at absolute ratings">​</a></h3>
+<p>I basically thought, LLMs suck at judging outputs in general. Like given a poem, how do you rate it? It’s extremely hard for humans. And given LLMs are trained from human data, same.</p>
+<p>But when it’s time to compare, then the story changes: it’s much easier. Think about when you take a handful of pictures with your phone and are deciding which one to put on your socials, you don’t look at each and rate them in absolute terms and then pick the one with highest rating. You keep swiping left and right to see how they compare, and eliminating the worse ones.</p>
+<p>And in LLM world, this has been known for a while. And so many books recommend providing both context and then have a few-shot examples of what good looks like, and let the model decide.</p>
+<p>However, there are some issues here:</p>
+<ul>
+<li>They take time to run</li>
+<li>They can get expensive if you are using SOTA models</li>
+<li>And most importantly, the quality is often meh</li>
+</ul>
+<br>
+<p>Enter <a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev" target="_blank" rel="noopener noreferrer">TypeSafe’s Jev model</a>.</p>
+<p>Having done some playground work with Jev, I understood its strengths. Whilst everyone believes it’s speed and cost - which I agree those are the ones that made the it go viral.</p>
+<p>I thought it was only a matter of time until someone produced an open source version of it that was just as fast for the same low cost; after all it’s “just a classifier”.</p>
+<p>However, I had doubts that these other models would have similar quality, as I thought there must have been a ton of work put onto the training of the model. And the way it generalizes is probably it’s moat (time will tell!).</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_1.webp" alt="Image"></p>
+<br>
+<p>This is what I said a few weeks ago; and then Sebastian Raschka wrote a <a href="https://magazine.sebastianraschka.com/p/classifier-history-and-jev" target="_blank" rel="noopener noreferrer">post about Jev</a> a few days later with that very same conclusion, so that was cool.</p>
+<blockquote>
+<p><em>“So, my point still stands. There are many solid alternatives. But what makes Jev so popular is not a unique idea (as mentioned before, classifiers existed for a long time) but the fact that it performs so well at so many diverse tasks.”</em></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="inspired-by-chess-and-gaming">Inspired by chess and gaming<a href="https://didierlopes.com/blog/your-investment-idea-is-an-8-10-so-what#inspired-by-chess-and-gaming" class="hash-link" aria-label="Direct link to Inspired by chess and gaming" title="Direct link to Inspired by chess and gaming">​</a></h2>
+<p>In the multi-agent system I created, there were dozens of subagents being spin out and generating investment ideas. The issue wasn’t the volume of ideas; the issue was the signal-to-noise ratio. I didn’t want to spend time on 50 ideas for a single good one.</p>
+<p>And let’s say I had done absolute score for each of those ideas. I wouldn’t actually care about a 7 or 8, it would mean nothing. I would care about how these ideas stack against each other and which ones are the most important ones for me to have a look at.</p>
+<p>Which made me think of tournaments with large amounts of players. We don’t necessarily need for each player to battle every single person in the world, yet we can pick a winner. And this is done via Elo score.</p>
+<p>Elo is a ranking system best known for chess. The idea is simple: <strong>your rating changes based on how you performed compared with what was expected.</strong> Beating a stronger opponent earns you more points than beating someone you were already expected to beat.</p>
+<p>If <strong>player</strong> <em><strong>A</strong></em> has a rating of <strong>RA</strong> and <strong>player</strong> <em><strong>B</strong></em> a rating of <strong>RB</strong></p>
+<p align="center"><img width="212" src="https://didierlopes.com/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_2.webp" alt="Image"></p>
+<br>
+<p>Suppose <strong>player</strong> <em><strong>A</strong></em> (again with <strong>rating RA</strong>) was expected to <strong>score EA</strong> points but actually scored <strong>SA points</strong>. The formula for updating that player’s rating is</p>
+<p align="center"><img width="236" src="https://didierlopes.com/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_3.webp" alt="Image"></p>
+<br>
+<p>And the SA computation is actually very straightforward: <strong>+1 for win</strong>, <strong>0.5 for draw</strong> and <strong>0 for loss</strong>.</p>
+<p>K controls how much ratings move. With <strong>K = 32</strong>, beating an equally rated opponent earns you 16 points (32 x (1-0.5)). They lose the same amount, 16 = 32 x (0 - 0.5). Each investment idea starts with a rating of <strong>1500</strong>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="setup">Setup<a href="https://didierlopes.com/blog/your-investment-idea-is-an-8-10-so-what#setup" class="hash-link" aria-label="Direct link to Setup" title="Direct link to Setup">​</a></h2>
+<p>For the public version, I included twenty historical ideas from the Value Investors Club dataset from <a href="https://github.com/dschonholtz/ValueInvestorsClub#scraping-and-analyzing-the-value-investors-club" target="_blank" rel="noopener noreferrer">this repo</a>. This is a snapshot ending in November 2022, and was used as an example for readers.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_4.webp" alt="Ideas Library with selected ideas and the Markdown reader"></p>
+<br>
+<p>Users can click “<em>Add idea</em>” and add it in Markdown format. Or they can import a PDF and I use <a href="https://github.com/run-llama/liteparse" target="_blank" rel="noopener noreferrer">LiteParse</a> to convert the PDF into Markdown.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="criterias">Criterias<a href="https://didierlopes.com/blog/your-investment-idea-is-an-8-10-so-what#criterias" class="hash-link" aria-label="Direct link to Criterias" title="Direct link to Criterias">​</a></h3>
+<p>Then I set the criteria by which Jev will compare ideas. I don’t want a model to compare plainly idea A vs idea B for its whole, rather eat the elephant one bite at a time.</p>
+<p>This is also <a href="https://docs.typesafe.ai/introduction#atomic-questions-composed-in-code" target="_blank" rel="noopener noreferrer">Typesafe’s recommendation</a>:</p>
+<blockquote>
+<p><em><strong>Atomic questions, composed in code</strong></em></p>
+<br>
+<p><em>System One models work best when each question asks one specific, well-scoped thing. Think of each question as a gut-check determination: the kind of judgment a highly knowledgeable person could make in a few seconds given the right context.</em></p>
+<br>
+<p><em>If the question you want to ask would require extended reasoning or weighs multiple independent factors, decompose it. Ask each factor as a separate question, then combine the results with logic in your code. This keeps each individual evaluation reliable and gives you full control over how dimensions are weighted.</em></p>
+<br>
+<p><em>For example, instead of “rate this startup pitch,” ask separately about market size, technical feasibility, and differentiation. Combine the scores with your own formula. When priorities shift, change a coefficient in your code rather than rewriting a prompt.</em></p>
+</blockquote>
+<br>
+<p>So I set up different criteria:</p>
+<ul>
+<li><strong>Variant view &amp; mispricing (25%):</strong> what might the market be missing, and why does it matter?</li>
+<li><strong>Supporting evidence (25%):</strong> what supports the claims the thesis depends on?</li>
+<li><strong>Valuation &amp; return logic (20%):</strong> how do the assumptions translate into security value and potential returns?</li>
+<li><strong>Downside &amp; thesis testing (15%):</strong> how could the idea fail, and what would change the author’s mind?</li>
+<li><strong>Path to value realization (10%):</strong> how could that value actually reach the investor?</li>
+<li><strong>Clarity &amp; research usefulness (5%):</strong> can I understand the argument and identify what to investigate next?</li>
+</ul>
+<br>
+<p>These are fully customizable! And I also allow the user to select the judging prompt that goes with it, to explain what we are assessing for each criteria.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_5.webp" alt="Criteria with editable weights and the supporting-evidence judging prompt"></p>
+<br>
+<p>The weight is important as this is how we will end up comparing two distinct investment ideas. We do the weighted sum to get the aggregate of who wins/loses.</p>
+<p>I also allow to filter the standings/results based on a specific criteria - so that I can see which is the idea that has a highest rating in the group based on, e.g. Variant view &amp; mispricing.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_6.webp" alt="Matchup details with criterion weights, comparison bars, contributions, and mean confidence"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="run">Run<a href="https://didierlopes.com/blog/your-investment-idea-is-an-8-10-so-what#run" class="hash-link" aria-label="Direct link to Run" title="Direct link to Run">​</a></h2>
+<p>One cool thing that I added is the capability to see these ideas compete in “real-time”. In both a line chart, but also the leaderboard standings. This only works well because Jev has <strong>very low</strong> latency.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_7.webp" alt="Tournament in progress after the first completed match"></p>
+<br>
+<p>You can also select a specific criteria in this “live” view.</p>
+<p>And then you have the Head to Head matches between ideas in a 2D grid.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_8.webp" alt="Head-to-head matrix with red and green row-versus-column scores and corner confidence values"></p>
+<br>
+<p>This allows you to explore how ideas compete against each other, and once you select one of the cells you get more details on the individual breakdown of criteria contributions.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_9.webp" alt="Matchup details with criterion weights, comparison bars, contributions, and mean confidence"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="confidence-threshold">Confidence threshold<a href="https://didierlopes.com/blog/your-investment-idea-is-an-8-10-so-what#confidence-threshold" class="hash-link" aria-label="Direct link to Confidence threshold" title="Direct link to Confidence threshold">​</a></h3>
+<p>Finally, the very last feature that I added - which I personally like a lot - is the confidence threshold.</p>
+<p>Rather than counting every single head-to-head match. As we mentioned at the start, Elo leaderboards don’t require all players to play against all players.</p>
+<p>Although we do a weighted sum of contributions based on the different criteria, a win is still a win.</p>
+<p>So I also do a weighted sum of the confidence that Jev gave for those choices. And that value is displayed in the right bottom corner of a cell.</p>
+<p>This means that we now have a slidebar that allows the user to specify what is the minimum confidence threshold required for a “battle” to be considered. The higher that threshold, the less fights are considered - but the more Jev was confident in its decision in selecting one idea vs another.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="https://didierlopes.com/blog/your-investment-idea-is-an-8-10-so-what#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
+<p>As I mentioned, this came from an experiment of building a multi-agent system. But I wanted to share this specific idea to leverage Jev, which I liked a lot.</p>
+<p>I open-sourced it here: <a href="https://github.com/DidierRLopes/elo-jev-4-investment-ideas" target="_blank" rel="noopener noreferrer">https://github.com/DidierRLopes/elo-jev-4-investment-ideas</a></p>
+<p>And if you want to watch how it works, you can check this 3min explainer</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/Qmvojew2sMM" width="800" height="400"></iframe></div>
+<br>
+<p>The app runs locally and saves your workspace in the browser. Judging uses Jev’s hosted API, so the selected text is sent to TypeSafe when you run a tournament.</p>
+<p>Let me know what you think!</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="bonus">BONUS<a href="https://didierlopes.com/blog/your-investment-idea-is-an-8-10-so-what#bonus" class="hash-link" aria-label="Direct link to BONUS" title="Direct link to BONUS">​</a></h2>
+<p>Initially, Claude built the UI and it looked exactly like any other web app looks like. I didn’t like that, so I had this thought about how in VSCode you can go into Themes and select the theme you like.</p>
+<p>So I leveraged that concept, went into <a href="https://vscodethemes.com/" target="_blank" rel="noopener noreferrer">https://vscodethemes.com</a>, and told Claude to recreate that specific theme.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-10-13-your-investment-idea-is-an-8-10-so-what/2026-10-13-your-investment-idea-is-an-8-10-so-what_10.webp" alt="Image"></p>
+<br>
+<p>And it improved a lot the UI! I recommend this to everyone who is vibe coding.</p><div style="display:flex;justify-content:center;margin-top:3rem;margin-bottom:1rem"><a href="https://substack.com/@didierrlopes" target="_blank" rel="noopener noreferrer" class="mission-button" style="text-decoration:none;white-space:nowrap;padding:12px 24px;font-size:14px">Subscribe to my newsletter<span style="margin-left:6px">»</span></a></div>]]></content>
+        <category label="ai" term="ai"/>
+        <category label="investing" term="investing"/>
+        <category label="llms" term="llms"/>
+        <category label="jev" term="jev"/>
+        <category label="open-source" term="open-source"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The future of personal gaming (and software really)]]></title>
+        <id>https://didierlopes.com/blog/the-future-of-personal-gaming-and-software-really</id>
+        <link href="https://didierlopes.com/blog/the-future-of-personal-gaming-and-software-really"/>
+        <updated>2026-10-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[And how I built a voice controlled Pokemon fight that I played against my wife]]></summary>
+        <content type="html"><![CDATA[<p>And how I built a voice controlled Pokemon fight that I played against my wife</p>
+<p>Most people prefer thinking in terms of binary as it simplifies things. Like you can either “build” or “buy”. The “buy” option was never about the fact that you would spend money on it, but rather that you were buying a solution that was mature and you could use it almost out-of-the-box.</p>
+<p>But with the proliferation of open source and coding agents, the “build” option is now very close to the “buy”. Not only that, but it allows you to go further than the “buy” option does.</p>
+<p>What I’m trying to say is that the “buy/build” binary has its days numbered. I believe that (all) software in the future will have to allow you to build on top, and if you want to “buy”, it will rarely be one-size-fits-all software anymore.</p>
+<p>This is <strong>what happens when the cost of building software goes to zero.</strong></p>
+<p>I’m not just saying this now. I told my team more than 2 years ago that for us to win we would have to open source our Workspace to enable clients to have full control of their environment, but first we needed to find a way to have a sustainable business model. We didn’t, but I remain convinced of this.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-10-04-the-future-of-personal-gaming-and-software-really/2026-10-04-the-future-of-personal-gaming-and-software-really_1.webp" alt="Image"></p>
+<br>
+<p>Anyway, this is a thought I’ve been having for some time.</p>
+<p>And in this post I want to give you an example in the gaming industry.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="emerald-arena">Emerald Arena<a href="https://didierlopes.com/blog/the-future-of-personal-gaming-and-software-really#emerald-arena" class="hash-link" aria-label="Direct link to Emerald Arena" title="Direct link to Emerald Arena">​</a></h2>
+<p>A couple of weeks ago I saw <a href="https://x.com/germanburgardt/status/2098872053830992370" target="_blank" rel="noopener noreferrer">GBurgardt</a> share <a href="https://github.com/GBurgardt/pokemon-emerald-arena" target="_blank" rel="noopener noreferrer">Emerald Arena</a>, a ROM hack of Pokémon Emerald.</p>
+<p>A ROM is the file copy of a game cartridge (Game Boy Advance in this case). A ROM hack is a modified version of that file, and you play it on an emulator (e.g. mGBA), a program that runs GBA games on a computer or a phone. German’s hack keeps the original game but makes the battles real-time.</p>
+<p>I downloaded it, played a few fights and was like: “<em>this is nice, but what if …</em>”</p>
+<p>That’s all it took.</p>
+<p>First I gave Charizard Seismic Toss.</p>
+<p><a href="https://x.com/didier_lopes/status/2103307899808186511" target="_blank" rel="noopener noreferrer">https://x.com/didier_lopes/status/2103307899808186511</a></p>
+<p>Then Gengar to be able to traverse obstacles.</p>
+<p><a href="https://x.com/didier_lopes/status/2103540473088602149" target="_blank" rel="noopener noreferrer">https://x.com/didier_lopes/status/2103540473088602149</a></p>
+<p>Then I allowed Golem to roll.</p>
+<p><a href="https://x.com/didier_lopes/status/2103657692761850087" target="_blank" rel="noopener noreferrer">https://x.com/didier_lopes/status/2103657692761850087</a></p>
+<p>I could have kept going, there are so many possible innovations on the attack visuals. But ultimately you are always in the arena.</p>
+<p>So <strong>hold on.</strong></p>
+<p>Why do we have a storyline if all I care about is the arena?</p>
+<p>That was the thought I had on Saturday before closing my eyes…</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="emerald-arena-only">Emerald Arena ONLY<a href="https://didierlopes.com/blog/the-future-of-personal-gaming-and-software-really#emerald-arena-only" class="hash-link" aria-label="Direct link to Emerald Arena ONLY" title="Direct link to Emerald Arena ONLY">​</a></h2>
+<p>So Sunday morning, the first thing I did when I woke up was to create this Arena mode, which had been brewing in my subconscious overnight.</p>
+<p>But the mechanics would have to be different, so I brainstormed with Opus 5.5 how I wanted it to be.</p>
+<ul>
+<li>I wanted to have a selection menu to pick Pokémon where I can see their moves</li>
+<li>I wanted to have up to 6 Pokémon in my party</li>
+<li>I didn’t want everyone to choose the same legendary Pokémon, so we needed to create a “credit” system. Like fantasy football, where you spend credits on better players, except here they are Pokémon. I asked my agent to use its best judgment for this.<!-- -->
+<ul>
+<li>Ideally you would let it run different battles (COM x COM) with different credit levels being used and then tinker the credits per Pokémon accordingly based on win-rate. But I didn’t want to spend tokens/time on this. Sometimes good enough is good enough.</li>
+</ul>
+</li>
+<li>I wanted to use my voice to control the pokemon move, so I could feel like Ash Ketchum (or well, Brendan). I thought this would be feasible with Whisper on-device (voice → text) and Typesafe’s Jev model (text → command).<!-- -->
+<ul>
+<li>Some of these Whisper models are actually quite fast and pretty high quality. It’s so good that I use <a href="https://github.com/my-monkeys/OpenSuperWhisper" target="_blank" rel="noopener noreferrer">OpenSuperWhisper</a> with a Whisper model as my default voice → text app</li>
+<li>Jev is TypeSafe’s decision API: you give it a piece of text and the list of actions possible right now, and it picks one, fast. Think of it as System 1 thinking for agents. This was the killer in this case, as it allowed me to map text (from voice) into a set of commands. Not just the moves but also “switch to Charizard” and picking Charizard in the draft.</li>
+</ul>
+</li>
+</ul>
+<br>
+<p>Then I shared this tweet.</p>
+<p><a href="https://x.com/didier_lopes/status/2104203064257228820" target="_blank" rel="noopener noreferrer">https://x.com/didier_lopes/status/2104203064257228820</a></p>
+<p>This was a couple of back and fourths with the agent, mostly on the UI/UX, but it pretty much one-shotted my request.</p>
+<p>But wait, I want to play with my wife…</p>
+<p>But we could shout voice commands at the same time, how to handle it? The model has to detect each players’s voice so what if we created that baseline at the start of the fight. And so we did.</p>
+<p>Here’s the result:</p>
+<p><a href="https://x.com/didier_lopes/status/2104375192730448093" target="_blank" rel="noopener noreferrer">https://x.com/didier_lopes/status/2104375192730448093</a></p>
+<p>I was very pleasantly surprised! And that had close to 100k impressions!</p>
+<p>So, almost 100k saw my wife kicking my ass on the first real-time pokemon voice controlled fight. Sigh.</p>
+<p>Then I saw my friend <a href="https://x.com/dzhng/status/2105156858982039929" target="_blank" rel="noopener noreferrer">David sharing a skill to create videos with Remotion</a> and I gave this prompt to Opus:</p>
+<blockquote>
+<p><em>"now please install this <a href="mailto:git@github.com" target="_blank" rel="noopener noreferrer">git@github.com</a>:dzhng<!-- -->/skills.git and use its skills to create an announcement video for this emerald arena mdoe"</em></p>
+</blockquote>
+<br>
+<p>This was the output:</p>
+<p><a href="https://x.com/didier_lopes/status/2104394266219073710" target="_blank" rel="noopener noreferrer">https://x.com/didier_lopes/status/2104394266219073710</a></p>
+<p>Looking back at that Sunday, it made me realize that I would have killed to have this game as a kid. And I thought about my newborn while I was building it, and how we could have fun together.</p>
+<p>I can’t wait until she can play games!</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="every-game-is-an-adaptation">Every game is an adaptation<a href="https://didierlopes.com/blog/the-future-of-personal-gaming-and-software-really#every-game-is-an-adaptation" class="hash-link" aria-label="Direct link to Every game is an adaptation" title="Direct link to Every game is an adaptation">​</a></h2>
+<p>This made me think further about how games are made.</p>
+<p>Very few formats are new anymore. Look at almost any recent game and you can spot the combination of existing games behind it.</p>
+<p>For instance, this Emerald Arena is a combination of <strong>Pokémon Emerald</strong> (duh) and <strong>Legacy of Goku II</strong>.</p>
+<p>One of my favorite games growing up was <strong>Counter-Strike 1.6</strong>. Here’s a clip of some near-aces I’ve had on different maps:</p>
+<div class="flex place-items-center justify-center items-center rounded-sm mx-auto"><iframe src="https://www.youtube.com/embed/ocsJzNJJB50" width="800" height="400"></iframe></div>
+<br>
+<p>But even <strong>Counter-Strike</strong> started as a mod for <strong>Half-Life</strong>.</p>
+<p>The one I like to play now is <strong>Fortnite</strong>. I usually play it on Sundays with my father-in-law, my brother and sometimes my wife or her brother-in-law. It has become a ritual now.</p>
+<p>But when I don’t play Battle Royale with them, I always play this mod called <strong><a href="https://www.fortnite.com/@bullseye/9546-9918-8917" target="_blank" rel="noopener noreferrer">Rapid Zero Build 2v2</a></strong> because it is very fast paced and there’s more “play time” in that mode. I think about it similarly to soccer and indoor soccer (futsal), where I started enjoying the latter more due to the pace of the game and because you are in more contact with the ball.</p>
+<p>But even now, on X I see people making very cool games by fusing different ideas together, e.g.:</p>
+<ul>
+<li><strong>League of Legends</strong> x <strong>Dragon Ball FighterZ</strong></li>
+</ul>
+<br>
+<p><a href="https://x.com/GamefxAI/status/2106387548486738010" target="_blank" rel="noopener noreferrer">https://x.com/GamefxAI/status/2106387548486738010</a></p>
+<ul>
+<li><strong>Pokémon</strong> x <strong>Minecraft</strong></li>
+</ul>
+<br>
+<p><a href="https://x.com/MozeTech/status/2106590326634983710" target="_blank" rel="noopener noreferrer">https://x.com/MozeTech/status/2106590326634983710</a></p>
+<ul>
+<li>Figure Me Out is a multiplayer FPS where you kill someone by typing the number on their forehead before they read yours. It’s like <strong>Counter-Strike</strong> with <strong>The Typing of the Dead</strong>, with a bit of the party game where everyone can see your card except you.</li>
+</ul>
+<br>
+<p><a href="https://x.com/IndieGameJoe/status/2106413001477890159" target="_blank" rel="noopener noreferrer">https://x.com/IndieGameJoe/status/2106413001477890159</a></p>
+<p>My view is that most game mechanics have already been invented. What’s left are the edges: <em>the style, the design, the characters, the storyline, the rules</em>.</p>
+<p>But those edges are what AI can tweak with a single prompt.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="blockbusters-and-personal-games">Blockbusters and personal games<a href="https://didierlopes.com/blog/the-future-of-personal-gaming-and-software-really#blockbusters-and-personal-games" class="hash-link" aria-label="Direct link to Blockbusters and personal games" title="Direct link to Blockbusters and personal games">​</a></h2>
+<p>So I wonder if gaming splits into two kinds of games with Pareto distribution.</p>
+<p><strong>The first is the blockbusters (most people play these).</strong> Fortnite, Counter-Strike, Minecraft, GTA and the handful of games most people agree on the user experience. Millions of players to match against, lots of capital to support growth of game and a shared culture.</p>
+<p><strong>The second is highly personalizable games (long tail).</strong> These go beyond one person building something for themselves. The audience is you and your immediate friends or a small community. My mod only got really fun once my wife played with me.</p>
+<p>Success is different on these. The first is active players; whilst the second is likely how much of power users the small community is.</p>
+<p>But then, I wonder if these will connect. Let’s take the Rapid Zero Build 2v2 on Fortnite - it’s built on a blockbuster but it’s a mod that I much more enjoy, and now if I play with my brother during the week - we default to it.</p>
+<p>Regardless, I expect that we see many many more mods on blockbuster games. Can’t wait to see what games will exist by the time my daughter can play, and building something with her.</p>
+<p>In the meantime, if you want to try the real-time voice controlled pokemon arena - it’s fully open source here: <a href="https://github.com/DidierRLopes/pokemon-emerald-arena/pull/2" target="_blank" rel="noopener noreferrer">https://github.com/DidierRLopes/pokemon-emerald-arena/pull/2</a></p><div style="display:flex;justify-content:center;margin-top:3rem;margin-bottom:1rem"><a href="https://substack.com/@didierrlopes" target="_blank" rel="noopener noreferrer" class="mission-button" style="text-decoration:none;white-space:nowrap;padding:12px 24px;font-size:14px">Subscribe to my newsletter<span style="margin-left:6px">»</span></a></div>]]></content>
+        <category label="gaming" term="gaming"/>
+        <category label="ai" term="ai"/>
+        <category label="open-source" term="open-source"/>
+        <category label="pokemon" term="pokemon"/>
+        <category label="software" term="software"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I hired Hermes as a Member of Lopes Staff]]></title>
+        <id>https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff</id>
+        <link href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff"/>
+        <updated>2026-09-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[An always-on local agent that runs my wife's and my life from a Mac mini]]></summary>
+        <content type="html"><![CDATA[<p>An always-on local agent that runs my wife's and my life from a Mac mini</p>
+<p>Recently I got a Mac mini.</p>
+<p>I’ve been wanting to tinker with OpenClaw for a long time, but I knew I could get deep into this as I get easily excited by technology.</p>
+<p>At the same time I was reading more and more about Hermes agent - and even integrated it into OpenBB Workspace a few months back:</p>
+<p><a href="https://x.com/didier_lopes/status/2052610001424830913" target="_blank" rel="noopener noreferrer">https://x.com/didier_lopes/status/2052610001424830913</a></p>
+<p>But I only scratched the surface then.</p>
+<p>In reality, I’ve never felt like this this much in my life:</p>
+<p align="center"><img width="412" src="https://didierlopes.com/blog/2026-09-12-i-hired-hermes-as-a-member-of-lopes-staff/2026-09-12-i-hired-hermes-as-a-member-of-lopes-staff_1.webp" alt="Image"></p>
+<br>
+<p>By the end of this post you will understand why…</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="goal">Goal<a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff#goal" class="hash-link" aria-label="Direct link to Goal" title="Direct link to Goal">​</a></h3>
+<p>I didn’t want to do something just for the sake of doing it - I wanted to have an overall objective that I’m trying to accomplish.</p>
+<p>Recently, my wife and I have been spending more time learning about biology and biotech - but we have no background on the topic. And often were asking the same questions to ChatGPT/Claude. This gave me the perfect opportunity to work on this - as I actually needed something like this, by the end of it you will understand why.</p>
+<p>My wife said, and I quote:</p>
+<blockquote>
+<p><em>“Out of all the projects you’ve done over the years, this is by far the most impressive and helpful”</em></p>
+</blockquote>
+<br>
+<p>There are a few reasons why I needed such a setup; and how it evolved into being more a Chief of Staff of our lives:</p>
+<ul>
+<li>I wanted to have an agent that had full control of a machine - everything from terminal, git, drive, telegram, email, Amazon, &amp; Whole Foods website, …</li>
+<li>This agent would have to have a lot of integrations so that I could continuously expand surface area that it could touch (including MCP connections)</li>
+<li>It needed to be always-on</li>
+<li>I still wanted to have access to its environment if I needed to work on top of some artifacts that it generated directly</li>
+<li>I wanted to have a shared context of work with my wife and I; so the agent could pull threads that she or I started</li>
+<li>Documents that we added into the drive should be available to this agent</li>
+<li>The agent should know who my wife and I are, and be able to communicate with us</li>
+<li>It should be able to have reminders that we can keep updating via text (or even audio!)</li>
+<li>It should be able to produce artifacts such as presentations and audio</li>
+<li>It should be able to leverage whatever LLM we want to use - e.g. codex sub</li>
+</ul>
+<br>
+<p>And I’m pretty sure that over time there will be many more use cases!</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="architecture">Architecture<a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff#architecture" class="hash-link" aria-label="Direct link to Architecture" title="Direct link to Architecture">​</a></h3>
+<p>At a high-level, here’s what we are going to walk through:</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-09-12-i-hired-hermes-as-a-member-of-lopes-staff/2026-09-12-i-hired-hermes-as-a-member-of-lopes-staff_2.webp" alt="Image"></p>
+<br>
+<p>We will talk over each of these components - how they are connected and what we are using it for.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="local-agent-and-mac-mini-capabilities">Local agent and Mac mini capabilities<a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff#local-agent-and-mac-mini-capabilities" class="hash-link" aria-label="Direct link to Local agent and Mac mini capabilities" title="Direct link to Local agent and Mac mini capabilities">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hermes-agent-and-its-harness">Hermes Agent and its harness<a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff#hermes-agent-and-its-harness" class="hash-link" aria-label="Direct link to Hermes Agent and its harness" title="Direct link to Hermes Agent and its harness">​</a></h3>
+<p>I think of <strong>Hermes</strong> as everything else but the model - i.e. the harness.</p>
+<p>It assembles the context for each request, retrieves memory, loads the relevant skills, exposes tools, checks permissions, runs the model’s tool-calling loop, and holds the output.</p>
+<p>It also decides what happens after a tool call: whether the output needs to be checked, whether another tool is needed, and whether the original request has actually been completed.</p>
+<p>The local Hermes installation was ridiculously easy. It’s pretty much one command in <a href="https://hermes-agent.nousresearch.com/docs/getting-started/installation" target="_blank" rel="noopener noreferrer">here</a>. Then you can set up everything else by having the agent doing it itself, and you can use natural language to guide it based on what you want and testing it and double checking that it works.</p>
+<p>But the most important thing I did was I installed everything at the root level and gave it permission to do everything. And then just limited the damage it could do based on what I integrated (as you will see soon).</p>
+<p>Hermes harness most important (durable) components are:</p>
+<ul>
+<li><em>SOUL.md</em> defines the agent’s personality and tone;</li>
+<li>User memory preserves details on my preferences and what I like/dislike - e.g. distinction between my Telegram user ID vs my wife’s;</li>
+<li>Skills preserve repeatable procedures, such as handling Google Drive, producing diagrams, or managing a shared task list;</li>
+<li>Session history keeps long-running work available after the fact;</li>
+<li>The file system holds the actual objects - Markdown, code, diagrams, audio, rendered artifacts, anything!</li>
+</ul>
+<br>
+<p>Several local processes provide different ways into this same agent installation.</p>
+<p>The Hermes messaging gateway handles Telegram. The community Hermes WebUI provides the backend used by Hermex. The official Hermes Desktop app is a separate native Mac interface backed by the official <em>hermes serve</em> process.</p>
+<p>In simplified form:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Telegram       → Messaging Gateway ───────┐</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Hermex         → Community WebUI ─────────┼→ Hermes Agent</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Hermes Desktop → hermes serve ────────────┘</span><br></span></code></pre></div></div>
+<br>
+<p>They use the same local Hermes configuration, model credentials, skills, memory, files, and session store when pointed at the same profile. Interface-specific state can still differ, especially between the official Desktop app and the separately maintained community WebUI. But this is what I love about Hermes agent - it’s that this is the tip of the iceberg, if I want to use WhatsApp, Slack, Gmail, … I can. There are few options that I could think of that aren’t supported!</p>
+<p>On the Mac mini, the gateway and WebUI run as supervised background services. macOS starts them again after login by default.</p>
+<p>The harness also acts as safety boundary. The model does not receive unrestricted direct control of macOS. Hermes mediates file operations, shell commands, browser activity, desktop control, messages, and external API calls. Dangerous actions require approval, and consequential changes are validated before the agent reports success. Although this consumes extra tokens, I love this approach - as my UX is 10x better.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="hermes-bots">Hermes bots<a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff#hermes-bots" class="hash-link" aria-label="Direct link to Hermes bots" title="Direct link to Hermes bots">​</a></h4>
+<p>I had one agent doing too many unrelated jobs.</p>
+<p>It helped with research, writing, coordinated household work, built apps, and maintained websites. It was mostly fine, but then it started “bleeding” context across unrelated tasks - and the access controls was non-existing. E.g. for coordinating household work, why does the agent need access to GitHub?</p>
+<p>And Hermes had just launched <a href="https://hermes-agent.nousresearch.com/docs/user-guide/bot-mode" target="_blank" rel="noopener noreferrer">Bot mode</a>. So I told the agent to go through our entire past threads and user memories and understand which bots we should be creating from it - including personality, moving memories, tools access, etc..</p>
+<p>And it suggested we create a few different bots. Basically when there was enough that happened in a certain area to grant the creation of a new bot - it decided to do it, and then we just had to help set up the tools etc associated with that bot.</p>
+<p>Each specialist has a canonical Bot Chat: one durable place where its history accumulates. When another conversation needs that specialist, I hand the task over and the result comes back, rather than copying a large pile of context between agents.</p>
+<p>This has made it so that context stays relevant. Specialist history persists. The integrations are obvious based on the specialist at hand and reduces risk of an unrelated task touching tooling that it shouldn’t mess with. Very clean!</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="codex-subscription">Codex subscription<a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff#codex-subscription" class="hash-link" aria-label="Direct link to Codex subscription" title="Direct link to Codex subscription">​</a></h4>
+<p>Given that Hermes agent will touch everything, I wanted it to have access to a frontier model and one that had very generous limits. This kinda narrowed it down to GPT-5.6 Sol; particularly as I had some reset lefts (thank you Tibo!).</p>
+<p>One thing that I also like is that I am using my codex subscription, so both my wife and I are leveraging Hermes - but the tokens are coming from a single sub.</p>
+<p>Although I depicted OpenAI inside Mac mini, the model doesn’t run there. Inference is remote, so:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Local context and request</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Hermes Agent</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Codex OAuth</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Remote model inference</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Reasoning and proposed tool calls</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Hermes executes locally</span><br></span></code></pre></div></div>
+<br>
+<p>The Mac mini runs the agent, tools, files, sessions, and control layer. Codex provides the intelligence.</p>
+<p>The model is good at deciding what kind of work may be required. It can interpret a broad request, identify missing information, plan a sequence of actions, compare evidence, write code, and decide which tool to call next.</p>
+<p>For example, the model may decide that a research request needs:</p>
+<ol>
+<li>A structured preprint search</li>
+<li>DOI normalization</li>
+<li>PDF retrieval</li>
+<li>Text extraction</li>
+<li>Comparison against previous notes</li>
+<li>A visual artifact</li>
+<li>Delivery to another person</li>
+</ol>
+<br>
+<p>Codex can plan that sequence. Hermes will execute it.</p>
+<p>The model can change later without losing the local memory, skills, source files, permissions, and operating standards.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="mac-ecosystem-apps">Mac ecosystem apps<a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff#mac-ecosystem-apps" class="hash-link" aria-label="Direct link to Mac ecosystem apps" title="Direct link to Mac ecosystem apps">​</a></h4>
+<p>I could have hosted the agent on a cloud VM. The Mac mini was more useful for the kind of work I wanted.</p>
+<p>It is simultaneously:</p>
+<ul>
+<li>An always-on home server</li>
+<li>A persistent file system</li>
+<li>A desktop computer with native applications</li>
+<li>A browser environment with signed-in services</li>
+<li>A development machine</li>
+<li>A place where private artifacts can remain local</li>
+</ul>
+<br>
+<p>.. and I can just hook up a monitor, keyboard and mouse to it!</p>
+<p>The agent can download PDFs from MedRxiv, open it in Preview, and inspect the report in a native window. It can take set shared TODOs in the reminder app and use that for both my wife and I. It can build an application, render it in the browser, and evaluate its rendering. More importantly, it can use Hermes’ computer-use integration to operate applications in the background through macOS accessibility interfaces.</p>
+<p>The applications currently useful in the workflow include:</p>
+<ul>
+<li>Finder for local organization</li>
+<li>Preview for PDFs and images</li>
+<li>Terminal for builds, scripts, Git, and validation</li>
+<li>Safari for browser-based tools</li>
+<li>Apple Reminders for the shared family task list</li>
+<li>Native file dialogs and macOS services when no API path exists</li>
+<li>Calendar to check for upcoming appointments or book something</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="non-mac-ecosystem-apps">Non Mac ecosystem apps<a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff#non-mac-ecosystem-apps" class="hash-link" aria-label="Direct link to Non Mac ecosystem apps" title="Direct link to Non Mac ecosystem apps">​</a></h4>
+<p>The Mac mini also runs local specialist tools.</p>
+<p>Given access to GitHub, I cloned:</p>
+<ul>
+<li><strong>Colloquium</strong> - converts editable Markdown into HTML presentations.</li>
+<li><strong>Podcastfy</strong> - converts reviewed two-person scripts into conversational audio.</li>
+</ul>
+<br>
+<p>The official Hermes Desktop app is another part of this Mac layer. It is a native application for chat, configuration, projects, files, terminals, artifacts, and multiple sessions.</p>
+<p>Hermex uses the separate community WebUI. Both point at the same underlying Hermes installation.</p>
+<p>And there are probably many more now that I don’t even realize - but I’ve given Hermes the power to download and use them.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="browser">Browser<a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff#browser" class="hash-link" aria-label="Direct link to Browser" title="Direct link to Browser">​</a></h3>
+<p>The awesome thing about it being connected with the browser and you having logged in into that browser, is that you don’t even need an MCP but the agent can just do computer use to control the browser.</p>
+<p>Here’s an example of Hermes agent being used to do our weekly shopping. My wife was holding the newborn and hadn’t had the time to sit down to sit and select items, so I told her to leave a voice note to Hermes and see what happened.</p>
+<p>And then the only thing I had to do in the end was give it confirmation in the app, just to ensure there’s some protection layer and it doesn’t order by default… but this is the equivalent to --yolo which becomes the default once you gain confidence in the system.</p>
+<p align="center"><img width="800" src="https://didierlopes.com/blog/2026-09-12-i-hired-hermes-as-a-member-of-lopes-staff/2026-09-12-i-hired-hermes-as-a-member-of-lopes-staff_3.webp" alt="Image"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="people-and-access-channels">People and access channels<a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff#people-and-access-channels" class="hash-link" aria-label="Direct link to People and access channels" title="Direct link to People and access channels">​</a></h2>
+<p>The same Hermes is reachable through different interfaces.</p>
+<p>Telegram is the quick conversational route. Hermex is the richer mobile workspace. Email gives the agent an identity outside chat platforms. They converge on the same local capabilities, but they do not automatically share one live conversation.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="telegram">Telegram<a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff#telegram" class="hash-link" aria-label="Direct link to Telegram" title="Direct link to Telegram">​</a></h3>
+<p>Telegram is the interface I use most often because it has almost no friction.</p>
+<p>My wife and I each have a separate private conversation with the same Hermes agent, and the agent knows who is who. Our Telegram identities are explicitly allowlisted, so finding the bot username is not enough to gain access. Each chat has its own session context even though both chats can use the same agent, files, memory, and tools.</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Telegram app</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Telegram Bot API</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Hermes Messaging Gateway</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Hermes Agent</span><br></span></code></pre></div></div>
+<br>
+<p>The gateway is a long-running background process on the Mac mini. It receives platform events, associates them with the correct chat session, invokes Hermes, and delivers the response back through Telegram. It also handles files, voice messages, scheduled deliveries, and platform-specific commands.</p>
+<p>Telegram supports more than text. We can:</p>
+<ul>
+<li>Send voice notes for transcription</li>
+<li>Attach screenshots or documents</li>
+<li>Receive PDFs, HTML, images, audio, and ZIP files</li>
+<li>Ask the agent to send something to the other person</li>
+<li>Add or update tasks using ordinary language</li>
+<li>Receive scheduled reminders or research results</li>
+</ul>
+<br>
+<p>One of our favorite flows that involves the gateway is the shared task list. Either of us can send a text or voice request such as: “<em>Remind me to call person X tomorrow</em>”</p>
+<p>Hermes recognizes the task intent and writes it into one shared Apple Reminders list. A morning cron job reads every open item and sends the same list to both Telegram accounts.</p>
+<p>Telegram is excellent for point-in-time interactions, but it is less comfortable for browsing a long research history, comparing artifacts, or working across several sessions.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hermex">Hermex<a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff#hermex" class="hash-link" aria-label="Direct link to Hermex" title="Direct link to Hermex">​</a></h3>
+<p>Hermex is the native iPhone client for the community Hermes WebUI.</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Hermex on iPhone</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Tailscale</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Hermes WebUI on the Mac mini</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Hermes Agent</span><br></span></code></pre></div></div>
+<br>
+<p>Hermex does not connect to the messaging gateway, and it does not connect to the official Hermes Desktop app. It talks to the community WebUI server.</p>
+<p>We made the WebUI reachable through our private Tailscale network rather than publishing it on the open internet. Tailscale controls who can reach the network route.</p>
+<p>Hermex gives a richer interface than Telegram:</p>
+<ul>
+<li>Session history</li>
+<li>Longer streaming responses (not broken down by messages with 1/7, 2/7, …)</li>
+<li>File and workspace navigation</li>
+<li>Pinned conversations</li>
+<li>Profile and model controls</li>
+<li>Better handling of long-running research threads</li>
+</ul>
+<br>
+<p>My wife much prefers this interface!</p>
+<p>Although the threads are shared by both of us here.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hermes-desktop">Hermes Desktop<a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff#hermes-desktop" class="hash-link" aria-label="Direct link to Hermes Desktop" title="Direct link to Hermes Desktop">​</a></h3>
+<p>The official Hermes Desktop app uses a different backend, <em>hermes serve</em>. It shares core state with Hermex while retaining separate interface-specific metadata.</p>
+<p>I use Hermes desktop much more, particularly when I was installing everything and when I want to actually be controlling the Mac Mini with Hermes.</p>
+<p>Something that is cool is that if the WebUI stops, Hermex stops working. But Telegram continues through the gateway, and the official Desktop app continues through its own backend. So there’s redundancy baked in.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="agentmail">AgentMail<a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff#agentmail" class="hash-link" aria-label="Direct link to AgentMail" title="Direct link to AgentMail">​</a></h3>
+<p>Email gives the agent a durable identity beyond Telegram and Hermex.</p>
+<p>We created a dedicated AgentMail inbox, which is an external email service. The local Mac runs the client logic that calls its API:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Hermes on Mac mini</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">AgentMail API</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Dedicated agent inbox</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Any email recipient</span><br></span></code></pre></div></div>
+<br>
+<p>The crazy thing is that I just asked the agent to create an email account for itself…</p>
+<p><a href="https://x.com/didier_lopes/status/2091625530374210005" target="_blank" rel="noopener noreferrer">https://x.com/didier_lopes/status/2091625530374210005</a></p>
+<p>The only thing I had to do was to verify a OTP sent to my personal email.</p>
+<p>Now my agent has an email that it can use to send/receive emails - I like it so that it can send things I want to read/study/work on to my email and I can kept it in “UNREAD” state to be acted upon.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="external-systems-and-durable-artifacts">External systems and durable artifacts<a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff#external-systems-and-durable-artifacts" class="hash-link" aria-label="Direct link to External systems and durable artifacts" title="Direct link to External systems and durable artifacts">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="github">GitHub<a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff#github" class="hash-link" aria-label="Direct link to GitHub" title="Direct link to GitHub">​</a></h3>
+<p>GitHub is the code and provenance layer.</p>
+<p>Several capabilities in the system began as repositories cloned onto the Mac mini:</p>
+<ul>
+<li>Colloquium</li>
+<li>Podcastfy</li>
+<li>The medRxiv MCP server</li>
+<li>Hermes Agent itself</li>
+<li>Local scripts and diagram generators</li>
+</ul>
+<br>
+<p>Once a repository is local, Hermes can inspect its structure, read its history, modify code, run tests, review the resulting diff, and prepare a commit.</p>
+<p>With authenticated Git access, it can also push a reviewed change or open a pull request. Although I haven’t yet done that - just tinkering locally.</p>
+<p>The medRxiv MCP is a good example of the value of Git. The original project failed because its scraper hit a Cloudflare challenge, its metadata endpoint returned errors, and its dependency range installed an incompatible SDK. → at least that’s what it told me. 🤷🏽‍♂️ Hermes modified the local clone, replaced the fragile search path, added normalization and tests, and verified the actual MCP transport.</p>
+<p>The other side of it is that I can give the agent access to <a href="https://github.com/DidierRLopes/my-website" target="_blank" rel="noopener noreferrer">my personal website</a> to update books read or books to read; or access to a personal project like <a href="https://pokvault.com/" target="_blank" rel="noopener noreferrer">pokemon vault</a> and it can fix/add features on the fly.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="google-drive">Google Drive<a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff#google-drive" class="hash-link" aria-label="Direct link to Google Drive" title="Direct link to Google Drive">​</a></h3>
+<p>Google Drive is our shared artifact library, which we can open on mobile.</p>
+<p>Hermes has OAuth access to one approved shared parent folder rather than unrestricted access to every file in the account. The OAuth credentials remain local, and Drive operations stay inside that boundary.</p>
+<p>The difference between Drive and local storage is timing. We treat local folders and artifacts as work in progress; and when the artifact is ready to be consumed we push to the drive. An example is that I created a Zero to Hero course on a specific topic and it now lives in a folder in our drive.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="external-apimcp-tools-eg-medrxiv">External API/MCP tools (e.g. medRxiv)<a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff#external-apimcp-tools-eg-medrxiv" class="hash-link" aria-label="Direct link to External API/MCP tools (e.g. medRxiv)" title="Direct link to External API/MCP tools (e.g. medRxiv)">​</a></h3>
+<p>This allows us to add any external service that we can think of to Hermes via your typical API or MCP tools, to enhance the tools at its disposal from the get-go. We could even give access to OpenBB Workspace MCP to do financial research - more on this in another post!</p>
+<p>In this case, we gave it access to medRxiv which is an external source of health-science preprints.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-it-all-comes-together">How it all comes together<a href="https://didierlopes.com/blog/i-hired-hermes-as-a-member-of-lopes-staff#how-it-all-comes-together" class="hash-link" aria-label="Direct link to How it all comes together" title="Direct link to How it all comes together">​</a></h2>
+<p>The complete workflow is actually quite clean</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Didier or Meg iPhone</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Telegram, Hermex, or email</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Hermes on the Mac mini</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Codex reasoning + local tools</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Route to specific Hermes bot maybe</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">GitHub code, research sources, native Mac applications</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Verified local files</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Google Drive, Telegram, Hermex, or email delivery</span><br></span></code></pre></div></div>
+<br>
+<p>It’s a new world; but I’m excited to keep pushing what’s possible with this.</p><div style="display:flex;justify-content:center;margin-top:3rem;margin-bottom:1rem"><a href="https://substack.com/@didierrlopes" target="_blank" rel="noopener noreferrer" class="mission-button" style="text-decoration:none;white-space:nowrap;padding:12px 24px;font-size:14px">Subscribe to my newsletter<span style="margin-left:6px">»</span></a></div>]]></content>
+        <category label="ai" term="ai"/>
+        <category label="agents" term="agents"/>
+        <category label="hermes" term="hermes"/>
+        <category label="automation" term="automation"/>
+        <category label="personal" term="personal"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[My learning system for keeping up with AI]]></title>
         <id>https://didierlopes.com/blog/my-learning-system-for-keeping-up-with-ai</id>

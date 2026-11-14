@@ -20,7 +20,8 @@ A guide for adding books to the website's book lists.
 - `src/components/Books/BooksToRead.tsx` — the "Books to Read" list (page: `/books/to-read`)
 - `src/components/Books/BooksAlreadyRead.tsx` — the "Books Already Read" list (page: `/books/already-read`)
 - `static/books/` — book cover images
-- Each file holds a `data` array of `{ title, author, image }` objects. The list is rendered **reversed**, so the last entry in the array appears first on the page.
+- `src/components/Books/categories.ts` - the category list (`BOOK_CATEGORIES`) and the `Book` type; categories render as filter chips on both pages
+- Each file holds a `data: Book[]` array of `{ title, author, image, category }` objects. The list is rendered **reversed**, so the last entry in the array appears first on the page.
 
 ## Step-by-step process
 
@@ -52,12 +53,14 @@ Append a new object to the **end** of the `data` array (so it shows first on the
 {
 	title: "My Years with General Motors",
 	author: "Alfred P. Sloan, Jr.",
-	image: "/books/my-years-with-general-motors.jpg"
+	image: "/books/my-years-with-general-motors.jpg",
+	category: "leadership",
 },
 ```
 
 - Use the full title including subtitle, matching the style of nearby entries.
 - The `image` path starts with `/books/` (it maps to `static/books/`).
+- `category` must be an `id` from `BOOK_CATEGORIES` in `categories.ts` (the type rejects anything else). Pick the closest existing one by looking at how similar books are tagged; only add a new category if the book clearly fits none.
 - Match the file's existing indentation (tabs).
 
 ### 4. Verify

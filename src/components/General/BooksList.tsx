@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { createPortal } from "react-dom";
+import {
+	BOOK_CATEGORIES,
+	type Book,
+	type BookCategory,
+} from "../Books/categories";
 import styles from "./BooksList.module.css";
-
-interface Book {
-	title: string;
-	author: string;
-	image: string;
-}
 
 interface BooksListProps {
 	books: Book[];
@@ -15,6 +14,17 @@ interface BooksListProps {
 export default function BooksList({ books }: BooksListProps) {
 	const [selectedImage, setSelectedImage] = useState<string | null>(null);
 	const [searchTerm, setSearchTerm] = useState("");
+	const [activeCategory, setActiveCategory] = useState<BookCategory | null>(
+		null,
+	);
+
+	const categoryCounts = useMemo(() => {
+		const counts = new Map<BookCategory, number>();
+		for (const book of books) {
+			counts.set(book.category, (counts.get(book.category) ?? 0) + 1);
+		}
+		return counts;
+	}, [books]);
 
 	const openModal = (imageUrl: string) => {
 		setSelectedImage(imageUrl);
@@ -38,11 +48,17 @@ export default function BooksList({ books }: BooksListProps) {
 		};
 	}, [selectedImage]);
 
+	const query = searchTerm.toLowerCase();
 	const filteredBooks = books.filter(
 		(book) =>
-			book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-			book.author.toLowerCase().includes(searchTerm.toLowerCase()),
+			(activeCategory === null || book.category === activeCategory) &&
+			(book.title.toLowerCase().includes(query) ||
+				book.author.toLowerCase().includes(query)),
 	);
+
+	const activeLabel = BOOK_CATEGORIES.find(
+		(category) => category.id === activeCategory,
+	)?.label;
 
 	return (
 		<div className={styles.terminal}>
@@ -54,6 +70,36 @@ export default function BooksList({ books }: BooksListProps) {
 					value={searchTerm}
 					onChange={(e) => setSearchTerm(e.target.value)}
 				/>
+			</div>
+			<div className={styles.categories} role="group" aria-label="Categories">
+				<button
+					type="button"
+					className={styles.categoryChip}
+					aria-pressed={activeCategory === null}
+					onClick={() => setActiveCategory(null)}
+				>
+					All <span className={styles.categoryCount}>{books.length}</span>
+				</button>
+				{BOOK_CATEGORIES.filter((category) =>
+					categoryCounts.has(category.id),
+				).map((category) => (
+					<button
+						type="button"
+						key={category.id}
+						className={styles.categoryChip}
+						aria-pressed={activeCategory === category.id}
+						onClick={() =>
+							setActiveCategory(
+								activeCategory === category.id ? null : category.id,
+							)
+						}
+					>
+						{category.label}{" "}
+						<span className={styles.categoryCount}>
+							{categoryCounts.get(category.id)}
+						</span>
+					</button>
+				))}
 			</div>
 			{filteredBooks.length > 0 ? (
 				<ul className={styles.bookList}>
@@ -80,7 +126,10 @@ export default function BooksList({ books }: BooksListProps) {
 				</ul>
 			) : (
 				<div className={styles.noResults}>
-					<p>&gt; No results found for "{searchTerm}"</p>
+					<p>
+						&gt; No results found for "{searchTerm}"
+						{activeLabel ? ` in ${activeLabel}` : ""}
+					</p>
 				</div>
 			)}
 			{selectedImage &&

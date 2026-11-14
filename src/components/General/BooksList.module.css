@@ -30,6 +30,50 @@
   box-shadow: 0 0 5px var(--ds-blue-light);
 }
 
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ds-space-2);
+  margin-bottom: var(--ds-space-4);
+}
+
+.categoryChip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ds-space-1);
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 2px;
+  padding: var(--ds-space-1) var(--ds-space-2);
+  font-family: var(--ds-font-primary);
+  font-size: var(--ds-font-size-sm);
+  line-height: 1.4;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.categoryChip:hover {
+  color: var(--text-primary);
+  border-color: var(--ds-blue-light);
+}
+
+.categoryChip:focus-visible {
+  outline: none;
+  border-color: var(--ds-blue-light);
+  box-shadow: 0 0 5px var(--ds-blue-light);
+}
+
+.categoryChip[aria-pressed="true"] {
+  color: var(--ds-blue-light);
+  border-color: var(--ds-blue-light);
+  background-color: var(--background-tertiary, rgba(255, 255, 255, 0.05));
+}
+
+.categoryCount {
+  opacity: 0.6;
+}
+
 .bookList {
   list-style: none;
   padding: 0;

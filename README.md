@@ -33,7 +33,7 @@ $ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-Both `yarn start` and `yarn build` first run `scripts/generate-thumbnails.mjs`, which writes small WebP thumbnails for book and blog covers into `generated-static/` (gitignored, served as an extra static directory).
+Both `yarn start` and `yarn build` first run `scripts/generate-thumbnails.mjs`, which writes small WebP thumbnails for book covers, blog covers and media photos into `generated-static/` (gitignored, served as an extra static directory).
 
 ### Checks
 

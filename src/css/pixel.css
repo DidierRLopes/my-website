@@ -1,0 +1,744 @@
+/*
+ * Pixel theme: the "start screen" look, applied site-wide.
+ *
+ * Loaded after custom.css. The pixelation lives in the art (the sprite, the
+ * portrait), the notched 2px frames and the selection cursors; all text is set
+ * in Jost so it stays sharp. Gold marks the one selected thing (the active
+ * menu item, the cursor); cyan is for links.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300..700;1,300..700&family=Silkscreen&display=swap');
+
+:root,
+[data-theme='dark'],
+[data-theme='light'] {
+  --px-ground: #153f56;
+  --px-floor: #0f3248;
+  --px-panel: #0b2534;
+  --px-panel-hi: #123a50;
+  --px-border: #f2ede3;
+  --px-line: #2f5d77;
+  --px-ink: #f4f1ea;
+  --px-muted: #b4cad6;
+  --px-accent: #f5c542;
+  --px-link: #8adbd5;
+  --px-sans: 'Jost', system-ui, sans-serif;
+  /* A hand-drawn loop for the active tab: one pen stroke that overshoots
+     where it started. Stretches to any word. */
+  --px-scribble: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 44' preserveAspectRatio='none'%3E%3Cpath d='M88 6 C62 1 24 3 10 14 C-2 24 10 39 50 41 C86 43 116 35 114 21 C112 9 90 3 64 4 C52 4.5 44 6 40 8' fill='none' stroke='%23f5c542' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  /* A 2px border with the corners notched out by one pixel step, like an RPG
+     text box drawn at high resolution. Dim for resting panels, light for
+     emphasis (hover, focus, the homepage boxes). */
+  --px-frame: 0 -2px 0 0 var(--px-border), 0 2px 0 0 var(--px-border), -2px 0 0 0 var(--px-border),
+    2px 0 0 0 var(--px-border);
+  --px-frame-dim: 0 -2px 0 0 var(--px-line), 0 2px 0 0 var(--px-line), -2px 0 0 0 var(--px-line),
+    2px 0 0 0 var(--px-line);
+
+  --background-primary: var(--px-ground);
+  --background-secondary: var(--px-panel);
+  --text-primary: var(--px-ink);
+  --text-secondary: var(--px-muted);
+  --border-primary: var(--px-line);
+  --border-secondary: var(--px-line);
+  --ds-font-primary: var(--px-sans);
+  --ds-letter-spacing: 0;
+
+  --mission-card-bg: var(--px-panel);
+  --mission-card-border: transparent;
+  --mission-text-color: var(--px-ink);
+  --mission-border-radius: 0;
+  --mission-font-family: var(--px-sans);
+  --mission-box-shadow: var(--px-frame-dim);
+
+  --ifm-color-primary: var(--px-accent);
+  --ifm-color-primary-dark: var(--px-accent);
+  --ifm-color-primary-darker: var(--px-accent);
+  --ifm-color-primary-darkest: var(--px-accent);
+  --ifm-color-primary-light: var(--px-accent);
+  --ifm-color-primary-lighter: var(--px-accent);
+  --ifm-color-primary-lightest: var(--px-accent);
+  --ifm-link-color: var(--px-link);
+  --ifm-link-hover-color: var(--px-accent);
+  --ifm-background-color: var(--px-ground);
+  --ifm-background-surface-color: var(--px-panel);
+  --ifm-font-color-base: var(--px-ink);
+  --ifm-color-content: var(--px-ink);
+  --ifm-color-content-secondary: var(--px-muted);
+  --ifm-heading-color: var(--px-ink);
+  --ifm-font-family-base: var(--px-sans);
+  --ifm-heading-font-family: var(--px-sans);
+  --ifm-font-size-base: 17px;
+  --ifm-navbar-background-color: var(--px-panel);
+  --ifm-navbar-height: 68px;
+  --ifm-footer-background-color: var(--px-floor);
+  --ifm-toc-border-color: var(--px-line);
+  --ifm-hr-border-color: var(--px-line);
+  --ifm-code-background: var(--px-panel);
+  --ifm-code-border-radius: 0;
+  --ifm-pre-background: var(--px-panel);
+  --ifm-global-radius: 0;
+  --ifm-menu-color: var(--px-ink);
+  --ifm-menu-color-active: var(--px-accent);
+  --ifm-menu-color-background-active: transparent;
+  --ifm-menu-color-background-hover: var(--px-panel-hi);
+  --ifm-breadcrumb-item-background-active: transparent;
+  --ifm-color-emphasis-300: var(--px-line);
+  --docusaurus-highlighted-code-line-bg: rgba(245, 197, 66, 0.12);
+}
+
+/* ---------- Base ---------- */
+
+html,
+body,
+#__docusaurus {
+  background: var(--px-ground);
+}
+
+[data-theme='dark'] body,
+[data-theme='light'] body {
+  background-image: none;
+}
+
+body {
+  font-family: var(--px-sans);
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--px-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:is(h1, h2, h3, h4, h5, h6),
+:is(h1, h2, h3, h4, h5, h6)[class] {
+  font-family: var(--px-sans);
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  color: var(--px-ink);
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+a {
+  color: var(--px-link);
+}
+
+a:hover {
+  color: var(--px-accent);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--px-accent);
+  outline-offset: 3px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+::selection {
+  background: var(--px-accent);
+  color: var(--px-panel);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track,
+[data-theme='dark'] ::-webkit-scrollbar-track {
+  background: var(--px-panel);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--px-line);
+  border: 2px solid var(--px-panel);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--px-muted);
+}
+
+input,
+textarea,
+select {
+  background: var(--px-panel);
+  color: var(--px-ink);
+  border: 2px solid var(--px-line);
+  font-family: var(--px-sans);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--px-accent);
+  box-shadow: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--px-muted);
+  opacity: 1;
+}
+
+/* Reusable pixel panel. */
+.px-box {
+  background: var(--px-panel);
+  box-shadow: var(--px-frame);
+  margin: 2px;
+}
+
+/* ---------- Navbar: the HUD ---------- */
+
+.navbar {
+  background: var(--px-panel);
+  box-shadow: 0 2px 0 0 var(--px-line);
+  padding: 0 24px;
+}
+
+.navbar__brand {
+  gap: 4px;
+}
+
+.navbar__logo img {
+  image-rendering: pixelated;
+}
+
+.navbar__title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--px-ink);
+}
+
+.navbar__link,
+.navbar__item {
+  font-family: var(--px-sans);
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--px-ink);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.navbar__link:not(.navbar__center-item) {
+  position: relative;
+}
+
+.navbar__link:hover {
+  color: var(--px-accent);
+}
+
+.navbar__link--active {
+  color: var(--px-ink);
+}
+
+/* The active tab is circled by hand. */
+.navbar__items .navbar__link--active::before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  top: 50%;
+  height: 40px;
+  margin-top: -20px;
+  background: var(--px-scribble) center / 100% 100% no-repeat;
+  pointer-events: none;
+}
+
+.navbar__toggle,
+.navbar-sidebar__close {
+  color: var(--px-ink);
+}
+
+.navbar-sidebar {
+  background: var(--px-panel);
+}
+
+.navbar-sidebar__brand {
+  box-shadow: 0 2px 0 0 var(--px-line);
+}
+
+.navbar-sidebar .menu__link {
+  font-size: 18px;
+}
+
+.DocSearch-Button {
+  height: 40px !important;
+  margin: 2px !important;
+  padding: 0 10px 0 14px !important;
+  border-radius: 0 !important;
+  background: var(--px-panel) !important;
+  box-shadow: var(--px-frame-dim) !important;
+  font-family: var(--px-sans) !important;
+}
+
+.DocSearch-Button:hover,
+.DocSearch-Button:focus {
+  box-shadow: var(--px-frame) !important;
+}
+
+.DocSearch-Button-Placeholder {
+  padding: 0 12px 0 8px !important;
+  font-size: 15px !important;
+}
+
+.DocSearch-Button-Placeholder,
+.DocSearch-Search-Icon {
+  color: var(--px-muted) !important;
+}
+
+.DocSearch-Button-Keys {
+  gap: 4px;
+}
+
+.DocSearch-Button-Key {
+  top: 0 !important;
+  width: 22px !important;
+  height: 20px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: var(--px-ground) !important;
+  box-shadow: none !important;
+  color: var(--px-muted) !important;
+  font-family: var(--px-sans) !important;
+  font-size: 12px !important;
+}
+
+/* The search dialog, in the theme. Docusaurus sets these on `.DocSearch`. */
+html[data-theme='dark'],
+html[data-theme='light'],
+html[data-theme='dark'] .DocSearch,
+html[data-theme='light'] .DocSearch {
+  --docsearch-primary-color: var(--px-accent);
+  --docsearch-text-color: var(--px-ink);
+  --docsearch-muted-color: var(--px-muted);
+  --docsearch-highlight-color: var(--px-accent);
+  --docsearch-container-background: rgba(6, 22, 32, 0.85);
+  --docsearch-modal-background: var(--px-ground);
+  --docsearch-modal-shadow: var(--px-frame);
+  --docsearch-searchbox-background: var(--px-panel);
+  --docsearch-searchbox-focus-background: var(--px-panel);
+  --docsearch-searchbox-shadow: var(--px-frame);
+  --docsearch-hit-color: var(--px-ink);
+  --docsearch-hit-active-color: var(--px-panel);
+  --docsearch-hit-background: var(--px-panel);
+  --docsearch-hit-shadow: none;
+  --docsearch-key-gradient: none;
+  --docsearch-key-shadow: none;
+  --docsearch-footer-background: var(--px-panel);
+  --docsearch-footer-shadow: 0 -2px 0 0 var(--px-line);
+  --docsearch-logo-color: var(--px-muted);
+}
+
+.DocSearch-Container {
+  font-family: var(--px-sans);
+}
+
+.DocSearch-Modal {
+  border-radius: 0 !important;
+  margin-top: 72px;
+}
+
+.DocSearch-SearchBar {
+  padding: 16px 16px 8px;
+}
+
+.DocSearch-Form {
+  border-radius: 0;
+  margin: 2px;
+}
+
+.DocSearch-Input {
+  font-family: var(--px-sans);
+  font-size: 18px;
+}
+
+.DocSearch-Hit-source {
+  background: var(--px-ground);
+  color: var(--px-muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.DocSearch-Hit a {
+  border-radius: 0;
+  box-shadow: var(--px-frame-dim);
+  margin: 2px;
+}
+
+.DocSearch-Hit[aria-selected='true'] a {
+  box-shadow: none;
+}
+
+.DocSearch-Hit[aria-selected='true'] mark {
+  color: var(--px-panel);
+  text-decoration: underline;
+}
+
+.DocSearch-Hit-title {
+  font-size: 15px;
+}
+
+.DocSearch-Commands-Key {
+  border-radius: 0;
+  background: var(--px-ground);
+  box-shadow: none;
+}
+
+/* ---------- Docs sidebar, breadcrumbs, pagination ---------- */
+
+.theme-doc-sidebar-container {
+  border-right: 0 !important;
+}
+
+.theme-doc-sidebar-menu {
+  font-family: var(--px-sans);
+}
+
+.menu {
+  padding: 16px 12px !important;
+}
+
+.menu__link,
+.menu__caret {
+  border-left: 0;
+  border-radius: 0;
+  font-size: 16px;
+  color: var(--px-ink);
+}
+
+.menu__link {
+  position: relative;
+  padding-left: 24px;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  color: var(--px-accent);
+}
+
+.menu__list-item-collapsible:hover,
+.menu__link:hover {
+  background: var(--px-panel-hi);
+}
+
+.breadcrumbs__link {
+  border-radius: 0;
+  font-size: 14px;
+  color: var(--px-muted);
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: var(--px-ink);
+}
+
+.pagination-nav__link {
+  border: 0;
+  border-radius: 0;
+  background: var(--px-panel);
+  box-shadow: var(--px-frame-dim);
+  margin: 4px;
+}
+
+.pagination-nav__link:hover {
+  box-shadow: var(--px-frame);
+}
+
+.pagination-nav__sublabel {
+  color: var(--px-muted);
+}
+
+.pagination-nav__label {
+  color: var(--px-ink);
+}
+
+.theme-doc-markdown > header h1,
+.theme-doc-markdown h1 {
+  font-size: 40px;
+  margin-bottom: 0;
+}
+
+/* Without a sidebar, docs pages keep a centred reading column. */
+[class*='docMainContainer'] > .container {
+  max-width: 1180px;
+}
+
+/* Keep the page intro close to its title. */
+.theme-doc-markdown > header {
+  margin-bottom: 12px;
+}
+
+.theme-edit-this-page {
+  font-family: var(--px-sans);
+}
+
+/* ---------- Long-form reading ---------- */
+
+.markdown {
+  --ifm-h1-font-size: 44px;
+}
+
+.markdown p,
+.markdown li {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  font-family: var(--px-sans) !important;
+  font-weight: 500 !important;
+}
+
+.markdown h2 {
+  font-size: 28px !important;
+}
+
+.markdown h3 {
+  font-size: 22px !important;
+}
+
+.markdown h4 {
+  font-size: 19px !important;
+}
+
+.markdown a {
+  color: var(--px-link);
+  text-underline-offset: 3px;
+}
+
+.markdown a:hover {
+  color: var(--px-accent);
+}
+
+.markdown strong {
+  color: var(--px-ink);
+}
+
+blockquote {
+  border-left: 2px solid var(--px-line);
+  background: var(--px-panel);
+  padding: 12px 20px;
+  color: var(--px-muted);
+}
+
+code {
+  border: 0;
+  border-radius: 0;
+  background: var(--px-panel);
+  color: var(--px-ink);
+}
+
+pre {
+  border: 0;
+  border-radius: 0;
+  box-shadow: var(--px-frame-dim);
+  margin: 4px 4px var(--ifm-leading);
+}
+
+table {
+  border: 0;
+  box-shadow: var(--px-frame-dim);
+  margin: 4px;
+}
+
+table th {
+  font-family: var(--px-sans);
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  background: var(--px-panel);
+}
+
+table tr:nth-child(2n) {
+  background: rgba(11, 37, 52, 0.45);
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--px-line) 0 6px, transparent 6px 12px);
+}
+
+/* ---------- Blog post page ---------- */
+
+article header h1 {
+  font-size: 40px;
+  line-height: 1.15;
+}
+
+article header time,
+.theme-blog-post-meta a,
+article header .theme-blog-post-metadata {
+  font-family: var(--px-sans);
+  font-size: 14px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--px-muted);
+}
+
+.blog-discovery-note {
+  font-family: var(--px-sans);
+  color: var(--px-muted);
+}
+
+/* ---------- Cards, buttons, modal ---------- */
+
+.mission-container {
+  background: var(--px-panel);
+  border: 0;
+  border-radius: 0;
+  box-shadow: var(--px-frame-dim);
+  margin: 2px 2px 24px;
+  padding: 20px 24px;
+}
+
+.mission-container:hover {
+  box-shadow: var(--px-frame);
+}
+
+.mission-description {
+  font-size: 16px;
+}
+
+.mission-button,
+html[data-theme='dark'] .mission-button {
+  background: var(--px-ground);
+  border: 0;
+  border-radius: 0;
+  box-shadow: var(--px-frame-dim);
+  margin: 4px;
+  padding: 8px 16px;
+  font-family: var(--px-sans);
+  font-size: 15px;
+  color: var(--px-ink);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.mission-button:hover,
+html[data-theme='dark'] .mission-button:hover {
+  background: var(--px-ground);
+  box-shadow: var(--px-frame);
+  color: var(--px-accent);
+}
+
+.modal-overlay {
+  background: rgba(6, 22, 32, 0.85);
+}
+
+.modal-content,
+.modal-content-scroll {
+  border-radius: 0 !important;
+}
+
+.modal-content {
+  background: var(--px-panel);
+  box-shadow: var(--px-frame);
+}
+
+.modal-close {
+  border-radius: 0 !important;
+  background: var(--px-panel) !important;
+  color: var(--px-ink) !important;
+  box-shadow: var(--px-frame);
+  border: 0 !important;
+  font-family: var(--px-sans);
+}
+
+/* ---------- Footer ---------- */
+
+.px-footer {
+  background: var(--px-floor);
+  box-shadow: 0 -2px 0 0 var(--px-line);
+  margin-top: 2px;
+  padding: 28px 16px 36px;
+  text-align: center;
+}
+
+.px-footer__links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.px-footer__links a {
+  color: var(--px-ink);
+}
+
+.px-footer__links a:hover {
+  color: var(--px-accent);
+}
+
+.px-footer__note {
+  margin: 14px 0 0;
+  font-size: 15px;
+  color: var(--px-muted);
+}
+
+/* ---------- Homepage ---------- */
+
+/* Phones keep the classic homepage, colours included. */
+@media (max-width: 767px) {
+  html.home-page,
+  html.home-page body,
+  html.home-page #__docusaurus,
+  html.home-page .navbar,
+  html.home-page .navbar-sidebar,
+  html.home-page .px-footer {
+    background: #000;
+  }
+
+  html.home-page .navbar,
+  html.home-page .px-footer {
+    box-shadow: none;
+  }
+
+  html.home-page .navbar__title,
+  html.home-page .navbar__toggle {
+    color: #ccc;
+  }
+
+  html.home-page .px-footer__links a {
+    color: #fff;
+  }
+
+  html.home-page .DocSearch-Button {
+    border-radius: 40px !important;
+    background: #1c1e21 !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Tablets and up see the homepage in one screen, so no footer below it. */
+@media (min-width: 768px) {
+  html.home-page .px-footer-wrap {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

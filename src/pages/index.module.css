@@ -1,5 +1,220 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+/* Homepage. Phones get the classic page; tablets and up get the "studio":
+   Didier at his desk on the left, the bio streaming in on the right, all in
+   one screen with no page scroll. */
 
+.studio {
+	display: none;
+}
+
+/* ---------- Phones: the classic homepage ---------- */
+
+.classic {
+	color: #cccccc;
+}
+
+.classic a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.classic a:hover {
+	color: #ffffff;
+}
+
+@media (min-width: 768px) {
+	.classic {
+		display: none;
+	}
+
+	.studio {
+		display: grid;
+		grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+		gap: clamp(24px, 4vw, 56px);
+		align-items: center;
+		height: calc(100dvh - var(--ifm-navbar-height));
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: clamp(16px, 3vh, 32px) clamp(20px, 3vw, 40px);
+		overflow: hidden;
+	}
+}
+
+/* ---------- Left: the desk and a short description ---------- */
+
+.left {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 0;
+}
+
+/* Square, as large as the column and the screen height allow. */
+.sprite {
+	width: min(100%, calc(100dvh - var(--ifm-navbar-height) - 220px));
+}
+
+/* Laptop readout, sized from the sprite (1cqw = 1% of its width). */
+.readLabel {
+	font-size: 2.2cqw;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	opacity: 0.85;
+}
+
+.readValue {
+	margin: 0.4cqw 0;
+	font-size: 5.8cqw;
+	font-variant-numeric: tabular-nums;
+	color: #f4f1ea;
+}
+
+.tagline {
+	max-width: 36ch;
+	margin: 16px 0 6px;
+	font-size: clamp(14px, 0.6vw + 0.6vh + 4px, 17px);
+	line-height: 1.45;
+	text-align: center;
+}
+
+.location {
+	margin: 0;
+	font-size: 14px;
+	color: var(--px-muted);
+	text-align: center;
+}
+
+/* Brings his wife, daughter and dogs into the picture, and sends them off again. */
+.familyToggle {
+	padding: 0;
+	border: 0;
+	background: none;
+	font: inherit;
+	color: var(--px-link);
+	text-decoration: underline dotted;
+	text-underline-offset: 3px;
+	cursor: pointer;
+}
+
+.familyToggle:hover,
+.familyToggle[aria-pressed="true"] {
+	color: var(--px-accent);
+}
+
+/* ---------- Right: the streamed bio ---------- */
+
+.story {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	max-height: 100%;
+	min-height: 0;
+	padding: 22px 0 6px;
+}
+
+.storyHead {
+	position: absolute;
+	top: -12px;
+	left: 20px;
+	right: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
+}
+
+.speaker,
+.skip {
+	padding: 0 10px;
+	background: var(--px-panel);
+	font-family: var(--px-sans);
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.speaker {
+	color: var(--px-muted);
+}
+
+.skip {
+	border: 0;
+	color: var(--px-link);
+	cursor: pointer;
+}
+
+.skip:hover {
+	color: var(--px-accent);
+}
+
+/* The text scrolls inside the box only when a short window cannot fit it. */
+.storyText {
+	overflow-y: auto;
+	min-height: 0;
+	padding: 0 clamp(18px, 2.4vw, 32px);
+	scrollbar-width: thin;
+}
+
+.storyText p {
+	margin: 0 0 0.75em;
+	font-size: clamp(14px, 0.45vw + 0.7vh + 4px, 17px);
+	line-height: 1.6;
+}
+
+.storyText a {
+	color: var(--px-link);
+	text-underline-offset: 3px;
+}
+
+.storyText a:hover {
+	color: var(--px-accent);
+}
+
+/* Words not yet typed keep their place, so nothing reflows while streaming.
+   If scripts never run, everything appears after a moment. */
+.hidden {
+	visibility: hidden;
+}
+
+.story:not(.live) .hidden {
+	animation: reveal 0s 3s forwards;
+}
+
+@keyframes reveal {
+	to {
+		visibility: visible;
+	}
+}
+
+/* The typing cursor after the latest word. */
+.head::after {
+	content: "";
+	display: inline-block;
+	width: 0.5em;
+	height: 1.05em;
+	margin-left: 1px;
+	background: var(--px-accent);
+	vertical-align: -0.15em;
+	animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+	50% {
+		opacity: 0;
+	}
+}
+
+/* Portrait tablets: stack, still one screen. */
+@media (min-width: 768px) and (max-aspect-ratio: 4/5) {
+	.studio {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto minmax(0, 1fr);
+		align-items: stretch;
+	}
+
+	.sprite {
+		width: min(60%, 34dvh);
+	}
+
+	.tagline {
+		margin-top: 10px;
+	}
+}

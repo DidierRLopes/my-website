@@ -1,0 +1,70 @@
+.tabs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 8px;
+	margin: 0 0 20px -14px;
+	font-family: var(--px-sans);
+}
+
+.tab {
+	position: relative;
+	padding: 8px 14px;
+	font-size: 17px;
+	color: var(--px-muted) !important;
+	text-decoration: none !important;
+	white-space: nowrap;
+}
+
+.tab:hover {
+	color: var(--px-ink) !important;
+}
+
+.active,
+.active:hover {
+	color: var(--px-ink) !important;
+}
+
+/* Circled by hand, like the active navbar tab. */
+.active::before {
+	content: "";
+	position: absolute;
+	inset: 0 2px;
+	background: var(--px-scribble) center / 100% 100% no-repeat;
+	pointer-events: none;
+}
+
+/* Page titles as the switch: the other page is a ghost you can click. */
+.titleSwitch {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0 14px;
+	margin: 0 0 12px;
+	font-family: var(--px-sans);
+	font-size: 40px;
+	font-weight: 500;
+	line-height: 1.15;
+}
+
+.slash {
+	font-weight: 300;
+	color: var(--px-line);
+}
+
+.ghost {
+	color: var(--px-ink) !important;
+	text-decoration: none !important;
+	opacity: 0.28;
+	transition: opacity 0.2s ease;
+}
+
+.ghost:hover,
+.ghost:focus-visible {
+	opacity: 0.6;
+}
+
+@media (max-width: 640px) {
+	.titleSwitch {
+		font-size: 30px;
+	}
+}

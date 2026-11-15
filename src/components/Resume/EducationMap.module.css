@@ -1,0 +1,143 @@
+.wrap {
+	max-width: 980px;
+}
+
+.map {
+	position: relative;
+	background: var(--px-ground);
+	box-shadow: var(--px-frame-dim);
+	margin: 2px;
+	overflow: hidden;
+}
+
+.map svg {
+	display: block;
+	width: 100%;
+	height: auto;
+	background: #12374b; /* the sea, a step darker than the page */
+}
+
+.country {
+	fill: var(--px-panel);
+	stroke: var(--px-line);
+	stroke-width: 1.5;
+}
+
+.studied {
+	fill: var(--px-accent);
+	stroke: #b8902a;
+	stroke-width: 1.5;
+}
+
+/* The journey: light dashes over a dark casing, readable on land and sea. */
+.legCasing {
+	fill: none;
+	stroke: var(--px-panel);
+	stroke-width: 9;
+	stroke-linecap: round;
+	opacity: 0.85;
+}
+
+.leg {
+	fill: none;
+	stroke: var(--px-border);
+	stroke-width: 4;
+	stroke-dasharray: 12 10;
+	stroke-linecap: round;
+}
+
+.pin {
+	fill: var(--px-panel);
+	stroke: var(--px-border);
+	stroke-width: 3;
+}
+
+.pinNumber {
+	fill: var(--px-ink);
+	font-family: var(--px-sans);
+	font-size: 17px;
+	font-weight: 600;
+	text-anchor: middle;
+	dominant-baseline: central;
+}
+
+/* ---------- Cards by each country ---------- */
+
+.card {
+	position: absolute;
+	width: 33%;
+	padding: 14px 16px 12px;
+	background: rgba(11, 37, 52, 0.95);
+	font-family: var(--px-sans);
+}
+
+.step {
+	position: absolute;
+	top: -12px;
+	left: 12px;
+	min-width: 24px;
+	padding: 0 7px;
+	background: var(--px-accent);
+	color: var(--px-panel);
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 22px;
+	text-align: center;
+}
+
+.degree {
+	margin: 4px 0 4px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.3;
+	color: var(--px-ink);
+}
+
+.school {
+	display: block;
+	font-size: 13px;
+	line-height: 1.4;
+	color: var(--px-link);
+}
+
+.date {
+	display: block;
+	margin: 2px 0 8px;
+	font-size: 12px;
+	color: var(--px-muted);
+}
+
+.summary {
+	margin: 0;
+	padding-left: 16px;
+	font-size: 12.5px;
+	line-height: 1.45;
+	color: var(--px-ink);
+}
+
+.summary li {
+	margin: 0 0 4px;
+}
+
+/* On narrow screens the map shows the journey and the cards follow it. */
+@media (max-width: 860px) {
+	.map {
+		overflow: visible;
+		background: none;
+		box-shadow: none;
+		margin: 0;
+	}
+
+	.map svg {
+		box-shadow: var(--px-frame-dim);
+		margin: 2px;
+	}
+
+	.card {
+		position: relative;
+		left: auto !important;
+		top: auto !important;
+		width: auto;
+		margin: 28px 2px 0;
+	}
+}

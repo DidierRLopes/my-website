@@ -1,0 +1,112 @@
+.root {
+	position: relative;
+	font-family: var(--px-sans);
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	width: 100%;
+	margin: 2px;
+	padding: 9px 14px;
+	border: 0;
+	background: rgba(11, 37, 52, 0.94);
+	box-shadow: var(--px-frame-dim);
+	font-family: inherit;
+	font-size: 15px;
+	color: var(--px-ink);
+	text-align: left;
+	cursor: pointer;
+}
+
+.button:hover,
+.button[aria-expanded="true"],
+.button:focus-visible {
+	outline: none;
+	box-shadow: var(--px-frame);
+}
+
+.value {
+	flex: 1;
+	min-width: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.count {
+	flex: none;
+	color: var(--px-muted);
+	font-variant-numeric: tabular-nums;
+}
+
+/* A pixel caret: a small stepped triangle. */
+.caret {
+	flex: none;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 6px solid var(--px-ink);
+	transition: transform 0.15s ease;
+}
+
+.button[aria-expanded="true"] .caret {
+	transform: rotate(180deg);
+}
+
+.list {
+	position: absolute;
+	top: calc(100% + 8px);
+	right: -2px;
+	min-width: calc(100% + 4px);
+	width: max-content;
+	max-width: 320px;
+	z-index: 20;
+	max-height: 320px;
+	overflow-y: auto;
+	margin: 0;
+	padding: 6px 0;
+	list-style: none;
+	background: var(--px-panel);
+	box-shadow: var(--px-frame);
+}
+
+/* Doubled class: beats the docs' prose styles for list items. */
+.list .option {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	gap: 16px;
+	margin: 0;
+	padding: 7px 14px 7px 28px;
+	font-size: 14px;
+	line-height: 1.4;
+	white-space: nowrap;
+	color: var(--px-ink);
+	cursor: pointer;
+}
+
+.active {
+	background: var(--px-panel-hi);
+}
+
+.option[aria-selected="true"] {
+	color: var(--px-accent);
+}
+
+.option[aria-selected="true"]::before {
+	content: "";
+	position: absolute;
+	left: 11px;
+	top: 50%;
+	margin-top: -5px;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 7px solid var(--px-accent);
+}
+
+.option[aria-selected="true"] .count {
+	color: var(--px-accent);
+}

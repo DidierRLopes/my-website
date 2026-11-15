@@ -1,0 +1,185 @@
+/* 3D book effect adapted from realvjy: https://codepen.io/realvjy/pen/KKEdXOa */
+
+.books {
+	--page: #efe8da;
+	--page-line: #cfc5b2;
+	--page-edge: #8f8572;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	gap: 44px 36px;
+	list-style: none;
+	margin: 0;
+	padding: 8px 12px 24px 4px;
+}
+
+.bookItem {
+	position: relative;
+	margin: 0;
+}
+
+.book {
+	position: relative;
+	display: block;
+	width: 100%;
+	padding: 0;
+	border: 0;
+	background: none;
+	font-family: var(--px-sans);
+	text-align: left;
+	cursor: copy;
+}
+
+/* The page block behind the cover, its fore-edge drawn as stacked leaves. */
+.pages {
+	position: absolute;
+	top: 1%;
+	left: 14px;
+	width: 90%;
+	height: 97%;
+	border-radius: 2px 5px 5px 2px;
+	background: var(--page);
+	box-shadow:
+		12px 28px 36px -12px rgba(0, 0, 0, 0.55),
+		inset -2px 0 0 var(--page-edge),
+		inset -3px 0 0 var(--page-line),
+		inset -4px 0 0 var(--page),
+		inset -5px 0 0 var(--page-line),
+		inset -6px 0 0 var(--page),
+		inset -7px 0 0 var(--page-line),
+		inset -8px 0 0 var(--page),
+		inset -9px 0 0 var(--page-line);
+}
+
+/* The cover: turned slightly away at rest, swung flat towards you on hover. */
+.cover {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	line-height: 0;
+	border-radius: 2px 5px 5px 2px;
+	box-shadow:
+		6px 6px 18px -2px rgba(0, 0, 0, 0.45),
+		24px 28px 40px -6px rgba(0, 0, 0, 0.3);
+	transform: perspective(2000px) rotateY(-15deg) translateX(-10px) scaleX(0.94);
+	transition:
+		transform 0.3s ease-in-out,
+		box-shadow 0.3s ease-in-out;
+}
+
+/* Spine crease near the left edge. */
+.hinge {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 100%;
+	margin-left: 14px;
+	border-left: 2px solid rgba(0, 0, 0, 0.1);
+	background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+	transition: margin-left 0.5s ease;
+}
+
+/* A soft sheen across the right of the cover. */
+.light {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 90%;
+	height: 100%;
+	background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2));
+	opacity: 0.1;
+	transition: opacity 0.5s ease;
+}
+
+/* Title and author, revealed on the cover as it opens. */
+.details {
+	position: absolute;
+	inset: auto 0 0 0;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 40px 12px 12px 18px;
+	background: linear-gradient(to top, rgba(8, 24, 34, 0.96) 0, rgba(8, 24, 34, 0.9) 60%, rgba(8, 24, 34, 0));
+	color: #f4f1ea;
+	line-height: 1.3;
+	opacity: 0;
+	transform: translateY(8px);
+	transition:
+		opacity 0.25s ease,
+		transform 0.25s ease;
+}
+
+.title {
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.author {
+	font-size: 12px;
+	color: var(--px-muted);
+}
+
+.hint {
+	margin-top: 6px;
+	font-size: 11px;
+	font-weight: 500;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--px-accent);
+}
+
+.book:hover .cover,
+.book:focus-visible .cover {
+	transform: perspective(2000px) rotateY(0deg) translateX(0) scaleX(1);
+	box-shadow:
+		6px 6px 12px -1px rgba(0, 0, 0, 0.35),
+		20px 14px 16px -6px rgba(0, 0, 0, 0.3);
+}
+
+.book:hover .hinge,
+.book:focus-visible .hinge {
+	margin-left: 12px;
+}
+
+.book:hover .light,
+.book:focus-visible .light {
+	opacity: 0.25;
+}
+
+.book:hover .details,
+.book:focus-visible .details,
+.copied .details {
+	opacity: 1;
+	transform: none;
+}
+
+.book:focus-visible {
+	outline: none;
+}
+
+.book:focus-visible .cover {
+	outline: 2px solid var(--px-accent);
+	outline-offset: 4px;
+}
+
+.status {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+	.books {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 32px 28px;
+		padding: 4px 10px 16px 0;
+	}
+}

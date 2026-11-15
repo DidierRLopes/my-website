@@ -328,7 +328,7 @@ Usage:
 ./didifilter.py — location=memes — caption=’Which meme am I?’ — initial=30 — final=50 -b — max=3
 ```
 
-![hair_1](/blog/2021-06-12-customizable-meme-filter/2021-06-12-customizable-meme-filter_1.webp)
+<video src="/blog/2021-06-12-customizable-meme-filter/2021-06-12-customizable-meme-filter_1.mp4" autoPlay loop muted playsInline style={{maxWidth: "100%"}} />
 
 **To sum up:** This program is meant to be an advanced version of the known snapchat filter where there are random images spinning on top of people’s heads. The main improvement is that you can not only select the images you want to choose from and the caption, but you can also play it with friends (recognizing more than 1 face at the same time).
 
@@ -344,7 +344,7 @@ The best part of the script is that it is meant to be easily customizable. Any p
 
 **AND**, you can also quickly tweak the code to adapt it to do something else. Here’s me **pranking** my girlfriend with a psyduck when the query was: “_Who do I look like?_”
 
-![hair_2](/blog/2021-06-12-customizable-meme-filter/2021-06-12-customizable-meme-filter_2.webp)
+<video src="/blog/2021-06-12-customizable-meme-filter/2021-06-12-customizable-meme-filter_2.mp4" autoPlay loop muted playsInline style={{maxWidth: "100%"}} />
 
 Hope you have a nice read and enjoy the filter. You can find the code [here](https://github.com/DidierRLopes/meme-filter).
 
@@ -1416,7 +1416,7 @@ This would not only make the FinanceDatabase a more powerful Package, which woul
 
 This is an example of how the Sector and Industry Analysis menu looks (as a bonus I show how you can go into the Comparison Analysis menu):
 
-![image](/blog/2021-12-02-sector-and-industry-analysis-gamestonk-terminal/2021-12-02-sector-and-industry-analysis-gamestonk-terminal_7.webp)
+<video src="/blog/2021-12-02-sector-and-industry-analysis-gamestonk-terminal/2021-12-02-sector-and-industry-analysis-gamestonk-terminal_7.mp4" autoPlay loop muted playsInline style={{maxWidth: "100%"}} />
 
 Next time you know, it all starts with an e-mail. At Gamestonk Terminal we are on a role to have the best investment research terminal, and hope this story reflects it.
 
@@ -2019,7 +2019,7 @@ Both my parents are Portuguese and emigrated to Switzerland for better condition
 
 When I was 21 years old I moved to London to pursue my MSc in control systems at the Imperial College. I also joined a semiconductor company as a Software Design Engineer.
 
-![ezgif com-optimize (5)](/blog/2022-08-14-how-i-became-ceo-of-openbb/2022-08-14-how-i-became-ceo-of-openbb_1.webp)
+<video src="/blog/2022-08-14-how-i-became-ceo-of-openbb/2022-08-14-how-i-became-ceo-of-openbb_1.mp4" autoPlay loop muted playsInline style={{maxWidth: "100%"}} />
 
 In my spare time I learned Python so I could become more proficient in machine learning and artificial intelligence. When my mathematics professor learned of my interest in Python he challenged me to write the [code behind his PhD thesis](https://github.com/DidierRLopes/UnivariateTimeSeriesForecast) on "_Data Science in the Modeling and Forecasting of Financial Time Series: from Classic methodologies to Deep Learning_" which combined open source, ML/AI and finance. This was when I first started to realize my passion for financial data.
 
@@ -2983,7 +2983,7 @@ You can easily imagine that such interface would work well with a speech recogni
 
 One of the new features that were announced with [OpenBB Terminal 2.0](https://openbb.co/blog/openbb-terminal-2-acai) was the automated reports generation that utilizes [papermill](https://github.com/nteract/papermill) to leverage jupyter notebook templates.
 
-![cool2](/blog/2022-12-04-the-future-of-finance-with-open-source-and-ai/2022-12-04-the-future-of-finance-with-open-source-and-ai_3.webp)
+<video src="/blog/2022-12-04-the-future-of-finance-with-open-source-and-ai/2022-12-04-the-future-of-finance-with-open-source-and-ai_3.mp4" autoPlay loop muted playsInline style={{maxWidth: "100%"}} />
 
 As it stands creating one of these notebook templates requires some coding skills and reading [OpenBB documentation](https://docs.openbb.co/) to understand how to retrieve the data of interest providing the correct function and necessary arguments.
 
@@ -13521,8 +13521,8 @@ To ensure I could complete the distance, I ran a practice half marathon one mont
 </p>
 
 <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-    <img width="45%" src="/blog/2025-03-18-my-first-half-marathon/2025-03-18-my-first-half-marathon_7.PNG" />
-    <img width="45%" src="/blog/2025-03-18-my-first-half-marathon/2025-03-18-my-first-half-marathon_8.PNG" />
+    <img width="45%" src="/blog/2025-03-18-my-first-half-marathon/2025-03-18-my-first-half-marathon_7.webp" />
+    <img width="45%" src="/blog/2025-03-18-my-first-half-marathon/2025-03-18-my-first-half-marathon_8.webp" />
 </div>
 
 <br />
@@ -26612,7 +26612,7 @@ tags:
 - reinforcement-learning
 - reward-hacking
 description: "A small RL experiment where anti-verbosity prompts tried, and mostly failed, to resist a hidden reward for longer answers."
-image: /blog/the-model-did-what-i-rewarded-not-what-i-wanted/the-model-did-what-i-rewarded-not-what-i-wanted-prime-training-run-metrics.png
+image: /blog/the-model-did-what-i-rewarded-not-what-i-wanted/the-model-did-what-i-rewarded-not-what-i-wanted-prime-training-run-metrics.webp
 hideSidebar: true
 ---
 
@@ -26763,12 +26763,12 @@ For reproducibility, the repo is public: [DidierRLopes/reward-hacking](https://g
 <div style={{ display: 'grid', gap: '1rem', gridTemplateColumns: '1fr', margin: '1rem 0 1.25rem' }}>
   <img
     alt="Prime Intellect hosted training run overview"
-    src="/blog/the-model-did-what-i-rewarded-not-what-i-wanted/the-model-did-what-i-rewarded-not-what-i-wanted-prime-training-run-overview.png"
+    src="/blog/the-model-did-what-i-rewarded-not-what-i-wanted/the-model-did-what-i-rewarded-not-what-i-wanted-prime-training-run-overview.webp"
     style={{ aspectRatio: '3388 / 1208', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: 8, objectFit: 'contain', width: '100%' }}
   />
   <img
     alt="Prime Intellect hosted training run metrics"
-    src="/blog/the-model-did-what-i-rewarded-not-what-i-wanted/the-model-did-what-i-rewarded-not-what-i-wanted-prime-training-run-metrics.png"
+    src="/blog/the-model-did-what-i-rewarded-not-what-i-wanted/the-model-did-what-i-rewarded-not-what-i-wanted-prime-training-run-metrics.webp"
     style={{ aspectRatio: '3400 / 2062', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: 8, objectFit: 'contain', width: '100%' }}
   />
 </div>
@@ -28587,7 +28587,7 @@ tags:
 - evals
 - openbb
 description: "How I built and calibrated WorkspaceBench: a simulator certified against the real OpenBB Workspace, reference-model runs that debug the benchmark itself, and a six-level ladder that five models walk down."
-image: /blog/introducing-workspacebench-to-evaluate-openbb-workspace-for-agentic-workflows/thumbnail.png
+image: /blog/introducing-workspacebench-to-evaluate-openbb-workspace-for-agentic-workflows/thumbnail.webp
 hideSidebar: true
 draft: false
 ---
@@ -28759,7 +28759,7 @@ All of it lives in the repo as versioned fixtures under [`data/`](https://github
 
 <div style={{ textAlign: 'center' }}>
   <img
-    src="/blog/introducing-workspacebench-to-evaluate-openbb-workspace-for-agentic-workflows/widget-menu.png"
+    src="/blog/introducing-workspacebench-to-evaluate-openbb-workspace-for-agentic-workflows/widget-menu.webp"
     alt="Landing on a dashboard with a tab selected and the widget catalog open, showing which widgets are available to add"
     style={{ width: '70%', margin: '0 auto' }}
   />
@@ -29312,7 +29312,7 @@ But I thought that I could solve this with agents. I just had to set up a pipeli
 
 <div style={{ textAlign: 'center' }}>
   <img
-    src="/blog/introducing-workspacebench-to-evaluate-openbb-workspace-for-agentic-workflows/authoring-pipeline.png"
+    src="/blog/introducing-workspacebench-to-evaluate-openbb-workspace-for-agentic-workflows/authoring-pipeline.webp"
     alt="The Workspace Tasks authoring pipeline"
     style={{ width: '90%', margin: '0 auto' }}
   />

@@ -80,7 +80,7 @@ This would not only make the FinanceDatabase a more powerful Package, which woul
 
 This is an example of how the Sector and Industry Analysis menu looks (as a bonus I show how you can go into the Comparison Analysis menu):
 
-![image](/blog/2021-12-02-sector-and-industry-analysis-gamestonk-terminal/2021-12-02-sector-and-industry-analysis-gamestonk-terminal_7.webp)
+<video src="/blog/2021-12-02-sector-and-industry-analysis-gamestonk-terminal/2021-12-02-sector-and-industry-analysis-gamestonk-terminal_7.mp4" autoPlay loop muted playsInline style={{maxWidth: "100%"}} />
 
 Next time you know, it all starts with an e-mail. At Gamestonk Terminal we are on a role to have the best investment research terminal, and hope this story reflects it.
 

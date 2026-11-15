@@ -8,7 +8,7 @@ interface Video {
   time?: string;
   image?: string;
   info?: string;
-  location: string;
+  location?: string;
 }
 
 interface VideosListProps {
@@ -35,7 +35,7 @@ export default function VideosList({ videos }: VideosListProps) {
             {video.embed && (
               <>
                 <div className="flex place-items-center justify-center items-center rounded-sm mx-auto mb-4">
-                  <iframe
+                  <iframe loading="lazy"
                     src={video.embed}
                     width="512"
                     height="256"
@@ -50,7 +50,7 @@ export default function VideosList({ videos }: VideosListProps) {
             {video.image && (
               <>
                 <div className="flex place-items-center justify-center items-center rounded-sm mx-auto mb-4">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={video.image}
                     width="512"
                     height="256"

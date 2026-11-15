@@ -26,7 +26,7 @@ export default function NewsMentionsList({ news }: NewsMentionsListProps) {
 						</div>
 						{single_news.img && (
 							<div className="my-4 flex justify-center">
-								<img
+								<img loading="lazy" decoding="async"
 									src={single_news.img}
 									alt={single_news.title}
 									className="max-w-sm h-auto rounded-lg"

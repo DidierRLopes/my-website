@@ -46,7 +46,7 @@ function Beliefs({ isDesktop, isTablet, githubSrc, githubChartSrc }) {
             <picture className="flex justify-center">
               <source srcSet={githubSrc} />
               {/* fallback */}
-              <img
+              <img loading="lazy" decoding="async"
                 alt="GitHub stats"
                 src="https://github-stats-alpha.vercel.app/api?username=DidierRLopes&cc=fff&tc=000&ic=000&bc=000"
                 style={{ width: '700px' }}
@@ -54,7 +54,7 @@ function Beliefs({ isDesktop, isTablet, githubSrc, githubChartSrc }) {
             </picture>
           </div>
           <div className="flex items-center justify-center w-full h-full">
-            <iframe
+            <iframe loading="lazy"
               title="GitHub contribution chart"
               src={githubChartSrc}
               style={{

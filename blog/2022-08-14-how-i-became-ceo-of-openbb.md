@@ -34,7 +34,7 @@ Both my parents are Portuguese and emigrated to Switzerland for better condition
 
 When I was 21 years old I moved to London to pursue my MSc in control systems at the Imperial College. I also joined a semiconductor company as a Software Design Engineer.
 
-![ezgif com-optimize (5)](/blog/2022-08-14-how-i-became-ceo-of-openbb/2022-08-14-how-i-became-ceo-of-openbb_1.webp)
+<video src="/blog/2022-08-14-how-i-became-ceo-of-openbb/2022-08-14-how-i-became-ceo-of-openbb_1.mp4" autoPlay loop muted playsInline style={{maxWidth: "100%"}} />
 
 In my spare time I learned Python so I could become more proficient in machine learning and artificial intelligence. When my mathematics professor learned of my interest in Python he challenged me to write the [code behind his PhD thesis](https://github.com/DidierRLopes/UnivariateTimeSeriesForecast) on "_Data Science in the Modeling and Forecasting of Financial Time Series: from Classic methodologies to Deep Learning_" which combined open source, ML/AI and finance. This was when I first started to realize my passion for financial data.
 

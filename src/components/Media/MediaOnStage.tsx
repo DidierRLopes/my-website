@@ -95,7 +95,7 @@ const data = [
 		date: "2024-08-07",
 		location: "CIBC New York",
 		image:
-			"/media/incorporating-an-open-source-ai-financial-analyst-into-a-financial-terminal.png",
+			"/media/incorporating-an-open-source-ai-financial-analyst-into-a-financial-terminal.webp",
 		info: 'The 15min presentation can be seen in Mindstone content <a href="https://app.mindstone.com/annotate/article_Akn6C4queFqPoWMeTB" target="_blank" rel="noopener noreferrer">here</a>.',
 	},
 	{

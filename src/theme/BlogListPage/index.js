@@ -44,13 +44,6 @@ export default function BlogListPageWrapper(props) {
   
   // Transform the items to match our CustomBlogList expected format
   const posts = items.map(item => {
-    let imagePath = item.content.metadata.frontMatter?.image;
-    
-    // Check if image path exists and has extension, if not try a common extension.
-    if (imagePath && !imagePath.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
-      imagePath = `${imagePath}.png`;
-    }
-    
     return {
       id: item.content.metadata.permalink,
       metadata: {
@@ -65,10 +58,7 @@ export default function BlogListPageWrapper(props) {
         readingTime: item.content.metadata.readingTime,
         tags: item.content.metadata.tags,
         permalink: item.content.metadata.permalink,
-        frontMatter: {
-          ...item.content.metadata.frontMatter,
-          image: imagePath
-        },
+        frontMatter: item.content.metadata.frontMatter,
       }
     };
   });

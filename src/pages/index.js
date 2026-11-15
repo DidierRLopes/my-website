@@ -19,14 +19,14 @@ export default function Home() {
   return (
     <Layout
       title="Homepage"
-      description="Didier Rodrigues Lopes personal website"
+      description={siteConfig.customFields.description}
     >
       <Head>
         <meta property="og:title" content="Didier Website" />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
-          content="Where you can find my posts, personal projects and everything in between."
+          content={siteConfig.customFields.description}
         />
         <meta property="og:image" content={`${siteUrl}/img/avatar-power-up.jpg`} />
         <meta property="og:image:type" content="image/jpeg" />
@@ -50,7 +50,7 @@ export default function Home() {
         />
         <meta
           name="twitter:description"
-          content="Discover my posts, personal projects, and journey as Co-founder & CEO at OpenBB."
+          content={siteConfig.customFields.description}
         />
         <meta name="twitter:image" content={`${siteUrl}/img/avatar-power-up.jpg`} />
         <meta name="twitter:image:alt" content="Didier Lopes with his golden-haired pixel avatar typing at a laptop" />

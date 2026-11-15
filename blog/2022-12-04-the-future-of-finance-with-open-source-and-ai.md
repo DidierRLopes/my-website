@@ -82,7 +82,7 @@ You can easily imagine that such interface would work well with a speech recogni
 
 One of the new features that were announced with [OpenBB Terminal 2.0](https://openbb.co/blog/openbb-terminal-2-acai) was the automated reports generation that utilizes [papermill](https://github.com/nteract/papermill) to leverage jupyter notebook templates.
 
-![cool2](/blog/2022-12-04-the-future-of-finance-with-open-source-and-ai/2022-12-04-the-future-of-finance-with-open-source-and-ai_3.webp)
+<video src="/blog/2022-12-04-the-future-of-finance-with-open-source-and-ai/2022-12-04-the-future-of-finance-with-open-source-and-ai_3.mp4" autoPlay loop muted playsInline style={{maxWidth: "100%"}} />
 
 As it stands creating one of these notebook templates requires some coding skills and reading [OpenBB documentation](https://docs.openbb.co/) to understand how to retrieve the data of interest providing the correct function and necessary arguments.
 

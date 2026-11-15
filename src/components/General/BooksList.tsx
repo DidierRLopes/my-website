@@ -5,6 +5,7 @@ import {
 	type Book,
 	type BookCategory,
 } from "../Books/categories";
+import { thumbnailUrl } from "../../lib/thumbnails";
 import styles from "./BooksList.module.css";
 
 interface BooksListProps {
@@ -112,8 +113,8 @@ export default function BooksList({ books }: BooksListProps) {
 							role="button"
 							tabIndex={0}
 						>
-							<img
-								src={book.image}
+							<img loading="lazy" decoding="async"
+								src={thumbnailUrl(book.image)}
 								alt={`${book.title} cover`}
 								className={styles.bookThumbnail}
 							/>

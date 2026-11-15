@@ -122,8 +122,8 @@ To ensure I could complete the distance, I ran a practice half marathon one mont
 </p>
 
 <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-    <img width="45%" src="/blog/2025-03-18-my-first-half-marathon/2025-03-18-my-first-half-marathon_7.PNG" />
-    <img width="45%" src="/blog/2025-03-18-my-first-half-marathon/2025-03-18-my-first-half-marathon_8.PNG" />
+    <img width="45%" src="/blog/2025-03-18-my-first-half-marathon/2025-03-18-my-first-half-marathon_7.webp" />
+    <img width="45%" src="/blog/2025-03-18-my-first-half-marathon/2025-03-18-my-first-half-marathon_8.webp" />
 </div>
 
 <br />

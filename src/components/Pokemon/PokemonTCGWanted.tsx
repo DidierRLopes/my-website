@@ -62,7 +62,7 @@ function CardItem({
 				role="button"
 				tabIndex={0}
 			>
-				<img
+				<img loading="lazy" decoding="async"
 					src={card.image}
 					alt={card.name}
 					className={styles.cardImage}

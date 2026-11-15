@@ -33,7 +33,7 @@ function LatestPosts({ allPosts, postsHighlight, isDesktop, isTablet }) {
               >
                 <a href={`${post.id}`} className="block h-full">
                   <div className="overflow-hidden rounded-xl mb-3">
-                    <img
+                    <img loading="lazy" decoding="async"
                       className="w-full h-[180px] object-cover transition-transform duration-300 hover:scale-110"
                       src={post.image}
                       alt={post.title}
@@ -54,7 +54,7 @@ function LatestPosts({ allPosts, postsHighlight, isDesktop, isTablet }) {
                 className="group block h-full transition-transform duration-300 hover:scale-105"
               >
                 <div className="overflow-hidden rounded-xl mb-3">
-                  <img
+                  <img loading="lazy" decoding="async"
                     className="w-full h-[180px] object-cover transition-transform duration-300 group-hover:scale-110"
                     src={post.image}
                     alt={post.title}
@@ -106,7 +106,7 @@ function LatestPosts({ allPosts, postsHighlight, isDesktop, isTablet }) {
           {highlights.map((post) => (
             <div key={post.id} className="!max-w-[260px] mx-auto text-center">
               <a href={`${post.id}`} className="group block pt-12">
-                <img
+                <img loading="lazy" decoding="async"
                   className="rounded-xl h-[120px] mx-auto object-cover"
                   src={post.image}
                   alt={post.title}

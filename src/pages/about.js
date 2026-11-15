@@ -134,15 +134,15 @@ export default function About() {
   return (
     <Layout
       title="About"
-      description="Didier Rodrigues Lopes personal website"
+      description={siteConfig.customFields.description}
     >
       <Head>
         <meta property="og:title" content="Didier Website" />
         <meta
           property="og:description"
-          content="Where you can find my posts, personal projects and everything in between."
+          content={siteConfig.customFields.description}
         />
-        <meta property="og:image" content={`${siteUrl}/img/goku_pixel.png`} />
+        <meta property="og:image" content={`${siteUrl}/img/avatar-power-up.jpg`} />
         <meta property="og:url" content="https://didierlopes.com/about" />
 
         {/* Add X-specific meta tags */}
@@ -155,9 +155,9 @@ export default function About() {
         />
         <meta
           name="twitter:description"
-          content="Discover my posts, personal projects, and journey as Co-founder & CEO at OpenBB."
+          content={siteConfig.customFields.description}
         />
-        <meta name="twitter:image" content={`${siteUrl}/img/goku.png`} />
+        <meta name="twitter:image" content={`${siteUrl}/img/avatar-power-up.jpg`} />
       </Head>
       <main>
         {/*}

@@ -7,7 +7,7 @@ const data = [
 		link: "https://www.rebellionresearch.com/2024-best-new-quant-research-analytics-product",
 		magazine: "Rebellion Research",
 		date: "2024-12-30",
-		img: "/media/rebellion-research-2024-december.png",
+		img: "/media/rebellion-research-2024-december.webp",
 	},
 	{
 		title:
@@ -15,7 +15,7 @@ const data = [
 		link: "https://techcrunch.com/2024/10/07/fintech-openbb-aims-to-be-more-than-an-open-source-bloomberg-terminal/",
 		magazine: "TechCrunch",
 		date: "2024-10-08",
-		img: "/media/tech-crunch-2024-october.png",
+		img: "/media/tech-crunch-2024-october.webp",
 	},
 	{
 		title: "OpenBB: I am Not Uncertain",
@@ -35,7 +35,7 @@ const data = [
 		link: "https://venturebeat.com/data-infrastructure/openbb-wants-to-be-an-open-source-challenger-to-bloomberg-terminal/",
 		magazine: "Venture Beat",
 		date: "2022-03-30",
-		img: "/media/venture-beats-2022-march.png",
+		img: "/media/venture-beats-2022-march.webp",
 	},
 	{
 		title: "Português cria versão gratuita de terminal da Bloomberg",
@@ -50,7 +50,7 @@ const data = [
 		link: "https://www.vice.com/en/article/qjp9vp/gamestonk-terminal-is-a-diy-meme-stock-version-of-bloomberg-terminal",
 		magazine: "VICE Magazine",
 		date: "2021-03-01",
-		img: "/media/vice-magazine-2021-march.png",
+		img: "/media/vice-magazine-2021-march.webp",
 	},
 ];
 

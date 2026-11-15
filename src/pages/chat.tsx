@@ -259,8 +259,8 @@ const ChatPage = () => {
             <ThemedImage
               alt="Chat with AI on Desktop"
               sources={{
-                light: '/img/chat_terminal_mobile_light.png',
-                dark: '/img/chat_terminal_mobile_dark.png',
+                light: '/img/chat_terminal_mobile_light.webp',
+                dark: '/img/chat_terminal_mobile_dark.webp',
               }}
               style={{ width: '100%', filter: 'blur(2px)' }}
             />
@@ -721,7 +721,7 @@ const HowItWorks = () => {
                 <ThemedImage
                     alt="Sequence diagram showing the RAG process"
                     sources={{
-                        light: '/img/lifeline_sequence_diagram_light.png',
+                        light: '/img/lifeline_sequence_diagram_light.webp',
                         dark: '/img/lifeline_sequence_diagram_dark.png',
                     }}
                     style={{ 
@@ -738,7 +738,7 @@ const HowItWorks = () => {
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
                 sources={{
-                    light: '/img/lifeline_sequence_diagram_light.png',
+                    light: '/img/lifeline_sequence_diagram_light.webp',
                     dark: '/img/lifeline_sequence_diagram_dark.png',
                 }}
                 alt="Sequence diagram showing the RAG process"
@@ -746,7 +746,7 @@ const HowItWorks = () => {
             <p style={{ margin: '1rem auto', maxWidth: '100ch' }}>If this is still confusing, I created a small podcast on notebookLM that explains what is going on.</p>
             <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
                 <audio ref={audioRef} controls style={{ width: '50%' }}>
-                    <source src="/audio/ollama_notebooklm.wav" type="audio/wav" />
+                    <source src="/audio/ollama_notebooklm.mp3" type="audio/mpeg" />
                     <track kind="captions" />
                 </audio>
             </div>

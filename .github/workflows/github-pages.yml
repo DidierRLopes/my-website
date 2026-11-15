@@ -38,12 +38,17 @@ jobs:
       - name: Build website
         run: yarn build
 
+      # Tar the site first: artifact uploads reject some valid filenames
+      # (e.g. ':' in the Pokemon card images). Runs on PRs too, so the
+      # deploy hand-off is exercised before reaching main.
+      - name: Package build
+        run: tar -cf site.tar -C build .
+
       - name: Upload build
-        if: github.event_name == 'push'
         uses: actions/upload-artifact@v4
         with:
           name: site
-          path: build
+          path: site.tar
           retention-days: 1
 
   deploy:
@@ -60,7 +65,9 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: site
-          path: build
+
+      - name: Unpack build
+        run: mkdir build && tar -xf site.tar -C build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

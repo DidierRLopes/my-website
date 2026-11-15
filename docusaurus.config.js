@@ -10,7 +10,14 @@ const fs = require('node:fs');
 const config = {
   title: 'Didier Lopes',
   tagline: 'Building an open source legacy one commit at a time.',
+  customFields: {
+    // Used for the meta, Open Graph and X descriptions of the main pages.
+    description:
+      'Didier Lopes builds applied AI for financial markets and founded OpenBB. Writing on AI agents, markets, open source and building companies.',
+  },
   favicon: 'img/favicon.ico',
+  // generated-static holds build-time thumbnails (scripts/generate-thumbnails.mjs).
+  staticDirectories: ['static', 'generated-static'],
 
   // Set the production url of your site here
   url: 'https://didierlopes.com',
@@ -82,8 +89,8 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/goku_pixel.png',
+      // Default social card for pages that do not set their own.
+      image: 'img/avatar-power-up.jpg',
       navbar: {
         title: 'Didier Lopes',
         logo: {

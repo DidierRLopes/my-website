@@ -3,6 +3,7 @@ import type { ChangeEvent, KeyboardEvent } from 'react';
 import Link from '@docusaurus/Link';
 import { useHistory, useLocation } from '@docusaurus/router';
 import styles from './CustomBlogList.module.css';
+import { thumbnailUrl } from '../../lib/thumbnails';
 
 const formatDateForDisplay = (dateStr: string): string => {
   if (!dateStr) return '';
@@ -303,8 +304,8 @@ export default function CustomBlogList({ posts }: CustomBlogListProps) {
                     <div className={styles.leftSection}>
                       {post.metadata?.frontMatter?.image ? (
                         <div className={styles.postImageContainer}>
-                          <img
-                            src={post.metadata.frontMatter.image}
+                          <img loading="lazy" decoding="async"
+                            src={thumbnailUrl(post.metadata.frontMatter.image)}
                             alt={`${post.metadata.title} cover`}
                             className={styles.postThumbnail}
                           />

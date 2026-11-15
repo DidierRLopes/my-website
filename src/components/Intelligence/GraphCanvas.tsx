@@ -190,7 +190,7 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, showTh
     const [x1, y1] = transform.invert([width, height]);
     
     quadtree.visit((node, x_0, y_0, x_1, y_1) => {
-        if (node.length || x_1 < x0 || x_0 > x1 || y_1 < y0 || y_0 > y1) {
+        if (!("data" in node) || x_1 < x0 || x_0 > x1 || y_1 < y0 || y_0 > y1) {
           return false;
         }
         const d = node.data;
@@ -291,7 +291,7 @@ export const GraphCanvas: FC<GraphCanvasProps> = ({ items, width, height, showTh
     const [x1, y1] = transform.invert([width, height]);
   
     quadtree.visit((node, x_0, y_0, x_1, y_1) => {
-      if (node.length || x_1 < x0 || x_0 > x1 || y_1 < y0 || y_0 > y1) {
+      if (!("data" in node) || x_1 < x0 || x_0 > x1 || y_1 < y0 || y_0 > y1) {
         return false;
       }
       nodesInView.push(node.data);

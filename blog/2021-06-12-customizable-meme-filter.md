@@ -44,7 +44,7 @@ Usage:
 ./didifilter.py — location=memes — caption=’Which meme am I?’ — initial=30 — final=50 -b — max=3
 ```
 
-![hair_1](/blog/2021-06-12-customizable-meme-filter/2021-06-12-customizable-meme-filter_1.webp)
+<video src="/blog/2021-06-12-customizable-meme-filter/2021-06-12-customizable-meme-filter_1.mp4" autoPlay loop muted playsInline style={{maxWidth: "100%"}} />
 
 **To sum up:** This program is meant to be an advanced version of the known snapchat filter where there are random images spinning on top of people’s heads. The main improvement is that you can not only select the images you want to choose from and the caption, but you can also play it with friends (recognizing more than 1 face at the same time).
 
@@ -60,7 +60,7 @@ The best part of the script is that it is meant to be easily customizable. Any p
 
 **AND**, you can also quickly tweak the code to adapt it to do something else. Here’s me **pranking** my girlfriend with a psyduck when the query was: “_Who do I look like?_”
 
-![hair_2](/blog/2021-06-12-customizable-meme-filter/2021-06-12-customizable-meme-filter_2.webp)
+<video src="/blog/2021-06-12-customizable-meme-filter/2021-06-12-customizable-meme-filter_2.mp4" autoPlay loop muted playsInline style={{maxWidth: "100%"}} />
 
 Hope you have a nice read and enjoy the filter. You can find the code [here](https://github.com/DidierRLopes/meme-filter).
 

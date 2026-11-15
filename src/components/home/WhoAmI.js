@@ -47,21 +47,21 @@ function WhoAmI({ isDesktop, isTablet }) {
             }
           >
             <div>
-              <img
+              <img loading="lazy" decoding="async"
                 className="rounded-xl max-w-[220px]"
                 src="/img/me_timegpt.webp"
                 alt="Time-GPT event from Nixtla"
               />
             </div>
             <div>
-              <img
+              <img loading="lazy" decoding="async"
                 className="rounded-xl max-w-[220px]"
                 src="/img/tattoo.webp"
                 alt="OpenBB Tattoo"
               />
             </div>
             <div>
-              <img
+              <img loading="lazy" decoding="async"
                 className="rounded-xl max-w-[220px]"
                 src="/img/bridge_sticker.webp"
                 alt="OpenBB bridge sticker"
@@ -71,17 +71,17 @@ function WhoAmI({ isDesktop, isTablet }) {
         </div>
       ) : (
         <div className="flex items-center content-center mx-auto align-center justify-center flex-wrap mt-4 gap-8 mb-4">
-          <img
+          <img loading="lazy" decoding="async"
             className="rounded-xl max-h-[300px] mx-auto"
             src="/img/tattoo.webp"
             alt="OpenBB Tattoo"
           />
-          <img
+          <img loading="lazy" decoding="async"
             className="rounded-xl max-h-[300px] mx-auto"
             src="/img/me_timegpt.webp"
             alt="Time-GPT event from Nixtla"
           />
-          <img
+          <img loading="lazy" decoding="async"
             className="rounded-xl max-h-[300px] mx-auto"
             src="/img/bridge_sticker.webp"
             alt="OpenBB bridget sticker"

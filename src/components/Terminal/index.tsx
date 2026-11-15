@@ -140,7 +140,7 @@ export const Terminal = ({ history, onSendMessage, isLoading, aiTextColor, onCle
         paddingBottom: '30px',
     }
 
-    const backgroundImage = isDark ? 'url(/img/terminal_bg_dark.png)' : 'url(/img/terminal_bg_light.png)';
+    const backgroundImage = isDark ? 'url(/img/terminal_bg_dark.webp)' : 'url(/img/terminal_bg_light.webp)';
 
     const inputLineStyle: React.CSSProperties = {
         display: 'flex',

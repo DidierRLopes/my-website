@@ -304,7 +304,7 @@ export default function BlogHistory({ posts = [], isDesktop }: BlogHistoryProps)
 														backgroundColor: "#f0f0f0",
 													}}
 												>
-													<img
+													<img loading="lazy" decoding="async"
 														className="rounded-xl w-full h-full"
 														src={
 															post.content_html.match(

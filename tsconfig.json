@@ -1,0 +1,5 @@
+{
+  // Used for type-checking only (`yarn typecheck`); Docusaurus compiles with Babel.
+  "extends": "@docusaurus/tsconfig",
+  "exclude": ["build", ".docusaurus", "generated-static", "node_modules"]
+}

@@ -1,0 +1,153 @@
+.root {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 1;
+	/* Children size themselves in cqw (1cqw = 1% of the sprite's width). */
+	container-type: inline-size;
+}
+
+.layer {
+	position: absolute;
+	inset: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	image-rendering: pixelated;
+}
+
+/* Golden hair: only the hair changes, and only the hair glows. */
+.hair {
+	opacity: 0;
+	transition: opacity 0.2s steps(3);
+}
+
+.powered .hair {
+	opacity: 1;
+	animation: hairGlow 0.9s ease-in-out infinite alternate;
+}
+
+@keyframes hairGlow {
+	from {
+		filter: drop-shadow(0 0 1cqw rgba(255, 214, 90, 0.7));
+	}
+	to {
+		filter: drop-shadow(0 0 2.2cqw rgba(255, 214, 90, 0.95));
+	}
+}
+
+/* A soft aura behind him (not the desk or laptop), flaring on power-up. */
+.aura {
+	position: absolute;
+	left: 8%;
+	top: 0;
+	width: 52%;
+	height: 82%;
+	border-radius: 50%;
+	background: radial-gradient(closest-side, rgba(245, 197, 66, 0.45), rgba(245, 197, 66, 0.12) 60%, transparent);
+	opacity: 0;
+	transform: scale(0.8);
+	transition:
+		opacity 0.3s ease,
+		transform 0.3s ease;
+}
+
+.powered .aura {
+	opacity: 1;
+	transform: scale(1);
+	animation: auraPulse 1.1s ease-in-out infinite alternate;
+}
+
+@keyframes auraPulse {
+	to {
+		transform: scale(1.06);
+	}
+}
+
+/* Everything at his desk. With the family it zooms out to 80%, towards the
+   right, leaving room for his wife at the left. */
+.scene {
+	position: absolute;
+	inset: 0;
+	transform-origin: 100% 50%;
+	transition: transform 0.35s ease 0.45s;
+}
+
+.withFamily .scene {
+	transform: scale(0.8);
+	transition-delay: 0s;
+}
+
+/* Once there is room: his wife steps in with their daughter, then the dogs
+   settle in for a nap. Leaving, they go in the reverse order. */
+.wife,
+.dogBlack,
+.dogBrown {
+	opacity: 0;
+	transition: opacity 0.3s steps(3), transform 0.3s steps(3);
+}
+
+.wife {
+	transform: translateY(3%);
+	transition-delay: 0.2s;
+}
+
+.dogBlack,
+.dogBrown {
+	transform: translateY(-2%);
+}
+
+.dogBrown {
+	transition-delay: 0.1s;
+}
+
+.withFamily .wife,
+.withFamily .dogBlack,
+.withFamily .dogBrown {
+	opacity: 1;
+	transform: none;
+}
+
+.withFamily .wife {
+	transition-delay: 0.3s;
+}
+
+.withFamily .dogBlack {
+	transition-delay: 0.7s;
+}
+
+.withFamily .dogBrown {
+	transition-delay: 0.9s;
+}
+
+/* The laptop screen, in sprite pixels (256): x 172-224, y 115-158. */
+.screen {
+	position: absolute;
+	left: 67.5%;
+	top: 45.5%;
+	width: 19.5%;
+	height: 15.5%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transform: skewX(-8deg);
+	font-family: "Silkscreen", ui-monospace, monospace;
+	color: #8adbd5;
+	line-height: 1;
+	text-align: center;
+	pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.powered .hair,
+	.powered .aura {
+		animation: none;
+	}
+
+	.scene,
+	.wife,
+	.dogBlack,
+	.dogBrown {
+		transition: none;
+	}
+}

@@ -938,7 +938,7 @@ export default function BooksToRead() {
 				If there is a particular book that you think I should read, feel free to
 				recommend it.
 			</p>
-			<BooksList books={data.slice().reverse()} />
+			<BooksList books={data.slice().reverse()} variant="covers" />
 		</>
 	);
 }

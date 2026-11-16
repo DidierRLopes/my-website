@@ -1,0 +1,11 @@
+.cover {
+	display: block;
+	width: 100%;
+	aspect-ratio: 2 / 3;
+	object-fit: cover;
+}
+
+.square {
+	object-fit: contain;
+	background: #fff;
+}

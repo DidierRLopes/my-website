@@ -715,7 +715,7 @@ export default function BooksAlreadyRead() {
 			<p>
 				Most of the books I have read or listened to.
 			</p>
-			<BooksList books={data.slice().reverse()} />
+			<BooksList books={data.slice().reverse()} variant="bedroom" />
 		</>
 	);
 }

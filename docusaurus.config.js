@@ -48,7 +48,9 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          // No docs sidebar: Books and Resume pages navigate with tabs at the top
+          // (src/components/General/SectionTabs.tsx).
+          sidebarPath: false,
           path: 'content',
           routeBasePath: '/',
           // Please change this to your repo.
@@ -80,7 +82,7 @@ const config = {
           },
         },
         theme: {
-          customCss: ['./src/css/custom.css'],
+          customCss: ['./src/css/custom.css', './src/css/pixel.css'],
         },
       }),
     ],
@@ -109,16 +111,19 @@ const config = {
             position: 'left',
             label: 'Books',
             to: '/books/to-read',
+            activeBasePath: 'books',
           },
           {
             position: 'left',
             label: 'Media',
-            to: '/media/on-stage',
+            to: '/media',
+            activeBasePath: 'media',
           },
           {
             position: 'left',
             label: 'Resume',
             to: '/resume/experience',
+            activeBasePath: 'resume',
           },
           {
             type: 'html',
@@ -131,14 +136,6 @@ const config = {
             to: '/blog',
             className: 'navbar__center-item',
           },
-          {
-            position: 'right',
-            label: 'Newsletter',
-            to: '/newsletter',
-            target: '_blank',
-            rel: 'noopener noreferrer',
-            className: 'navbar-item-external navbar-newsletter-link',
-          },
         ],
       },
       prism: {
@@ -146,9 +143,10 @@ const config = {
         darkTheme: darkCodeTheme,
         additionalLanguages: ['bash'],
       },
+      // One mode: the pixel theme is drawn for its navy ground (src/css/pixel.css).
       colorMode: {
         defaultMode: 'dark',
-        disableSwitch: false,
+        disableSwitch: true,
         respectPrefersColorScheme: false,
       },
       algolia: {

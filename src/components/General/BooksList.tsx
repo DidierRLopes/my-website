@@ -1,23 +1,19 @@
-import React, { useState, useEffect, useMemo } from "react";
-import { createPortal } from "react-dom";
-import {
-	BOOK_CATEGORIES,
-	type Book,
-	type BookCategory,
-} from "../Books/categories";
-import { thumbnailUrl } from "../../lib/thumbnails";
+import React, { useMemo, useState } from "react";
+import Bedroom from "../Books/Bedroom";
+import CoverGrid from "../Books/CoverGrid";
+import { BOOK_CATEGORIES, type Book, type BookCategory } from "../Books/categories";
+import PixelSelect from "./PixelSelect";
 import styles from "./BooksList.module.css";
 
 interface BooksListProps {
 	books: Book[];
+	/** "covers": 3D books, click to copy (to read). "bedroom": books spread on Van Gogh's bedroom floor (read). */
+	variant: "covers" | "bedroom";
 }
 
-export default function BooksList({ books }: BooksListProps) {
-	const [selectedImage, setSelectedImage] = useState<string | null>(null);
+export default function BooksList({ books, variant }: BooksListProps) {
 	const [searchTerm, setSearchTerm] = useState("");
-	const [activeCategory, setActiveCategory] = useState<BookCategory | null>(
-		null,
-	);
+	const [activeCategory, setActiveCategory] = useState<BookCategory | null>(null);
 
 	const categoryCounts = useMemo(() => {
 		const counts = new Map<BookCategory, number>();
@@ -27,142 +23,91 @@ export default function BooksList({ books }: BooksListProps) {
 		return counts;
 	}, [books]);
 
-	const openModal = (imageUrl: string) => {
-		setSelectedImage(imageUrl);
-	};
-
-	const closeModal = () => {
-		setSelectedImage(null);
-	};
-
-	useEffect(() => {
-		const handleEscape = (e: KeyboardEvent) => {
-			if (e.key === "Escape") closeModal();
-		};
-		if (selectedImage) {
-			document.addEventListener("keydown", handleEscape);
-			document.body.style.overflow = "hidden";
-		}
-		return () => {
-			document.removeEventListener("keydown", handleEscape);
-			document.body.style.overflow = "";
-		};
-	}, [selectedImage]);
-
 	const query = searchTerm.toLowerCase();
 	const filteredBooks = books.filter(
 		(book) =>
 			(activeCategory === null || book.category === activeCategory) &&
-			(book.title.toLowerCase().includes(query) ||
-				book.author.toLowerCase().includes(query)),
+			(book.title.toLowerCase().includes(query) || book.author.toLowerCase().includes(query)),
 	);
+	const matches = useMemo(() => new Set(filteredBooks.map((b) => b.title)), [filteredBooks]);
+	const activeLabel = BOOK_CATEGORIES.find((c) => c.id === activeCategory)?.label;
 
-	const activeLabel = BOOK_CATEGORIES.find(
-		(category) => category.id === activeCategory,
-	)?.label;
+	const search = (
+		<input
+			type="search"
+			placeholder={variant === "bedroom" ? `Search ${books.length} books` : `Search ${books.length} books by title or author`}
+			aria-label="Search books"
+			className={styles.searchInput}
+			value={searchTerm}
+			onChange={(e) => setSearchTerm(e.target.value)}
+		/>
+	);
+	const shownCategories = BOOK_CATEGORIES.filter((category) => categoryCounts.has(category.id));
 
-	return (
-		<div className={styles.terminal}>
-			<div className={styles.searchContainer}>
-				<input
-					type="text"
-					placeholder={`> Search from ${books.length} books by title or author...`}
-					className={styles.searchInput}
-					value={searchTerm}
-					onChange={(e) => setSearchTerm(e.target.value)}
+	if (variant === "bedroom") {
+		// The room always shows every book (matches stay lit, others dim), so
+		// filtering never reshuffles it; the controls live inside the room.
+		return (
+			<div className={styles.root}>
+				<Bedroom
+					books={books}
+					matches={matches}
+					controls={
+						<div className={styles.inline}>
+							{search}
+							<PixelSelect
+								className={styles.categorySelect}
+								ariaLabel="Category"
+								value={activeCategory ?? ""}
+								onChange={(v) => setActiveCategory((v || null) as BookCategory | null)}
+								options={[
+									{ value: "", label: "All categories", count: books.length },
+									...shownCategories.map((c) => ({
+										value: c.id,
+										label: c.label,
+										count: categoryCounts.get(c.id),
+									})),
+								]}
+							/>
+							{filteredBooks.length === 0 && <p className={styles.inlineEmpty}>No matching books.</p>}
+						</div>
+					}
 				/>
 			</div>
+		);
+	}
+
+	return (
+		<div className={styles.root}>
+			{search}
 			<div className={styles.categories} role="group" aria-label="Categories">
 				<button
 					type="button"
-					className={styles.categoryChip}
+					className={styles.chip}
 					aria-pressed={activeCategory === null}
 					onClick={() => setActiveCategory(null)}
 				>
-					All <span className={styles.categoryCount}>{books.length}</span>
+					All <span className={styles.count}>{books.length}</span>
 				</button>
-				{BOOK_CATEGORIES.filter((category) =>
-					categoryCounts.has(category.id),
-				).map((category) => (
+				{shownCategories.map((category) => (
 					<button
 						type="button"
 						key={category.id}
-						className={styles.categoryChip}
+						className={styles.chip}
 						aria-pressed={activeCategory === category.id}
-						onClick={() =>
-							setActiveCategory(
-								activeCategory === category.id ? null : category.id,
-							)
-						}
+						onClick={() => setActiveCategory(activeCategory === category.id ? null : category.id)}
 					>
-						{category.label}{" "}
-						<span className={styles.categoryCount}>
-							{categoryCounts.get(category.id)}
-						</span>
+						{category.label} <span className={styles.count}>{categoryCounts.get(category.id)}</span>
 					</button>
 				))}
 			</div>
-			{filteredBooks.length > 0 ? (
-				<ul className={styles.bookList}>
-					{filteredBooks.map((book) => (
-						<li
-							className={styles.bookItem}
-							key={book.title}
-							onClick={() => openModal(book.image)}
-							onKeyDown={(e) => e.key === "Enter" && openModal(book.image)}
-							role="button"
-							tabIndex={0}
-						>
-							<img loading="lazy" decoding="async"
-								src={thumbnailUrl(book.image)}
-								alt={`${book.title} cover`}
-								className={styles.bookThumbnail}
-							/>
-							<div className={styles.bookInfo}>
-								<span className={styles.bookTitle}>{book.title}</span>
-								<span className={styles.bookAuthor}>by {book.author}</span>
-							</div>
-						</li>
-					))}
-				</ul>
+			{filteredBooks.length === 0 ? (
+				<p className={styles.noResults}>
+					No results found for "{searchTerm}"{activeLabel ? ` in ${activeLabel}` : ""}
+				</p>
 			) : (
-				<div className={styles.noResults}>
-					<p>
-						&gt; No results found for "{searchTerm}"
-						{activeLabel ? ` in ${activeLabel}` : ""}
-					</p>
-				</div>
+				<CoverGrid books={filteredBooks} />
 			)}
-			{selectedImage &&
-				createPortal(
-					<div
-						className={styles.modalBackdrop}
-						onClick={closeModal}
-						role="button"
-						tabIndex={0}
-					>
-						<div
-							className={styles.modalContent}
-							onClick={(e) => e.stopPropagation()}
-							role="dialog"
-							aria-modal="true"
-						>
-							<button
-								type="button"
-								className={styles.closeButton}
-								onClick={closeModal}
-							>
-								X
-							</button>
-							<img
-								src={selectedImage}
-								alt="Enlarged book cover"
-								className={styles.modalImage}
-							/>
-						</div>
-					</div>,
-					document.body,
-				)}
 		</div>
 	);
 }

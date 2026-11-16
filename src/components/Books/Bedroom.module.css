@@ -1,8 +1,7 @@
 .figure {
 	position: relative;
-	/* Sized so the whole room, with the page title and intro above it, fits on
-	   screen without scrolling. */
-	width: min(100%, calc((100vh - var(--ifm-navbar-height) - 240px) * 2000 / 1587));
+	/* The room takes the page's full width. */
+	width: 100%;
 	margin: 0 0 32px;
 }
 
@@ -192,10 +191,6 @@
 }
 
 @media (max-width: 800px) {
-	.figure {
-		width: 100%;
-	}
-
 	/* Keep the room large enough to drag books; it scrolls sideways. */
 	.room {
 		min-width: 760px;

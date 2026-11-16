@@ -1,47 +1,8 @@
 import React from "react";
-import { useLocation } from "@docusaurus/router";
-import { useThemeConfig } from "@docusaurus/theme-common";
-import TickerTape from "../TickerTape";
-import PolymarketTape from "../PolymarketTape";
-
-// Suppress TradingView cross-origin errors during development across the whole site
-if (typeof window !== "undefined") {
-  window.addEventListener(
-    "error",
-    (evt) => {
-      if (evt.message === "Script error.") {
-        evt.preventDefault();
-        evt.stopImmediatePropagation();
-        return false;
-      }
-    },
-    true,
-  );
-
-  // Hide the webpack overlay if it still sneaks in
-  const style = document.createElement("style");
-  style.innerHTML =
-    "#webpack-dev-server-client-overlay { display: none !important; }";
-  document.head.appendChild(style);
-}
 
 export default function CustomFooter() {
-  const location = useLocation();
-  const pagesToHideTapes = ["/intelligence", "/blog", "/chat"];
-
-  const isHomepage = location.pathname === "/";
-  const shouldShowTapes =
-    !isHomepage &&
-    !pagesToHideTapes.some((page) => location.pathname.startsWith(page));
-
   return (
     <div className="mt-4 px-footer-wrap">
-      {shouldShowTapes && (
-        <>
-          <PolymarketTape />
-          <TickerTape />
-        </>
-      )}
       <footer className="px-footer">
         <div className="px-footer__links">
           <a

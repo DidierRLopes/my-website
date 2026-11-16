@@ -64,12 +64,12 @@
 }
 
 /* Everything at his desk. With the family it zooms out to 80%, towards the
-   right, leaving room for his wife at the left and the dogs at the front. */
+   right, leaving room for his wife at the left. */
 .scene {
 	position: absolute;
 	inset: 0;
 	transform-origin: 100% 50%;
-	transition: transform 0.35s ease 0.5s;
+	transition: transform 0.35s ease 0.45s;
 }
 
 .withFamily .scene {
@@ -77,34 +77,30 @@
 	transition-delay: 0s;
 }
 
-/* Once there is room: his wife steps in, his daughter hops onto his lap, then
-   the dogs trot in. Leaving, they go in the reverse order. */
+/* Once there is room: his wife steps in with their daughter, then the dogs
+   settle in for a nap. Leaving, they go in the reverse order. */
 .wife,
-.daughter,
 .dogBlack,
 .dogBrown {
 	opacity: 0;
+	transition: opacity 0.3s steps(3), transform 0.3s steps(3);
+}
+
+.wife {
 	transform: translateY(3%);
-	transition:
-		opacity 0.3s steps(3),
-		transform 0.3s steps(3);
+	transition-delay: 0.2s;
 }
 
 .dogBlack,
 .dogBrown {
-	transform: translateX(-4%);
+	transform: translateY(-2%);
 }
 
-.daughter {
-	transition-delay: 0.2s;
-}
-
-.wife {
-	transition-delay: 0.35s;
+.dogBrown {
+	transition-delay: 0.1s;
 }
 
 .withFamily .wife,
-.withFamily .daughter,
 .withFamily .dogBlack,
 .withFamily .dogBrown {
 	opacity: 1;
@@ -115,16 +111,12 @@
 	transition-delay: 0.3s;
 }
 
-.withFamily .daughter {
-	transition-delay: 0.65s;
+.withFamily .dogBlack {
+	transition-delay: 0.7s;
 }
 
 .withFamily .dogBrown {
-	transition-delay: 0.95s;
-}
-
-.withFamily .dogBlack {
-	transition-delay: 1.15s;
+	transition-delay: 0.9s;
 }
 
 /* The laptop screen, in sprite pixels (256): x 172-224, y 115-158. */
@@ -154,7 +146,6 @@
 
 	.scene,
 	.wife,
-	.daughter,
 	.dogBlack,
 	.dogBrown {
 		transition: none;
